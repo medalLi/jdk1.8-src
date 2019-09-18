@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.applet.Applet ;
 import java.util.Properties ;
@@ -49,7 +49,7 @@ public interface DataCollector {
      * may be called.  It may be called multiple times if different
      * sets of properties are needed for the same data sources.
      */
-    void setParser( PropertyParser parser ) ;
+    void setParser(PropertyParser parser) ;
 
     /** Return the consolidated property information to be used
      * for ORB configuration.  Note that -ORBInitRef arguments are

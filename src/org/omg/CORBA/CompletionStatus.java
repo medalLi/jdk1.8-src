@@ -46,7 +46,7 @@ package org.omg.CORBA;
  * <bold>from_int</bold>(int i)</code> --
  * for creating an instance from one of the <code>int</code> members
  * </UL>
- * @see     org.omg.CORBA.SystemException
+ * @see     SystemException
  * @since   JDK1.2
  */
 
@@ -110,7 +110,7 @@ public final class CompletionStatus implements org.omg.CORBA.portable.IDLEntity
  *          <code>_COMPLETED_YES</code>, <code>_COMPLETED_NO</code>, or
  *          <code>_COMPLETED_MAYBE</code>
  *
- * @exception org.omg.CORBA.BAD_PARAM  if the argument given is not one of the
+ * @exception BAD_PARAM  if the argument given is not one of the
  *            <code>int</code> constants defined in <code>CompletionStatus</code>
  */
     public static CompletionStatus from_int(int i)  {
@@ -122,7 +122,7 @@ public final class CompletionStatus implements org.omg.CORBA.portable.IDLEntity
         case _COMPLETED_MAYBE:
             return COMPLETED_MAYBE;
         default:
-            throw new org.omg.CORBA.BAD_PARAM();
+            throw new BAD_PARAM();
         }
     }
 

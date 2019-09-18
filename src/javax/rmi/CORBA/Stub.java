@@ -94,7 +94,7 @@ public abstract class Stub extends ObjectImpl
      * @return <code>true</code> if this object is the same as the <code>obj</code>
      *          argument; <code>false</code> otherwise.
      */
-    public boolean equals(java.lang.Object obj) {
+    public boolean equals(Object obj) {
 
         if (stubDelegate == null) {
             setDefaultDelegate();
@@ -192,7 +192,7 @@ public abstract class Stub extends ObjectImpl
     private void setDefaultDelegate() {
         if (stubDelegateClass != null) {
             try {
-                 stubDelegate = (javax.rmi.CORBA.StubDelegate) stubDelegateClass.newInstance();
+                 stubDelegate = (StubDelegate) stubDelegateClass.newInstance();
             } catch (Exception ex) {
             // what kind of exception to throw
             // delegate not set therefore it is null and will return default

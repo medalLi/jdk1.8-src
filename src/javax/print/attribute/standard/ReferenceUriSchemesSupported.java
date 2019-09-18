@@ -160,7 +160,7 @@ public class ReferenceUriSchemesSupported
      * subclasses, the category is class ReferenceUriSchemesSupported itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return ReferenceUriSchemesSupported.class;

@@ -287,9 +287,9 @@ public interface XPath {
      *   is <code>null</code>.
      */
     public Object evaluate(
-        String expression,
-        InputSource source,
-        QName returnType)
+            String expression,
+            InputSource source,
+            QName returnType)
         throws XPathExpressionException;
 
     /**

@@ -57,21 +57,21 @@ import java.security.AccessController;
  * @see Component#enableEvents
  * @see Toolkit#addAWTEventListener
  *
- * @see java.awt.event.ActionEvent
- * @see java.awt.event.AdjustmentEvent
- * @see java.awt.event.ComponentEvent
- * @see java.awt.event.ContainerEvent
- * @see java.awt.event.FocusEvent
- * @see java.awt.event.InputMethodEvent
- * @see java.awt.event.InvocationEvent
- * @see java.awt.event.ItemEvent
- * @see java.awt.event.HierarchyEvent
- * @see java.awt.event.KeyEvent
- * @see java.awt.event.MouseEvent
- * @see java.awt.event.MouseWheelEvent
- * @see java.awt.event.PaintEvent
- * @see java.awt.event.TextEvent
- * @see java.awt.event.WindowEvent
+ * @see ActionEvent
+ * @see AdjustmentEvent
+ * @see ComponentEvent
+ * @see ContainerEvent
+ * @see FocusEvent
+ * @see InputMethodEvent
+ * @see InvocationEvent
+ * @see ItemEvent
+ * @see HierarchyEvent
+ * @see KeyEvent
+ * @see MouseEvent
+ * @see MouseWheelEvent
+ * @see PaintEvent
+ * @see TextEvent
+ * @see WindowEvent
  *
  * @author Carl Quinn
  * @author Amy Fowler
@@ -287,7 +287,7 @@ public abstract class AWTEvent extends EventObject {
     private static synchronized Field get_InputEvent_CanAccessSystemClipboard() {
         if (inputEvent_CanAccessSystemClipboard_Field == null) {
             inputEvent_CanAccessSystemClipboard_Field =
-                java.security.AccessController.doPrivileged(
+                AccessController.doPrivileged(
                     new java.security.PrivilegedAction<Field>() {
                             public Field run() {
                                 Field field = null;

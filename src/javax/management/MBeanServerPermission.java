@@ -45,14 +45,14 @@ import java.util.StringTokenizer;
     <dt>createMBeanServer</dt>
     <dd>Create a new MBeanServer object using the method
     {@link MBeanServerFactory#createMBeanServer()} or
-    {@link MBeanServerFactory#createMBeanServer(java.lang.String)}.
+    {@link MBeanServerFactory#createMBeanServer(String)}.
     <dt>findMBeanServer</dt>
     <dd>Find an MBeanServer with a given name, or all MBeanServers in this
     JVM, using the method {@link MBeanServerFactory#findMBeanServer}.
     <dt>newMBeanServer</dt>
     <dd>Create a new MBeanServer object without keeping a reference to it,
     using the method {@link MBeanServerFactory#newMBeanServer()} or
-    {@link MBeanServerFactory#newMBeanServer(java.lang.String)}.
+    {@link MBeanServerFactory#newMBeanServer(String)}.
     <dt>releaseMBeanServer</dt>
     <dd>Remove the MBeanServerFactory's reference to an MBeanServer,
     using the method {@link MBeanServerFactory#releaseMBeanServer}.

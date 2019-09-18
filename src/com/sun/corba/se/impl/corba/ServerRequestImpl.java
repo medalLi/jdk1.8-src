@@ -206,7 +206,7 @@ public class ServerRequestImpl extends ServerRequest {
                 // the client will throw a MARSHAL exception while
                 // unmarshaling the return value.
                 TypeCode result_tc = _orb.get_primitive_tc(
-                    org.omg.CORBA.TCKind.tk_void);
+                    TCKind.tk_void);
                 _resultAny = _orb.create_any();
                 _resultAny.type(result_tc);
                 _resultSet = true;

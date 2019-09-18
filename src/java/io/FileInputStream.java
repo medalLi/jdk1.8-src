@@ -39,9 +39,9 @@ import sun.nio.ch.FileChannelImpl;
  * <code>FileReader</code>.
  *
  * @author  Arthur van Hoff
- * @see     java.io.File
- * @see     java.io.FileDescriptor
- * @see     java.io.FileOutputStream
+ * @see     File
+ * @see     FileDescriptor
+ * @see     FileOutputStream
  * @see     java.nio.file.Files#newInputStream
  * @since   JDK1.0
  */
@@ -87,7 +87,7 @@ class FileInputStream extends InputStream
      * @exception  SecurityException      if a security manager exists and its
      *               <code>checkRead</code> method denies read access
      *               to the file.
-     * @see        java.lang.SecurityManager#checkRead(java.lang.String)
+     * @see        SecurityManager#checkRead(String)
      */
     public FileInputStream(String name) throws FileNotFoundException {
         this(name != null ? new File(name) : null);
@@ -117,8 +117,8 @@ class FileInputStream extends InputStream
      *                   reading.
      * @exception  SecurityException      if a security manager exists and its
      *               <code>checkRead</code> method denies read access to the file.
-     * @see        java.io.File#getPath()
-     * @see        java.lang.SecurityManager#checkRead(java.lang.String)
+     * @see        File#getPath()
+     * @see        SecurityManager#checkRead(String)
      */
     public FileInputStream(File file) throws FileNotFoundException {
         String name = (file != null ? file.getPath() : null);
@@ -152,7 +152,7 @@ class FileInputStream extends InputStream
      * is thrown.
      * <p>
      * This constructor does not throw an exception if <code>fdObj</code>
-     * is {@link java.io.FileDescriptor#valid() invalid}.
+     * is {@link FileDescriptor#valid() invalid}.
      * However, if the methods are invoked on the resulting stream to attempt
      * I/O on the stream, an <code>IOException</code> is thrown.
      *
@@ -160,7 +160,7 @@ class FileInputStream extends InputStream
      * @throws     SecurityException      if a security manager exists and its
      *                 <code>checkRead</code> method denies read access to the
      *                 file descriptor.
-     * @see        SecurityManager#checkRead(java.io.FileDescriptor)
+     * @see        SecurityManager#checkRead(FileDescriptor)
      */
     public FileInputStream(FileDescriptor fdObj) {
         SecurityManager security = System.getSecurityManager();
@@ -329,7 +329,7 @@ class FileInputStream extends InputStream
      *
      * @return     the file descriptor object associated with this stream.
      * @exception  IOException  if an I/O error occurs.
-     * @see        java.io.FileDescriptor
+     * @see        FileDescriptor
      */
     public final FileDescriptor getFD() throws IOException {
         if (fd != null) {
@@ -339,10 +339,10 @@ class FileInputStream extends InputStream
     }
 
     /**
-     * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
+     * Returns the unique {@link FileChannel FileChannel}
      * object associated with this file input stream.
      *
-     * <p> The initial {@link java.nio.channels.FileChannel#position()
+     * <p> The initial {@link FileChannel#position()
      * position} of the returned channel will be equal to the
      * number of bytes read from the file so far.  Reading bytes from this
      * stream will increment the channel's position.  Changing the channel's
@@ -376,7 +376,7 @@ class FileInputStream extends InputStream
      * called when there are no more references to it.
      *
      * @exception  IOException  if an I/O error occurs.
-     * @see        java.io.FileInputStream#close()
+     * @see        FileInputStream#close()
      */
     protected void finalize() throws IOException {
         if ((fd != null) &&  (fd != FileDescriptor.in)) {

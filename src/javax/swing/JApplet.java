@@ -60,7 +60,7 @@ import javax.accessibility.*;
  * <code>JApplet</code> to throw an exception. The default
  * <code>contentPane</code> will have a <code>BorderLayout</code>
  * manager set on it.
- * Refer to {@link javax.swing.RootPaneContainer}
+ * Refer to {@link RootPaneContainer}
  * for details on adding, removing and setting the <code>LayoutManager</code>
  * of a <code>JApplet</code>.
  * <p>
@@ -82,7 +82,7 @@ import javax.accessibility.*;
  * has been added to the <code>java.beans</code> package.
  * Please see {@link java.beans.XMLEncoder}.
  *
- * @see javax.swing.RootPaneContainer
+ * @see RootPaneContainer
  * @beaninfo
  *      attribute: isContainer true
  *      attribute: containerDelegate getContentPane
@@ -107,7 +107,7 @@ public class JApplet extends Applet implements Accessible,
      *
      * @see #isRootPaneCheckingEnabled
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean rootPaneCheckingEnabled = false;
 
@@ -124,7 +124,7 @@ public class JApplet extends Applet implements Accessible,
      *
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JApplet() throws HeadlessException {
@@ -192,7 +192,7 @@ public class JApplet extends Applet implements Accessible,
      *
      * @see TransferHandler
      * @see #getTransferHandler
-     * @see java.awt.Component#setDropTarget
+     * @see Component#setDropTarget
      * @since 1.6
      *
      * @beaninfo
@@ -262,7 +262,7 @@ public class JApplet extends Applet implements Accessible,
      * @see #addImpl
      * @see #setLayout
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean isRootPaneCheckingEnabled() {
         return rootPaneCheckingEnabled;
@@ -280,7 +280,7 @@ public class JApplet extends Applet implements Accessible,
      * @see #addImpl
      * @see #setLayout
      * @see #isRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      * @beaninfo
      *      hidden: true
      * description: Whether the add and setLayout methods are forwarded
@@ -295,7 +295,7 @@ public class JApplet extends Applet implements Accessible,
      * This method is overridden to conditionally forward calls to the
      * <code>contentPane</code>.
      * By default, children are added to the <code>contentPane</code> instead
-     * of the frame, refer to {@link javax.swing.RootPaneContainer} for
+     * of the frame, refer to {@link RootPaneContainer} for
      * details.
      *
      * @param comp the component to be enhanced
@@ -307,7 +307,7 @@ public class JApplet extends Applet implements Accessible,
      * @exception IllegalArgumentException if adding a window to a container
      *
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected void addImpl(Component comp, Object constraints, int index)
     {
@@ -329,7 +329,7 @@ public class JApplet extends Applet implements Accessible,
      * @param comp the component to be removed
      * @throws NullPointerException if <code>comp</code> is null
      * @see #add
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void remove(Component comp) {
         if (comp == rootPane) {
@@ -344,12 +344,12 @@ public class JApplet extends Applet implements Accessible,
      * Sets the <code>LayoutManager</code>.
      * Overridden to conditionally forward the call to the
      * <code>contentPane</code>.
-     * Refer to {@link javax.swing.RootPaneContainer} for
+     * Refer to {@link RootPaneContainer} for
      * more information.
      *
      * @param manager the <code>LayoutManager</code>
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void setLayout(LayoutManager manager) {
         if(isRootPaneCheckingEnabled()) {
@@ -414,7 +414,7 @@ public class JApplet extends Applet implements Accessible,
      * Sets the contentPane property.  This method is called by the constructor.
      * @param contentPane the contentPane object for this applet
      *
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the content pane parameter is null
      * @see #getContentPane
      * @see RootPaneContainer#setContentPane
@@ -431,7 +431,7 @@ public class JApplet extends Applet implements Accessible,
     /**
      * Returns the layeredPane object for this applet.
      *
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the layered pane parameter is null
      * @see #setLayeredPane
      * @see RootPaneContainer#getLayeredPane

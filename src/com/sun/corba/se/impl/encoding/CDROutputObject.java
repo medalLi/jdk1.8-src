@@ -169,7 +169,7 @@ public class CDROutputObject extends CorbaOutputObject
      * @param s The output stream to write to.
      */
     public void writeTo(CorbaConnection connection)
-        throws java.io.IOException
+        throws IOException
     {
 
         //
@@ -193,7 +193,7 @@ public class CDROutputObject extends CorbaOutputObject
     }
 
     /** overrides create_input_stream from CDROutputStream */
-    public org.omg.CORBA.portable.InputStream create_input_stream()
+    public InputStream create_input_stream()
     {
         // XREVISIT
         return null;

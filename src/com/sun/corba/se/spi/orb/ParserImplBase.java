@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.util.Map ;
 import java.util.Set ;
@@ -104,7 +104,7 @@ public abstract class ParserImplBase {
         Set entries = map.entrySet() ;
         Iterator iter = entries.iterator() ;
         while (iter.hasNext()) {
-            java.util.Map.Entry entry = (java.util.Map.Entry)(iter.next()) ;
+            Map.Entry entry = (Map.Entry)(iter.next()) ;
             final String name = (String)(entry.getKey()) ;
             final Object value = entry.getValue() ;
 

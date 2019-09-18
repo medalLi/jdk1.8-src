@@ -41,8 +41,8 @@ import javax.xml.bind.ValidationEventLocator;
  * @author <ul><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li></ul>
  * @see javax.xml.bind.Validator
  * @see javax.xml.bind.ValidationEventHandler
- * @see javax.xml.bind.ValidationEvent
- * @see javax.xml.bind.ValidationEventLocator
+ * @see ValidationEvent
+ * @see ValidationEventLocator
  * @since JAXB1.0
  */
 public class ValidationEventImpl implements ValidationEvent

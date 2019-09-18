@@ -129,7 +129,7 @@ class PushbackInputStream extends FilterInputStream {
      * @exception  IOException  if this input stream has been closed by
      *             invoking its {@link #close()} method,
      *             or an I/O error occurs.
-     * @see        java.io.InputStream#read()
+     * @see        InputStream#read()
      */
     public int read() throws IOException {
         ensureOpen();
@@ -160,7 +160,7 @@ class PushbackInputStream extends FilterInputStream {
      * @exception  IOException  if this input stream has been closed by
      *             invoking its {@link #close()} method,
      *             or an I/O error occurs.
-     * @see        java.io.InputStream#read(byte[], int, int)
+     * @see        InputStream#read(byte[], int, int)
      */
     public int read(byte[] b, int off, int len) throws IOException {
         ensureOpen();
@@ -261,15 +261,15 @@ class PushbackInputStream extends FilterInputStream {
      *
      * <p> The method returns the sum of the number of bytes that have been
      * pushed back and the value returned by {@link
-     * java.io.FilterInputStream#available available}.
+     * FilterInputStream#available available}.
      *
      * @return     the number of bytes that can be read (or skipped over) from
      *             the input stream without blocking.
      * @exception  IOException  if this input stream has been closed by
      *             invoking its {@link #close()} method,
      *             or an I/O error occurs.
-     * @see        java.io.FilterInputStream#in
-     * @see        java.io.InputStream#available()
+     * @see        FilterInputStream#in
+     * @see        InputStream#available()
      */
     public int available() throws IOException {
         ensureOpen();
@@ -298,8 +298,8 @@ class PushbackInputStream extends FilterInputStream {
      *            or the stream has been closed by
      *            invoking its {@link #close()} method,
      *            or an I/O error occurs.
-     * @see        java.io.FilterInputStream#in
-     * @see        java.io.InputStream#skip(long n)
+     * @see        FilterInputStream#in
+     * @see        InputStream#skip(long n)
      * @since      1.2
      */
     public long skip(long n) throws IOException {
@@ -328,8 +328,8 @@ class PushbackInputStream extends FilterInputStream {
      *
      * @return   <code>false</code>, since this class does not support the
      *           <code>mark</code> and <code>reset</code> methods.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#mark(int)
+     * @see     InputStream#reset()
      */
     public boolean markSupported() {
         return false;
@@ -343,7 +343,7 @@ class PushbackInputStream extends FilterInputStream {
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
      *                      the mark position becomes invalid.
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#reset()
      */
     public synchronized void mark(int readlimit) {
     }
@@ -357,8 +357,8 @@ class PushbackInputStream extends FilterInputStream {
      * <code>IOException</code>.
      *
      * @exception  IOException  if this method is invoked.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.IOException
+     * @see     InputStream#mark(int)
+     * @see     IOException
      */
     public synchronized void reset() throws IOException {
         throw new IOException("mark/reset not supported");

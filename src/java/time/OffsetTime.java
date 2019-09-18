@@ -153,7 +153,7 @@ public final class OffsetTime
     /**
      * Obtains the current time from the system clock in the default time-zone.
      * <p>
-     * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
+     * This will query the {@link Clock#systemDefaultZone() system clock} in the default
      * time-zone to obtain the current time.
      * The offset will be calculated from the time-zone in the clock.
      * <p>
@@ -169,7 +169,7 @@ public final class OffsetTime
     /**
      * Obtains the current time from the system clock in the specified time-zone.
      * <p>
-     * This will query the {@link Clock#system(java.time.ZoneId) system clock} to obtain the current time.
+     * This will query the {@link Clock#system(ZoneId) system clock} to obtain the current time.
      * Specifying the time-zone avoids dependence on the default time-zone.
      * The offset will be calculated from the specified time-zone.
      * <p>
@@ -302,7 +302,7 @@ public final class OffsetTime
      * Obtains an instance of {@code OffsetTime} from a text string such as {@code 10:15:30+01:00}.
      * <p>
      * The string must represent a valid time and is parsed using
-     * {@link java.time.format.DateTimeFormatter#ISO_OFFSET_TIME}.
+     * {@link DateTimeFormatter#ISO_OFFSET_TIME}.
      *
      * @param text  the text to parse such as "10:15:30+01:00", not null
      * @return the parsed local time, not null

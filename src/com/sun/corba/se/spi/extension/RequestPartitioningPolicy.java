@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.extension ;
+package com.sun.corba.se.spi.extension;
 
 import org.omg.CORBA.Policy ;
 import org.omg.CORBA.LocalObject ;
@@ -67,7 +67,7 @@ public class RequestPartitioningPolicy extends LocalObject implements Policy
         return ORBConstants.REQUEST_PARTITIONING_POLICY;
     }
 
-    public org.omg.CORBA.Policy copy()
+    public Policy copy()
     {
         return this;
     }

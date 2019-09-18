@@ -90,7 +90,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string that is the same as the input string.
      */
-    public String parseString( String lexicalXSDString );
+    public String parseString(String lexicalXSDString);
 
     /**
      * <p>
@@ -102,7 +102,7 @@ public interface DatatypeConverterInterface {
      *     A BigInteger value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDInteger</code> is not a valid string representation of a {@link java.math.BigInteger} value.
      */
-    public java.math.BigInteger parseInteger( String lexicalXSDInteger );
+    public java.math.BigInteger parseInteger(String lexicalXSDInteger);
 
     /**
      * <p>
@@ -114,7 +114,7 @@ public interface DatatypeConverterInterface {
      *     An int value represented byte the string argument.
      * @throws NumberFormatException <code>lexicalXSDInt</code> is not a valid string representation of an <code>int</code> value.
      */
-    public int parseInt( String lexicalXSDInt );
+    public int parseInt(String lexicalXSDInt);
 
     /**
      * <p>
@@ -126,7 +126,7 @@ public interface DatatypeConverterInterface {
      *     A long value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDLong</code> is not a valid string representation of a <code>long</code> value.
      */
-    public long parseLong( String lexicalXSDLong );
+    public long parseLong(String lexicalXSDLong);
 
     /**
      * <p>
@@ -138,7 +138,7 @@ public interface DatatypeConverterInterface {
      *     A short value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDShort</code> is not a valid string representation of a <code>short</code> value.
      */
-    public short parseShort( String lexicalXSDShort );
+    public short parseShort(String lexicalXSDShort);
 
     /**
      * <p>
@@ -150,7 +150,7 @@ public interface DatatypeConverterInterface {
      *     A BigDecimal value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDDecimal</code> is not a valid string representation of {@link java.math.BigDecimal}.
      */
-    public java.math.BigDecimal parseDecimal( String lexicalXSDDecimal );
+    public java.math.BigDecimal parseDecimal(String lexicalXSDDecimal);
 
     /**
      * <p>
@@ -162,7 +162,7 @@ public interface DatatypeConverterInterface {
      *     A float value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDFloat</code> is not a valid string representation of a <code>float</code> value.
      */
-    public float parseFloat( String lexicalXSDFloat );
+    public float parseFloat(String lexicalXSDFloat);
 
     /**
      * <p>
@@ -174,7 +174,7 @@ public interface DatatypeConverterInterface {
      *     A double value represented by the string argument.
      * @throws NumberFormatException <code>lexicalXSDDouble</code> is not a valid string representation of a <code>double</code> value.
      */
-    public double parseDouble( String lexicalXSDDouble );
+    public double parseDouble(String lexicalXSDDouble);
 
     /**
      * <p>
@@ -186,7 +186,7 @@ public interface DatatypeConverterInterface {
      *     A boolean value represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:boolean.
      */
-    public boolean parseBoolean( String lexicalXSDBoolean );
+    public boolean parseBoolean(String lexicalXSDBoolean);
 
     /**
      * <p>
@@ -199,7 +199,7 @@ public interface DatatypeConverterInterface {
      * @throws NumberFormatException <code>lexicalXSDByte</code> does not contain a parseable byte.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:byte.
      */
-    public byte parseByte( String lexicalXSDByte );
+    public byte parseByte(String lexicalXSDByte);
 
     /**
      * <p>
@@ -218,8 +218,8 @@ public interface DatatypeConverterInterface {
      * @throws IllegalArgumentException  if string parameter does not conform to XML Schema Part 2 specification or
      *      if namespace prefix of <tt>lexicalXSDQname</tt> is not bound to a URI in NamespaceContext <tt>nsc</tt>.
      */
-    public javax.xml.namespace.QName parseQName( String lexicalXSDQName,
-                                             javax.xml.namespace.NamespaceContext nsc);
+    public javax.xml.namespace.QName parseQName(String lexicalXSDQName,
+                                                javax.xml.namespace.NamespaceContext nsc);
 
     /**
      * <p>
@@ -231,7 +231,7 @@ public interface DatatypeConverterInterface {
      *     A Calendar object represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:dateTime.
      */
-    public java.util.Calendar parseDateTime( String lexicalXSDDateTime );
+    public java.util.Calendar parseDateTime(String lexicalXSDDateTime);
 
     /**
      * <p>
@@ -243,7 +243,7 @@ public interface DatatypeConverterInterface {
      *     An array of bytes represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:base64Binary
      */
-    public byte[] parseBase64Binary( String lexicalXSDBase64Binary );
+    public byte[] parseBase64Binary(String lexicalXSDBase64Binary);
 
     /**
      * <p>
@@ -255,7 +255,7 @@ public interface DatatypeConverterInterface {
      *     An array of bytes represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:hexBinary.
      */
-    public byte[] parseHexBinary( String lexicalXSDHexBinary );
+    public byte[] parseHexBinary(String lexicalXSDHexBinary);
 
     /**
      * <p>
@@ -267,7 +267,7 @@ public interface DatatypeConverterInterface {
      *     A long value represented by the string argument.
      * @throws NumberFormatException if string parameter can not be parsed into a <tt>long</tt> value.
      */
-    public long parseUnsignedInt( String lexicalXSDUnsignedInt );
+    public long parseUnsignedInt(String lexicalXSDUnsignedInt);
 
     /**
      * <p>
@@ -279,7 +279,7 @@ public interface DatatypeConverterInterface {
      *     An int value represented by the string argument.
      * @throws NumberFormatException if string parameter can not be parsed into an <tt>int</tt> value.
      */
-    public int parseUnsignedShort( String lexicalXSDUnsignedShort );
+    public int parseUnsignedShort(String lexicalXSDUnsignedShort);
 
     /**
      * <p>
@@ -291,7 +291,7 @@ public interface DatatypeConverterInterface {
      *     A Calendar value represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Time.
      */
-    public java.util.Calendar parseTime( String lexicalXSDTime );
+    public java.util.Calendar parseTime(String lexicalXSDTime);
 
     /**
      * <p>
@@ -303,7 +303,7 @@ public interface DatatypeConverterInterface {
      *     A Calendar value represented by the string argument.
      * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Date.
      */
-    public java.util.Calendar parseDate( String lexicalXSDDate );
+    public java.util.Calendar parseDate(String lexicalXSDDate);
 
     /**
      * <p>
@@ -316,7 +316,7 @@ public interface DatatypeConverterInterface {
      *     A string containing the lexical representation of the
      *     simple type.
      */
-    public String parseAnySimpleType( String lexicalXSDAnySimpleType );
+    public String parseAnySimpleType(String lexicalXSDAnySimpleType);
 
     /**
      * <p>
@@ -326,7 +326,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:string
      */
-    public String printString( String val );
+    public String printString(String val);
 
     /**
      * <p>
@@ -337,7 +337,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:integer
      * @throws IllegalArgumentException <tt>val</tt> is null.
      */
-    public String printInteger( java.math.BigInteger val );
+    public String printInteger(java.math.BigInteger val);
 
     /**
      * <p>
@@ -347,7 +347,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:int
      */
-    public String printInt( int val );
+    public String printInt(int val);
 
 
     /**
@@ -358,7 +358,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:long
      */
-    public String printLong( long val );
+    public String printLong(long val);
 
     /**
      * <p>
@@ -368,7 +368,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:short
      */
-    public String printShort( short val );
+    public String printShort(short val);
 
     /**
      * <p>
@@ -379,7 +379,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:decimal
      * @throws IllegalArgumentException <tt>val</tt> is null.
      */
-    public String printDecimal( java.math.BigDecimal val );
+    public String printDecimal(java.math.BigDecimal val);
 
     /**
      * <p>
@@ -389,7 +389,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:float
      */
-    public String printFloat( float val );
+    public String printFloat(float val);
 
     /**
      * <p>
@@ -399,7 +399,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:double
      */
-    public String printDouble( double val );
+    public String printDouble(double val);
 
     /**
      * <p>
@@ -409,7 +409,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:boolean
      */
-    public String printBoolean( boolean val );
+    public String printBoolean(boolean val);
 
     /**
      * <p>
@@ -419,7 +419,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:byte
      */
-    public String printByte( byte val );
+    public String printByte(byte val);
 
     /**
      * <p>
@@ -433,8 +433,8 @@ public interface DatatypeConverterInterface {
      * @throws IllegalArgumentException if <tt>val</tt> is null or
      * if <tt>nsc</tt> is non-null or <tt>nsc.getPrefix(nsprefixFromVal)</tt> is null.
      */
-    public String printQName( javax.xml.namespace.QName val,
-                              javax.xml.namespace.NamespaceContext nsc );
+    public String printQName(javax.xml.namespace.QName val,
+                             javax.xml.namespace.NamespaceContext nsc);
 
     /**
      * <p>
@@ -445,7 +445,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:dateTime
      * @throws IllegalArgumentException if <tt>val</tt> is null.
      */
-    public String printDateTime( java.util.Calendar val );
+    public String printDateTime(java.util.Calendar val);
 
     /**
      * <p>
@@ -456,7 +456,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:base64Binary
      * @throws IllegalArgumentException if <tt>val</tt> is null.
      */
-    public String printBase64Binary( byte[] val );
+    public String printBase64Binary(byte[] val);
 
     /**
      * <p>
@@ -467,7 +467,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:hexBinary
      * @throws IllegalArgumentException if <tt>val</tt> is null.
      */
-    public String printHexBinary( byte[] val );
+    public String printHexBinary(byte[] val);
 
     /**
      * <p>
@@ -477,7 +477,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:unsignedInt
      */
-    public String printUnsignedInt( long val );
+    public String printUnsignedInt(long val);
 
     /**
      * <p>
@@ -487,7 +487,7 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:unsignedShort
      */
-    public String printUnsignedShort( int val );
+    public String printUnsignedShort(int val);
 
     /**
      * <p>
@@ -498,7 +498,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:time
      * @throws IllegalArgumentException if <tt>val</tt> is null.
      */
-    public String printTime( java.util.Calendar val );
+    public String printTime(java.util.Calendar val);
 
     /**
      * <p>
@@ -509,7 +509,7 @@ public interface DatatypeConverterInterface {
      *     A string containing a lexical representation of xsd:date
      * @throws IllegalArgumentException if <tt>val</tt> is null.
      */
-    public String printDate( java.util.Calendar val );
+    public String printDate(java.util.Calendar val);
 
     /**
      * <p>
@@ -519,5 +519,5 @@ public interface DatatypeConverterInterface {
      * @return
      *     A string containing a lexical representation of xsd:AnySimpleType
      */
-    public String printAnySimpleType( String val );
+    public String printAnySimpleType(String val);
 }

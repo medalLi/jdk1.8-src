@@ -246,7 +246,7 @@ public final class TextLayout implements Cloneable {
 
     // cached values computed from GlyphSets and set info:
     // all are recomputed from scratch in buildCache()
-    private TextLine.TextLineMetrics lineMetrics = null;
+    private TextLineMetrics lineMetrics = null;
     private float visibleAdvance;
     private int hashCodeCache;
 
@@ -1212,7 +1212,7 @@ public final class TextLayout implements Cloneable {
      *     The bounds is in baseline-relative coordinates.
      * @return a two-element array containing the position and slope of
      * the caret.  The returned caret info is in baseline-relative coordinates.
-     * @see #getCaretShapes(int, Rectangle2D, TextLayout.CaretPolicy)
+     * @see #getCaretShapes(int, Rectangle2D, CaretPolicy)
      * @see Font#getItalicAngle
      */
     public float[] getCaretInfo(TextHitInfo hit, Rectangle2D bounds) {
@@ -2627,7 +2627,7 @@ public final class TextLayout implements Cloneable {
 
     /**
      * Renders this <code>TextLayout</code> at the specified location in
-     * the specified {@link java.awt.Graphics2D Graphics2D} context.
+     * the specified {@link Graphics2D Graphics2D} context.
      * The origin of the layout is placed at x,&nbsp;y.  Rendering may touch
      * any point within <code>getBounds()</code> of this position.  This
      * leaves the <code>g2</code> unchanged.  Text is rendered along the

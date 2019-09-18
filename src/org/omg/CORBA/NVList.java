@@ -82,10 +82,10 @@ package org.omg.CORBA;
  * at a given index, and a method for removing a <code>NamedValue</code> object
  * at a given index.
  *
- * @see org.omg.CORBA.Request
- * @see org.omg.CORBA.ServerRequest
- * @see org.omg.CORBA.NamedValue
- * @see org.omg.CORBA.Context
+ * @see Request
+ * @see ServerRequest
+ * @see NamedValue
+ * @see Context
  *
  * @since       JDK1.2
  */
@@ -153,11 +153,11 @@ public abstract class NVList {
      *                    which must be between zero and the length of the list
      *                    minus one, inclusive.  The first item is at index zero.
      * @return                  the <code>NamedValue</code> object at the given index
-     * @exception org.omg.CORBA.Bounds  if the index is greater than
+     * @exception Bounds  if the index is greater than
      *                          or equal to number of <code>NamedValue</code> objects
      */
 
-    public abstract NamedValue item(int index) throws org.omg.CORBA.Bounds;
+    public abstract NamedValue item(int index) throws Bounds;
 
     /**
      * Removes the <code>NamedValue</code> object at the given index.
@@ -168,11 +168,11 @@ public abstract class NVList {
      *                    removed, which must be between zero and the length
      *                    of the list minus one, inclusive.
      *                    The first item is at index zero.
-     * @exception org.omg.CORBA.Bounds  if the index is greater than
+     * @exception Bounds  if the index is greater than
      *                          or equal to number of <code>NamedValue</code> objects in
      *                the list
      */
 
-    public abstract void remove(int index) throws org.omg.CORBA.Bounds;
+    public abstract void remove(int index) throws Bounds;
 
 }

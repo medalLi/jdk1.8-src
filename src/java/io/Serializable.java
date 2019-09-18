@@ -159,11 +159,11 @@ package java.io;
  * serialVersionUID values is waived for array classes.
  *
  * @author  unascribed
- * @see java.io.ObjectOutputStream
- * @see java.io.ObjectInputStream
- * @see java.io.ObjectOutput
- * @see java.io.ObjectInput
- * @see java.io.Externalizable
+ * @see ObjectOutputStream
+ * @see ObjectInputStream
+ * @see ObjectOutput
+ * @see ObjectInput
+ * @see Externalizable
  * @since   JDK1.1
  */
 public interface Serializable {

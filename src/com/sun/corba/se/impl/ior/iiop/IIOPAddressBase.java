@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.ior.iiop ;
+package com.sun.corba.se.impl.ior.iiop;
 
 import org.omg.CORBA.BAD_PARAM ;
 

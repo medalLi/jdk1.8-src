@@ -50,17 +50,17 @@ public final class UShortSeqHolder implements org.omg.CORBA.portable.Streamable
 
     public void _read (org.omg.CORBA.portable.InputStream i)
     {
-        value = org.omg.CORBA.UShortSeqHelper.read (i);
+        value = UShortSeqHelper.read (i);
     }
 
     public void _write (org.omg.CORBA.portable.OutputStream o)
     {
-        org.omg.CORBA.UShortSeqHelper.write (o, value);
+        UShortSeqHelper.write (o, value);
     }
 
-    public org.omg.CORBA.TypeCode _type ()
+    public TypeCode _type ()
     {
-        return org.omg.CORBA.UShortSeqHelper.type ();
+        return UShortSeqHelper.type ();
     }
 
 }

@@ -77,7 +77,7 @@ public interface SOAPHeader extends SOAPElement {
      * @return the new <code>SOAPHeaderElement</code> object that was
      *          inserted into this <code>SOAPHeader</code> object
      * @exception SOAPException if a SOAP error occurs
-     * @see SOAPHeader#addHeaderElement(javax.xml.namespace.QName)
+     * @see SOAPHeader#addHeaderElement(QName)
      */
     public SOAPHeaderElement addHeaderElement(Name name)
         throws SOAPException;

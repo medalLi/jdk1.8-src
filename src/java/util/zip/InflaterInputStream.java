@@ -250,8 +250,8 @@ class InflaterInputStream extends FilterInputStream {
      *
      * @return  a <code>boolean</code> indicating if this stream type supports
      *          the <code>mark</code> and <code>reset</code> methods.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#mark(int)
+     * @see     InputStream#reset()
      */
     public boolean markSupported() {
         return false;
@@ -265,7 +265,7 @@ class InflaterInputStream extends FilterInputStream {
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
      *                      the mark position becomes invalid.
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#reset()
      */
     public synchronized void mark(int readlimit) {
     }
@@ -279,8 +279,8 @@ class InflaterInputStream extends FilterInputStream {
      * <code>IOException</code>.
      *
      * @exception  IOException  if this method is invoked.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.IOException
+     * @see     InputStream#mark(int)
+     * @see     IOException
      */
     public synchronized void reset() throws IOException {
         throw new IOException("mark/reset not supported");

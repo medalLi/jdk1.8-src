@@ -40,8 +40,8 @@ import java.util.Arrays;
  * types and winding rules and it implements all of the
  * basic hit testing methods of the {@link Shape} interface.
  * <p>
- * Use {@link Path2D.Float} when dealing with data that can be represented
- * and used with floating point precision.  Use {@link Path2D.Double}
+ * Use {@link Float} when dealing with data that can be represented
+ * and used with floating point precision.  Use {@link Double}
  * for data that requires the accuracy or range of double precision.
  * <p>
  * {@code Path2D} provides exactly those facilities required for
@@ -748,7 +748,7 @@ public abstract class Path2D implements Shape, Cloneable {
          *
          * @return     a clone of this instance.
          * @exception  OutOfMemoryError    if there is not enough memory.
-         * @see        java.lang.Cloneable
+         * @see        Cloneable
          * @since      1.6
          */
         public final Object clone() {
@@ -760,7 +760,7 @@ public abstract class Path2D implements Shape, Cloneable {
             if (this instanceof GeneralPath) {
                 return new GeneralPath(this);
             } else {
-                return new Path2D.Float(this);
+                return new Float(this);
             }
         }
 
@@ -910,15 +910,15 @@ public abstract class Path2D implements Shape, Cloneable {
          * @since 1.6
          */
         private void readObject(java.io.ObjectInputStream s)
-            throws java.lang.ClassNotFoundException, java.io.IOException
+            throws ClassNotFoundException, java.io.IOException
         {
             super.readObject(s, false);
         }
 
-        static class CopyIterator extends Path2D.Iterator {
+        static class CopyIterator extends Iterator {
             float floatCoords[];
 
-            CopyIterator(Path2D.Float p2df) {
+            CopyIterator(Float p2df) {
                 super(p2df);
                 this.floatCoords = p2df.floatCoords;
             }
@@ -945,11 +945,11 @@ public abstract class Path2D implements Shape, Cloneable {
             }
         }
 
-        static class TxIterator extends Path2D.Iterator {
+        static class TxIterator extends Iterator {
             float floatCoords[];
             AffineTransform affine;
 
-            TxIterator(Path2D.Float p2df, AffineTransform at) {
+            TxIterator(Float p2df, AffineTransform at) {
                 super(p2df);
                 this.floatCoords = p2df.floatCoords;
                 this.affine = at;
@@ -1480,7 +1480,7 @@ public abstract class Path2D implements Shape, Cloneable {
          *
          * @return     a clone of this instance.
          * @exception  OutOfMemoryError    if there is not enough memory.
-         * @see        java.lang.Cloneable
+         * @see        Cloneable
          * @since      1.6
          */
         public final Object clone() {
@@ -1489,7 +1489,7 @@ public abstract class Path2D implements Shape, Cloneable {
             // offer "public Object clone()" for backwards
             // compatibility so we cannot restrict it further.
             // REMIND: Can we do both somehow?
-            return new Path2D.Double(this);
+            return new Double(this);
         }
 
         /*
@@ -1638,15 +1638,15 @@ public abstract class Path2D implements Shape, Cloneable {
          * @since 1.6
          */
         private void readObject(java.io.ObjectInputStream s)
-            throws java.lang.ClassNotFoundException, java.io.IOException
+            throws ClassNotFoundException, java.io.IOException
         {
             super.readObject(s, true);
         }
 
-        static class CopyIterator extends Path2D.Iterator {
+        static class CopyIterator extends Iterator {
             double doubleCoords[];
 
-            CopyIterator(Path2D.Double p2dd) {
+            CopyIterator(Double p2dd) {
                 super(p2dd);
                 this.doubleCoords = p2dd.doubleCoords;
             }
@@ -1673,11 +1673,11 @@ public abstract class Path2D implements Shape, Cloneable {
             }
         }
 
-        static class TxIterator extends Path2D.Iterator {
+        static class TxIterator extends Iterator {
             double doubleCoords[];
             AffineTransform affine;
 
-            TxIterator(Path2D.Double p2dd, AffineTransform at) {
+            TxIterator(Double p2dd, AffineTransform at) {
                 super(p2dd);
                 this.doubleCoords = p2dd.doubleCoords;
                 this.affine = at;
@@ -1930,9 +1930,9 @@ public abstract class Path2D implements Shape, Cloneable {
      * maintains, but it may contain no more precision either.
      * If the tradeoff of precision vs. storage size in the result is
      * important then the convenience constructors in the
-     * {@link Path2D.Float#Path2D.Float(Shape, AffineTransform) Path2D.Float}
+     * {@link Float#Path2D.Float(Shape, AffineTransform) Path2D.Float}
      * and
-     * {@link Path2D.Double#Path2D.Double(Shape, AffineTransform) Path2D.Double}
+     * {@link Double#Path2D.Double(Shape, AffineTransform) Path2D.Double}
      * subclasses should be used to make the choice explicit.
      *
      * @param at the {@code AffineTransform} used to transform a
@@ -2359,7 +2359,7 @@ public abstract class Path2D implements Shape, Cloneable {
      *
      * @return     a clone of this instance.
      * @exception  OutOfMemoryError            if there is not enough memory.
-     * @see        java.lang.Cloneable
+     * @see        Cloneable
      * @since      1.6
      */
     public abstract Object clone();
@@ -2397,10 +2397,10 @@ public abstract class Path2D implements Shape, Cloneable {
         double dCoords[];
 
         if (isdbl) {
-            dCoords = ((Path2D.Double) this).doubleCoords;
+            dCoords = ((Double) this).doubleCoords;
             fCoords = null;
         } else {
-            fCoords = ((Path2D.Float) this).floatCoords;
+            fCoords = ((Float) this).floatCoords;
             dCoords = null;
         }
 
@@ -2466,7 +2466,7 @@ public abstract class Path2D implements Shape, Cloneable {
     }
 
     final void readObject(java.io.ObjectInputStream s, boolean storedbl)
-        throws java.lang.ClassNotFoundException, java.io.IOException
+        throws ClassNotFoundException, java.io.IOException
     {
         s.defaultReadObject();
 
@@ -2487,9 +2487,9 @@ public abstract class Path2D implements Shape, Cloneable {
             nC = INIT_SIZE * 2;
         }
         if (storedbl) {
-            ((Path2D.Double) this).doubleCoords = new double[nC];
+            ((Double) this).doubleCoords = new double[nC];
         } else {
-            ((Path2D.Float) this).floatCoords = new float[nC];
+            ((Float) this).floatCoords = new float[nC];
         }
 
     PATHDONE:

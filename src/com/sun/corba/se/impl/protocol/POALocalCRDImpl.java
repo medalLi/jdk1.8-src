@@ -58,7 +58,7 @@ public class POALocalCRDImpl extends LocalClientRequestDispatcherBase
 
     public POALocalCRDImpl( ORB orb, int scid, IOR ior)
     {
-        super( (com.sun.corba.se.spi.orb.ORB)orb, scid, ior );
+        super( (ORB)orb, scid, ior );
         wrapper = ORBUtilSystemException.get( orb,
             CORBALogDomains.RPC_PROTOCOL ) ;
         poaWrapper = POASystemException.get( orb,

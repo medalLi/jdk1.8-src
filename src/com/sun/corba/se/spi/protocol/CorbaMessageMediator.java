@@ -140,7 +140,7 @@ public interface CorbaMessageMediator
 
     public boolean executePIInResponseConstructor();
 
-    public void setExecutePIInResponseConstructor( boolean b );
+    public void setExecutePIInResponseConstructor(boolean b);
 }
 
 // End of file.

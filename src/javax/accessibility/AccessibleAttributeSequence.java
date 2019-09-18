@@ -46,8 +46,8 @@ import javax.swing.text.AttributeSet;
  * is used by implementors of the class <code>AccessibleContext</code> in
  * order to generate <code>ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED</code> events.
  *
- * @see javax.accessibility.AccessibleContext
- * @see javax.accessibility.AccessibleContext#ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED
+ * @see AccessibleContext
+ * @see AccessibleContext#ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED
  */
 public class AccessibleAttributeSequence {
     /** The start index of the text sequence */

@@ -82,12 +82,12 @@ public abstract class ContextList {
      * @param index             the index of the string desired, with 0 being the
      index of the first string
      * @return                  the string at the given index
-     * @exception org.omg.CORBA.Bounds  if the index is greater than
+     * @exception Bounds  if the index is greater than
      *                          or equal to the number of strings in this
      *                <code>ContextList</code> object
      */
 
-    public abstract String item(int index) throws org.omg.CORBA.Bounds;
+    public abstract String item(int index) throws Bounds;
 
     /**
      * Removes the <code>String</code> object at the given index. Note that
@@ -96,11 +96,11 @@ public abstract class ContextList {
      *
      * @param index     the index of the <code>String</code> object to be removed,
      *                with 0 designating the first string
-     * @exception org.omg.CORBA.Bounds  if the index is greater than
+     * @exception Bounds  if the index is greater than
      *                          or equal to the number of <code>String</code> objects in
      *                this <code>ContextList</code> object
      */
 
-    public abstract void remove(int index) throws org.omg.CORBA.Bounds;
+    public abstract void remove(int index) throws Bounds;
 
 }

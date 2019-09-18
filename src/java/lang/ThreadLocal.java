@@ -143,7 +143,7 @@ public class ThreadLocal<T> {
 
     /**
      * Creates a thread local variable.
-     * @see #withInitial(java.util.function.Supplier)
+     * @see #withInitial(Supplier)
      */
     public ThreadLocal() {
     }

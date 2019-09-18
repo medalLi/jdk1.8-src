@@ -34,7 +34,7 @@ import java.net.URL;
  * is running.
  *
  * @author      Arthur van Hoff
- * @see         java.applet.Applet#setStub(java.applet.AppletStub)
+ * @see         Applet#setStub(AppletStub)
  * @since       JDK1.0
  */
 public interface AppletStub {
@@ -61,18 +61,18 @@ public interface AppletStub {
      *    http://www.oracle.com/technetwork/java/index.html
      * </pre></blockquote>
      *
-     * @return  the {@link java.net.URL} of the document that contains the
+     * @return  the {@link URL} of the document that contains the
      *          applet.
-     * @see     java.applet.AppletStub#getCodeBase()
+     * @see     AppletStub#getCodeBase()
      */
     URL getDocumentBase();
 
     /**
      * Gets the base URL. This is the URL of the directory which contains the applet.
      *
-     * @return  the base {@link java.net.URL} of
+     * @return  the base {@link URL} of
      *          the directory which contains the applet.
-     * @see     java.applet.AppletStub#getDocumentBase()
+     * @see     AppletStub#getDocumentBase()
      */
     URL getCodeBase();
 

@@ -9,7 +9,7 @@ package com.sun.corba.se.spi.activation;
 */
 
 public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.spi.activation.Locator, org.omg.CORBA.portable.InvokeHandler
+                implements Locator, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -20,10 +20,10 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("locateServer", new java.lang.Integer (0));
-    _methods.put ("locateServerForORB", new java.lang.Integer (1));
-    _methods.put ("getEndpoint", new java.lang.Integer (2));
-    _methods.put ("getServerPortForType", new java.lang.Integer (3));
+    _methods.put ("locateServer", new Integer (0));
+    _methods.put ("locateServerForORB", new Integer (1));
+    _methods.put ("getEndpoint", new Integer (2));
+    _methods.put ("getServerPortForType", new Integer (3));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -31,7 +31,7 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -42,21 +42,21 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
        case 0:  // activation/Locator/locateServer
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            String endPoint = in.read_string ();
            com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation $result = null;
            $result = this.locateServer (serverId, endPoint);
            out = $rh.createReply();
            com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationHelper.write (out, $result);
-         } catch (com.sun.corba.se.spi.activation.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.NoSuchEndPointHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+           NoSuchEndPointHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerHeldDown $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -66,21 +66,21 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
        case 1:  // activation/Locator/locateServerForORB
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
-           String orbId = com.sun.corba.se.spi.activation.ORBidHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
+           String orbId = ORBidHelper.read (in);
            com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB $result = null;
            $result = this.locateServerForORB (serverId, orbId);
            out = $rh.createReply();
            com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORBHelper.write (out, $result);
-         } catch (com.sun.corba.se.spi.activation.InvalidORBid $ex) {
+         } catch (InvalidORBid $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.InvalidORBidHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+           InvalidORBidHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerHeldDown $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -95,9 +95,9 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
            $result = this.getEndpoint (endPointType);
            out = $rh.createReply();
            out.write_long ($result);
-         } catch (com.sun.corba.se.spi.activation.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.NoSuchEndPointHelper.write (out, $ex);
+           NoSuchEndPointHelper.write (out, $ex);
          }
          break;
        }
@@ -113,9 +113,9 @@ public abstract class _LocatorImplBase extends org.omg.CORBA.portable.ObjectImpl
            $result = this.getServerPortForType (location, endPointType);
            out = $rh.createReply();
            out.write_long ($result);
-         } catch (com.sun.corba.se.spi.activation.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.NoSuchEndPointHelper.write (out, $ex);
+           NoSuchEndPointHelper.write (out, $ex);
          }
          break;
        }

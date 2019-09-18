@@ -24,7 +24,7 @@
  */
 
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Field;
@@ -412,13 +412,13 @@ public final class IDLTypesUtil {
             throw new IllegalArgumentException();
         }
 
-        if( c == java.lang.Object.class ) {
+        if( c == Object.class ) {
             return new IDLType( c, new String[] { "java", "lang" },
                 "Object" ) ;
-        } else if( c == java.lang.String.class ) {
+        } else if( c == String.class ) {
             return new IDLType( c, new String[] { "CORBA" },
                 "WStringValue" ) ;
-        } else if( c == java.lang.Class.class ) {
+        } else if( c == Class.class ) {
             return new IDLType( c, new String[] { "javax", "rmi", "CORBA" },
                 "ClassDesc" ) ;
         } else if( c == java.io.Serializable.class ) {
@@ -508,8 +508,8 @@ public final class IDLTypesUtil {
         return
             ((c == java.rmi.RemoteException.class) ||
              (c == java.io.IOException.class) ||
-             (c == java.lang.Exception.class) ||
-             (c == java.lang.Throwable.class));
+             (c == Exception.class) ||
+             (c == Throwable.class));
     }
 
     /**
@@ -567,7 +567,7 @@ public final class IDLTypesUtil {
             fields = (Field[])
                 java.security.AccessController.doPrivileged
                 (new java.security.PrivilegedExceptionAction() {
-                        public java.lang.Object run() throws Exception {
+                        public Object run() throws Exception {
                             return c.getFields();
                         }
                     });
@@ -580,7 +580,7 @@ public final class IDLTypesUtil {
         for(int i = 0; i < fields.length; i++) {
             Field next = fields[i];
             Class fieldType = next.getType();
-            if( (fieldType != java.lang.String.class) &&
+            if( (fieldType != String.class) &&
                 !isPrimitive(fieldType) ) {
                 String msg = "Constant field '" + next.getName() +
                     "' in class '" + next.getDeclaringClass().getName() +

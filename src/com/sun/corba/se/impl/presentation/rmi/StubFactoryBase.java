@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import javax.rmi.CORBA.Tie ;
 

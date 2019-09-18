@@ -424,7 +424,7 @@ public abstract class RequestInfoImpl
      * Note: we store the connection as an internal type but
      * expose it here as an external type.
      */
-    public com.sun.corba.se.spi.legacy.connection.Connection connection()
+    public Connection connection()
     {
         return connection;
     }
@@ -456,7 +456,7 @@ public abstract class RequestInfoImpl
             Class<?> helperClass =
                 SharedSecrets.getJavaCorbaAccess().loadClass( helperClassName );
             Class[] readParams = new Class[1];
-            readParams[0] = org.omg.CORBA.portable.InputStream.class;
+            readParams[0] = InputStream.class;
             Method readMethod = helperClass.getMethod( "read", readParams );
 
             // Invoke the read method, passing in the input stream to
@@ -519,7 +519,7 @@ public abstract class RequestInfoImpl
 
                 // Find insert( Any, class ) method
                 Class[] insertMethodParams = new Class[2];
-                insertMethodParams[0] = org.omg.CORBA.Any.class;
+                insertMethodParams[0] = Any.class;
                 insertMethodParams[1] = exceptionClass;
                 Method insertMethod = helperClass.getMethod(
                     "insert", insertMethodParams );
@@ -850,7 +850,7 @@ public abstract class RequestInfoImpl
             if( this.forwardRequestIOR != null ) {
                 // Convert the internal IOR to a forward request exception
                 // by creating an object reference.
-                org.omg.CORBA.Object obj = iorToObject(this.forwardRequestIOR);
+                Object obj = iorToObject(this.forwardRequestIOR);
                 this.forwardRequest = new ForwardRequest( obj );
             }
         }
@@ -922,7 +922,7 @@ public abstract class RequestInfoImpl
         this.slotTable = slotTable;
     }
 
-    protected org.omg.CORBA.Object iorToObject( IOR ior )
+    protected Object iorToObject( IOR ior )
     {
         return ORBUtility.makeObjectReference( ior ) ;
     }

@@ -51,7 +51,7 @@ import javax.swing.SwingConstants;
  * {@link #setInsets} or {@link #setParagraphInsets}.
  *
  * <p>In addition to the abstract methods of
- * {@link javax.swing.text.View},
+ * {@link View},
  * subclasses of <code>CompositeView</code> will need to
  * override:
  * <ul>

@@ -13,6 +13,6 @@ package com.sun.corba.se.PortableActivationIDL;
     * implemented together in the same process, as is currently the case
     * for our implementation.
     */
-public interface ServerManagerOperations  extends com.sun.corba.se.PortableActivationIDL.ActivatorOperations, com.sun.corba.se.PortableActivationIDL.LocatorOperations
+public interface ServerManagerOperations  extends ActivatorOperations, LocatorOperations
 {
 } // interface ServerManagerOperations

@@ -9,7 +9,7 @@ package com.sun.corba.se.PortableActivationIDL;
 */
 
 public abstract class _RepositoryImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.PortableActivationIDL.Repository, org.omg.CORBA.portable.InvokeHandler
+                implements Repository, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -20,15 +20,15 @@ public abstract class _RepositoryImplBase extends org.omg.CORBA.portable.ObjectI
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("registerServer", new java.lang.Integer (0));
-    _methods.put ("unregisterServer", new java.lang.Integer (1));
-    _methods.put ("getServer", new java.lang.Integer (2));
-    _methods.put ("isInstalled", new java.lang.Integer (3));
-    _methods.put ("install", new java.lang.Integer (4));
-    _methods.put ("uninstall", new java.lang.Integer (5));
-    _methods.put ("listRegisteredServers", new java.lang.Integer (6));
-    _methods.put ("getApplicationNames", new java.lang.Integer (7));
-    _methods.put ("getServerID", new java.lang.Integer (8));
+    _methods.put ("registerServer", new Integer (0));
+    _methods.put ("unregisterServer", new Integer (1));
+    _methods.put ("getServer", new Integer (2));
+    _methods.put ("isInstalled", new Integer (3));
+    _methods.put ("install", new Integer (4));
+    _methods.put ("uninstall", new Integer (5));
+    _methods.put ("listRegisteredServers", new Integer (6));
+    _methods.put ("getApplicationNames", new Integer (7));
+    _methods.put ("getServerID", new Integer (8));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -36,7 +36,7 @@ public abstract class _RepositoryImplBase extends org.omg.CORBA.portable.ObjectI
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -165,7 +165,7 @@ public abstract class _RepositoryImplBase extends org.omg.CORBA.portable.ObjectI
          String $result[] = null;
          $result = this.listRegisteredServers ();
          out = $rh.createReply();
-         com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.write (out, $result);
+         ServerIdsHelper.write (out, $result);
          break;
        }
 

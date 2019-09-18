@@ -102,7 +102,7 @@ import java.util.Arrays;
  * has the initial value <tt>"&#92;uFFFD"</tt>;
 
  *
- * its value may be changed via the {@link #replaceWith(java.lang.String)
+ * its value may be changed via the {@link #replaceWith(String)
  * replaceWith} method.
  *
  * <p> The default action for malformed-input and unmappable-character errors

@@ -182,7 +182,7 @@ public class InputMethodEvent extends AWTEvent {
      * the composed text within the <code>text</code> of the
      * preceding <code>INPUT_METHOD_TEXT_CHANGED</code> event otherwise.
      * The time stamp for this event is initialized by invoking
-     * {@link java.awt.EventQueue#getMostRecentEventTime()}.
+     * {@link EventQueue#getMostRecentEventTime()}.
      * <p>Note that passing in an invalid <code>id</code> results in
      * unspecified behavior. This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
@@ -236,7 +236,7 @@ public class InputMethodEvent extends AWTEvent {
      * <code>caret</code> and <code>visiblePosition</code> must be
      * <code>null</code>.
      * The time stamp for this event is initialized by invoking
-     * {@link java.awt.EventQueue#getMostRecentEventTime()}.
+     * {@link EventQueue#getMostRecentEventTime()}.
      * <p>Note that passing in an invalid <code>id</code> results in
      * unspecified behavior. This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
@@ -405,7 +405,7 @@ public class InputMethodEvent extends AWTEvent {
     /**
      * Initializes the <code>when</code> field if it is not present in the
      * object input stream. In that case, the field will be initialized by
-     * invoking {@link java.awt.EventQueue#getMostRecentEventTime()}.
+     * invoking {@link EventQueue#getMostRecentEventTime()}.
      */
     private void readObject(ObjectInputStream s) throws ClassNotFoundException, IOException {
         s.defaultReadObject();

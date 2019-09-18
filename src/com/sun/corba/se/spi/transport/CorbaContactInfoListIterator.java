@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.transport ;
+package com.sun.corba.se.spi.transport;
 
 import com.sun.corba.se.pept.transport.ContactInfoListIterator ;
 

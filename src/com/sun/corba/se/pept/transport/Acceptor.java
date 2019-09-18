@@ -68,7 +68,7 @@ public interface Acceptor
      * PEPt uses separate caches for each type of <code>Acceptor</code>
      * as given by <code>getConnectionCacheType</code>.
      *
-     * @return {@link java.lang.String}
+     * @return {@link String}
      */
     public String getConnectionCacheType();
 
@@ -97,14 +97,14 @@ public interface Acceptor
      * an optimzation to avoid hashing to find that cache.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.ConnectionCache ConnectionCache}
+     * {@link ConnectionCache ConnectionCache}
      */
     public InboundConnectionCache getConnectionCache();
 
     /**
      * Used to determine if the <code>Acceptor</code> should register
      * with
-     * {@link com.sun.corba.se.pept.transport.Selector Selector}
+     * {@link Selector Selector}
      * to handle accept events.
      *
      * For example, this may be <em>false</em> in the case of Solaris Doors
@@ -112,7 +112,7 @@ public interface Acceptor
      *
      * @return <code>true</code> if the <code>Acceptor</code> should be
      * registered with
-     * {@link com.sun.corba.se.pept.transport.Selector Selector}
+     * {@link Selector Selector}
      */
     public boolean shouldRegisterAcceptEvent();
 
@@ -121,10 +121,10 @@ public interface Acceptor
      *
      * This is called either when the selector gets an accept event
      * for this <code>Acceptor</code> or by a
-     * {@link com.sun.corba.se.pept.transport.ListenerThread ListenerThread}.
+     * {@link ListenerThread ListenerThread}.
      *
      * It results in a
-     * {@link com.sun.corba.se.pept.transport.Connection Connection}
+     * {@link Connection Connection}
      * being created.
      */
     public void accept();
@@ -136,11 +136,11 @@ public interface Acceptor
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
+     * {@link EventHandler EventHandler}
      * associated with this <code>Acceptor</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
+     * {@link EventHandler EventHandler}
      */
     public EventHandler getEventHandler();
 
@@ -173,7 +173,7 @@ public interface Acceptor
      * <code>Acceptor</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
+     * {@link MessageMediator MessageMediator}
      */
 
     public MessageMediator finishCreatingMessageMediator(Broker broker,
@@ -182,24 +182,24 @@ public interface Acceptor
 
     /**
      * Used to get a
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      * for the specific <em>encoding</em> represented by this
      * <code>Acceptor</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      */
     public InputObject createInputObject(Broker broker,
                                          MessageMediator messageMediator);
 
     /**
      * Used to get a
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      * for the specific <em>encoding</em> represented by this
      * <code>Acceptor</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      */
     public OutputObject createOutputObject(Broker broker,
                                            MessageMediator messageMediator);

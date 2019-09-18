@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import com.sun.corba.se.spi.orb.ParserData ;
 import com.sun.corba.se.spi.orb.Operation ;

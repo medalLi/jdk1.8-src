@@ -97,7 +97,7 @@ public class CorbanameURL extends INSURLBase
     /**
      * A Utility method to throw BAD_PARAM exception.
      */
-    private void badAddress( java.lang.Throwable e )
+    private void badAddress( Throwable e )
         throws org.omg.CORBA.BAD_PARAM
     {
         throw wrapper.insBadAddress( e ) ;

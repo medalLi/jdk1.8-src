@@ -71,7 +71,7 @@ import com.sun.imageio.plugins.common.I18N;
  * The encoding process may clip, subsample using the parameters
  * specified in the <code>ImageWriteParam</code>.
  *
- * @see javax.imageio.plugins.bmp.BMPImageWriteParam
+ * @see BMPImageWriteParam
  */
 public class BMPImageWriter extends ImageWriter implements BMPConstants {
     /** The output stream to write into */

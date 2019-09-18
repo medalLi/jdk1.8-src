@@ -56,14 +56,14 @@ import java.io.ObjectInput;
  * interface.<br>
  *
  * @author  unascribed
- * @see java.io.ObjectOutputStream
- * @see java.io.ObjectInputStream
- * @see java.io.ObjectOutput
- * @see java.io.ObjectInput
- * @see java.io.Serializable
+ * @see ObjectOutputStream
+ * @see ObjectInputStream
+ * @see ObjectOutput
+ * @see ObjectInput
+ * @see Serializable
  * @since   JDK1.1
  */
-public interface Externalizable extends java.io.Serializable {
+public interface Externalizable extends Serializable {
     /**
      * The object implements the writeExternal method to save its contents
      * by calling the methods of DataOutput for its primitive values or

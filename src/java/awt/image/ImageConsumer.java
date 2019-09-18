@@ -52,7 +52,7 @@ public interface ImageConsumer {
      * @param props the list of properties to be associated with this
      *        image
      */
-    void setProperties(Hashtable<?,?> props);
+    void setProperties(Hashtable<?, ?> props);
 
     /**
      * Sets the ColorModel object used for the majority of

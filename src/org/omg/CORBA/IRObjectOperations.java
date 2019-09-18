@@ -62,7 +62,7 @@ public interface IRObjectOperations
      * Returns the <code>DefinitionKind</code> corresponding to this Interface Repository object.
      * @return the <code>DefinitionKind</code> corresponding to this Interface Repository object.
      */
-    org.omg.CORBA.DefinitionKind def_kind ();
+    DefinitionKind def_kind();
 
     // write interface
     /**
@@ -79,5 +79,5 @@ public interface IRObjectOperations
      *            <code>PrimitiveDef</code>, or if an attempt to destroy an
      *            object would leave the repository in an incoherent state
      */
-    void destroy ();
+    void destroy();
 } // interface IRObjectOperations

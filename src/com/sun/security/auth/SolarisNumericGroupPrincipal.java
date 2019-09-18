@@ -42,7 +42,7 @@ import java.security.Principal;
  *             {@link UnixNumericGroupPrincipal}.
  *             This class is entirely deprecated.
  *
- * @see java.security.Principal
+ * @see Principal
  * @see javax.security.auth.Subject
  */
 @jdk.Exported(false)

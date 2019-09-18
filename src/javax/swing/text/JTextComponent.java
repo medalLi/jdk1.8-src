@@ -122,7 +122,7 @@ import sun.swing.SwingAccessor;
  * keymaps and the input method framework, while maintaining compatibility with
  * the AWT listener model.
  * <p>
- * A {@link javax.swing.text.Keymap} lets an application bind key
+ * A {@link Keymap} lets an application bind key
  * strokes to actions.
  * In order to allow keymaps to be shared across multiple text components, they
  * can use actions that extend <code>TextAction</code>.
@@ -140,7 +140,7 @@ import sun.swing.SwingAccessor;
  * with input methods. As a consequence, some key events do not reach the text
  * component because they are handled by an input method, and some text input
  * reaches the text component as committed text within an {@link
- * java.awt.event.InputMethodEvent} instead of as a key event.
+ * InputMethodEvent} instead of as a key event.
  * The complete text input is the combination of the characters in
  * <code>keyTyped</code> key events and committed text in input method events.
  * <p>
@@ -344,7 +344,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * to the caret.
      *
      * @param listener the listener to be added
-     * @see javax.swing.event.CaretEvent
+     * @see CaretEvent
      */
     public void addCaretListener(CaretListener listener) {
         listenerList.add(CaretListener.class, listener);
@@ -354,7 +354,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * Removes a caret listener.
      *
      * @param listener the listener to be removed
-     * @see javax.swing.event.CaretEvent
+     * @see CaretEvent
      */
     public void removeCaretListener(CaretListener listener) {
         listenerList.remove(CaretListener.class, listener);
@@ -671,7 +671,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      *            <code>b</code> is <code>true</code> and
      *            <code>GraphicsEnvironment.isHeadless()</code>
      *            returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #getDragEnabled
      * @see #setTransferHandler
      * @see TransferHandler
@@ -722,7 +722,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * @see #getDropMode
      * @see #getDropLocation
      * @see #setTransferHandler
-     * @see javax.swing.TransferHandler
+     * @see TransferHandler
      * @since 1.6
      */
     public final void setDropMode(DropMode dropMode) {
@@ -1401,8 +1401,8 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * from the model.  The current selection is reset.  Does nothing
      * for <code>null</code> selections.
      *
-     * @see java.awt.Toolkit#getSystemClipboard
-     * @see java.awt.datatransfer.Clipboard
+     * @see Toolkit#getSystemClipboard
+     * @see Clipboard
      */
     public void cut() {
         if (isEditable() && isEnabled()) {
@@ -1416,8 +1416,8 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * in the text model.  The current selection remains intact.
      * Does nothing for <code>null</code> selections.
      *
-     * @see java.awt.Toolkit#getSystemClipboard
-     * @see java.awt.datatransfer.Clipboard
+     * @see Toolkit#getSystemClipboard
+     * @see Clipboard
      */
     public void copy() {
         invokeAction("copy", TransferHandler.getCopyAction());
@@ -1432,8 +1432,8 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * the associated view.  If the clipboard is empty, does nothing.
      *
      * @see #replaceSelection
-     * @see java.awt.Toolkit#getSystemClipboard
-     * @see java.awt.datatransfer.Clipboard
+     * @see Toolkit#getSystemClipboard
+     * @see Clipboard
      */
     public void paste() {
         if (isEditable() && isEnabled()) {
@@ -1906,9 +1906,9 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      *
      * @param event the event in question
      * @return the string to be used as the tooltip for <code>event</code>
-     * @see javax.swing.JComponent#setToolTipText
-     * @see javax.swing.plaf.TextUI#getToolTipText
-     * @see javax.swing.ToolTipManager#registerComponent
+     * @see JComponent#setToolTipText
+     * @see TextUI#getToolTipText
+     * @see ToolTipManager#registerComponent
      */
     public String getToolTipText(MouseEvent event) {
         String retValue = super.getToolTipText(event);
@@ -2098,7 +2098,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      *                           initiate a print job request
      *
      * @see #print(MessageFormat, MessageFormat, boolean, PrintService, PrintRequestAttributeSet, boolean)
-     * @see java.text.MessageFormat
+     * @see MessageFormat
      * @since 1.6
      */
     public boolean print(final MessageFormat headerFormat,
@@ -2210,9 +2210,9 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      *                           initiate a print job request
      *
      * @see #getPrintable
-     * @see java.text.MessageFormat
-     * @see java.awt.GraphicsEnvironment#isHeadless
-     * @see java.util.concurrent.FutureTask
+     * @see MessageFormat
+     * @see GraphicsEnvironment#isHeadless
+     * @see FutureTask
      *
      * @since 1.6
      */
@@ -2417,7 +2417,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * The returned {@code Printable} when printed, formats the
      * document content appropriately for the page size. For correct
      * line wrapping the {@code imageable width} of all pages must be the
-     * same. See {@link java.awt.print.PageFormat#getImageableWidth}.
+     * same. See {@link PageFormat#getImageableWidth}.
      *
      * <p>
      * This method is thread-safe, although most Swing methods are not. Please
@@ -2441,9 +2441,9 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      *         {@code JTextComponent}
      *
      *
-     * @see java.awt.print.Printable
-     * @see java.awt.print.PageFormat
-     * @see javax.swing.text.Document#render(java.lang.Runnable)
+     * @see Printable
+     * @see PageFormat
+     * @see Document#render(Runnable)
      *
      * @since 1.6
      */
@@ -3271,11 +3271,11 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
          * if <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned.
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */
@@ -3563,11 +3563,11 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
          * <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */
@@ -3587,11 +3587,11 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
          * if <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */
@@ -3611,11 +3611,11 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
          * if <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */

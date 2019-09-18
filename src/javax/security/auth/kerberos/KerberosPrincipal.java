@@ -39,7 +39,7 @@ import sun.security.util.*;
  */
 
 public final class KerberosPrincipal
-    implements java.security.Principal, java.io.Serializable {
+    implements java.security.Principal, Serializable {
 
     private static final long serialVersionUID = -7374788026156829911L;
 

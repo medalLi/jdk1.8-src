@@ -539,7 +539,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      *
      * @param t the requested <code>HTML.Tag</code>
      * @return the <code>Iterator</code> for the given HTML tag
-     * @see javax.swing.text.html.HTML.Tag
+     * @see HTML.Tag
      */
     public Iterator getIterator(HTML.Tag t) {
         if (t.isBlock()) {
@@ -646,7 +646,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      *
      * @param preservesTags  true if unknown tags should be
      *          saved in the model, otherwise tags are dropped
-     * @see javax.swing.text.html.HTML.Tag
+     * @see HTML.Tag
      */
     public void setPreservesUnknownTags(boolean preservesTags) {
         preservesUnknownTags = preservesTags;
@@ -656,7 +656,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * Returns the behavior the parser observes when encountering
      * unknown tags.
      *
-     * @see javax.swing.text.html.HTML.Tag
+     * @see HTML.Tag
      * @return true if unknown tags are to be preserved when parsing
      */
     public boolean getPreservesUnknownTags() {
@@ -763,7 +763,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * @param attr the attributes to be matched
      * @param tag the value to be matched
      * @return true if there is a match, false otherwise
-     * @see javax.swing.text.html.HTML.Attribute
+     * @see HTML.Attribute
      */
     static boolean matchNameAttribute(AttributeSet attr, HTML.Tag tag) {
         Object o = attr.getAttribute(StyleConstants.NameAttribute);
@@ -1404,7 +1404,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * @return the element with the specified <code>Attribute</code>
      *          or <code>null</code> if it can't be found,
      *          or <code>null</code> if <code>id</code> is <code>null</code>
-     * @see javax.swing.text.html.HTML.Attribute
+     * @see HTML.Attribute
      * @since 1.3
      */
     public Element getElement(String id) {
@@ -1426,7 +1426,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * @return the element with the specified <code>Attribute</code>
      *          and the specified <code>value</code>, or <code>null</code>
      *          if it can't be found
-     * @see javax.swing.text.html.HTML.Attribute
+     * @see HTML.Attribute
      * @since 1.3
      */
     public Element getElement(Element e, Object attribute, Object value) {
@@ -1448,7 +1448,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * @return the element with the specified <code>Attribute</code>
      *          and the specified <code>value</code>, or <code>null</code>
      *          if it can't be found
-     * @see javax.swing.text.html.HTML.Attribute
+     * @see HTML.Attribute
      */
     private Element getElement(Element e, Object attribute, Object value,
                                boolean searchLeafAttributes) {
@@ -1670,7 +1670,7 @@ public class HTMLDocument extends DefaultStyledDocument {
             added = new Element[0];
         }
         dde.addEdit(new ElementEdit(e, index, removed, added));
-        ((AbstractDocument.BranchElement)e).replace(
+        ((BranchElement)e).replace(
                                              index, removed.length, added);
     }
 
@@ -1686,7 +1686,7 @@ public class HTMLDocument extends DefaultStyledDocument {
         }
         DefaultDocumentEvent dde = new DefaultDocumentEvent
                 (start, end - start, DocumentEvent.EventType.REMOVE);
-        ((AbstractDocument.BranchElement)e).replace(index, removed.length,
+        ((BranchElement)e).replace(index, removed.length,
                                                     added);
         dde.addEdit(new ElementEdit(e, index, removed, added));
         UndoableEdit u = getContent().remove(start, end - start);
@@ -1972,7 +1972,7 @@ public class HTMLDocument extends DefaultStyledDocument {
          * Returns the type of tag this iterator represents.
          *
          * @return the <code>HTML.Tag</code> that this iterator represents.
-         * @see javax.swing.text.html.HTML.Tag
+         * @see HTML.Tag
          */
         public HTML.Tag getTag() {
             return tag;
@@ -3309,7 +3309,7 @@ public class HTMLDocument extends DefaultStyledDocument {
          *   <td>{@link DefaultButtonModel}
          * <tr>
          *   <td>input, type checkbox
-         *   <td>{@link javax.swing.JToggleButton.ToggleButtonModel}
+         *   <td>{@link JToggleButton.ToggleButtonModel}
          * <tr>
          *   <td>input, type image
          *   <td>{@link DefaultButtonModel}
@@ -3318,7 +3318,7 @@ public class HTMLDocument extends DefaultStyledDocument {
          *   <td>{@link PlainDocument}
          * <tr>
          *   <td>input, type radio
-         *   <td>{@link javax.swing.JToggleButton.ToggleButtonModel}
+         *   <td>{@link JToggleButton.ToggleButtonModel}
          * <tr>
          *   <td>input, type reset
          *   <td>{@link DefaultButtonModel}

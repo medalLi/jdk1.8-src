@@ -20,5 +20,5 @@ public interface LifespanPolicyOperations  extends org.omg.CORBA.PolicyOperation
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.LifespanPolicyValue value ();
+  LifespanPolicyValue value();
 } // interface LifespanPolicyOperations

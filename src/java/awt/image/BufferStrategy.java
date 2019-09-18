@@ -160,7 +160,7 @@ public abstract class BufferStrategy {
      *
      * @return Whether or not the drawing buffer was lost since the last call
      * to <code>getDrawGraphics</code>.
-     * @see java.awt.image.VolatileImage
+     * @see VolatileImage
      */
     public abstract boolean contentsLost();
 
@@ -175,7 +175,7 @@ public abstract class BufferStrategy {
      *
      * @return Whether or not the drawing buffer was restored since the last
      *         call to <code>getDrawGraphics</code>.
-     * @see java.awt.image.VolatileImage
+     * @see VolatileImage
      */
     public abstract boolean contentsRestored();
 

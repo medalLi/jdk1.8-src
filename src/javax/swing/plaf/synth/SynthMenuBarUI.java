@@ -33,7 +33,7 @@ import javax.swing.plaf.basic.*;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JMenuBar}.
+ * {@link JMenuBar}.
  *
  * @author Scott Violet
  * @since 1.7

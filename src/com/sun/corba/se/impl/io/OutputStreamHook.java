@@ -47,7 +47,7 @@ public abstract class OutputStreamHook extends ObjectOutputStream
      * Since ObjectOutputStream.PutField methods specify no exceptions,
      * we are not checking for null parameters on put methods.
      */
-    private class HookPutFields extends ObjectOutputStream.PutField
+    private class HookPutFields extends PutField
     {
         private Hashtable fields = new Hashtable();
 
@@ -138,7 +138,7 @@ public abstract class OutputStreamHook extends ObjectOutputStream
     abstract void writeField(ObjectStreamField field, Object value) throws IOException;
 
     public OutputStreamHook()
-        throws java.io.IOException {
+        throws IOException {
         super();
 
     }
@@ -152,7 +152,7 @@ public abstract class OutputStreamHook extends ObjectOutputStream
 
     public abstract void defaultWriteObjectDelegate();
 
-    public ObjectOutputStream.PutField putFields()
+    public PutField putFields()
         throws IOException {
         putFields = new HookPutFields();
         return putFields;

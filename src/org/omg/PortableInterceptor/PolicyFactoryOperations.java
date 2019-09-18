@@ -46,5 +46,5 @@ public interface PolicyFactoryOperations
        * @return A <code>CORBA.Policy<code> object of the specified type and 
        *     value.
        */
-  org.omg.CORBA.Policy create_policy (int type, org.omg.CORBA.Any value) throws org.omg.CORBA.PolicyError;
+  org.omg.CORBA.Policy create_policy(int type, org.omg.CORBA.Any value) throws org.omg.CORBA.PolicyError;
 } // interface PolicyFactoryOperations

@@ -33,7 +33,7 @@ package java.lang.management;
  * <p> A class implementing this interface is an
  * {@link javax.management.MXBean}. A Java
  * virtual machine has one or more implementations of this interface. The {@link
- * java.lang.management.ManagementFactory#getPlatformMXBeans getPlatformMXBeans}
+ * ManagementFactory#getPlatformMXBeans getPlatformMXBeans}
  * method can be used to obtain the list of {@code BufferPoolMXBean} objects
  * representing the management interfaces for pools of buffers as follows:
  * <pre>

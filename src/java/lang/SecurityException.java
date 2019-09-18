@@ -28,7 +28,7 @@ package java.lang;
  * Thrown by the security manager to indicate a security violation.
  *
  * @author  unascribed
- * @see     java.lang.SecurityManager
+ * @see     SecurityManager
  * @since   JDK1.0
  */
 public class SecurityException extends RuntimeException {

@@ -317,8 +317,8 @@ public abstract class Ellipse2D extends RectangularShape {
      * the information necessary to satisfy the various accessor
      * methods below.
      *
-     * @see java.awt.geom.Ellipse2D.Float
-     * @see java.awt.geom.Ellipse2D.Double
+     * @see Float
+     * @see Double
      * @since 1.2
      */
     protected Ellipse2D() {

@@ -124,7 +124,7 @@ public abstract class RefAddr implements java.io.Serializable {
       * the hash code of the address contents.
       *
       * @return The hash code of this address as an int.
-      * @see java.lang.Object#hashCode
+      * @see Object#hashCode
       */
     public int hashCode() {
         return (getContent() == null)

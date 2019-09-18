@@ -296,7 +296,7 @@ public final class MathContext implements Serializable {
      *
      * @return a {@code String} representing the context settings
      */
-    public java.lang.String toString() {
+    public String toString() {
         return "precision=" +           precision + " " +
                "roundingMode=" +        roundingMode.toString();
     }
@@ -309,17 +309,17 @@ public final class MathContext implements Serializable {
      *
      * @param s the stream being read.
      */
-    private void readObject(java.io.ObjectInputStream s)
-        throws java.io.IOException, ClassNotFoundException {
+    private void readObject(ObjectInputStream s)
+        throws IOException, ClassNotFoundException {
         s.defaultReadObject();     // read in all fields
         // validate possibly bad fields
         if (precision < MIN_DIGITS) {
             String message = "MathContext: invalid digits in stream";
-            throw new java.io.StreamCorruptedException(message);
+            throw new StreamCorruptedException(message);
         }
         if (roundingMode == null) {
             String message = "MathContext: null roundingMode in stream";
-            throw new java.io.StreamCorruptedException(message);
+            throw new StreamCorruptedException(message);
         }
     }
 

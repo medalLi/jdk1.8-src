@@ -86,15 +86,15 @@ public class MethodHandleProxies {
      * which means any checked exception (or other checked throwable)
      * not declared by the requested type's single abstract method.
      * If this happens, the throwable will be wrapped in an instance of
-     * {@link java.lang.reflect.UndeclaredThrowableException UndeclaredThrowableException}
+     * {@link UndeclaredThrowableException UndeclaredThrowableException}
      * and thrown in that wrapped form.
      * <p>
-     * Like {@link java.lang.Integer#valueOf Integer.valueOf},
+     * Like {@link Integer#valueOf Integer.valueOf},
      * {@code asInterfaceInstance} is a factory method whose results are defined
      * by their behavior.
      * It is not guaranteed to return a new instance for every call.
      * <p>
-     * Because of the possibility of {@linkplain java.lang.reflect.Method#isBridge bridge methods}
+     * Because of the possibility of {@linkplain Method#isBridge bridge methods}
      * and other corner cases, the interface may also have several abstract methods
      * with the same name but having distinct descriptors (types of returns and parameters).
      * In this case, all the methods are bound in common to the one given target.

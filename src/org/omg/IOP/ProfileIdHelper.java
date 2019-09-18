@@ -33,7 +33,7 @@ abstract public class ProfileIdHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_ulong);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.IOP.ProfileIdHelper.id (), "ProfileId", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ProfileIdHelper.id (), "ProfileId", __typeCode);
     }
     return __typeCode;
   }

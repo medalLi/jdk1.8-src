@@ -330,7 +330,7 @@ public class OpenMBeanOperationInfoSupport
      * <p>However, note that another instance of a class implementing
      * the {@code OpenMBeanOperationInfo} interface may be equal to
      * this {@code OpenMBeanOperationInfoSupport} instance as defined
-     * by {@link #equals(java.lang.Object)}, but may have a different
+     * by {@link #equals(Object)}, but may have a different
      * hash code if it is calculated differently.</p>
      *
      * <p>As {@code OpenMBeanOperationInfoSupport} instances are

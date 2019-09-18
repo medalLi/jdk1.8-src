@@ -53,7 +53,7 @@ import com.sun.corba.se.spi.orb.ORB;
  * @since       JDK1.2
  */
 
-public class ServantManagerImpl extends org.omg.CORBA.LocalObject implements ServantLocator
+public class ServantManagerImpl extends LocalObject implements ServantLocator
 {
 
     // computed using serialver tool
@@ -101,7 +101,7 @@ public class ServantManagerImpl extends org.omg.CORBA.LocalObject implements Ser
     }
 
     public void postinvoke(byte[] oid, POA adapter, String operation,
-                           java.lang.Object cookie, Servant servant)
+                           Object cookie, Servant servant)
     {
         // nada
     }

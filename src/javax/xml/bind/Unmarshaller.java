@@ -428,7 +428,7 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the file parameter is null
      */
-    public Object unmarshal( java.io.File f ) throws JAXBException;
+    public Object unmarshal(java.io.File f) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified InputStream and return the
@@ -451,7 +451,7 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the InputStream parameter is null
      */
-    public Object unmarshal( java.io.InputStream is ) throws JAXBException;
+    public Object unmarshal(java.io.InputStream is) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified Reader and return the
@@ -476,7 +476,7 @@ public interface Unmarshaller {
      *      If the InputStream parameter is null
      * @since JAXB2.0
      */
-    public Object unmarshal( Reader reader ) throws JAXBException;
+    public Object unmarshal(Reader reader) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified URL and return the resulting
@@ -498,7 +498,7 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the URL parameter is null
      */
-    public Object unmarshal( java.net.URL url ) throws JAXBException;
+    public Object unmarshal(java.net.URL url) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified SAX InputSource and return the
@@ -520,7 +520,7 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the InputSource parameter is null
      */
-    public Object unmarshal( org.xml.sax.InputSource source ) throws JAXBException;
+    public Object unmarshal(org.xml.sax.InputSource source) throws JAXBException;
 
     /**
      * Unmarshal global XML data from the specified DOM tree and return the resulting
@@ -545,7 +545,7 @@ public interface Unmarshaller {
      *      If the Node parameter is null
      * @see #unmarshal(org.w3c.dom.Node, Class)
      */
-    public Object unmarshal( org.w3c.dom.Node node ) throws JAXBException;
+    public Object unmarshal(org.w3c.dom.Node node) throws JAXBException;
 
     /**
      * Unmarshal XML data by JAXB mapped <tt>declaredType</tt>
@@ -573,7 +573,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since JAXB2.0
      */
-    public <T> JAXBElement<T> unmarshal( org.w3c.dom.Node node, Class<T> declaredType ) throws JAXBException;
+    public <T> JAXBElement<T> unmarshal(org.w3c.dom.Node node, Class<T> declaredType) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified XML Source and return the
@@ -631,7 +631,7 @@ public interface Unmarshaller {
      *      If the Source parameter is null
      * @see #unmarshal(javax.xml.transform.Source, Class)
      */
-    public Object unmarshal( javax.xml.transform.Source source )
+    public Object unmarshal(javax.xml.transform.Source source)
         throws JAXBException;
 
 
@@ -662,7 +662,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since JAXB2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.transform.Source source, Class<T> declaredType )
+    public <T> JAXBElement<T> unmarshal(javax.xml.transform.Source source, Class<T> declaredType)
         throws JAXBException;
 
     /**
@@ -699,7 +699,7 @@ public interface Unmarshaller {
      * @since JAXB2.0
      * @see #unmarshal(javax.xml.stream.XMLStreamReader, Class)
      */
-    public Object unmarshal( javax.xml.stream.XMLStreamReader reader )
+    public Object unmarshal(javax.xml.stream.XMLStreamReader reader)
         throws JAXBException;
 
     /**
@@ -733,7 +733,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since JAXB2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.stream.XMLStreamReader reader, Class<T> declaredType ) throws JAXBException;
+    public <T> JAXBElement<T> unmarshal(javax.xml.stream.XMLStreamReader reader, Class<T> declaredType) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified pull parser and return the
@@ -769,7 +769,7 @@ public interface Unmarshaller {
      * @since JAXB2.0
      * @see #unmarshal(javax.xml.stream.XMLEventReader, Class)
      */
-    public Object unmarshal( javax.xml.stream.XMLEventReader reader )
+    public Object unmarshal(javax.xml.stream.XMLEventReader reader)
         throws JAXBException;
 
     /**
@@ -804,7 +804,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since JAXB2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.stream.XMLEventReader reader, Class<T> declaredType ) throws JAXBException;
+    public <T> JAXBElement<T> unmarshal(javax.xml.stream.XMLEventReader reader, Class<T> declaredType) throws JAXBException;
 
     /**
      * Get an unmarshaller handler object that can be used as a component in
@@ -838,7 +838,7 @@ public interface Unmarshaller {
      * validation".
      * <p>
      * This method is deprecated as of JAXB 2.0 - please use the new
-     * {@link #setSchema(javax.xml.validation.Schema)} API.
+     * {@link #setSchema(Schema)} API.
      *
      * @param validating true if the Unmarshaller should validate during
      *        unmarshal, false otherwise
@@ -847,9 +847,9 @@ public interface Unmarshaller {
      * @throws UnsupportedOperationException could be thrown if this method is
      *         invoked on an Unmarshaller created from a JAXBContext referencing
      *         JAXB 2.0 mapped classes
-     * @deprecated since JAXB2.0, please see {@link #setSchema(javax.xml.validation.Schema)}
+     * @deprecated since JAXB2.0, please see {@link #setSchema(Schema)}
      */
-    public void setValidating( boolean validating )
+    public void setValidating(boolean validating)
         throws JAXBException;
 
     /**
@@ -892,7 +892,7 @@ public interface Unmarshaller {
      * @throws JAXBException if an error was encountered while setting the
      *         event handler
      */
-    public void setEventHandler( ValidationEventHandler handler )
+    public void setEventHandler(ValidationEventHandler handler)
         throws JAXBException;
 
     /**
@@ -925,7 +925,7 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the name parameter is null
      */
-    public void setProperty( String name, Object value )
+    public void setProperty(String name, Object value)
         throws PropertyException;
 
     /**
@@ -945,10 +945,10 @@ public interface Unmarshaller {
      * @throws IllegalArgumentException
      *      If the name parameter is null
      */
-    public Object getProperty( String name ) throws PropertyException;
+    public Object getProperty(String name) throws PropertyException;
 
     /**
-     * Specify the JAXP 1.3 {@link javax.xml.validation.Schema Schema}
+     * Specify the JAXP 1.3 {@link Schema Schema}
      * object that should be used to validate subsequent unmarshal operations
      * against.  Passing null into this method will disable validation.
      * <p>
@@ -964,10 +964,10 @@ public interface Unmarshaller {
      *         JAXB 1.0 mapped classes
      * @since JAXB2.0
      */
-    public void setSchema( javax.xml.validation.Schema schema );
+    public void setSchema(Schema schema);
 
     /**
-     * Get the JAXP 1.3 {@link javax.xml.validation.Schema Schema} object
+     * Get the JAXP 1.3 {@link Schema Schema} object
      * being used to perform unmarshal-time validation.  If there is no
      * Schema set on the unmarshaller, then this method will return null
      * indicating that unmarshal-time validation will not be performed.
@@ -988,7 +988,7 @@ public interface Unmarshaller {
      *         JAXB 1.0 mapped classes
      * @since JAXB2.0
      */
-    public javax.xml.validation.Schema getSchema();
+    public Schema getSchema();
 
     /**
      * Associates a configured instance of {@link XmlAdapter} with this unmarshaller.
@@ -1003,7 +1003,7 @@ public interface Unmarshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB2.0
      */
-    public void setAdapter( XmlAdapter adapter );
+    public void setAdapter(XmlAdapter adapter);
 
     /**
      * Associates a configured instance of {@link XmlAdapter} with this unmarshaller.
@@ -1032,7 +1032,7 @@ public interface Unmarshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB2.0
      */
-    public <A extends XmlAdapter> void setAdapter( Class<A> type, A adapter );
+    public <A extends XmlAdapter> void setAdapter(Class<A> type, A adapter);
 
     /**
      * Gets the adapter associated with the specified type.
@@ -1045,7 +1045,7 @@ public interface Unmarshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB2.0
      */
-    public <A extends XmlAdapter> A getAdapter( Class<A> type );
+    public <A extends XmlAdapter> A getAdapter(Class<A> type);
 
     /**
      * <p>Associate a context that resolves cid's, content-id URIs, to

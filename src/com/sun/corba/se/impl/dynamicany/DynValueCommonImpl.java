@@ -94,8 +94,8 @@ abstract class DynValueCommonImpl extends DynAnyComplexImpl implements DynValueC
     //
 
     // Required to raise InvalidValue if this is a null value type.
-    public org.omg.DynamicAny.NameValuePair[] get_members ()
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public NameValuePair[] get_members ()
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -108,8 +108,8 @@ abstract class DynValueCommonImpl extends DynAnyComplexImpl implements DynValueC
     }
 
     // Required to raise InvalidValue if this is a null value type.
-    public org.omg.DynamicAny.NameDynAnyPair[] get_members_as_dyn_any ()
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public NameDynAnyPair[] get_members_as_dyn_any ()
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -126,9 +126,9 @@ abstract class DynValueCommonImpl extends DynAnyComplexImpl implements DynValueC
     //
 
     // Overridden to change to non-null status.
-    public void set_members (org.omg.DynamicAny.NameValuePair[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public void set_members (NameValuePair[] value)
+        throws TypeMismatch,
+               InvalidValue
     {
         super.set_members(value);
         // If we didn't get an exception then this must be a valid non-null value
@@ -136,9 +136,9 @@ abstract class DynValueCommonImpl extends DynAnyComplexImpl implements DynValueC
     }
 
     // Overridden to change to non-null status.
-    public void set_members_as_dyn_any (org.omg.DynamicAny.NameDynAnyPair[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public void set_members_as_dyn_any (NameDynAnyPair[] value)
+        throws TypeMismatch,
+               InvalidValue
     {
         super.set_members_as_dyn_any(value);
         // If we didn't get an exception then this must be a valid non-null value

@@ -274,7 +274,7 @@ class DateTimeTextProvider {
         List<Entry<String, Long>> list = new ArrayList<>(map.size());
         switch (fieldIndex) {
         case Calendar.ERA:
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            for (Entry<String, Integer> entry : map.entrySet()) {
                 int era = entry.getValue();
                 if (chrono == JapaneseChronology.INSTANCE) {
                     if (era == 0) {
@@ -287,17 +287,17 @@ class DateTimeTextProvider {
             }
             break;
         case Calendar.MONTH:
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            for (Entry<String, Integer> entry : map.entrySet()) {
                 list.add(createEntry(entry.getKey(), (long)(entry.getValue() + 1)));
             }
             break;
         case Calendar.DAY_OF_WEEK:
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            for (Entry<String, Integer> entry : map.entrySet()) {
                 list.add(createEntry(entry.getKey(), (long)toWeekDay(entry.getValue())));
             }
             break;
         default:
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            for (Entry<String, Integer> entry : map.entrySet()) {
                 list.add(createEntry(entry.getKey(), (long)entry.getValue()));
             }
             break;
@@ -510,9 +510,9 @@ class DateTimeTextProvider {
             this.valueTextMap = valueTextMap;
             Map<TextStyle, List<Entry<String, Long>>> map = new HashMap<>();
             List<Entry<String, Long>> allList = new ArrayList<>();
-            for (Map.Entry<TextStyle, Map<Long, String>> vtmEntry : valueTextMap.entrySet()) {
+            for (Entry<TextStyle, Map<Long, String>> vtmEntry : valueTextMap.entrySet()) {
                 Map<String, Entry<String, Long>> reverse = new HashMap<>();
-                for (Map.Entry<Long, String> entry : vtmEntry.getValue().entrySet()) {
+                for (Entry<Long, String> entry : vtmEntry.getValue().entrySet()) {
                     if (reverse.put(entry.getValue(), createEntry(entry.getValue(), entry.getKey())) != null) {
                         // TODO: BUG: this has no effect
                         continue;  // not parsable, try next style

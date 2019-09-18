@@ -66,7 +66,7 @@ import java.io.*;
  * <p>
  * There are two possible ways in which this decoder could deal with
  * illegal strings.  It could either leave illegal characters alone or
- * it could throw an {@link java.lang.IllegalArgumentException}.
+ * it could throw an {@link IllegalArgumentException}.
  * Which approach the decoder takes is left to the
  * implementation.
  *
@@ -126,7 +126,7 @@ public class URLDecoder {
      * @exception  UnsupportedEncodingException
      *             If character encoding needs to be consulted, but
      *             named character encoding is not supported
-     * @see URLEncoder#encode(java.lang.String, java.lang.String)
+     * @see URLEncoder#encode(String, String)
      * @since 1.4
      */
     public static String decode(String s, String enc)

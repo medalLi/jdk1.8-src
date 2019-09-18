@@ -53,13 +53,13 @@ public interface StateEngine
         * This method can only be called before done().  An attempt to
         * call it after done() results in an IllegalStateException.
         */
-        public StateEngine add( State oldState, Input input, Guard guard,
-            Action action, State newState ) throws IllegalStateException ;
+        public StateEngine add(State oldState, Input input, Guard guard,
+                               Action action, State newState) throws IllegalStateException ;
 
         /** Add a transition with a guard that always evaluates to true.
         */
-        public StateEngine add( State oldState, Input input,
-            Action action, State newState ) throws IllegalStateException ;
+        public StateEngine add(State oldState, Input input,
+                               Action action, State newState) throws IllegalStateException ;
 
         /** Set the default transition and action for a state.
         * This transition will be used if no more specific transition was
@@ -68,18 +68,18 @@ public interface StateEngine
         * This method can only be called before done().  An attempt to
         * call it after done() results in an IllegalStateException.
         */
-        public StateEngine setDefault( State oldState, Action action, State newState )
+        public StateEngine setDefault(State oldState, Action action, State newState)
                 throws IllegalStateException ;
 
         /** Equivalent to setDefault( oldState, act, newState ) where act is an
          * action that does nothing.
          */
-        public StateEngine setDefault( State oldState, State newState )
+        public StateEngine setDefault(State oldState, State newState)
                 throws IllegalStateException ;
 
         /** Euaivalent to setDefault( oldState, oldState )
          */
-        public StateEngine setDefault( State oldState )
+        public StateEngine setDefault(State oldState)
                 throws IllegalStateException ;
 
         /** Set the default action used in this state engine.  This is the
@@ -88,7 +88,7 @@ public interface StateEngine
         * be called before done().  An attempt to
         * call it after done() results in an IllegalStateException.
         */
-        public void setDefaultAction( Action act ) throws IllegalStateException ;
+        public void setDefaultAction(Action act) throws IllegalStateException ;
 
         /** Called after all transitions have been added to the state engine.
         * This provides an opportunity for the implementation to optimize
@@ -103,7 +103,7 @@ public interface StateEngine
         * here.  This method can only be called after done().  An attempt
         * to call it before done results in an IllegalStateException.
         */
-        public FSM makeFSM( State startState ) throws IllegalStateException ;
+        public FSM makeFSM(State startState) throws IllegalStateException ;
 }
 
 // end of StateEngine.java

@@ -52,7 +52,7 @@ import java.io.IOException;
  *
  * <p>
  * This class provides a partial default implementation for the
- * {@link javax.xml.bind.Marshaller} interface.
+ * {@link Marshaller} interface.
  *
  * <p>
  * The only methods that a JAXB Provider has to implement are
@@ -61,7 +61,7 @@ import java.io.IOException;
  * {@link Marshaller#marshal(Object, javax.xml.transform.Result) marshal(Object, javax.xml.stream.XMLEventWriter)}.
  *
  * @author <ul><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li></ul>
- * @see javax.xml.bind.Marshaller
+ * @see Marshaller
  * @since JAXB1.0
  */
 public abstract class AbstractMarshallerImpl implements Marshaller
@@ -88,7 +88,7 @@ public abstract class AbstractMarshallerImpl implements Marshaller
     /** store the value of the fragment property. */
     private boolean fragment = false;
 
-    public final void marshal( Object obj, java.io.OutputStream os )
+    public final void marshal( Object obj, OutputStream os )
         throws JAXBException {
 
         checkNotNull( obj, "obj", os, "os" );
@@ -132,7 +132,7 @@ public abstract class AbstractMarshallerImpl implements Marshaller
 
     /**
      * By default, the getNode method is unsupported and throw
-     * an {@link java.lang.UnsupportedOperationException}.
+     * an {@link UnsupportedOperationException}.
      *
      * Implementations that choose to support this method must
      * override this method.
@@ -387,14 +387,14 @@ public abstract class AbstractMarshallerImpl implements Marshaller
         throw new PropertyException(name);
     }
     /**
-     * @see javax.xml.bind.Marshaller#getEventHandler()
+     * @see Marshaller#getEventHandler()
      */
     public ValidationEventHandler getEventHandler() throws JAXBException {
         return eventHandler;
     }
 
     /**
-     * @see javax.xml.bind.Marshaller#setEventHandler(ValidationEventHandler)
+     * @see Marshaller#setEventHandler(ValidationEventHandler)
      */
     public void setEventHandler(ValidationEventHandler handler)
         throws JAXBException {

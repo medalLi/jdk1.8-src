@@ -187,7 +187,7 @@ public abstract class ORB extends com.sun.corba.se.org.omg.CORBA.ORB
         boolean useDynamicStub =
             ((Boolean)AccessController.doPrivileged(
                 new PrivilegedAction() {
-                    public java.lang.Object run() {
+                    public Object run() {
                         return Boolean.valueOf( Boolean.getBoolean (
                             ORBConstants.USE_DYNAMIC_STUB_PROPERTY ) ) ;
                     }
@@ -197,7 +197,7 @@ public abstract class ORB extends com.sun.corba.se.org.omg.CORBA.ORB
         PresentationManager.StubFactoryFactory dynamicStubFactoryFactory =
             (PresentationManager.StubFactoryFactory)AccessController.doPrivileged(
                 new PrivilegedAction() {
-                    public java.lang.Object run() {
+                    public Object run() {
                         PresentationManager.StubFactoryFactory sff =
                             PresentationDefaults.getProxyStubFactoryFactory() ;
 

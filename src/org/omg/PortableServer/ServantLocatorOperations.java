@@ -27,7 +27,7 @@ package org.omg.PortableServer;
 	 * every request for objects associated with a POA to 
 	 * be mediated by the servant manager.
 	 */
-public interface ServantLocatorOperations  extends org.omg.PortableServer.ServantManagerOperations
+public interface ServantLocatorOperations  extends ServantManagerOperations
 {
 
   /**
@@ -49,7 +49,7 @@ public interface ServantLocatorOperations  extends org.omg.PortableServer.Servan
   	 *            requests to the object denoted in the 
   	 *            forward_reference member of the exception.
   	 */
-  org.omg.PortableServer.Servant preinvoke (byte[] oid, org.omg.PortableServer.POA adapter, String operation, org.omg.PortableServer.ServantLocatorPackage.CookieHolder the_cookie) throws org.omg.PortableServer.ForwardRequest;
+  Servant preinvoke(byte[] oid, POA adapter, String operation, org.omg.PortableServer.ServantLocatorPackage.CookieHolder the_cookie) throws ForwardRequest;
 
   /**
   	 * This operation is invoked whenener a servant completes
@@ -63,5 +63,5 @@ public interface ServantLocatorOperations  extends org.omg.PortableServer.Servan
   	 * @param the_servant reference to the servant that is
   	 *                    associated with the object.
   	 */
-  void postinvoke (byte[] oid, org.omg.PortableServer.POA adapter, String operation, java.lang.Object the_cookie, org.omg.PortableServer.Servant the_servant);
+  void postinvoke(byte[] oid, POA adapter, String operation, Object the_cookie, Servant the_servant);
 } // interface ServantLocatorOperations

@@ -305,7 +305,7 @@ public class BufferedReader extends Reader {
      *             any line-termination characters, or null if the end of the
      *             stream has been reached
      *
-     * @see        java.io.LineNumberReader#readLine()
+     * @see        LineNumberReader#readLine()
      *
      * @exception  IOException  If an I/O error occurs
      */

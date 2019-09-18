@@ -32,5 +32,5 @@ package javax.swing.plaf;
  * @author Hans Muller
  * @since 1.4
  */
-public abstract class SpinnerUI extends javax.swing.plaf.ComponentUI {
+public abstract class SpinnerUI extends ComponentUI {
 }

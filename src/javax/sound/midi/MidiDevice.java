@@ -46,16 +46,16 @@ import java.util.List;
  * If an application opens a <code>MidiDevice</code>
  * explicitly, it has to close it explicitly to free system resources
  * and enable the application to exit cleanly. Implicit opening is
- * done by calling {@link javax.sound.midi.MidiSystem#getReceiver
+ * done by calling {@link MidiSystem#getReceiver
  * MidiSystem.getReceiver} and {@link
- * javax.sound.midi.MidiSystem#getTransmitter
+ * MidiSystem#getTransmitter
  * MidiSystem.getTransmitter}. The <code>MidiDevice</code> used by
  * <code>MidiSystem.getReceiver</code> and
  * <code>MidiSystem.getTransmitter</code> is implementation-dependant
  * unless the properties <code>javax.sound.midi.Receiver</code>
  * and <code>javax.sound.midi.Transmitter</code> are used (see the
  * description of properties to select default providers in
- * {@link javax.sound.midi.MidiSystem}). A <code>MidiDevice</code>
+ * {@link MidiSystem}). A <code>MidiDevice</code>
  * that was opened implicitly, is closed implicitly by closing the
  * <code>Receiver</code> or <code>Transmitter</code> that resulted in
  * opening it. If more than one implicitly opening
@@ -95,7 +95,7 @@ import java.util.List;
  * }</pre>
  *
  * <p>
- * A <code>MidiDevice</code> includes a <code>{@link MidiDevice.Info}</code> object
+ * A <code>MidiDevice</code> includes a <code>{@link Info}</code> object
  * to provide manufacturer information and so on.
  *
  * @see Synthesizer

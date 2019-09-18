@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.copyobject ;
+package com.sun.corba.se.impl.copyobject;
 
 import com.sun.corba.se.spi.copyobject.ObjectCopier ;
 

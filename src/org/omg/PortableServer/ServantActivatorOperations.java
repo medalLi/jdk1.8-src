@@ -13,7 +13,7 @@ package org.omg.PortableServer;
 	 * When the POA has the RETAIN policy it uses servant 
 	 * managers that are ServantActivators. 
 	 */
-public interface ServantActivatorOperations  extends org.omg.PortableServer.ServantManagerOperations
+public interface ServantActivatorOperations  extends ServantManagerOperations
 {
 
   /**
@@ -33,7 +33,7 @@ public interface ServantActivatorOperations  extends org.omg.PortableServer.Serv
   	 *            requests to the object denoted in the 
   	 *            forward_reference member of the exception.
   	 */
-  org.omg.PortableServer.Servant incarnate (byte[] oid, org.omg.PortableServer.POA adapter) throws org.omg.PortableServer.ForwardRequest;
+  Servant incarnate(byte[] oid, POA adapter) throws ForwardRequest;
 
   /**
   	 * This operation is invoked whenever a servant for 
@@ -56,5 +56,5 @@ public interface ServantActivatorOperations  extends org.omg.PortableServer.Serv
   	 *        until all invocations in progress have
   	 *        completed.
   	 */
-  void etherealize (byte[] oid, org.omg.PortableServer.POA adapter, org.omg.PortableServer.Servant serv, boolean cleanup_in_progress, boolean remaining_activations);
+  void etherealize(byte[] oid, POA adapter, Servant serv, boolean cleanup_in_progress, boolean remaining_activations);
 } // interface ServantActivatorOperations

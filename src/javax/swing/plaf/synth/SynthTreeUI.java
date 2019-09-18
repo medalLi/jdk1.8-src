@@ -51,7 +51,7 @@ import sun.swing.plaf.synth.SynthIcon;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JTree}.
+ * {@link JTree}.
  *
  * @author Scott Violet
  * @since 1.7

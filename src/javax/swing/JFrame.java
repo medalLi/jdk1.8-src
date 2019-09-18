@@ -62,7 +62,7 @@ import javax.accessibility.*;
  * always be non-null. Attempting to set it to null will cause the JFrame
  * to throw an exception. The default content pane will have a BorderLayout
  * manager set on it.
- * Refer to {@link javax.swing.RootPaneContainer}
+ * Refer to {@link RootPaneContainer}
  * for details on adding, removing and setting the <code>LayoutManager</code>
  * of a <code>JFrame</code>.
  * <p>
@@ -81,7 +81,7 @@ import javax.accessibility.*;
  href="http://docs.oracle.com/javase/tutorial/uiswing/components/toplevel.html">Using Top-Level Containers</a> in <em>The Java Tutorial</em>.
  * <p>
  * In a multi-screen environment, you can create a <code>JFrame</code>
- * on a different screen device.  See {@link java.awt.Frame} for more
+ * on a different screen device.  See {@link Frame} for more
  * information.
  * <p>
  * <strong>Warning:</strong> Swing is not thread safe. For more
@@ -100,8 +100,8 @@ import javax.accessibility.*;
  *
  * @see JRootPane
  * @see #setDefaultCloseOperation
- * @see java.awt.event.WindowListener#windowClosing
- * @see javax.swing.RootPaneContainer
+ * @see WindowListener#windowClosing
+ * @see RootPaneContainer
  *
  * @beaninfo
  *      attribute: isContainer true
@@ -159,7 +159,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @see #isRootPaneCheckingEnabled
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean rootPaneCheckingEnabled = false;
 
@@ -172,7 +172,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see Component#setSize
      * @see Component#setVisible
      * @see JComponent#getDefaultLocale
@@ -197,7 +197,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @exception IllegalArgumentException if <code>gc</code> is not from
      *          a screen device.  This exception is always thrown when
      *      GraphicsEnvironment.isHeadless() returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      * @since     1.3
      */
@@ -216,7 +216,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @param title the title for the frame
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see Component#setSize
      * @see Component#setVisible
      * @see JComponent#getDefaultLocale
@@ -243,7 +243,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @exception IllegalArgumentException if <code>gc</code> is not from
      *          a screen device.  This exception is always thrown when
      *      GraphicsEnvironment.isHeadless() returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      * @since     1.3
      */
@@ -291,7 +291,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @param  e  the window event
      * @see    #setDefaultCloseOperation
-     * @see    java.awt.Window#processWindowEvent
+     * @see    Window#processWindowEvent
      */
     protected void processWindowEvent(WindowEvent e) {
         super.processWindowEvent(e);
@@ -370,7 +370,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *        if <code>EXIT_ON_CLOSE</code> has been specified and the
      *        <code>SecurityManager</code> will
      *        not allow the caller to invoke <code>System.exit</code>
-     * @see        java.lang.Runtime#exit(int)
+     * @see        Runtime#exit(int)
      *
      * @beaninfo
      *   preferred: true
@@ -439,7 +439,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @see TransferHandler
      * @see #getTransferHandler
-     * @see java.awt.Component#setDropTarget
+     * @see Component#setDropTarget
      * @since 1.6
      *
      * @beaninfo
@@ -511,7 +511,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @see #addImpl
      * @see #setLayout
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean isRootPaneCheckingEnabled() {
         return rootPaneCheckingEnabled;
@@ -529,7 +529,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @see #addImpl
      * @see #setLayout
      * @see #isRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      * @beaninfo
      *      hidden: true
      * description: Whether the add and setLayout methods are forwarded
@@ -544,7 +544,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * This method is overridden to conditionally forward calls to the
      * <code>contentPane</code>.
      * By default, children are added to the <code>contentPane</code> instead
-     * of the frame, refer to {@link javax.swing.RootPaneContainer} for
+     * of the frame, refer to {@link RootPaneContainer} for
      * details.
      *
      * @param comp the component to be enhanced
@@ -556,7 +556,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @exception IllegalArgumentException if adding a window to a container
      *
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected void addImpl(Component comp, Object constraints, int index)
     {
@@ -578,7 +578,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * @param comp the component to be removed
      * @throws NullPointerException if <code>comp</code> is null
      * @see #add
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void remove(Component comp) {
         if (comp == rootPane) {
@@ -593,12 +593,12 @@ public class JFrame  extends Frame implements WindowConstants,
      * Sets the <code>LayoutManager</code>.
      * Overridden to conditionally forward the call to the
      * <code>contentPane</code>.
-     * Refer to {@link javax.swing.RootPaneContainer} for
+     * Refer to {@link RootPaneContainer} for
      * more information.
      *
      * @param manager the <code>LayoutManager</code>
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void setLayout(LayoutManager manager) {
         if(isRootPaneCheckingEnabled()) {
@@ -680,7 +680,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @param contentPane the <code>contentPane</code> object for this frame
      *
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the content pane parameter is <code>null</code>
      * @see #getContentPane
      * @see RootPaneContainer#setContentPane
@@ -711,7 +711,7 @@ public class JFrame  extends Frame implements WindowConstants,
      * This method is called by the constructor.
      * @param layeredPane the <code>layeredPane</code> object for this frame
      *
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the layered pane parameter is <code>null</code>
      * @see #getLayeredPane
      * @see RootPaneContainer#setLayeredPane
@@ -805,7 +805,7 @@ public class JFrame  extends Frame implements WindowConstants,
      *
      * @param defaultLookAndFeelDecorated A hint as to whether or not current
      *        look and feel should provide window decorations
-     * @see javax.swing.LookAndFeel#getSupportsWindowDecorations
+     * @see LookAndFeel#getSupportsWindowDecorations
      * @since 1.4
      */
     public static void setDefaultLookAndFeelDecorated(boolean defaultLookAndFeelDecorated) {

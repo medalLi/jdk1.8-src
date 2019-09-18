@@ -108,7 +108,7 @@ import java.lang.annotation.Annotation;
  *
  * @see ClassLoader#definePackage
  */
-public class Package implements java.lang.reflect.AnnotatedElement {
+public class Package implements AnnotatedElement {
     /**
      * Return the name of this package.
      *

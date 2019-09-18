@@ -108,7 +108,7 @@ import javax.security.auth.callback.*;
  * </ul>
  *
  * <p> Before a keystore can be accessed, it must be
- * {@link #load(java.io.InputStream, char[]) loaded}.
+ * {@link #load(InputStream, char[]) loaded}.
  * <pre>
  *    KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());
  *
@@ -168,9 +168,9 @@ import javax.security.auth.callback.*;
  *
  * @author Jan Luehe
  *
- * @see java.security.PrivateKey
- * @see javax.crypto.SecretKey
- * @see java.security.cert.Certificate
+ * @see PrivateKey
+ * @see SecretKey
+ * @see Certificate
  *
  * @since 1.2
  */
@@ -201,9 +201,9 @@ public class KeyStore {
 
     /**
      * A marker interface for {@code KeyStore}
-     * {@link #load(KeyStore.LoadStoreParameter) load}
+     * {@link #load(LoadStoreParameter) load}
      * and
-     * {@link #store(KeyStore.LoadStoreParameter) store}
+     * {@link #store(LoadStoreParameter) store}
      * parameters.
      *
      * @since 1.5
@@ -946,7 +946,7 @@ public class KeyStore {
      * @return the default keystore type as specified by the
      * {@code keystore.type} security property, or the string {@literal "jks"}
      * if no such property exists.
-     * @see java.security.Security security properties
+     * @see Security security properties
      */
     public final static String getDefaultType() {
         String kstype;
@@ -1492,7 +1492,7 @@ public class KeyStore {
      *          the information needed to recover the key (e.g. wrong password)
      * @exception KeyStoreException if the keystore has not been initialized
      *          (loaded).
-     * @see #setEntry(String, KeyStore.Entry, KeyStore.ProtectionParameter)
+     * @see #setEntry(String, Entry, ProtectionParameter)
      *
      * @since 1.5
      */
@@ -1529,7 +1529,7 @@ public class KeyStore {
      * @exception KeyStoreException if the keystore has not been initialized
      *          (loaded), or if this operation fails for some other reason
      *
-     * @see #getEntry(String, KeyStore.ProtectionParameter)
+     * @see #getEntry(String, ProtectionParameter)
      *
      * @since 1.5
      */
@@ -1567,7 +1567,7 @@ public class KeyStore {
      */
     public final boolean
         entryInstanceOf(String alias,
-                        Class<? extends KeyStore.Entry> entryClass)
+                        Class<? extends Entry> entryClass)
         throws KeyStoreException
     {
 
@@ -1619,12 +1619,12 @@ public class KeyStore {
 
         /**
          * Returns the ProtectionParameters that should be used to obtain
-         * the {@link KeyStore.Entry Entry} with the given alias.
+         * the {@link Entry Entry} with the given alias.
          * The {@code getKeyStore} method must be invoked before this
          * method may be called.
          *
          * @return the ProtectionParameters that should be used to obtain
-         *   the {@link KeyStore.Entry Entry} with the given alias.
+         *   the {@link Entry Entry} with the given alias.
          * @param alias the alias of the KeyStore entry
          * @throws NullPointerException if alias is null
          * @throws KeyStoreException if an error occurred during the
@@ -1708,7 +1708,7 @@ public class KeyStore {
          * non-null. Otherwise, all installed providers are searched.
          *
          * <p>Calls to {@link #getProtectionParameter getProtectionParameter()}
-         * will return a {@link KeyStore.PasswordProtection PasswordProtection}
+         * will return a {@link PasswordProtection PasswordProtection}
          * object encapsulating the password that was used to invoke the
          * {@code load} method.
          *
@@ -1870,7 +1870,7 @@ public class KeyStore {
          *
          * <p>Each call to the {@link #getKeyStore} method on the returned
          * builder will return a new KeyStore object of type {@code type}.
-         * Its {@link KeyStore#load(KeyStore.LoadStoreParameter) load()}
+         * Its {@link KeyStore#load(LoadStoreParameter) load()}
          * method is invoked using a
          * {@code LoadStoreParameter} that encapsulates
          * {@code protection}.

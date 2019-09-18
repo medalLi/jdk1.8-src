@@ -66,7 +66,7 @@ public interface Locator2 extends Locator
      * the entity's text, or null if that information is not yet
      * available in the current parsing state.
      */
-    public String getXMLVersion ();
+    public String getXMLVersion();
 
     /**
      * Returns the name of the character encoding for the entity.
@@ -95,5 +95,5 @@ public interface Locator2 extends Locator
      * character stream passed through an InputSource or is otherwise
      * not yet available in the current parsing state.
      */
-    public String getEncoding ();
+    public String getEncoding();
 }

@@ -60,7 +60,7 @@ public class ByteBufferWithInfo
                               ByteBuffer byteBuffer,
                               int index)
     {
-        this.orb = (com.sun.corba.se.spi.orb.ORB)orb;
+        this.orb = (ORB)orb;
         debug = this.orb.transportDebugFlag;
         this.byteBuffer = byteBuffer;
         if (byteBuffer != null)
@@ -92,7 +92,7 @@ public class ByteBufferWithInfo
                               BufferManagerWrite bufferManager,
                               boolean usePooledByteBuffers)
     {
-        this.orb = (com.sun.corba.se.spi.orb.ORB)orb;
+        this.orb = (ORB)orb;
         debug = this.orb.transportDebugFlag;
 
         int bufferSize = bufferManager.getBufferSize();
@@ -185,7 +185,7 @@ public class ByteBufferWithInfo
     }
 
     // Grow byteBuffer to a size larger than position() + needed
-    public void growBuffer(com.sun.corba.se.spi.orb.ORB orb)
+    public void growBuffer(ORB orb)
     {
         // This code used to live directly in CDROutputStream.grow.
 

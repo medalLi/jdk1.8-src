@@ -44,7 +44,7 @@ abstract public class ValueBaseHelper
 {
     private static String  _id = "IDL:omg.org/CORBA/ValueBase:1.0";
 
-    public static void insert (org.omg.CORBA.Any a, java.io.Serializable that)
+    public static void insert (Any a, java.io.Serializable that)
     {
         org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
         a.type (type ());
@@ -52,17 +52,17 @@ abstract public class ValueBaseHelper
         a.read_value (out.create_input_stream (), type ());
     }
 
-    public static java.io.Serializable extract (org.omg.CORBA.Any a)
+    public static java.io.Serializable extract (Any a)
     {
         return read (a.create_input_stream ());
     }
 
-    private static org.omg.CORBA.TypeCode __typeCode = null;
-    synchronized public static org.omg.CORBA.TypeCode type ()
+    private static TypeCode __typeCode = null;
+    synchronized public static TypeCode type ()
     {
         if (__typeCode == null)
             {
-                __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (TCKind.tk_value);
+                __typeCode = ORB.init ().get_primitive_tc (TCKind.tk_value);
             }
         return __typeCode;
     }

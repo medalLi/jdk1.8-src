@@ -59,7 +59,7 @@ public class Applet extends Panel {
      *
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since 1.4
      */
     public Applet() throws HeadlessException {
@@ -90,7 +90,7 @@ public class Applet extends Panel {
      * <code>GraphicsEnvironment.isHeadless()</code> returns
      * <code>true</code>
      * @serial
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since 1.4
      */
     private void readObject(ObjectInputStream s)
@@ -127,8 +127,8 @@ public class Applet extends Panel {
      *
      * @return  <code>true</code> if the applet is active;
      *          <code>false</code> otherwise.
-     * @see     java.applet.Applet#start()
-     * @see     java.applet.Applet#stop()
+     * @see     Applet#start()
+     * @see     Applet#stop()
      */
     public boolean isActive() {
         if (stub != null) {
@@ -150,9 +150,9 @@ public class Applet extends Panel {
      *    http://www.oracle.com/technetwork/java/index.html
      * </pre></blockquote>
      *
-     * @return  the {@link java.net.URL} of the document that contains this
+     * @return  the {@link URL} of the document that contains this
      *          applet.
-     * @see     java.applet.Applet#getCodeBase()
+     * @see     Applet#getCodeBase()
      */
     public URL getDocumentBase() {
         return stub.getDocumentBase();
@@ -161,9 +161,9 @@ public class Applet extends Panel {
     /**
      * Gets the base URL. This is the URL of the directory which contains this applet.
      *
-     * @return  the base {@link java.net.URL} of
+     * @return  the base {@link URL} of
      *          the directory which contains this applet.
-     * @see     java.applet.Applet#getDocumentBase()
+     * @see     Applet#getDocumentBase()
      */
     public URL getCodeBase() {
         return stub.getCodeBase();
@@ -239,7 +239,7 @@ public class Applet extends Panel {
      *
      * @return {@code true}
      * @since 1.7
-     * @see java.awt.Container#isValidateRoot
+     * @see Container#isValidateRoot
      */
     @Override
     public boolean isValidateRoot() {
@@ -270,7 +270,7 @@ public class Applet extends Panel {
      *
      * @param   url   an absolute URL giving the location of the image.
      * @return  the image at the specified URL.
-     * @see     java.awt.Image
+     * @see     Image
      */
     public Image getImage(URL url) {
         return getAppletContext().getImage(url);
@@ -291,7 +291,7 @@ public class Applet extends Panel {
      * @param   name   the location of the image, relative to the
      *                 <code>url</code> argument.
      * @return  the image at the specified URL.
-     * @see     java.awt.Image
+     * @see     Image
      */
     public Image getImage(URL url, String name) {
         try {
@@ -323,7 +323,7 @@ public class Applet extends Panel {
      *
      * @param   url  an absolute URL giving the location of the audio clip.
      * @return  the audio clip at the specified URL.
-     * @see     java.applet.AudioClip
+     * @see     AudioClip
      */
     public AudioClip getAudioClip(URL url) {
         return getAppletContext().getAudioClip(url);
@@ -342,7 +342,7 @@ public class Applet extends Panel {
      * @param   name   the location of the audio clip, relative to the
      *                 <code>url</code> argument.
      * @return  the audio clip at the specified URL.
-     * @see     java.applet.AudioClip
+     * @see     AudioClip
      */
     public AudioClip getAudioClip(URL url, String name) {
         try {
@@ -452,9 +452,9 @@ public class Applet extends Panel {
      * The implementation of this method provided by the
      * <code>Applet</code> class does nothing.
      *
-     * @see     java.applet.Applet#destroy()
-     * @see     java.applet.Applet#start()
-     * @see     java.applet.Applet#stop()
+     * @see     Applet#destroy()
+     * @see     Applet#start()
+     * @see     Applet#stop()
      */
     public void init() {
     }
@@ -482,10 +482,10 @@ public class Applet extends Panel {
      * The implementation of this method provided by the
      * <code>Applet</code> class does nothing.
      *
-     * @see     java.applet.Applet#destroy()
-     * @see     java.applet.Applet#init()
-     * @see     java.applet.Applet#stop()
-     * @see     java.awt.Component#isShowing()
+     * @see     Applet#destroy()
+     * @see     Applet#init()
+     * @see     Applet#stop()
+     * @see     Component#isShowing()
      * @see     java.awt.event.ComponentListener#componentShown(java.awt.event.ComponentEvent)
      */
     public void start() {
@@ -507,8 +507,8 @@ public class Applet extends Panel {
      * The implementation of this method provided by the
      * <code>Applet</code> class does nothing.
      *
-     * @see     java.applet.Applet#destroy()
-     * @see     java.applet.Applet#init()
+     * @see     Applet#destroy()
+     * @see     Applet#init()
      */
     public void stop() {
     }
@@ -528,9 +528,9 @@ public class Applet extends Panel {
      * The implementation of this method provided by the
      * <code>Applet</code> class does nothing.
      *
-     * @see     java.applet.Applet#init()
-     * @see     java.applet.Applet#start()
-     * @see     java.applet.Applet#stop()
+     * @see     Applet#init()
+     * @see     Applet#start()
+     * @see     Applet#stop()
      */
     public void destroy() {
     }

@@ -202,7 +202,7 @@ import java.lang.Double;
  *
  * <li><p> If a <tt>PreferencesFactory</tt> implementation class file
  * has been installed in a jar file that is visible to the
- * {@link java.lang.ClassLoader#getSystemClassLoader system class loader},
+ * {@link ClassLoader#getSystemClassLoader system class loader},
  * and that jar file contains a provider-configuration file named
  * <tt>java.util.prefs.PreferencesFactory</tt> in the resource
  * directory <tt>META-INF/services</tt>, then the first class name

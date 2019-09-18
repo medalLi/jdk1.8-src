@@ -52,12 +52,12 @@ package org.xml.sax;
  *
  * <p>If the parser or application needs to include information about a
  * specific location in an XML document, it should use the
- * {@link org.xml.sax.SAXParseException SAXParseException} subclass.</p>
+ * {@link SAXParseException SAXParseException} subclass.</p>
  *
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.SAXParseException
+ * @see SAXParseException
  */
 public class SAXException extends Exception {
 

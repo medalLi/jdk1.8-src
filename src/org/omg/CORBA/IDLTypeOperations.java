@@ -47,12 +47,12 @@ package org.omg.CORBA;
  * @see IRObjectOperations
  */
 
-public interface IDLTypeOperations  extends org.omg.CORBA.IRObjectOperations
+public interface IDLTypeOperations  extends IRObjectOperations
 {
     /**
      * The type attribute describes the type defined by an object
      * derived from <code>IDLType</code>.
      * @return the <code>TypeCode</code> defined by this object.
      */
-    org.omg.CORBA.TypeCode type ();
+    TypeCode type();
 } // interface IDLTypeOperations

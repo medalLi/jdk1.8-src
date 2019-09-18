@@ -12,7 +12,7 @@ abstract public class ORBPortInfoHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/ORBPortInfo:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.ORBPortInfo that)
+  public static void insert (org.omg.CORBA.Any a, ORBPortInfo that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ORBPortInfoHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ORBPortInfo extract (org.omg.CORBA.Any a)
+  public static ORBPortInfo extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -49,12 +49,12 @@ abstract public class ORBPortInfoHelper
             _tcOf_members0,
             null);
           _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_long);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.PortableActivationIDL.TCPPortHelper.id (), "TCPPort", _tcOf_members0);
+          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (TCPPortHelper.id (), "TCPPort", _tcOf_members0);
           _members0[1] = new org.omg.CORBA.StructMember (
             "port",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (com.sun.corba.se.PortableActivationIDL.ORBPortInfoHelper.id (), "ORBPortInfo", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (ORBPortInfoHelper.id (), "ORBPortInfo", _members0);
           __active = false;
         }
       }
@@ -67,15 +67,15 @@ abstract public class ORBPortInfoHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ORBPortInfo read (org.omg.CORBA.portable.InputStream istream)
+  public static ORBPortInfo read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.ORBPortInfo value = new com.sun.corba.se.PortableActivationIDL.ORBPortInfo ();
+    ORBPortInfo value = new ORBPortInfo ();
     value.orbId = istream.read_string ();
     value.port = istream.read_long ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.ORBPortInfo value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ORBPortInfo value)
   {
     ostream.write_string (value.orbId);
     ostream.write_long (value.port);

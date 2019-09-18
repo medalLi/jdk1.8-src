@@ -221,6 +221,6 @@ package org.omg.PortableInterceptor;
    *
    * @see ServerRequestInterceptor
    */
-public interface ServerRequestInfo extends ServerRequestInfoOperations, org.omg.PortableInterceptor.RequestInfo, org.omg.CORBA.portable.IDLEntity 
+public interface ServerRequestInfo extends ServerRequestInfoOperations, RequestInfo, org.omg.CORBA.portable.IDLEntity
 {
 } // interface ServerRequestInfo

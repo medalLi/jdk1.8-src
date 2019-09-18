@@ -94,7 +94,7 @@ public final class PrinterURI extends URISyntax
      * class PrinterURI itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return PrinterURI.class;

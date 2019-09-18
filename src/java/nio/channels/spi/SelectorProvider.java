@@ -47,12 +47,12 @@ import sun.security.action.GetPropertyAction;
  * the default provider as specified below.
  *
  * <p> The system-wide default provider is used by the static <tt>open</tt>
- * methods of the {@link java.nio.channels.DatagramChannel#open
- * DatagramChannel}, {@link java.nio.channels.Pipe#open Pipe}, {@link
- * java.nio.channels.Selector#open Selector}, {@link
- * java.nio.channels.ServerSocketChannel#open ServerSocketChannel}, and {@link
- * java.nio.channels.SocketChannel#open SocketChannel} classes.  It is also
- * used by the {@link java.lang.System#inheritedChannel System.inheritedChannel()}
+ * methods of the {@link DatagramChannel#open
+ * DatagramChannel}, {@link Pipe#open Pipe}, {@link
+ * Selector#open Selector}, {@link
+ * ServerSocketChannel#open ServerSocketChannel}, and {@link
+ * SocketChannel#open SocketChannel} classes.  It is also
+ * used by the {@link System#inheritedChannel System.inheritedChannel()}
  * method. A program may make use of a provider other than the default provider
  * by instantiating that provider and then directly invoking the <tt>open</tt>
  * methods defined in this class.
@@ -267,25 +267,25 @@ public abstract class SelectorProvider {
      * inherits a channel representing a network socket.
      *
      * <p> In cases where the inherited channel represents a network socket
-     * then the {@link java.nio.channels.Channel Channel} type returned
+     * then the {@link Channel Channel} type returned
      * by this method is determined as follows:
      *
      * <ul>
      *
      *  <li><p> If the inherited channel represents a stream-oriented connected
-     *  socket then a {@link java.nio.channels.SocketChannel SocketChannel} is
+     *  socket then a {@link SocketChannel SocketChannel} is
      *  returned. The socket channel is, at least initially, in blocking
      *  mode, bound to a socket address, and connected to a peer.
      *  </p></li>
      *
      *  <li><p> If the inherited channel represents a stream-oriented listening
-     *  socket then a {@link java.nio.channels.ServerSocketChannel
+     *  socket then a {@link ServerSocketChannel
      *  ServerSocketChannel} is returned. The server-socket channel is, at
      *  least initially, in blocking mode, and bound to a socket address.
      *  </p></li>
      *
      *  <li><p> If the inherited channel is a datagram-oriented socket
-     *  then a {@link java.nio.channels.DatagramChannel DatagramChannel} is
+     *  then a {@link DatagramChannel DatagramChannel} is
      *  returned. The datagram channel is, at least initially, in blocking
      *  mode, and bound to a socket address.
      *  </p></li>

@@ -111,7 +111,7 @@ import sun.rmi.transport.LiveRef;
 /**
  * <p>A connection to a remote RMI connector.  Usually, such
  * connections are made using {@link
- * javax.management.remote.JMXConnectorFactory JMXConnectorFactory}.
+ * JMXConnectorFactory JMXConnectorFactory}.
  * However, specialized applications can use this class directly, for
  * example with an {@link RMIServer} stub obtained without going
  * through JNDI.</p>
@@ -1730,7 +1730,7 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
      * referenced object (an {@link org.omg.CORBA.ORB ORB}) is
      * returned. Otherwise, a new org.omg.CORBA.ORB is created
      * by calling {@link
-     * org.omg.CORBA.ORB#init(String[], java.util.Properties)
+     * org.omg.CORBA.ORB#init(String[], Properties)
      * org.omg.CORBA.ORB.init((String[])null,(Properties)null)}
      * <p>The new created ORB is kept in a static
      * {@link WeakReference} and can be reused for connecting other
@@ -1763,7 +1763,7 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
     }
 
     /**
-     * Read RMIConnector fields from an {@link java.io.ObjectInputStream
+     * Read RMIConnector fields from an {@link ObjectInputStream
      * ObjectInputStream}.
      * Calls <code>s.defaultReadObject()</code> and then initializes
      * all transient variables that need initializing.
@@ -1773,7 +1773,7 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
      * @see #RMIConnector(JMXServiceURL,Map)
      * @see #RMIConnector(RMIServer,Map)
      **/
-    private void readObject(java.io.ObjectInputStream s)
+    private void readObject(ObjectInputStream s)
     throws IOException, ClassNotFoundException  {
         s.defaultReadObject();
 

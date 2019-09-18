@@ -36,30 +36,30 @@ package org.omg.CORBA;
 
 public final class CurrentHolder implements org.omg.CORBA.portable.Streamable
 {
-  public org.omg.CORBA.Current value = null;
+  public Current value = null;
 
   public CurrentHolder ()
   {
   }
 
-  public CurrentHolder (org.omg.CORBA.Current initialValue)
+  public CurrentHolder (Current initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = org.omg.CORBA.CurrentHelper.read (i);
+    value = CurrentHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    org.omg.CORBA.CurrentHelper.write (o, value);
+    CurrentHelper.write (o, value);
   }
 
-  public org.omg.CORBA.TypeCode _type ()
+  public TypeCode _type ()
   {
-    return org.omg.CORBA.CurrentHelper.type ();
+    return CurrentHelper.type ();
   }
 
 }

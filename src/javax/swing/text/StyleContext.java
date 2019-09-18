@@ -700,7 +700,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
         return key.getClass().getName() + "." + key.toString();
     }
 
-    private void writeObject(java.io.ObjectOutputStream s)
+    private void writeObject(ObjectOutputStream s)
         throws IOException
     {
         // clean out unused sets before saving

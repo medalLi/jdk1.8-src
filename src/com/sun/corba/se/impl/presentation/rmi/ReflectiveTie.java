@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -69,8 +69,8 @@ public final class ReflectiveTie extends Servant implements Tie
         this.wrapper = wrapper ;
     }
 
-    public String[] _all_interfaces(org.omg.PortableServer.POA poa,
-        byte[] objectId)
+    public String[] _all_interfaces(POA poa,
+                                    byte[] objectId)
     {
         return classData.getTypeIds() ;
     }

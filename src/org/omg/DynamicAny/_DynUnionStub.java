@@ -19,16 +19,16 @@ package org.omg.DynamicAny;
     * The component_count value for a union depends on the current discriminator:
     * it is 2 for a union whose discriminator indicates a named member, and 1 otherwise.
     */
-public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.DynamicAny.DynUnion
+public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements DynUnion
 {
-  final public static java.lang.Class _opsClass = DynUnionOperations.class;
+  final public static Class _opsClass = DynUnionOperations.class;
 
 
 
   /**
           * Returns the current discriminator value.
           */
-  public org.omg.DynamicAny.DynAny get_discriminator ()
+  public DynAny get_discriminator ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_discriminator", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -56,7 +56,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch if the TypeCode of the parameter is not equivalent to the TypeCode
           *            of the union's discriminator
           */
-  public void set_discriminator (org.omg.DynamicAny.DynAny d) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public void set_discriminator (DynAny d) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("set_discriminator", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -169,7 +169,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           *
           * @exception InvalidValue if the union has no active member
           */
-  public org.omg.DynamicAny.DynAny member () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public DynAny member () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("member", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -232,7 +232,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @param dyn_any
           * @exception TypeMismatch if the type of the passed DynAny is not equivalent to the type of target DynAny
           */
-  public void assign (org.omg.DynamicAny.DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public void assign (DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("assign", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -294,7 +294,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           *
           * @return true of the DynAnys are equal, false otherwise
           */
-  public boolean equal (org.omg.DynamicAny.DynAny dyn_any)
+  public boolean equal (DynAny dyn_any)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("equal", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -341,7 +341,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           *
           * @return a deep copy of the DynAny object
           */
-  public org.omg.DynamicAny.DynAny copy ()
+  public DynAny copy ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("copy", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -687,7 +687,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           */
-  public void insert_dyn_any (org.omg.DynamicAny.DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void insert_dyn_any (DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("insert_dyn_any", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -1088,7 +1088,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           */
-  public org.omg.DynamicAny.DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_dyn_any", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;
@@ -1226,7 +1226,7 @@ public class _DynUnionStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch If called on a DynAny that cannot have components,
           * such as a DynEnum or an empty exception
           */
-  public org.omg.DynamicAny.DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("current_component", _opsClass);
       DynUnionOperations  $self = (DynUnionOperations) $so.servant;

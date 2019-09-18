@@ -12,7 +12,7 @@ abstract public class TaggedProfileHelper
 {
   private static String  _id = "IDL:omg.org/IOP/TaggedProfile:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.IOP.TaggedProfile that)
+  public static void insert (org.omg.CORBA.Any a, TaggedProfile that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class TaggedProfileHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.IOP.TaggedProfile extract (org.omg.CORBA.Any a)
+  public static TaggedProfile extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -43,7 +43,7 @@ abstract public class TaggedProfileHelper
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [2];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
           _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_ulong);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.IOP.ProfileIdHelper.id (), "ProfileId", _tcOf_members0);
+          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (ProfileIdHelper.id (), "ProfileId", _tcOf_members0);
           _members0[0] = new org.omg.CORBA.StructMember (
             "tag",
             _tcOf_members0,
@@ -54,7 +54,7 @@ abstract public class TaggedProfileHelper
             "profile_data",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (org.omg.IOP.TaggedProfileHelper.id (), "TaggedProfile", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (TaggedProfileHelper.id (), "TaggedProfile", _members0);
           __active = false;
         }
       }
@@ -67,9 +67,9 @@ abstract public class TaggedProfileHelper
     return _id;
   }
 
-  public static org.omg.IOP.TaggedProfile read (org.omg.CORBA.portable.InputStream istream)
+  public static TaggedProfile read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.IOP.TaggedProfile value = new org.omg.IOP.TaggedProfile ();
+    TaggedProfile value = new TaggedProfile ();
     value.tag = istream.read_ulong ();
     int _len0 = istream.read_long ();
     value.profile_data = new byte[_len0];
@@ -77,7 +77,7 @@ abstract public class TaggedProfileHelper
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.IOP.TaggedProfile value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, TaggedProfile value)
   {
     ostream.write_ulong (value.tag);
     ostream.write_long (value.profile_data.length);

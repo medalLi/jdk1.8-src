@@ -43,11 +43,11 @@ import sun.security.util.SecurityConstants;
  * completely trusted and adding the necessary permissions to the policy
  * is prohibitively cumbersome.
  *
- * @see java.security.Permission
- * @see java.security.AccessController
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see Permission
+ * @see AccessController
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  *
  * @author Roland Schemers
@@ -142,8 +142,8 @@ public final class AllPermission extends Permission {
  * order, but enable the implies function to evaluate the implies
  * method in an efficient (and consistent) manner.
  *
- * @see java.security.Permission
- * @see java.security.Permissions
+ * @see Permission
+ * @see Permissions
  *
  *
  * @author Roland Schemers

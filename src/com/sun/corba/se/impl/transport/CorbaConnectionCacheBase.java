@@ -170,7 +170,7 @@ public abstract class CorbaConnectionCacheBase
 
                 for (int i=0; i < orb.getORBData().getNumberToReclaim(); i++) {
                     Connection toClose = null;
-                    long lru = java.lang.Long.MAX_VALUE;
+                    long lru = Long.MAX_VALUE;
                     Iterator iterator = values().iterator();
 
                     // Find least recently used and not busy connection in cache

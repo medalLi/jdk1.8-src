@@ -77,7 +77,7 @@ public interface LexicalHandler
      *
      * <p>All declarations reported through
      * {@link org.xml.sax.DTDHandler DTDHandler} or
-     * {@link org.xml.sax.ext.DeclHandler DeclHandler} events must appear
+     * {@link DeclHandler DeclHandler} events must appear
      * between the startDTD and {@link #endDTD endDTD} events.
      * Declarations are assumed to belong to the internal DTD subset
      * unless they appear between {@link #startEntity startEntity}
@@ -106,8 +106,8 @@ public interface LexicalHandler
      * @see #endDTD
      * @see #startEntity
      */
-    public abstract void startDTD (String name, String publicId,
-                                   String systemId)
+    public abstract void startDTD(String name, String publicId,
+                                  String systemId)
         throws SAXException;
 
 
@@ -121,7 +121,7 @@ public interface LexicalHandler
      * @exception SAXException The application may raise an exception.
      * @see #startDTD
      */
-    public abstract void endDTD ()
+    public abstract void endDTD()
         throws SAXException;
 
 
@@ -142,7 +142,7 @@ public interface LexicalHandler
      * <p>When a SAX2 driver is providing these events, all other
      * events must be properly nested within start/end entity
      * events.  There is no additional requirement that events from
-     * {@link org.xml.sax.ext.DeclHandler DeclHandler} or
+     * {@link DeclHandler DeclHandler} or
      * {@link org.xml.sax.DTDHandler DTDHandler} be properly ordered.</p>
      *
      * <p>Note that skipped entities will be reported through the
@@ -171,10 +171,10 @@ public interface LexicalHandler
      *        external DTD subset, it will be "[dtd]".
      * @exception SAXException The application may raise an exception.
      * @see #endEntity
-     * @see org.xml.sax.ext.DeclHandler#internalEntityDecl
-     * @see org.xml.sax.ext.DeclHandler#externalEntityDecl
+     * @see DeclHandler#internalEntityDecl
+     * @see DeclHandler#externalEntityDecl
      */
-    public abstract void startEntity (String name)
+    public abstract void startEntity(String name)
         throws SAXException;
 
 
@@ -185,7 +185,7 @@ public interface LexicalHandler
      * @exception SAXException The application may raise an exception.
      * @see #startEntity
      */
-    public abstract void endEntity (String name)
+    public abstract void endEntity(String name)
         throws SAXException;
 
 
@@ -200,7 +200,7 @@ public interface LexicalHandler
      * @exception SAXException The application may raise an exception.
      * @see #endCDATA
      */
-    public abstract void startCDATA ()
+    public abstract void startCDATA()
         throws SAXException;
 
 
@@ -210,7 +210,7 @@ public interface LexicalHandler
      * @exception SAXException The application may raise an exception.
      * @see #startCDATA
      */
-    public abstract void endCDATA ()
+    public abstract void endCDATA()
         throws SAXException;
 
 
@@ -228,7 +228,7 @@ public interface LexicalHandler
      * @param length The number of characters to use from the array.
      * @exception SAXException The application may raise an exception.
      */
-    public abstract void comment (char ch[], int start, int length)
+    public abstract void comment(char ch[], int start, int length)
         throws SAXException;
 
 }

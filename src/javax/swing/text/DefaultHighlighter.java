@@ -68,7 +68,7 @@ public class DefaultHighlighter extends LayeredHighlighter {
                 for (; i < len; i++) {
                     info = highlights.elementAt(i);
                     if (!(info instanceof LayeredHighlightInfo)) {
-                        Highlighter.HighlightPainter p = info.getPainter();
+                        HighlightPainter p = info.getPainter();
                         p.paint(g, info.getStartOffset(), info.getEndOffset(),
                                 a, component);
                     }
@@ -112,7 +112,7 @@ public class DefaultHighlighter extends LayeredHighlighter {
      *   to refer to the highlight
      * @exception BadLocationException if the specified location is invalid
      */
-    public Object addHighlight(int p0, int p1, Highlighter.HighlightPainter p) throws BadLocationException {
+    public Object addHighlight(int p0, int p1, HighlightPainter p) throws BadLocationException {
         if (p0 < 0) {
             throw new BadLocationException("Invalid start offset", p0);
         }
@@ -123,7 +123,7 @@ public class DefaultHighlighter extends LayeredHighlighter {
 
         Document doc = component.getDocument();
         HighlightInfo i = (getDrawsLayeredHighlights() &&
-                           (p instanceof LayeredHighlighter.LayerPainter)) ?
+                           (p instanceof LayerPainter)) ?
                           new LayeredHighlightInfo() : new HighlightInfo();
         i.painter = p;
         i.p0 = doc.createPosition(p0);
@@ -272,12 +272,12 @@ public class DefaultHighlighter extends LayeredHighlighter {
      * @return the copy
      * @see Highlighter#getHighlights
      */
-    public Highlighter.Highlight[] getHighlights() {
+    public Highlight[] getHighlights() {
         int size = highlights.size();
         if (size == 0) {
             return noHighlights;
         }
-        Highlighter.Highlight[] h = new Highlighter.Highlight[size];
+        Highlight[] h = new Highlight[size];
         highlights.copyInto(h);
         return h;
     }
@@ -347,8 +347,8 @@ public class DefaultHighlighter extends LayeredHighlighter {
 
     // ---- member variables --------------------------------------------
 
-    private final static Highlighter.Highlight[] noHighlights =
-            new Highlighter.Highlight[0];
+    private final static Highlight[] noHighlights =
+            new Highlight[0];
     private Vector<HighlightInfo> highlights = new Vector<HighlightInfo>();
     private JTextComponent component;
     private boolean drawsLayeredHighlights;
@@ -361,14 +361,14 @@ public class DefaultHighlighter extends LayeredHighlighter {
      * <p>
      * As of 1.4 this field is final.
      */
-    public static final LayeredHighlighter.LayerPainter DefaultPainter = new DefaultHighlightPainter(null);
+    public static final LayerPainter DefaultPainter = new DefaultHighlightPainter(null);
 
 
     /**
      * Simple highlight painter that fills a highlighted area with
      * a solid color.
      */
-    public static class DefaultHighlightPainter extends LayeredHighlighter.LayerPainter {
+    public static class DefaultHighlightPainter extends LayerPainter {
 
         /**
          * Constructs a new highlight painter. If <code>c</code> is null,
@@ -503,7 +503,7 @@ public class DefaultHighlighter extends LayeredHighlighter {
     }
 
 
-    class HighlightInfo implements Highlighter.Highlight {
+    class HighlightInfo implements Highlight {
 
         public int getStartOffset() {
             return p0.getOffset();
@@ -513,13 +513,13 @@ public class DefaultHighlighter extends LayeredHighlighter {
             return p1.getOffset();
         }
 
-        public Highlighter.HighlightPainter getPainter() {
+        public HighlightPainter getPainter() {
             return painter;
         }
 
         Position p0;
         Position p1;
-        Highlighter.HighlightPainter painter;
+        HighlightPainter painter;
     }
 
 
@@ -570,7 +570,7 @@ public class DefaultHighlighter extends LayeredHighlighter {
             p1 = Math.min(end, p1);
             // Paint the appropriate region using the painter and union
             // the effected region with our bounds.
-            union(((LayeredHighlighter.LayerPainter)painter).paintLayer
+            union(((LayerPainter)painter).paintLayer
                   (g, p0, p1, viewBounds, editor, view));
         }
 

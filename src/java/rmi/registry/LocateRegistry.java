@@ -52,7 +52,7 @@ import sun.rmi.transport.tcp.TCPEndpoint;
  * @author  Ann Wollrath
  * @author  Peter Jones
  * @since   JDK1.1
- * @see     java.rmi.registry.Registry
+ * @see     Registry
  */
 public final class LocateRegistry {
 

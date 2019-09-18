@@ -498,7 +498,7 @@ public class ModelMBeanOperationInfo extends MBeanOperationInfo
             }
             final Object targetValue = clone.getFieldValue("targetType");
             if (targetValue != null) {
-                if (!(targetValue instanceof java.lang.String)) {
+                if (!(targetValue instanceof String)) {
                     throw new RuntimeOperationsException(new IllegalArgumentException("Invalid Descriptor argument"),
                     "The Descriptor field \"targetValue\" is invalid class. " +
                      " Expected: java.lang.String, " + " was: " + targetValue.getClass().getName());

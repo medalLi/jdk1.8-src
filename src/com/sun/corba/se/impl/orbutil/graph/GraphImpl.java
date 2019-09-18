@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil.graph ;
+package com.sun.corba.se.impl.orbutil.graph;
 
 import java.util.Collection ;
 import java.util.AbstractSet ;
@@ -101,7 +101,7 @@ public class GraphImpl extends AbstractSet implements Graph
 
     interface NodeVisitor
     {
-        void visit( Graph graph, Node node, NodeData nd ) ;
+        void visit(Graph graph, Node node, NodeData nd) ;
     }
 
     // This visits every node in the graph exactly once.  A

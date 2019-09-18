@@ -23,7 +23,7 @@ package org.omg.PortableInterceptor;
    *
    * @see IORInfo
    */
-public interface IORInterceptorOperations  extends org.omg.PortableInterceptor.InterceptorOperations
+public interface IORInterceptorOperations  extends InterceptorOperations
 {
 
   /**
@@ -46,5 +46,5 @@ public interface IORInterceptorOperations  extends org.omg.PortableInterceptor.I
        *     service to query applicable policies and add components to be 
        *     included in the generated IORs.
        */
-  void establish_components (org.omg.PortableInterceptor.IORInfo info);
+  void establish_components(IORInfo info);
 } // interface IORInterceptorOperations

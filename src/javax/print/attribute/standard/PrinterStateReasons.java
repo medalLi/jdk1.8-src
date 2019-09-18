@@ -56,7 +56,7 @@ import javax.print.attribute.PrintServiceAttribute;
  * {@link PrinterState PrinterState} also changed.
  * <P>
  * Class PrinterStateReasons inherits its implementation from class {@link
- * java.util.HashMap java.util.HashMap}. Each entry in the map consists of a
+ * HashMap java.util.HashMap}. Each entry in the map consists of a
  * {@link PrinterStateReason PrinterStateReason} object (key) mapping to a
  * {@link Severity Severity} object (value):
  * <P>
@@ -64,7 +64,7 @@ import javax.print.attribute.PrintServiceAttribute;
  * PrinterStateReasons is designed to be mutable; you can add {@link
  * PrinterStateReason PrinterStateReason} objects to an existing
  * PrinterStateReasons object and remove them again. However, like class
- *  {@link java.util.HashMap java.util.HashMap}, class PrinterStateReasons is
+ *  {@link HashMap java.util.HashMap}, class PrinterStateReasons is
  * not multiple thread safe. If a PrinterStateReasons object will be used by
  * multiple threads, be sure to synchronize its operations (e.g., using a
  * synchronized map view obtained from class {@link java.util.Collections
@@ -128,7 +128,7 @@ public final class PrinterStateReasons
      * {@link PrinterStateReason PrinterStateReason}-to-{@link Severity
      * Severity} mappings as the given map. The underlying hash map's initial
      * capacity and load factor are as specified in the superclass constructor
-     * {@link java.util.HashMap#HashMap(java.util.Map)
+     * {@link HashMap#HashMap(Map)
      * HashMap(Map)}.
      *
      * @param  map  Map to copy.
@@ -144,7 +144,7 @@ public final class PrinterStateReasons
      */
     public PrinterStateReasons(Map<PrinterStateReason,Severity> map) {
         this();
-        for (Map.Entry<PrinterStateReason,Severity> e : map.entrySet())
+        for (Entry<PrinterStateReason,Severity> e : map.entrySet())
             put(e.getKey(), e.getValue());
     }
 
@@ -191,7 +191,7 @@ public final class PrinterStateReasons
      * category is class PrinterStateReasons itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return PrinterStateReasons.class;
@@ -268,7 +268,7 @@ public final class PrinterStateReasons
     private class PrinterStateReasonSetIterator implements Iterator {
         private Severity mySeverity;
         private Iterator myIterator;
-        private Map.Entry myEntry;
+        private Entry myEntry;
 
         public PrinterStateReasonSetIterator(Severity severity,
                                              Iterator iterator) {
@@ -280,7 +280,7 @@ public final class PrinterStateReasons
         private void goToNext() {
             myEntry = null;
             while (myEntry == null && myIterator.hasNext()) {
-                myEntry = (Map.Entry) myIterator.next();
+                myEntry = (Entry) myIterator.next();
                 if ((Severity) myEntry.getValue() != mySeverity) {
                     myEntry = null;
                 }

@@ -155,7 +155,7 @@ import java.io.File;
  * The first parameter of the overloaded
  * <tt>Marshaller.marshal(java.lang.Object, ...)</tt> methods must be a
  * JAXB element as computed by
- * {@link JAXBIntrospector#isElement(java.lang.Object)};
+ * {@link JAXBIntrospector#isElement(Object)};
  * otherwise, a <tt>Marshaller.marshal</tt> method must throw a
  * {@link MarshalException}. There exist two mechanisms
  * to enable marshalling an instance that is not a JAXB element.
@@ -378,7 +378,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If any of the method parameters are null
      */
-    public void marshal( Object jaxbElement, javax.xml.transform.Result result )
+    public void marshal(Object jaxbElement, javax.xml.transform.Result result)
         throws JAXBException;
 
     /**
@@ -400,7 +400,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If any of the method parameters are null
      */
-    public void marshal( Object jaxbElement, java.io.OutputStream os )
+    public void marshal(Object jaxbElement, java.io.OutputStream os)
         throws JAXBException;
 
     /**
@@ -423,7 +423,7 @@ public interface Marshaller {
      *      If any of the method parameters are null
      * @since JAXB2.1
      */
-    public void marshal( Object jaxbElement, File output )
+    public void marshal(Object jaxbElement, File output)
         throws JAXBException;
 
     /**
@@ -445,7 +445,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If any of the method parameters are null
      */
-    public void marshal( Object jaxbElement, java.io.Writer writer )
+    public void marshal(Object jaxbElement, java.io.Writer writer)
         throws JAXBException;
 
     /**
@@ -467,7 +467,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If any of the method parameters are null
      */
-    public void marshal( Object jaxbElement, org.xml.sax.ContentHandler handler )
+    public void marshal(Object jaxbElement, org.xml.sax.ContentHandler handler)
         throws JAXBException;
 
     /**
@@ -493,7 +493,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If any of the method parameters are null
      */
-    public void marshal( Object jaxbElement, org.w3c.dom.Node node )
+    public void marshal(Object jaxbElement, org.w3c.dom.Node node)
         throws JAXBException;
 
     /**
@@ -517,7 +517,7 @@ public interface Marshaller {
      *      If any of the method parameters are null
      * @since JAXB 2.0
      */
-    public void marshal( Object jaxbElement, javax.xml.stream.XMLStreamWriter writer )
+    public void marshal(Object jaxbElement, javax.xml.stream.XMLStreamWriter writer)
         throws JAXBException;
 
     /**
@@ -541,7 +541,7 @@ public interface Marshaller {
      *      If any of the method parameters are null
      * @since JAXB 2.0
      */
-    public void marshal( Object jaxbElement, javax.xml.stream.XMLEventWriter writer )
+    public void marshal(Object jaxbElement, javax.xml.stream.XMLEventWriter writer)
         throws JAXBException;
 
     /**
@@ -567,7 +567,7 @@ public interface Marshaller {
      *      If any unexpected problem occurs
      *
      */
-    public org.w3c.dom.Node getNode( java.lang.Object contentTree )
+    public org.w3c.dom.Node getNode(Object contentTree)
         throws JAXBException;
 
     /**
@@ -588,7 +588,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If the name parameter is null
      */
-    public void setProperty( String name, Object value )
+    public void setProperty(String name, Object value)
         throws PropertyException;
 
     /**
@@ -608,7 +608,7 @@ public interface Marshaller {
      * @throws IllegalArgumentException
      *      If the name parameter is null
      */
-    public Object getProperty( String name ) throws PropertyException;
+    public Object getProperty(String name) throws PropertyException;
 
     /**
      * Allow an application to register a validation event handler.
@@ -627,7 +627,7 @@ public interface Marshaller {
      * @throws JAXBException if an error was encountered while setting the
      *         event handler
      */
-    public void setEventHandler( ValidationEventHandler handler )
+    public void setEventHandler(ValidationEventHandler handler)
         throws JAXBException;
 
     /**
@@ -657,7 +657,7 @@ public interface Marshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB 2.0
      */
-    public void setAdapter( XmlAdapter adapter );
+    public void setAdapter(XmlAdapter adapter);
 
     /**
      * Associates a configured instance of {@link XmlAdapter} with this marshaller.
@@ -686,7 +686,7 @@ public interface Marshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB 2.0
      */
-    public <A extends XmlAdapter> void setAdapter( Class<A> type, A adapter );
+    public <A extends XmlAdapter> void setAdapter(Class<A> type, A adapter);
 
     /**
      * Gets the adapter associated with the specified type.
@@ -699,7 +699,7 @@ public interface Marshaller {
      *      if invoked agains a JAXB 1.0 implementation.
      * @since JAXB 2.0
      */
-    public <A extends XmlAdapter> A getAdapter( Class<A> type );
+    public <A extends XmlAdapter> A getAdapter(Class<A> type);
 
 
     /**
@@ -716,7 +716,7 @@ public interface Marshaller {
     AttachmentMarshaller getAttachmentMarshaller();
 
     /**
-     * Specify the JAXP 1.3 {@link javax.xml.validation.Schema Schema}
+     * Specify the JAXP 1.3 {@link Schema Schema}
      * object that should be used to validate subsequent marshal operations
      * against.  Passing null into this method will disable validation.
      *
@@ -732,10 +732,10 @@ public interface Marshaller {
      *         JAXB 1.0 mapped classes
      * @since JAXB2.0
      */
-    public void setSchema( Schema schema );
+    public void setSchema(Schema schema);
 
     /**
-     * Get the JAXP 1.3 {@link javax.xml.validation.Schema Schema} object
+     * Get the JAXP 1.3 {@link Schema Schema} object
      * being used to perform marshal-time validation.  If there is no
      * Schema set on the marshaller, then this method will return null
      * indicating that marshal-time validation will not be performed.

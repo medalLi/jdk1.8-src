@@ -33,7 +33,7 @@ import java.sql.SQLException;
  * addition to SQL types such as <code>DATALINK and JAVAOBJECT</code>
  *
  */
-public class SerialException extends java.sql.SQLException {
+public class SerialException extends SQLException {
 
     /**
      * Creates a new <code>SerialException</code> without a

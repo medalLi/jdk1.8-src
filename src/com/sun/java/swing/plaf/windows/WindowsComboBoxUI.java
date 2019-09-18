@@ -341,7 +341,7 @@ public class WindowsComboBoxUI extends BasicComboBoxUI {
      * @return an instance of a layout manager
      */
     protected LayoutManager createLayoutManager() {
-        return new BasicComboBoxUI.ComboBoxLayoutManager() {
+        return new ComboBoxLayoutManager() {
             public void layoutContainer(Container parent) {
                 super.layoutContainer(parent);
 
@@ -373,7 +373,7 @@ public class WindowsComboBoxUI extends BasicComboBoxUI {
      * explicitly set with <code>setEditor</code>.
      *
      * @return a <code>ComboBoxEditor</code> used for the combo box
-     * @see javax.swing.JComboBox#setEditor
+     * @see JComboBox#setEditor
      */
     protected ComboBoxEditor createEditor() {
         return new WindowsComboBoxEditor();

@@ -77,7 +77,7 @@ public interface Line extends AutoCloseable {
      * line.
      * @return description of the line
      */
-    public Line.Info getLineInfo();
+    public Info getLineInfo();
 
     /**
      * Opens the line, indicating that it should acquire any required
@@ -228,8 +228,8 @@ public interface Line extends AutoCloseable {
      * @see Mixer#getSourceLineInfo
      * @see Mixer#getTargetLineInfo
      * @see Mixer#getLine <code>Mixer.getLine(Line.Info)</code>
-     * @see Mixer#getSourceLineInfo(Line.Info) <code>Mixer.getSourceLineInfo(Line.Info)</code>
-     * @see Mixer#getSourceLineInfo(Line.Info) <code>Mixer.getTargetLineInfo(Line.Info)</code>
+     * @see Mixer#getSourceLineInfo(Info) <code>Mixer.getSourceLineInfo(Line.Info)</code>
+     * @see Mixer#getSourceLineInfo(Info) <code>Mixer.getTargetLineInfo(Line.Info)</code>
      * @see Mixer#isLineSupported <code>Mixer.isLineSupported(Line.Info)</code>
      * @see AudioSystem#getLine <code>AudioSystem.getLine(Line.Info)</code>
      * @see AudioSystem#getSourceLineInfo <code>AudioSystem.getSourceLineInfo(Line.Info)</code>

@@ -1191,7 +1191,7 @@ extends ParentNode implements Document  {
             try {
                 return new URI(fDocumentURI).toString();
             }
-            catch (com.sun.org.apache.xerces.internal.util.URI.MalformedURIException e){
+            catch (URI.MalformedURIException e){
                 // REVISIT: what should happen in this case?
                 return null;
             }
@@ -1784,12 +1784,12 @@ extends ParentNode implements Document  {
             if (thisImpl != otherImpl) {
 
                 // Adopting from a DefferedDOM to DOM
-                if (thisImpl instanceof com.sun.org.apache.xerces.internal.dom.DOMImplementationImpl &&
-                        otherImpl instanceof com.sun.org.apache.xerces.internal.dom.DeferredDOMImplementationImpl) {
+                if (thisImpl instanceof DOMImplementationImpl &&
+                        otherImpl instanceof DeferredDOMImplementationImpl) {
                     // traverse the DOM and expand deffered nodes and then allow adoption
                     undeferChildren (node);
-                } else if ( thisImpl instanceof com.sun.org.apache.xerces.internal.dom.DeferredDOMImplementationImpl
-                        && otherImpl instanceof com.sun.org.apache.xerces.internal.dom.DOMImplementationImpl) {
+                } else if ( thisImpl instanceof DeferredDOMImplementationImpl
+                        && otherImpl instanceof DOMImplementationImpl) {
                     // Adopting from a DOM into a DefferedDOM, this should be okay
                 } else {
                     // Adopting between two dissimilar DOM's is not allowed

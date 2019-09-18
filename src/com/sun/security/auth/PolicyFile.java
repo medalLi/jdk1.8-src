@@ -210,7 +210,7 @@ import javax.security.auth.Subject;
  *             <code>sun.security.provider.PolicyFile</code>.
  *             This class is entirely deprecated.
  *
- * @see java.security.CodeSource
+ * @see CodeSource
  * @see java.security.Permissions
  * @see java.security.ProtectionDomain
  * @see java.security.Security security properties

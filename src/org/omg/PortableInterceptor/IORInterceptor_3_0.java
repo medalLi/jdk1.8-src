@@ -8,6 +8,6 @@ package org.omg.PortableInterceptor;
 * Wednesday, July 30, 2014 1:14:28 PM PDT
 */
 
-public interface IORInterceptor_3_0 extends IORInterceptor_3_0Operations, org.omg.PortableInterceptor.IORInterceptor, org.omg.CORBA.portable.IDLEntity 
+public interface IORInterceptor_3_0 extends IORInterceptor_3_0Operations, IORInterceptor, org.omg.CORBA.portable.IDLEntity
 {
 } // interface IORInterceptor_3_0

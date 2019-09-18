@@ -252,5 +252,5 @@ public interface DocTree {
      * @param <R> result type of this operation.
      * @param <D> type of additional data.
      */
-    <R, D> R accept(DocTreeVisitor<R,D> visitor, D data);
+    <R, D> R accept(DocTreeVisitor<R, D> visitor, D data);
 }

@@ -41,7 +41,7 @@ import java.security.Principal;
  * @deprecated As of JDK&nbsp;1.4, replaced by
  *             {@link UnixPrincipal}.
  *             This class is entirely deprecated.
- * @see java.security.Principal
+ * @see Principal
  * @see javax.security.auth.Subject
  */
 @jdk.Exported(false)

@@ -57,7 +57,7 @@ import sun.reflect.misc.ReflectUtil;
  * calls the <code>SQLInputImpl</code> reader methods
  * to read the attributes from the input stream.
  * @since 1.5
- * @see java.sql.SQLData
+ * @see SQLData
  */
 public class SQLInputImpl implements SQLInput {
 
@@ -349,8 +349,8 @@ public class SQLInputImpl implements SQLInput {
      * @throws SQLException if the read position is located at an invalid
      *       position or if there are no more values in the stream
      */
-    public java.sql.Date readDate() throws SQLException {
-        return (java.sql.Date)getNextAttribute();
+    public Date readDate() throws SQLException {
+        return (Date)getNextAttribute();
     }
 
     /**
@@ -367,8 +367,8 @@ public class SQLInputImpl implements SQLInput {
      * @throws SQLException if the read position is located at an invalid
      * position; or if there are no further values in the stream.
      */
-    public java.sql.Time readTime() throws SQLException {
-        return (java.sql.Time)getNextAttribute();
+    public Time readTime() throws SQLException {
+        return (Time)getNextAttribute();
     }
 
     /**
@@ -380,8 +380,8 @@ public class SQLInputImpl implements SQLInput {
      * @throws SQLException if the read position is located at an invalid
      * position; or if there are no further values in the stream.
      */
-    public java.sql.Timestamp readTimestamp() throws SQLException {
-        return (java.sql.Timestamp)getNextAttribute();
+    public Timestamp readTimestamp() throws SQLException {
+        return (Timestamp)getNextAttribute();
     }
 
     /**

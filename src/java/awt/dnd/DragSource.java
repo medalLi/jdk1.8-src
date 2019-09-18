@@ -142,7 +142,7 @@ public class DragSource implements Serializable {
      * that a drop is currently allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultCopyDrop =
         load("DnD.Cursor.CopyDrop");
@@ -152,7 +152,7 @@ public class DragSource implements Serializable {
      * that a drop is currently allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultMoveDrop =
         load("DnD.Cursor.MoveDrop");
@@ -162,7 +162,7 @@ public class DragSource implements Serializable {
      * that a drop is currently allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultLinkDrop =
         load("DnD.Cursor.LinkDrop");
@@ -172,7 +172,7 @@ public class DragSource implements Serializable {
      * that a drop is currently not allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultCopyNoDrop =
         load("DnD.Cursor.CopyNoDrop");
@@ -182,7 +182,7 @@ public class DragSource implements Serializable {
      * that a drop is currently not allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultMoveNoDrop =
         load("DnD.Cursor.MoveNoDrop");
@@ -192,7 +192,7 @@ public class DragSource implements Serializable {
      * that a drop is currently not allowed. <code>null</code> if
      * <code>GraphicsEnvironment.isHeadless()</code> returns <code>true</code>.
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static final Cursor DefaultLinkNoDrop =
         load("DnD.Cursor.LinkNoDrop");
@@ -213,7 +213,7 @@ public class DragSource implements Serializable {
      * @return the platform DragSource
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      *            returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static DragSource getDefaultDragSource() {
         if (GraphicsEnvironment.isHeadless()) {
@@ -251,7 +251,7 @@ public class DragSource implements Serializable {
      *
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      *            returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public DragSource() throws HeadlessException {
         if (GraphicsEnvironment.isHeadless()) {
@@ -283,7 +283,7 @@ public class DragSource implements Serializable {
      * @param dsl            the <code>DragSourceListener</code>
      * @param flavorMap      the <code>FlavorMap</code> to use, or <code>null</code>
      * <P>
-     * @throws java.awt.dnd.InvalidDnDOperationException
+     * @throws InvalidDnDOperationException
      *    if the Drag and Drop
      *    system is unable to initiate a drag operation, or if the user
      *    attempts to start a drag while an existing drag operation
@@ -343,7 +343,7 @@ public class DragSource implements Serializable {
      * @param dsl            the <code>DragSourceListener</code>
      * @param flavorMap      the <code>FlavorMap</code> to use or <code>null</code>
      * <P>
-     * @throws java.awt.dnd.InvalidDnDOperationException
+     * @throws InvalidDnDOperationException
      *    if the Drag and Drop
      *    system is unable to initiate a drag operation, or if the user
      *    attempts to start a drag while an existing drag operation
@@ -380,7 +380,7 @@ public class DragSource implements Serializable {
      * @param transferable      the subject data of the drag
      * @param dsl               the <code>DragSourceListener</code>
      * <P>
-     * @throws java.awt.dnd.InvalidDnDOperationException
+     * @throws InvalidDnDOperationException
      *    if the Drag and Drop
      *    system is unable to initiate a drag operation, or if the user
      *    attempts to start a drag while an existing drag operation
@@ -412,7 +412,7 @@ public class DragSource implements Serializable {
      * @param transferable      the subject data of the drag
      * @param dsl               the <code>DragSourceListener</code>
      * <P>
-     * @throws java.awt.dnd.InvalidDnDOperationException
+     * @throws InvalidDnDOperationException
      *    if the Drag and Drop
      *    system is unable to initiate a drag operation, or if the user
      *    attempts to start a drag while an existing drag operation
@@ -847,7 +847,7 @@ public class DragSource implements Serializable {
      * <li>Otherwise, the key/value pair is skipped.
      * </ul>
      *
-     * @see java.awt.datatransfer.SystemFlavorMap#getDefaultFlavorMap
+     * @see SystemFlavorMap#getDefaultFlavorMap
      * @since 1.4
      */
     private void readObject(ObjectInputStream s)

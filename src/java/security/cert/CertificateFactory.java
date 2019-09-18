@@ -175,7 +175,7 @@ public class CertificateFactory {
      *          CertificateFactorySpi implementation for the
      *          specified type.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static final CertificateFactory getInstance(String type)
             throws CertificateException {
@@ -221,7 +221,7 @@ public class CertificateFactory {
      * @exception IllegalArgumentException if the provider name is null
      *          or empty.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static final CertificateFactory getInstance(String type,
             String provider) throws CertificateException,
@@ -261,7 +261,7 @@ public class CertificateFactory {
      * @exception IllegalArgumentException if the {@code provider} is
      *          null.
      *
-     * @see java.security.Provider
+     * @see Provider
      *
      * @since 1.4
      */
@@ -316,8 +316,8 @@ public class CertificateFactory {
      * the end by -----END CERTIFICATE-----.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream. Otherwise, each call to this
      * method consumes one certificate and the read position of the
      * input stream is positioned to the next available byte after
@@ -436,7 +436,7 @@ public class CertificateFactory {
      * <p>In the case of a certificate factory for X.509 certificates,
      * {@code inStream} may contain a sequence of DER-encoded certificates
      * in the formats described for
-     * {@link #generateCertificate(java.io.InputStream) generateCertificate}.
+     * {@link #generateCertificate(InputStream) generateCertificate}.
      * In addition, {@code inStream} may contain a PKCS#7 certificate
      * chain. This is a PKCS#7 <i>SignedData</i> object, with the only
      * significant field being <i>certificates</i>. In particular, the
@@ -445,8 +445,8 @@ public class CertificateFactory {
      * an empty collection is returned.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream.
      *
      * @param inStream the input stream with the certificates.
@@ -474,8 +474,8 @@ public class CertificateFactory {
      * can be typecast to the {@code X509CRL} class.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream. Otherwise, each call to this
      * method consumes one CRL and the read position of the input stream
      * is positioned to the next available byte after the inherent
@@ -518,8 +518,8 @@ public class CertificateFactory {
      * an empty collection is returned.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream.
      *
      * @param inStream the input stream with the CRLs.

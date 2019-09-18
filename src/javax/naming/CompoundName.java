@@ -241,7 +241,7 @@ public class CompoundName implements Name {
       *
       * @param  obj     The possibly null object to compare against.
       * @return true if obj is equal to this compound name, false otherwise.
-      * @see #compareTo(java.lang.Object obj)
+      * @see #compareTo(Object obj)
       */
     public boolean equals(Object obj) {
         // %%% check syntax too?
@@ -306,7 +306,7 @@ public class CompoundName implements Name {
      * @return  a negative integer, zero, or a positive integer as this Name
      *          is less than, equal to, or greater than the given Object.
      * @exception ClassCastException if obj is not a CompoundName.
-     * @see #equals(java.lang.Object)
+     * @see #equals(Object)
      */
     public int compareTo(Object obj) {
         if (!(obj instanceof CompoundName)) {

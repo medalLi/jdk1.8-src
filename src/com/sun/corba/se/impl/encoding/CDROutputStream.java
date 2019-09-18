@@ -51,7 +51,7 @@ import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
  */
 public abstract class CDROutputStream
     extends org.omg.CORBA_2_3.portable.OutputStream
-    implements com.sun.corba.se.impl.encoding.MarshalOutputStream,
+    implements MarshalOutputStream,
                org.omg.CORBA.DataOutputStream, org.omg.CORBA.portable.ValueOutputStream
 {
     private CDROutputStreamBase impl;
@@ -224,11 +224,11 @@ public abstract class CDROutputStream
         impl.write_Principal(value);
     }
 
-    public final void write(int b) throws java.io.IOException {
+    public final void write(int b) throws IOException {
         impl.write(b);
     }
 
-    public final void write_fixed(java.math.BigDecimal value) {
+    public final void write_fixed(BigDecimal value) {
         impl.write_fixed(value);
     }
 
@@ -242,24 +242,24 @@ public abstract class CDROutputStream
     }
 
     // org.omg.CORBA_2_3.portable.OutputStream
-    public final void write_value(java.io.Serializable value) {
+    public final void write_value(Serializable value) {
         impl.write_value(value);
     }
 
-    public final void write_value(java.io.Serializable value, java.lang.Class clz) {
+    public final void write_value(Serializable value, Class clz) {
         impl.write_value(value, clz);
     }
 
-    public final void write_value(java.io.Serializable value, String repository_id) {
+    public final void write_value(Serializable value, String repository_id) {
         impl.write_value(value, repository_id);
     }
 
-    public final void write_value(java.io.Serializable value,
-                            org.omg.CORBA.portable.BoxedValueHelper factory) {
+    public final void write_value(Serializable value,
+                                  org.omg.CORBA.portable.BoxedValueHelper factory) {
         impl.write_value(value, factory);
     }
 
-    public final void write_abstract_interface(java.lang.Object obj) {
+    public final void write_abstract_interface(Object obj) {
         impl.write_abstract_interface(obj);
     }
 
@@ -304,15 +304,15 @@ public abstract class CDROutputStream
     }
 
     // org.omg.CORBA.DataOutputStream
-    public final void write_Abstract (java.lang.Object value) {
+    public final void write_Abstract (Object value) {
         impl.write_Abstract(value);
     }
 
-    public final void write_Value (java.io.Serializable value) {
+    public final void write_Value (Serializable value) {
         impl.write_Value(value);
     }
 
-    public final void write_any_array(org.omg.CORBA.Any[] seq, int offset, int length) {
+    public final void write_any_array(Any[] seq, int offset, int length) {
         impl.write_any_array(seq, offset, length);
     }
 
@@ -383,7 +383,7 @@ public abstract class CDROutputStream
         return impl.getBufferManager();
     }
 
-    public final void write_fixed(java.math.BigDecimal bigDecimal, short digits, short scale) {
+    public final void write_fixed(BigDecimal bigDecimal, short digits, short scale) {
         impl.write_fixed(bigDecimal, digits, scale);
     }
 

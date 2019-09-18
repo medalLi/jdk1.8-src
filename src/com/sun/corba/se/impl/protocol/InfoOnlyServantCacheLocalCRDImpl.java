@@ -41,7 +41,7 @@ public class InfoOnlyServantCacheLocalCRDImpl extends ServantCacheLocalCRDBase
 {
     public InfoOnlyServantCacheLocalCRDImpl( ORB orb, int scid, IOR ior )
     {
-        super( (com.sun.corba.se.spi.orb.ORB)orb, scid, ior ) ;
+        super( (ORB)orb, scid, ior ) ;
     }
 
     public ServantObject servant_preinvoke( org.omg.CORBA.Object self,

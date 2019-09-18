@@ -118,7 +118,7 @@ import java.util.function.BiFunction;
  * @author  Arthur van Hoff
  * @author  Josh Bloch
  * @author  Neal Gafter
- * @see     Object#equals(java.lang.Object)
+ * @see     Object#equals(Object)
  * @see     Object#hashCode()
  * @see     Hashtable#rehash()
  * @see     Collection
@@ -129,7 +129,7 @@ import java.util.function.BiFunction;
  */
 public class Hashtable<K,V>
     extends Dictionary<K,V>
-    implements Map<K,V>, Cloneable, java.io.Serializable {
+    implements Map<K,V>, Cloneable, Serializable {
 
     /**
      * The hash table data.
@@ -263,7 +263,7 @@ public class Hashtable<K,V>
      * sequentially.
      *
      * @return  an enumeration of the values in this hashtable.
-     * @see     java.util.Enumeration
+     * @see     Enumeration
      * @see     #keys()
      * @see     #values()
      * @see     Map
@@ -1127,7 +1127,7 @@ public class Hashtable<K,V>
      *             for each key-value mapping represented by the Hashtable
      *             The key-value mappings are emitted in no particular order.
      */
-    private void writeObject(java.io.ObjectOutputStream s)
+    private void writeObject(ObjectOutputStream s)
             throws IOException {
         Entry<Object, Object> entryStack = null;
 
@@ -1162,7 +1162,7 @@ public class Hashtable<K,V>
     /**
      * Reconstitute the Hashtable from a stream (i.e., deserialize it).
      */
-    private void readObject(java.io.ObjectInputStream s)
+    private void readObject(ObjectInputStream s)
          throws IOException, ClassNotFoundException
     {
         // Read in the length, threshold, and loadfactor
@@ -1211,7 +1211,7 @@ public class Hashtable<K,V>
         throws StreamCorruptedException
     {
         if (value == null) {
-            throw new java.io.StreamCorruptedException();
+            throw new StreamCorruptedException();
         }
         // Makes sure the key is not already in the hashtable.
         // This should not happen in deserialized version.
@@ -1219,7 +1219,7 @@ public class Hashtable<K,V>
         int index = (hash & 0x7FFFFFFF) % tab.length;
         for (Entry<?,?> e = tab[index] ; e != null ; e = e.next) {
             if ((e.hash == hash) && e.key.equals(key)) {
-                throw new java.io.StreamCorruptedException();
+                throw new StreamCorruptedException();
             }
         }
         // Creates the new entry.

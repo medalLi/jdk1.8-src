@@ -62,13 +62,13 @@ import sun.util.spi.XmlPropertiesProvider;
  * object that contains a non-{@code String} key.
  *
  * <p>
- * The {@link #load(java.io.Reader) load(Reader)} <tt>/</tt>
- * {@link #store(java.io.Writer, java.lang.String) store(Writer, String)}
+ * The {@link #load(Reader) load(Reader)} <tt>/</tt>
+ * {@link #store(Writer, String) store(Writer, String)}
  * methods load and store properties from and to a character based stream
  * in a simple line-oriented format specified below.
  *
- * The {@link #load(java.io.InputStream) load(InputStream)} <tt>/</tt>
- * {@link #store(java.io.OutputStream, java.lang.String) store(OutputStream, String)}
+ * The {@link #load(InputStream) load(InputStream)} <tt>/</tt>
+ * {@link #store(OutputStream, String) store(OutputStream, String)}
  * methods work the same way as the load(Reader)/store(Writer, String) pair, except
  * the input/output stream is encoded in ISO 8859-1 character encoding.
  * Characters that cannot be directly represented in this encoding can be written using
@@ -321,7 +321,7 @@ class Properties extends Hashtable<Object,Object> {
      * Reads a property list (key and element pairs) from the input
      * byte stream. The input stream is in a simple line-oriented
      * format as specified in
-     * {@link #load(java.io.Reader) load(Reader)} and is assumed to use
+     * {@link #load(Reader) load(Reader)} and is assumed to use
      * the ISO 8859-1 character encoding; that is each byte is one Latin1
      * character. Characters not in Latin1, and certain special characters,
      * are represented in keys and elements using Unicode escapes as defined in
@@ -720,7 +720,7 @@ class Properties extends Hashtable<Object,Object> {
     /**
      * Writes this property list (key and element pairs) in this
      * {@code Properties} table to the output character stream in a
-     * format suitable for using the {@link #load(java.io.Reader) load(Reader)}
+     * format suitable for using the {@link #load(Reader) load(Reader)}
      * method.
      * <p>
      * Properties from the defaults table of this {@code Properties}
@@ -785,7 +785,7 @@ class Properties extends Hashtable<Object,Object> {
      * <p>
      * This method outputs the comments, properties keys and values in
      * the same format as specified in
-     * {@link #store(java.io.Writer, java.lang.String) store(Writer)},
+     * {@link #store(Writer, String) store(Writer)},
      * with the following differences:
      * <ul>
      * <li>The stream is written using the ISO 8859-1 character encoding.
@@ -999,8 +999,8 @@ class Properties extends Hashtable<Object,Object> {
      *          the keys in the default property list.
      * @throws  ClassCastException if any key in this property list
      *          is not a string.
-     * @see     java.util.Enumeration
-     * @see     java.util.Properties#defaults
+     * @see     Enumeration
+     * @see     Properties#defaults
      * @see     #stringPropertyNames
      */
     public Enumeration<?> propertyNames() {
@@ -1024,7 +1024,7 @@ class Properties extends Hashtable<Object,Object> {
      * @return  a set of keys in this property list where
      *          the key and its corresponding value are strings,
      *          including the keys in the default property list.
-     * @see     java.util.Properties#defaults
+     * @see     Properties#defaults
      * @since   1.6
      */
     public Set<String> stringPropertyNames() {

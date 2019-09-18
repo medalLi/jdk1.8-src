@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil.graph ;
+package com.sun.corba.se.impl.orbutil.graph;
 
 /** Data about a node in a graph.
  */

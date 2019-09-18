@@ -152,7 +152,7 @@ public interface DoubleStream extends BaseStream<Double, DoubleStream> {
      * Returns a stream consisting of the results of replacing each element of
      * this stream with the contents of a mapped stream produced by applying
      * the provided mapping function to each element.  Each mapped stream is
-     * {@link java.util.stream.BaseStream#close() closed} after its contents
+     * {@link BaseStream#close() closed} after its contents
      * have been placed into this stream.  (If a mapped stream is {@code null}
      * an empty stream is used, instead.)
      *
@@ -171,7 +171,7 @@ public interface DoubleStream extends BaseStream<Double, DoubleStream> {
     /**
      * Returns a stream consisting of the distinct elements of this stream. The
      * elements are compared for equality according to
-     * {@link java.lang.Double#compare(double, double)}.
+     * {@link Double#compare(double, double)}.
      *
      * <p>This is a <a href="package-summary.html#StreamOps">stateful
      * intermediate operation</a>.
@@ -183,7 +183,7 @@ public interface DoubleStream extends BaseStream<Double, DoubleStream> {
     /**
      * Returns a stream consisting of the elements of this stream in sorted
      * order. The elements are compared for equality according to
-     * {@link java.lang.Double#compare(double, double)}.
+     * {@link Double#compare(double, double)}.
      *
      * <p>This is a <a href="package-summary.html#StreamOps">stateful
      * intermediate operation</a>.

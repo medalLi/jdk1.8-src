@@ -293,7 +293,7 @@ public abstract class AsynchronousSocketChannel
      * <p> This method performs exactly the same security checks as the {@link
      * java.net.Socket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
-     * java.lang.SecurityManager#checkConnect checkConnect} method permits
+     * SecurityManager#checkConnect checkConnect} method permits
      * connecting to the address and port number of the given remote endpoint.
      *
      * @param   <A>

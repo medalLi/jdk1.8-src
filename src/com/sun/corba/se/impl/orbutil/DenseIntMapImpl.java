@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil ;
+package com.sun.corba.se.impl.orbutil;
 
 import java.util.ArrayList ;
 

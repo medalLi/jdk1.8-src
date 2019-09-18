@@ -137,7 +137,7 @@ public class SerialClob implements Clob, Serializable, Cloneable {
      *     if the <code>Clob</code> object is a null; or if either of the
      *     <code>Clob.getCharacterStream()</code> and <code>Clob.getAsciiStream()</code>
      *     methods on the <code>Clob</code> returns a null
-     * @see java.sql.Clob
+     * @see Clob
      */
     public SerialClob(Clob clob) throws SerialException, SQLException {
 
@@ -172,7 +172,7 @@ public class SerialClob implements Clob, Serializable, Cloneable {
                     offset += read;
                 } while (read > 0);
             }
-        } catch (java.io.IOException ex) {
+        } catch (IOException ex) {
             throw new SerialException("SerialClob: " + ex.getMessage());
         }
 
@@ -204,9 +204,9 @@ public class SerialClob implements Clob, Serializable, Cloneable {
      * @throws SerialException if an error occurs;
      * if {@code free} had previously been called on this object
      */
-    public java.io.Reader getCharacterStream() throws SerialException {
+    public Reader getCharacterStream() throws SerialException {
         isValid();
-        return (java.io.Reader) new CharArrayReader(buf);
+        return (Reader) new CharArrayReader(buf);
     }
 
     /**
@@ -226,7 +226,7 @@ public class SerialClob implements Clob, Serializable, Cloneable {
      *     <code>CLOB</code> value represented by the <code>Clob</code> object
      * that was used to create this <code>SerialClob</code> object
      */
-    public java.io.InputStream getAsciiStream() throws SerialException, SQLException {
+    public InputStream getAsciiStream() throws SerialException, SQLException {
         isValid();
         if (this.clob != null) {
             return this.clob.getAsciiStream();
@@ -454,7 +454,7 @@ public class SerialClob implements Clob, Serializable, Cloneable {
      *     <code>CLOB</code> value
      * @see #getAsciiStream
      */
-    public java.io.OutputStream setAsciiStream(long pos)
+    public OutputStream setAsciiStream(long pos)
         throws SerialException, SQLException {
         isValid();
          if (this.clob != null) {
@@ -486,7 +486,7 @@ public class SerialClob implements Clob, Serializable, Cloneable {
      *            <code>CLOB</code> value
      * @see #getCharacterStream
      */
-    public java.io.Writer setCharacterStream(long pos)
+    public Writer setCharacterStream(long pos)
         throws SerialException, SQLException {
         isValid();
         if (this.clob != null) {

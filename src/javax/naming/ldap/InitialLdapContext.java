@@ -81,8 +81,8 @@ import java.util.Hashtable;
   * @author Vincent Ryan
   *
   * @see LdapContext
-  * @see javax.naming.InitialContext
-  * @see javax.naming.directory.InitialDirContext
+  * @see InitialContext
+  * @see InitialDirContext
   * @see javax.naming.spi.NamingManager#setInitialContextFactoryBuilder
   * @since 1.3
   */

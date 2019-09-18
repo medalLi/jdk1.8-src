@@ -21,7 +21,7 @@ abstract public class ObjectReferenceTemplateHelper
   private static String  _id = "IDL:omg.org/PortableInterceptor/ObjectReferenceTemplate:1.0";
 
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableInterceptor.ObjectReferenceTemplate that)
+  public static void insert (org.omg.CORBA.Any a, ObjectReferenceTemplate that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -29,7 +29,7 @@ abstract public class ObjectReferenceTemplateHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableInterceptor.ObjectReferenceTemplate extract (org.omg.CORBA.Any a)
+  public static ObjectReferenceTemplate extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -64,12 +64,12 @@ abstract public class ObjectReferenceTemplateHelper
     return _id;
   }
 
-  public static org.omg.PortableInterceptor.ObjectReferenceTemplate read (org.omg.CORBA.portable.InputStream istream)
+  public static ObjectReferenceTemplate read (org.omg.CORBA.portable.InputStream istream)
   {
-    return (org.omg.PortableInterceptor.ObjectReferenceTemplate)((org.omg.CORBA_2_3.portable.InputStream) istream).read_value (id ());
+    return (ObjectReferenceTemplate)((org.omg.CORBA_2_3.portable.InputStream) istream).read_value (id ());
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableInterceptor.ObjectReferenceTemplate value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ObjectReferenceTemplate value)
   {
     ((org.omg.CORBA_2_3.portable.OutputStream) ostream).write_value (value, id ());
   }

@@ -36,7 +36,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynUnion.html">DynUnion</a> instead
  */
 @Deprecated
-public interface DynUnion extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
+public interface DynUnion extends Object, DynAny
 {
     /**
      * Determines whether the discriminator associated with this union has been assigned
@@ -58,20 +58,20 @@ public interface DynUnion extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
     * of the discriminator in order to insert/get the discriminator value.
     * @return a <code>DynAny</code> object reference representing the discriminator value
     */
-    public org.omg.CORBA.DynAny discriminator();
+    public DynAny discriminator();
 
     /**
     * Returns the TCKind object associated with the discriminator of this union.
     * @return the <code>TCKind</code> object associated with the discriminator of this union
     */
-    public org.omg.CORBA.TCKind discriminator_kind();
+    public TCKind discriminator_kind();
 
     /**
     * Returns a DynAny object reference that is used in order to insert/get
     * a member of this union.
     * @return the <code>DynAny</code> object representing a member of this union
     */
-    public org.omg.CORBA.DynAny member();
+    public DynAny member();
 
     /**
     * Allows for the inspection of the name of this union member
@@ -90,5 +90,5 @@ public interface DynUnion extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
     * Returns the TCKind associated with the member of this union.
     * @return the <code>TCKind</code> object associated with the member of this union
     */
-    public org.omg.CORBA.TCKind member_kind();
+    public TCKind member_kind();
 }

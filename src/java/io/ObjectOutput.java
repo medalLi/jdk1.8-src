@@ -31,9 +31,9 @@ package java.io;
  * extends that interface to include objects, arrays, and Strings.
  *
  * @author  unascribed
- * @see java.io.InputStream
- * @see java.io.ObjectOutputStream
- * @see java.io.ObjectInputStream
+ * @see InputStream
+ * @see ObjectOutputStream
+ * @see ObjectInputStream
  * @since   JDK1.1
  */
 public interface ObjectOutput extends DataOutput, AutoCloseable {

@@ -132,8 +132,8 @@ public class SocketOrChannelConnectionImpl
     protected int requestId = 5;
     protected CorbaResponseWaitingRoom responseWaitingRoom;
     protected int state;
-    protected java.lang.Object stateEvent = new java.lang.Object();
-    protected java.lang.Object writeEvent = new java.lang.Object();
+    protected Object stateEvent = new Object();
+    protected Object writeEvent = new Object();
     protected boolean writeLocked;
     protected int serverRequestCount = 0;
 
@@ -1295,7 +1295,7 @@ public class SocketOrChannelConnectionImpl
 
     // REVISIT: this is also defined in:
     // com.sun.corba.se.spi.legacy.connection.Connection
-    public java.net.Socket getSocket()
+    public Socket getSocket()
     {
         return socket;
     }
@@ -1494,7 +1494,7 @@ public class SocketOrChannelConnectionImpl
 
             // Mark the state of the connection
             // and determine the request status
-            org.omg.CORBA.CompletionStatus completion_status;
+            CompletionStatus completion_status;
             synchronized ( stateEvent ){
                 if (minor_code == ORBUtilSystemException.CONNECTION_REBIND) {
                     state = CLOSE_RECVD;

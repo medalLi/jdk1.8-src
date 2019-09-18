@@ -80,7 +80,7 @@ import sun.management.ManagementFactoryHelper;
  * <a name="MXBeanNames"></a>
  * <p>Each platform MXBean is a {@link PlatformManagedObject}
  * and it has a unique
- * {@link javax.management.ObjectName ObjectName} for
+ * {@link ObjectName ObjectName} for
  * registration in the platform {@code MBeanServer} as returned by
  * by the {@link PlatformManagedObject#getObjectName getObjectName}
  * method.
@@ -417,10 +417,10 @@ public class ManagementFactory {
 
     private static MBeanServer platformMBeanServer;
     /**
-     * Returns the platform {@link javax.management.MBeanServer MBeanServer}.
+     * Returns the platform {@link MBeanServer MBeanServer}.
      * On the first call to this method, it first creates the platform
      * {@code MBeanServer} by calling the
-     * {@link javax.management.MBeanServerFactory#createMBeanServer
+     * {@link MBeanServerFactory#createMBeanServer
      * MBeanServerFactory.createMBeanServer}
      * method and registers each platform MXBean in this platform
      * {@code MBeanServer} with its
@@ -452,10 +452,10 @@ public class ManagementFactory {
      *
      * @exception SecurityException if there is a security manager
      * and the caller does not have the permission required by
-     * {@link javax.management.MBeanServerFactory#createMBeanServer}.
+     * {@link MBeanServerFactory#createMBeanServer}.
      *
-     * @see javax.management.MBeanServerFactory
-     * @see javax.management.MBeanServerFactory#createMBeanServer
+     * @see MBeanServerFactory
+     * @see MBeanServerFactory#createMBeanServer
      */
     public static synchronized MBeanServer getPlatformMBeanServer() {
         SecurityManager sm = System.getSecurityManager();
@@ -518,7 +518,7 @@ public class ManagementFactory {
      * <p>
      * If the MXBean is a notification emitter (i.e.,
      * it implements
-     * {@link javax.management.NotificationEmitter NotificationEmitter}),
+     * {@link NotificationEmitter NotificationEmitter}),
      * both the <tt>mxbeanInterface</tt> and <tt>NotificationEmitter</tt>
      * will be implemented by this proxy.
      *

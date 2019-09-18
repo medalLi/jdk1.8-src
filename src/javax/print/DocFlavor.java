@@ -53,7 +53,7 @@ import java.io.Serializable;
  * <LI>
  * <B>Representation class name.</B> This specifies the fully-qualified name of
  * the class of the object from which the actual print data comes, as returned
- * by the {@link java.lang.Class#getName() Class.getName()} method.
+ * by the {@link Class#getName() Class.getName()} method.
  * (Thus the class name for <CODE>byte[]</CODE> is <CODE>"[B"</CODE>, for
  * <CODE>char[]</CODE> it is <CODE>"[C"</CODE>.)
  * </UL>
@@ -1279,7 +1279,7 @@ public class DocFlavor implements Serializable, Cloneable {
 
     /**
      * Class DocFlavor.STRING provides predefined static constant DocFlavor
-     * objects for example doc flavors using a string ({@link java.lang.String
+     * objects for example doc flavors using a string ({@link String
      * java.lang.String}) as the print data representation class.
      * As such, the character set is Unicode.
      * <P>

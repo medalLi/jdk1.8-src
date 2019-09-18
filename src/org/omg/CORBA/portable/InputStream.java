@@ -301,7 +301,7 @@ length);
      * @see <a href="package-summary.html#unimpl"><code>portable</code>
      * package comments for unimplemented features</a>
      */
-    public  org.omg.CORBA.Object read_Object(java.lang.Class
+    public  org.omg.CORBA.Object read_Object(Class
                                              clz) {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }

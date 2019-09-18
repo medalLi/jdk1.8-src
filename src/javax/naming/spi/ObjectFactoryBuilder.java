@@ -70,6 +70,6 @@ public interface ObjectFactoryBuilder {
       *
       */
     public ObjectFactory createObjectFactory(Object obj,
-                                             Hashtable<?,?> environment)
+                                             Hashtable<?, ?> environment)
         throws NamingException;
 }

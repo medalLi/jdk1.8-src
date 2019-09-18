@@ -96,7 +96,7 @@ public interface Guard
     * @param FSM fsm is the state machine causing this action.
     * @param Input in is the input that caused the transition.
     */
-    public Result evaluate( FSM fsm, Input in ) ;
+    public Result evaluate(FSM fsm, Input in) ;
 }
 
 // end of Action.java

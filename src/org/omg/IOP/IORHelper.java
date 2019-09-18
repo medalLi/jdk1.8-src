@@ -12,7 +12,7 @@ abstract public class IORHelper
 {
   private static String  _id = "IDL:omg.org/IOP/IOR:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.IOP.IOR that)
+  public static void insert (org.omg.CORBA.Any a, IOR that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class IORHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.IOP.IOR extract (org.omg.CORBA.Any a)
+  public static IOR extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -47,13 +47,13 @@ abstract public class IORHelper
             "type_id",
             _tcOf_members0,
             null);
-          _tcOf_members0 = org.omg.IOP.TaggedProfileHelper.type ();
+          _tcOf_members0 = TaggedProfileHelper.type ();
           _tcOf_members0 = org.omg.CORBA.ORB.init ().create_sequence_tc (0, _tcOf_members0);
           _members0[1] = new org.omg.CORBA.StructMember (
             "profiles",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (org.omg.IOP.IORHelper.id (), "IOR", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (IORHelper.id (), "IOR", _members0);
           __active = false;
         }
       }
@@ -66,23 +66,23 @@ abstract public class IORHelper
     return _id;
   }
 
-  public static org.omg.IOP.IOR read (org.omg.CORBA.portable.InputStream istream)
+  public static IOR read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.IOP.IOR value = new org.omg.IOP.IOR ();
+    IOR value = new IOR ();
     value.type_id = istream.read_string ();
     int _len0 = istream.read_long ();
-    value.profiles = new org.omg.IOP.TaggedProfile[_len0];
+    value.profiles = new TaggedProfile[_len0];
     for (int _o1 = 0;_o1 < value.profiles.length; ++_o1)
-      value.profiles[_o1] = org.omg.IOP.TaggedProfileHelper.read (istream);
+      value.profiles[_o1] = TaggedProfileHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.IOP.IOR value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, IOR value)
   {
     ostream.write_string (value.type_id);
     ostream.write_long (value.profiles.length);
     for (int _i0 = 0;_i0 < value.profiles.length; ++_i0)
-      org.omg.IOP.TaggedProfileHelper.write (ostream, value.profiles[_i0]);
+      TaggedProfileHelper.write (ostream, value.profiles[_i0]);
   }
 
 }

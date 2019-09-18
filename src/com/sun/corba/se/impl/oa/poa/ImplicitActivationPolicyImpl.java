@@ -29,7 +29,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class ImplicitActivationPolicyImpl
-    extends org.omg.CORBA.LocalObject implements ImplicitActivationPolicy {
+    extends LocalObject implements ImplicitActivationPolicy {
 
     public
         ImplicitActivationPolicyImpl(ImplicitActivationPolicyValue

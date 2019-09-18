@@ -31,21 +31,21 @@ public class RequestProcessingPolicyValue implements org.omg.CORBA.portable.IDLE
 {
   private        int __value;
   private static int __size = 3;
-  private static org.omg.PortableServer.RequestProcessingPolicyValue[] __array = new org.omg.PortableServer.RequestProcessingPolicyValue [__size];
+  private static RequestProcessingPolicyValue[] __array = new RequestProcessingPolicyValue [__size];
 
   public static final int _USE_ACTIVE_OBJECT_MAP_ONLY = 0;
-  public static final org.omg.PortableServer.RequestProcessingPolicyValue USE_ACTIVE_OBJECT_MAP_ONLY = new org.omg.PortableServer.RequestProcessingPolicyValue(_USE_ACTIVE_OBJECT_MAP_ONLY);
+  public static final RequestProcessingPolicyValue USE_ACTIVE_OBJECT_MAP_ONLY = new RequestProcessingPolicyValue(_USE_ACTIVE_OBJECT_MAP_ONLY);
   public static final int _USE_DEFAULT_SERVANT = 1;
-  public static final org.omg.PortableServer.RequestProcessingPolicyValue USE_DEFAULT_SERVANT = new org.omg.PortableServer.RequestProcessingPolicyValue(_USE_DEFAULT_SERVANT);
+  public static final RequestProcessingPolicyValue USE_DEFAULT_SERVANT = new RequestProcessingPolicyValue(_USE_DEFAULT_SERVANT);
   public static final int _USE_SERVANT_MANAGER = 2;
-  public static final org.omg.PortableServer.RequestProcessingPolicyValue USE_SERVANT_MANAGER = new org.omg.PortableServer.RequestProcessingPolicyValue(_USE_SERVANT_MANAGER);
+  public static final RequestProcessingPolicyValue USE_SERVANT_MANAGER = new RequestProcessingPolicyValue(_USE_SERVANT_MANAGER);
 
   public int value ()
   {
     return __value;
   }
 
-  public static org.omg.PortableServer.RequestProcessingPolicyValue from_int (int value)
+  public static RequestProcessingPolicyValue from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

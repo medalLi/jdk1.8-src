@@ -31,7 +31,7 @@ import java.security.Principal;
  * A user principal identified by a username or account name.
  *
  * <p>
- * After successful authentication, a user {@link java.security.Principal}
+ * After successful authentication, a user {@link Principal}
  * can be associated with a particular {@link javax.security.auth.Subject}
  * to augment that <code>Subject</code> with an additional identity.
  * Authorization decisions can then be based upon the

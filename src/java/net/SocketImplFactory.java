@@ -32,8 +32,8 @@ package java.net;
  * implementations.
  *
  * @author  Arthur van Hoff
- * @see     java.net.Socket
- * @see     java.net.ServerSocket
+ * @see     Socket
+ * @see     ServerSocket
  * @since   JDK1.0
  */
 public
@@ -42,7 +42,7 @@ interface SocketImplFactory {
      * Creates a new {@code SocketImpl} instance.
      *
      * @return  a new instance of {@code SocketImpl}.
-     * @see     java.net.SocketImpl
+     * @see     SocketImpl
      */
     SocketImpl createSocketImpl();
 }

@@ -89,6 +89,6 @@ public interface ValidationEventHandler {
      *         <tt>ValidationException</tt>, or <tt>MarshalException</tt>.
      * @throws IllegalArgumentException if the event object is null.
      */
-    public boolean handleEvent( ValidationEvent event );
+    public boolean handleEvent(ValidationEvent event);
 
 }

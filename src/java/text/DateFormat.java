@@ -144,9 +144,9 @@ import sun.util.locale.provider.LocaleServiceProviderPool;
  * @see          Format
  * @see          NumberFormat
  * @see          SimpleDateFormat
- * @see          java.util.Calendar
- * @see          java.util.GregorianCalendar
- * @see          java.util.TimeZone
+ * @see          Calendar
+ * @see          GregorianCalendar
+ * @see          TimeZone
  * @author       Mark Davis, Chen-Lieh Huang, Alan Liu
  */
 public abstract class DateFormat extends Format {
@@ -296,7 +296,7 @@ public abstract class DateFormat extends Format {
      * the begin index and end index of fieldPosition will be set to
      * 5 and 8, respectively, for the first occurrence of the timezone
      * pattern character 'z'.
-     * @see java.text.Format
+     * @see Format
      */
     public final StringBuffer format(Object obj, StringBuffer toAppendTo,
                                      FieldPosition fieldPosition)
@@ -383,7 +383,7 @@ public abstract class DateFormat extends Format {
      * fields and the {@code TimeZone} value may have been
      * overwritten, depending on subclass implementations. Any {@code
      * TimeZone} value that has previously been set by a call to
-     * {@link #setTimeZone(java.util.TimeZone) setTimeZone} may need
+     * {@link #setTimeZone(TimeZone) setTimeZone} may need
      * to be restored for further operations.
      *
      * @param source  The date/time string to be parsed
@@ -447,12 +447,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the time formatter with the default formatting style
-     * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getTimeInstance(int, Locale) getTimeInstance(DEFAULT,
      *     Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @return a time formatter.
      */
     public final static DateFormat getTimeInstance()
@@ -462,12 +462,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the time formatter with the given formatting style
-     * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getTimeInstance(int, Locale) getTimeInstance(style,
      *     Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @param style the given formatting style. For example,
      * SHORT for "h:mm a" in the US locale.
      * @return a time formatter.
@@ -493,12 +493,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the date formatter with the default formatting style
-     * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getDateInstance(int, Locale) getDateInstance(DEFAULT,
      *     Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @return a date formatter.
      */
     public final static DateFormat getDateInstance()
@@ -508,12 +508,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the date formatter with the given formatting style
-     * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getDateInstance(int, Locale) getDateInstance(style,
      *     Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @param style the given formatting style. For example,
      * SHORT for "M/d/yy" in the US locale.
      * @return a date formatter.
@@ -539,12 +539,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the date/time formatter with the default formatting style
-     * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getDateTimeInstance(int, int, Locale) getDateTimeInstance(DEFAULT,
      *     DEFAULT, Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @return a date/time formatter.
      */
     public final static DateFormat getDateTimeInstance()
@@ -554,12 +554,12 @@ public abstract class DateFormat extends Format {
 
     /**
      * Gets the date/time formatter with the given date and time
-     * formatting styles for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
+     * formatting styles for the default {@link Locale.Category#FORMAT FORMAT} locale.
      * <p>This is equivalent to calling
      * {@link #getDateTimeInstance(int, int, Locale) getDateTimeInstance(dateStyle,
      *     timeStyle, Locale.getDefault(Locale.Category.FORMAT))}.
-     * @see java.util.Locale#getDefault(java.util.Locale.Category)
-     * @see java.util.Locale.Category#FORMAT
+     * @see Locale#getDefault(Locale.Category)
+     * @see Locale.Category#FORMAT
      * @param dateStyle the given date formatting style. For example,
      * SHORT for "M/d/yy" in the US locale.
      * @param timeStyle the given time formatting style. For example,
@@ -602,9 +602,9 @@ public abstract class DateFormat extends Format {
      * localized instances.
      * The returned array represents the union of locales supported by the Java
      * runtime and by installed
-     * {@link java.text.spi.DateFormatProvider DateFormatProvider} implementations.
+     * {@link DateFormatProvider DateFormatProvider} implementations.
      * It must contain at least a <code>Locale</code> instance equal to
-     * {@link java.util.Locale#US Locale.US}.
+     * {@link Locale#US Locale.US}.
      *
      * @return An array of locales for which localized
      *         <code>DateFormat</code> instances are available.
@@ -620,7 +620,7 @@ public abstract class DateFormat extends Format {
      * Set the calendar to be used by this date format.  Initially, the default
      * calendar for the specified or default locale is used.
      *
-     * <p>Any {@link java.util.TimeZone TimeZone} and {@linkplain
+     * <p>Any {@link TimeZone TimeZone} and {@linkplain
      * #isLenient() leniency} values that have previously been set are
      * overwritten by {@code newCalendar}'s values.
      *
@@ -668,7 +668,7 @@ public abstract class DateFormat extends Format {
      * }</pre></blockquote>
      *
      * <p>The {@code TimeZone} set by this method is overwritten by a
-     * {@link #setCalendar(java.util.Calendar) setCalendar} call.
+     * {@link #setCalendar(Calendar) setCalendar} call.
      *
      * <p>The {@code TimeZone} set by this method may be overwritten as
      * a result of a call to the parse method.
@@ -706,10 +706,10 @@ public abstract class DateFormat extends Format {
      * }</pre></blockquote>
      *
      * <p>This leniency value is overwritten by a call to {@link
-     * #setCalendar(java.util.Calendar) setCalendar()}.
+     * #setCalendar(Calendar) setCalendar()}.
      *
      * @param lenient when {@code true}, parsing is lenient
-     * @see java.util.Calendar#setLenient(boolean)
+     * @see Calendar#setLenient(boolean)
      */
     public void setLenient(boolean lenient)
     {
@@ -725,7 +725,7 @@ public abstract class DateFormat extends Format {
      *
      * @return {@code true} if the {@link #calendar} is lenient;
      *         {@code false} otherwise.
-     * @see java.util.Calendar#isLenient()
+     * @see Calendar#isLenient()
      */
     public boolean isLenient()
     {
@@ -832,7 +832,7 @@ public abstract class DateFormat extends Format {
      * between its constants and the corresponding Calendar constants.
      *
      * @since 1.4
-     * @see java.util.Calendar
+     * @see Calendar
      */
     public static class Field extends Format.Field {
 
@@ -859,7 +859,7 @@ public abstract class DateFormat extends Format {
          *         not the value of a <code>Calendar</code> field constant.
          * @param calendarField Calendar field constant
          * @return Field instance representing calendarField.
-         * @see java.util.Calendar
+         * @see Calendar
          */
         public static Field ofCalendarField(int calendarField) {
             if (calendarField < 0 || calendarField >=
@@ -883,7 +883,7 @@ public abstract class DateFormat extends Format {
         protected Field(String name, int calendarField) {
             super(name);
             this.calendarField = calendarField;
-            if (this.getClass() == DateFormat.Field.class) {
+            if (this.getClass() == Field.class) {
                 instanceMap.put(name, this);
                 if (calendarField >= 0) {
                     // assert(calendarField < Calendar.FIELD_COUNT);
@@ -900,7 +900,7 @@ public abstract class DateFormat extends Format {
          * <code>Calendar</code> constant, this will return -1.
          *
          * @return Calendar constant for this field
-         * @see java.util.Calendar
+         * @see Calendar
          */
         public int getCalendarField() {
             return calendarField;
@@ -915,7 +915,7 @@ public abstract class DateFormat extends Format {
          */
         @Override
         protected Object readResolve() throws InvalidObjectException {
-            if (this.getClass() != DateFormat.Field.class) {
+            if (this.getClass() != Field.class) {
                 throw new InvalidObjectException("subclass didn't correctly implement readResolve");
             }
 

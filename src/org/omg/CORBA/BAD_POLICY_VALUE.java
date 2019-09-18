@@ -35,7 +35,7 @@ public interface BAD_POLICY_VALUE {
     /**
     * The value used to represent a bad policy value error
     * in a <code>PolicyError</code> exception.
-    * @see org.omg.CORBA.PolicyError
+    * @see PolicyError
     */
     final short value = (short) (3L);
 };

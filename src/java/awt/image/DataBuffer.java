@@ -64,8 +64,8 @@ import java.lang.annotation.Native;
  * methods for improved performance.  Currently, the Java 2D(tm) API
  * image classes use TYPE_BYTE, TYPE_USHORT, TYPE_INT, TYPE_SHORT,
  * TYPE_FLOAT, and TYPE_DOUBLE DataBuffers to store image data.
- * @see java.awt.image.Raster
- * @see java.awt.image.SampleModel
+ * @see Raster
+ * @see SampleModel
  */
 public abstract class DataBuffer {
 

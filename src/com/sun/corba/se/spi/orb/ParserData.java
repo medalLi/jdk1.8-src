@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.util.Properties ;
 
@@ -37,7 +37,7 @@ public interface ParserData {
 
     public Object getTestValue() ;
 
-    public void addToParser( PropertyParser parser ) ;
+    public void addToParser(PropertyParser parser) ;
 
-    public void addToProperties( Properties props ) ;
+    public void addToProperties(Properties props) ;
 }

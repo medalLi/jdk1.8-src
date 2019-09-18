@@ -245,7 +245,7 @@ public class BasicProgressBarUI extends ProgressBarUI {
      *
      * @throws NullPointerException {@inheritDoc}
      * @throws IllegalArgumentException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public int getBaseline(JComponent c, int width, int height) {
@@ -269,7 +269,7 @@ public class BasicProgressBarUI extends ProgressBarUI {
      * changes as the size changes.
      *
      * @throws NullPointerException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public Component.BaselineResizeBehavior getBaselineResizeBehavior(
@@ -564,7 +564,7 @@ public class BasicProgressBarUI extends ProgressBarUI {
      * @return the size of the box dimension being determined;
      *         must be no larger than <code>availableLength</code>
      *
-     * @see javax.swing.SwingUtilities#calculateInnerArea
+     * @see SwingUtilities#calculateInnerArea
      * @since 1.5
      */
     protected int getBoxLength(int availableLength, int otherDimension) {

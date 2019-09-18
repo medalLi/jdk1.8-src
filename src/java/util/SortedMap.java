@@ -280,5 +280,5 @@ public interface SortedMap<K,V> extends Map<K,V> {
      * @return a set view of the mappings contained in this map,
      *         sorted in ascending key order
      */
-    Set<Map.Entry<K, V>> entrySet();
+    Set<Entry<K, V>> entrySet();
 }

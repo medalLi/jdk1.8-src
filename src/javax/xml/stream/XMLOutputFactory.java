@@ -151,9 +151,9 @@ public abstract class XMLOutputFactory {
    *   Use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to locate and load an
    *   implementation of the service using the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism}:
    *   the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -191,8 +191,8 @@ public abstract class XMLOutputFactory {
    *
    * @deprecated  This method has been deprecated because it returns an
    *              instance of XMLInputFactory, which is of the wrong class.
-   *              Use the new method {@link #newFactory(java.lang.String,
-   *              java.lang.ClassLoader)} instead.
+   *              Use the new method {@link #newFactory(String,
+   *              ClassLoader)} instead.
    */
   public static XMLInputFactory newInstance(String factoryId,
           ClassLoader classLoader)
@@ -222,12 +222,12 @@ public abstract class XMLOutputFactory {
    *   If {@code factoryId} is "javax.xml.stream.XMLOutputFactory",
    *   use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class, java.lang.ClassLoader) locate and load}
+   *   java.util.ServiceLoader#load(Class, ClassLoader) locate and load}
    *   an implementation of the service using the specified {@code ClassLoader}.
    *   If {@code classLoader} is null, the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism} will apply:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism} will apply:
    *   That is, the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -243,7 +243,7 @@ public abstract class XMLOutputFactory {
    *
    * <p>
    *   Note that this is a new method that replaces the deprecated
-   *   {@link #newInstance(java.lang.String, java.lang.ClassLoader)
+   *   {@link #newInstance(String, ClassLoader)
    *   newInstance(String factoryId, ClassLoader classLoader)} method.
    *   The original method was incorrectly defined to return XMLInputFactory.
    * </p>
@@ -334,19 +334,19 @@ public abstract class XMLOutputFactory {
    * Allows the user to set specific features/properties on the underlying implementation.
    * @param name The name of the property
    * @param value The value of the property
-   * @throws java.lang.IllegalArgumentException if the property is not supported
+   * @throws IllegalArgumentException if the property is not supported
    */
-  public abstract void setProperty(java.lang.String name,
-                                    Object value)
+  public abstract void setProperty(String name,
+                                   Object value)
     throws IllegalArgumentException;
 
   /**
    * Get a feature/property on the underlying implementation
    * @param name The name of the property
    * @return The value of the property
-   * @throws java.lang.IllegalArgumentException if the property is not supported
+   * @throws IllegalArgumentException if the property is not supported
    */
-  public abstract Object getProperty(java.lang.String name)
+  public abstract Object getProperty(String name)
     throws IllegalArgumentException;
 
   /**

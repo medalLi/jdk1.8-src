@@ -98,7 +98,7 @@ public class MethodHandles {
      * publicly accessible fields and methods.
      * <p>
      * As a matter of pure convention, the {@linkplain Lookup#lookupClass lookup class}
-     * of this lookup object will be {@link java.lang.Object}.
+     * of this lookup object will be {@link Object}.
      *
      * <p style="font-size:smaller;">
      * <em>Discussion:</em>
@@ -121,9 +121,9 @@ public class MethodHandles {
      * <a href="MethodHandleInfo.html#directmh">direct method handle</a>.
      * The result is as if the user had obtained a lookup object capable enough
      * to crack the target method handle, called
-     * {@link java.lang.invoke.MethodHandles.Lookup#revealDirect Lookup.revealDirect}
+     * {@link Lookup#revealDirect Lookup.revealDirect}
      * on the target to obtain its symbolic reference, and then called
-     * {@link java.lang.invoke.MethodHandleInfo#reflectAs MethodHandleInfo.reflectAs}
+     * {@link MethodHandleInfo#reflectAs MethodHandleInfo.reflectAs}
      * to resolve the symbolic reference to a member.
      * <p>
      * If there is a security manager, its {@code checkPermission} method
@@ -183,55 +183,55 @@ public class MethodHandles {
      *     <th>bytecode behavior</th>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findGetter lookup.findGetter(C.class,"f",FT.class)}</td>
+     *     <td>{@link Lookup#findGetter lookup.findGetter(C.class,"f",FT.class)}</td>
      *     <td>{@code FT f;}</td><td>{@code (T) this.f;}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findStaticGetter lookup.findStaticGetter(C.class,"f",FT.class)}</td>
+     *     <td>{@link Lookup#findStaticGetter lookup.findStaticGetter(C.class,"f",FT.class)}</td>
      *     <td>{@code static}<br>{@code FT f;}</td><td>{@code (T) C.f;}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findSetter lookup.findSetter(C.class,"f",FT.class)}</td>
+     *     <td>{@link Lookup#findSetter lookup.findSetter(C.class,"f",FT.class)}</td>
      *     <td>{@code FT f;}</td><td>{@code this.f = x;}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findStaticSetter lookup.findStaticSetter(C.class,"f",FT.class)}</td>
+     *     <td>{@link Lookup#findStaticSetter lookup.findStaticSetter(C.class,"f",FT.class)}</td>
      *     <td>{@code static}<br>{@code FT f;}</td><td>{@code C.f = arg;}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findVirtual lookup.findVirtual(C.class,"m",MT)}</td>
+     *     <td>{@link Lookup#findVirtual lookup.findVirtual(C.class,"m",MT)}</td>
      *     <td>{@code T m(A*);}</td><td>{@code (T) this.m(arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findStatic lookup.findStatic(C.class,"m",MT)}</td>
+     *     <td>{@link Lookup#findStatic lookup.findStatic(C.class,"m",MT)}</td>
      *     <td>{@code static}<br>{@code T m(A*);}</td><td>{@code (T) C.m(arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findSpecial lookup.findSpecial(C.class,"m",MT,this.class)}</td>
+     *     <td>{@link Lookup#findSpecial lookup.findSpecial(C.class,"m",MT,this.class)}</td>
      *     <td>{@code T m(A*);}</td><td>{@code (T) super.m(arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#findConstructor lookup.findConstructor(C.class,MT)}</td>
+     *     <td>{@link Lookup#findConstructor lookup.findConstructor(C.class,MT)}</td>
      *     <td>{@code C(A*);}</td><td>{@code new C(arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#unreflectGetter lookup.unreflectGetter(aField)}</td>
+     *     <td>{@link Lookup#unreflectGetter lookup.unreflectGetter(aField)}</td>
      *     <td>({@code static})?<br>{@code FT f;}</td><td>{@code (FT) aField.get(thisOrNull);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#unreflectSetter lookup.unreflectSetter(aField)}</td>
+     *     <td>{@link Lookup#unreflectSetter lookup.unreflectSetter(aField)}</td>
      *     <td>({@code static})?<br>{@code FT f;}</td><td>{@code aField.set(thisOrNull, arg);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#unreflect lookup.unreflect(aMethod)}</td>
+     *     <td>{@link Lookup#unreflect lookup.unreflect(aMethod)}</td>
      *     <td>({@code static})?<br>{@code T m(A*);}</td><td>{@code (T) aMethod.invoke(thisOrNull, arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#unreflectConstructor lookup.unreflectConstructor(aConstructor)}</td>
+     *     <td>{@link Lookup#unreflectConstructor lookup.unreflectConstructor(aConstructor)}</td>
      *     <td>{@code C(A*);}</td><td>{@code (C) aConstructor.newInstance(arg*);}</td>
      * </tr>
      * <tr>
-     *     <td>{@link java.lang.invoke.MethodHandles.Lookup#unreflect lookup.unreflect(aMethod)}</td>
+     *     <td>{@link Lookup#unreflect lookup.unreflect(aMethod)}</td>
      *     <td>({@code static})?<br>{@code T m(A*);}</td><td>{@code (T) aMethod.invoke(thisOrNull, arg*);}</td>
      * </tr>
      * </table>
@@ -285,7 +285,7 @@ public class MethodHandles {
      * Access checks are applied in the factory methods of {@code Lookup},
      * when a method handle is created.
      * This is a key difference from the Core Reflection API, since
-     * {@link java.lang.reflect.Method#invoke java.lang.reflect.Method.invoke}
+     * {@link Method#invoke java.lang.reflect.Method.invoke}
      * performs access checking against every caller, on every call.
      * <p>
      * All access checks start from a {@code Lookup} object, which
@@ -416,17 +416,17 @@ public class MethodHandles {
      * available.  Such cross-loader references are also possible with the
      * Core Reflection API, and are impossible to bytecode instructions
      * such as {@code invokestatic} or {@code getfield}.
-     * There is a {@linkplain java.lang.SecurityManager security manager API}
+     * There is a {@linkplain SecurityManager security manager API}
      * to allow applications to check such cross-loader references.
      * These checks apply to both the {@code MethodHandles.Lookup} API
      * and the Core Reflection API
-     * (as found on {@link java.lang.Class Class}).
+     * (as found on {@link Class Class}).
      * <p>
      * If a security manager is present, member lookups are subject to
      * additional checks.
      * From one to three calls are made to the security manager.
      * Any of these calls can refuse access by throwing a
-     * {@link java.lang.SecurityException SecurityException}.
+     * {@link SecurityException SecurityException}.
      * Define {@code smgr} as the security manager,
      * {@code lookc} as the lookup class of the current lookup object,
      * {@code refc} as the containing class in which the member
@@ -488,7 +488,7 @@ public class MethodHandles {
      * <p style="font-size:smaller;">
      * <em>Discussion:</em>
      * For example, the caller-sensitive method
-     * {@link java.lang.Class#forName(String) Class.forName(x)}
+     * {@link Class#forName(String) Class.forName(x)}
      * can return varying classes or throw varying exceptions,
      * depending on the class loader of the class that calls it.
      * A public lookup of {@code Class.forName} will fail, because
@@ -518,28 +518,28 @@ public class MethodHandles {
         /** A single-bit mask representing {@code public} access,
          *  which may contribute to the result of {@link #lookupModes lookupModes}.
          *  The value, {@code 0x01}, happens to be the same as the value of the
-         *  {@code public} {@linkplain java.lang.reflect.Modifier#PUBLIC modifier bit}.
+         *  {@code public} {@linkplain Modifier#PUBLIC modifier bit}.
          */
         public static final int PUBLIC = Modifier.PUBLIC;
 
         /** A single-bit mask representing {@code private} access,
          *  which may contribute to the result of {@link #lookupModes lookupModes}.
          *  The value, {@code 0x02}, happens to be the same as the value of the
-         *  {@code private} {@linkplain java.lang.reflect.Modifier#PRIVATE modifier bit}.
+         *  {@code private} {@linkplain Modifier#PRIVATE modifier bit}.
          */
         public static final int PRIVATE = Modifier.PRIVATE;
 
         /** A single-bit mask representing {@code protected} access,
          *  which may contribute to the result of {@link #lookupModes lookupModes}.
          *  The value, {@code 0x04}, happens to be the same as the value of the
-         *  {@code protected} {@linkplain java.lang.reflect.Modifier#PROTECTED modifier bit}.
+         *  {@code protected} {@linkplain Modifier#PROTECTED modifier bit}.
          */
         public static final int PROTECTED = Modifier.PROTECTED;
 
         /** A single-bit mask representing {@code package} access (default access),
          *  which may contribute to the result of {@link #lookupModes lookupModes}.
          *  The value is {@code 0x08}, which does not correspond meaningfully to
-         *  any particular {@linkplain java.lang.reflect.Modifier modifier bit}.
+         *  any particular {@linkplain Modifier modifier bit}.
          */
         public static final int PACKAGE = Modifier.STATIC;
 
@@ -577,10 +577,10 @@ public class MethodHandles {
          *  and {@linkplain #PACKAGE PACKAGE (0x08)}.
          *  <p>
          *  A freshly-created lookup object
-         *  on the {@linkplain java.lang.invoke.MethodHandles#lookup() caller's class}
+         *  on the {@linkplain MethodHandles#lookup() caller's class}
          *  has all possible bits set, since the caller class can access all its own members.
          *  A lookup object on a new lookup class
-         *  {@linkplain java.lang.invoke.MethodHandles.Lookup#in created from a previous lookup object}
+         *  {@linkplain Lookup#in created from a previous lookup object}
          *  may have some mode bits set to zero.
          *  The purpose of this is to restrict access via the new lookup object,
          *  so that it can access only names which can be reached by the original
@@ -686,7 +686,7 @@ public class MethodHandles {
 
         /**
          * Displays the name of the class from which lookups are to be made.
-         * (The name is the one reported by {@link java.lang.Class#getName() Class.getName}.)
+         * (The name is the one reported by {@link Class#getName() Class.getName}.)
          * If there are restrictions on the access permitted to this lookup,
          * this is indicated by adding a suffix to the class name, consisting
          * of a slash and a keyword.  The keyword represents the strongest
@@ -701,8 +701,8 @@ public class MethodHandles {
          * access (public, package, private, and protected) is allowed.
          * In this case, no suffix is added.
          * This is true only of an object obtained originally from
-         * {@link java.lang.invoke.MethodHandles#lookup MethodHandles.lookup}.
-         * Objects created by {@link java.lang.invoke.MethodHandles.Lookup#in Lookup.in}
+         * {@link MethodHandles#lookup MethodHandles.lookup}.
+         * Objects created by {@link Lookup#in Lookup.in}
          * always have restricted access, and will display a suffix.
          * <p>
          * (It may seem strange that protected access should be
@@ -803,8 +803,8 @@ assertEquals("[x, y]", MH_asList.invoke("x", "y").toString());
          * if the class is {@code MethodHandle} and the name string is
          * {@code invokeExact} or {@code invoke}, the resulting
          * method handle is equivalent to one produced by
-         * {@link java.lang.invoke.MethodHandles#exactInvoker MethodHandles.exactInvoker} or
-         * {@link java.lang.invoke.MethodHandles#invoker MethodHandles.invoker}
+         * {@link MethodHandles#exactInvoker MethodHandles.exactInvoker} or
+         * {@link MethodHandles#invoker MethodHandles.invoker}
          * with the same {@code type} argument.
          *
          * <b>Example:</b>
@@ -1909,9 +1909,9 @@ return invoker;
      * method handle values, as long as they are compatible with the type of {@code X}.
      * <p style="font-size:smaller;">
      * <em>(Note:  The invoker method is not available via the Core Reflection API.
-     * An attempt to call {@linkplain java.lang.reflect.Method#invoke java.lang.reflect.Method.invoke}
+     * An attempt to call {@linkplain Method#invoke java.lang.reflect.Method.invoke}
      * on the declared {@code invokeExact} or {@code invoke} method will raise an
-     * {@link java.lang.UnsupportedOperationException UnsupportedOperationException}.)</em>
+     * {@link UnsupportedOperationException UnsupportedOperationException}.)</em>
      * <p>
      * This method throws no reflective or security exceptions.
      * @param type the desired target type
@@ -1948,9 +1948,9 @@ return invoker;
      * of the same arity as the general type.
      * <p style="font-size:smaller;">
      * <em>(Note:  The invoker method is not available via the Core Reflection API.
-     * An attempt to call {@linkplain java.lang.reflect.Method#invoke java.lang.reflect.Method.invoke}
+     * An attempt to call {@linkplain Method#invoke java.lang.reflect.Method.invoke}
      * on the declared {@code invokeExact} or {@code invoke} method will raise an
-     * {@link java.lang.UnsupportedOperationException UnsupportedOperationException}.)</em>
+     * {@link UnsupportedOperationException UnsupportedOperationException}.)</em>
      * <p>
      * This method throws no reflective or security exceptions.
      * @param type the desired target type

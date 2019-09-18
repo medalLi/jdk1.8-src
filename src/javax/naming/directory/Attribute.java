@@ -107,7 +107,7 @@ public interface Attribute extends Cloneable, java.io.Serializable {
       * @exception NamingException
       *         If a naming exception was encountered while retrieving
       *         the value.
-      * @exception java.util.NoSuchElementException
+      * @exception NoSuchElementException
       *         If this attribute has no values.
       */
     Object get() throws NamingException;
@@ -134,7 +134,7 @@ public interface Attribute extends Cloneable, java.io.Serializable {
       * @param attrVal The possibly null value to check. If null, check
       *  whether the attribute has an attribute value whose value is null.
       * @return true if attrVal is one of this attribute's values; false otherwise.
-      * @see java.lang.Object#equals
+      * @see Object#equals
       * @see BasicAttribute#equals
       */
     boolean contains(Object attrVal);
@@ -253,8 +253,8 @@ public interface Attribute extends Cloneable, java.io.Serializable {
       * @return true if this attribute's values are ordered; false otherwise.
       * @see #get(int)
       * @see #remove(int)
-      * @see #add(int, java.lang.Object)
-      * @see #set(int, java.lang.Object)
+      * @see #add(int, Object)
+      * @see #set(int, Object)
       */
     boolean isOrdered();
 

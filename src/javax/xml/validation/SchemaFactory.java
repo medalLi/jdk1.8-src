@@ -149,9 +149,9 @@ public abstract class SchemaFactory {
      *   Use the service-provider loading facilities, defined by the
      *   {@link java.util.ServiceLoader} class, to attempt to locate and load an
      *   implementation of the service using the {@linkplain
-     *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+     *   java.util.ServiceLoader#load(Class) default loading mechanism}:
      *   the service-provider loading facility will use the {@linkplain
-     *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+     *   Thread#getContextClassLoader() current thread's context class loader}
      *   to attempt to load the service. If the context class
      *   loader is null, the {@linkplain
      *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -407,30 +407,30 @@ public abstract class SchemaFactory {
      *      <p>Access to external DTDs in Schema files is restricted to the protocols
      *      specified by the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD} property.
      *      If access is denied during the creation of new Schema due to the restriction
-     *      of this property, {@link org.xml.sax.SAXException} will be thrown by the
+     *      of this property, {@link SAXException} will be thrown by the
      *      {@link #newSchema(Source)} or {@link #newSchema(File)}
      *      or {@link #newSchema(URL)} or  or {@link #newSchema(Source[])} method.</p>
      *
      *      <p>Access to external DTDs in xml source files is restricted to the protocols
      *      specified by the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD} property.
      *      If access is denied during validation due to the restriction
-     *      of this property, {@link org.xml.sax.SAXException} will be thrown by the
-     *      {@link javax.xml.validation.Validator#validate(Source)} or
-     *      {@link javax.xml.validation.Validator#validate(Source, Result)} method.</p>
+     *      of this property, {@link SAXException} will be thrown by the
+     *      {@link Validator#validate(Source)} or
+     *      {@link Validator#validate(Source, Result)} method.</p>
      *
      *      <p>Access to external reference set by the schemaLocation attribute is
      *      restricted to the protocols specified by the
      *      {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_SCHEMA} property.
      *      If access is denied during validation due to the restriction of this property,
-     *      {@link org.xml.sax.SAXException} will be thrown by the
-     *      {@link javax.xml.validation.Validator#validate(Source)} or
-     *      {@link javax.xml.validation.Validator#validate(Source, Result)} method.</p>
+     *      {@link SAXException} will be thrown by the
+     *      {@link Validator#validate(Source)} or
+     *      {@link Validator#validate(Source, Result)} method.</p>
      *
      *      <p>Access to external reference set by the Import
      *      and Include element is restricted to the protocols specified by the
      *      {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_SCHEMA} property.
      *      If access is denied during the creation of new Schema due to the restriction
-     *      of this property, {@link org.xml.sax.SAXException} will be thrown by the
+     *      of this property, {@link SAXException} will be thrown by the
      *      {@link #newSchema(Source)} or {@link #newSchema(File)}
      *      or {@link #newSchema(URL)} or {@link #newSchema(Source[])} method.</p>
      *   </li>
@@ -526,13 +526,13 @@ public abstract class SchemaFactory {
      * behave as if the following {@link ErrorHandler} is set:
      * <pre>
      * class DraconianErrorHandler implements {@link ErrorHandler} {
-     *     public void fatalError( {@link org.xml.sax.SAXParseException} e ) throws {@link SAXException} {
+     *     public void fatalError( {@link SAXParseException} e ) throws {@link SAXException} {
      *         throw e;
      *     }
-     *     public void error( {@link org.xml.sax.SAXParseException} e ) throws {@link SAXException} {
+     *     public void error( {@link SAXParseException} e ) throws {@link SAXException} {
      *         throw e;
      *     }
-     *     public void warning( {@link org.xml.sax.SAXParseException} e ) throws {@link SAXException} {
+     *     public void warning( {@link SAXParseException} e ) throws {@link SAXException} {
      *         // noop
      *     }
      * }

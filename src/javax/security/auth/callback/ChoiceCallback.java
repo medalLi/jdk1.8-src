@@ -31,7 +31,7 @@ package javax.security.auth.callback;
  * method of a {@code CallbackHandler} to display a list of choices
  * and to retrieve the selected choice(s).
  *
- * @see javax.security.auth.callback.CallbackHandler
+ * @see CallbackHandler
  */
 public class ChoiceCallback implements Callback, java.io.Serializable {
 

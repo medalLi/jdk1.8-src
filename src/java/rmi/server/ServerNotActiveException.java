@@ -33,9 +33,9 @@ package java.rmi.server;
  *
  * @author  Roger Riggs
  * @since   JDK1.1
- * @see java.rmi.server.RemoteServer#getClientHost()
+ * @see RemoteServer#getClientHost()
  */
-public class ServerNotActiveException extends java.lang.Exception {
+public class ServerNotActiveException extends Exception {
 
     /* indicate compatibility with JDK 1.1.x version of class */
     private static final long serialVersionUID = 4687940720827538231L;

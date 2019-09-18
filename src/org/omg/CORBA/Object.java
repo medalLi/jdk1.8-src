@@ -86,7 +86,7 @@ public interface Object {
      *         object references are distinct, not necessarily that
      *         they reference distinct objects.
      */
-    boolean _is_equivalent(org.omg.CORBA.Object other);
+    boolean _is_equivalent(Object other);
 
 
     /**
@@ -130,7 +130,7 @@ public interface Object {
      * @return a duplicate of this object reference or this object reference
      *         itself
      */
-    org.omg.CORBA.Object _duplicate();
+    Object _duplicate();
 
 
     /**
@@ -153,7 +153,7 @@ public interface Object {
      *         which provides type information about the object referred to by
      *         this object reference
      */
-    org.omg.CORBA.Object _get_interface_def();
+    Object _get_interface_def();
 
 
 
@@ -237,7 +237,7 @@ public interface Object {
      * @param policy_type the type of policy to be obtained
      * @return A <code>Policy</code> object of the type specified by
      *         the policy_type parameter
-     * @exception org.omg.CORBA.BAD_PARAM when the value of policy type
+     * @exception BAD_PARAM when the value of policy type
      * is not valid either because the specified type is not supported by this
      * ORB or because a policy object of that type is not associated with this
      * Object
@@ -275,8 +275,8 @@ public interface Object {
          * @return a new <code>Object</code> with the given policies replacing
          *         or added to those in this <code>Object</code>
      */
-    org.omg.CORBA.Object _set_policy_override(Policy[] policies,
-                                              SetOverrideType set_add);
+    Object _set_policy_override(Policy[] policies,
+                                SetOverrideType set_add);
 
 
 }

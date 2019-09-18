@@ -52,7 +52,7 @@ public class WindowsBorders {
     public static Border getProgressBarBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
         Border progressBarBorder = new BorderUIResource.CompoundBorderUIResource(
-                                         new WindowsBorders.ProgressBarBorder(
+                                         new ProgressBarBorder(
                                               table.getColor("ProgressBar.shadow"),
                                               table.getColor("ProgressBar.highlight")),
                                               new EmptyBorder(1,1,1,1)
@@ -68,7 +68,7 @@ public class WindowsBorders {
      */
     public static Border getToolBarBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
-        Border toolBarBorder = new WindowsBorders.ToolBarBorder(
+        Border toolBarBorder = new ToolBarBorder(
                                         table.getColor("ToolBar.shadow"),
                                         table.getColor("ToolBar.highlight"));
         return toolBarBorder;
@@ -106,7 +106,7 @@ public class WindowsBorders {
                     table.getColor("InternalFrame.borderHighlight"),
                     table.getColor("InternalFrame.borderDarkShadow"),
                     table.getColor("InternalFrame.borderShadow")),
-                new WindowsBorders.InternalFrameLineBorder(
+                new InternalFrameLineBorder(
                     table.getColor("InternalFrame.activeBorderColor"),
                     table.getColor("InternalFrame.inactiveBorderColor"),
                     table.getInt("InternalFrame.borderWidth")));

@@ -57,7 +57,7 @@ import com.sun.corba.se.impl.logging.OMGSystemException;
  * passed to ORBInitializers, as described in orbos/99-12-02.
  */
 public final class ORBInitInfoImpl
-    extends org.omg.CORBA.LocalObject
+    extends LocalObject
     implements ORBInitInfo, ORBInitInfoExt
 {
     // The ORB we are initializing

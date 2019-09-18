@@ -62,7 +62,7 @@ public class NoInitialContextException extends NamingException {
       * Constructs an instance of NoInitialContextException with an
       * explanation. All other fields are initialized to null.
       * @param  explanation     Possibly null additional detail about this exception.
-      * @see java.lang.Throwable#getMessage
+      * @see Throwable#getMessage
       */
     public NoInitialContextException(String explanation) {
         super(explanation);

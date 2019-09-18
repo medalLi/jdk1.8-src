@@ -31,7 +31,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynEnum.html">DynEnum</a> instead
  */
 @Deprecated
-public interface DynEnum extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
+public interface DynEnum extends Object, DynAny
 {
     /**
      * Return the value of the IDL enum stored in this

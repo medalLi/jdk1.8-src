@@ -37,8 +37,8 @@ import java.awt.Component;
  * @author Laurence P. G. Cable
  * @since 1.2
  *
- * @see java.beans.beancontext.BeanContext
- * @see java.beans.beancontext.BeanContextSupport
+ * @see BeanContext
+ * @see BeanContextSupport
  */
 
 public interface BeanContextChildComponentProxy {

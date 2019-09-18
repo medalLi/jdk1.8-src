@@ -67,7 +67,7 @@ public interface AlgorithmConstraints {
      *     or empty
      */
     public boolean permits(Set<CryptoPrimitive> primitives,
-            String algorithm, AlgorithmParameters parameters);
+                           String algorithm, AlgorithmParameters parameters);
 
     /**
      * Determines whether a key is granted permission for the specified
@@ -103,6 +103,6 @@ public interface AlgorithmConstraints {
      *     or empty, or the key is null
      */
     public boolean permits(Set<CryptoPrimitive> primitives,
-                String algorithm, Key key, AlgorithmParameters parameters);
+                           String algorithm, Key key, AlgorithmParameters parameters);
 
 }

@@ -28,7 +28,7 @@ package javax.xml.transform;
 /**
  * <p>To provide customized error handling, implement this interface and
  * use the <code>setErrorListener</code> method to register an instance of the
- * implmentation with the {@link javax.xml.transform.Transformer}.  The
+ * implmentation with the {@link Transformer}.  The
  * <code>Transformer</code> then reports all errors and warnings through this
  * interface.</p>
  *
@@ -55,7 +55,7 @@ public interface ErrorListener {
     /**
      * Receive notification of a warning.
      *
-     * <p>{@link javax.xml.transform.Transformer} can use this method to report
+     * <p>{@link Transformer} can use this method to report
      * conditions that are not errors or fatal errors.  The default behaviour
      * is to take no action.</p>
      *
@@ -66,10 +66,10 @@ public interface ErrorListener {
      * @param exception The warning information encapsulated in a
      *                  transformer exception.
      *
-     * @throws javax.xml.transform.TransformerException if the application
+     * @throws TransformerException if the application
      * chooses to discontinue the transformation.
      *
-     * @see javax.xml.transform.TransformerException
+     * @see TransformerException
      */
     public abstract void warning(TransformerException exception)
         throws TransformerException;
@@ -85,10 +85,10 @@ public interface ErrorListener {
      * @param exception The error information encapsulated in a
      *                  transformer exception.
      *
-     * @throws javax.xml.transform.TransformerException if the application
+     * @throws TransformerException if the application
      * chooses to discontinue the transformation.
      *
-     * @see javax.xml.transform.TransformerException
+     * @see TransformerException
      */
     public abstract void error(TransformerException exception)
         throws TransformerException;
@@ -107,10 +107,10 @@ public interface ErrorListener {
      * @param exception The error information encapsulated in a
      *    <code>TransformerException</code>.
      *
-     * @throws javax.xml.transform.TransformerException if the application
+     * @throws TransformerException if the application
      * chooses to discontinue the transformation.
      *
-     * @see javax.xml.transform.TransformerException
+     * @see TransformerException
      */
     public abstract void fatalError(TransformerException exception)
         throws TransformerException;

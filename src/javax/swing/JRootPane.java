@@ -181,7 +181,7 @@ import sun.security.action.GetBooleanAction;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @see JLayeredPane
  * @see JMenuBar
@@ -613,7 +613,7 @@ public class JRootPane extends JComponent implements Accessible {
      * replace it with an opaque <code>JComponent</code>.
      *
      * @param content the <code>Container</code> to use for component-contents
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the content pane parameter is <code>null</code>
      */
     public void setContentPane(Container content) {
@@ -640,7 +640,7 @@ public class JRootPane extends JComponent implements Accessible {
      * typically holds a content pane and an optional <code>JMenuBar</code>.
      *
      * @param layered  the <code>JLayeredPane</code> to use
-     * @exception java.awt.IllegalComponentStateException (a runtime
+     * @exception IllegalComponentStateException (a runtime
      *            exception) if the layered pane parameter is <code>null</code>
      */
     public void setLayeredPane(JLayeredPane layered) {
@@ -726,7 +726,7 @@ public class JRootPane extends JComponent implements Accessible {
      * because both classes override <code>isValidateRoot</code> to return true.
      *
      * @see JComponent#isValidateRoot
-     * @see java.awt.Container#isValidateRoot
+     * @see Container#isValidateRoot
      * @return true
      */
     @Override
@@ -900,7 +900,7 @@ public class JRootPane extends JComponent implements Accessible {
      * the same version of Swing.  As of 1.4, support for long term storage
      * of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package.
-     * Please see {@link java.beans.XMLEncoder}.
+     * Please see {@link XMLEncoder}.
      */
     @SuppressWarnings("serial")
     protected class RootLayout implements LayoutManager2, Serializable
@@ -1066,7 +1066,7 @@ public class JRootPane extends JComponent implements Accessible {
      * the same version of Swing.  As of 1.4, support for long term storage
      * of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package.
-     * Please see {@link java.beans.XMLEncoder}.
+     * Please see {@link XMLEncoder}.
      */
     @SuppressWarnings("serial")
     protected class AccessibleJRootPane extends AccessibleJComponent {

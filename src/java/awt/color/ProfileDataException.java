@@ -30,7 +30,7 @@ package java.awt.color;
  * processing an ICC_Profile object.
  */
 
-public class ProfileDataException extends java.lang.RuntimeException {
+public class ProfileDataException extends RuntimeException {
 
     /**
      *  Constructs a ProfileDataException with the specified detail message.

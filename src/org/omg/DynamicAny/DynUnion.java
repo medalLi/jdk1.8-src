@@ -19,6 +19,6 @@ package org.omg.DynamicAny;
     * The component_count value for a union depends on the current discriminator:
     * it is 2 for a union whose discriminator indicates a named member, and 1 otherwise.
     */
-public interface DynUnion extends DynUnionOperations, org.omg.DynamicAny.DynAny, org.omg.CORBA.portable.IDLEntity 
+public interface DynUnion extends DynUnionOperations, DynAny, org.omg.CORBA.portable.IDLEntity
 {
 } // interface DynUnion

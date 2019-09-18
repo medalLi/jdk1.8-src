@@ -57,8 +57,8 @@ import sun.corba.EncapsInputStreamFactory;
 * magic.  If scid is not valid, null should be returned.
 */
 interface Handler {
-    ObjectKeyTemplate handle( int magic, int scid,
-        InputStream is, OctetSeqHolder osh ) ;
+    ObjectKeyTemplate handle(int magic, int scid,
+                             InputStream is, OctetSeqHolder osh) ;
 }
 
 /** Singleton used to manufacture ObjectKey and ObjectKeyTemplate

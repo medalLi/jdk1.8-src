@@ -33,7 +33,7 @@ abstract public class ORBidHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.ORBidHelper.id (), "ORBid", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ORBidHelper.id (), "ORBid", __typeCode);
     }
     return __typeCode;
   }

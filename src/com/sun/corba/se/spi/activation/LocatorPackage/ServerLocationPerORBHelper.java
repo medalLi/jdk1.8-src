@@ -12,7 +12,7 @@ abstract public class ServerLocationPerORBHelper
 {
   private static String  _id = "IDL:activation/Locator/ServerLocationPerORB:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB that)
+  public static void insert (org.omg.CORBA.Any a, ServerLocationPerORB that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ServerLocationPerORBHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB extract (org.omg.CORBA.Any a)
+  public static ServerLocationPerORB extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -54,7 +54,7 @@ abstract public class ServerLocationPerORBHelper
             "ports",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORBHelper.id (), "ServerLocationPerORB", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (ServerLocationPerORBHelper.id (), "ServerLocationPerORB", _members0);
           __active = false;
         }
       }
@@ -67,15 +67,15 @@ abstract public class ServerLocationPerORBHelper
     return _id;
   }
 
-  public static com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB read (org.omg.CORBA.portable.InputStream istream)
+  public static ServerLocationPerORB read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB value = new com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB ();
+    ServerLocationPerORB value = new ServerLocationPerORB ();
     value.hostname = istream.read_string ();
     value.ports = com.sun.corba.se.spi.activation.EndpointInfoListHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServerLocationPerORB value)
   {
     ostream.write_string (value.hostname);
     com.sun.corba.se.spi.activation.EndpointInfoListHelper.write (ostream, value.ports);

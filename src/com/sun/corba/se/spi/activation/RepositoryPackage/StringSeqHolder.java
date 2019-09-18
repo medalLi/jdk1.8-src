@@ -23,17 +23,17 @@ public final class StringSeqHolder implements org.omg.CORBA.portable.Streamable
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = com.sun.corba.se.spi.activation.RepositoryPackage.StringSeqHelper.read (i);
+    value = StringSeqHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    com.sun.corba.se.spi.activation.RepositoryPackage.StringSeqHelper.write (o, value);
+    StringSeqHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return com.sun.corba.se.spi.activation.RepositoryPackage.StringSeqHelper.type ();
+    return StringSeqHelper.type ();
   }
 
 }

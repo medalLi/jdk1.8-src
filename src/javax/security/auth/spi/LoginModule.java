@@ -123,8 +123,8 @@ import java.util.Map;
  * no arguments.  This allows classes which load the {@code LoginModule}
  * to instantiate it.
  *
- * @see javax.security.auth.login.LoginContext
- * @see javax.security.auth.login.Configuration
+ * @see LoginContext
+ * @see Configuration
  */
 public interface LoginModule {
 
@@ -154,8 +154,8 @@ public interface LoginModule {
      *                  {@code LoginModule}.
      */
     void initialize(Subject subject, CallbackHandler callbackHandler,
-                    Map<String,?> sharedState,
-                    Map<String,?> options);
+                    Map<String, ?> sharedState,
+                    Map<String, ?> options);
 
     /**
      * Method to authenticate a {@code Subject} (phase 1).

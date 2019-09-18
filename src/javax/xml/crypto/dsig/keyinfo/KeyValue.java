@@ -79,10 +79,10 @@ import javax.xml.crypto.XMLStructure;
  * A <code>KeyValue</code> instance may be created by invoking the
  * {@link KeyInfoFactory#newKeyValue newKeyValue} method of the
  * {@link KeyInfoFactory} class, and passing it a {@link
- * java.security.PublicKey} representing the value of the public key. Here is
+ * PublicKey} representing the value of the public key. Here is
  * an example of creating a <code>KeyValue</code> from a {@link DSAPublicKey}
  * of a {@link java.security.cert.Certificate} stored in a
- * {@link java.security.KeyStore}:
+ * {@link KeyStore}:
  * <pre>
  * KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
  * PublicKey dsaPublicKey = keyStore.getCertificate("myDSASigningCert").getPublicKey();

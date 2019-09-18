@@ -65,7 +65,7 @@ import java.security.*;
  * <p>Note: Some earlier implementations of this interface may not support
  * larger sizes of DSA parameters such as 2048 and 3072-bit.
  *
- * @see java.security.KeyPairGenerator
+ * @see KeyPairGenerator
  */
 public interface DSAKeyPairGenerator {
 

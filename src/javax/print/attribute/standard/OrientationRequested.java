@@ -166,7 +166,7 @@ public final class OrientationRequested extends EnumSyntax
      * category is class OrientationRequested itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return OrientationRequested.class;

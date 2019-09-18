@@ -106,7 +106,7 @@ import javax.swing.SortOrder;
  * @param <I> the type of the identifier passed to the <code>RowFilter</code>
  * @see javax.swing.table.TableRowSorter
  * @see javax.swing.table.DefaultTableModel
- * @see java.text.Collator
+ * @see Collator
  * @since 1.6
  */
 public abstract class DefaultRowSorter<M, I> extends RowSorter<M> {

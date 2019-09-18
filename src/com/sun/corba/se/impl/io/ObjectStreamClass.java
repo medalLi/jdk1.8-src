@@ -75,7 +75,7 @@ import sun.corba.Bridge;
  * @author  Roger Riggs
  * @since   JDK1.1
  */
-public class ObjectStreamClass implements java.io.Serializable {
+public class ObjectStreamClass implements Serializable {
     private static final boolean DEBUG_SVUID = false ;
 
     public static final long kDefaultUID = -1;
@@ -186,7 +186,7 @@ public class ObjectStreamClass implements java.io.Serializable {
      * that have evolved from a common root class and agree to be serialized
      * and deserialized using a common format.
      */
-    public static final long getSerialVersionUID( java.lang.Class<?> clazz) {
+    public static final long getSerialVersionUID( Class<?> clazz) {
         ObjectStreamClass theosc = ObjectStreamClass.lookup( clazz );
         if( theosc != null )
         {
@@ -220,7 +220,7 @@ public class ObjectStreamClass implements java.io.Serializable {
     /**
      * Return the actual (computed) serialVersionUID for this class.
      */
-    public static final long getActualSerialVersionUID( java.lang.Class<?> clazz )
+    public static final long getActualSerialVersionUID( Class<?> clazz )
     {
         ObjectStreamClass theosc = ObjectStreamClass.lookup( clazz );
         if( theosc != null )
@@ -350,7 +350,7 @@ public class ObjectStreamClass implements java.io.Serializable {
      * Create a new ObjectStreamClass from a loaded class.
      * Don't call this directly, call lookup instead.
      */
-    private ObjectStreamClass(java.lang.Class<?> cl, ObjectStreamClass superdesc,
+    private ObjectStreamClass(Class<?> cl, ObjectStreamClass superdesc,
                               boolean serial, boolean extern)
     {
         ofClass = cl;           /* created from this class */
@@ -1234,18 +1234,18 @@ public class ObjectStreamClass implements java.io.Serializable {
         return h;
     }
 
-    private static long computeStructuralUID(com.sun.corba.se.impl.io.ObjectStreamClass osc, Class<?> cl) {
+    private static long computeStructuralUID(ObjectStreamClass osc, Class<?> cl) {
         ByteArrayOutputStream devnull = new ByteArrayOutputStream(512);
 
         long h = 0;
         try {
 
-            if ((!java.io.Serializable.class.isAssignableFrom(cl)) ||
+            if ((!Serializable.class.isAssignableFrom(cl)) ||
                 (cl.isInterface())){
                 return 0;
             }
 
-            if (java.io.Externalizable.class.isAssignableFrom(cl)) {
+            if (Externalizable.class.isAssignableFrom(cl)) {
                 return 1;
             }
 

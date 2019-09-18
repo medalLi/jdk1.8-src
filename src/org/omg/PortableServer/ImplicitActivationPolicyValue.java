@@ -22,19 +22,19 @@ public class ImplicitActivationPolicyValue implements org.omg.CORBA.portable.IDL
 {
   private        int __value;
   private static int __size = 2;
-  private static org.omg.PortableServer.ImplicitActivationPolicyValue[] __array = new org.omg.PortableServer.ImplicitActivationPolicyValue [__size];
+  private static ImplicitActivationPolicyValue[] __array = new ImplicitActivationPolicyValue [__size];
 
   public static final int _IMPLICIT_ACTIVATION = 0;
-  public static final org.omg.PortableServer.ImplicitActivationPolicyValue IMPLICIT_ACTIVATION = new org.omg.PortableServer.ImplicitActivationPolicyValue(_IMPLICIT_ACTIVATION);
+  public static final ImplicitActivationPolicyValue IMPLICIT_ACTIVATION = new ImplicitActivationPolicyValue(_IMPLICIT_ACTIVATION);
   public static final int _NO_IMPLICIT_ACTIVATION = 1;
-  public static final org.omg.PortableServer.ImplicitActivationPolicyValue NO_IMPLICIT_ACTIVATION = new org.omg.PortableServer.ImplicitActivationPolicyValue(_NO_IMPLICIT_ACTIVATION);
+  public static final ImplicitActivationPolicyValue NO_IMPLICIT_ACTIVATION = new ImplicitActivationPolicyValue(_NO_IMPLICIT_ACTIVATION);
 
   public int value ()
   {
     return __value;
   }
 
-  public static org.omg.PortableServer.ImplicitActivationPolicyValue from_int (int value)
+  public static ImplicitActivationPolicyValue from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

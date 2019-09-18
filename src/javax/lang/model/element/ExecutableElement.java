@@ -70,8 +70,8 @@ public interface ExecutableElement extends Element, Parameterizable {
 
     /**
      * Returns the receiver type of this executable,
-     * or {@link javax.lang.model.type.NoType NoType} with
-     * kind {@link javax.lang.model.type.TypeKind#NONE NONE}
+     * or {@link NoType NoType} with
+     * kind {@link TypeKind#NONE NONE}
      * if the executable has no receiver type.
      *
      * An executable which is an instance method, or a constructor of an

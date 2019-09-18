@@ -188,7 +188,7 @@ public class CorbaClientDelegateImpl extends CorbaClientDelegate
                 throw wrapper.noInterfaceDefStub( ex ) ;
             }
 
-            org.omg.CORBA.portable.Delegate del =
+            Delegate del =
                 StubAdapter.getDelegate( objimpl ) ;
             StubAdapter.setDelegate( stub, del ) ;
         } catch (ApplicationException e) {
@@ -307,7 +307,7 @@ public class CorbaClientDelegateImpl extends CorbaClientDelegate
      * This method overrides the org.omg.CORBA.portable.Delegate.equals method,
      * and does the equality check based on IOR equality.
      */
-    public boolean equals(org.omg.CORBA.Object self, java.lang.Object other)
+    public boolean equals(org.omg.CORBA.Object self, Object other)
     {
         if (other == null)
             return false ;

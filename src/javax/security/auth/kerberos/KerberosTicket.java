@@ -61,7 +61,7 @@ import sun.security.util.*;
  * application depends on the default JGSS Kerberos mechanism to access the
  * KerberosTicket. In that case, however, the application will need an
  * appropriate
- * {@link javax.security.auth.kerberos.ServicePermission ServicePermission}.
+ * {@link ServicePermission ServicePermission}.
  * <p>
  * Note that this class is applicable to both ticket granting tickets and
  * other regular service tickets. A ticket granting ticket is just a
@@ -77,7 +77,7 @@ import sun.security.util.*;
  * @since 1.4
  */
 public class KerberosTicket implements Destroyable, Refreshable,
-         java.io.Serializable {
+         Serializable {
 
     private static final long serialVersionUID = 7395334370157380539L;
 
@@ -459,7 +459,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
      * @return the time that the client was authenticated
      *         or null if not set.
      */
-    public final java.util.Date getAuthTime() {
+    public final Date getAuthTime() {
         return (authTime == null) ? null : (Date)authTime.clone();
     }
 
@@ -469,7 +469,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
      * @return the start time for this ticket's validity period
      *         or null if not set.
      */
-    public final java.util.Date getStartTime() {
+    public final Date getStartTime() {
         return (startTime == null) ? null : (Date)startTime.clone();
     }
 
@@ -478,7 +478,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
      *
      * @return the expiration time for this ticket's validity period.
      */
-    public final java.util.Date getEndTime() {
+    public final Date getEndTime() {
         return (Date) endTime.clone();
     }
 
@@ -488,7 +488,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
      *
      * @return the latest expiration time for this ticket.
      */
-    public final java.util.Date getRenewTill() {
+    public final Date getRenewTill() {
         return (renewTill == null) ? null: (Date)renewTill.clone();
     }
 
@@ -498,7 +498,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
      * @return ths list of addresses or null, if the field was not
      * provided.
      */
-    public final java.net.InetAddress[] getClientAddresses() {
+    public final InetAddress[] getClientAddresses() {
         return (clientAddresses == null) ? null: clientAddresses.clone();
     }
 
@@ -567,7 +567,7 @@ public class KerberosTicket implements Destroyable, Refreshable,
             krb5Creds = krb5Creds.renew();
         } catch (sun.security.krb5.KrbException krbException) {
             e = krbException;
-        } catch (java.io.IOException ioException) {
+        } catch (IOException ioException) {
             e = ioException;
         }
 

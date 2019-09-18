@@ -75,7 +75,7 @@ import javax.xml.transform.Source;
  * @see EventFilter
  * @see XMLReporter
  * @see XMLResolver
- * @see javax.xml.stream.util.XMLEventAllocator
+ * @see XMLEventAllocator
  * @since 1.6
  */
 
@@ -175,9 +175,9 @@ public abstract class XMLInputFactory {
    *   Use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to locate and load an
    *   implementation of the service using the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism}:
    *   the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -217,7 +217,7 @@ public abstract class XMLInputFactory {
    * @deprecated  This method has been deprecated to maintain API consistency.
    *              All newInstance methods have been replaced with corresponding
    *              newFactory methods. The replacement {@link
-   *              #newFactory(java.lang.String, java.lang.ClassLoader)} method
+   *              #newFactory(String, ClassLoader)} method
    *              defines no changes in behavior.
    */
   public static XMLInputFactory newInstance(String factoryId,
@@ -248,12 +248,12 @@ public abstract class XMLInputFactory {
    *   If {@code factoryId} is "javax.xml.stream.XMLInputFactory",
    *   use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class, java.lang.ClassLoader) locate and load}
+   *   java.util.ServiceLoader#load(Class, ClassLoader) locate and load}
    *   an implementation of the service using the specified {@code ClassLoader}.
    *   If {@code classLoader} is null, the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism} will apply:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism} will apply:
    *   That is, the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -265,7 +265,7 @@ public abstract class XMLInputFactory {
    *
    * <p>
    * Note that this is a new method that replaces the deprecated
-   *   {@link #newInstance(java.lang.String, java.lang.ClassLoader)
+   *   {@link #newInstance(String, ClassLoader)
    *   newInstance(String factoryId, ClassLoader classLoader)} method.
    * No changes in behavior are defined by this replacement method relative
    * to the deprecated method.
@@ -465,18 +465,18 @@ public abstract class XMLInputFactory {
    *        <p>
    *        Access to external DTDs, external Entity References is restricted to the
    *        protocols specified by the property. If access is denied during parsing
-   *        due to the restriction of this property, {@link javax.xml.stream.XMLStreamException}
-   *        will be thrown by the {@link javax.xml.stream.XMLStreamReader#next()} or
-   *        {@link javax.xml.stream.XMLEventReader#nextEvent()} method.
+   *        due to the restriction of this property, {@link XMLStreamException}
+   *        will be thrown by the {@link XMLStreamReader#next()} or
+   *        {@link XMLEventReader#nextEvent()} method.
    *        </p>
    *   </li>
    * </ul>
    * @param name The name of the property (may not be null)
    * @param value The value of the property
-   * @throws java.lang.IllegalArgumentException if the property is not supported
+   * @throws IllegalArgumentException if the property is not supported
    */
-  public abstract void setProperty(java.lang.String name, Object value)
-    throws java.lang.IllegalArgumentException;
+  public abstract void setProperty(String name, Object value)
+    throws IllegalArgumentException;
 
   /**
    * Get the value of a feature/property from the underlying implementation
@@ -484,8 +484,8 @@ public abstract class XMLInputFactory {
    * @return The value of the property
    * @throws IllegalArgumentException if the property is not supported
    */
-  public abstract Object getProperty(java.lang.String name)
-    throws java.lang.IllegalArgumentException;
+  public abstract Object getProperty(String name)
+    throws IllegalArgumentException;
 
 
   /**

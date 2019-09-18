@@ -72,7 +72,7 @@ import com.sun.corba.se.impl.logging.UtilSystemException ;
  */
 
 public class IIOPOutputStream
-    extends com.sun.corba.se.impl.io.OutputStreamHook
+    extends OutputStreamHook
 {
     private UtilSystemException wrapper = UtilSystemException.get(
         CORBALogDomains.RPC_ENCODING ) ;
@@ -98,13 +98,13 @@ public class IIOPOutputStream
 
     private IOException abortIOException = null;
 
-    private java.util.Stack classDescStack = new java.util.Stack();
+    private Stack classDescStack = new Stack();
 
     // Used when calling an object's writeObject method
     private Object[] writeObjectArgList = {this};
 
     public IIOPOutputStream()
-        throws java.io.IOException
+        throws IOException
    {
         super();
     }
@@ -286,7 +286,7 @@ public class IIOPOutputStream
             abortIOException = null;
 
             if (classDescStack == null)
-                classDescStack = new java.util.Stack();
+                classDescStack = new Stack();
             else
                 classDescStack.setSize(0);
 
@@ -465,7 +465,7 @@ public class IIOPOutputStream
      * in orbutil.IIOPInputStream_1_3 in order to interoperate with
      * our legacy ORBs.
      */
-    protected void internalWriteUTF(org.omg.CORBA.portable.OutputStream stream,
+    protected void internalWriteUTF(OutputStream stream,
                                     String data)
     {
         stream.write_wstring(data);
@@ -513,7 +513,7 @@ public class IIOPOutputStream
         throws IOException
     {
         if (obj instanceof String) {
-            orbStream.write_value((java.io.Serializable)obj);
+            orbStream.write_value((Serializable)obj);
             return true;
         }
 
@@ -702,7 +702,7 @@ public class IIOPOutputStream
                                   Object objectValue) throws IOException {
 
         if (ObjectStreamClassCorbaExt.isAny(field.getTypeString())) {
-            javax.rmi.CORBA.Util.writeAny(orbStream, objectValue);
+            Util.writeAny(orbStream, objectValue);
         }
         else {
             Class type = field.getType();
@@ -740,10 +740,10 @@ public class IIOPOutputStream
                 break;
             case ValueHandlerImpl.kValueType:
                 try{
-                    orbStream.write_value((java.io.Serializable)objectValue, type);
+                    orbStream.write_value((Serializable)objectValue, type);
                 }
                 catch(ClassCastException cce){
-                    if (objectValue instanceof java.io.Serializable)
+                    if (objectValue instanceof Serializable)
                         throw cce;
                     else
                         Utility.throwNotSerializableForCorba(objectValue.getClass().getName());

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.io.Serializable ;
 import java.io.Externalizable ;
@@ -62,9 +62,9 @@ public class ExceptionHandlerImpl implements ExceptionHandler
 
         String getId() ;
 
-        void write( OutputStream os, Exception ex ) ;
+        void write(OutputStream os, Exception ex) ;
 
-        Exception read( InputStream is ) ;
+        Exception read(InputStream is) ;
     }
 
     public abstract class ExceptionRWBase implements ExceptionRW

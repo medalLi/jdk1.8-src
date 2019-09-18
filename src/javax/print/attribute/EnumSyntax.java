@@ -181,8 +181,8 @@ public abstract class EnumSyntax implements Serializable, Cloneable {
      *     value's integer value does not correspond to an element in the
      *     enumeration value table, or the corresponding element in the
      *     enumeration value table is null. (Note: {@link
-     *     java.io.InvalidObjectException InvalidObjectException} is a subclass
-     *     of {@link java.io.ObjectStreamException ObjectStreamException}, which
+     *     InvalidObjectException InvalidObjectException} is a subclass
+     *     of {@link ObjectStreamException ObjectStreamException}, which
      *     <CODE>readResolve()</CODE> is declared to throw.)
      */
     protected Object readResolve() throws ObjectStreamException {

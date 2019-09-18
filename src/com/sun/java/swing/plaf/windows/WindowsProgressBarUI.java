@@ -72,7 +72,7 @@ public class WindowsProgressBarUI extends BasicProgressBarUI
      *
      * @throws NullPointerException {@inheritDoc}
      * @throws IllegalArgumentException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public int getBaseline(JComponent c, int width, int height) {
@@ -377,7 +377,7 @@ public class WindowsProgressBarUI extends BasicProgressBarUI
         gfx.clip(repaintArea);
 
         // get the skin
-        XPStyle.Skin skin = xp.getSkin(progressBar, chunk);
+        Skin skin = xp.getSkin(progressBar, chunk);
 
         // do the drawing
         gfx.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));

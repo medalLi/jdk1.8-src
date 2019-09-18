@@ -47,8 +47,8 @@ class InnerShadowEffect extends ShadowEffect {
      *
      * @return The effect type
      */
-    Effect.EffectType getEffectType() {
-        return Effect.EffectType.OVER;
+    EffectType getEffectType() {
+        return EffectType.OVER;
     }
 
     /**

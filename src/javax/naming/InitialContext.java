@@ -333,7 +333,7 @@ public class InitialContext implements Context {
      *         initial context. The result cannot be null.
      * @exception NoInitialContextException If cannot find an initial context.
      * @exception NamingException In a naming exception is encountered.
-     * @see javax.naming.spi.NamingManager#getURLContext
+     * @see NamingManager#getURLContext
      */
     protected Context getURLOrDefaultInitCtx(String name)
         throws NamingException {
@@ -390,7 +390,7 @@ public class InitialContext implements Context {
      * @exception NoInitialContextException If cannot find an initial context.
      * @exception NamingException In a naming exception is encountered.
      *
-     * @see javax.naming.spi.NamingManager#getURLContext
+     * @see NamingManager#getURLContext
      */
     protected Context getURLOrDefaultInitCtx(Name name)
         throws NamingException {

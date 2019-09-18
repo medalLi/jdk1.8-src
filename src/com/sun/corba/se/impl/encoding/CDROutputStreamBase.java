@@ -95,10 +95,10 @@ abstract class CDROutputStreamBase extends java.io.OutputStream
     public abstract void write_TypeCode(TypeCode value);
     public abstract void write_any(Any value);
     public abstract void write_Principal(Principal value);
-    public void write(int b) throws java.io.IOException {
+    public void write(int b) throws IOException {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
-    public abstract void write_fixed(java.math.BigDecimal value);
+    public abstract void write_fixed(BigDecimal value);
     public void write_Context(org.omg.CORBA.Context ctx,
                               org.omg.CORBA.ContextList contexts) {
         throw new org.omg.CORBA.NO_IMPLEMENT();
@@ -107,12 +107,12 @@ abstract class CDROutputStreamBase extends java.io.OutputStream
     public abstract org.omg.CORBA.ORB orb();
 
     // org.omg.CORBA_2_3.portable.OutputStream
-    public abstract void write_value(java.io.Serializable value);
-    public abstract void write_value(java.io.Serializable value, java.lang.Class clz);
-    public abstract void write_value(java.io.Serializable value, String repository_id);
-    public abstract void write_value(java.io.Serializable value,
+    public abstract void write_value(Serializable value);
+    public abstract void write_value(Serializable value, Class clz);
+    public abstract void write_value(Serializable value, String repository_id);
+    public abstract void write_value(Serializable value,
                                      org.omg.CORBA.portable.BoxedValueHelper factory);
-    public abstract void write_abstract_interface(java.lang.Object obj);
+    public abstract void write_abstract_interface(Object obj);
 
     // java.io.OutputStream
 //     public abstract void write(byte b[]) throws IOException;
@@ -129,9 +129,9 @@ abstract class CDROutputStreamBase extends java.io.OutputStream
     public abstract byte[] toByteArray();
 
     // org.omg.CORBA.DataOutputStream
-    public abstract void write_Abstract (java.lang.Object value);
-    public abstract void write_Value (java.io.Serializable value);
-    public abstract void write_any_array(org.omg.CORBA.Any[] seq, int offset, int length);
+    public abstract void write_Abstract (Object value);
+    public abstract void write_Value (Serializable value);
+    public abstract void write_any_array(Any[] seq, int offset, int length);
 
     // org.omg.CORBA.portable.ValueBase
     public abstract String[] _truncatable_ids();
@@ -155,7 +155,7 @@ abstract class CDROutputStreamBase extends java.io.OutputStream
 
     public abstract BufferManagerWrite getBufferManager();
 
-    public abstract void write_fixed(java.math.BigDecimal bigDecimal, short digits, short scale);
+    public abstract void write_fixed(BigDecimal bigDecimal, short digits, short scale);
     public abstract void writeOctetSequenceTo(org.omg.CORBA.portable.OutputStream s);
 
     public abstract GIOPVersion getGIOPVersion();

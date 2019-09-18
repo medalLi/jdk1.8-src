@@ -100,7 +100,7 @@ public final class ValueBaseHolder implements Streamable {
      *
      * @return    the TypeCode of the value held in the holder
      */
-    public org.omg.CORBA.TypeCode _type() {
+    public TypeCode _type() {
         return ORB.init().get_primitive_tc(TCKind.tk_value);
     }
 

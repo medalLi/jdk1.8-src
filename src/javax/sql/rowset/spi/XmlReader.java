@@ -68,7 +68,7 @@ public interface XmlReader extends RowSetReader {
    *            this <code>XmlReader</code> object is not the reader
    *            for the given rowset
    */
-  public void readXML(WebRowSet caller, java.io.Reader reader)
+  public void readXML(WebRowSet caller, Reader reader)
     throws SQLException;
 
 }

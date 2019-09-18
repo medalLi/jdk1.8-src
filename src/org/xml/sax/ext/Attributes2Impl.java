@@ -148,7 +148,7 @@ public class Attributes2Impl extends AttributesImpl implements Attributes2
      *
      * @param index The attribute index (zero-based).
      * @return current flag value
-     * @exception java.lang.ArrayIndexOutOfBoundsException When the
+     * @exception ArrayIndexOutOfBoundsException When the
      *            supplied index does not identify an attribute.
      */
     public boolean isSpecified (int index)
@@ -167,7 +167,7 @@ public class Attributes2Impl extends AttributesImpl implements Attributes2
      *        the name has no Namespace URI.
      * @param localName The attribute's local name.
      * @return current flag value
-     * @exception java.lang.IllegalArgumentException When the
+     * @exception IllegalArgumentException When the
      *            supplied names do not identify an attribute.
      */
     public boolean isSpecified (String uri, String localName)
@@ -187,7 +187,7 @@ public class Attributes2Impl extends AttributesImpl implements Attributes2
      *
      * @param qName The XML qualified (prefixed) name.
      * @return current flag value
-     * @exception java.lang.IllegalArgumentException When the
+     * @exception IllegalArgumentException When the
      *            supplied name does not identify an attribute.
      */
     public boolean isSpecified (String qName)
@@ -299,7 +299,7 @@ public class Attributes2Impl extends AttributesImpl implements Attributes2
      *
      * @param index The index of the attribute (zero-based).
      * @param value The desired flag value.
-     * @exception java.lang.ArrayIndexOutOfBoundsException When the
+     * @exception ArrayIndexOutOfBoundsException When the
      *            supplied index does not identify an attribute.
      * @see #setType
      */
@@ -319,7 +319,7 @@ public class Attributes2Impl extends AttributesImpl implements Attributes2
      *
      * @param index The index of the attribute (zero-based).
      * @param value The desired flag value.
-     * @exception java.lang.ArrayIndexOutOfBoundsException When the
+     * @exception ArrayIndexOutOfBoundsException When the
      *            supplied index does not identify an attribute.
      */
     public void setSpecified (int index, boolean value)

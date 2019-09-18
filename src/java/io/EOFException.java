@@ -34,8 +34,8 @@ package java.io;
  * end of stream rather than throwing an exception.
  *
  * @author  Frank Yellin
- * @see     java.io.DataInputStream
- * @see     java.io.IOException
+ * @see     DataInputStream
+ * @see     IOException
  * @since   JDK1.0
  */
 public
@@ -53,7 +53,7 @@ class EOFException extends IOException {
     /**
      * Constructs an <code>EOFException</code> with the specified detail
      * message. The string <code>s</code> may later be retrieved by the
-     * <code>{@link java.lang.Throwable#getMessage}</code> method of class
+     * <code>{@link Throwable#getMessage}</code> method of class
      * <code>java.lang.Throwable</code>.
      *
      * @param   s   the detail message.

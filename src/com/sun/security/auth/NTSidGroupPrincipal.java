@@ -38,7 +38,7 @@ package com.sun.security.auth;
  *
  * @see java.security.Principal
  * @see javax.security.auth.Subject
- * @see com.sun.security.auth.NTSid
+ * @see NTSid
  */
 @jdk.Exported
 public class NTSidGroupPrincipal extends NTSid {

@@ -190,8 +190,8 @@ public class Encoder {
      * @return the persistence delegate for the given type
      *
      * @see #setPersistenceDelegate
-     * @see java.beans.Introspector#getBeanInfo
-     * @see java.beans.BeanInfo#getBeanDescriptor
+     * @see Introspector#getBeanInfo
+     * @see BeanInfo#getBeanDescriptor
      */
     public PersistenceDelegate getPersistenceDelegate(Class<?> type) {
         PersistenceDelegate pd = this.finder.find(type);
@@ -211,8 +211,8 @@ public class Encoder {
      * @param delegate  the persistence delegate for instances of the given type
      *
      * @see #getPersistenceDelegate
-     * @see java.beans.Introspector#getBeanInfo
-     * @see java.beans.BeanInfo#getBeanDescriptor
+     * @see Introspector#getBeanInfo
+     * @see BeanInfo#getBeanDescriptor
      */
     public void setPersistenceDelegate(Class<?> type, PersistenceDelegate delegate) {
         this.finder.register(type, delegate);

@@ -12,7 +12,7 @@ abstract public class TaggedComponentHelper
 {
   private static String  _id = "IDL:omg.org/IOP/TaggedComponent:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.IOP.TaggedComponent that)
+  public static void insert (org.omg.CORBA.Any a, TaggedComponent that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class TaggedComponentHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.IOP.TaggedComponent extract (org.omg.CORBA.Any a)
+  public static TaggedComponent extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -43,7 +43,7 @@ abstract public class TaggedComponentHelper
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [2];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
           _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_ulong);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.IOP.ComponentIdHelper.id (), "ComponentId", _tcOf_members0);
+          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (ComponentIdHelper.id (), "ComponentId", _tcOf_members0);
           _members0[0] = new org.omg.CORBA.StructMember (
             "tag",
             _tcOf_members0,
@@ -54,7 +54,7 @@ abstract public class TaggedComponentHelper
             "component_data",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (org.omg.IOP.TaggedComponentHelper.id (), "TaggedComponent", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (TaggedComponentHelper.id (), "TaggedComponent", _members0);
           __active = false;
         }
       }
@@ -67,9 +67,9 @@ abstract public class TaggedComponentHelper
     return _id;
   }
 
-  public static org.omg.IOP.TaggedComponent read (org.omg.CORBA.portable.InputStream istream)
+  public static TaggedComponent read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.IOP.TaggedComponent value = new org.omg.IOP.TaggedComponent ();
+    TaggedComponent value = new TaggedComponent ();
     value.tag = istream.read_ulong ();
     int _len0 = istream.read_long ();
     value.component_data = new byte[_len0];
@@ -77,7 +77,7 @@ abstract public class TaggedComponentHelper
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.IOP.TaggedComponent value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, TaggedComponent value)
   {
     ostream.write_ulong (value.tag);
     ostream.write_long (value.component_data.length);

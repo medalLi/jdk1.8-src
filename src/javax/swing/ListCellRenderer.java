@@ -108,9 +108,9 @@ public interface ListCellRenderer<E>
      * @see ListModel
      */
     Component getListCellRendererComponent(
-        JList<? extends E> list,
-        E value,
-        int index,
-        boolean isSelected,
-        boolean cellHasFocus);
+            JList<? extends E> list,
+            E value,
+            int index,
+            boolean isSelected,
+            boolean cellHasFocus);
 }

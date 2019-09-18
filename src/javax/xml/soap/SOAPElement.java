@@ -57,7 +57,7 @@ public interface SOAPElement extends Node, org.w3c.dom.Element {
      * @return the new <code>SOAPElement</code> object that was created
      * @exception SOAPException if there is an error in creating the
      *                          <code>SOAPElement</code> object
-     * @see SOAPElement#addChildElement(javax.xml.namespace.QName)
+     * @see SOAPElement#addChildElement(QName)
      */
     public SOAPElement addChildElement(Name name) throws SOAPException;
 
@@ -205,7 +205,7 @@ public interface SOAPElement extends Node, org.w3c.dom.Element {
      *                          Attribute, or it is invalid to set
                                 an attribute with <code>Name</code>
                                  <code>name</code> on this SOAPElement.
-     * @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
+     * @see SOAPElement#addAttribute(QName, String)
      */
     public SOAPElement addAttribute(Name name, String value)
         throws SOAPException;
@@ -250,7 +250,7 @@ public interface SOAPElement extends Node, org.w3c.dom.Element {
      * @param name a <code>Name</code> object with the name of the attribute
      * @return a <code>String</code> giving the value of the specified
      *         attribute, Null if there is no such attribute
-     * @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
+     * @see SOAPElement#getAttributeValue(QName)
      */
     public String getAttributeValue(Name name);
 
@@ -397,7 +397,7 @@ public interface SOAPElement extends Node, org.w3c.dom.Element {
      *        attribute to be removed
      * @return <code>true</code> if the attribute was
      *         removed successfully; <code>false</code> if it was not
-     * @see SOAPElement#removeAttribute(javax.xml.namespace.QName)
+     * @see SOAPElement#removeAttribute(QName)
      */
     public boolean removeAttribute(Name name);
 
@@ -468,7 +468,7 @@ public interface SOAPElement extends Node, org.w3c.dom.Element {
      * @return an <code>Iterator</code> object over all the elements
      *         in this <code>SOAPElement</code> object with the
      *         specified name
-     * @see SOAPElement#getChildElements(javax.xml.namespace.QName)
+     * @see SOAPElement#getChildElements(QName)
      */
     public Iterator getChildElements(Name name);
 

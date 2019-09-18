@@ -60,7 +60,7 @@ public class MenuDragMouseEvent extends MouseEvent {
      * @param source        the Component that originated the event
      *                      (typically <code>this</code>)
      * @param id            an int specifying the type of event, as defined
-     *                      in {@link java.awt.event.MouseEvent}
+     *                      in {@link MouseEvent}
      * @param when          a long identifying the time the event occurred
      * @param modifiers     an int specifying any modifier keys held down,
      *                      as specified in {@link java.awt.event.InputEvent}
@@ -74,7 +74,7 @@ public class MenuDragMouseEvent extends MouseEvent {
      * @param p             an array of MenuElement objects specifying a path
      *                        to a menu item affected by the drag
      * @param m             a MenuSelectionManager object that handles selections
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
      */
     public MenuDragMouseEvent(Component source, int id, long when,
                               int modifiers, int x, int y, int clickCount,
@@ -93,7 +93,7 @@ public class MenuDragMouseEvent extends MouseEvent {
      * @param source        the Component that originated the event
      *                      (typically <code>this</code>)
      * @param id            an int specifying the type of event, as defined
-     *                      in {@link java.awt.event.MouseEvent}
+     *                      in {@link MouseEvent}
      * @param when          a long identifying the time the event occurred
      * @param modifiers     an int specifying any modifier keys held down,
      *                      as specified in {@link java.awt.event.InputEvent}
@@ -111,7 +111,7 @@ public class MenuDragMouseEvent extends MouseEvent {
      * @param p             an array of MenuElement objects specifying a path
      *                        to a menu item affected by the drag
      * @param m             a MenuSelectionManager object that handles selections
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
      * @since 1.6
      */
     public MenuDragMouseEvent(Component source, int id, long when,

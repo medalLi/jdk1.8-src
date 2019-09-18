@@ -49,7 +49,7 @@ import javax.imageio.stream.ImageInputStream;
  * and used transparently by applications.
  *
  * @see IIORegistry
- * @see javax.imageio.stream.ImageInputStream
+ * @see ImageInputStream
  *
  */
 public abstract class ImageInputStreamSpi extends IIOServiceProvider {

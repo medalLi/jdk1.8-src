@@ -85,9 +85,9 @@ import sun.security.util.SecurityConstants;
  * directory it's in (or a subdirectory of that directory); it does not
  * need explicit permission to do so.
  *
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
  *
  *
  * @author Marianne Mueller
@@ -686,9 +686,9 @@ public final class FilePermission extends Permission implements Serializable {
  * take into account both the /tmp/- and /tmp/scratch/foo
  * permissions, so the effective permission is "read,write".
  *
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
  *
  *
  * @author Marianne Mueller

@@ -29,7 +29,7 @@ package java.util;
  * wants to be informed of changes in observable objects.
  *
  * @author  Chris Warth
- * @see     java.util.Observable
+ * @see     Observable
  * @since   JDK1.0
  */
 public interface Observer {

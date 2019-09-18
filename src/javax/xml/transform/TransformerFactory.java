@@ -27,8 +27,8 @@ package javax.xml.transform;
 
 /**
  * <p>A TransformerFactory instance can be used to create
- * {@link javax.xml.transform.Transformer} and
- * {@link javax.xml.transform.Templates} objects.</p>
+ * {@link Transformer} and
+ * {@link Templates} objects.</p>
  *
  * <p>The system property that determines which Factory implementation
  * to create is named <code>"javax.xml.transform.TransformerFactory"</code>.
@@ -78,9 +78,9 @@ public abstract class TransformerFactory {
      *   Use the service-provider loading facilities, defined by the
      *   {@link java.util.ServiceLoader} class, to attempt to locate and load an
      *   implementation of the service using the {@linkplain
-     *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+     *   java.util.ServiceLoader#load(Class) default loading mechanism}:
      *   the service-provider loading facility will use the {@linkplain
-     *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+     *   Thread#getContextClassLoader() current thread's context class loader}
      *   to attempt to load the service. If the context class
      *   loader is null, the {@linkplain
      *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -342,15 +342,15 @@ public abstract class TransformerFactory {
      *      Access to external DTDs in the source file is restricted to the protocols
      *      specified by the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD} property.
      *      If access is denied during transformation due to the restriction of this property,
-     *      {@link javax.xml.transform.TransformerException} will be thrown by
-     *      {@link javax.xml.transform.Transformer#transform(Source, Result)}.
+     *      {@link TransformerException} will be thrown by
+     *      {@link Transformer#transform(Source, Result)}.
      *      </p>
      *      <p>
      *      Access to external DTDs in the stylesheet is restricted to the protocols
      *      specified by the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD} property.
      *      If access is denied during the creation of a new transformer due to the
      *      restriction of this property,
-     *      {@link javax.xml.transform.TransformerConfigurationException} will be thrown
+     *      {@link TransformerConfigurationException} will be thrown
      *      by the {@link #newTransformer(Source)} method.
      *      </p>
      *      <p>
@@ -359,15 +359,15 @@ public abstract class TransformerFactory {
      *      {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_STYLESHEET} property.
      *      If access is denied during the creation of a new transformer due to the
      *      restriction of this property,
-     *      {@link javax.xml.transform.TransformerConfigurationException} will be thrown
+     *      {@link TransformerConfigurationException} will be thrown
      *      by the {@link #newTransformer(Source)} method.
      *      </p>
      *      <p>
      *      Access to external document through XSLT document function is restricted
      *      to the protocols specified by the property. If access is denied during
      *      the transformation due to the restriction of this property,
-     *      {@link javax.xml.transform.TransformerException} will be thrown by the
-     *      {@link javax.xml.transform.Transformer#transform(Source, Result)} method.
+     *      {@link TransformerException} will be thrown by the
+     *      {@link Transformer#transform(Source, Result)} method.
      *      </p>
      *   </li>
      * </ul>

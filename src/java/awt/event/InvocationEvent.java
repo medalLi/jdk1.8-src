@@ -49,7 +49,7 @@ import java.awt.AWTEvent;
  * @author      Fred Ecks
  * @author      David Mendenhall
  *
- * @see         java.awt.ActiveEvent
+ * @see         ActiveEvent
  * @see         java.awt.EventQueue#invokeLater
  * @see         java.awt.EventQueue#invokeAndWait
  * @see         AWTEventListener

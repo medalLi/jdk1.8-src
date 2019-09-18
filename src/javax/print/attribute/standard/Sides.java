@@ -201,7 +201,7 @@ public final class Sides extends EnumSyntax
      * For class Sides, the category is class Sides itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return Sides.class;

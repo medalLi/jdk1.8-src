@@ -47,7 +47,7 @@ public interface MBeanServerConnection {
      * Repository} to load the class of the MBean.  An object name is
      * associated with the MBean.  If the object name given is null, the
      * MBean must provide its own name by implementing the {@link
-     * javax.management.MBeanRegistration MBeanRegistration} interface
+     * MBeanRegistration MBeanRegistration} interface
      * and returning the name from the {@link
      * MBeanRegistration#preRegister preRegister} method.</p>
      *
@@ -106,7 +106,7 @@ public interface MBeanServerConnection {
      * is specified for the MBean.
      * @exception IOException A communication problem occurred when
      * talking to the MBean server.
-     * @see javax.management.MBeanRegistration
+     * @see MBeanRegistration
      */
     public ObjectInstance createMBean(String className, ObjectName name)
             throws ReflectionException, InstanceAlreadyExistsException,
@@ -120,7 +120,7 @@ public interface MBeanServerConnection {
      * the loader is null, the ClassLoader that loaded the MBean
      * server will be used.  If the MBean's object name given is null,
      * the MBean must provide its own name by implementing the {@link
-     * javax.management.MBeanRegistration MBeanRegistration} interface
+     * MBeanRegistration MBeanRegistration} interface
      * and returning the name from the {@link
      * MBeanRegistration#preRegister preRegister} method.</p>
      *
@@ -182,7 +182,7 @@ public interface MBeanServerConnection {
      * is specified for the MBean.
      * @exception IOException A communication problem occurred when
      * talking to the MBean server.
-     * @see javax.management.MBeanRegistration
+     * @see MBeanRegistration
      */
     public ObjectInstance createMBean(String className, ObjectName name,
                                       ObjectName loaderName)
@@ -199,7 +199,7 @@ public interface MBeanServerConnection {
      * Repository} to load the class of the MBean.  An object name is
      * associated with the MBean.  If the object name given is null, the
      * MBean must provide its own name by implementing the {@link
-     * javax.management.MBeanRegistration MBeanRegistration} interface
+     * MBeanRegistration MBeanRegistration} interface
      * and returning the name from the {@link
      * MBeanRegistration#preRegister preRegister} method.
      *
@@ -257,7 +257,7 @@ public interface MBeanServerConnection {
      * is specified for the MBean.
      * @exception IOException A communication problem occurred when
      * talking to the MBean server.
-     * @see javax.management.MBeanRegistration
+     * @see MBeanRegistration
      */
     public ObjectInstance createMBean(String className, ObjectName name,
                                       Object params[], String signature[])
@@ -272,7 +272,7 @@ public interface MBeanServerConnection {
      * the loader is not specified, the ClassLoader that loaded the
      * MBean server will be used.  If the MBean object name given is
      * null, the MBean must provide its own name by implementing the
-     * {@link javax.management.MBeanRegistration MBeanRegistration}
+     * {@link MBeanRegistration MBeanRegistration}
      * interface and returning the name from the {@link
      * MBeanRegistration#preRegister preRegister} method.
      *
@@ -333,7 +333,7 @@ public interface MBeanServerConnection {
      * is specified for the MBean.
      * @exception IOException A communication problem occurred when
      * talking to the MBean server.
-     * @see javax.management.MBeanRegistration
+     * @see MBeanRegistration
      */
     public ObjectInstance createMBean(String className, ObjectName name,
                                       ObjectName loaderName, Object params[],
@@ -377,11 +377,11 @@ public interface MBeanServerConnection {
      * @exception RuntimeOperationsException Wraps a
      * <CODE>java.lang.IllegalArgumentException</CODE>: The object
      * name in parameter is null or the MBean you are when trying to
-     * unregister is the {@link javax.management.MBeanServerDelegate
+     * unregister is the {@link MBeanServerDelegate
      * MBeanServerDelegate} MBean.
      * @exception IOException A communication problem occurred when
      * talking to the MBean server.
-     * @see javax.management.MBeanRegistration
+     * @see MBeanRegistration
      */
     public void unregisterMBean(ObjectName name)
             throws InstanceNotFoundException, MBeanRegistrationException,

@@ -181,7 +181,7 @@ public class JMenuItem extends AbstractButton implements Accessible,MenuElement 
      * <code>JMenuItem</code>'s are focusable, but subclasses may
      * want to be, this provides them the opportunity to override this
      * and invoke something else, or nothing at all. Refer to
-     * {@link javax.swing.JMenu#initFocusability} for the motivation of
+     * {@link JMenu#initFocusability} for the motivation of
      * this.
      */
     void initFocusability() {

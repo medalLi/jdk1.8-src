@@ -87,8 +87,8 @@ import javax.swing.*;
  * has been added to the <code>java.beans</code> package.
  * Please see {@link java.beans.XMLEncoder}.
  *
- * @see java.text.Format
- * @see java.lang.Comparable
+ * @see Format
+ * @see Comparable
  *
  * @since 1.4
  */
@@ -458,7 +458,7 @@ public class InternationalFormatter extends DefaultFormatter {
      * <code>id</code>. This will return <code>-1</code> if the attribute
      * can not be found.
      */
-    int getAttributeStart(AttributedCharacterIterator.Attribute id) {
+    int getAttributeStart(Attribute id) {
         if (isValidMask()) {
             AttributedCharacterIterator iterator = getIterator();
 
@@ -831,9 +831,9 @@ public class InternationalFormatter extends DefaultFormatter {
         AttributedCharacterIterator iterator = getIterator();
 
         if (iterator != null &&
-                        (f instanceof AttributedCharacterIterator.Attribute)) {
-            AttributedCharacterIterator.Attribute field =
-                                   (AttributedCharacterIterator.Attribute)f;
+                        (f instanceof Attribute)) {
+            Attribute field =
+                                   (Attribute)f;
 
             iterator.first();
             while (iterator.current() != CharacterIterator.DONE) {
@@ -871,9 +871,9 @@ public class InternationalFormatter extends DefaultFormatter {
         int count = 0;
 
         if (iterator != null &&
-                    (f instanceof AttributedCharacterIterator.Attribute)) {
-            AttributedCharacterIterator.Attribute field =
-                                   (AttributedCharacterIterator.Attribute)f;
+                    (f instanceof Attribute)) {
+            Attribute field =
+                                   (Attribute)f;
 
             iterator.first();
             while (iterator.getIndex() < start) {

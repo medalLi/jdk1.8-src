@@ -54,7 +54,7 @@ import com.sun.corba.se.impl.orbutil.ORBUtility ;
  *  and deactivate().
  */
 
-public class POAManagerImpl extends org.omg.CORBA.LocalObject implements
+public class POAManagerImpl extends LocalObject implements
     POAManager
 {
     private final POAFactory factory ;  // factory which contains global state
@@ -111,7 +111,7 @@ public class POAManagerImpl extends org.omg.CORBA.LocalObject implements
 
             nWaiters++ ;
             wait();
-        } catch ( java.lang.InterruptedException ex ) {
+        } catch ( InterruptedException ex ) {
             // NOP
         } finally {
             nWaiters-- ;
@@ -445,7 +445,7 @@ public class POAManagerImpl extends org.omg.CORBA.LocalObject implements
      * state of the POAManager
      */
 
-    public org.omg.PortableServer.POAManagerPackage.State get_state () {
+    public State get_state () {
         return state;
     }
 

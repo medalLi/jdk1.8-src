@@ -358,7 +358,7 @@ public class BasicScrollPaneUI
      *
      * @throws NullPointerException {@inheritDoc}
      * @throws IllegalArgumentException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public int getBaseline(JComponent c, int width, int height) {
@@ -422,7 +422,7 @@ public class BasicScrollPaneUI
      * changes as the size changes.
      *
      * @throws NullPointerException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public Component.BaselineResizeBehavior getBaselineResizeBehavior(
@@ -526,10 +526,10 @@ public class BasicScrollPaneUI
      * <code>isWheelScrollingEnabled</code>
      * method returns false, no scrolling occurs.
      *
-     * @see javax.swing.JScrollPane#isWheelScrollingEnabled
+     * @see JScrollPane#isWheelScrollingEnabled
      * @see #createMouseWheelListener
-     * @see java.awt.event.MouseWheelListener
-     * @see java.awt.event.MouseWheelEvent
+     * @see MouseWheelListener
+     * @see MouseWheelEvent
      * @since 1.4
      */
     protected class MouseWheelHandler implements MouseWheelListener {
@@ -698,7 +698,7 @@ public class BasicScrollPaneUI
      * }
      * </pre>
      *
-     * @see java.beans.PropertyChangeListener
+     * @see PropertyChangeListener
      * @see #installUI
      */
     protected PropertyChangeListener createPropertyChangeListener() {

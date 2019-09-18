@@ -8,7 +8,7 @@ package com.sun.corba.se.spi.activation;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public class _InitialNameServiceStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.spi.activation.InitialNameService
+public class _InitialNameServiceStub extends org.omg.CORBA.portable.ObjectImpl implements InitialNameService
 {
 
 

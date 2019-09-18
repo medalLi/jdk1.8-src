@@ -57,17 +57,17 @@ public class SAXSource implements Source {
      * no SAX source is set using
      * {@link #setInputSource(InputSource inputSource)} , then the
      * <code>Transformer</code> will
-     * create an empty source {@link org.xml.sax.InputSource} using
-     * {@link org.xml.sax.InputSource#InputSource() new InputSource()}.</p>
+     * create an empty source {@link InputSource} using
+     * {@link InputSource#InputSource() new InputSource()}.</p>
      *
      * @see javax.xml.transform.Transformer#transform(Source xmlSource, Result outputTarget)
      */
     public SAXSource() { }
 
     /**
-     * Create a <code>SAXSource</code>, using an {@link org.xml.sax.XMLReader}
+     * Create a <code>SAXSource</code>, using an {@link XMLReader}
      * and a SAX InputSource. The {@link javax.xml.transform.Transformer}
-     * or {@link javax.xml.transform.sax.SAXTransformerFactory} will set itself
+     * or {@link SAXTransformerFactory} will set itself
      * to be the reader's {@link org.xml.sax.ContentHandler}, and then will call
      * reader.parse(inputSource).
      *
@@ -83,7 +83,7 @@ public class SAXSource implements Source {
     /**
      * Create a <code>SAXSource</code>, using a SAX <code>InputSource</code>.
      * The {@link javax.xml.transform.Transformer} or
-     * {@link javax.xml.transform.sax.SAXTransformerFactory} creates a
+     * {@link SAXTransformerFactory} creates a
      * reader via {@link org.xml.sax.helpers.XMLReaderFactory}
      * (if setXMLReader is not used), sets itself as
      * the reader's {@link org.xml.sax.ContentHandler}, and calls

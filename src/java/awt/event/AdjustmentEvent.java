@@ -50,7 +50,7 @@ import java.lang.annotation.Native;
  *                     <li> {@code TRACK}
  *                     </ul>
  * Assigning the value different from listed above will cause an unspecified behavior.
- * @see java.awt.Adjustable
+ * @see Adjustable
  * @see AdjustmentListener
  *
  * @author Amy Fowler

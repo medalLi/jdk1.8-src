@@ -50,13 +50,13 @@ public interface MenuElement {
      * Note: you do not have to forward the event to sub-components.
      * This is done automatically by the <code>MenuSelectionManager</code>.
      */
-    public void processMouseEvent(MouseEvent event,MenuElement path[],MenuSelectionManager manager);
+    public void processMouseEvent(MouseEvent event, MenuElement path[], MenuSelectionManager manager);
 
 
     /**
      *  Process a key event.
      */
-    public void processKeyEvent(KeyEvent event,MenuElement path[],MenuSelectionManager manager);
+    public void processKeyEvent(KeyEvent event, MenuElement path[], MenuSelectionManager manager);
 
     /**
      * Call by the <code>MenuSelectionManager</code> when the

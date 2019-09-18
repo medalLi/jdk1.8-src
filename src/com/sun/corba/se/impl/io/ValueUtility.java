@@ -136,7 +136,7 @@ public class ValueUtility {
         FullValueDescription result = new FullValueDescription();
         Class className = osc.forClass();
 
-        ValueHandlerImpl vhandler = (com.sun.corba.se.impl.io.ValueHandlerImpl) vh;
+        ValueHandlerImpl vhandler = (ValueHandlerImpl) vh;
         String repId = vhandler.createForAnyType(className);
 
         // Set FVD name
@@ -228,7 +228,7 @@ public class ValueUtility {
                                                    ValueHandler vh,
                                                    IdentityKeyValueStack createdIDs)
     {
-        ValueHandlerImpl vhandler = (com.sun.corba.se.impl.io.ValueHandlerImpl) vh;
+        ValueHandlerImpl vhandler = (ValueHandlerImpl) vh;
         ObjectStreamField fields[] = osc.getFields();
         int fieldsLength = fields.length;
         ValueMember[] members = new ValueMember[fieldsLength];
@@ -328,7 +328,7 @@ public class ValueUtility {
 
     }
 
-    public static TypeCode createTypeCodeForClass (ORB orb, java.lang.Class c, ValueHandler vh) {
+    public static TypeCode createTypeCodeForClass (ORB orb, Class c, ValueHandler vh) {
         // Maps classes to repositoryIDs strings. This is used to detect recursive types.
         IdentityKeyValueStack createdIDs = new IdentityKeyValueStack();
         // Stores all types created for resolving indirect types at the end.
@@ -337,7 +337,7 @@ public class ValueUtility {
     }
 
     private static TypeCode createTypeCodeForClassInternal (ORB orb,
-                                                            java.lang.Class c,
+                                                            Class c,
                                                             ValueHandler vh,
                                                             IdentityKeyValueStack createdIDs)
     {
@@ -400,7 +400,7 @@ public class ValueUtility {
     }
 
     private static TypeCode createTypeCodeInternal (ORB orb,
-                                                    java.lang.Class c,
+                                                    Class c,
                                                     ValueHandler vh,
                                                     String id,
                                                     IdentityKeyValueStack createdIDs)
@@ -420,7 +420,7 @@ public class ValueUtility {
             }
             TypeCode t = orb.create_sequence_tc (0, embeddedType);
             return orb.create_value_box_tc (id, "Sequence", t);
-        } else if ( c == java.lang.String.class ) {
+        } else if ( c == String.class ) {
             // Strings
             TypeCode t = orb.create_string_tc (0);
             return orb.create_value_box_tc (id, "StringValue", t);

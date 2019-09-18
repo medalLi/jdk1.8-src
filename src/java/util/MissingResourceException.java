@@ -42,7 +42,7 @@ package java.util;
 
 /**
  * Signals that a resource is missing.
- * @see java.lang.Exception
+ * @see Exception
  * @see ResourceBundle
  * @author      Mark Davis
  * @since       JDK1.1

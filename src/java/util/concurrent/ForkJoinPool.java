@@ -2384,14 +2384,14 @@ public class ForkJoinPool extends AbstractExecutorService {
 
     /**
      * Creates a {@code ForkJoinPool} with parallelism equal to {@link
-     * java.lang.Runtime#availableProcessors}, using the {@linkplain
+     * Runtime#availableProcessors}, using the {@linkplain
      * #defaultForkJoinWorkerThreadFactory default thread factory},
      * no UncaughtExceptionHandler, and non-async LIFO processing mode.
      *
      * @throws SecurityException if a security manager exists and
      *         the caller is not permitted to modify threads
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")}
+     *         RuntimePermission}{@code ("modifyThread")}
      */
     public ForkJoinPool() {
         this(Math.min(MAX_CAP, Runtime.getRuntime().availableProcessors()),
@@ -2410,7 +2410,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * @throws SecurityException if a security manager exists and
      *         the caller is not permitted to modify threads
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")}
+     *         RuntimePermission}{@code ("modifyThread")}
      */
     public ForkJoinPool(int parallelism) {
         this(parallelism, defaultForkJoinWorkerThreadFactory, null, false);
@@ -2420,7 +2420,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * Creates a {@code ForkJoinPool} with the given parameters.
      *
      * @param parallelism the parallelism level. For default value,
-     * use {@link java.lang.Runtime#availableProcessors}.
+     * use {@link Runtime#availableProcessors}.
      * @param factory the factory for creating new threads. For default value,
      * use {@link #defaultForkJoinWorkerThreadFactory}.
      * @param handler the handler for internal worker threads that
@@ -2438,7 +2438,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * @throws SecurityException if a security manager exists and
      *         the caller is not permitted to modify threads
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")}
+     *         RuntimePermission}{@code ("modifyThread")}
      */
     public ForkJoinPool(int parallelism,
                         ForkJoinWorkerThreadFactory factory,
@@ -2946,7 +2946,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * @throws SecurityException if a security manager exists and
      *         the caller is not permitted to modify threads
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")}
+     *         RuntimePermission}{@code ("modifyThread")}
      */
     public void shutdown() {
         checkPermission();
@@ -2969,7 +2969,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * @throws SecurityException if a security manager exists and
      *         the caller is not permitted to modify threads
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")}
+     *         RuntimePermission}{@code ("modifyThread")}
      */
     public List<Runnable> shutdownNow() {
         checkPermission();

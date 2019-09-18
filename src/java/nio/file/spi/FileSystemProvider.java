@@ -39,7 +39,7 @@ import java.security.PrivilegedAction;
 
 /**
  * Service-provider class for file systems. The methods defined by the {@link
- * java.nio.file.Files} class will typically delegate to an instance of this
+ * Files} class will typically delegate to an instance of this
  * class.
  *
  * <p> A file system provider is a concrete implementation of this class that
@@ -200,7 +200,7 @@ public abstract class FileSystemProvider {
      * <p> This method throws {@link FileSystemAlreadyExistsException} if the
      * file system already exists because it was previously created by an
      * invocation of this method. Once a file system is {@link
-     * java.nio.file.FileSystem#close closed} it is provider-dependent if the
+     * FileSystem#close closed} it is provider-dependent if the
      * provider allows a new file system to be created with the same URI as a
      * file system it previously created.
      *
@@ -240,7 +240,7 @@ public abstract class FileSystemProvider {
      * are undefined (Undefined components are represented by {@code null}).
      *
      * <p> Once a file system created by this provider is {@link
-     * java.nio.file.FileSystem#close closed} it is provider-dependent if this
+     * FileSystem#close closed} it is provider-dependent if this
      * method returns a reference to the closed file system or throws {@link
      * FileSystemNotFoundException}. If the provider allows a new file system to
      * be created with the same URI as a file system it previously created then
@@ -569,7 +569,7 @@ public abstract class FileSystemProvider {
      * Opens a directory, returning a {@code DirectoryStream} to iterate over
      * the entries in the directory. This method works in exactly the manner
      * specified by the {@link
-     * Files#newDirectoryStream(java.nio.file.Path, java.nio.file.DirectoryStream.Filter)}
+     * Files#newDirectoryStream(Path, DirectoryStream.Filter)}
      * method.
      *
      * @param   dir

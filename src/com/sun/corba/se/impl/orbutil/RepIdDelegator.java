@@ -61,7 +61,7 @@ public final class RepIdDelegator
         return RepositoryId.createForJavaType(clz);
     }
 
-    public String createSequenceRepID(java.lang.Object ser) {
+    public String createSequenceRepID(Object ser) {
         return RepositoryId.createSequenceRepID(ser);
     }
 

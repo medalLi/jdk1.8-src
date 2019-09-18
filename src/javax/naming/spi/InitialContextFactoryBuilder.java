@@ -66,6 +66,6 @@ public interface InitialContextFactoryBuilder {
       * @exception NamingException If an initial context factory could not be created.
       */
     public InitialContextFactory
-        createInitialContextFactory(Hashtable<?,?> environment)
+        createInitialContextFactory(Hashtable<?, ?> environment)
         throws NamingException;
 }

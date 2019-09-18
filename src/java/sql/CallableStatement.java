@@ -326,7 +326,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method is called on a closed <code>CallableStatement</code>
      * @see #setDate
      */
-    java.sql.Date getDate(int parameterIndex) throws SQLException;
+    Date getDate(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>TIME</code> parameter as a
@@ -341,7 +341,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method is called on a closed <code>CallableStatement</code>
      * @see #setTime
      */
-    java.sql.Time getTime(int parameterIndex) throws SQLException;
+    Time getTime(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>TIMESTAMP</code> parameter as a
@@ -356,7 +356,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method is called on a closed <code>CallableStatement</code>
      * @see #setTimestamp
      */
-    java.sql.Timestamp getTimestamp(int parameterIndex)
+    Timestamp getTimestamp(int parameterIndex)
         throws SQLException;
 
     //----------------------------------------------------------------------
@@ -425,12 +425,12 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setObject
      * @since 1.2
      */
-    Object getObject(int parameterIndex, java.util.Map<String,Class<?>> map)
+    Object getObject(int parameterIndex, java.util.Map<String, Class<?>> map)
         throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>REF(&lt;structured-type&gt;)</code>
-     * parameter as a {@link java.sql.Ref} object in the Java programming language.
+     * parameter as a {@link Ref} object in the Java programming language.
      * @param parameterIndex the first parameter is 1, the second is 2,
      * and so on
      * @return the parameter value as a <code>Ref</code> object in the
@@ -443,11 +443,11 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.2
      */
-    Ref getRef (int parameterIndex) throws SQLException;
+    Ref getRef(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>BLOB</code> parameter as a
-     * {@link java.sql.Blob} object in the Java programming language.
+     * {@link Blob} object in the Java programming language.
      * @param parameterIndex the first parameter is 1, the second is 2, and so on
      * @return the parameter value as a <code>Blob</code> object in the
      * Java programming language.  If the value was SQL <code>NULL</code>, the value
@@ -459,7 +459,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.2
      */
-    Blob getBlob (int parameterIndex) throws SQLException;
+    Blob getBlob(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>CLOB</code> parameter as a
@@ -476,12 +476,12 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.2
      */
-    Clob getClob (int parameterIndex) throws SQLException;
+    Clob getClob(int parameterIndex) throws SQLException;
 
     /**
      *
      * Retrieves the value of the designated JDBC <code>ARRAY</code> parameter as an
-     * {@link java.sql.Array} object in the Java programming language.
+     * {@link Array} object in the Java programming language.
      * @param parameterIndex the first parameter is 1, the second is 2, and
      * so on
      * @return the parameter value as an <code>Array</code> object in
@@ -494,7 +494,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.2
      */
-    Array getArray (int parameterIndex) throws SQLException;
+    Array getArray(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated JDBC <code>DATE</code> parameter as a
@@ -518,7 +518,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setDate
      * @since 1.2
      */
-    java.sql.Date getDate(int parameterIndex, Calendar cal)
+    Date getDate(int parameterIndex, Calendar cal)
         throws SQLException;
 
     /**
@@ -543,7 +543,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTime
      * @since 1.2
      */
-    java.sql.Time getTime(int parameterIndex, Calendar cal)
+    Time getTime(int parameterIndex, Calendar cal)
         throws SQLException;
 
     /**
@@ -569,7 +569,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTimestamp
      * @since 1.2
      */
-    java.sql.Timestamp getTimestamp(int parameterIndex, Calendar cal)
+    Timestamp getTimestamp(int parameterIndex, Calendar cal)
         throws SQLException;
 
 
@@ -601,7 +601,7 @@ public interface CallableStatement extends PreparedStatement {
      * parameter's registered SQL type.
      *
      * @param parameterIndex the first parameter is 1, the second is 2,...
-     * @param sqlType a value from {@link java.sql.Types}
+     * @param sqlType a value from {@link Types}
      * @param typeName the fully-qualified name of an SQL structured type
      * @exception SQLException if the parameterIndex is not valid;
      * if a database access error occurs or
@@ -616,7 +616,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see Types
      * @since 1.2
      */
-    void registerOutParameter (int parameterIndex, int sqlType, String typeName)
+    void registerOutParameter(int parameterIndex, int sqlType, String typeName)
         throws SQLException;
 
   //--------------------------JDBC 3.0-----------------------------
@@ -721,7 +721,7 @@ public interface CallableStatement extends PreparedStatement {
      * parameter's registered SQL type.
      *
      * @param parameterName the name of the parameter
-     * @param sqlType a value from {@link java.sql.Types}
+     * @param sqlType a value from {@link Types}
      * @param typeName the fully-qualified name of an SQL structured type
      * @exception SQLException if parameterName does not correspond to a named
      * parameter; if a database access error occurs or
@@ -737,7 +737,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see Types
      * @since 1.4
      */
-    void registerOutParameter (String parameterName, int sqlType, String typeName)
+    void registerOutParameter(String parameterName, int sqlType, String typeName)
         throws SQLException;
 
     /**
@@ -987,7 +987,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getDate
      * @since 1.4
      */
-    void setDate(String parameterName, java.sql.Date x)
+    void setDate(String parameterName, Date x)
         throws SQLException;
 
     /**
@@ -1005,7 +1005,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getTime
      * @since 1.4
      */
-    void setTime(String parameterName, java.sql.Time x)
+    void setTime(String parameterName, Time x)
         throws SQLException;
 
     /**
@@ -1024,7 +1024,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getTimestamp
      * @since 1.4
      */
-    void setTimestamp(String parameterName, java.sql.Timestamp x)
+    void setTimestamp(String parameterName, Timestamp x)
         throws SQLException;
 
     /**
@@ -1050,7 +1050,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    void setAsciiStream(String parameterName, java.io.InputStream x, int length)
+    void setAsciiStream(String parameterName, InputStream x, int length)
         throws SQLException;
 
     /**
@@ -1075,7 +1075,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    void setBinaryStream(String parameterName, java.io.InputStream x,
+    void setBinaryStream(String parameterName, InputStream x,
                          int length) throws SQLException;
 
     /**
@@ -1206,7 +1206,7 @@ public interface CallableStatement extends PreparedStatement {
      * @since 1.4
      */
     void setCharacterStream(String parameterName,
-                            java.io.Reader reader,
+                            Reader reader,
                             int length) throws SQLException;
 
     /**
@@ -1231,7 +1231,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getDate
      * @since 1.4
      */
-    void setDate(String parameterName, java.sql.Date x, Calendar cal)
+    void setDate(String parameterName, Date x, Calendar cal)
         throws SQLException;
 
     /**
@@ -1256,7 +1256,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getTime
      * @since 1.4
      */
-    void setTime(String parameterName, java.sql.Time x, Calendar cal)
+    void setTime(String parameterName, Time x, Calendar cal)
         throws SQLException;
 
     /**
@@ -1281,7 +1281,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #getTimestamp
      * @since 1.4
      */
-    void setTimestamp(String parameterName, java.sql.Timestamp x, Calendar cal)
+    void setTimestamp(String parameterName, Timestamp x, Calendar cal)
         throws SQLException;
 
     /**
@@ -1315,7 +1315,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    void setNull (String parameterName, int sqlType, String typeName)
+    void setNull(String parameterName, int sqlType, String typeName)
         throws SQLException;
 
     /**
@@ -1487,7 +1487,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setDate
      * @since 1.4
      */
-    java.sql.Date getDate(String parameterName) throws SQLException;
+    Date getDate(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>TIME</code> parameter as a
@@ -1503,7 +1503,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTime
      * @since 1.4
      */
-    java.sql.Time getTime(String parameterName) throws SQLException;
+    Time getTime(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>TIMESTAMP</code> parameter as a
@@ -1519,7 +1519,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTimestamp
      * @since 1.4
      */
-    java.sql.Timestamp getTimestamp(String parameterName) throws SQLException;
+    Timestamp getTimestamp(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a parameter as an <code>Object</code> in the Java
@@ -1582,12 +1582,12 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setObject
      * @since 1.4
      */
-    Object getObject(String parameterName, java.util.Map<String,Class<?>> map)
+    Object getObject(String parameterName, java.util.Map<String, Class<?>> map)
       throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>REF(&lt;structured-type&gt;)</code>
-     * parameter as a {@link java.sql.Ref} object in the Java programming language.
+     * parameter as a {@link Ref} object in the Java programming language.
      *
      * @param parameterName the name of the parameter
      * @return the parameter value as a <code>Ref</code> object in the
@@ -1600,11 +1600,11 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    Ref getRef (String parameterName) throws SQLException;
+    Ref getRef(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>BLOB</code> parameter as a
-     * {@link java.sql.Blob} object in the Java programming language.
+     * {@link Blob} object in the Java programming language.
      *
      * @param parameterName the name of the parameter
      * @return the parameter value as a <code>Blob</code> object in the
@@ -1617,7 +1617,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    Blob getBlob (String parameterName) throws SQLException;
+    Blob getBlob(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>CLOB</code> parameter as a
@@ -1633,11 +1633,11 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    Clob getClob (String parameterName) throws SQLException;
+    Clob getClob(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>ARRAY</code> parameter as an
-     * {@link java.sql.Array} object in the Java programming language.
+     * {@link Array} object in the Java programming language.
      *
      * @param parameterName the name of the parameter
      * @return the parameter value as an <code>Array</code> object in
@@ -1650,7 +1650,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.4
      */
-    Array getArray (String parameterName) throws SQLException;
+    Array getArray(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of a JDBC <code>DATE</code> parameter as a
@@ -1675,7 +1675,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setDate
      * @since 1.4
      */
-    java.sql.Date getDate(String parameterName, Calendar cal)
+    Date getDate(String parameterName, Calendar cal)
         throws SQLException;
 
     /**
@@ -1701,7 +1701,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTime
      * @since 1.4
      */
-    java.sql.Time getTime(String parameterName, Calendar cal)
+    Time getTime(String parameterName, Calendar cal)
         throws SQLException;
 
     /**
@@ -1728,7 +1728,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see #setTimestamp
      * @since 1.4
      */
-    java.sql.Timestamp getTimestamp(String parameterName, Calendar cal)
+    Timestamp getTimestamp(String parameterName, Calendar cal)
         throws SQLException;
 
     /**
@@ -1953,7 +1953,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    NClob getNClob (int parameterIndex) throws SQLException;
+    NClob getNClob(int parameterIndex) throws SQLException;
 
 
     /**
@@ -1972,7 +1972,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    NClob getNClob (String parameterName) throws SQLException;
+    NClob getNClob(String parameterName) throws SQLException;
 
     /**
      * Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -2090,7 +2090,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    java.io.Reader getNCharacterStream(int parameterIndex) throws SQLException;
+    Reader getNCharacterStream(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated parameter as a
@@ -2110,7 +2110,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    java.io.Reader getNCharacterStream(String parameterName) throws SQLException;
+    Reader getNCharacterStream(String parameterName) throws SQLException;
 
     /**
      * Retrieves the value of the designated parameter as a
@@ -2124,7 +2124,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method is called on a closed <code>CallableStatement</code>
      * @since 1.6
      */
-    java.io.Reader getCharacterStream(int parameterIndex) throws SQLException;
+    Reader getCharacterStream(int parameterIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated parameter as a
@@ -2141,7 +2141,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    java.io.Reader getCharacterStream(String parameterName) throws SQLException;
+    Reader getCharacterStream(String parameterName) throws SQLException;
 
     /**
      * Sets the designated parameter to the given <code>java.sql.Blob</code> object.
@@ -2157,7 +2157,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    void setBlob (String parameterName, Blob x) throws SQLException;
+    void setBlob(String parameterName, Blob x) throws SQLException;
 
     /**
      * Sets the designated parameter to the given <code>java.sql.Clob</code> object.
@@ -2173,7 +2173,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    void setClob (String parameterName, Clob x) throws SQLException;
+    void setClob(String parameterName, Clob x) throws SQLException;
     /**
      * Sets the designated parameter to the given input stream, which will have
      * the specified number of bytes.
@@ -2197,7 +2197,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    void setAsciiStream(String parameterName, java.io.InputStream x, long length)
+    void setAsciiStream(String parameterName, InputStream x, long length)
         throws SQLException;
 
     /**
@@ -2222,7 +2222,7 @@ public interface CallableStatement extends PreparedStatement {
      * this method
      * @since 1.6
      */
-    void setBinaryStream(String parameterName, java.io.InputStream x,
+    void setBinaryStream(String parameterName, InputStream x,
                          long length) throws SQLException;
         /**
      * Sets the designated parameter to the given <code>Reader</code>
@@ -2249,7 +2249,7 @@ public interface CallableStatement extends PreparedStatement {
      * @since 1.6
      */
     void setCharacterStream(String parameterName,
-                            java.io.Reader reader,
+                            Reader reader,
                             long length) throws SQLException;
      //--
     /**
@@ -2275,7 +2275,7 @@ public interface CallableStatement extends PreparedStatement {
      * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
        * @since 1.6
     */
-    void setAsciiStream(String parameterName, java.io.InputStream x)
+    void setAsciiStream(String parameterName, InputStream x)
             throws SQLException;
     /**
      * Sets the designated parameter to the given input stream.
@@ -2299,7 +2299,7 @@ public interface CallableStatement extends PreparedStatement {
      * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
      * @since 1.6
      */
-    void setBinaryStream(String parameterName, java.io.InputStream x)
+    void setBinaryStream(String parameterName, InputStream x)
     throws SQLException;
     /**
      * Sets the designated parameter to the given <code>Reader</code>
@@ -2327,7 +2327,7 @@ public interface CallableStatement extends PreparedStatement {
      * @since 1.6
      */
     void setCharacterStream(String parameterName,
-                          java.io.Reader reader) throws SQLException;
+                            Reader reader) throws SQLException;
   /**
      * Sets the designated parameter to a <code>Reader</code> object. The
      * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -2543,7 +2543,7 @@ public interface CallableStatement extends PreparedStatement {
      * @since 1.8
      */
      default void setObject(String parameterName, Object x, SQLType targetSqlType,
-             int scaleOrLength) throws SQLException {
+                            int scaleOrLength) throws SQLException {
         throw new SQLFeatureNotSupportedException("setObject not implemented");
     }
     /**
@@ -2645,7 +2645,7 @@ public interface CallableStatement extends PreparedStatement {
      * @since 1.8
      */
     default void registerOutParameter(int parameterIndex, SQLType sqlType,
-            int scale) throws SQLException {
+                                      int scale) throws SQLException {
         throw new SQLFeatureNotSupportedException("registerOutParameter not implemented");
     }
     /**
@@ -2691,8 +2691,8 @@ public interface CallableStatement extends PreparedStatement {
      * @see SQLType
      * @since 1.8
      */
-    default void registerOutParameter (int parameterIndex, SQLType sqlType,
-            String typeName) throws SQLException {
+    default void registerOutParameter(int parameterIndex, SQLType sqlType,
+                                      String typeName) throws SQLException {
         throw new SQLFeatureNotSupportedException("registerOutParameter not implemented");
     }
 
@@ -2770,7 +2770,7 @@ public interface CallableStatement extends PreparedStatement {
      * @see SQLType
      */
     default void registerOutParameter(String parameterName, SQLType sqlType,
-            int scale) throws SQLException {
+                                      int scale) throws SQLException {
         throw new SQLFeatureNotSupportedException("registerOutParameter not implemented");
     }
 
@@ -2817,8 +2817,8 @@ public interface CallableStatement extends PreparedStatement {
      * @see SQLType
      * @since 1.8
      */
-    default void registerOutParameter (String parameterName, SQLType sqlType,
-            String typeName) throws SQLException {
+    default void registerOutParameter(String parameterName, SQLType sqlType,
+                                      String typeName) throws SQLException {
         throw new SQLFeatureNotSupportedException("registerOutParameter not implemented");
     }
 }

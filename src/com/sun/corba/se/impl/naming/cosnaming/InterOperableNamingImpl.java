@@ -53,7 +53,7 @@ public class InterOperableNamingImpl
      * @param n Array of Name Components (Simple or Compound Names)
      * @return string which is the stringified reference.
      */
-    public String convertToString( org.omg.CosNaming.NameComponent[]
+    public String convertToString( NameComponent[]
                                    theNameComponents )
     {
         String theConvertedString =
@@ -74,7 +74,7 @@ public class InterOperableNamingImpl
     *  If neccessary.
     */
     private String convertNameComponentToString(
-        org.omg.CosNaming.NameComponent theNameComponent )
+        NameComponent theNameComponent )
     {
         if( ( ( theNameComponent.id == null )
             ||( theNameComponent.id.length() == 0 ) )
@@ -138,7 +138,7 @@ public class InterOperableNamingImpl
      * @param string which is the stringified name.
      * @return  Array of Name Components (Simple or Compound Names)
      */
-   public org.omg.CosNaming.NameComponent[] convertToNameComponent(
+   public NameComponent[] convertToNameComponent(
        String theStringifiedName )
        throws org.omg.CosNaming.NamingContextPackage.InvalidName
    {

@@ -231,8 +231,8 @@ public interface JavaFileManager extends Closeable, Flushable, OptionChecker {
      * @param location a location
      * @param className the name of a class
      * @param kind the kind of file, must be one of {@link
-     * JavaFileObject.Kind#SOURCE SOURCE} or {@link
-     * JavaFileObject.Kind#CLASS CLASS}
+     * Kind#SOURCE SOURCE} or {@link
+     * Kind#CLASS CLASS}
      * @return a file object, might return {@code null} if the
      * file does not exist
      * @throws IllegalArgumentException if the location is not known
@@ -266,8 +266,8 @@ public interface JavaFileManager extends Closeable, Flushable, OptionChecker {
      * @param location a location
      * @param className the name of a class
      * @param kind the kind of file, must be one of {@link
-     * JavaFileObject.Kind#SOURCE SOURCE} or {@link
-     * JavaFileObject.Kind#CLASS CLASS}
+     * Kind#SOURCE SOURCE} or {@link
+     * Kind#CLASS CLASS}
      * @param sibling a file object to be used as hint for placement;
      * might be {@code null}
      * @return a file object for output
@@ -293,8 +293,8 @@ public interface JavaFileManager extends Closeable, Flushable, OptionChecker {
      * name</a> in the specified package in the given location.
      *
      * <p>If the returned object represents a {@linkplain
-     * JavaFileObject.Kind#SOURCE source} or {@linkplain
-     * JavaFileObject.Kind#CLASS class} file, it must be an instance
+     * Kind#SOURCE source} or {@linkplain
+     * Kind#CLASS class} file, it must be an instance
      * of {@link JavaFileObject}.
      *
      * <p>Informally, the file object returned by this method is
@@ -346,8 +346,8 @@ public interface JavaFileManager extends Closeable, Flushable, OptionChecker {
      * method.
      *
      * <p>If the returned object represents a {@linkplain
-     * JavaFileObject.Kind#SOURCE source} or {@linkplain
-     * JavaFileObject.Kind#CLASS class} file, it must be an instance
+     * Kind#SOURCE source} or {@linkplain
+     * Kind#CLASS class} file, it must be an instance
      * of {@link JavaFileObject}.
      *
      * <p>Informally, the file object returned by this method is

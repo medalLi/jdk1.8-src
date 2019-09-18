@@ -221,7 +221,7 @@ abstract public class Servant {
         // of the Delegate interface with a get_interface method
         // but not a get_interface_def method).
 
-        org.omg.PortableServer.portable.Delegate delegate = _get_delegate();
+        Delegate delegate = _get_delegate();
         try {
             // If the ORB's delegate class does not implement
             // "Object get_interface_def(..)", this will throw
@@ -230,7 +230,7 @@ abstract public class Servant {
         } catch( AbstractMethodError aex ) {
             // Call "InterfaceDef get_interface(..)" method using reflection.
             try {
-                Class[] argc = { org.omg.PortableServer.Servant.class };
+                Class[] argc = { Servant.class };
                 java.lang.reflect.Method meth =
                      delegate.getClass().getMethod("get_interface", argc);
                 Object[] argx = { this };

@@ -582,11 +582,11 @@ public abstract class ClassLoader {
      * Converts an array of bytes into an instance of class <tt>Class</tt>.
      * Before the <tt>Class</tt> can be used it must be resolved.
      *
-     * <p> This method assigns a default {@link java.security.ProtectionDomain
+     * <p> This method assigns a default {@link ProtectionDomain
      * <tt>ProtectionDomain</tt>} to the newly defined class.  The
      * <tt>ProtectionDomain</tt> is effectively granted the same set of
      * permissions returned when {@link
-     * java.security.Policy#getPermissions(java.security.CodeSource)
+     * Policy#getPermissions(CodeSource)
      * <tt>Policy.getPolicy().getPermissions(new CodeSource(null, null))</tt>}
      * is invoked.  The default domain is created on the first invocation of
      * {@link #defineClass(String, byte[], int, int) <tt>defineClass</tt>},
@@ -594,7 +594,7 @@ public abstract class ClassLoader {
      *
      * <p> To assign a specific <tt>ProtectionDomain</tt> to the class, use
      * the {@link #defineClass(String, byte[], int, int,
-     * java.security.ProtectionDomain) <tt>defineClass</tt>} method that takes a
+     * ProtectionDomain) <tt>defineClass</tt>} method that takes a
      * <tt>ProtectionDomain</tt> as one of its arguments.  </p>
      *
      * @param  name
@@ -631,7 +631,7 @@ public abstract class ClassLoader {
      *
      * @see  #loadClass(String, boolean)
      * @see  #resolveClass(Class)
-     * @see  java.security.CodeSource
+     * @see  CodeSource
      * @see  java.security.SecureClassLoader
      *
      * @since  1.1
@@ -696,7 +696,7 @@ public abstract class ClassLoader {
      * <p> The first class defined in a package determines the exact set of
      * certificates that all subsequent classes defined in that package must
      * contain.  The set of certificates for a class is obtained from the
-     * {@link java.security.CodeSource <tt>CodeSource</tt>} within the
+     * {@link CodeSource <tt>CodeSource</tt>} within the
      * <tt>ProtectionDomain</tt> of the class.  Any classes added to that
      * package must contain the same set of certificates or a
      * <tt>SecurityException</tt> will be thrown.  Note that if
@@ -1071,7 +1071,7 @@ public abstract class ClassLoader {
      *
      * @apiNote When overriding this method it is recommended that an
      * implementation ensures that any delegation is consistent with the {@link
-     * #getResources(java.lang.String) getResources(String)} method.
+     * #getResources(String) getResources(String)} method.
      *
      * @param  name
      *         The resource name
@@ -1108,7 +1108,7 @@ public abstract class ClassLoader {
      *
      * @apiNote When overriding this method it is recommended that an
      * implementation ensures that any delegation is consistent with the {@link
-     * #getResource(java.lang.String) getResource(String)} method. This should
+     * #getResource(String) getResource(String)} method. This should
      * ensure that the first element returned by the Enumeration's
      * {@code nextElement} method is the same resource that the
      * {@code getResource(String)} method would return.
@@ -1116,7 +1116,7 @@ public abstract class ClassLoader {
      * @param  name
      *         The resource name
      *
-     * @return  An enumeration of {@link java.net.URL <tt>URL</tt>} objects for
+     * @return  An enumeration of {@link URL <tt>URL</tt>} objects for
      *          the resource.  If no resources could  be found, the enumeration
      *          will be empty.  Resources that the class loader doesn't have
      *          access to will not be in the enumeration.
@@ -1158,7 +1158,7 @@ public abstract class ClassLoader {
     }
 
     /**
-     * Returns an enumeration of {@link java.net.URL <tt>URL</tt>} objects
+     * Returns an enumeration of {@link URL <tt>URL</tt>} objects
      * representing all the resources with the given name. Class loader
      * implementations should override this method to specify where to load
      * resources from.
@@ -1166,7 +1166,7 @@ public abstract class ClassLoader {
      * @param  name
      *         The resource name
      *
-     * @return  An enumeration of {@link java.net.URL <tt>URL</tt>} objects for
+     * @return  An enumeration of {@link URL <tt>URL</tt>} objects for
      *          the resources
      *
      * @throws  IOException
@@ -1175,7 +1175,7 @@ public abstract class ClassLoader {
      * @since  1.2
      */
     protected Enumeration<URL> findResources(String name) throws IOException {
-        return java.util.Collections.emptyEnumeration();
+        return Collections.emptyEnumeration();
     }
 
     /**
@@ -1210,7 +1210,7 @@ public abstract class ClassLoader {
      * @param  name
      *         The resource name
      *
-     * @return  A {@link java.net.URL <tt>URL</tt>} object for reading the
+     * @return  A {@link URL <tt>URL</tt>} object for reading the
      *          resource, or <tt>null</tt> if the resource could not be found
      *
      * @since  1.1
@@ -1226,8 +1226,8 @@ public abstract class ClassLoader {
     /**
      * Finds all resources of the specified name from the search path used to
      * load classes.  The resources thus found are returned as an
-     * {@link java.util.Enumeration <tt>Enumeration</tt>} of {@link
-     * java.net.URL <tt>URL</tt>} objects.
+     * {@link Enumeration <tt>Enumeration</tt>} of {@link
+     * URL <tt>URL</tt>} objects.
      *
      * <p> The search order is described in the documentation for {@link
      * #getSystemResource(String)}.  </p>
@@ -1235,7 +1235,7 @@ public abstract class ClassLoader {
      * @param  name
      *         The resource name
      *
-     * @return  An enumeration of resource {@link java.net.URL <tt>URL</tt>}
+     * @return  An enumeration of resource {@link URL <tt>URL</tt>}
      *          objects
      *
      * @throws  IOException
@@ -1560,7 +1560,7 @@ public abstract class ClassLoader {
      *
      * @param  sealBase
      *         If not <tt>null</tt>, then this package is sealed with
-     *         respect to the given code source {@link java.net.URL
+     *         respect to the given code source {@link URL
      *         <tt>URL</tt>}  object.  Otherwise, the package is not sealed.
      *
      * @return  The newly defined <tt>Package</tt> object

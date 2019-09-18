@@ -27,9 +27,9 @@ package org.omg.PortableServer;
 	 * every request for objects associated with a POA to 
 	 * be mediated by the servant manager.
 	 */
-public class _ServantLocatorStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.PortableServer.ServantLocator
+public class _ServantLocatorStub extends org.omg.CORBA.portable.ObjectImpl implements ServantLocator
 {
-  final public static java.lang.Class _opsClass = ServantLocatorOperations.class;
+  final public static Class _opsClass = ServantLocatorOperations.class;
 
 
 
@@ -52,7 +52,7 @@ public class _ServantLocatorStub extends org.omg.CORBA.portable.ObjectImpl imple
   	 *            requests to the object denoted in the 
   	 *            forward_reference member of the exception.
   	 */
-  public org.omg.PortableServer.Servant preinvoke (byte[] oid, org.omg.PortableServer.POA adapter, String operation, org.omg.PortableServer.ServantLocatorPackage.CookieHolder the_cookie) throws org.omg.PortableServer.ForwardRequest
+  public Servant preinvoke (byte[] oid, POA adapter, String operation, org.omg.PortableServer.ServantLocatorPackage.CookieHolder the_cookie) throws ForwardRequest
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("preinvoke", _opsClass);
       ServantLocatorOperations  $self = (ServantLocatorOperations) $so.servant;
@@ -77,7 +77,7 @@ public class _ServantLocatorStub extends org.omg.CORBA.portable.ObjectImpl imple
   	 * @param the_servant reference to the servant that is
   	 *                    associated with the object.
   	 */
-  public void postinvoke (byte[] oid, org.omg.PortableServer.POA adapter, String operation, java.lang.Object the_cookie, org.omg.PortableServer.Servant the_servant)
+  public void postinvoke (byte[] oid, POA adapter, String operation, Object the_cookie, Servant the_servant)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("postinvoke", _opsClass);
       ServantLocatorOperations  $self = (ServantLocatorOperations) $so.servant;

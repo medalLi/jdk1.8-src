@@ -38,7 +38,7 @@ public interface ValueOutputStream {
      * (with a null codebase and the specified repository ID),
      * and increments the valuetype nesting depth.
      */
-    void start_value(java.lang.String rep_id);
+    void start_value(String rep_id);
 
     /**
      * The end_value method ends any currently open chunk,

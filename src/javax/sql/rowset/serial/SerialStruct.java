@@ -94,7 +94,7 @@ public class SerialStruct implements Struct, Serializable, Cloneable {
      *        <code>Class</code> object for the <code>SQLData</code> implementation
      *        that defines how the UDT is to be mapped
      * @throws SerialException if an error occurs
-     * @see java.sql.Struct
+     * @see Struct
      */
      public SerialStruct(Struct in, Map<String,Class<?>> map)
          throws SerialException
@@ -246,8 +246,8 @@ public class SerialStruct implements Struct, Serializable, Cloneable {
                 attribs[i] = new SerialClob((Clob)attribs[i]);
             } else if (attribs[i] instanceof Ref) {
                 attribs[i] = new SerialRef((Ref)attribs[i]);
-            } else if (attribs[i] instanceof java.sql.Array) {
-                attribs[i] = new SerialArray((java.sql.Array)attribs[i], map);
+            } else if (attribs[i] instanceof Array) {
+                attribs[i] = new SerialArray((Array)attribs[i], map);
             }
         }
 

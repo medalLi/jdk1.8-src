@@ -304,7 +304,7 @@ abstract public class ORB {
 
         try {
             ReflectUtil.checkPackageAccess(className);
-            Class<org.omg.CORBA.ORB> orbBaseClass = org.omg.CORBA.ORB.class;
+            Class<ORB> orbBaseClass = ORB.class;
             Class<?> orbClass = Class.forName(className, true, cl).asSubclass(orbBaseClass);
             return (ORB)orbClass.newInstance();
         } catch (Throwable ex) {
@@ -428,7 +428,7 @@ abstract public class ORB {
      *
      * @param obj The servant object reference
      */
-    public void connect(org.omg.CORBA.Object obj) {
+    public void connect(Object obj) {
         throw new NO_IMPLEMENT();
     }
 
@@ -448,7 +448,7 @@ abstract public class ORB {
      * always call <code>shutdown</code> and <code>destroy</code>
      * on all ORB instances before exiting.
      *
-     * @throws org.omg.CORBA.BAD_INV_ORDER if the current thread is servicing an invocation
+     * @throws BAD_INV_ORDER if the current thread is servicing an invocation
      */
     public void destroy( ) {
         throw new NO_IMPLEMENT();
@@ -472,7 +472,7 @@ abstract public class ORB {
      *
      * @param obj The servant object to be disconnected from the ORB
      */
-    public void disconnect(org.omg.CORBA.Object obj) {
+    public void disconnect(Object obj) {
         throw new NO_IMPLEMENT();
     }
 
@@ -508,7 +508,7 @@ abstract public class ORB {
      * @exception InvalidName if the given name is not associated with a
      *                         known service
      */
-    abstract public org.omg.CORBA.Object resolve_initial_references(String object_name)
+    abstract public Object resolve_initial_references(String object_name)
         throws InvalidName;
 
     /**
@@ -523,7 +523,7 @@ abstract public class ORB {
      * @param obj the object reference to stringify
      * @return the string representing the object reference
      */
-    abstract public String object_to_string(org.omg.CORBA.Object obj);
+    abstract public String object_to_string(Object obj);
 
     /**
      * Converts a string produced by the method <code>object_to_string</code>
@@ -534,7 +534,7 @@ abstract public class ORB {
      * method <code>object_to_string</code>.
      * @return the object reference
      */
-    abstract public org.omg.CORBA.Object string_to_object(String str);
+    abstract public Object string_to_object(String str);
 
     /**
      * Allocates an <code>NVList</code> with (probably) enough
@@ -566,7 +566,7 @@ abstract public class ORB {
      *
      * @see NVList
      */
-    public NVList create_operation_list(org.omg.CORBA.Object oper)
+    public NVList create_operation_list(Object oper)
     {
         // If we came here, it means that the actual ORB implementation
         // did not have a create_operation_list(...CORBA.Object oper) method,
@@ -591,7 +591,7 @@ abstract public class ORB {
 
             // OK, the method exists, so invoke it and be happy.
             java.lang.Object[] argx = { oper };
-            return (org.omg.CORBA.NVList)meth.invoke(this, argx);
+            return (NVList)meth.invoke(this, argx);
         }
         catch( java.lang.reflect.InvocationTargetException exs ) {
             Throwable t = exs.getTargetException();
@@ -602,14 +602,14 @@ abstract public class ORB {
                 throw (RuntimeException) t;
             }
             else {
-                throw new org.omg.CORBA.NO_IMPLEMENT();
+                throw new NO_IMPLEMENT();
             }
         }
         catch( RuntimeException ex ) {
             throw ex;
         }
         catch( Exception exr ) {
-            throw new org.omg.CORBA.NO_IMPLEMENT();
+            throw new NO_IMPLEMENT();
         }
     }
 
@@ -673,7 +673,7 @@ abstract public class ORB {
      * @return          the newly-created
      *              <code>org.omg.CORBA.portable.OutputStream</code> object
      */
-    abstract public org.omg.CORBA.portable.OutputStream create_output_stream();
+    abstract public OutputStream create_output_stream();
 
     /**
      * Sends multiple dynamic (DII) requests asynchronously without expecting
@@ -896,10 +896,10 @@ abstract public class ORB {
      * @param name      the name of the native type.
      * @return          the requested TypeCode.
      */
-    public org.omg.CORBA.TypeCode create_native_tc(String id,
+    public TypeCode create_native_tc(String id,
                                                    String name)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -909,11 +909,11 @@ abstract public class ORB {
      * @param name      the name of the abstract interface type.
      * @return          the requested TypeCode.
      */
-    public org.omg.CORBA.TypeCode create_abstract_interface_tc(
+    public TypeCode create_abstract_interface_tc(
                                                                String id,
                                                                String name)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -925,9 +925,9 @@ abstract public class ORB {
      * @param scale     specifies the position of the decimal point.
      * @return          the requested TypeCode.
      */
-    public org.omg.CORBA.TypeCode create_fixed_tc(short digits, short scale)
+    public TypeCode create_fixed_tc(short digits, short scale)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -950,13 +950,13 @@ abstract public class ORB {
      * @param members            an array containing the members of the value type
      * @return                   the requested TypeCode
      */
-    public org.omg.CORBA.TypeCode create_value_tc(String id,
+    public TypeCode create_value_tc(String id,
                                                   String name,
                                                   short type_modifier,
                                                   TypeCode concrete_base,
                                                   ValueMember[] members)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -998,9 +998,9 @@ abstract public class ORB {
      * @param id                 the logical id of the referenced type
      * @return                   the requested TypeCode
      */
-    public org.omg.CORBA.TypeCode create_recursive_tc(String id) {
+    public TypeCode create_recursive_tc(String id) {
         // implemented in subclass
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1011,12 +1011,12 @@ abstract public class ORB {
      * @param boxed_type         the TypeCode for the type
      * @return                   the requested TypeCode
      */
-    public org.omg.CORBA.TypeCode create_value_box_tc(String id,
+    public TypeCode create_value_box_tc(String id,
                                                       String name,
                                                       TypeCode boxed_type)
     {
         // implemented in subclass
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     // orbos 98-01-18: Objects By Value -- end
@@ -1045,9 +1045,9 @@ abstract public class ORB {
      * @deprecated      use <code>resolve_initial_references</code>.
      */
     @Deprecated
-    public org.omg.CORBA.Current get_current()
+    public Current get_current()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1059,7 +1059,7 @@ abstract public class ORB {
      */
     public void run()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1088,12 +1088,12 @@ abstract public class ORB {
      * @param wait_for_completion <code>true</code> if the call
      *        should block until the shutdown is complete;
      *        <code>false</code> if it should return immediately
-     * @throws org.omg.CORBA.BAD_INV_ORDER if the current thread is servicing
+     * @throws BAD_INV_ORDER if the current thread is servicing
      *         an invocation
      */
     public void shutdown(boolean wait_for_completion)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1109,7 +1109,7 @@ abstract public class ORB {
      */
     public boolean work_pending()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1123,7 +1123,7 @@ abstract public class ORB {
      */
     public void perform_work()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1153,7 +1153,7 @@ abstract public class ORB {
     public boolean get_service_information(short service_type,
                                            ServiceInformationHolder service_info)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     // orbos 98-01-18: Objects By Value -- begin
@@ -1171,9 +1171,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynAny create_dyn_any(org.omg.CORBA.Any value)
+    public DynAny create_dyn_any(Any value)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1191,9 +1191,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynAny create_basic_dyn_any(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynAny create_basic_dyn_any(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1211,9 +1211,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynStruct create_dyn_struct(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynStruct create_dyn_struct(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1231,9 +1231,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynSequence create_dyn_sequence(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynSequence create_dyn_sequence(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -1252,9 +1252,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynArray create_dyn_array(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynArray create_dyn_array(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1272,9 +1272,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynUnion create_dyn_union(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynUnion create_dyn_union(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1292,9 +1292,9 @@ abstract public class ORB {
      * @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
      */
     @Deprecated
-    public org.omg.CORBA.DynEnum create_dyn_enum(org.omg.CORBA.TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
+    public DynEnum create_dyn_enum(TypeCode type) throws org.omg.CORBA.ORBPackage.InconsistentTypeCode
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -1316,10 +1316,10 @@ abstract public class ORB {
     *        policy is not supported or a requested initial state
     *        for the policy is not supported.
     */
-    public org.omg.CORBA.Policy create_policy(int type, org.omg.CORBA.Any val)
-        throws org.omg.CORBA.PolicyError
+    public Policy create_policy(int type, Any val)
+        throws PolicyError
     {
         // Currently not implemented until PIORB.
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 }

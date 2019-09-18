@@ -1520,7 +1520,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
             carry = product >>> 32;
         }
         if (carry == 0L) {
-            rmag = java.util.Arrays.copyOfRange(rmag, 1, rmag.length);
+            rmag = Arrays.copyOfRange(rmag, 1, rmag.length);
         } else {
             rmag[rstart] = (int)carry;
         }
@@ -1565,7 +1565,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
             rmag[0] = (int)carry;
         }
         if (carry == 0L)
-            rmag = java.util.Arrays.copyOfRange(rmag, 1, rmag.length);
+            rmag = Arrays.copyOfRange(rmag, 1, rmag.length);
         return new BigInteger(rmag, rsign);
     }
 
@@ -3536,7 +3536,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
      * @return String representation of this BigInteger in the given radix.
      * @see    Integer#toString
      * @see    Character#forDigit
-     * @see    #BigInteger(java.lang.String, int)
+     * @see    #BigInteger(String, int)
      */
     public String toString(int radix) {
         if (signum == 0)
@@ -3704,7 +3704,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
      *
      * @return decimal String representation of this BigInteger.
      * @see    Character#forDigit
-     * @see    #BigInteger(java.lang.String)
+     * @see    #BigInteger(String)
      */
     public String toString() {
         return toString(10);
@@ -3971,7 +3971,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
         // Find first nonzero byte
         for (keep = 0; keep < vlen && val[keep] == 0; keep++)
             ;
-        return java.util.Arrays.copyOfRange(val, keep, vlen);
+        return Arrays.copyOfRange(val, keep, vlen);
     }
 
     /**
@@ -3985,7 +3985,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
         // Find first nonzero byte
         for (keep = 0; keep < vlen && val[keep] == 0; keep++)
             ;
-        return keep == 0 ? val : java.util.Arrays.copyOfRange(val, keep, vlen);
+        return keep == 0 ? val : Arrays.copyOfRange(val, keep, vlen);
     }
 
     /**
@@ -4244,8 +4244,8 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
      * readObject because those fields already have a 0 value be default since
      * defaultReadObject is not being used.
      */
-    private void readObject(java.io.ObjectInputStream s)
-        throws java.io.IOException, ClassNotFoundException {
+    private void readObject(ObjectInputStream s)
+        throws IOException, ClassNotFoundException {
         /*
          * In order to maintain compatibility with previous serialized forms,
          * the magnitude of a BigInteger is serialized as an array of bytes.

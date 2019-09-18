@@ -51,7 +51,7 @@ import java.net.URL;
  * @author <ul><li>Ryan Shoemaker, Sun Microsystems, Inc.</li></ul>
  * @see javax.xml.bind.Unmarshaller
  * @see javax.xml.bind.Validator
- * @see javax.xml.bind.ValidationEventHandler
+ * @see ValidationEventHandler
  * @since JAXB1.0
  */
 public class DefaultValidationEventHandler implements ValidationEventHandler {

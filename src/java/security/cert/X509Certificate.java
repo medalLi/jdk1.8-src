@@ -392,7 +392,7 @@ implements X509Extension {
      * algorithm parameters are null; the parameters are usually
      * supplied with the certificate's public key.
      * If access to individual parameter values is needed then use
-     * {@link java.security.AlgorithmParameters AlgorithmParameters}
+     * {@link AlgorithmParameters AlgorithmParameters}
      * and instantiate with the name returned by
      * {@link #getSigAlgName() getSigAlgName}.
      *

@@ -209,7 +209,7 @@ public final class TypeCodeImpl extends TypeCode
         // initialized to tk_null
         _orb = orb;
         wrapper = ORBUtilSystemException.get(
-            (com.sun.corba.se.spi.orb.ORB)orb, CORBALogDomains.RPC_PRESENTATION ) ;
+            (ORB)orb, CORBALogDomains.RPC_PRESENTATION ) ;
     }
 
     public TypeCodeImpl(ORB orb, TypeCode tc)
@@ -2015,8 +2015,8 @@ public final class TypeCodeImpl extends TypeCode
                 //Any tmp = new AnyImpl(_orb);
                 Any tmp =  ((CDRInputStream)src).orb().create_any();
                 TypeCodeImpl t = new TypeCodeImpl((ORB)dst.orb());
-                t.read_value((org.omg.CORBA_2_3.portable.InputStream)src);
-                t.write_value((org.omg.CORBA_2_3.portable.OutputStream)dst);
+                t.read_value((InputStream)src);
+                t.write_value((OutputStream)dst);
                 tmp.read_value(src, t);
                 tmp.write_value(dst);
                 break;
@@ -2245,7 +2245,7 @@ public final class TypeCodeImpl extends TypeCode
     }
 
 
-    static protected short digits(java.math.BigDecimal value) {
+    static protected short digits(BigDecimal value) {
         if (value == null)
             return 0;
         short length = (short)value.unscaledValue().toString().length();
@@ -2254,7 +2254,7 @@ public final class TypeCodeImpl extends TypeCode
         return length;
     }
 
-    static protected short scale(java.math.BigDecimal value) {
+    static protected short scale(BigDecimal value) {
         if (value == null)
             return 0;
         return (short)value.scale();

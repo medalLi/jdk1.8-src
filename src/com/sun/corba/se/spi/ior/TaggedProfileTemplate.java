@@ -50,22 +50,22 @@ public interface TaggedProfileTemplate extends List, Identifiable,
     * identifier id.  It is not possible to modify the list through this
     * iterator.
     */
-    public Iterator iteratorById( int id ) ;
+    public Iterator iteratorById(int id) ;
 
     /** Create a TaggedProfile from this template.
     */
-    TaggedProfile create( ObjectKeyTemplate oktemp, ObjectId id ) ;
+    TaggedProfile create(ObjectKeyTemplate oktemp, ObjectId id) ;
 
     /** Write the profile create( oktemp, id ) to the OutputStream os.
     */
-    void write( ObjectKeyTemplate oktemp, ObjectId id, OutputStream os) ;
+    void write(ObjectKeyTemplate oktemp, ObjectId id, OutputStream os) ;
 
     /** Return true if temp is equivalent to this template.  Equivalence
      * means that in some sense an invocation on a profile created by this
      * template has the same results as an invocation on a profile
      * created from temp.  Equivalence may be weaker than equality.
      */
-    boolean isEquivalent( TaggedProfileTemplate temp );
+    boolean isEquivalent(TaggedProfileTemplate temp);
 
     /** Return the tagged components in this profile (if any)
      * in the GIOP marshalled form, which is required for Portable
@@ -74,5 +74,5 @@ public interface TaggedProfileTemplate extends List, Identifiable,
      * components.
      */
     org.omg.IOP.TaggedComponent[] getIOPComponents(
-        ORB orb, int id );
+            ORB orb, int id);
 }

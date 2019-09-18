@@ -12,7 +12,7 @@ abstract public class InvalidTypeForEncodingHelper
 {
   private static String  _id = "IDL:omg.org/IOP/Codec/InvalidTypeForEncoding:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.IOP.CodecPackage.InvalidTypeForEncoding that)
+  public static void insert (org.omg.CORBA.Any a, InvalidTypeForEncoding that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class InvalidTypeForEncodingHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.IOP.CodecPackage.InvalidTypeForEncoding extract (org.omg.CORBA.Any a)
+  public static InvalidTypeForEncoding extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class InvalidTypeForEncodingHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.IOP.CodecPackage.InvalidTypeForEncodingHelper.id (), "InvalidTypeForEncoding", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (InvalidTypeForEncodingHelper.id (), "InvalidTypeForEncoding", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class InvalidTypeForEncodingHelper
     return _id;
   }
 
-  public static org.omg.IOP.CodecPackage.InvalidTypeForEncoding read (org.omg.CORBA.portable.InputStream istream)
+  public static InvalidTypeForEncoding read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.IOP.CodecPackage.InvalidTypeForEncoding value = new org.omg.IOP.CodecPackage.InvalidTypeForEncoding ();
+    InvalidTypeForEncoding value = new InvalidTypeForEncoding ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.IOP.CodecPackage.InvalidTypeForEncoding value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, InvalidTypeForEncoding value)
   {
     // write the repository ID
     ostream.write_string (id ());

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import org.omg.PortableServer.Servant ;
 import org.omg.PortableServer.ServantManager ;
@@ -70,8 +70,8 @@ public interface POAPolicyMediator {
     * the servant
     * @return the resulting Servant.
     */
-    java.lang.Object getInvocationServant( byte[] id,
-        String operation ) throws ForwardRequest ;
+    Object getInvocationServant(byte[] id,
+                                String operation) throws ForwardRequest ;
 
     /** Release a servant that was obtained from getInvocationServant.
     */
@@ -94,7 +94,7 @@ public interface POAPolicyMediator {
     /** Set the servant manager.  Will throw WrongPolicy
     * if the request processing policy is not USE_SERVANT_MANAGER.
     */
-    void setServantManager( ServantManager servantManager ) throws WrongPolicy ;
+    void setServantManager(ServantManager servantManager) throws WrongPolicy ;
 
     /** Return the default servant.   Will throw WrongPolicy
     * if the request processing policy is not USE_DEFAULT_SERVANT.
@@ -104,22 +104,22 @@ public interface POAPolicyMediator {
     /** Set the default servant.   Will throw WrongPolicy
     * if the request processing policy is not USE_DEFAULT_SERVANT.
     */
-    void setDefaultServant( Servant servant ) throws WrongPolicy ;
+    void setDefaultServant(Servant servant) throws WrongPolicy ;
 
-    void activateObject( byte[] id, Servant servant )
+    void activateObject(byte[] id, Servant servant)
         throws ObjectAlreadyActive, ServantAlreadyActive, WrongPolicy ;
 
     /** Deactivate the object that is associated with the given id.
     * Returns the servant for id.
     */
-    Servant deactivateObject( byte[] id ) throws ObjectNotActive, WrongPolicy ;
+    Servant deactivateObject(byte[] id) throws ObjectNotActive, WrongPolicy ;
 
     /** Allocate a new, unique system ID.  Requires the ID assignment policy
     * to be SYSTEM.
     */
     byte[] newSystemId() throws WrongPolicy ;
 
-    byte[] servantToId( Servant servant ) throws ServantNotActive, WrongPolicy ;
+    byte[] servantToId(Servant servant) throws ServantNotActive, WrongPolicy ;
 
-    Servant idToServant( byte[] id ) throws ObjectNotActive, WrongPolicy ;
+    Servant idToServant(byte[] id) throws ObjectNotActive, WrongPolicy ;
 }

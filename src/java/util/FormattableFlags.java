@@ -51,10 +51,10 @@ public class FormattableFlags {
 
     /**
      * Converts the output to upper case according to the rules of the
-     * {@linkplain java.util.Locale locale} given during creation of the
+     * {@linkplain Locale locale} given during creation of the
      * <tt>formatter</tt> argument of the {@link Formattable#formatTo
      * formatTo()} method.  The output should be equivalent the following
-     * invocation of {@link String#toUpperCase(java.util.Locale)}
+     * invocation of {@link String#toUpperCase(Locale)}
      *
      * <pre>
      *     out.toUpperCase() </pre>

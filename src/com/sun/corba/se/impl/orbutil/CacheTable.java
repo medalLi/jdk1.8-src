@@ -34,11 +34,11 @@ import com.sun.corba.se.impl.logging.ORBUtilSystemException;
 
 public class CacheTable {
     class Entry {
-        java.lang.Object key;
+        Object key;
         int val;
         Entry next;  // this chains the collision list of table "map"
         Entry rnext; // this chains the collision list of table "rmap"
-        public Entry(java.lang.Object k, int v) {
+        public Entry(Object k, int v) {
             key = k;
             val = v;
             next = null;
@@ -94,20 +94,20 @@ public class CacheTable {
         h ^=  (h >>> 10);
         return h & (size - 1);
     }
-    private int hash(java.lang.Object key) {
+    private int hash(Object key) {
         return moduloTableSize(System.identityHashCode(key));
     }
     private int hash(int val) {
         return moduloTableSize(val);
     }
-    public final void put(java.lang.Object key, int val) {
+    public final void put(Object key, int val) {
         if (put_table(key, val)) {
             entryCount++;
             if (entryCount > size * 3 / 4)
                 grow();
         }
     }
-    private boolean put_table(java.lang.Object key, int val) {
+    private boolean put_table(Object key, int val) {
         int index = hash(key);
         for (Entry e = map[index]; e != null; e = e.next) {
             if (e.key == key) {
@@ -131,10 +131,10 @@ public class CacheTable {
         }
         return true;
     }
-    public final boolean containsKey(java.lang.Object key) {
+    public final boolean containsKey(Object key) {
         return (getVal(key) != -1);
     }
-    public final int getVal(java.lang.Object key) {
+    public final int getVal(Object key) {
         int index = hash(key);
         for (Entry e = map[index]; e != null; e = e.next) {
             if (e.key == key)
@@ -148,7 +148,7 @@ public class CacheTable {
     public final boolean containsOrderedVal(int val) {
         return containsVal(val);
     }
-    public final java.lang.Object getKey(int val) {
+    public final Object getKey(int val) {
         int index = hash(val);
         for (Entry e = rmap[index]; e != null; e = e.rnext) {
             if (e.val == val)

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import java.net.URL ;
 import java.net.InetSocketAddress;
@@ -939,7 +939,7 @@ public class ParserTable {
                 // For security reasons avoid creating an instance
                 // if this class is one that would fail the class cast
                 // to ORBInitializer anyway.
-                if( org.omg.PortableInterceptor.ORBInitializer.class.isAssignableFrom(
+                if( ORBInitializer.class.isAssignableFrom(
                     initClass ) ) {
                     // Now that we have a class object, instantiate one and
                     // remember it:

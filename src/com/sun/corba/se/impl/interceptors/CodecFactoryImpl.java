@@ -43,7 +43,7 @@ import org.omg.CORBA.LocalObject;
  * in orbos/99-12-02.
  */
 public final class CodecFactoryImpl
-    extends org.omg.CORBA.LocalObject
+    extends LocalObject
     implements CodecFactory
 {
     // The ORB that created this Codec Factory

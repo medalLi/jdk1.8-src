@@ -48,9 +48,9 @@ package org.xml.sax;
  * events as they pass on to the final application.</p>
  *
  * <p>The XMLFilterImpl helper class provides a convenient base
- * for creating SAX2 filters, by passing on all {@link org.xml.sax.EntityResolver
- * EntityResolver}, {@link org.xml.sax.DTDHandler DTDHandler},
- * {@link org.xml.sax.ContentHandler ContentHandler} and {@link org.xml.sax.ErrorHandler
+ * for creating SAX2 filters, by passing on all {@link EntityResolver
+ * EntityResolver}, {@link DTDHandler DTDHandler},
+ * {@link ContentHandler ContentHandler} and {@link ErrorHandler
  * ErrorHandler} events automatically.</p>
  *
  * @since SAX 2.0
@@ -69,7 +69,7 @@ public interface XMLFilter extends XMLReader
      *
      * @param parent The parent reader.
      */
-    public abstract void setParent (XMLReader parent);
+    public abstract void setParent(XMLReader parent);
 
 
     /**
@@ -82,7 +82,7 @@ public interface XMLFilter extends XMLReader
      *
      * @return The parent filter, or null if none has been set.
      */
-    public abstract XMLReader getParent ();
+    public abstract XMLReader getParent();
 
 }
 

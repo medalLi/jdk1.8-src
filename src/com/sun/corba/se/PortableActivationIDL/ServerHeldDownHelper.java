@@ -12,7 +12,7 @@ abstract public class ServerHeldDownHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/ServerHeldDown:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.ServerHeldDown that)
+  public static void insert (org.omg.CORBA.Any a, ServerHeldDown that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ServerHeldDownHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ServerHeldDown extract (org.omg.CORBA.Any a)
+  public static ServerHeldDown extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -48,7 +48,7 @@ abstract public class ServerHeldDownHelper
             "serverId",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.id (), "ServerHeldDown", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (ServerHeldDownHelper.id (), "ServerHeldDown", _members0);
           __active = false;
         }
       }
@@ -61,16 +61,16 @@ abstract public class ServerHeldDownHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ServerHeldDown read (org.omg.CORBA.portable.InputStream istream)
+  public static ServerHeldDown read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.ServerHeldDown value = new com.sun.corba.se.PortableActivationIDL.ServerHeldDown ();
+    ServerHeldDown value = new ServerHeldDown ();
     // read and discard the repository ID
     istream.read_string ();
     value.serverId = istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.ServerHeldDown value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServerHeldDown value)
   {
     // write the repository ID
     ostream.write_string (id ());

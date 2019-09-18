@@ -121,7 +121,7 @@ public interface DirectoryStream<T>
     /**
      * An interface that is implemented by objects that decide if a directory
      * entry should be accepted or filtered. A {@code Filter} is passed as the
-     * parameter to the {@link Files#newDirectoryStream(Path,DirectoryStream.Filter)}
+     * parameter to the {@link Files#newDirectoryStream(Path, Filter)}
      * method when opening a directory to iterate over the entries in the
      * directory.
      *

@@ -622,7 +622,7 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
         return buffer;
     }
 
-    public org.omg.CORBA.Object read_Object(java.lang.Class clz) {
+    public org.omg.CORBA.Object read_Object(Class clz) {
 
         // In any case, we must first read the IOR.
         IOR ior = IORFactories.makeIOR(parent) ;
@@ -674,7 +674,7 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
 
     // org.omg.CORBA_2_3.portable.InputStream
 
-    public java.io.Serializable read_value() {
+    public Serializable read_value() {
         if (!markOn && !(markedItemQ.isEmpty())) { // dequeue
             return (Serializable) markedItemQ.removeFirst();
         }
@@ -683,7 +683,7 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
             return (Serializable) markedItemQ.get(peekIndex++);
         }
         try {
-            Serializable value = (java.io.Serializable) is.readObject();
+            Serializable value = (Serializable) is.readObject();
             if (markOn) { // enqueue
                 markedItemQ.addLast(value);
             }
@@ -693,28 +693,28 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
         }
     }
 
-    public java.io.Serializable read_value(java.lang.Class clz) {
+    public Serializable read_value(Class clz) {
         return read_value();
     }
 
-    public java.io.Serializable read_value(
+    public Serializable read_value(
             org.omg.CORBA.portable.BoxedValueHelper factory) {
         return read_value();
     }
 
-    public java.io.Serializable read_value(java.lang.String rep_id) {
+    public Serializable read_value(String rep_id) {
         return read_value();
     }
 
-    public java.io.Serializable read_value(java.io.Serializable value) {
+    public Serializable read_value(Serializable value) {
         return read_value();
     }
 
-    public java.lang.Object read_abstract_interface() {
+    public Object read_abstract_interface() {
         return read_abstract_interface(null);
     }
 
-    public java.lang.Object read_abstract_interface(java.lang.Class clz) {
+    public Object read_abstract_interface(Class clz) {
         boolean isObject = read_boolean();
         if (isObject) {
             return read_Object(clz);
@@ -737,11 +737,11 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
     }
 
     // org.omg.CORBA.DataInputStream
-    public java.lang.Object read_Abstract() {
+    public Object read_Abstract() {
         return read_abstract_interface();
     }
 
-    public java.io.Serializable read_Value() {
+    public Serializable read_Value() {
         return read_value();
     }
 
@@ -750,8 +750,8 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
         read_any_array(seq.value, offset, length);
     }
 
-    private final void read_any_array(org.omg.CORBA.Any[] value,
-                                     int offset, int length) {
+    private final void read_any_array(Any[] value,
+                                      int offset, int length) {
         for(int i=0; i < length; i++) {
             value[i+offset] = read_any();
         }
@@ -927,7 +927,7 @@ public class IDLJavaSerializationInputStream extends CDRInputStreamBase {
     }
 
     // Needed by TCUtility
-    public java.math.BigDecimal read_fixed(short digits, short scale) {
+    public BigDecimal read_fixed(short digits, short scale) {
         // digits isn't really needed here
         StringBuffer buffer = read_fixed_buffer();
         if (digits != buffer.length())

@@ -72,7 +72,7 @@ public class FVDCodeBaseImpl extends _CodeBaseImplBase
 
     void setValueHandler(ValueHandler vh)
     {
-        vhandler = (com.sun.corba.se.impl.io.ValueHandlerImpl) vh;
+        vhandler = (ValueHandlerImpl) vh;
     }
 
     // Operation to obtain the IR from the sending context
@@ -167,7 +167,7 @@ public class FVDCodeBaseImpl extends _CodeBaseImplBase
             Stack repIds = new Stack();
             Class parent = ObjectStreamClass.lookup(vhandler.getClassFromType(x)).forClass().getSuperclass();
 
-            while (!parent.equals(java.lang.Object.class)) {
+            while (!parent.equals(Object.class)) {
                 repIds.push(vhandler.createForAnyType(parent));
                 parent = parent.getSuperclass();
             }

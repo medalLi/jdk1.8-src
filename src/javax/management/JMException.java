@@ -32,7 +32,7 @@ package javax.management;
  *
  * @since 1.5
  */
-public class JMException extends java.lang.Exception   {
+public class JMException extends Exception   {
 
     /* Serial version */
     private static final long serialVersionUID = 350520924977331825L;

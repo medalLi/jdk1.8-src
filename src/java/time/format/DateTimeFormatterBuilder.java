@@ -378,7 +378,7 @@ public final class DateTimeFormatterBuilder {
      * The parser for a variable width value such as this normally behaves greedily,
      * requiring one digit, but accepting as many digits as possible.
      * This behavior can be affected by 'adjacent value parsing'.
-     * See {@link #appendValue(java.time.temporal.TemporalField, int)} for full details.
+     * See {@link #appendValue(TemporalField, int)} for full details.
      *
      * @param field  the field to append, not null
      * @return this, for chaining, not null
@@ -460,7 +460,7 @@ public final class DateTimeFormatterBuilder {
      * The parser for a variable width value such as this normally behaves greedily,
      * accepting as many digits as possible.
      * This behavior can be affected by 'adjacent value parsing'.
-     * See {@link #appendValue(java.time.temporal.TemporalField, int)} for full details.
+     * See {@link #appendValue(TemporalField, int)} for full details.
      * <p>
      * In strict parsing mode, the minimum number of parsed digits is {@code minWidth}
      * and the maximum is {@code maxWidth}.
@@ -2601,7 +2601,7 @@ public final class DateTimeFormatterBuilder {
          * minWidth, maxWidth, signStyle and whether subsequent fields are fixed.
          * @param context the context
          * @return true if the field is fixed width
-         * @see DateTimeFormatterBuilder#appendValue(java.time.temporal.TemporalField, int)
+         * @see DateTimeFormatterBuilder#appendValue(TemporalField, int)
          */
         boolean isFixedWidth(DateTimeParseContext context) {
             return subsequentWidth == -1 ||
@@ -2879,7 +2879,7 @@ public final class DateTimeFormatterBuilder {
          * otherwise it is set as for NumberPrinterParser.
          * @param context the context
          * @return if the field is fixed width
-         * @see DateTimeFormatterBuilder#appendValueReduced(java.time.temporal.TemporalField, int, int, int)
+         * @see DateTimeFormatterBuilder#appendValueReduced(TemporalField, int, int, int)
          */
         @Override
         boolean isFixedWidth(DateTimeParseContext context) {
@@ -3008,7 +3008,7 @@ public final class DateTimeFormatterBuilder {
          * Converts a value for this field to a fraction between 0 and 1.
          * <p>
          * The fractional value is between 0 (inclusive) and 1 (exclusive).
-         * It can only be returned if the {@link java.time.temporal.TemporalField#range() value range} is fixed.
+         * It can only be returned if the {@link TemporalField#range() value range} is fixed.
          * The fraction is obtained by calculation from the field range using 9 decimal
          * places and a rounding mode of {@link RoundingMode#FLOOR FLOOR}.
          * The calculation is inaccurate if the values do not run continuously from smallest to largest.
@@ -3035,7 +3035,7 @@ public final class DateTimeFormatterBuilder {
          * Converts a fraction from 0 to 1 for this field to a value.
          * <p>
          * The fractional value must be between 0 (inclusive) and 1 (exclusive).
-         * It can only be returned if the {@link java.time.temporal.TemporalField#range() value range} is fixed.
+         * It can only be returned if the {@link TemporalField#range() value range} is fixed.
          * The value is obtained by calculation from the field range and a rounding
          * mode of {@link RoundingMode#FLOOR FLOOR}.
          * The calculation is inaccurate if the values do not run continuously from smallest to largest.

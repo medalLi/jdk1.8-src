@@ -12,7 +12,7 @@ abstract public class NoContextHelper
 {
   private static String  _id = "IDL:omg.org/PortableServer/Current/NoContext:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableServer.CurrentPackage.NoContext that)
+  public static void insert (org.omg.CORBA.Any a, NoContext that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class NoContextHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableServer.CurrentPackage.NoContext extract (org.omg.CORBA.Any a)
+  public static NoContext extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class NoContextHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.PortableServer.CurrentPackage.NoContextHelper.id (), "NoContext", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (NoContextHelper.id (), "NoContext", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class NoContextHelper
     return _id;
   }
 
-  public static org.omg.PortableServer.CurrentPackage.NoContext read (org.omg.CORBA.portable.InputStream istream)
+  public static NoContext read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.PortableServer.CurrentPackage.NoContext value = new org.omg.PortableServer.CurrentPackage.NoContext ();
+    NoContext value = new NoContext ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableServer.CurrentPackage.NoContext value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, NoContext value)
   {
     // write the repository ID
     ostream.write_string (id ());

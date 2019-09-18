@@ -104,9 +104,9 @@ import java.util.Collections;
  *
  * <p> A file channel is created by invoking one of the {@link #open open}
  * methods defined by this class. A file channel can also be obtained from an
- * existing {@link java.io.FileInputStream#getChannel FileInputStream}, {@link
- * java.io.FileOutputStream#getChannel FileOutputStream}, or {@link
- * java.io.RandomAccessFile#getChannel RandomAccessFile} object by invoking
+ * existing {@link FileInputStream#getChannel FileInputStream}, {@link
+ * FileOutputStream#getChannel FileOutputStream}, or {@link
+ * RandomAccessFile#getChannel RandomAccessFile} object by invoking
  * that object's <tt>getChannel</tt> method, which returns a file channel that
  * is connected to the same underlying file. Where the file channel is obtained
  * from an existing stream or random access file then the state of the file
@@ -121,20 +121,20 @@ import java.util.Collections;
  * <a name="open-mode"></a> <p> At various points this class specifies that an
  * instance that is "open for reading," "open for writing," or "open for
  * reading and writing" is required.  A channel obtained via the {@link
- * java.io.FileInputStream#getChannel getChannel} method of a {@link
- * java.io.FileInputStream} instance will be open for reading.  A channel
- * obtained via the {@link java.io.FileOutputStream#getChannel getChannel}
- * method of a {@link java.io.FileOutputStream} instance will be open for
+ * FileInputStream#getChannel getChannel} method of a {@link
+ * FileInputStream} instance will be open for reading.  A channel
+ * obtained via the {@link FileOutputStream#getChannel getChannel}
+ * method of a {@link FileOutputStream} instance will be open for
  * writing.  Finally, a channel obtained via the {@link
- * java.io.RandomAccessFile#getChannel getChannel} method of a {@link
- * java.io.RandomAccessFile} instance will be open for reading if the instance
+ * RandomAccessFile#getChannel getChannel} method of a {@link
+ * RandomAccessFile} instance will be open for reading if the instance
  * was created with mode <tt>"r"</tt> and will be open for reading and writing
  * if the instance was created with mode <tt>"rw"</tt>.
  *
  * <a name="append-mode"></a><p> A file channel that is open for writing may be in
  * <i>append mode</i>, for example if it was obtained from a file-output stream
  * that was created by invoking the {@link
- * java.io.FileOutputStream#FileOutputStream(java.io.File,boolean)
+ * FileOutputStream#FileOutputStream(File,boolean)
  * FileOutputStream(File,boolean)} constructor and passing <tt>true</tt> for
  * the second parameter.  In this mode each invocation of a relative write
  * operation first advances the position to the end of the file and then writes
@@ -142,9 +142,9 @@ import java.util.Collections;
  * of the data are done in a single atomic operation is system-dependent and
  * therefore unspecified.
  *
- * @see java.io.FileInputStream#getChannel()
- * @see java.io.FileOutputStream#getChannel()
- * @see java.io.RandomAccessFile#getChannel()
+ * @see FileInputStream#getChannel()
+ * @see FileOutputStream#getChannel()
+ * @see RandomAccessFile#getChannel()
  *
  * @author Mark Reinhold
  * @author Mike McCloskey
@@ -785,7 +785,7 @@ public abstract class FileChannel
      *
      * @since 1.4
      *
-     * @see java.nio.channels.FileChannel#map
+     * @see FileChannel#map
      */
     public static class MapMode {
 
@@ -890,7 +890,7 @@ public abstract class FileChannel
      *
      * @param  size
      *         The size of the region to be mapped; must be non-negative and
-     *         no greater than {@link java.lang.Integer#MAX_VALUE}
+     *         no greater than {@link Integer#MAX_VALUE}
      *
      * @return  The mapped byte buffer
      *
@@ -909,8 +909,8 @@ public abstract class FileChannel
      * @throws IOException
      *         If some other I/O error occurs
      *
-     * @see java.nio.channels.FileChannel.MapMode
-     * @see java.nio.MappedByteBuffer
+     * @see MapMode
+     * @see MappedByteBuffer
      */
     public abstract MappedByteBuffer map(MapMode mode,
                                          long position, long size)

@@ -44,7 +44,7 @@ public class JIDLLocalCRDImpl extends LocalClientRequestDispatcherBase
 {
     public JIDLLocalCRDImpl( ORB orb, int scid, IOR ior )
     {
-        super( (com.sun.corba.se.spi.orb.ORB)orb, scid, ior ) ;
+        super( (ORB)orb, scid, ior ) ;
     }
 
     protected ServantObject servant;
@@ -66,7 +66,7 @@ public class JIDLLocalCRDImpl extends LocalClientRequestDispatcherBase
     }
 
     // REVISIT - This is called from TOAImpl.
-    public void setServant( java.lang.Object servant )
+    public void setServant( Object servant )
     {
         if (servant != null && servant instanceof Tie) {
             this.servant = new ServantObject();

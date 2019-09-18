@@ -52,7 +52,7 @@ import javax.security.auth.DestroyFailedException;
  * application depends on the default JGSS Kerberos mechanism to access the
  * KerberosKey. In that case, however, the application will need an
  * appropriate
- * {@link javax.security.auth.kerberos.ServicePermission ServicePermission}.
+ * {@link ServicePermission ServicePermission}.
  *
  * @author Mayank Upadhyay
  * @since 1.4

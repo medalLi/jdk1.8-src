@@ -66,11 +66,11 @@ import java.security.BasicPermission;
  * </tr>
  * </table>
  *
- * @see java.security.BasicPermission
+ * @see BasicPermission
  * @see java.security.Permission
  * @see java.security.Permissions
  * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see SecurityManager
  *
  * @author Joe Fialli
  * @since JAXB 2.2

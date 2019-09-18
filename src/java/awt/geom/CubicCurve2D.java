@@ -585,8 +585,8 @@ public abstract class CubicCurve2D implements Shape, Cloneable {
      * the information necessary to satisfy the various accessor
      * methods below.
      *
-     * @see java.awt.geom.CubicCurve2D.Float
-     * @see java.awt.geom.CubicCurve2D.Double
+     * @see Float
+     * @see Double
      * @since 1.2
      */
     protected CubicCurve2D() {
@@ -1561,7 +1561,7 @@ public abstract class CubicCurve2D implements Shape, Cloneable {
      *
      * @return     a clone of this instance.
      * @exception  OutOfMemoryError            if there is not enough memory.
-     * @see        java.lang.Cloneable
+     * @see        Cloneable
      * @since      1.2
      */
     public Object clone() {

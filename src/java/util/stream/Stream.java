@@ -114,7 +114,7 @@ import java.util.function.UnaryOperator;
  *
  * <p>Such parameters are always instances of a
  * <a href="../function/package-summary.html">functional interface</a> such
- * as {@link java.util.function.Function}, and are often lambda expressions or
+ * as {@link Function}, and are often lambda expressions or
  * method references.  Unless otherwise specified these parameters must be
  * <em>non-null</em>.
  *
@@ -229,7 +229,7 @@ public interface Stream<T> extends BaseStream<T, Stream<T>> {
      * Returns a stream consisting of the results of replacing each element of
      * this stream with the contents of a mapped stream produced by applying
      * the provided mapping function to each element.  Each mapped stream is
-     * {@link java.util.stream.BaseStream#close() closed} after its contents
+     * {@link BaseStream#close() closed} after its contents
      * have been placed into this stream.  (If a mapped stream is {@code null}
      * an empty stream is used, instead.)
      *
@@ -273,7 +273,7 @@ public interface Stream<T> extends BaseStream<T, Stream<T>> {
      * Returns an {@code IntStream} consisting of the results of replacing each
      * element of this stream with the contents of a mapped stream produced by
      * applying the provided mapping function to each element.  Each mapped
-     * stream is {@link java.util.stream.BaseStream#close() closed} after its
+     * stream is {@link BaseStream#close() closed} after its
      * contents have been placed into this stream.  (If a mapped stream is
      * {@code null} an empty stream is used, instead.)
      *
@@ -293,7 +293,7 @@ public interface Stream<T> extends BaseStream<T, Stream<T>> {
      * Returns an {@code LongStream} consisting of the results of replacing each
      * element of this stream with the contents of a mapped stream produced by
      * applying the provided mapping function to each element.  Each mapped
-     * stream is {@link java.util.stream.BaseStream#close() closed} after its
+     * stream is {@link BaseStream#close() closed} after its
      * contents have been placed into this stream.  (If a mapped stream is
      * {@code null} an empty stream is used, instead.)
      *
@@ -313,7 +313,7 @@ public interface Stream<T> extends BaseStream<T, Stream<T>> {
      * Returns an {@code DoubleStream} consisting of the results of replacing
      * each element of this stream with the contents of a mapped stream produced
      * by applying the provided mapping function to each element.  Each mapped
-     * stream is {@link java.util.stream.BaseStream#close() closed} after its
+     * stream is {@link BaseStream#close() closed} after its
      * contents have placed been into this stream.  (If a mapped stream is
      * {@code null} an empty stream is used, instead.)
      *

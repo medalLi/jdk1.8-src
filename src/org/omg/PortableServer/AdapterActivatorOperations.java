@@ -32,5 +32,5 @@ public interface AdapterActivatorOperations
   	 * @return returns TRUE if the POA was created or FALSE
   	 *         otherwise.
   	 */
-  boolean unknown_adapter (org.omg.PortableServer.POA parent, String name);
+  boolean unknown_adapter(POA parent, String name);
 } // interface AdapterActivatorOperations

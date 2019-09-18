@@ -356,9 +356,9 @@ import java.util.Arrays;
  * <p>
  * @author Doug Stein
  * @author Bill Spitzak (orignial NeWS &amp; OLIT implementation)
- * @see       java.awt.GridBagConstraints
- * @see       java.awt.GridBagLayoutInfo
- * @see       java.awt.ComponentOrientation
+ * @see       GridBagConstraints
+ * @see       GridBagLayoutInfo
+ * @see       ComponentOrientation
  * @since JDK1.0
  */
 public class GridBagLayout implements LayoutManager2,
@@ -391,7 +391,7 @@ java.io.Serializable {
      * values are the instances of <code>GridBagConstraints</code>.
      *
      * @serial
-     * @see java.awt.GridBagConstraints
+     * @see GridBagConstraints
      */
     protected Hashtable<Component,GridBagConstraints> comptable;
 
@@ -561,7 +561,7 @@ java.io.Serializable {
      * Most applications do not call this method directly.
      * @return     the graphics origin of the cell in the top-left
      *             corner of the layout grid
-     * @see        java.awt.ComponentOrientation
+     * @see        ComponentOrientation
      * @since      JDK1.1
      */
     public Point getLayoutOrigin () {
@@ -646,7 +646,7 @@ java.io.Serializable {
      * @return     an ordered pair of indexes that indicate which cell
      *             in the layout grid contains the point
      *             (<i>x</i>,&nbsp;<i>y</i>).
-     * @see        java.awt.ComponentOrientation
+     * @see        ComponentOrientation
      * @since      JDK1.1
      */
     public Point location(int x, int y) {
@@ -714,8 +714,8 @@ java.io.Serializable {
      * <p>
      * Most applications do not call this method directly.
      * @param    comp   the component to be removed.
-     * @see      java.awt.Container#remove(java.awt.Component)
-     * @see      java.awt.Container#removeAll()
+     * @see      Container#remove(Component)
+     * @see      Container#removeAll()
      */
     public void removeLayoutComponent(Component comp) {
         removeConstraints(comp);
@@ -728,7 +728,7 @@ java.io.Serializable {
      * Most applications do not call this method directly.
      *
      * @param     parent   the container in which to do the layout
-     * @see       java.awt.Container#getPreferredSize
+     * @see       Container#getPreferredSize
      * @return the preferred size of the <code>parent</code>
      *  container
      */
@@ -743,7 +743,7 @@ java.io.Serializable {
      * <p>
      * Most applications do not call this method directly.
      * @param     parent   the container in which to do the layout
-     * @see       java.awt.Container#doLayout
+     * @see       Container#doLayout
      * @return the minimum size of the <code>parent</code> container
      */
     public Dimension minimumLayoutSize(Container parent) {
@@ -805,8 +805,8 @@ java.io.Serializable {
      * <p>
      * Most applications do not call this method directly.
      * @param parent the container in which to do the layout
-     * @see java.awt.Container
-     * @see java.awt.Container#doLayout
+     * @see Container
+     * @see Container#doLayout
      */
     public void layoutContainer(Container parent) {
         arrangeGrid(parent);
@@ -980,7 +980,7 @@ java.io.Serializable {
     /**
      * This method is obsolete and supplied for backwards
      * compatibility only; new code should call {@link
-     * #getLayoutInfo(java.awt.Container, int) getLayoutInfo} instead.
+     * #getLayoutInfo(Container, int) getLayoutInfo} instead.
      * This method is the same as <code>getLayoutInfo</code>;
      * refer to <code>getLayoutInfo</code> for details on parameters
      * and return value.
@@ -1613,7 +1613,7 @@ java.io.Serializable {
     /**
      * This method is obsolete and supplied for backwards
      * compatibility only; new code should call {@link
-     * #adjustForGravity(java.awt.GridBagConstraints, java.awt.Rectangle)
+     * #adjustForGravity(GridBagConstraints, Rectangle)
      * adjustForGravity} instead.
      * This method is the same as <code>adjustForGravity</code>;
      * refer to <code>adjustForGravity</code> for details
@@ -1994,7 +1994,7 @@ java.io.Serializable {
     /**
      * This method is obsolete and supplied for backwards
      * compatibility only; new code should call {@link
-     * #getMinSize(java.awt.Container, GridBagLayoutInfo) getMinSize} instead.
+     * #getMinSize(Container, GridBagLayoutInfo) getMinSize} instead.
      * This method is the same as <code>getMinSize</code>;
      * refer to <code>getMinSize</code> for details on parameters
      * and return value.

@@ -42,7 +42,7 @@ public class ReflectionException extends JMException   {
     /**
      * @serial The wrapped {@link Exception}
      */
-    private java.lang.Exception exception ;
+    private Exception exception ;
 
 
     /**
@@ -50,7 +50,7 @@ public class ReflectionException extends JMException   {
      *
      * @param e the wrapped exception.
      */
-    public ReflectionException(java.lang.Exception e) {
+    public ReflectionException(Exception e) {
         super() ;
         exception = e ;
     }
@@ -62,7 +62,7 @@ public class ReflectionException extends JMException   {
      * @param e the wrapped exception.
      * @param message the detail message.
      */
-    public ReflectionException(java.lang.Exception e, String message) {
+    public ReflectionException(Exception e, String message) {
         super(message) ;
         exception = e ;
     }
@@ -72,7 +72,7 @@ public class ReflectionException extends JMException   {
      *
      * @return the wrapped {@link Exception}.
      */
-    public java.lang.Exception getTargetException()  {
+    public Exception getTargetException()  {
         return exception ;
     }
 

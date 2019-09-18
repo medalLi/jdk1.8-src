@@ -32,12 +32,12 @@ package java.rmi;
  * @since   JDK1.1
  * @author  Ann Wollrath
  * @author  Roger Riggs
- * @see     java.rmi.Naming#lookup(String)
- * @see     java.rmi.Naming#unbind(String)
+ * @see     Naming#lookup(String)
+ * @see     Naming#unbind(String)
  * @see     java.rmi.registry.Registry#lookup(String)
  * @see     java.rmi.registry.Registry#unbind(String)
  */
-public class NotBoundException extends java.lang.Exception {
+public class NotBoundException extends Exception {
 
     /* indicate compatibility with JDK 1.1.x version of class */
     private static final long serialVersionUID = -1857741824849069317L;

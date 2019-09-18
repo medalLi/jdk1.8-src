@@ -349,7 +349,7 @@ class Inet4Address extends InetAddress {
      * @param   obj   the object to compare against.
      * @return  {@code true} if the objects are the same;
      *          {@code false} otherwise.
-     * @see     java.net.InetAddress#getAddress()
+     * @see     InetAddress#getAddress()
      */
     public boolean equals(Object obj) {
         return (obj != null) && (obj instanceof Inet4Address) &&

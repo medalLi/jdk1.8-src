@@ -59,9 +59,9 @@ package org.omg.CORBA;
  * <code>result</code> and <code>except</code> take an <code>Any</code>
  * object as a parameter. <p>
  *
- * @see org.omg.CORBA.DynamicImplementation
- * @see org.omg.CORBA.NVList
- * @see org.omg.CORBA.NamedValue
+ * @see DynamicImplementation
+ * @see NVList
+ * @see NamedValue
  *
  */
 
@@ -103,7 +103,7 @@ public abstract class ServerRequest {
      */
     public String operation()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -170,8 +170,8 @@ public abstract class ServerRequest {
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code>
      *      package comments for unimplemented features</a>
      */
-    public void arguments(org.omg.CORBA.NVList args) {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+    public void arguments(NVList args) {
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -233,9 +233,9 @@ public abstract class ServerRequest {
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code>
      *      package comments for unimplemented features</a>
      */
-    public void set_result(org.omg.CORBA.Any any)
+    public void set_result(Any any)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
 
@@ -286,7 +286,7 @@ public abstract class ServerRequest {
      */
     public void set_exception(Any any)
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**

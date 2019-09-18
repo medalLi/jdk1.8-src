@@ -31,7 +31,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynValue.html">DynValue</a> instead
  */
 @Deprecated
-public interface DynValue extends org.omg.CORBA.Object, org.omg.CORBA.DynAny {
+public interface DynValue extends Object, DynAny {
 
     /**
      * Returns the name of the current member while traversing a
@@ -56,7 +56,7 @@ public interface DynValue extends org.omg.CORBA.Object, org.omg.CORBA.DynAny {
      * @return an array of name-value pairs.
          * @see #set_members
      */
-    org.omg.CORBA.NameValuePair[] get_members();
+    NameValuePair[] get_members();
 
     /**
      * Sets the members of the value object this <code>DynValue</code>

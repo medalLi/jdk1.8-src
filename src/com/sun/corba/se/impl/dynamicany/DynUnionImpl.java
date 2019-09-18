@@ -199,7 +199,7 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     /**
     * Returns the current discriminator value.
     */
-    public org.omg.DynamicAny.DynAny get_discriminator () {
+    public DynAny get_discriminator () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -222,8 +222,8 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     // (has_no_active_member returns true in this case).
     // Otherwise the current position is set to 1 (has_no_active_member returns false and
     // component_count returns 2 in this case).
-    public void set_discriminator (org.omg.DynamicAny.DynAny newDiscriminator)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+    public void set_discriminator (DynAny newDiscriminator)
+        throws TypeMismatch
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -260,7 +260,7 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     // Calling set_to_default_member on a union that does not have an explicit
     // default case raises TypeMismatch.
     public void set_to_default_member ()
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+        throws TypeMismatch
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -289,7 +289,7 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     // or on a union that uses the entire range of discriminator values
     // for explicit case labels raises TypeMismatch.
     public void set_to_no_active_member ()
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+        throws TypeMismatch
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -330,7 +330,7 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
         return (checkInitComponents() ? (currentMemberIndex == NO_INDEX) : false);
     }
 
-    public org.omg.CORBA.TCKind discriminator_kind () {
+    public TCKind discriminator_kind () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -343,8 +343,8 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     // as the currently active member does not change.
     // Using the returned reference beyond the life time
     // of the currently active member raises OBJECT_NOT_EXIST.
-    public org.omg.DynamicAny.DynAny member ()
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public DynAny member ()
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -359,7 +359,7 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
     // the operation returns an empty string.
     // Calling member_name on a union without an active member raises InvalidValue.
     public String member_name ()
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -372,8 +372,8 @@ public class DynUnionImpl extends DynAnyConstructedImpl implements DynUnion
 
     // Returns the TCKind value of the TypeCode of the currently active member.
     // If the union has no active member, the operation raises InvalidValue.
-    public org.omg.CORBA.TCKind member_kind ()
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public TCKind member_kind ()
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;

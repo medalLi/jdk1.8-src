@@ -68,8 +68,8 @@ public class PersistentBindingIterator extends BindingIteratorImpl
      * @exception Exception a Java exception thrown of the base class cannot
      * initialize.
    */
-    public PersistentBindingIterator(org.omg.CORBA.ORB orb, Hashtable aTable,
-        POA thePOA ) throws java.lang.Exception
+    public PersistentBindingIterator(ORB orb, Hashtable aTable,
+                                     POA thePOA ) throws Exception
     {
         super(orb);
         this.orb = orb;
@@ -111,7 +111,7 @@ public class PersistentBindingIterator extends BindingIteratorImpl
 
     /**
    * Destroys this BindingIterator by disconnecting from the ORB
-   * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
+   * @exception SystemException One of a fixed set of CORBA system exceptions.
    */
     final public void Destroy()
     {
@@ -138,5 +138,5 @@ public class PersistentBindingIterator extends BindingIteratorImpl
     private int currentSize;
     private Hashtable theHashtable;
     private Enumeration theEnumeration;
-    private org.omg.CORBA.ORB orb;
+    private ORB orb;
 }

@@ -78,7 +78,7 @@ public interface ModelMBean extends
          * registered with the MBeanServer.
          * <P>
          * If the ModelMBean is currently registered, this method throws
-         * a {@link javax.management.RuntimeOperationsException} wrapping an
+         * a {@link RuntimeOperationsException} wrapping an
          * {@link IllegalStateException}
          *
          * @param inModelMBeanInfo The ModelMBeanInfo object to be used

@@ -37,7 +37,7 @@ import javax.lang.model.element.*;
  * unavailable or only approximate.
  *
  * <p>Printing a message with an {@linkplain
- * javax.tools.Diagnostic.Kind#ERROR error kind} will {@linkplain
+ * Diagnostic.Kind#ERROR error kind} will {@linkplain
  * RoundEnvironment#errorRaised raise an error}.
  *
  * <p>Note that the messages &quot;printed&quot; by methods in this

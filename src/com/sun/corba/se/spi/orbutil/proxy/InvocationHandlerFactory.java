@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.proxy ;
+package com.sun.corba.se.spi.orbutil.proxy;
 
 import java.lang.reflect.InvocationHandler ;
 

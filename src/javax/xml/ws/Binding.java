@@ -48,7 +48,7 @@ public interface Binding {
     *  @param chain    A List of handler configuration entries
     *  @throws WebServiceException On an error in the configuration of
     *                  the handler chain
-    *  @throws java.lang.UnsupportedOperationException If this
+    *  @throws UnsupportedOperationException If this
     *          operation is not supported. This may be done to
     *          avoid any overriding of a pre-configured handler
     *          chain.

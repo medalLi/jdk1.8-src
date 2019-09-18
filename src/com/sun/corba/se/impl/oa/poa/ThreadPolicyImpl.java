@@ -29,7 +29,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class ThreadPolicyImpl
-    extends org.omg.CORBA.LocalObject implements ThreadPolicy {
+    extends LocalObject implements ThreadPolicy {
 
     public ThreadPolicyImpl(ThreadPolicyValue value) {
         this.value = value;

@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.util.List ;
 import java.util.LinkedList ;

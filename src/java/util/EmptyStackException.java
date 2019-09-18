@@ -30,7 +30,7 @@ package java.util;
  * that the stack is empty.
  *
  * @author  Jonathan Payne
- * @see     java.util.Stack
+ * @see     Stack
  * @since   JDK1.0
  */
 public

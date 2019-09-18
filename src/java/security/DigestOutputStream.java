@@ -78,7 +78,7 @@ public class DigestOutputStream extends FilterOutputStream {
      * Returns the message digest associated with this stream.
      *
      * @return the message digest associated with this stream.
-     * @see #setMessageDigest(java.security.MessageDigest)
+     * @see #setMessageDigest(MessageDigest)
      */
     public MessageDigest getMessageDigest() {
         return digest;

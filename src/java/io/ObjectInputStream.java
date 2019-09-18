@@ -197,9 +197,9 @@ import sun.reflect.misc.ReflectUtil;
  *
  * @author      Mike Warres
  * @author      Roger Riggs
- * @see java.io.DataInput
- * @see java.io.ObjectOutputStream
- * @see java.io.Serializable
+ * @see DataInput
+ * @see ObjectOutputStream
+ * @see Serializable
  * @see <a href="../../../platform/serialization/spec/input.html"> Object Serialization Specification, Section 3, Object Input Classes</a>
  * @since   JDK1.1
  */
@@ -315,7 +315,7 @@ public class ObjectInputStream
      *          subclassing.
      * @throws  IOException if an I/O error occurs while creating this stream
      * @see SecurityManager#checkPermission
-     * @see java.io.SerializablePermission
+     * @see SerializablePermission
      */
     protected ObjectInputStream() throws IOException, SecurityException {
         SecurityManager sm = System.getSecurityManager();
@@ -527,7 +527,7 @@ public class ObjectInputStream
      *          objects.
      * @since 1.2
      */
-    public ObjectInputStream.GetField readFields()
+    public GetField readFields()
         throws IOException, ClassNotFoundException
     {
         SerialCallbackContext ctx = curContext;
@@ -768,7 +768,7 @@ public class ObjectInputStream
      *          <code>checkPermission</code> method denies enabling the stream
      *          to allow objects read from the stream to be replaced.
      * @see SecurityManager#checkPermission
-     * @see java.io.SerializablePermission
+     * @see SerializablePermission
      */
     protected boolean enableResolveObject(boolean enable)
         throws SecurityException
@@ -821,7 +821,7 @@ public class ObjectInputStream
      * @throws  IOException If an I/O error has occurred.
      * @throws  ClassNotFoundException If the Class of a serialized object used
      *          in the class descriptor representation cannot be found
-     * @see java.io.ObjectOutputStream#writeClassDescriptor(java.io.ObjectStreamClass)
+     * @see ObjectOutputStream#writeClassDescriptor(ObjectStreamClass)
      * @since 1.3
      */
     protected ObjectStreamClass readClassDescriptor()
@@ -853,7 +853,7 @@ public class ObjectInputStream
      * @return  the actual number of bytes read, -1 is returned when the end of
      *          the stream is reached.
      * @throws  IOException If an I/O error has occurred.
-     * @see java.io.DataInputStream#readFully(byte[],int,int)
+     * @see DataInputStream#readFully(byte[],int,int)
      */
     public int read(byte[] buf, int off, int len) throws IOException {
         if (buf == null) {

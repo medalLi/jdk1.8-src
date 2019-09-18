@@ -139,7 +139,7 @@ public abstract class CertPath implements Serializable {
     /**
      * Returns the type of {@code Certificate}s in this certification
      * path. This is the same string that would be returned by
-     * {@link java.security.cert.Certificate#getType() cert.getType()}
+     * {@link Certificate#getType() cert.getType()}
      * for all {@code Certificate}s in the certification path.
      *
      * @return the type of {@code Certificate}s in this certification

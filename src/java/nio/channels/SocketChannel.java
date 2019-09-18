@@ -132,9 +132,9 @@ public abstract class SocketChannel
      * Opens a socket channel.
      *
      * <p> The new channel is created by invoking the {@link
-     * java.nio.channels.spi.SelectorProvider#openSocketChannel
+     * SelectorProvider#openSocketChannel
      * openSocketChannel} method of the system-wide default {@link
-     * java.nio.channels.spi.SelectorProvider} object.  </p>
+     * SelectorProvider} object.  </p>
      *
      * @return  A new socket channel
      *
@@ -295,7 +295,7 @@ public abstract class SocketChannel
      * Retrieves a socket associated with this channel.
      *
      * <p> The returned object will not declare any public methods that are not
-     * declared in the {@link java.net.Socket} class.  </p>
+     * declared in the {@link Socket} class.  </p>
      *
      * @return  A socket associated with this channel
      */
@@ -334,9 +334,9 @@ public abstract class SocketChannel
      * occurs.
      *
      * <p> This method performs exactly the same security checks as the {@link
-     * java.net.Socket} class.  That is, if a security manager has been
+     * Socket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
-     * java.lang.SecurityManager#checkConnect checkConnect} method permits
+     * SecurityManager#checkConnect checkConnect} method permits
      * connecting to the address and port number of the given remote endpoint.
      *
      * <p> This method may be invoked at any time.  If a read or write
@@ -397,7 +397,7 @@ public abstract class SocketChannel
      * failed, the socket channel will become connectable and this method may
      * be invoked to complete the connection sequence.  If the connection
      * operation failed then invoking this method will cause an appropriate
-     * {@link java.io.IOException} to be thrown.
+     * {@link IOException} to be thrown.
      *
      * <p> If this channel is already connected then this method will not block
      * and will immediately return <tt>true</tt>.  If this channel is in

@@ -229,8 +229,8 @@ public abstract class CalendarNameProvider extends LocaleServiceProvider {
      *         if {@code field} or {@code style} is invalid
      * @throws NullPointerException if {@code locale} is {@code null}
      * @see TimeZoneNameProvider
-     * @see java.util.Calendar#get(int)
-     * @see java.util.Calendar#getDisplayName(int, int, Locale)
+     * @see Calendar#get(int)
+     * @see Calendar#getDisplayName(int, int, Locale)
      */
     public abstract String getDisplayName(String calendarType,
                                           int field, int value,

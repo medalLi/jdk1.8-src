@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.presentation.rmi ;
+package com.sun.corba.se.spi.presentation.rmi;
 
 import java.rmi.RemoteException ;
 
@@ -41,7 +41,7 @@ public interface DynamicStub extends org.omg.CORBA.Object
 {
     /** Similar to ObjectImpl._set_delegate
      */
-    void setDelegate( Delegate delegate ) ;
+    void setDelegate(Delegate delegate) ;
 
     /** Similar to ObjectImpl._get_delegate
      */
@@ -61,9 +61,9 @@ public interface DynamicStub extends org.omg.CORBA.Object
      * It is not needed when unmarshalling from a
      * org.omg.CORBA.portable.InputStream.
      */
-    void connect( ORB orb ) throws RemoteException ;
+    void connect(ORB orb) throws RemoteException ;
 
     boolean isLocal() ;
 
-    OutputStream request( String operation, boolean responseExpected ) ;
+    OutputStream request(String operation, boolean responseExpected) ;
 }

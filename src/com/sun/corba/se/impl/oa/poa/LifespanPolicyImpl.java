@@ -29,7 +29,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class LifespanPolicyImpl
-    extends org.omg.CORBA.LocalObject implements LifespanPolicy {
+    extends LocalObject implements LifespanPolicy {
 
     public LifespanPolicyImpl(LifespanPolicyValue value) {
         this.value = value;

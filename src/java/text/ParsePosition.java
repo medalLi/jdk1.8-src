@@ -51,7 +51,7 @@ package java.text;
  * records the current position.
  *
  * @author      Mark Davis
- * @see         java.text.Format
+ * @see         Format
  */
 
 public class ParsePosition {

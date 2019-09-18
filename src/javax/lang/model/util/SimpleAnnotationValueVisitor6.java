@@ -43,7 +43,7 @@ import javax.annotation.processing.SupportedSourceVersion;
  *
  * <p> Methods in this class may be overridden subject to their
  * general contract.  Note that annotating methods in concrete
- * subclasses with {@link java.lang.Override @Override} will help
+ * subclasses with {@link Override @Override} will help
  * ensure that methods are overridden as intended.
  *
  * <p> <b>WARNING:</b> The {@code AnnotationValueVisitor} interface

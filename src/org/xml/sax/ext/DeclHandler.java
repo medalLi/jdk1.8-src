@@ -54,8 +54,8 @@ import org.xml.sax.SAXException;
  *
  * <p>If you are using the declaration handler together with a lexical
  * handler, all of the events will occur between the
- * {@link org.xml.sax.ext.LexicalHandler#startDTD startDTD} and the
- * {@link org.xml.sax.ext.LexicalHandler#endDTD endDTD} events.</p>
+ * {@link LexicalHandler#startDTD startDTD} and the
+ * {@link LexicalHandler#endDTD endDTD} events.</p>
  *
  * <p>To set the DeclHandler for an XML reader, use the
  * {@link org.xml.sax.XMLReader#setProperty setProperty} method
@@ -88,7 +88,7 @@ public interface DeclHandler
      * @param model The content model as a normalized string.
      * @exception SAXException The application may raise an exception.
      */
-    public abstract void elementDecl (String name, String model)
+    public abstract void elementDecl(String name, String model)
         throws SAXException;
 
 
@@ -117,11 +117,11 @@ public interface DeclHandler
      *        or null if there is none.
      * @exception SAXException The application may raise an exception.
      */
-    public abstract void attributeDecl (String eName,
-                                        String aName,
-                                        String type,
-                                        String mode,
-                                        String value)
+    public abstract void attributeDecl(String eName,
+                                       String aName,
+                                       String type,
+                                       String mode,
+                                       String value)
         throws SAXException;
 
 
@@ -139,7 +139,7 @@ public interface DeclHandler
      * @see #externalEntityDecl
      * @see org.xml.sax.DTDHandler#unparsedEntityDecl
      */
-    public abstract void internalEntityDecl (String name, String value)
+    public abstract void internalEntityDecl(String name, String value)
         throws SAXException;
 
 
@@ -161,8 +161,8 @@ public interface DeclHandler
      * @see #internalEntityDecl
      * @see org.xml.sax.DTDHandler#unparsedEntityDecl
      */
-    public abstract void externalEntityDecl (String name, String publicId,
-                                             String systemId)
+    public abstract void externalEntityDecl(String name, String publicId,
+                                            String systemId)
         throws SAXException;
 
 }

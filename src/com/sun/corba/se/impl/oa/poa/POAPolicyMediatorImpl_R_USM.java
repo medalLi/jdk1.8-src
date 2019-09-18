@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import java.util.Set ;
 
@@ -94,7 +94,7 @@ public class POAPolicyMediatorImpl_R_USM extends POAPolicyMediatorBase_R {
         return result ;
     }
 
-    protected java.lang.Object internalGetServant( byte[] id,
+    protected Object internalGetServant( byte[] id,
         String operation ) throws ForwardRequest
     {
         if (poa.getDebug()) {
@@ -106,7 +106,7 @@ public class POAPolicyMediatorImpl_R_USM extends POAPolicyMediatorBase_R {
         try {
             ActiveObjectMap.Key key = new ActiveObjectMap.Key( id ) ;
             AOMEntry entry = enterEntry(key) ;
-            java.lang.Object servant = activeObjectMap.getServant( entry ) ;
+            Object servant = activeObjectMap.getServant( entry ) ;
             if (servant != null) {
                 if (poa.getDebug()) {
                     ORBUtility.dprint( this,

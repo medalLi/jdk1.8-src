@@ -76,7 +76,7 @@ class IIONamedNodeMap implements NamedNodeMap {
         return node;
     }
 
-    public Node removeNamedItem(java.lang.String name) {
+    public Node removeNamedItem(String name) {
         throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
                                "This NamedNodeMap is read-only!");
     }

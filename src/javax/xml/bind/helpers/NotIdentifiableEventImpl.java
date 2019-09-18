@@ -40,7 +40,7 @@ import javax.xml.bind.ValidationEventLocator;
  * @see javax.xml.bind.Validator
  * @see javax.xml.bind.ValidationEventHandler
  * @see javax.xml.bind.ValidationEvent
- * @see javax.xml.bind.ValidationEventLocator
+ * @see ValidationEventLocator
  * @since JAXB1.0
  */
 public class NotIdentifiableEventImpl

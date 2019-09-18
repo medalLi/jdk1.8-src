@@ -218,7 +218,7 @@ public final class XMLConstants {
          * jar[:scheme]<br><br>
          *
          * Protocols including the keyword "jar" are case-insensitive. Any whitespaces as defined by
-         * {@link java.lang.Character#isSpaceChar } in the value will be ignored.
+         * {@link Character#isSpaceChar } in the value will be ignored.
          * Examples of protocols are file, http, jar:file.
          *
          * </blockquote>
@@ -285,7 +285,7 @@ public final class XMLConstants {
          * jar[:scheme]<br><br>
          *
          * Protocols including the keyword "jar" are case-insensitive. Any whitespaces as defined by
-         * {@link java.lang.Character#isSpaceChar } in the value will be ignored.
+         * {@link Character#isSpaceChar } in the value will be ignored.
          * Examples of protocols are file, http, jar:file.
          *
          * </blockquote>
@@ -351,7 +351,7 @@ public final class XMLConstants {
          * jar[:scheme]<br><br>
          *
          * Protocols including the keyword "jar" are case-insensitive. Any whitespaces as defined by
-         * {@link java.lang.Character#isSpaceChar } in the value will be ignored.
+         * {@link Character#isSpaceChar } in the value will be ignored.
          * Examples of protocols are file, http, jar:file.
          *
          * </blockquote>

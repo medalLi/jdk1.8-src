@@ -48,7 +48,7 @@ import java.lang.ref.WeakReference;
  * This means that if the currently selected window is maximized
  * and another window is selected, that new window will be maximized.
  *
- * @see javax.swing.DefaultDesktopManager
+ * @see DefaultDesktopManager
  * @author Thomas Ball
  */
 public class WindowsDesktopManager extends DefaultDesktopManager

@@ -845,7 +845,7 @@ public class IndexColorModel extends ColorModel {
      * Returns a data element array representation of a pixel in this
      * ColorModel, given an integer pixel representation in the
      * default RGB color model.  This array can then be passed to the
-     * {@link WritableRaster#setDataElements(int, int, java.lang.Object) setDataElements}
+     * {@link WritableRaster#setDataElements(int, int, Object) setDataElements}
      * method of a {@link WritableRaster} object.  If the pixel variable is
      * <code>null</code>, a new array is allocated.  If <code>pixel</code>
      * is not <code>null</code>, it must be

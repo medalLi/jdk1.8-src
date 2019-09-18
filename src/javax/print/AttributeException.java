@@ -48,7 +48,7 @@ public interface AttributeException {
      * Service instance does not support the attribute at all, or null if
      * there are no such attributes. The objects in the returned array are
      * classes that extend the base interface
-     * {@link javax.print.attribute.Attribute Attribute}.
+     * {@link Attribute Attribute}.
      *
      * @return unsupported attribute classes
      */

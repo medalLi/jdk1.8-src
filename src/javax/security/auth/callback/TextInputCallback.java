@@ -31,7 +31,7 @@ package javax.security.auth.callback;
  * method of a {@code CallbackHandler} to retrieve generic text
  * information.
  *
- * @see javax.security.auth.callback.CallbackHandler
+ * @see CallbackHandler
  */
 public class TextInputCallback implements Callback, java.io.Serializable {
 

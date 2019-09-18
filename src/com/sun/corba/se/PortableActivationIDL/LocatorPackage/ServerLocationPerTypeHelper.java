@@ -12,7 +12,7 @@ abstract public class ServerLocationPerTypeHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/Locator/ServerLocationPerType:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType that)
+  public static void insert (org.omg.CORBA.Any a, ServerLocationPerType that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ServerLocationPerTypeHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType extract (org.omg.CORBA.Any a)
+  public static ServerLocationPerType extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -54,7 +54,7 @@ abstract public class ServerLocationPerTypeHelper
             "ports",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerTypeHelper.id (), "ServerLocationPerType", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (ServerLocationPerTypeHelper.id (), "ServerLocationPerType", _members0);
           __active = false;
         }
       }
@@ -67,15 +67,15 @@ abstract public class ServerLocationPerTypeHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType read (org.omg.CORBA.portable.InputStream istream)
+  public static ServerLocationPerType read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType value = new com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType ();
+    ServerLocationPerType value = new ServerLocationPerType ();
     value.hostname = istream.read_string ();
     value.ports = com.sun.corba.se.PortableActivationIDL.ORBPortInfoListHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServerLocationPerType value)
   {
     ostream.write_string (value.hostname);
     com.sun.corba.se.PortableActivationIDL.ORBPortInfoListHelper.write (ostream, value.ports);

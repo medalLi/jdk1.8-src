@@ -52,8 +52,8 @@ public class ScrollPaneAdjustable implements Adjustable, Serializable {
      *
      * @serial
      * @see #getOrientation
-     * @see java.awt.Adjustable#HORIZONTAL
-     * @see java.awt.Adjustable#VERTICAL
+     * @see Adjustable#HORIZONTAL
+     * @see Adjustable#VERTICAL
      */
     private int orientation;
 
@@ -370,8 +370,8 @@ public class ScrollPaneAdjustable implements Adjustable, Serializable {
      * @param    l   the adjustment listener.
      * @see      #removeAdjustmentListener
      * @see      #getAdjustmentListeners
-     * @see      java.awt.event.AdjustmentListener
-     * @see      java.awt.event.AdjustmentEvent
+     * @see      AdjustmentListener
+     * @see      AdjustmentEvent
      */
     public synchronized void addAdjustmentListener(AdjustmentListener l) {
         if (l == null) {
@@ -391,8 +391,8 @@ public class ScrollPaneAdjustable implements Adjustable, Serializable {
      * @param         l     the adjustment listener.
      * @see           #addAdjustmentListener
      * @see           #getAdjustmentListeners
-     * @see           java.awt.event.AdjustmentListener
-     * @see           java.awt.event.AdjustmentEvent
+     * @see           AdjustmentListener
+     * @see           AdjustmentEvent
      * @since         JDK1.1
      */
     public synchronized void removeAdjustmentListener(AdjustmentListener l){
@@ -413,8 +413,8 @@ public class ScrollPaneAdjustable implements Adjustable, Serializable {
      *
      * @see           #addAdjustmentListener
      * @see           #removeAdjustmentListener
-     * @see           java.awt.event.AdjustmentListener
-     * @see           java.awt.event.AdjustmentEvent
+     * @see           AdjustmentListener
+     * @see           AdjustmentEvent
      * @since 1.4
      */
     public synchronized AdjustmentListener[] getAdjustmentListeners() {

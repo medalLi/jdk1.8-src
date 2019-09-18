@@ -43,7 +43,7 @@ import javax.management.loading.ClassLoaderRepository;
  * rewritten.</p>
  *
  * @deprecated Use
- * {@link javax.management.MBeanServer#getClassLoaderRepository()}
+ * {@link MBeanServer#getClassLoaderRepository()}
  * instead.
  *
  * @since 1.5

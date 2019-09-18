@@ -106,11 +106,11 @@ import java.security.*;
  * </table>
  *<p>
  * @since 1.3
- * @see java.security.BasicPermission
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see BasicPermission
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  */
 

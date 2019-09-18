@@ -102,7 +102,7 @@ import java.util.Objects;
  * as well as the offset from UTC/Greenwich. For example, the value
  * "2nd October 2007 at 13:45.30.123456789 +02:00" can be stored in an {@code OffsetDateTime}.
  * <p>
- * {@code OffsetDateTime}, {@link java.time.ZonedDateTime} and {@link java.time.Instant} all store an instant
+ * {@code OffsetDateTime}, {@link ZonedDateTime} and {@link Instant} all store an instant
  * on the time-line to nanosecond precision.
  * {@code Instant} is the simplest, simply representing the instant.
  * {@code OffsetDateTime} adds to the instant the offset from UTC/Greenwich, which allows
@@ -199,7 +199,7 @@ public final class OffsetDateTime
     /**
      * Obtains the current date-time from the system clock in the default time-zone.
      * <p>
-     * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
+     * This will query the {@link Clock#systemDefaultZone() system clock} in the default
      * time-zone to obtain the current date-time.
      * The offset will be calculated from the time-zone in the clock.
      * <p>
@@ -215,7 +215,7 @@ public final class OffsetDateTime
     /**
      * Obtains the current date-time from the system clock in the specified time-zone.
      * <p>
-     * This will query the {@link Clock#system(java.time.ZoneId) system clock} to obtain the current date-time.
+     * This will query the {@link Clock#system(ZoneId) system clock} to obtain the current date-time.
      * Specifying the time-zone avoids dependence on the default time-zone.
      * The offset will be calculated from the specified time-zone.
      * <p>
@@ -377,7 +377,7 @@ public final class OffsetDateTime
      * such as {@code 2007-12-03T10:15:30+01:00}.
      * <p>
      * The string must represent a valid date-time and is parsed using
-     * {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME}.
+     * {@link DateTimeFormatter#ISO_OFFSET_DATE_TIME}.
      *
      * @param text  the text to parse such as "2007-12-03T10:15:30+01:00", not null
      * @return the parsed offset date-time, not null
@@ -796,10 +796,10 @@ public final class OffsetDateTime
     /**
      * Gets the day-of-week field, which is an enum {@code DayOfWeek}.
      * <p>
-     * This method returns the enum {@link java.time.DayOfWeek} for the day-of-week.
+     * This method returns the enum {@link DayOfWeek} for the day-of-week.
      * This avoids confusion as to what {@code int} values mean.
      * If you need access to the primitive {@code int} value then the enum
-     * provides the {@link java.time.DayOfWeek#getValue() int value}.
+     * provides the {@link DayOfWeek#getValue() int value}.
      * <p>
      * Additional information can be obtained from the {@code DayOfWeek}.
      * This includes textual names of the values.
@@ -872,7 +872,7 @@ public final class OffsetDateTime
      * A selection of common adjustments is provided in {@link TemporalAdjuster}.
      * These include finding the "last day of the month" and "next Wednesday".
      * Key date-time classes also implement the {@code TemporalAdjuster} interface,
-     * such as {@link Month} and {@link java.time.MonthDay MonthDay}.
+     * such as {@link Month} and {@link MonthDay MonthDay}.
      * The adjuster is responsible for handling special cases, such as the varying
      * lengths of month and leap years.
      * <p>

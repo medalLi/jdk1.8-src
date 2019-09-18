@@ -12,7 +12,7 @@ abstract public class InvalidPolicyHelper
 {
   private static String  _id = "IDL:omg.org/PortableServer/POA/InvalidPolicy:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableServer.POAPackage.InvalidPolicy that)
+  public static void insert (org.omg.CORBA.Any a, InvalidPolicy that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class InvalidPolicyHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableServer.POAPackage.InvalidPolicy extract (org.omg.CORBA.Any a)
+  public static InvalidPolicy extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -47,7 +47,7 @@ abstract public class InvalidPolicyHelper
             "index",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.PortableServer.POAPackage.InvalidPolicyHelper.id (), "InvalidPolicy", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (InvalidPolicyHelper.id (), "InvalidPolicy", _members0);
           __active = false;
         }
       }
@@ -60,16 +60,16 @@ abstract public class InvalidPolicyHelper
     return _id;
   }
 
-  public static org.omg.PortableServer.POAPackage.InvalidPolicy read (org.omg.CORBA.portable.InputStream istream)
+  public static InvalidPolicy read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.PortableServer.POAPackage.InvalidPolicy value = new org.omg.PortableServer.POAPackage.InvalidPolicy ();
+    InvalidPolicy value = new InvalidPolicy ();
     // read and discard the repository ID
     istream.read_string ();
     value.index = istream.read_ushort ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableServer.POAPackage.InvalidPolicy value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, InvalidPolicy value)
   {
     // write the repository ID
     ostream.write_string (id ());

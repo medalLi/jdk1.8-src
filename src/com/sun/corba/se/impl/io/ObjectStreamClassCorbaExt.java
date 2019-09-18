@@ -72,8 +72,8 @@ class ObjectStreamClassCorbaExt {
             boolean exceptionMatch = false;
             for (int j = 0; (j < exceptions.length) && !exceptionMatch; j++) {
                 if ((java.rmi.RemoteException.class == exceptions[j]) ||
-                    (java.lang.Throwable.class == exceptions[j]) ||
-                    (java.lang.Exception.class == exceptions[j]) ||
+                    (Throwable.class == exceptions[j]) ||
+                    (Exception.class == exceptions[j]) ||
                     (java.io.IOException.class == exceptions[j])) {
                     exceptionMatch = true;
                 }

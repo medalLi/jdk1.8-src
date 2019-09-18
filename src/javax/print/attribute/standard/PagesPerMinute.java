@@ -92,7 +92,7 @@ public final class PagesPerMinute extends IntegerSyntax
      * For class PagesPerMinute, the category is class PagesPerMinute itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return PagesPerMinute.class;

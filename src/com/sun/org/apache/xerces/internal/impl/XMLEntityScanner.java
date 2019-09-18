@@ -278,7 +278,7 @@ public class XMLEntityScanner implements XMLLocator  {
     } // getBaseSystemId():String
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setBaseSystemId(String)
+     * @see XMLResourceIdentifier#setBaseSystemId(String)
      */
     public void setBaseSystemId(String systemId) {
         //no-op
@@ -292,7 +292,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setLineNumber(int)
+     * @see XMLLocator#setLineNumber(int)
      */
     public void setLineNumber(int line) {
         //no-op
@@ -306,7 +306,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setColumnNumber(int)
+     * @see XMLLocator#setColumnNumber(int)
      */
     public void setColumnNumber(int col) {
         // no-op
@@ -323,7 +323,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setExpandedSystemId(String)
+     * @see XMLResourceIdentifier#setExpandedSystemId(String)
      */
     public void setExpandedSystemId(String systemId) {
         //no-op
@@ -335,7 +335,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setLiteralSystemId(String)
+     * @see XMLResourceIdentifier#setLiteralSystemId(String)
      */
     public void setLiteralSystemId(String systemId) {
         //no-op
@@ -347,7 +347,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     /**
-     * @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setPublicId(String)
+     * @see XMLResourceIdentifier#setPublicId(String)
      */
     public void setPublicId(String publicId) {
         //no-op
@@ -397,7 +397,7 @@ public class XMLEntityScanner implements XMLLocator  {
      *
      * @throws IOException Thrown if the new encoding is not supported.
      *
-     * @see com.sun.org.apache.xerces.internal.util.EncodingMap
+     * @see EncodingMap
      */
     public final void setEncoding(String encoding) throws IOException {
 
@@ -572,8 +572,8 @@ public class XMLEntityScanner implements XMLLocator  {
      * @throws IOException  Thrown if i/o error occurs.
      * @throws EOFException Thrown on end of file.
      *
-     * @see com.sun.org.apache.xerces.internal.util.SymbolTable
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
+     * @see SymbolTable
+     * @see XMLChar#isName
      */
     public String scanNmtoken() throws IOException {
         if (DEBUG_BUFFER) {
@@ -650,9 +650,9 @@ public class XMLEntityScanner implements XMLLocator  {
      * @throws IOException  Thrown if i/o error occurs.
      * @throws EOFException Thrown on end of file.
      *
-     * @see com.sun.org.apache.xerces.internal.util.SymbolTable
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
+     * @see SymbolTable
+     * @see XMLChar#isName
+     * @see XMLChar#isNameStart
      */
     public String scanName() throws IOException {
         if (DEBUG_BUFFER) {
@@ -751,9 +751,9 @@ public class XMLEntityScanner implements XMLLocator  {
      * @throws IOException  Thrown if i/o error occurs.
      * @throws EOFException Thrown on end of file.
      *
-     * @see com.sun.org.apache.xerces.internal.util.SymbolTable
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
+     * @see SymbolTable
+     * @see XMLChar#isName
+     * @see XMLChar#isNameStart
      */
     public boolean scanQName(QName qname) throws IOException {
         if (DEBUG_BUFFER) {
@@ -1468,7 +1468,7 @@ public class XMLEntityScanner implements XMLLocator  {
      * @throws IOException  Thrown if i/o error occurs.
      * @throws EOFException Thrown on end of file.
      *
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
+     * @see XMLChar#isSpace
      */
     public boolean skipSpaces() throws IOException {
         if (DEBUG_BUFFER) {
@@ -2080,7 +2080,7 @@ public class XMLEntityScanner implements XMLLocator  {
      * @throws IOException  Thrown if i/o error occurs.
      * @throws EOFException Thrown on end of file.
      *
-     * @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
+     * @see XMLChar#isSpace
      */
     public final boolean skipDeclSpaces() throws IOException {
         if (DEBUG_BUFFER) {

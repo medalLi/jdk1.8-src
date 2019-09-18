@@ -35,7 +35,7 @@ import java.security.spec.ECPoint;
  *
  * @see PublicKey
  * @see ECKey
- * @see java.security.spec.ECPoint
+ * @see ECPoint
  *
  * @since 1.5
  */

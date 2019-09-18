@@ -221,7 +221,7 @@ public class INSURLOperationImpl implements Operation
 
         // corbalocObject cannot be null, because it's validated during
         // parsing. So no null check is required.
-        java.util.List theEndpointInfo = corbalocObject.getEndpointInfo();
+        List theEndpointInfo = corbalocObject.getEndpointInfo();
         String theKeyString = corbalocObject.getKeyString();
         // If there is no KeyString then it's invalid
         if( theKeyString == null ) {
@@ -231,7 +231,7 @@ public class INSURLOperationImpl implements Operation
         ObjectKey key = orb.getObjectKeyFactory().create(
             theKeyString.getBytes() );
         IORTemplate iortemp = IORFactories.makeIORTemplate( key.getTemplate() );
-        java.util.Iterator iterator = theEndpointInfo.iterator( );
+        Iterator iterator = theEndpointInfo.iterator( );
         while( iterator.hasNext( ) ) {
             IIOPEndpointInfo element =
                 (IIOPEndpointInfo) iterator.next( );

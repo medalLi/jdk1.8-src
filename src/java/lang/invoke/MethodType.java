@@ -208,7 +208,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with the given components.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param rtype  the return type
      * @param ptypes the parameter types
      * @return a method type with the given components
@@ -229,7 +229,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with the given components.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * The leading parameter type is prepended to the remaining array.
      * @param rtype  the return type
      * @param ptype0 the first parameter type
@@ -248,7 +248,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with the given components.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * The resulting method has no parameter types.
      * @param rtype  the return type
      * @return a method type with the given return value
@@ -261,7 +261,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with the given components.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * The resulting method has the single given parameter type.
      * @param rtype  the return type
      * @param ptype0 the parameter type
@@ -276,7 +276,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with the given components.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * The resulting method has the same parameter types as {@code ptypes},
      * and the specified return type.
      * @param rtype  the return type
@@ -313,7 +313,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type whose components are {@code Object} with an optional trailing {@code Object[]} array.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * All parameters and the return type will be {@code Object},
      * except the final array parameter if any, which will be {@code Object[]}.
      * @param objectArgCount number of parameters (excluding the final array parameter if any)
@@ -344,7 +344,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type whose components are all {@code Object}.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * All parameters and the return type will be Object.
      * @param objectArgCount number of parameters
      * @return a generally applicable method type, for all calls of the given argument count
@@ -358,7 +358,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with a single different parameter type.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param num    the index (zero-based) of the parameter type to change
      * @param nptype a new parameter type to replace the old one with
      * @return the same type, except with the selected parameter changed
@@ -376,7 +376,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with additional parameter types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param num    the position (zero-based) of the inserted parameter type(s)
      * @param ptypesToInsert zero or more new parameter types to insert into the parameter list
      * @return the same type, except with the selected parameter(s) inserted
@@ -401,7 +401,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with additional parameter types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param ptypesToInsert zero or more new parameter types to insert after the end of the parameter list
      * @return the same type, except with the selected parameter(s) appended
      * @throws IllegalArgumentException if any element of {@code ptypesToInsert} is {@code void.class}
@@ -414,7 +414,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with additional parameter types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param num    the position (zero-based) of the inserted parameter type(s)
      * @param ptypesToInsert zero or more new parameter types to insert into the parameter list
      * @return the same type, except with the selected parameter(s) inserted
@@ -429,7 +429,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with additional parameter types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param ptypesToInsert zero or more new parameter types to insert after the end of the parameter list
      * @return the same type, except with the selected parameter(s) appended
      * @throws IllegalArgumentException if any element of {@code ptypesToInsert} is {@code void.class}
@@ -442,7 +442,7 @@ class MethodType implements java.io.Serializable {
 
      /**
      * Finds or creates a method type with modified parameter types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param start  the position (zero-based) of the first replaced parameter type(s)
      * @param end    the position (zero-based) after the last replaced parameter type(s)
      * @param ptypesToInsert zero or more new parameter types to insert into the parameter list
@@ -468,7 +468,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with some parameter types omitted.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param start  the index (zero-based) of the first parameter type to remove
      * @param end    the index (greater than {@code start}) of the first parameter type after not to remove
      * @return the same type, except with the selected parameter(s) removed
@@ -505,7 +505,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates a method type with a different return type.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * @param nrtype a return parameter type to replace the old one with
      * @return the same type, except with the return type change
      * @throws NullPointerException if {@code nrtype} is null
@@ -537,7 +537,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Erases all reference types to {@code Object}.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * All primitive types (including {@code void}) will remain unchanged.
      * @return a version of the original type with all reference types replaced
      */
@@ -575,7 +575,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Converts all primitive types to their corresponding wrapper types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * All reference types (including wrapper types) will remain unchanged.
      * A {@code void} return type is changed to the type {@code java.lang.Void}.
      * The expression {@code type.wrap().erase()} produces the same value
@@ -588,7 +588,7 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Converts all wrapper types to their corresponding primitive types.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * All primitive types (including {@code void}) will remain unchanged.
      * A return type of {@code java.lang.Void} is changed to {@code void}.
      * @return a version of the original type with all wrapper types replaced
@@ -713,7 +713,7 @@ class MethodType implements java.io.Serializable {
      * followed immediately by the return type.
      * <p>
      * Each type is represented by its
-     * {@link java.lang.Class#getSimpleName simple name}.
+     * {@link Class#getSimpleName simple name}.
      */
     @Override
     public String toString() {
@@ -883,9 +883,9 @@ class MethodType implements java.io.Serializable {
 
     /**
      * Finds or creates an instance of a method type, given the spelling of its bytecode descriptor.
-     * Convenience method for {@link #methodType(java.lang.Class, java.lang.Class[]) methodType}.
+     * Convenience method for {@link #methodType(Class, Class[]) methodType}.
      * Any class or interface name embedded in the descriptor string
-     * will be resolved by calling {@link ClassLoader#loadClass(java.lang.String)}
+     * will be resolved by calling {@link ClassLoader#loadClass(String)}
      * on the given loader (or if it is null, on the system class loader).
      * <p>
      * Note that it is possible to encounter method types which cannot be
@@ -924,7 +924,7 @@ class MethodType implements java.io.Serializable {
      * <p>
      * This method is included for the benefit of applications that must
      * generate bytecodes that process method handles and {@code invokedynamic}.
-     * {@link #fromMethodDescriptorString(java.lang.String, java.lang.ClassLoader) fromMethodDescriptorString},
+     * {@link #fromMethodDescriptorString(String, ClassLoader) fromMethodDescriptorString},
      * because the latter requires a suitable class loader argument.
      * @return the bytecode type descriptor representation
      */

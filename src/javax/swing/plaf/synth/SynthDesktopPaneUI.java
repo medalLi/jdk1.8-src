@@ -35,7 +35,7 @@ import java.awt.*;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JDesktopPane}.
+ * {@link JDesktopPane}.
  *
  * @author Joshua Outwater
  * @author Steve Wilson

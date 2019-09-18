@@ -586,7 +586,7 @@ public final class TransformerImpl extends Transformer
     }
 
     /**
-     * Returns the {@link com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl}
+     * Returns the {@link TransformerFactoryImpl}
      * object that create this <code>Transformer</code>.
      */
     protected TransformerFactoryImpl getTransformerFactory() {
@@ -594,7 +594,7 @@ public final class TransformerImpl extends Transformer
     }
 
     /**
-     * Returns the {@link com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory}
+     * Returns the {@link TransletOutputHandlerFactory}
      * object that create the <code>TransletOutputHandler</code>.
      */
     protected TransletOutputHandlerFactory getTransletOutputHandlerFactory() {

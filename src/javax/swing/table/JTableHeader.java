@@ -58,7 +58,7 @@ import java.io.IOException;
  *
  * @author Alan Chung
  * @author Philip Milne
- * @see javax.swing.JTable
+ * @see JTable
  */
 public class JTableHeader extends JComponent implements TableColumnModelListener, Accessible
 {

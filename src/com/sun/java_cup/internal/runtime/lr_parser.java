@@ -130,9 +130,9 @@ import java.util.Stack;
  *         report_fatal_error("Couldn't repair and continue parse", null);
  *  </dl>
  *
- * @see     com.sun.java_cup.internal.runtime.Symbol
- * @see     com.sun.java_cup.internal.runtime.Symbol
- * @see     com.sun.java_cup.internal.runtime.virtual_parse_stack
+ * @see     Symbol
+ * @see     Symbol
+ * @see     virtual_parse_stack
  * @author  Frank Flannery
  */
 
@@ -197,7 +197,7 @@ public abstract class lr_parser {
    *  state shifted to).  Reduces are encoded as negative values (one less
    *  than the production reduced by).  Error entries are denoted by zero.
    *
-   * @see com.sun.java_cup.internal.runtime.lr_parser#get_action
+   * @see lr_parser#get_action
    */
   public abstract short[][] action_table();
 
@@ -214,7 +214,7 @@ public abstract class lr_parser {
    *  then indexed by that state and the LHS of the reducing production to
    *  indicate where to "shift" to.
    *
-   * @see com.sun.java_cup.internal.runtime.lr_parser#get_reduce
+   * @see lr_parser#get_reduce
    */
   public abstract short[][] reduce_table();
 
@@ -324,7 +324,7 @@ public abstract class lr_parser {
     lr_parser parser,
     Stack     stack,
     int       top)
-    throws java.lang.Exception;
+    throws Exception;
 
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
 
@@ -335,7 +335,7 @@ public abstract class lr_parser {
    *  overridden by the generated code using this contents of the "init with"
    *  clause as its body.
    */
-  public void user_init() throws java.lang.Exception { }
+  public void user_init() throws Exception { }
 
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
 
@@ -343,7 +343,7 @@ public abstract class lr_parser {
    *  any parse actions. This is filled in by generated code to create
    *  an object that encapsulates all action code.
    */
-  protected abstract void init_actions() throws java.lang.Exception;
+  protected abstract void init_actions() throws Exception;
 
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
 
@@ -355,7 +355,7 @@ public abstract class lr_parser {
    *  the "scan with" clause.  Do not recycle objects; every call to
    *  scan() should return a fresh object.
    */
-  public Symbol scan() throws java.lang.Exception {
+  public Symbol scan() throws Exception {
     return getScanner().next_token();
   }
 
@@ -372,7 +372,7 @@ public abstract class lr_parser {
   public void report_fatal_error(
     String   message,
     Object   info)
-    throws java.lang.Exception
+    throws Exception
     {
       /* stop parsing (not really necessary since we throw an exception, but) */
       done_parsing();
@@ -427,7 +427,7 @@ public abstract class lr_parser {
    * @param cur_token the current lookahead Symbol.
    */
   public void unrecovered_syntax_error(Symbol cur_token)
-    throws java.lang.Exception
+    throws Exception
     {
       report_fatal_error("Couldn't repair and continue parse", cur_token);
     }
@@ -530,7 +530,7 @@ public abstract class lr_parser {
    *  documentation for the class regarding how shift/reduce parsers operate
    *  and how the various tables are used.
    */
-  public Symbol parse() throws java.lang.Exception
+  public Symbol parse() throws Exception
     {
       /* the current action code */
       int act;
@@ -717,7 +717,7 @@ public abstract class lr_parser {
    *  and produces various other debugging messages.
    */
   public Symbol debug_parse()
-    throws java.lang.Exception
+    throws Exception
     {
       /* the current action code */
       int act;
@@ -860,7 +860,7 @@ public abstract class lr_parser {
    * @param debug should we produce debugging messages as we parse.
    */
   protected boolean error_recovery(boolean debug)
-    throws java.lang.Exception
+    throws Exception
     {
       if (debug) debug_message("# Attempting error recovery");
 
@@ -989,7 +989,7 @@ public abstract class lr_parser {
   /** Read from input to establish our buffer of "parse ahead" lookahead
    *  Symbols.
    */
-  protected void read_lookahead() throws java.lang.Exception
+  protected void read_lookahead() throws Exception
     {
       /* create the lookahead array */
       lookahead = new Symbol[error_sync_size()];
@@ -1029,7 +1029,7 @@ public abstract class lr_parser {
   /** Reset the parse ahead input to one Symbol past where we started error
    *  recovery (this consumes one new Symbol from the real input).
    */
-  protected void restart_lookahead() throws java.lang.Exception
+  protected void restart_lookahead() throws Exception
     {
       /* move all the existing input over */
       for (int i = 1; i < error_sync_size(); i++)
@@ -1055,7 +1055,7 @@ public abstract class lr_parser {
    * @param debug should we produce debugging messages as we parse.
    */
   protected boolean try_parse_ahead(boolean debug)
-    throws java.lang.Exception
+    throws Exception
     {
       int act;
       short lhs, rhs_size;
@@ -1126,7 +1126,7 @@ public abstract class lr_parser {
    * @param debug should we produce debugging messages as we parse.
    */
   protected void parse_lookahead(boolean debug)
-    throws java.lang.Exception
+    throws Exception
     {
       /* the current action code */
       int act;

@@ -763,7 +763,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      * {@code Integer.MAX_VALUE}, inclusive.
      *
      * <p>The character-to-digit mapping is provided by {@link
-     * java.lang.Character#digit} set to convert to radix 10.  The
+     * Character#digit} set to convert to radix 10.  The
      * String may not contain any extraneous characters (whitespace,
      * for example).
      *
@@ -1913,7 +1913,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *         rounding mode is {@code UNNECESSARY}, or {@code mc.precision}
      *         {@literal >} 0 and the result of {@code this.divideToIntgralValue(divisor)} would
      *         require a precision of more than {@code mc.precision} digits.
-     * @see    #divideToIntegralValue(java.math.BigDecimal, java.math.MathContext)
+     * @see    #divideToIntegralValue(BigDecimal, MathContext)
      * @since  1.5
      */
     public BigDecimal remainder(BigDecimal divisor, MathContext mc) {
@@ -1937,8 +1937,8 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *         (the result of {@code divideToIntegralValue}) is the initial element
      *         and the remainder is the final element.
      * @throws ArithmeticException if {@code divisor==0}
-     * @see    #divideToIntegralValue(java.math.BigDecimal, java.math.MathContext)
-     * @see    #remainder(java.math.BigDecimal, java.math.MathContext)
+     * @see    #divideToIntegralValue(BigDecimal, MathContext)
+     * @see    #remainder(BigDecimal, MathContext)
      * @since  1.5
      */
     public BigDecimal[] divideAndRemainder(BigDecimal divisor) {
@@ -1972,8 +1972,8 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *         rounding mode is {@code UNNECESSARY}, or {@code mc.precision}
      *         {@literal >} 0 and the result of {@code this.divideToIntgralValue(divisor)} would
      *         require a precision of more than {@code mc.precision} digits.
-     * @see    #divideToIntegralValue(java.math.BigDecimal, java.math.MathContext)
-     * @see    #remainder(java.math.BigDecimal, java.math.MathContext)
+     * @see    #divideToIntegralValue(BigDecimal, MathContext)
+     * @see    #remainder(BigDecimal, MathContext)
      * @since  1.5
      */
     public BigDecimal[] divideAndRemainder(BigDecimal divisor, MathContext mc) {
@@ -2701,7 +2701,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      * @return {@code true} if and only if the specified {@code Object} is a
      *         {@code BigDecimal} whose value and scale are equal to this
      *         {@code BigDecimal}'s.
-     * @see    #compareTo(java.math.BigDecimal)
+     * @see    #compareTo(BigDecimal)
      * @see    #hashCode
      */
     @Override
@@ -2734,7 +2734,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *         {@code BigDecimal} and {@code val}.  If they are equal,
      *         as defined by the {@link #compareTo(BigDecimal) compareTo}
      *         method, {@code this} is returned.
-     * @see    #compareTo(java.math.BigDecimal)
+     * @see    #compareTo(BigDecimal)
      */
     public BigDecimal min(BigDecimal val) {
         return (compareTo(val) <= 0 ? this : val);
@@ -2748,7 +2748,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *         {@code BigDecimal} and {@code val}.  If they are equal,
      *         as defined by the {@link #compareTo(BigDecimal) compareTo}
      *         method, {@code this} is returned.
-     * @see    #compareTo(java.math.BigDecimal)
+     * @see    #compareTo(BigDecimal)
      */
     public BigDecimal max(BigDecimal val) {
         return (compareTo(val) >= 0 ? this : val);
@@ -2875,7 +2875,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      *
      * @return string representation of this {@code BigDecimal}.
      * @see    Character#forDigit
-     * @see    #BigDecimal(java.lang.String)
+     * @see    #BigDecimal(String)
      */
     @Override
     public String toString() {
@@ -3079,7 +3079,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
             return intCompact;
         // If more than 19 digits in integer part it cannot possibly fit
         if ((precision() - scale) > 19) // [OK for negative scale too]
-            throw new java.lang.ArithmeticException("Overflow");
+            throw new ArithmeticException("Overflow");
         // Fastpath zero and < 1.0 numbers (the latter can be very slow
         // to round if very small)
         if (this.signum() == 0)
@@ -3104,7 +3104,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
             BigInteger intVal = num.inflated();
             if (intVal.compareTo(LONGMIN) < 0 ||
                 intVal.compareTo(LONGMAX) > 0)
-                throw new java.lang.ArithmeticException("Overflow");
+                throw new ArithmeticException("Overflow");
         }
     }
 
@@ -3146,7 +3146,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
        long num;
        num = this.longValueExact();     // will check decimal part
        if ((int)num != num)
-           throw new java.lang.ArithmeticException("Overflow");
+           throw new ArithmeticException("Overflow");
        return (int)num;
     }
 
@@ -3166,7 +3166,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
        long num;
        num = this.longValueExact();     // will check decimal part
        if ((short)num != num)
-           throw new java.lang.ArithmeticException("Overflow");
+           throw new ArithmeticException("Overflow");
        return (short)num;
     }
 
@@ -3186,7 +3186,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
        long num;
        num = this.longValueExact();     // will check decimal part
        if ((byte)num != num)
-           throw new java.lang.ArithmeticException("Overflow");
+           throw new ArithmeticException("Overflow");
        return (byte)num;
     }
 

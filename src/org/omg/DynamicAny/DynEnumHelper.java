@@ -17,7 +17,7 @@ abstract public class DynEnumHelper
 {
   private static String  _id = "IDL:omg.org/DynamicAny/DynEnum:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.DynamicAny.DynEnum that)
+  public static void insert (org.omg.CORBA.Any a, DynEnum that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -25,7 +25,7 @@ abstract public class DynEnumHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.DynamicAny.DynEnum extract (org.omg.CORBA.Any a)
+  public static DynEnum extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -35,7 +35,7 @@ abstract public class DynEnumHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.DynamicAny.DynEnumHelper.id (), "DynEnum");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (DynEnumHelper.id (), "DynEnum");
     }
     return __typeCode;
   }
@@ -45,43 +45,43 @@ abstract public class DynEnumHelper
     return _id;
   }
 
-  public static org.omg.DynamicAny.DynEnum read (org.omg.CORBA.portable.InputStream istream)
+  public static DynEnum read (org.omg.CORBA.portable.InputStream istream)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.DynamicAny.DynEnum value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, DynEnum value)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static org.omg.DynamicAny.DynEnum narrow (org.omg.CORBA.Object obj)
+  public static DynEnum narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.DynamicAny.DynEnum)
-      return (org.omg.DynamicAny.DynEnum)obj;
+    else if (obj instanceof DynEnum)
+      return (DynEnum)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.DynamicAny._DynEnumStub stub = new org.omg.DynamicAny._DynEnumStub ();
+      _DynEnumStub stub = new _DynEnumStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static org.omg.DynamicAny.DynEnum unchecked_narrow (org.omg.CORBA.Object obj)
+  public static DynEnum unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.DynamicAny.DynEnum)
-      return (org.omg.DynamicAny.DynEnum)obj;
+    else if (obj instanceof DynEnum)
+      return (DynEnum)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.DynamicAny._DynEnumStub stub = new org.omg.DynamicAny._DynEnumStub ();
+      _DynEnumStub stub = new _DynEnumStub ();
       stub._set_delegate(delegate);
       return stub;
     }

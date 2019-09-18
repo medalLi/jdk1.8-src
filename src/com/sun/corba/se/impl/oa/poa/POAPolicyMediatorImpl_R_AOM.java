@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import org.omg.PortableServer.Servant ;
 import org.omg.PortableServer.ServantManager ;
@@ -59,10 +59,10 @@ public class POAPolicyMediatorImpl_R_AOM extends POAPolicyMediatorBase_R {
             throw poa.invocationWrapper().policyMediatorBadPolicyInFactory() ;
     }
 
-    protected java.lang.Object internalGetServant( byte[] id,
+    protected Object internalGetServant( byte[] id,
         String operation ) throws ForwardRequest
     {
-        java.lang.Object servant = internalIdToServant( id ) ;
+        Object servant = internalIdToServant( id ) ;
         if (servant == null)
             servant = new NullServantImpl(
                 poa.invocationWrapper().nullServant() ) ;

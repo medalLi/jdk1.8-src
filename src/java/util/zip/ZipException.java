@@ -31,7 +31,7 @@ import java.io.IOException;
  * Signals that a Zip exception of some sort has occurred.
  *
  * @author  unascribed
- * @see     java.io.IOException
+ * @see     IOException
  * @since   JDK1.0
  */
 

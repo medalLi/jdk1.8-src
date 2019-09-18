@@ -44,7 +44,7 @@ import java.beans.beancontext.BeanContext;
  *
  * @author      Laurence P. G. Cable
  * @since       1.2
- * @see         java.beans.beancontext.BeanContext
+ * @see         BeanContext
  */
 
 public abstract class BeanContextEvent extends EventObject {

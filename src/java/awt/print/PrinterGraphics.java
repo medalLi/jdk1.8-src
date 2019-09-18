@@ -40,7 +40,7 @@ public interface PrinterGraphics {
      * current rendering request.
      * @return the <code>PrinterJob</code> controlling the current
      * rendering request.
-     * @see java.awt.print.Printable
+     * @see Printable
      */
     PrinterJob getPrinterJob();
 

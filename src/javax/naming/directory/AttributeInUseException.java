@@ -46,7 +46,7 @@ public class AttributeInUseException extends NamingException {
      * an explanation. All other fields are set to null.
      *
      * @param   explanation     Possibly null additional detail about this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public AttributeInUseException(String explanation) {
         super(explanation);

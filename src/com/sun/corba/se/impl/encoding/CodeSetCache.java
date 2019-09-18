@@ -45,7 +45,7 @@ class CodeSetCache
      * by BTC_CACHE_MAP and CTB_CACHE_MAP.
      */
     private ThreadLocal converterCaches = new ThreadLocal() {
-        public java.lang.Object initialValue() {
+        public Object initialValue() {
             return new Map[] { new WeakHashMap(), new WeakHashMap() };
         }
     };

@@ -117,7 +117,7 @@ public class Date extends java.util.Date {
         int secondDash;
         Date d = null;
         if (s == null) {
-            throw new java.lang.IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
 
         firstDash = s.indexOf('-');
@@ -140,7 +140,7 @@ public class Date extends java.util.Date {
             }
         }
         if (d == null) {
-            throw new java.lang.IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
 
         return d;
@@ -179,12 +179,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #setHours
     */
     @Deprecated
     public int getHours() {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -192,12 +192,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #setMinutes
     */
     @Deprecated
     public int getMinutes() {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -205,12 +205,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #setSeconds
     */
     @Deprecated
     public int getSeconds() {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -218,12 +218,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #getHours
     */
     @Deprecated
     public void setHours(int i) {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -231,12 +231,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #getMinutes
     */
     @Deprecated
     public void setMinutes(int i) {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -244,12 +244,12 @@ public class Date extends java.util.Date {
     * values do not have a time component.
     *
     * @deprecated
-    * @exception java.lang.IllegalArgumentException if this method is invoked
+    * @exception IllegalArgumentException if this method is invoked
     * @see #getSeconds
     */
     @Deprecated
     public void setSeconds(int i) {
-        throw new java.lang.IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
    /**
@@ -297,10 +297,10 @@ public class Date extends java.util.Date {
     * not be used because SQL {@code Date} values do not have a time
     * component.
     *
-    * @exception java.lang.UnsupportedOperationException if this method is invoked
+    * @exception UnsupportedOperationException if this method is invoked
     */
     @Override
     public Instant toInstant() {
-        throw new java.lang.UnsupportedOperationException();
+        throw new UnsupportedOperationException();
     }
 }

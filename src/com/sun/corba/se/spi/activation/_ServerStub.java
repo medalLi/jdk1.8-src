@@ -11,7 +11,7 @@ package com.sun.corba.se.spi.activation;
 
 /** Server callback API, passed to Activator in active method.
     */
-public class _ServerStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.spi.activation.Server
+public class _ServerStub extends org.omg.CORBA.portable.ObjectImpl implements Server
 {
 
 

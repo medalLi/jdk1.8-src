@@ -167,7 +167,7 @@ public class Cursor implements java.io.Serializable {
     private static final String systemCustomCursorDirPrefix = initCursorDir();
 
     private static String initCursorDir() {
-        String jhome = java.security.AccessController.doPrivileged(
+        String jhome = AccessController.doPrivileged(
                new sun.security.action.GetPropertyAction("java.home"));
         return jhome +
             File.separator + "lib" + File.separator + "images" +
@@ -348,7 +348,7 @@ public class Cursor implements java.io.Serializable {
                 final int fy = y;
                 final String flocalized = localized;
 
-                cursor = java.security.AccessController.<Cursor>doPrivileged(
+                cursor = AccessController.<Cursor>doPrivileged(
                     new java.security.PrivilegedExceptionAction<Cursor>() {
                     public Cursor run() throws Exception {
                         Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -407,7 +407,7 @@ public class Cursor implements java.io.Serializable {
      * as part of their support for custom cursors.  Applications should
      * use Toolkit.createCustomCursor().
      * @param name the user-visible name of the cursor.
-     * @see java.awt.Toolkit#createCustomCursor
+     * @see Toolkit#createCustomCursor
      */
     protected Cursor(String name) {
         this.type = Cursor.CUSTOM_CURSOR;

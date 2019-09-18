@@ -32,7 +32,7 @@ import java.util.spi.LocaleServiceProvider;
 /**
  * An abstract class for service providers that
  * provide concrete implementations of the
- * {@link java.text.BreakIterator BreakIterator} class.
+ * {@link BreakIterator BreakIterator} class.
  *
  * @since        1.6
  */
@@ -54,9 +54,9 @@ public abstract class BreakIteratorProvider extends LocaleServiceProvider {
      * @exception NullPointerException if <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see java.text.BreakIterator#getWordInstance(java.util.Locale)
+     * @see BreakIterator#getWordInstance(Locale)
      */
     public abstract BreakIterator getWordInstance(Locale locale);
 
@@ -69,9 +69,9 @@ public abstract class BreakIteratorProvider extends LocaleServiceProvider {
      * @exception NullPointerException if <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see java.text.BreakIterator#getLineInstance(java.util.Locale)
+     * @see BreakIterator#getLineInstance(Locale)
      */
     public abstract BreakIterator getLineInstance(Locale locale);
 
@@ -84,9 +84,9 @@ public abstract class BreakIteratorProvider extends LocaleServiceProvider {
      * @exception NullPointerException if <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see java.text.BreakIterator#getCharacterInstance(java.util.Locale)
+     * @see BreakIterator#getCharacterInstance(Locale)
      */
     public abstract BreakIterator getCharacterInstance(Locale locale);
 
@@ -99,9 +99,9 @@ public abstract class BreakIteratorProvider extends LocaleServiceProvider {
      * @exception NullPointerException if <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see java.text.BreakIterator#getSentenceInstance(java.util.Locale)
+     * @see BreakIterator#getSentenceInstance(Locale)
      */
     public abstract BreakIterator getSentenceInstance(Locale locale);
 }

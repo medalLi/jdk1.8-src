@@ -74,7 +74,7 @@ public abstract class ReferralException extends NamingException {
      * explanation supplied. All other fields are set to null.
      *
      * @param   explanation     Additional detail about this exception. Can be null.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     protected ReferralException(String explanation) {
         super(explanation);

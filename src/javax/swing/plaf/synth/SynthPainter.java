@@ -34,7 +34,7 @@ import java.awt.*;
  * a consequence more paint methods.
  * <p>
  * Instances of <code>SynthPainter</code> are obtained from the
- * {@link javax.swing.plaf.synth.SynthStyle#getPainter} method.
+ * {@link SynthStyle#getPainter} method.
  * <p>
  * You typically supply a <code>SynthPainter</code> by way of Synth's
  * <a href="doc-files/synthFileFormat.html">file</a> format. The following

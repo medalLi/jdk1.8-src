@@ -388,7 +388,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Date getDate(int columnIndex) throws SQLException;
+    Date getDate(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -402,7 +402,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Time getTime(int columnIndex) throws SQLException;
+    Time getTime(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -416,7 +416,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Timestamp getTimestamp(int columnIndex) throws SQLException;
+    Timestamp getTimestamp(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -443,7 +443,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.io.InputStream getAsciiStream(int columnIndex) throws SQLException;
+    InputStream getAsciiStream(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -479,7 +479,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      *              <code>getUnicodeStream</code>
      */
     @Deprecated
-    java.io.InputStream getUnicodeStream(int columnIndex) throws SQLException;
+    InputStream getUnicodeStream(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -504,7 +504,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.io.InputStream getBinaryStream(int columnIndex)
+    InputStream getBinaryStream(int columnIndex)
         throws SQLException;
 
 
@@ -676,7 +676,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Date getDate(String columnLabel) throws SQLException;
+    Date getDate(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -691,7 +691,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Time getTime(String columnLabel) throws SQLException;
+    Time getTime(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -705,7 +705,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.sql.Timestamp getTimestamp(String columnLabel) throws SQLException;
+    Timestamp getTimestamp(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -731,7 +731,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.io.InputStream getAsciiStream(String columnLabel) throws SQLException;
+    InputStream getAsciiStream(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -765,7 +765,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @deprecated use <code>getCharacterStream</code> instead
      */
     @Deprecated
-    java.io.InputStream getUnicodeStream(String columnLabel) throws SQLException;
+    InputStream getUnicodeStream(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -790,7 +790,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * if a database access error occurs or this method is
      *            called on a closed result set
      */
-    java.io.InputStream getBinaryStream(String columnLabel)
+    InputStream getBinaryStream(String columnLabel)
         throws SQLException;
 
 
@@ -970,7 +970,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      *            called on a closed result set
      * @since 1.2
      */
-    java.io.Reader getCharacterStream(int columnIndex) throws SQLException;
+    Reader getCharacterStream(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -986,7 +986,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      *            called on a closed result set
      * @since 1.2
      */
-    java.io.Reader getCharacterStream(String columnLabel) throws SQLException;
+    Reader getCharacterStream(String columnLabel) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -1219,7 +1219,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    boolean absolute( int row ) throws SQLException;
+    boolean absolute(int row) throws SQLException;
 
     /**
      * Moves the cursor a relative number of rows, either positive or negative.
@@ -1245,7 +1245,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    boolean relative( int rows ) throws SQLException;
+    boolean relative(int rows) throws SQLException;
 
     /**
      * Moves the cursor to the previous row in this
@@ -1720,7 +1720,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateDate(int columnIndex, java.sql.Date x) throws SQLException;
+    void updateDate(int columnIndex, Date x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Time</code> value.
@@ -1739,7 +1739,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateTime(int columnIndex, java.sql.Time x) throws SQLException;
+    void updateTime(int columnIndex, Time x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Timestamp</code>
@@ -1759,7 +1759,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateTimestamp(int columnIndex, java.sql.Timestamp x)
+    void updateTimestamp(int columnIndex, Timestamp x)
       throws SQLException;
 
     /**
@@ -1782,7 +1782,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateAsciiStream(int columnIndex,
-                           java.io.InputStream x,
+                           InputStream x,
                            int length) throws SQLException;
 
     /**
@@ -1805,7 +1805,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateBinaryStream(int columnIndex,
-                            java.io.InputStream x,
+                            InputStream x,
                             int length) throws SQLException;
 
     /**
@@ -1828,8 +1828,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateCharacterStream(int columnIndex,
-                             java.io.Reader x,
-                             int length) throws SQLException;
+                               Reader x,
+                               int length) throws SQLException;
 
     /**
      * Updates the designated column with an <code>Object</code> value.
@@ -2111,7 +2111,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateDate(String columnLabel, java.sql.Date x) throws SQLException;
+    void updateDate(String columnLabel, Date x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Time</code> value.
@@ -2130,7 +2130,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateTime(String columnLabel, java.sql.Time x) throws SQLException;
+    void updateTime(String columnLabel, Time x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Timestamp</code>
@@ -2150,7 +2150,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    void updateTimestamp(String columnLabel, java.sql.Timestamp x)
+    void updateTimestamp(String columnLabel, Timestamp x)
       throws SQLException;
 
     /**
@@ -2173,7 +2173,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateAsciiStream(String columnLabel,
-                           java.io.InputStream x,
+                           InputStream x,
                            int length) throws SQLException;
 
     /**
@@ -2196,7 +2196,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateBinaryStream(String columnLabel,
-                            java.io.InputStream x,
+                            InputStream x,
                             int length) throws SQLException;
 
     /**
@@ -2220,8 +2220,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.2
      */
     void updateCharacterStream(String columnLabel,
-                             java.io.Reader reader,
-                             int length) throws SQLException;
+                               Reader reader,
+                               int length) throws SQLException;
 
     /**
      * Updates the designated column with an <code>Object</code> value.
@@ -2454,7 +2454,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    Object getObject(int columnIndex, java.util.Map<String,Class<?>> map)
+    Object getObject(int columnIndex, java.util.Map<String, Class<?>> map)
         throws SQLException;
 
     /**
@@ -2546,7 +2546,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.2
      */
-    Object getObject(String columnLabel, java.util.Map<String,Class<?>> map)
+    Object getObject(String columnLabel, java.util.Map<String, Class<?>> map)
       throws SQLException;
 
     /**
@@ -2636,7 +2636,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Date getDate(int columnIndex, Calendar cal) throws SQLException;
+    Date getDate(int columnIndex, Calendar cal) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -2657,7 +2657,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Date getDate(String columnLabel, Calendar cal) throws SQLException;
+    Date getDate(String columnLabel, Calendar cal) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -2678,7 +2678,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Time getTime(int columnIndex, Calendar cal) throws SQLException;
+    Time getTime(int columnIndex, Calendar cal) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -2699,7 +2699,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Time getTime(String columnLabel, Calendar cal) throws SQLException;
+    Time getTime(String columnLabel, Calendar cal) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -2720,7 +2720,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Timestamp getTimestamp(int columnIndex, Calendar cal)
+    Timestamp getTimestamp(int columnIndex, Calendar cal)
       throws SQLException;
 
     /**
@@ -2742,7 +2742,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * or this method is called on a closed result set
      * @since 1.2
      */
-    java.sql.Timestamp getTimestamp(String columnLabel, Calendar cal)
+    Timestamp getTimestamp(String columnLabel, Calendar cal)
       throws SQLException;
 
     //-------------------------- JDBC 3.0 ----------------------------------------
@@ -2816,7 +2816,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateRef(int columnIndex, java.sql.Ref x) throws SQLException;
+    void updateRef(int columnIndex, Ref x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Ref</code> value.
@@ -2835,7 +2835,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateRef(String columnLabel, java.sql.Ref x) throws SQLException;
+    void updateRef(String columnLabel, Ref x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Blob</code> value.
@@ -2854,7 +2854,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateBlob(int columnIndex, java.sql.Blob x) throws SQLException;
+    void updateBlob(int columnIndex, Blob x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Blob</code> value.
@@ -2873,7 +2873,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateBlob(String columnLabel, java.sql.Blob x) throws SQLException;
+    void updateBlob(String columnLabel, Blob x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Clob</code> value.
@@ -2892,7 +2892,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateClob(int columnIndex, java.sql.Clob x) throws SQLException;
+    void updateClob(int columnIndex, Clob x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Clob</code> value.
@@ -2911,7 +2911,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateClob(String columnLabel, java.sql.Clob x) throws SQLException;
+    void updateClob(String columnLabel, Clob x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Array</code> value.
@@ -2930,7 +2930,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateArray(int columnIndex, java.sql.Array x) throws SQLException;
+    void updateArray(int columnIndex, Array x) throws SQLException;
 
     /**
      * Updates the designated column with a <code>java.sql.Array</code> value.
@@ -2949,7 +2949,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.4
      */
-    void updateArray(String columnLabel, java.sql.Array x) throws SQLException;
+    void updateArray(String columnLabel, Array x) throws SQLException;
 
     //------------------------- JDBC 4.0 -----------------------------------
 
@@ -3313,7 +3313,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    java.io.Reader getNCharacterStream(int columnIndex) throws SQLException;
+    Reader getNCharacterStream(int columnIndex) throws SQLException;
 
     /**
      * Retrieves the value of the designated column in the current row
@@ -3334,7 +3334,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    java.io.Reader getNCharacterStream(String columnLabel) throws SQLException;
+    Reader getNCharacterStream(String columnLabel) throws SQLException;
 
     /**
      * Updates the designated column with a character stream value, which will have
@@ -3361,8 +3361,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateNCharacterStream(int columnIndex,
-                             java.io.Reader x,
-                             long length) throws SQLException;
+                                Reader x,
+                                long length) throws SQLException;
 
     /**
      * Updates the designated column with a character stream value, which will have
@@ -3390,8 +3390,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateNCharacterStream(String columnLabel,
-                             java.io.Reader reader,
-                             long length) throws SQLException;
+                                Reader reader,
+                                long length) throws SQLException;
     /**
      * Updates the designated column with an ascii stream value, which will have
      * the specified number of bytes.
@@ -3413,7 +3413,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateAsciiStream(int columnIndex,
-                           java.io.InputStream x,
+                           InputStream x,
                            long length) throws SQLException;
 
     /**
@@ -3437,7 +3437,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateBinaryStream(int columnIndex,
-                            java.io.InputStream x,
+                            InputStream x,
                             long length) throws SQLException;
 
     /**
@@ -3461,8 +3461,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateCharacterStream(int columnIndex,
-                             java.io.Reader x,
-                             long length) throws SQLException;
+                               Reader x,
+                               long length) throws SQLException;
     /**
      * Updates the designated column with an ascii stream value, which will have
      * the specified number of bytes.
@@ -3484,7 +3484,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateAsciiStream(String columnLabel,
-                           java.io.InputStream x,
+                           InputStream x,
                            long length) throws SQLException;
 
     /**
@@ -3508,7 +3508,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateBinaryStream(String columnLabel,
-                            java.io.InputStream x,
+                            InputStream x,
                             long length) throws SQLException;
 
     /**
@@ -3533,8 +3533,8 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateCharacterStream(String columnLabel,
-                             java.io.Reader reader,
-                             long length) throws SQLException;
+                               Reader reader,
+                               long length) throws SQLException;
     /**
      * Updates the designated column using the given input stream, which
      * will have the specified number of bytes.
@@ -3608,7 +3608,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateClob(int columnIndex,  Reader reader, long length) throws SQLException;
+    void updateClob(int columnIndex, Reader reader, long length) throws SQLException;
 
     /**
      * Updates the designated column using the given <code>Reader</code>
@@ -3635,7 +3635,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateClob(String columnLabel,  Reader reader, long length) throws SQLException;
+    void updateClob(String columnLabel, Reader reader, long length) throws SQLException;
    /**
      * Updates the designated column using the given <code>Reader</code>
      * object, which is the given number of characters long.
@@ -3663,7 +3663,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateNClob(int columnIndex,  Reader reader, long length) throws SQLException;
+    void updateNClob(int columnIndex, Reader reader, long length) throws SQLException;
 
     /**
      * Updates the designated column using the given <code>Reader</code>
@@ -3692,7 +3692,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateNClob(String columnLabel,  Reader reader, long length) throws SQLException;
+    void updateNClob(String columnLabel, Reader reader, long length) throws SQLException;
 
     //---
 
@@ -3725,7 +3725,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateNCharacterStream(int columnIndex,
-                             java.io.Reader x) throws SQLException;
+                                Reader x) throws SQLException;
 
     /**
      * Updates the designated column with a character stream value.
@@ -3757,7 +3757,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateNCharacterStream(String columnLabel,
-                             java.io.Reader reader) throws SQLException;
+                                Reader reader) throws SQLException;
     /**
      * Updates the designated column with an ascii stream value.
      * The data will be read from the stream
@@ -3783,7 +3783,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateAsciiStream(int columnIndex,
-                           java.io.InputStream x) throws SQLException;
+                           InputStream x) throws SQLException;
 
     /**
      * Updates the designated column with a binary stream value.
@@ -3810,7 +3810,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateBinaryStream(int columnIndex,
-                            java.io.InputStream x) throws SQLException;
+                            InputStream x) throws SQLException;
 
     /**
      * Updates the designated column with a character stream value.
@@ -3837,7 +3837,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateCharacterStream(int columnIndex,
-                             java.io.Reader x) throws SQLException;
+                               Reader x) throws SQLException;
     /**
      * Updates the designated column with an ascii stream value.
      * The data will be read from the stream
@@ -3863,7 +3863,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateAsciiStream(String columnLabel,
-                           java.io.InputStream x) throws SQLException;
+                           InputStream x) throws SQLException;
 
     /**
      * Updates the designated column with a binary stream value.
@@ -3890,7 +3890,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateBinaryStream(String columnLabel,
-                            java.io.InputStream x) throws SQLException;
+                            InputStream x) throws SQLException;
 
     /**
      * Updates the designated column with a character stream value.
@@ -3917,7 +3917,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.6
      */
     void updateCharacterStream(String columnLabel,
-                             java.io.Reader reader) throws SQLException;
+                               Reader reader) throws SQLException;
     /**
      * Updates the designated column using the given input stream. The data will be read from the stream
      * as needed until end-of-stream is reached.
@@ -3995,7 +3995,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateClob(int columnIndex,  Reader reader) throws SQLException;
+    void updateClob(int columnIndex, Reader reader) throws SQLException;
 
     /**
      * Updates the designated column using the given <code>Reader</code>
@@ -4023,7 +4023,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateClob(String columnLabel,  Reader reader) throws SQLException;
+    void updateClob(String columnLabel, Reader reader) throws SQLException;
    /**
      * Updates the designated column using the given <code>Reader</code>
      *
@@ -4053,7 +4053,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateNClob(int columnIndex,  Reader reader) throws SQLException;
+    void updateNClob(int columnIndex, Reader reader) throws SQLException;
 
     /**
      * Updates the designated column using the given <code>Reader</code>
@@ -4083,7 +4083,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * this method
      * @since 1.6
      */
-    void updateNClob(String columnLabel,  Reader reader) throws SQLException;
+    void updateNClob(String columnLabel, Reader reader) throws SQLException;
 
     //------------------------- JDBC 4.1 -----------------------------------
 
@@ -4184,7 +4184,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.8
      */
      default void updateObject(int columnIndex, Object x,
-             SQLType targetSqlType, int scaleOrLength)  throws SQLException {
+                               SQLType targetSqlType, int scaleOrLength)  throws SQLException {
         throw new SQLFeatureNotSupportedException("updateObject not implemented");
     }
 
@@ -4227,7 +4227,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.8
      */
     default void updateObject(String columnLabel, Object x,
-            SQLType targetSqlType, int scaleOrLength) throws SQLException {
+                              SQLType targetSqlType, int scaleOrLength) throws SQLException {
         throw new SQLFeatureNotSupportedException("updateObject not implemented");
     }
 
@@ -4285,7 +4285,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * @since 1.8
      */
     default void updateObject(String columnLabel, Object x,
-            SQLType targetSqlType) throws SQLException {
+                              SQLType targetSqlType) throws SQLException {
         throw new SQLFeatureNotSupportedException("updateObject not implemented");
     }
 }

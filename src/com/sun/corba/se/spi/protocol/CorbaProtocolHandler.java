@@ -51,27 +51,27 @@ public interface CorbaProtocolHandler
                               CorbaMessageMediator messageMediator);
 
     public CorbaMessageMediator createResponse(
-        CorbaMessageMediator messageMediator,
-        ServiceContexts svc);
+            CorbaMessageMediator messageMediator,
+            ServiceContexts svc);
     public CorbaMessageMediator createUserExceptionResponse(
-        CorbaMessageMediator messageMediator,
-        ServiceContexts svc);
+            CorbaMessageMediator messageMediator,
+            ServiceContexts svc);
     public CorbaMessageMediator createUnknownExceptionResponse(
-        CorbaMessageMediator messageMediator,
-        UnknownException ex);
+            CorbaMessageMediator messageMediator,
+            UnknownException ex);
     public CorbaMessageMediator createSystemExceptionResponse(
-        CorbaMessageMediator messageMediator,
-        SystemException ex,
-        ServiceContexts svc);
+            CorbaMessageMediator messageMediator,
+            SystemException ex,
+            ServiceContexts svc);
     public CorbaMessageMediator createLocationForward(
-        CorbaMessageMediator messageMediator,
-        IOR ior,
-        ServiceContexts svc);
+            CorbaMessageMediator messageMediator,
+            IOR ior,
+            ServiceContexts svc);
 
     public void handleThrowableDuringServerDispatch(
-        CorbaMessageMediator request,
-        Throwable exception,
-        CompletionStatus completionStatus);
+            CorbaMessageMediator request,
+            Throwable exception,
+            CompletionStatus completionStatus);
 
 }
 

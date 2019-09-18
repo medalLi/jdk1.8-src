@@ -205,7 +205,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      *     mimeType           = "application/x-java-serialized-object"
      * </pre>
      */
-    public static final DataFlavor stringFlavor = createConstant(java.lang.String.class, "Unicode String");
+    public static final DataFlavor stringFlavor = createConstant(String.class, "Unicode String");
 
     /**
      * The <code>DataFlavor</code> representing a Java Image class,
@@ -532,7 +532,7 @@ public class DataFlavor implements Externalizable, Cloneable {
 
                 throw new IllegalArgumentException("no representation class specified for:" + mimeType);
             else
-                representationClass = java.io.InputStream.class; // default
+                representationClass = InputStream.class; // default
         } else { // got a class name
             representationClass = DataFlavor.tryToLoadClass(rcn, classLoader);
         }
@@ -1228,7 +1228,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * @since 1.4
      */
     public boolean isRepresentationClassReader() {
-        return java.io.Reader.class.isAssignableFrom(representationClass);
+        return Reader.class.isAssignableFrom(representationClass);
     }
 
     /**
@@ -1239,7 +1239,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * @since 1.4
      */
     public boolean isRepresentationClassCharBuffer() {
-        return java.nio.CharBuffer.class.isAssignableFrom(representationClass);
+        return CharBuffer.class.isAssignableFrom(representationClass);
     }
 
     /**
@@ -1250,7 +1250,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * @since 1.4
      */
     public boolean isRepresentationClassByteBuffer() {
-        return java.nio.ByteBuffer.class.isAssignableFrom(representationClass);
+        return ByteBuffer.class.isAssignableFrom(representationClass);
     }
 
    /**

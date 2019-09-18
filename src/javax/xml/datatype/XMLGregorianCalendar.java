@@ -160,7 +160,7 @@ import java.util.GregorianCalendar;
  *   <li>conversion between this class and W3C XML Schema 1.0 lexical representation,
  *     {@link #toString()}, {@link DatatypeFactory#newXMLGregorianCalendar(String lexicalRepresentation)}</li>
  *   <li>conversion between this class and {@link GregorianCalendar},
- *     {@link #toGregorianCalendar(java.util.TimeZone timezone, java.util.Locale aLocale, XMLGregorianCalendar defaults)},
+ *     {@link #toGregorianCalendar(TimeZone timezone, java.util.Locale aLocale, XMLGregorianCalendar defaults)},
  *     {@link DatatypeFactory}</li>
  *   <li>partial order relation comparator method, {@link #compare(XMLGregorianCalendar xmlGregorianCalendar)}</li>
  *   <li>{@link #equals(Object)} defined relative to {@link #compare(XMLGregorianCalendar xmlGregorianCalendar)}.</li>
@@ -834,7 +834,7 @@ public abstract class XMLGregorianCalendar
      *   </tbody>
      * </table>
      *
-     * @throws java.lang.IllegalStateException if the combination of set fields
+     * @throws IllegalStateException if the combination of set fields
      *    does not match one of the eight defined XML Schema builtin
      *    date/time datatypes.
      * @return One of the following class constants:
@@ -964,7 +964,7 @@ public abstract class XMLGregorianCalendar
      *   <li>Using <code>timeZone</code> value as defined above, create a new
      * <code>java.util.GregorianCalendar(timeZone,Locale.getDefault())</code>.
      *   </li>
-     *   <li>Initialize all GregorianCalendar fields by calling {@link java.util.GregorianCalendar#clear()}.</li>
+     *   <li>Initialize all GregorianCalendar fields by calling {@link GregorianCalendar#clear()}.</li>
      *   <li>Obtain a pure Gregorian Calendar by invoking
      *   <code>GregorianCalendar.setGregorianChange(
      *   new Date(Long.MIN_VALUE))</code>.</li>
@@ -974,7 +974,7 @@ public abstract class XMLGregorianCalendar
      * </ul>
      * </p>
      *
-     * @see #toGregorianCalendar(java.util.TimeZone, java.util.Locale, XMLGregorianCalendar)
+     * @see #toGregorianCalendar(TimeZone, java.util.Locale, XMLGregorianCalendar)
      */
     public abstract GregorianCalendar toGregorianCalendar();
 
@@ -1029,7 +1029,7 @@ public abstract class XMLGregorianCalendar
      * @return a java.util.GregorianCalendar conversion of this instance.
      */
     public abstract GregorianCalendar toGregorianCalendar(
-        java.util.TimeZone timezone,
+        TimeZone timezone,
                 java.util.Locale aLocale,
                 XMLGregorianCalendar defaults);
 

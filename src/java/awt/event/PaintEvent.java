@@ -72,7 +72,7 @@ public class PaintEvent extends ComponentEvent {
      * This rectangle should be non null.
      *
      * @serial
-     * @see java.awt.Rectangle
+     * @see Rectangle
      * @see #setUpdateRect(Rectangle)
      * @see #getUpdateRect()
      */

@@ -67,7 +67,7 @@ import static java.lang.invoke.MethodHandleStatics.*;
  * <p>
  * If the underlying method is <a href="MethodHandles.Lookup.html#callsens">caller sensitive</a>,
  * the direct method handle will have been "bound" to a particular caller class, the
- * {@linkplain java.lang.invoke.MethodHandles.Lookup#lookupClass() lookup class}
+ * {@linkplain Lookup#lookupClass() lookup class}
  * of the lookup object used to create it.
  * Cracking this method handle with a different lookup class will fail
  * even if the underlying method is public (like {@code Class.forName}).
@@ -75,7 +75,7 @@ import static java.lang.invoke.MethodHandleStatics.*;
  * The requirement of lookup object matching provides a "fast fail" behavior
  * for programs which may otherwise trust erroneous revelation of a method
  * handle with symbolic information (or caller binding) from an unexpected scope.
- * Use {@link java.lang.invoke.MethodHandles#reflectAs} to override this limitation.
+ * Use {@link MethodHandles#reflectAs} to override this limitation.
  *
  * <h1><a name="refkinds"></a>Reference kinds</h1>
  * The <a href="MethodHandles.Lookup.html#lookups">Lookup Factory Methods</a>
@@ -252,7 +252,7 @@ interface MethodHandleInfo {
      * given the four parts of its symbolic reference.
      * This is defined to be of the form {@code "RK C.N:MT"}, where {@code RK} is the
      * {@linkplain #referenceKindToString reference kind string} for {@code kind},
-     * {@code C} is the {@linkplain java.lang.Class#getName name} of {@code defc}
+     * {@code C} is the {@linkplain Class#getName name} of {@code defc}
      * {@code N} is the {@code name}, and
      * {@code MT} is the {@code type}.
      * These four values may be obtained from the

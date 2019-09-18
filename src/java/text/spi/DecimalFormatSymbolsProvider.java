@@ -32,7 +32,7 @@ import java.util.spi.LocaleServiceProvider;
 /**
  * An abstract class for service providers that
  * provide instances of the
- * {@link java.text.DecimalFormatSymbols DecimalFormatSymbols} class.
+ * {@link DecimalFormatSymbols DecimalFormatSymbols} class.
  *
  * <p>The requested {@code Locale} may contain an <a
  * href="../../util/Locale.html#def_locale_extension"> extension</a> for
@@ -63,10 +63,10 @@ public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider
      * @exception NullPointerException if <code>locale</code> is null
      * @exception IllegalArgumentException if <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
      * @return a <code>DecimalFormatSymbols</code> instance.
-     * @see java.text.DecimalFormatSymbols#getInstance(java.util.Locale)
+     * @see DecimalFormatSymbols#getInstance(Locale)
      */
     public abstract DecimalFormatSymbols getInstance(Locale locale);
 }

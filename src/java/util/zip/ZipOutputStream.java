@@ -111,7 +111,7 @@ class ZipOutputStream extends DeflaterOutputStream implements ZipConstants {
     /**
      * Creates a new ZIP output stream.
      *
-     * <p>The UTF-8 {@link java.nio.charset.Charset charset} is used
+     * <p>The UTF-8 {@link Charset charset} is used
      * to encode the entry names and comments.
      *
      * @param out the actual output stream
@@ -125,7 +125,7 @@ class ZipOutputStream extends DeflaterOutputStream implements ZipConstants {
      *
      * @param out the actual output stream
      *
-     * @param charset the {@linkplain java.nio.charset.Charset charset}
+     * @param charset the {@linkplain Charset charset}
      *                to be used to encode the entry names and comments
      *
      * @since 1.7

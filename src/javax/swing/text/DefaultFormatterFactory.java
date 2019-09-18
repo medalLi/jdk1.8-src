@@ -68,7 +68,7 @@ import javax.swing.JFormattedTextField;
  * has been added to the <code>java.beans</code> package.
  * Please see {@link java.beans.XMLEncoder}.
  *
- * @see javax.swing.JFormattedTextField
+ * @see JFormattedTextField
  *
  * @since 1.4
  */

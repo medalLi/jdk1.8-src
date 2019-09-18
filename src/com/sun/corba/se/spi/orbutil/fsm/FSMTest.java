@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.fsm ;
+package com.sun.corba.se.spi.orbutil.fsm;
 
 import com.sun.corba.se.spi.orbutil.fsm.Input ;
 import com.sun.corba.se.spi.orbutil.fsm.Action ;
@@ -130,7 +130,7 @@ class NegateGuard implements Guard {
         this.guard = guard ;
     }
 
-    public Guard.Result evaluate( FSM fsm, Input in )
+    public Result evaluate( FSM fsm, Input in )
     {
         return guard.evaluate( fsm, in ).complement() ;
     }
@@ -157,10 +157,10 @@ public class FSMTest {
     public static final Input   INPUT4 = new InputImpl( "4" ) ;
 
     private Guard counterGuard = new Guard() {
-        public Guard.Result evaluate( FSM fsm, Input in )
+        public Result evaluate( FSM fsm, Input in )
         {
             MyFSM mfsm = (MyFSM) fsm ;
-            return Guard.Result.convert( mfsm.counter < 3 ) ;
+            return Result.convert( mfsm.counter < 3 ) ;
         }
     } ;
 

@@ -211,7 +211,7 @@ import sun.swing.AccumulativeRunnable;
  * <p>
  * Because {@code SwingWorker} implements {@code Runnable}, a
  * {@code SwingWorker} can be submitted to an
- * {@link java.util.concurrent.Executor} for execution.
+ * {@link Executor} for execution.
  *
  * @author Igor Kushnirskiy
  *

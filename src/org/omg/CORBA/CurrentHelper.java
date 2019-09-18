@@ -39,22 +39,22 @@ abstract public class CurrentHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/Current:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.Current that)
+  public static void insert (Any a, Current that)
   {
-    throw new org.omg.CORBA.MARSHAL() ;
+    throw new MARSHAL() ;
   }
 
-  public static org.omg.CORBA.Current extract (org.omg.CORBA.Any a)
+  public static Current extract (Any a)
   {
-    throw new org.omg.CORBA.MARSHAL() ;
+    throw new MARSHAL() ;
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  private static TypeCode __typeCode = null;
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.CORBA.CurrentHelper.id (), "Current");
+      __typeCode = ORB.init ().create_interface_tc (CurrentHelper.id (), "Current");
     }
     return __typeCode;
   }
@@ -64,24 +64,24 @@ abstract public class CurrentHelper
     return _id;
   }
 
-  public static org.omg.CORBA.Current read (org.omg.CORBA.portable.InputStream istream)
+  public static Current read (org.omg.CORBA.portable.InputStream istream)
   {
-    throw new org.omg.CORBA.MARSHAL() ;
+    throw new MARSHAL() ;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.Current value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, Current value)
   {
-    throw new org.omg.CORBA.MARSHAL() ;
+    throw new MARSHAL() ;
   }
 
-  public static org.omg.CORBA.Current narrow (org.omg.CORBA.Object obj)
+  public static Current narrow (Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.CORBA.Current)
-      return (org.omg.CORBA.Current)obj;
+    else if (obj instanceof Current)
+      return (Current)obj;
     else
-      throw new org.omg.CORBA.BAD_PARAM ();
+      throw new BAD_PARAM ();
   }
 
 }

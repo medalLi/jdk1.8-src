@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.io.Serializable ;
 import java.io.Externalizable ;
@@ -99,7 +99,7 @@ public class DynamicMethodMarshallerImpl implements DynamicMethodMarshaller
         // Check that some exceptionType is a subclass of RemoteException
         for (int ctr=0; ctr<exceptionTypes.length; ctr++) {
             Class exceptionType = exceptionTypes[ctr] ;
-            if (java.rmi.RemoteException.class.isAssignableFrom( exceptionType ))
+            if (RemoteException.class.isAssignableFrom( exceptionType ))
                 return true ;
         }
 
@@ -108,9 +108,9 @@ public class DynamicMethodMarshallerImpl implements DynamicMethodMarshaller
 
     public interface ReaderWriter
     {
-        Object read( InputStream is ) ;
+        Object read(InputStream is) ;
 
-        void write( OutputStream os, Object value ) ;
+        void write(OutputStream os, Object value) ;
     }
 
     abstract static class ReaderWriterBase implements ReaderWriter

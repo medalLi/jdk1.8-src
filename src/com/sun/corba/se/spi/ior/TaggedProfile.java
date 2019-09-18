@@ -52,7 +52,7 @@ public interface TaggedProfile extends Identifiable, MakeImmutable
      * prof.getObjectId() ) is true, and so is
      * getObjectKeyTemplate().equals( prof.getObjectKeyTemplate() ).
      */
-    boolean isEquivalent( TaggedProfile prof ) ;
+    boolean isEquivalent(TaggedProfile prof) ;
 
     /** Return the TaggedProfile as a CDR encapsulation in the standard
      * format.  This is required for Portable interceptors.

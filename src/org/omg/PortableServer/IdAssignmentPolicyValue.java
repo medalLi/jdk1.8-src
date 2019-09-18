@@ -22,19 +22,19 @@ public class IdAssignmentPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
   private        int __value;
   private static int __size = 2;
-  private static org.omg.PortableServer.IdAssignmentPolicyValue[] __array = new org.omg.PortableServer.IdAssignmentPolicyValue [__size];
+  private static IdAssignmentPolicyValue[] __array = new IdAssignmentPolicyValue [__size];
 
   public static final int _USER_ID = 0;
-  public static final org.omg.PortableServer.IdAssignmentPolicyValue USER_ID = new org.omg.PortableServer.IdAssignmentPolicyValue(_USER_ID);
+  public static final IdAssignmentPolicyValue USER_ID = new IdAssignmentPolicyValue(_USER_ID);
   public static final int _SYSTEM_ID = 1;
-  public static final org.omg.PortableServer.IdAssignmentPolicyValue SYSTEM_ID = new org.omg.PortableServer.IdAssignmentPolicyValue(_SYSTEM_ID);
+  public static final IdAssignmentPolicyValue SYSTEM_ID = new IdAssignmentPolicyValue(_SYSTEM_ID);
 
   public int value ()
   {
     return __value;
   }
 
-  public static org.omg.PortableServer.IdAssignmentPolicyValue from_int (int value)
+  public static IdAssignmentPolicyValue from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

@@ -20,5 +20,5 @@ public interface IdAssignmentPolicyOperations  extends org.omg.CORBA.PolicyOpera
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.IdAssignmentPolicyValue value ();
+  IdAssignmentPolicyValue value();
 } // interface IdAssignmentPolicyOperations

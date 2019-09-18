@@ -36,7 +36,7 @@ import java.util.Set;
  *  the standard Java API for the representation of a SOAP 1.1 message
  *  with attachments.
  *
- *  @see javax.xml.soap.SOAPMessage
+ *  @see SOAPMessage
  *
  *  @since JAX-WS 2.0
 **/
@@ -57,7 +57,7 @@ public interface SOAPMessageContext
    *  @param  message SOAP message
    *  @throws WebServiceException If any error during the setting
    *          of the <code>SOAPMessage</code> in this message context
-   *  @throws java.lang.UnsupportedOperationException If this
+   *  @throws UnsupportedOperationException If this
    *          operation is not supported
   **/
   public void setMessage(SOAPMessage message);
@@ -81,7 +81,7 @@ public interface SOAPMessageContext
    *     the <code>WebServiceException</code> is the original <code>JAXBException</code>.
   **/
   public Object[] getHeaders(QName header, JAXBContext context,
-    boolean allRoles);
+                             boolean allRoles);
 
   /** Gets the SOAP actor roles associated with an execution
    *  of the handler chain.

@@ -27,7 +27,7 @@ public interface InterceptorOperations
        *
        * @return the name of the interceptor.
        */
-  String name ();
+  String name();
 
   /**
        * Provides an opportunity to destroy this interceptor.
@@ -46,5 +46,5 @@ public interface InterceptorOperations
        * permitted. (This means that the ORB being destroyed is still capable 
        * of acting as a client, but not as a server.) 
        */
-  void destroy ();
+  void destroy();
 } // interface InterceptorOperations

@@ -61,9 +61,9 @@ import javax.net.ssl.SSLSocketFactory;
  * authentication is required by the server). This behavior can be modified
  * by supplying an already initialized <code>SSLContext</code> instance.
  *
- * @see javax.net.ssl.SSLSocketFactory
- * @see javax.net.ssl.SSLServerSocketFactory
- * @see javax.rmi.ssl.SslRMIClientSocketFactory
+ * @see SSLSocketFactory
+ * @see SSLServerSocketFactory
+ * @see SslRMIClientSocketFactory
  * @since 1.5
  */
 public class SslRMIServerSocketFactory implements RMIServerSocketFactory {

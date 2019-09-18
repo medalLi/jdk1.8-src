@@ -93,8 +93,8 @@ public class Canvas extends Component implements Accessible {
     /**
      * Creates the peer of the canvas.  This peer allows you to change the
      * user interface of the canvas without changing its functionality.
-     * @see     java.awt.Toolkit#createCanvas(java.awt.Canvas)
-     * @see     java.awt.Component#getToolkit()
+     * @see     Toolkit#createCanvas(Canvas)
+     * @see     Component#getToolkit()
      */
     public void addNotify() {
         synchronized (getTreeLock()) {

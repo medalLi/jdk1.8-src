@@ -208,12 +208,12 @@ public final class W3CEndpointReferenceBuilder {
      *   the <code>referenceParameter</code> added to the
      *   <code>wsa:ReferenceParameters</code> element.
      *
-     * @throws java.lang.IllegalArgumentException if <code>referenceParameter</code>
+     * @throws IllegalArgumentException if <code>referenceParameter</code>
      * is <code>null</code>.
      */
     public W3CEndpointReferenceBuilder referenceParameter(Element referenceParameter) {
         if (referenceParameter == null)
-            throw new java.lang.IllegalArgumentException("The referenceParameter cannot be null.");
+            throw new IllegalArgumentException("The referenceParameter cannot be null.");
         referenceParameters.add(referenceParameter);
         return this;
     }
@@ -230,12 +230,12 @@ public final class W3CEndpointReferenceBuilder {
      *   the <code>metadataElement</code> added to the
      *    <code>wsa:Metadata</code> element.
      *
-     * @throws java.lang.IllegalArgumentException if <code>metadataElement</code>
+     * @throws IllegalArgumentException if <code>metadataElement</code>
      * is <code>null</code>.
      */
     public W3CEndpointReferenceBuilder metadata(Element metadataElement) {
         if (metadataElement == null)
-            throw new java.lang.IllegalArgumentException("The metadataElement cannot be null.");
+            throw new IllegalArgumentException("The metadataElement cannot be null.");
         metadata.add(metadataElement);
         return this;
     }
@@ -250,7 +250,7 @@ public final class W3CEndpointReferenceBuilder {
      * @return A <code>W3CEndpointReferenceBuilder</code> instance with
      *   the extension <code>element</code> added to the
      *    <code>W3CEndpointReference</code> instance.
-     * @throws java.lang.IllegalArgumentException if <code>element</code>
+     * @throws IllegalArgumentException if <code>element</code>
      * is <code>null</code>.
      *
      * @since JAX-WS 2.2
@@ -274,7 +274,7 @@ public final class W3CEndpointReferenceBuilder {
      * @return A <code>W3CEndpointReferenceBuilder</code> instance with
      *   the extension attribute added to the <code>W3CEndpointReference</code>
      *   instance.
-     * @throws java.lang.IllegalArgumentException if <code>name</code>
+     * @throws IllegalArgumentException if <code>name</code>
      *   or <code>value</code> is <code>null</code>.
      *
      * @since JAX-WS 2.2

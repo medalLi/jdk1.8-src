@@ -8,7 +8,7 @@ package com.sun.corba.se.PortableActivationIDL;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public class _RepositoryStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.Repository
+public class _RepositoryStub extends org.omg.CORBA.portable.ObjectImpl implements Repository
 {
 
 

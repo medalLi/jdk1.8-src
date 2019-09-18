@@ -36,7 +36,7 @@ import javax.swing.text.*;
  * removed).
  *
  * @author  Timothy Prinzing
- * @see javax.swing.text.Document
+ * @see Document
  * @see DocumentListener
  */
 public interface DocumentEvent {

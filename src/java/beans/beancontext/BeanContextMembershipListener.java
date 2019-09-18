@@ -37,7 +37,7 @@ import java.util.EventListener;
  *
  * @author      Laurence P. G. Cable
  * @since       1.2
- * @see         java.beans.beancontext.BeanContext
+ * @see         BeanContext
  */
 
 public interface BeanContextMembershipListener extends EventListener {

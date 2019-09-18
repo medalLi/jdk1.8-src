@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.util.StringTokenizer ;
 import java.util.Arrays ;
@@ -128,7 +128,7 @@ public abstract class OperationFactory {
         {
             try {
                 return op.operate( arg ) ;
-            } catch (java.lang.Exception exc) {
+            } catch (Exception exc) {
                 return null ;
             }
         }

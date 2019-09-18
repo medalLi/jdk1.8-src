@@ -115,9 +115,9 @@ public class Point extends Point2D implements java.io.Serializable {
      * This method is included for completeness, to parallel the
      * <code>getLocation</code> method of <code>Component</code>.
      * @return      a copy of this point, at the same location
-     * @see         java.awt.Component#getLocation
-     * @see         java.awt.Point#setLocation(java.awt.Point)
-     * @see         java.awt.Point#setLocation(int, int)
+     * @see         Component#getLocation
+     * @see         Point#setLocation(Point)
+     * @see         Point#setLocation(int, int)
      * @since       1.1
      */
     @Transient
@@ -130,8 +130,8 @@ public class Point extends Point2D implements java.io.Serializable {
      * This method is included for completeness, to parallel the
      * <code>setLocation</code> method of <code>Component</code>.
      * @param       p  a point, the new location for this point
-     * @see         java.awt.Component#setLocation(java.awt.Point)
-     * @see         java.awt.Point#getLocation
+     * @see         Component#setLocation(Point)
+     * @see         Point#getLocation
      * @since       1.1
      */
     public void setLocation(Point p) {
@@ -146,9 +146,9 @@ public class Point extends Point2D implements java.io.Serializable {
      * Its behavior is identical with <code>move(int,&nbsp;int)</code>.
      * @param       x the X coordinate of the new location
      * @param       y the Y coordinate of the new location
-     * @see         java.awt.Component#setLocation(int, int)
-     * @see         java.awt.Point#getLocation
-     * @see         java.awt.Point#move(int, int)
+     * @see         Component#setLocation(int, int)
+     * @see         Point#getLocation
+     * @see         Point#move(int, int)
      * @since       1.1
      */
     public void setLocation(int x, int y) {
@@ -178,7 +178,7 @@ public class Point extends Point2D implements java.io.Serializable {
      * is identical with <code>setLocation(int,&nbsp;int)</code>.
      * @param       x the X coordinate of the new location
      * @param       y the Y coordinate of the new location
-     * @see         java.awt.Component#setLocation(int, int)
+     * @see         Component#setLocation(int, int)
      */
     public void move(int x, int y) {
         this.x = x;

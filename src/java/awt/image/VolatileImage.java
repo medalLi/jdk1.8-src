@@ -74,7 +74,7 @@ import java.awt.Transparency;
  * This image should not be subclassed directly but should be created
  * by using the {@link java.awt.Component#createVolatileImage(int, int)
  * Component.createVolatileImage} or
- * {@link java.awt.GraphicsConfiguration#createCompatibleVolatileImage(int, int)
+ * {@link GraphicsConfiguration#createCompatibleVolatileImage(int, int)
  * GraphicsConfiguration.createCompatibleVolatileImage(int, int)} methods.
  * <P>
  * An example of using a VolatileImage object follows:
@@ -279,7 +279,7 @@ public abstract class VolatileImage extends Image implements Transparency
      *          after a return value of <code>IMAGE_INCOMPATIBLE</code>
      *          and this return value implies nothing about whether the
      *          image needs to be restored.
-     * @see java.awt.GraphicsConfiguration
+     * @see GraphicsConfiguration
      * @see java.awt.Component
      * @see #IMAGE_OK
      * @see #IMAGE_RESTORED
@@ -318,9 +318,9 @@ public abstract class VolatileImage extends Image implements Transparency
 
     /**
      * The transparency value with which this image was created.
-     * @see java.awt.GraphicsConfiguration#createCompatibleVolatileImage(int,
+     * @see GraphicsConfiguration#createCompatibleVolatileImage(int,
      *      int,int)
-     * @see java.awt.GraphicsConfiguration#createCompatibleVolatileImage(int,
+     * @see GraphicsConfiguration#createCompatibleVolatileImage(int,
      *      int,ImageCapabilities,int)
      * @see Transparency
      * @since 1.5

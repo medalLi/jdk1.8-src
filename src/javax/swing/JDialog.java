@@ -56,7 +56,7 @@ import javax.accessibility.*;
  * Attempting to set it to {@code null} generates an exception.
  * The default {@code contentPane} has a {@code BorderLayout}
  * manager set on it.
- * Refer to {@link javax.swing.RootPaneContainer}
+ * Refer to {@link RootPaneContainer}
  * for details on adding, removing and setting the {@code LayoutManager}
  * of a {@code JDialog}.
  * <p>
@@ -65,7 +65,7 @@ import javax.accessibility.*;
  * and {@code layeredPane} components.
  * <p>
  * In a multi-screen environment, you can create a {@code JDialog}
- * on a different screen device than its owner.  See {@link java.awt.Frame} for
+ * on a different screen device than its owner.  See {@link Frame} for
  * more information.
  * <p>
  * <strong>Warning:</strong> Swing is not thread safe. For more
@@ -84,7 +84,7 @@ import javax.accessibility.*;
  *
  * @see JOptionPane
  * @see JRootPane
- * @see javax.swing.RootPaneContainer
+ * @see RootPaneContainer
  *
  * @beaninfo
  *      attribute: isContainer true
@@ -122,7 +122,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @see #isRootPaneCheckingEnabled
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean rootPaneCheckingEnabled = false;
 
@@ -147,7 +147,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog() {
@@ -172,7 +172,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * @param owner the {@code Frame} from which the dialog is displayed
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Frame owner) {
@@ -199,7 +199,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *     {@code DEFAULT_MODALITY_TYPE}, otherwise the dialog is modeless.
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Frame owner, boolean modal) {
@@ -226,7 +226,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *                  title bar
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Frame owner, String title) {
@@ -260,12 +260,12 @@ public class JDialog extends Dialog implements WindowConstants,
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
      *
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog.ModalityType#MODELESS
-     * @see java.awt.Dialog#DEFAULT_MODALITY_TYPE
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see ModalityType#MODELESS
+     * @see Dialog#DEFAULT_MODALITY_TYPE
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Frame owner, String title, boolean modal) {
@@ -309,12 +309,12 @@ public class JDialog extends Dialog implements WindowConstants,
      *     is assumed
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog.ModalityType#MODELESS
-     * @see java.awt.Dialog#DEFAULT_MODALITY_TYPE
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see ModalityType#MODELESS
+     * @see Dialog#DEFAULT_MODALITY_TYPE
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      * @since 1.4
      */
@@ -341,7 +341,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *     or {@code null} if this dialog has no owner
      * @throws HeadlessException {@code if GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Dialog owner) {
@@ -362,12 +362,12 @@ public class JDialog extends Dialog implements WindowConstants,
      *     {@code DEFAULT_MODALITY_TYPE}, otherwise the dialog is modeless.
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog.ModalityType#MODELESS
-     * @see java.awt.Dialog#DEFAULT_MODALITY_TYPE
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see ModalityType#MODELESS
+     * @see Dialog#DEFAULT_MODALITY_TYPE
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Dialog owner, boolean modal) {
@@ -387,7 +387,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *                  title bar
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Dialog owner, String title) {
@@ -410,12 +410,12 @@ public class JDialog extends Dialog implements WindowConstants,
      *     {@code DEFAULT_MODALITY_TYPE}, otherwise the dialog is modeless
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog.ModalityType#MODELESS
-     * @see java.awt.Dialog#DEFAULT_MODALITY_TYPE
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see ModalityType#MODELESS
+     * @see Dialog#DEFAULT_MODALITY_TYPE
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      */
     public JDialog(Dialog owner, String title, boolean modal) {
@@ -447,12 +447,12 @@ public class JDialog extends Dialog implements WindowConstants,
      *     is assumed
      * @throws HeadlessException if {@code GraphicsEnvironment.isHeadless()}
      *     returns {@code true}.
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog.ModalityType#MODELESS
-     * @see java.awt.Dialog#DEFAULT_MODALITY_TYPE
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see ModalityType#MODELESS
+     * @see Dialog#DEFAULT_MODALITY_TYPE
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      * @since 1.4
      */
@@ -473,20 +473,20 @@ public class JDialog extends Dialog implements WindowConstants,
      *     {@code null} if this dialog has no owner
      *
      * @throws IllegalArgumentException
-     *     if the {@code owner} is not an instance of {@link java.awt.Dialog Dialog}
-     *     or {@link java.awt.Frame Frame}
+     *     if the {@code owner} is not an instance of {@link Dialog Dialog}
+     *     or {@link Frame Frame}
      * @throws IllegalArgumentException
      *     if the {@code owner}'s {@code GraphicsConfiguration} is not from a screen device
      * @throws HeadlessException
      *     when {@code GraphicsEnvironment.isHeadless()} returns {@code true}
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      *
      * @since 1.6
      */
     public JDialog(Window owner) {
-        this(owner, Dialog.ModalityType.MODELESS);
+        this(owner, ModalityType.MODELESS);
     }
 
     /**
@@ -503,8 +503,8 @@ public class JDialog extends Dialog implements WindowConstants,
      *     types are equivalent to {@code MODELESS}
      *
      * @throws IllegalArgumentException
-     *     if the {@code owner} is not an instance of {@link java.awt.Dialog Dialog}
-     *     or {@link java.awt.Frame Frame}
+     *     if the {@code owner} is not an instance of {@link Dialog Dialog}
+     *     or {@link Frame Frame}
      * @throws IllegalArgumentException
      *     if the {@code owner}'s {@code GraphicsConfiguration} is not from a screen device
      * @throws HeadlessException
@@ -513,10 +513,10 @@ public class JDialog extends Dialog implements WindowConstants,
      *     if the calling thread does not have permission to create modal dialogs
      *     with the given {@code modalityType}
      *
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      *
      * @since 1.6
@@ -538,20 +538,20 @@ public class JDialog extends Dialog implements WindowConstants,
      *     title bar or {@code null} if the dialog has no title
      *
      * @throws IllegalArgumentException
-     *     if the {@code owner} is not an instance of {@link java.awt.Dialog Dialog}
-     *     or {@link java.awt.Frame Frame}
+     *     if the {@code owner} is not an instance of {@link Dialog Dialog}
+     *     or {@link Frame Frame}
      * @throws IllegalArgumentException
      *     if the {@code owner}'s {@code GraphicsConfiguration} is not from a screen device
      * @throws HeadlessException
      *     when {@code GraphicsEnvironment.isHeadless()} returns {@code true}
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      *
      * @since 1.6
      */
     public JDialog(Window owner, String title) {
-        this(owner, title, Dialog.ModalityType.MODELESS);
+        this(owner, title, ModalityType.MODELESS);
     }
 
     /**
@@ -570,8 +570,8 @@ public class JDialog extends Dialog implements WindowConstants,
      *     types are equivalent to {@code MODELESS}
      *
      * @throws IllegalArgumentException
-     *     if the {@code owner} is not an instance of {@link java.awt.Dialog Dialog}
-     *     or {@link java.awt.Frame Frame}
+     *     if the {@code owner} is not an instance of {@link Dialog Dialog}
+     *     or {@link Frame Frame}
      * @throws IllegalArgumentException
      *     if the {@code owner}'s {@code GraphicsConfiguration} is not from a screen device
      * @throws HeadlessException
@@ -580,15 +580,15 @@ public class JDialog extends Dialog implements WindowConstants,
      *     if the calling thread does not have permission to create modal dialogs
      *     with the given {@code modalityType}
      *
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      *
      * @since 1.6
      */
-    public JDialog(Window owner, String title, Dialog.ModalityType modalityType) {
+    public JDialog(Window owner, String title, ModalityType modalityType) {
         super(owner, title, modalityType);
         dialogInit();
     }
@@ -615,8 +615,8 @@ public class JDialog extends Dialog implements WindowConstants,
      *     if {@code null}, the default system {@code GraphicsConfiguration}
      *     is assumed
      * @throws IllegalArgumentException
-     *     if the {@code owner} is not an instance of {@link java.awt.Dialog Dialog}
-     *     or {@link java.awt.Frame Frame}
+     *     if the {@code owner} is not an instance of {@link Dialog Dialog}
+     *     or {@link Frame Frame}
      * @throws IllegalArgumentException
      *     if the {@code owner}'s {@code GraphicsConfiguration} is not from a screen device
      * @throws HeadlessException
@@ -625,15 +625,15 @@ public class JDialog extends Dialog implements WindowConstants,
      *     if the calling thread does not have permission to create modal dialogs
      *     with the given {@code modalityType}
      *
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog#setModal
-     * @see java.awt.Dialog#setModalityType
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see ModalityType
+     * @see Dialog#setModal
+     * @see Dialog#setModalityType
+     * @see GraphicsEnvironment#isHeadless
      * @see JComponent#getDefaultLocale
      *
      * @since 1.6
      */
-    public JDialog(Window owner, String title, Dialog.ModalityType modalityType,
+    public JDialog(Window owner, String title, ModalityType modalityType,
                    GraphicsConfiguration gc) {
         super(owner, title, modalityType, gc);
         dialogInit();
@@ -796,7 +796,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @see TransferHandler
      * @see #getTransferHandler
-     * @see java.awt.Component#setDropTarget
+     * @see Component#setDropTarget
      * @since 1.6
      *
      * @beaninfo
@@ -869,7 +869,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * @see #addImpl
      * @see #setLayout
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected boolean isRootPaneCheckingEnabled() {
         return rootPaneCheckingEnabled;
@@ -887,7 +887,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * @see #addImpl
      * @see #setLayout
      * @see #isRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      * @beaninfo
      *      hidden: true
      * description: Whether the add and setLayout methods are forwarded
@@ -901,7 +901,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * This method is overridden to conditionally forward calls to the
      * {@code contentPane}.
      * By default, children are added to the {@code contentPane} instead
-     * of the frame, refer to {@link javax.swing.RootPaneContainer} for
+     * of the frame, refer to {@link RootPaneContainer} for
      * details.
      *
      * @param comp the component to be enhanced
@@ -913,7 +913,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * @throws IllegalArgumentException if adding a window to a container
      *
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     protected void addImpl(Component comp, Object constraints, int index)
     {
@@ -935,7 +935,7 @@ public class JDialog extends Dialog implements WindowConstants,
      * @param comp the component to be removed
      * @throws NullPointerException if {@code comp} is null
      * @see #add
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void remove(Component comp) {
         if (comp == rootPane) {
@@ -950,12 +950,12 @@ public class JDialog extends Dialog implements WindowConstants,
      * Sets the {@code LayoutManager}.
      * Overridden to conditionally forward the call to the
      * {@code contentPane}.
-     * Refer to {@link javax.swing.RootPaneContainer} for
+     * Refer to {@link RootPaneContainer} for
      * more information.
      *
      * @param manager the {@code LayoutManager}
      * @see #setRootPaneCheckingEnabled
-     * @see javax.swing.RootPaneContainer
+     * @see RootPaneContainer
      */
     public void setLayout(LayoutManager manager) {
         if(isRootPaneCheckingEnabled()) {
@@ -1033,7 +1033,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @param contentPane the {@code contentPane} object for this dialog
      *
-     * @throws java.awt.IllegalComponentStateException (a runtime
+     * @throws IllegalComponentStateException (a runtime
      *            exception) if the content pane parameter is {@code null}
      * @see #getContentPane
      * @see RootPaneContainer#setContentPane
@@ -1065,7 +1065,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @param layeredPane the new {@code layeredPane} property
      *
-     * @throws java.awt.IllegalComponentStateException (a runtime
+     * @throws IllegalComponentStateException (a runtime
      *            exception) if the layered pane parameter is null
      * @see #getLayeredPane
      * @see RootPaneContainer#setLayeredPane
@@ -1160,7 +1160,7 @@ public class JDialog extends Dialog implements WindowConstants,
      *
      * @param defaultLookAndFeelDecorated A hint as to whether or not current
      *        look and feel should provide window decorations
-     * @see javax.swing.LookAndFeel#getSupportsWindowDecorations
+     * @see LookAndFeel#getSupportsWindowDecorations
      * @since 1.4
      */
     public static void setDefaultLookAndFeelDecorated(boolean defaultLookAndFeelDecorated) {

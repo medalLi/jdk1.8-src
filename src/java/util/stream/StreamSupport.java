@@ -52,7 +52,7 @@ public final class StreamSupport {
      * <p>It is strongly recommended the spliterator report a characteristic of
      * {@code IMMUTABLE} or {@code CONCURRENT}, or be
      * <a href="../Spliterator.html#binding">late-binding</a>.  Otherwise,
-     * {@link #stream(java.util.function.Supplier, int, boolean)} should be used
+     * {@link #stream(Supplier, int, boolean)} should be used
      * to reduce the scope of potential interference with the source.  See
      * <a href="package-summary.html#NonInterference">Non-Interference</a> for
      * more details.
@@ -82,7 +82,7 @@ public final class StreamSupport {
      * <p>For spliterators that report a characteristic of {@code IMMUTABLE}
      * or {@code CONCURRENT}, or that are
      * <a href="../Spliterator.html#binding">late-binding</a>, it is likely
-     * more efficient to use {@link #stream(java.util.Spliterator, boolean)}
+     * more efficient to use {@link #stream(Spliterator, boolean)}
      * instead.
      * <p>The use of a {@code Supplier} in this form provides a level of
      * indirection that reduces the scope of potential interference with the
@@ -102,7 +102,7 @@ public final class StreamSupport {
      *        stream; if {@code false} the returned stream is a sequential
      *        stream.
      * @return a new sequential or parallel {@code Stream}
-     * @see #stream(java.util.Spliterator, boolean)
+     * @see #stream(Spliterator, boolean)
      */
     public static <T> Stream<T> stream(Supplier<? extends Spliterator<T>> supplier,
                                        int characteristics,
@@ -123,7 +123,7 @@ public final class StreamSupport {
      * <p>It is strongly recommended the spliterator report a characteristic of
      * {@code IMMUTABLE} or {@code CONCURRENT}, or be
      * <a href="../Spliterator.html#binding">late-binding</a>.  Otherwise,
-     * {@link #intStream(java.util.function.Supplier, int, boolean)} should be
+     * {@link #intStream(Supplier, int, boolean)} should be
      * used to reduce the scope of potential interference with the source.  See
      * <a href="package-summary.html#NonInterference">Non-Interference</a> for
      * more details.
@@ -151,7 +151,7 @@ public final class StreamSupport {
      * <p>For spliterators that report a characteristic of {@code IMMUTABLE}
      * or {@code CONCURRENT}, or that are
      * <a href="../Spliterator.html#binding">late-binding</a>, it is likely
-     * more efficient to use {@link #intStream(java.util.Spliterator.OfInt, boolean)}
+     * more efficient to use {@link #intStream(Spliterator.OfInt, boolean)}
      * instead.
      * <p>The use of a {@code Supplier} in this form provides a level of
      * indirection that reduces the scope of potential interference with the
@@ -170,7 +170,7 @@ public final class StreamSupport {
      *        stream; if {@code false} the returned stream is a sequential
      *        stream.
      * @return a new sequential or parallel {@code IntStream}
-     * @see #intStream(java.util.Spliterator.OfInt, boolean)
+     * @see #intStream(Spliterator.OfInt, boolean)
      */
     public static IntStream intStream(Supplier<? extends Spliterator.OfInt> supplier,
                                       int characteristics,
@@ -190,7 +190,7 @@ public final class StreamSupport {
      * <p>It is strongly recommended the spliterator report a characteristic of
      * {@code IMMUTABLE} or {@code CONCURRENT}, or be
      * <a href="../Spliterator.html#binding">late-binding</a>.  Otherwise,
-     * {@link #longStream(java.util.function.Supplier, int, boolean)} should be
+     * {@link #longStream(Supplier, int, boolean)} should be
      * used to reduce the scope of potential interference with the source.  See
      * <a href="package-summary.html#NonInterference">Non-Interference</a> for
      * more details.
@@ -219,7 +219,7 @@ public final class StreamSupport {
      * <p>For spliterators that report a characteristic of {@code IMMUTABLE}
      * or {@code CONCURRENT}, or that are
      * <a href="../Spliterator.html#binding">late-binding</a>, it is likely
-     * more efficient to use {@link #longStream(java.util.Spliterator.OfLong, boolean)}
+     * more efficient to use {@link #longStream(Spliterator.OfLong, boolean)}
      * instead.
      * <p>The use of a {@code Supplier} in this form provides a level of
      * indirection that reduces the scope of potential interference with the
@@ -238,7 +238,7 @@ public final class StreamSupport {
      *        stream; if {@code false} the returned stream is a sequential
      *        stream.
      * @return a new sequential or parallel {@code LongStream}
-     * @see #longStream(java.util.Spliterator.OfLong, boolean)
+     * @see #longStream(Spliterator.OfLong, boolean)
      */
     public static LongStream longStream(Supplier<? extends Spliterator.OfLong> supplier,
                                         int characteristics,
@@ -258,7 +258,7 @@ public final class StreamSupport {
      * <p>It is strongly recommended the spliterator report a characteristic of
      * {@code IMMUTABLE} or {@code CONCURRENT}, or be
      * <a href="../Spliterator.html#binding">late-binding</a>.  Otherwise,
-     * {@link #doubleStream(java.util.function.Supplier, int, boolean)} should
+     * {@link #doubleStream(Supplier, int, boolean)} should
      * be used to reduce the scope of potential interference with the source.  See
      * <a href="package-summary.html#NonInterference">Non-Interference</a> for
      * more details.
@@ -287,7 +287,7 @@ public final class StreamSupport {
      * <p>For spliterators that report a characteristic of {@code IMMUTABLE}
      * or {@code CONCURRENT}, or that are
      * <a href="../Spliterator.html#binding">late-binding</a>, it is likely
-     * more efficient to use {@link #doubleStream(java.util.Spliterator.OfDouble, boolean)}
+     * more efficient to use {@link #doubleStream(Spliterator.OfDouble, boolean)}
      * instead.
      * <p>The use of a {@code Supplier} in this form provides a level of
      * indirection that reduces the scope of potential interference with the
@@ -306,7 +306,7 @@ public final class StreamSupport {
      *        stream; if {@code false} the returned stream is a sequential
      *        stream.
      * @return a new sequential or parallel {@code DoubleStream}
-     * @see #doubleStream(java.util.Spliterator.OfDouble, boolean)
+     * @see #doubleStream(Spliterator.OfDouble, boolean)
      */
     public static DoubleStream doubleStream(Supplier<? extends Spliterator.OfDouble> supplier,
                                             int characteristics,

@@ -107,7 +107,7 @@ public interface JPEGEncodeParam
          * @param subsample The subsampling factor being specified.
          */
         public void setHorizontalSubsampling(int component,
-                                                                                 int subsample);
+                                             int subsample);
 
         /**
          * Set the vertical subsample factor for the given component.  Note that
@@ -117,7 +117,7 @@ public interface JPEGEncodeParam
          * @param subsample The subsampling factor being specified.
          */
         public void setVerticalSubsampling(int component,
-                                                                           int subsample);
+                                           int subsample);
 
         /**
          * Sets the coefficient quantization tables at index
@@ -125,7 +125,7 @@ public interface JPEGEncodeParam
          * @param qtable that will be used.
          * @param tableNum the index of the table to be set.
          */
-        public void     setQTable( int tableNum, JPEGQTable qTable );
+        public void     setQTable(int tableNum, JPEGQTable qTable);
 
         /** Sets the DC Huffman coding table at index to the table provided.
          * @param huffTable JPEGHuffmanTable that will be assigned
@@ -134,8 +134,8 @@ public interface JPEGEncodeParam
          * @exception IllegalArgumentException - thrown if the tableNum
          * is out of range.  Index must range in value from 0 - 3.
          */
-        public void     setDCHuffmanTable( int tableNum,
-                                                                   JPEGHuffmanTable huffTable);
+        public void     setDCHuffmanTable(int tableNum,
+                                          JPEGHuffmanTable huffTable);
 
         /** Sets the AC Huffman coding table at index to the table provided.
          * @param huffTable JPEGHuffmanTable that will be assigned
@@ -144,8 +144,8 @@ public interface JPEGEncodeParam
          * @exception IllegalArgumentException - thrown if the tableNum
          * is out of range.  Index must range in value from 0 - 3.
          */
-        public void     setACHuffmanTable( int tableNum,
-                                                                   JPEGHuffmanTable huffTable);
+        public void     setACHuffmanTable(int tableNum,
+                                          JPEGHuffmanTable huffTable);
 
 
         /**
@@ -153,19 +153,19 @@ public interface JPEGEncodeParam
          * @param component The component to set the mapping for
          * @param table The DC Huffman table to use for component
          */
-        public void setDCHuffmanComponentMapping( int component, int table);
+        public void setDCHuffmanComponentMapping(int component, int table);
         /**
          * Sets the mapping between a component and it's AC Huffman Table.
          * @param component The component to set the mapping for
          * @param table The AC Huffman table to use for component
          */
-        public void setACHuffmanComponentMapping( int component, int table);
+        public void setACHuffmanComponentMapping(int component, int table);
         /**
          * Sets the mapping between a component and it's Quantization Table.
          * @param component The component to set the mapping for
          * @param table The Quantization Table to use for component
          */
-        public void setQTableComponentMapping( int component, int table);
+        public void setQTableComponentMapping(int component, int table);
 
         /**
          * Set the flag indicating the validity of the table information
@@ -198,13 +198,13 @@ public interface JPEGEncodeParam
          * @param marker The marker to add and instance of.
          * @param data the data to be written.
          */
-        public void addMarkerData(int marker, byte []data);
+        public void addMarkerData(int marker, byte[] data);
 
         /**
          * Set the MCUs per restart, or 0 for no restart markers.
          * @param restartInterval number MCUs per restart marker.
          */
-        public void setRestartInterval( int restartInterval );
+        public void setRestartInterval(int restartInterval);
 
 
         /**
@@ -213,21 +213,21 @@ public interface JPEGEncodeParam
          * the JPEG code.
          * @param unit One of the DENSITY_UNIT_* values.
          */
-        public void setDensityUnit( int unit);
+        public void setDensityUnit(int unit);
         /**
          * Set the horizontal pixel density This value is written into the
          * APP0 marker. It isn't used by the JPEG code.
          * @param density the horizontal pixel density, in units
          * described by @see JPEGParam.getDensityUnit.
          */
-        public void setXDensity( int density );
+        public void setXDensity(int density);
         /**
          * Set the vertical pixel density.  This value is copied into
          * the JFIF APP0 marker. It isn't used by the JPEG code.
          * @param density The verticle pixel density, in units
          * described by @see JPEGParam.getDensityUnit.
          */
-        public void setYDensity( int density );
+        public void setYDensity(int density);
 
         /**
          * This creates new Quantization tables that replace the currently
@@ -253,5 +253,5 @@ public interface JPEGEncodeParam
          * @param quality 0.0-1.0 setting of desired quality level.
          * @param forceBaseline force baseline quantization table
          */
-        public void setQuality(float quality, boolean forceBaseline );
+        public void setQuality(float quality, boolean forceBaseline);
 }

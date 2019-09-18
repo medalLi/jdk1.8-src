@@ -436,7 +436,7 @@ public class JFileChooser extends JComponent implements Accessible {
      *            <code>b</code> is <code>true</code> and
      *            <code>GraphicsEnvironment.isHeadless()</code>
      *            returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #getDragEnabled
      * @see #setTransferHandler
      * @see TransferHandler
@@ -648,7 +648,7 @@ public class JFileChooser extends JComponent implements Accessible {
      * </ul>
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #showDialog
      */
     public int showOpenDialog(Component parent) throws HeadlessException {
@@ -673,7 +673,7 @@ public class JFileChooser extends JComponent implements Accessible {
      * </ul>
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #showDialog
      */
     public int showSaveDialog(Component parent) throws HeadlessException {
@@ -733,7 +733,7 @@ public class JFileChooser extends JComponent implements Accessible {
      * </ul>
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public int showDialog(Component parent, String approveButtonText)
         throws HeadlessException {
@@ -789,7 +789,7 @@ public class JFileChooser extends JComponent implements Accessible {
      * @return a new <code>JDialog</code> containing this instance
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since 1.4
      */
     protected JDialog createDialog(Component parent) throws HeadlessException {

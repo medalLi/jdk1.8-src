@@ -318,7 +318,7 @@ public class BasicMenuUI extends BasicMenuItemUI
      * methods should call the parent methods so that the menu selection
      * is correct.
      *
-     * @see javax.swing.MenuSelectionManager
+     * @see MenuSelectionManager
      * @since 1.4
      */
     protected class MouseInputHandler implements MouseInputListener {
@@ -372,7 +372,7 @@ public class BasicMenuUI extends BasicMenuItemUI
          * Delegates the mouse event to the MenuSelectionManager.
          *
          * @param e the mouse event
-         * @see java.awt.event.MouseMotionListener#mouseDragged
+         * @see MouseMotionListener#mouseDragged
          */
         public void mouseDragged(MouseEvent e) {
             getHandler().mouseDragged(e);
@@ -535,7 +535,7 @@ public class BasicMenuUI extends BasicMenuItemUI
          * Delegates the mouse event to the MenuSelectionManager.
          *
          * @param e the mouse event
-         * @see java.awt.event.MouseMotionListener#mouseDragged
+         * @see MouseMotionListener#mouseDragged
          */
         public void mouseDragged(MouseEvent e) {
             JMenu menu = (JMenu)menuItem;

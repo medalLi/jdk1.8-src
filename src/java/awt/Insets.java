@@ -33,8 +33,8 @@ package java.awt;
  *
  * @author      Arthur van Hoff
  * @author      Sami Shaio
- * @see         java.awt.LayoutManager
- * @see         java.awt.Container
+ * @see         LayoutManager
+ * @see         Container
  * @since       JDK1.0
  */
 public class Insets implements Cloneable, java.io.Serializable {

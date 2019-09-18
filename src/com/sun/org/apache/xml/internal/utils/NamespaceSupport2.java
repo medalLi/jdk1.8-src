@@ -242,7 +242,7 @@ public class NamespaceSupport2
      *        local name, and the raw XML 1.0 name; or null if there
      *        is an undeclared prefix.
      * @see #declarePrefix
-     * @see java.lang.String#intern */
+     * @see String#intern */
     public String [] processName (String qName, String[] parts,
                                   boolean isAttribute)
     {
@@ -310,7 +310,7 @@ public class NamespaceSupport2
      * @return One of the prefixes currently mapped to the URI supplied,
      *         or null if none is mapped or if the URI is assigned to
      *         the default Namespace.
-     * @see #getPrefixes(java.lang.String)
+     * @see #getPrefixes(String)
      * @see #getURI */
     public String getPrefix (String uri)
     {

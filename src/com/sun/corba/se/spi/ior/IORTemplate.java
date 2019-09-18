@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.ior ;
+package com.sun.corba.se.spi.ior;
 
 import java.util.List ;
 import java.util.Iterator ;
@@ -35,7 +35,7 @@ public interface IORTemplate extends List, IORFactory, MakeImmutable {
     /** Iterate over all TaggedProfileTemplates in this IORTemplate
      * with the given id.
      */
-    Iterator iteratorById( int id ) ;
+    Iterator iteratorById(int id) ;
 
     ObjectKeyTemplate getObjectKeyTemplate() ;
 }

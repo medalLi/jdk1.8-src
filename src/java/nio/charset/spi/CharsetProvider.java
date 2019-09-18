@@ -39,7 +39,7 @@ import java.util.Iterator;
  * the usual extension directories.  Providers may also be made available by
  * adding them to the applet or application class path or by some other
  * platform-specific means.  Charset providers are looked up via the current
- * thread's {@link java.lang.Thread#getContextClassLoader() context class
+ * thread's {@link Thread#getContextClassLoader() context class
  * loader}.
  *
  * <p> A charset provider identifies itself with a provider-configuration file
@@ -66,7 +66,7 @@ import java.util.Iterator;
  * @author JSR-51 Expert Group
  * @since 1.4
  *
- * @see java.nio.charset.Charset
+ * @see Charset
  */
 
 public abstract class CharsetProvider {
@@ -87,7 +87,7 @@ public abstract class CharsetProvider {
     /**
      * Creates an iterator that iterates over the charsets supported by this
      * provider.  This method is used in the implementation of the {@link
-     * java.nio.charset.Charset#availableCharsets Charset.availableCharsets}
+     * Charset#availableCharsets Charset.availableCharsets}
      * method.
      *
      * @return  The new iterator

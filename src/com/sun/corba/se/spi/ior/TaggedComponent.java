@@ -36,5 +36,5 @@ import org.omg.CORBA.ORB ;
 */
 public interface TaggedComponent extends Identifiable
 {
-    org.omg.IOP.TaggedComponent getIOPComponent( ORB orb ) ;
+    org.omg.IOP.TaggedComponent getIOPComponent(ORB orb) ;
 }

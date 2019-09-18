@@ -48,9 +48,9 @@ import javax.crypto.spec.SecretKeySpec;
  *
  * @see Key
  * @see KeyFactory
- * @see javax.crypto.spec.SecretKeySpec
- * @see java.security.spec.X509EncodedKeySpec
- * @see java.security.spec.PKCS8EncodedKeySpec
+ * @see SecretKeySpec
+ * @see X509EncodedKeySpec
+ * @see PKCS8EncodedKeySpec
  *
  * @since 1.5
  */

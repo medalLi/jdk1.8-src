@@ -498,7 +498,7 @@ public class Sasl {
                     String protocol,
                     String serverName,
                     Map<String,?> props,
-                    javax.security.auth.callback.CallbackHandler cbh)
+                    CallbackHandler cbh)
         throws SaslException {
 
         SaslServer mech = null;

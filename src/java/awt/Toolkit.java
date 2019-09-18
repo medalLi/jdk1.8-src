@@ -94,7 +94,7 @@ import sun.util.CoreResourceBundleControl;
  *     <code>setLocation</code> on a <code>Window</code>,
  *     <code>Frame</code> or <code>Dialog</code> are forwarded
  *     to the underlying window management system and may be
- *     ignored or modified.  See {@link java.awt.Window} for
+ *     ignored or modified.  See {@link Window} for
  *     more information.
  * </ul>
  * <p>
@@ -119,9 +119,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of the <code>Desktop</code>
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Desktop
-     * @see       java.awt.peer.DesktopPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Desktop
+     * @see       DesktopPeer
      * @since 1.6
      */
     protected abstract DesktopPeer createDesktopPeer(Desktop target)
@@ -135,9 +135,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Button</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Button
-     * @see       java.awt.peer.ButtonPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Button
+     * @see       ButtonPeer
      */
     protected abstract ButtonPeer createButton(Button target)
         throws HeadlessException;
@@ -149,9 +149,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>TextField</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.TextField
-     * @see       java.awt.peer.TextFieldPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       TextField
+     * @see       TextFieldPeer
      */
     protected abstract TextFieldPeer createTextField(TextField target)
         throws HeadlessException;
@@ -163,9 +163,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Label</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Label
-     * @see       java.awt.peer.LabelPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Label
+     * @see       LabelPeer
      */
     protected abstract LabelPeer createLabel(Label target)
         throws HeadlessException;
@@ -177,11 +177,11 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>List</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.List
-     * @see       java.awt.peer.ListPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       List
+     * @see       ListPeer
      */
-    protected abstract ListPeer createList(java.awt.List target)
+    protected abstract ListPeer createList(List target)
         throws HeadlessException;
 
     /**
@@ -191,9 +191,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Checkbox</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Checkbox
-     * @see       java.awt.peer.CheckboxPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Checkbox
+     * @see       CheckboxPeer
      */
     protected abstract CheckboxPeer createCheckbox(Checkbox target)
         throws HeadlessException;
@@ -205,9 +205,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Scrollbar</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Scrollbar
-     * @see       java.awt.peer.ScrollbarPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Scrollbar
+     * @see       ScrollbarPeer
      */
     protected abstract ScrollbarPeer createScrollbar(Scrollbar target)
         throws HeadlessException;
@@ -219,9 +219,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>ScrollPane</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.ScrollPane
-     * @see       java.awt.peer.ScrollPanePeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       ScrollPane
+     * @see       ScrollPanePeer
      * @since     JDK1.1
      */
     protected abstract ScrollPanePeer createScrollPane(ScrollPane target)
@@ -234,9 +234,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>TextArea</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.TextArea
-     * @see       java.awt.peer.TextAreaPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       TextArea
+     * @see       TextAreaPeer
      */
     protected abstract TextAreaPeer createTextArea(TextArea target)
         throws HeadlessException;
@@ -248,9 +248,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Choice</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Choice
-     * @see       java.awt.peer.ChoicePeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Choice
+     * @see       ChoicePeer
      */
     protected abstract ChoicePeer createChoice(Choice target)
         throws HeadlessException;
@@ -262,9 +262,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Frame</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Frame
-     * @see       java.awt.peer.FramePeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Frame
+     * @see       FramePeer
      */
     protected abstract FramePeer createFrame(Frame target)
         throws HeadlessException;
@@ -274,8 +274,8 @@ public abstract class Toolkit {
      * the specified peer interface.
      * @param     target the canvas to be implemented.
      * @return    this toolkit's implementation of <code>Canvas</code>.
-     * @see       java.awt.Canvas
-     * @see       java.awt.peer.CanvasPeer
+     * @see       Canvas
+     * @see       CanvasPeer
      */
     protected abstract CanvasPeer       createCanvas(Canvas target);
 
@@ -284,8 +284,8 @@ public abstract class Toolkit {
      * the specified peer interface.
      * @param     target the panel to be implemented.
      * @return    this toolkit's implementation of <code>Panel</code>.
-     * @see       java.awt.Panel
-     * @see       java.awt.peer.PanelPeer
+     * @see       Panel
+     * @see       PanelPeer
      */
     protected abstract PanelPeer        createPanel(Panel target);
 
@@ -296,9 +296,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Window</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Window
-     * @see       java.awt.peer.WindowPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Window
+     * @see       WindowPeer
      */
     protected abstract WindowPeer createWindow(Window target)
         throws HeadlessException;
@@ -310,9 +310,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Dialog</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Dialog
-     * @see       java.awt.peer.DialogPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Dialog
+     * @see       DialogPeer
      */
     protected abstract DialogPeer createDialog(Dialog target)
         throws HeadlessException;
@@ -324,9 +324,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>MenuBar</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.MenuBar
-     * @see       java.awt.peer.MenuBarPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       MenuBar
+     * @see       MenuBarPeer
      */
     protected abstract MenuBarPeer createMenuBar(MenuBar target)
         throws HeadlessException;
@@ -338,9 +338,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>Menu</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.Menu
-     * @see       java.awt.peer.MenuPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Menu
+     * @see       MenuPeer
      */
     protected abstract MenuPeer createMenu(Menu target)
         throws HeadlessException;
@@ -352,9 +352,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>PopupMenu</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.PopupMenu
-     * @see       java.awt.peer.PopupMenuPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       PopupMenu
+     * @see       PopupMenuPeer
      * @since     JDK1.1
      */
     protected abstract PopupMenuPeer createPopupMenu(PopupMenu target)
@@ -367,9 +367,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>MenuItem</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.MenuItem
-     * @see       java.awt.peer.MenuItemPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       MenuItem
+     * @see       MenuItemPeer
      */
     protected abstract MenuItemPeer createMenuItem(MenuItem target)
         throws HeadlessException;
@@ -381,9 +381,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>FileDialog</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.FileDialog
-     * @see       java.awt.peer.FileDialogPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       FileDialog
+     * @see       FileDialogPeer
      */
     protected abstract FileDialogPeer createFileDialog(FileDialog target)
         throws HeadlessException;
@@ -395,9 +395,9 @@ public abstract class Toolkit {
      * @return    this toolkit's implementation of <code>CheckboxMenuItem</code>.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.CheckboxMenuItem
-     * @see       java.awt.peer.CheckboxMenuItemPeer
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       CheckboxMenuItem
+     * @see       CheckboxMenuItemPeer
      */
     protected abstract CheckboxMenuItemPeer createCheckboxMenuItem(
         CheckboxMenuItem target) throws HeadlessException;
@@ -407,8 +407,8 @@ public abstract class Toolkit {
      * <code>MouseInfo</code> operations.
      * @return    this toolkit's implementation of  helper for <code>MouseInfo</code>
      * @throws    UnsupportedOperationException if this operation is not implemented
-     * @see       java.awt.peer.MouseInfoPeer
-     * @see       java.awt.MouseInfo
+     * @see       MouseInfoPeer
+     * @see       MouseInfo
      * @since 1.5
      */
     protected MouseInfoPeer getMouseInfoPeer() {
@@ -438,9 +438,9 @@ public abstract class Toolkit {
      * @param     style the style of the font, such as <code>PLAIN</code>,
      *            <code>BOLD</code>, <code>ITALIC</code>, or a combination
      * @return    this toolkit's implementation of <code>Font</code>
-     * @see       java.awt.Font
-     * @see       java.awt.peer.FontPeer
-     * @see       java.awt.GraphicsEnvironment#getAllFonts
+     * @see       Font
+     * @see       FontPeer
+     * @see       GraphicsEnvironment#getAllFonts
      * @deprecated  see java.awt.GraphicsEnvironment#getAllFonts
      */
     @Deprecated
@@ -456,7 +456,7 @@ public abstract class Toolkit {
      * @param     systemColors an integer array.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     JDK1.1
      */
     protected void loadSystemColors(int[] systemColors)
@@ -491,7 +491,7 @@ public abstract class Toolkit {
      * @see       #isDynamicLayoutSet()
      * @see       #isDynamicLayoutActive()
      * @see       #getDesktopProperty(String propertyName)
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.4
      */
     public void setDynamicLayout(final boolean dynamic)
@@ -518,7 +518,7 @@ public abstract class Toolkit {
      * @see       #setDynamicLayout(boolean dynamic)
      * @see       #isDynamicLayoutActive()
      * @see       #getDesktopProperty(String propertyName)
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.4
      */
     protected boolean isDynamicLayoutSet()
@@ -555,7 +555,7 @@ public abstract class Toolkit {
      * @see       #setDynamicLayout(boolean dynamic)
      * @see       #isDynamicLayoutSet()
      * @see       #getDesktopProperty(String propertyName)
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.4
      */
     public boolean isDynamicLayoutActive()
@@ -577,9 +577,9 @@ public abstract class Toolkit {
      * @return    the size of this toolkit's screen, in pixels.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsConfiguration#getBounds
-     * @see       java.awt.GraphicsDevice#getDisplayMode
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsConfiguration#getBounds
+     * @see       GraphicsDevice#getDisplayMode
+     * @see       GraphicsEnvironment#isHeadless
      */
     public abstract Dimension getScreenSize()
         throws HeadlessException;
@@ -589,7 +589,7 @@ public abstract class Toolkit {
      * @return    this toolkit's screen resolution, in dots-per-inch.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      */
     public abstract int getScreenResolution()
         throws HeadlessException;
@@ -600,7 +600,7 @@ public abstract class Toolkit {
      * @return    the insets of this toolkit's screen, in pixels.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.4
      */
     public Insets getScreenInsets(GraphicsConfiguration gc)
@@ -627,9 +627,9 @@ public abstract class Toolkit {
      * @return    the color model of this toolkit's screen.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.image.ColorModel
-     * @see       java.awt.Component#getColorModel
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       ColorModel
+     * @see       Component#getColorModel
      */
     public abstract ColorModel getColorModel()
         throws HeadlessException;
@@ -647,8 +647,8 @@ public abstract class Toolkit {
      * are defined in Unicode starting at 0x2700, and as of 1.1 Java supports
      * those characters.
      * @return    the names of the available fonts in this toolkit.
-     * @deprecated see {@link java.awt.GraphicsEnvironment#getAvailableFontFamilyNames()}
-     * @see java.awt.GraphicsEnvironment#getAvailableFontFamilyNames()
+     * @deprecated see {@link GraphicsEnvironment#getAvailableFontFamilyNames()}
+     * @see GraphicsEnvironment#getAvailableFontFamilyNames()
      */
     @Deprecated
     public abstract String[] getFontList();
@@ -660,8 +660,8 @@ public abstract class Toolkit {
      * @deprecated  As of JDK version 1.2, replaced by the <code>Font</code>
      *          method <code>getLineMetrics</code>.
      * @see java.awt.font.LineMetrics
-     * @see java.awt.Font#getLineMetrics
-     * @see java.awt.GraphicsEnvironment#getScreenDevices
+     * @see Font#getLineMetrics
+     * @see GraphicsEnvironment#getScreenDevices
      */
     @Deprecated
     public abstract FontMetrics getFontMetrics(Font font);
@@ -898,7 +898,7 @@ public abstract class Toolkit {
      * <code>Image</code> objects may continue to hold onto images
      * that are no longer in use for an indefinite period of time,
      * developers are encouraged to implement their own caching of
-     * images by using the {@link #createImage(java.lang.String) createImage}
+     * images by using the {@link #createImage(String) createImage}
      * variant wherever available.
      * If the image data contained in the specified file changes,
      * the <code>Image</code> object returned from this method may
@@ -918,7 +918,7 @@ public abstract class Toolkit {
      *                         the specified file.
      * @throws SecurityException  if a security manager exists and its
      *                            checkRead method doesn't allow the operation.
-     * @see #createImage(java.lang.String)
+     * @see #createImage(String)
      */
     public abstract Image getImage(String filename);
 
@@ -933,7 +933,7 @@ public abstract class Toolkit {
      * <code>Image</code> objects may continue to hold onto images
      * that are no longer in use for an indefinite period of time,
      * developers are encouraged to implement their own caching of
-     * images by using the {@link #createImage(java.net.URL) createImage}
+     * images by using the {@link #createImage(URL) createImage}
      * variant wherever available.
      * If the image data stored at the specified URL changes,
      * the <code>Image</code> object returned from this method may
@@ -959,7 +959,7 @@ public abstract class Toolkit {
      * @throws SecurityException  if a security manager exists and its
      *                            checkPermission method doesn't allow
      *                            the operation.
-     * @see #createImage(java.net.URL)
+     * @see #createImage(URL)
      */
     public abstract Image getImage(URL url);
 
@@ -978,7 +978,7 @@ public abstract class Toolkit {
      *                         the specified file.
      * @throws SecurityException  if a security manager exists and its
      *                            checkRead method doesn't allow the operation.
-     * @see #getImage(java.lang.String)
+     * @see #getImage(String)
      */
     public abstract Image createImage(String filename);
 
@@ -1003,7 +1003,7 @@ public abstract class Toolkit {
      * @throws SecurityException  if a security manager exists and its
      *                            checkPermission method doesn't allow
      *                            the operation.
-     * @see #getImage(java.net.URL)
+     * @see #getImage(URL)
      */
     public abstract Image createImage(URL url);
 
@@ -1036,11 +1036,11 @@ public abstract class Toolkit {
      *                           image is being prepared.
      * @return    <code>true</code> if the image has already been
      *                 fully prepared; <code>false</code> otherwise.
-     * @see       java.awt.Component#prepareImage(java.awt.Image,
-     *                 java.awt.image.ImageObserver)
-     * @see       java.awt.Component#prepareImage(java.awt.Image,
-     *                 int, int, java.awt.image.ImageObserver)
-     * @see       java.awt.image.ImageObserver
+     * @see       Component#prepareImage(Image,
+     *                 ImageObserver)
+     * @see       Component#prepareImage(Image,
+     *                 int, int, ImageObserver)
+     * @see       ImageObserver
      */
     public abstract boolean prepareImage(Image image, int width, int height,
                                          ImageObserver observer);
@@ -1075,13 +1075,13 @@ public abstract class Toolkit {
      * @return    the bitwise inclusive <strong>OR</strong> of the
      *                 <code>ImageObserver</code> flags for the
      *                 image data that is currently available.
-     * @see       java.awt.Toolkit#prepareImage(java.awt.Image,
-     *                 int, int, java.awt.image.ImageObserver)
-     * @see       java.awt.Component#checkImage(java.awt.Image,
-     *                 java.awt.image.ImageObserver)
-     * @see       java.awt.Component#checkImage(java.awt.Image,
-     *                 int, int, java.awt.image.ImageObserver)
-     * @see       java.awt.image.ImageObserver
+     * @see       Toolkit#prepareImage(Image,
+     *                 int, int, ImageObserver)
+     * @see       Component#checkImage(Image,
+     *                 ImageObserver)
+     * @see       Component#checkImage(Image,
+     *                 int, int, ImageObserver)
+     * @see       ImageObserver
      */
     public abstract int checkImage(Image image, int width, int height,
                                    ImageObserver observer);
@@ -1090,9 +1090,9 @@ public abstract class Toolkit {
      * Creates an image with the specified image producer.
      * @param     producer the image producer to be used.
      * @return    an image with the specified image producer.
-     * @see       java.awt.Image
-     * @see       java.awt.image.ImageProducer
-     * @see       java.awt.Component#createImage(java.awt.image.ImageProducer)
+     * @see       Image
+     * @see       ImageProducer
+     * @see       Component#createImage(ImageProducer)
      */
     public abstract Image createImage(ImageProducer producer);
 
@@ -1156,9 +1156,9 @@ public abstract class Toolkit {
      * @throws  NullPointerException if frame is null
      * @throws  SecurityException if this thread is not allowed to initiate a
      *          print job request
-     * @see     java.awt.GraphicsEnvironment#isHeadless
-     * @see     java.awt.PrintJob
-     * @see     java.lang.RuntimePermission
+     * @see     GraphicsEnvironment#isHeadless
+     * @see     PrintJob
+     * @see     RuntimePermission
      * @since   JDK1.1
      */
     public abstract PrintJob getPrintJob(Frame frame, String jobtitle,
@@ -1206,11 +1206,11 @@ public abstract class Toolkit {
      * @throws  SecurityException if this thread is not allowed to initiate a
      *          print job request, or if jobAttributes specifies print to file,
      *          and this thread is not allowed to access the file system
-     * @see     java.awt.PrintJob
-     * @see     java.awt.GraphicsEnvironment#isHeadless
-     * @see     java.lang.RuntimePermission
-     * @see     java.awt.JobAttributes
-     * @see     java.awt.PageAttributes
+     * @see     PrintJob
+     * @see     GraphicsEnvironment#isHeadless
+     * @see     RuntimePermission
+     * @see     JobAttributes
+     * @see     PageAttributes
      * @since   1.3
      */
     public PrintJob getPrintJob(Frame frame, String jobtitle,
@@ -1266,13 +1266,13 @@ public abstract class Toolkit {
      * @return    the system Clipboard
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.datatransfer.Clipboard
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       Clipboard
      * @see       java.awt.datatransfer.StringSelection
      * @see       java.awt.datatransfer.DataFlavor#stringFlavor
      * @see       java.awt.datatransfer.DataFlavor#plainTextFlavor
      * @see       java.io.Reader
-     * @see       java.awt.AWTPermission
+     * @see       AWTPermission
      * @since     JDK1.1
      */
     public abstract Clipboard getSystemClipboard()
@@ -1314,10 +1314,10 @@ public abstract class Toolkit {
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      *            returns true
      *
-     * @see java.awt.datatransfer.Clipboard
-     * @see java.awt.event.FocusListener
-     * @see java.awt.event.FocusEvent#FOCUS_GAINED
-     * @see java.awt.event.FocusEvent#FOCUS_LOST
+     * @see Clipboard
+     * @see FocusListener
+     * @see FocusEvent#FOCUS_GAINED
+     * @see FocusEvent#FOCUS_LOST
      * @see TextComponent
      * @see javax.swing.text.JTextComponent
      * @see AWTPermission
@@ -1350,9 +1350,9 @@ public abstract class Toolkit {
      *                 that is used for menu shortcuts on this toolkit.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
-     * @see       java.awt.MenuBar
-     * @see       java.awt.MenuShortcut
+     * @see       GraphicsEnvironment#isHeadless
+     * @see       MenuBar
+     * @see       MenuShortcut
      * @since     JDK1.1
      */
     public int getMenuShortcutKeyMask() throws HeadlessException {
@@ -1365,19 +1365,19 @@ public abstract class Toolkit {
      * Returns whether the given locking key on the keyboard is currently in
      * its "on" state.
      * Valid key codes are
-     * {@link java.awt.event.KeyEvent#VK_CAPS_LOCK VK_CAPS_LOCK},
-     * {@link java.awt.event.KeyEvent#VK_NUM_LOCK VK_NUM_LOCK},
-     * {@link java.awt.event.KeyEvent#VK_SCROLL_LOCK VK_SCROLL_LOCK}, and
-     * {@link java.awt.event.KeyEvent#VK_KANA_LOCK VK_KANA_LOCK}.
+     * {@link KeyEvent#VK_CAPS_LOCK VK_CAPS_LOCK},
+     * {@link KeyEvent#VK_NUM_LOCK VK_NUM_LOCK},
+     * {@link KeyEvent#VK_SCROLL_LOCK VK_SCROLL_LOCK}, and
+     * {@link KeyEvent#VK_KANA_LOCK VK_KANA_LOCK}.
      *
-     * @exception java.lang.IllegalArgumentException if <code>keyCode</code>
+     * @exception IllegalArgumentException if <code>keyCode</code>
      * is not one of the valid key codes
-     * @exception java.lang.UnsupportedOperationException if the host system doesn't
+     * @exception UnsupportedOperationException if the host system doesn't
      * allow getting the state of this key programmatically, or if the keyboard
      * doesn't have this key
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since 1.3
      */
     public boolean getLockingKeyState(int keyCode)
@@ -1395,23 +1395,23 @@ public abstract class Toolkit {
     /**
      * Sets the state of the given locking key on the keyboard.
      * Valid key codes are
-     * {@link java.awt.event.KeyEvent#VK_CAPS_LOCK VK_CAPS_LOCK},
-     * {@link java.awt.event.KeyEvent#VK_NUM_LOCK VK_NUM_LOCK},
-     * {@link java.awt.event.KeyEvent#VK_SCROLL_LOCK VK_SCROLL_LOCK}, and
-     * {@link java.awt.event.KeyEvent#VK_KANA_LOCK VK_KANA_LOCK}.
+     * {@link KeyEvent#VK_CAPS_LOCK VK_CAPS_LOCK},
+     * {@link KeyEvent#VK_NUM_LOCK VK_NUM_LOCK},
+     * {@link KeyEvent#VK_SCROLL_LOCK VK_SCROLL_LOCK}, and
+     * {@link KeyEvent#VK_KANA_LOCK VK_KANA_LOCK}.
      * <p>
      * Depending on the platform, setting the state of a locking key may
      * involve event processing and therefore may not be immediately
      * observable through getLockingKeyState.
      *
-     * @exception java.lang.IllegalArgumentException if <code>keyCode</code>
+     * @exception IllegalArgumentException if <code>keyCode</code>
      * is not one of the valid key codes
-     * @exception java.lang.UnsupportedOperationException if the host system doesn't
+     * @exception UnsupportedOperationException if the host system doesn't
      * allow setting the state of this key programmatically, or if the keyboard
      * doesn't have this key
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since 1.3
      */
     public void setLockingKeyState(int keyCode, boolean on)
@@ -1451,7 +1451,7 @@ public abstract class Toolkit {
      *   the bounds of the cursor
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.2
      */
     public Cursor createCustomCursor(Image cursor, Point hotSpot, String name)
@@ -1487,7 +1487,7 @@ public abstract class Toolkit {
      * the Toolkit implementation doesn't support custom cursors.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.2
      */
     public Dimension getBestCursorSize(int preferredWidth,
@@ -1517,7 +1517,7 @@ public abstract class Toolkit {
      * supported by this Toolkit implementation.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since     1.2
      */
     public int getMaximumCursorColors() throws HeadlessException {
@@ -1552,9 +1552,9 @@ public abstract class Toolkit {
      * may still be unsupported and/or unavailable for a particular
      * frame.
      * <li>The developer should consider examining the value of the
-     * {@link java.awt.event.WindowEvent#getNewState} method of the
+     * {@link WindowEvent#getNewState} method of the
      * {@code WindowEvent} received through the {@link
-     * java.awt.event.WindowStateListener}, rather than assuming
+     * WindowStateListener}, rather than assuming
      * that the state given to the {@code setExtendedState()} method
      * will be definitely applied. For more information see the
      * documentation for the {@link Frame#setExtendedState} method.
@@ -1566,7 +1566,7 @@ public abstract class Toolkit {
      * @exception HeadlessException
      *     if <code>GraphicsEnvironment.isHeadless()</code>
      *     returns <code>true</code>.
-     * @see java.awt.Window#addWindowStateListener
+     * @see Window#addWindowStateListener
      * @since   1.4
      */
     public boolean isFrameStateSupported(int state)
@@ -1711,7 +1711,7 @@ public abstract class Toolkit {
      * @throws  SecurityException
      *          if a security manager is set and it denies access to
      *          the {@code EventQueue}
-     * @see     java.awt.AWTPermission
+     * @see     AWTPermission
     */
     public final EventQueue getSystemEventQueue() {
         SecurityManager security = System.getSecurityManager();
@@ -1738,7 +1738,7 @@ public abstract class Toolkit {
      * Creates the peer for a DragSourceContext.
      * Always throws InvalidDndOperationException if
      * GraphicsEnvironment.isHeadless() returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public abstract DragSourceContextPeer createDragSourceContextPeer(DragGestureEvent dge) throws InvalidDnDOperationException;
 
@@ -1757,7 +1757,7 @@ public abstract class Toolkit {
      *
      * @return the new object or null.  Always returns null if
      * GraphicsEnvironment.isHeadless() returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public <T extends DragGestureRecognizer> T
         createDragGestureRecognizer(Class<T> abstractRecognizerClass,
@@ -1953,9 +1953,9 @@ public abstract class Toolkit {
      * @return <code>true</code>, if current toolkit supports given modality
      *     type, <code>false</code> otherwise
      *
-     * @see java.awt.Dialog.ModalityType
-     * @see java.awt.Dialog#getModalityType
-     * @see java.awt.Dialog#setModalityType
+     * @see Dialog.ModalityType
+     * @see Dialog#getModalityType
+     * @see Dialog#setModalityType
      *
      * @since 1.6
      */
@@ -1971,9 +1971,9 @@ public abstract class Toolkit {
      * @return <code>true</code>, if current toolkit supports given modal exclusion
      *     type, <code>false</code> otherwise
      *
-     * @see java.awt.Dialog.ModalExclusionType
-     * @see java.awt.Window#getModalExclusionType
-     * @see java.awt.Window#setModalExclusionType
+     * @see Dialog.ModalExclusionType
+     * @see Window#getModalExclusionType
+     * @see Window#setModalExclusionType
      *
      * @since 1.6
      */
@@ -2034,10 +2034,10 @@ public abstract class Toolkit {
      * @see      #removeAWTEventListener
      * @see      #getAWTEventListeners
      * @see      SecurityManager#checkPermission
-     * @see      java.awt.AWTEvent
-     * @see      java.awt.AWTPermission
-     * @see      java.awt.event.AWTEventListener
-     * @see      java.awt.event.AWTEventListenerProxy
+     * @see      AWTEvent
+     * @see      AWTPermission
+     * @see      AWTEventListener
+     * @see      AWTEventListenerProxy
      * @since    1.2
      */
     public void addAWTEventListener(AWTEventListener listener, long eventMask) {
@@ -2103,10 +2103,10 @@ public abstract class Toolkit {
      * @see      #addAWTEventListener
      * @see      #getAWTEventListeners
      * @see      SecurityManager#checkPermission
-     * @see      java.awt.AWTEvent
-     * @see      java.awt.AWTPermission
-     * @see      java.awt.event.AWTEventListener
-     * @see      java.awt.event.AWTEventListenerProxy
+     * @see      AWTEvent
+     * @see      AWTPermission
+     * @see      AWTEventListener
+     * @see      AWTEventListenerProxy
      * @since    1.2
      */
     public void removeAWTEventListener(AWTEventListener listener) {
@@ -2173,10 +2173,10 @@ public abstract class Toolkit {
      * @see      #addAWTEventListener
      * @see      #removeAWTEventListener
      * @see      SecurityManager#checkPermission
-     * @see      java.awt.AWTEvent
-     * @see      java.awt.AWTPermission
-     * @see      java.awt.event.AWTEventListener
-     * @see      java.awt.event.AWTEventListenerProxy
+     * @see      AWTEvent
+     * @see      AWTPermission
+     * @see      AWTEventListener
+     * @see      AWTEventListenerProxy
      * @since 1.4
      */
     public AWTEventListener[] getAWTEventListeners() {
@@ -2225,10 +2225,10 @@ public abstract class Toolkit {
      * @see      #addAWTEventListener
      * @see      #removeAWTEventListener
      * @see      SecurityManager#checkPermission
-     * @see      java.awt.AWTEvent
-     * @see      java.awt.AWTPermission
-     * @see      java.awt.event.AWTEventListener
-     * @see      java.awt.event.AWTEventListenerProxy
+     * @see      AWTEvent
+     * @see      AWTPermission
+     * @see      AWTEventListener
+     * @see      AWTEventListenerProxy
      * @since 1.4
      */
     public AWTEventListener[] getAWTEventListeners(long eventMask) {
@@ -2408,7 +2408,7 @@ public abstract class Toolkit {
              || ((eventBit = eventMask & AWTEvent.WINDOW_FOCUS_EVENT_MASK) != 0 &&
                  (event.id == WindowEvent.WINDOW_GAINED_FOCUS ||
                   event.id == WindowEvent.WINDOW_LOST_FOCUS))
-                || ((eventBit = eventMask & sun.awt.SunToolkit.GRAB_EVENT_MASK) != 0 &&
+                || ((eventBit = eventMask & SunToolkit.GRAB_EVENT_MASK) != 0 &&
                     (event instanceof sun.awt.UngrabEvent))) {
                 // Get the index of the call count for this event type.
                 // Instead of using Math.log(...) we will calculate it with
@@ -2437,7 +2437,7 @@ public abstract class Toolkit {
      * @return style attribute map, or <code>null</code>
      * @exception HeadlessException if
      *     <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @since 1.3
      */
     public abstract Map<java.awt.font.TextAttribute,?>
@@ -2594,7 +2594,7 @@ public abstract class Toolkit {
     *         {@code false} otherwise
     * @see System#getProperty(String propertyName)
     * @see System#setProperty(String propertyName, String value)
-    * @see java.awt.EventQueue
+    * @see EventQueue
     * @since 1.7
      */
     public boolean areExtraMouseButtonsEnabled() throws HeadlessException {

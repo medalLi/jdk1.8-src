@@ -138,10 +138,10 @@ public class InlineView extends LabelView {
      *   ForcedBreakWeight and BadBreakWeight.
      * @see LabelView
      * @see ParagraphView
-     * @see javax.swing.text.View#BadBreakWeight
-     * @see javax.swing.text.View#GoodBreakWeight
-     * @see javax.swing.text.View#ExcellentBreakWeight
-     * @see javax.swing.text.View#ForcedBreakWeight
+     * @see View#BadBreakWeight
+     * @see View#GoodBreakWeight
+     * @see View#ExcellentBreakWeight
+     * @see View#ForcedBreakWeight
      */
     public int getBreakWeight(int axis, float pos, float len) {
         if (nowrap) {
@@ -152,7 +152,7 @@ public class InlineView extends LabelView {
 
     /**
      * Tries to break this view on the given axis. Refer to
-     * {@link javax.swing.text.View#breakView} for a complete
+     * {@link View#breakView} for a complete
      * description of this method.
      * <p>Behavior of this method is unspecified in case <code>axis</code>
      * is neither <code>View.X_AXIS</code> nor <code>View.Y_AXIS</code>, and
@@ -173,7 +173,7 @@ public class InlineView extends LabelView {
      * @return the fragment of the view that represents the
      *  given span.
      * @since 1.5
-     * @see javax.swing.text.View#breakView
+     * @see View#breakView
      */
     public View breakView(int axis, int offset, float pos, float len) {
         return super.breakView(axis, offset, pos, len);

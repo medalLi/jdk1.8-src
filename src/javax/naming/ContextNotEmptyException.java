@@ -51,7 +51,7 @@ public class ContextNotEmptyException extends NamingException {
      *
      * @param   explanation     Possibly null string containing
      * additional detail about this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public ContextNotEmptyException(String explanation) {
         super(explanation);

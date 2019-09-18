@@ -66,8 +66,8 @@ import javax.net.ssl.SSLSocketFactory;
  * socket.  The value of this system property is a string that is a
  * comma-separated list of SSL/TLS protocol versions to enable.</p>
  *
- * @see javax.net.ssl.SSLSocketFactory
- * @see javax.rmi.ssl.SslRMIServerSocketFactory
+ * @see SSLSocketFactory
+ * @see SslRMIServerSocketFactory
  * @since 1.5
  */
 public class SslRMIClientSocketFactory

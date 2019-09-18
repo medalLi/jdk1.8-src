@@ -55,7 +55,7 @@ public abstract class FocusManager extends DefaultKeyboardFocusManager {
      * <code>KeyboardFocusManager.getCurrentKeyboardFocusManager()</code>.
      * See the Focus Specification for more information.
      *
-     * @see java.awt.KeyboardFocusManager#getCurrentKeyboardFocusManager
+     * @see KeyboardFocusManager#getCurrentKeyboardFocusManager
      * @see <a href="../../java/awt/doc-files/FocusSpec.html">Focus Specification</a>
      */
     public static final String FOCUS_MANAGER_CLASS_PROPERTY =
@@ -98,7 +98,7 @@ public abstract class FocusManager extends DefaultKeyboardFocusManager {
      * @param aFocusManager the new <code>KeyboardFocusManager</code>
      *     for this thread's context
      * @see #getCurrentManager
-     * @see java.awt.DefaultKeyboardFocusManager
+     * @see DefaultKeyboardFocusManager
      * @throws SecurityException if the calling thread does not have permission
      *         to replace the current <code>KeyboardFocusManager</code>
      */
@@ -121,8 +121,8 @@ public abstract class FocusManager extends DefaultKeyboardFocusManager {
      * <code>FocusTraversalPolicy</code> to
      * <code>DefaultFocusTraversalPolicy</code>.
      *
-     * @see java.awt.DefaultFocusTraversalPolicy
-     * @see java.awt.KeyboardFocusManager#setDefaultFocusTraversalPolicy
+     * @see DefaultFocusTraversalPolicy
+     * @see KeyboardFocusManager#setDefaultFocusTraversalPolicy
      * @deprecated as of 1.4, replaced by
      * <code>KeyboardFocusManager.setDefaultFocusTraversalPolicy(FocusTraversalPolicy)</code>
      */

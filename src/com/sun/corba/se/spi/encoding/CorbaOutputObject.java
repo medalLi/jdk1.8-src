@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.encoding ;
+package com.sun.corba.se.spi.encoding;
 
 import com.sun.corba.se.pept.encoding.OutputObject ;
 

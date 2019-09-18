@@ -36,7 +36,7 @@ import javax.sound.midi.Soundbank;
 /**
  * A {@code SoundbankReader} supplies soundbank file-reading services. Concrete
  * subclasses of {@code SoundbankReader} parse a given soundbank file, producing
- * a {@link javax.sound.midi.Soundbank} object that can be loaded into a
+ * a {@link Soundbank} object that can be loaded into a
  * {@link javax.sound.midi.Synthesizer}.
  *
  * @since 1.3

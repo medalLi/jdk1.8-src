@@ -66,9 +66,9 @@ public interface Receiver extends AutoCloseable {
      * calling {@link MidiDevice#close MidiDevice.close}, the
      * <code>Receiver</code> is closed, too.  For a detailed
      * description of open/close behaviour see the class description
-     * of {@link javax.sound.midi.MidiDevice MidiDevice}.
+     * of {@link MidiDevice MidiDevice}.
      *
-     * @see javax.sound.midi.MidiSystem#getReceiver
+     * @see MidiSystem#getReceiver
      */
     public void close();
 }

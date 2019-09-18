@@ -83,9 +83,9 @@ public abstract class DocumentBuilderFactory {
      * Uses the service-provider loading facilities, defined by the
      * {@link java.util.ServiceLoader} class, to attempt to locate and load an
      * implementation of the service using the {@linkplain
-     * java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+     * java.util.ServiceLoader#load(Class) default loading mechanism}:
      * the service-provider loading facility will use the {@linkplain
-     * java.lang.Thread#getContextClassLoader() current thread's context class loader}
+     * Thread#getContextClassLoader() current thread's context class loader}
      * to attempt to load the service. If the context class
      * loader is null, the {@linkplain
      * ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -165,7 +165,7 @@ public abstract class DocumentBuilderFactory {
     }
 
     /**
-     * Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}
+     * Creates a new instance of a {@link DocumentBuilder}
      * using the currently configured parameters.
      *
      * @return A new instance of a DocumentBuilder.
@@ -370,7 +370,7 @@ public abstract class DocumentBuilderFactory {
      *      protocols specified by the property.
      *      If access is denied during parsing due to the restriction of this property,
      *      {@link org.xml.sax.SAXException} will be thrown by the parse methods defined by
-     *      {@link javax.xml.parsers.DocumentBuilder}.
+     *      {@link DocumentBuilder}.
      *      </p>
      *      <p>
      *      Setting the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_SCHEMA} property
@@ -378,7 +378,7 @@ public abstract class DocumentBuilderFactory {
      *      the protocols specified by the property.  If access is denied during parsing
      *      due to the restriction of this property, {@link org.xml.sax.SAXException}
      *      will be thrown by the parse methods defined by
-     *      {@link javax.xml.parsers.DocumentBuilder}.
+     *      {@link DocumentBuilder}.
      *      </p>
      *   </li>
      * </ul>

@@ -39,7 +39,7 @@ import javax.print.attribute.SupportedValuesAttribute;
  * <B>IPP Compatibility:</B> The JobMediaSheetsSupported attribute's canonical
  * array form gives the lower and upper bound for the range of values to be
  * included in an IPP "job-media-sheets-supported" attribute. See class {@link
- * javax.print.attribute.SetOfIntegerSyntax SetOfIntegerSyntax} for an
+ * SetOfIntegerSyntax SetOfIntegerSyntax} for an
  * explanation of canonical array form. The category name returned by
  * <CODE>getName()</CODE> gives the IPP attribute name.
  * <P>
@@ -106,7 +106,7 @@ public final class JobMediaSheetsSupported extends SetOfIntegerSyntax
      * category is class JobMediaSheetsSupported itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return JobMediaSheetsSupported.class;

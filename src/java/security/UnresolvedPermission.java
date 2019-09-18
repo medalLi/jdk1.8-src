@@ -89,10 +89,10 @@ import java.security.cert.*;
  * {@code type} (class name) for the underlying permission
  * that has not been resolved.
  *
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.security.Policy
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see Policy
  *
  *
  * @author Roland Schemers

@@ -34,8 +34,8 @@ package java.net;
  * to create a {@code ContentHandler} for a MIME type.
  *
  * @author  James Gosling
- * @see     java.net.ContentHandler
- * @see     java.net.URLStreamHandler
+ * @see     ContentHandler
+ * @see     URLStreamHandler
  * @since   JDK1.0
  */
 public interface ContentHandlerFactory {
@@ -47,8 +47,8 @@ public interface ContentHandlerFactory {
 
      * @return  a new {@code ContentHandler} to read an object from a
      *          {@code URLStreamHandler}.
-     * @see     java.net.ContentHandler
-     * @see     java.net.URLStreamHandler
+     * @see     ContentHandler
+     * @see     URLStreamHandler
      */
     ContentHandler createContentHandler(String mimetype);
 }

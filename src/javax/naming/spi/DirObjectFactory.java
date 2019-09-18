@@ -126,7 +126,7 @@ public interface DirObjectFactory extends ObjectFactory {
  * @see NamingManager#getURLContext
  */
     public Object getObjectInstance(Object obj, Name name, Context nameCtx,
-                                    Hashtable<?,?> environment,
+                                    Hashtable<?, ?> environment,
                                     Attributes attrs)
         throws Exception;
 }

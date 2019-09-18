@@ -99,7 +99,7 @@ public class CorbalocURL extends INSURLBase
                     // If RIR is set then it means use the internal Boot
                     // Strap protocol for Key String resolution
                     if( theEndpointInfo == null ) {
-                        theEndpointInfo = new java.util.ArrayList( );
+                        theEndpointInfo = new ArrayList( );
                     }
                     theEndpointInfo.add( iiopEndpointInfo );
                 }
@@ -117,7 +117,7 @@ public class CorbalocURL extends INSURLBase
      *  A Utility method to throw BAD_PARAM exception to signal malformed
      *  INS URL.
      */
-    private void badAddress( java.lang.Throwable e )
+    private void badAddress( Throwable e )
     {
         throw wrapper.insBadAddress( e ) ;
     }

@@ -57,10 +57,10 @@ import java.io.IOException;
  * Subclasses may implement actions on top of BasicPermission,
  * if desired.
  * <p>
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  * @author Marianne Mueller
  * @author Roland Schemers
@@ -287,8 +287,8 @@ public abstract class BasicPermission extends Permission
  * A BasicPermissionCollection handles comparing a permission like "a.b.c.d.e"
  * with a Permission such as "a.b.*", or "*".
  *
- * @see java.security.Permission
- * @see java.security.Permissions
+ * @see Permission
+ * @see Permissions
  *
  *
  * @author Roland Schemers
@@ -519,7 +519,7 @@ final class BasicPermissionCollection
      * readObject is called to restore the state of the
      * BasicPermissionCollection from a stream.
      */
-    private void readObject(java.io.ObjectInputStream in)
+    private void readObject(ObjectInputStream in)
          throws IOException, ClassNotFoundException
     {
         // Don't call defaultReadObject()

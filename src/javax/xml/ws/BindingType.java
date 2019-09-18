@@ -53,7 +53,7 @@ public @interface BindingType {
       * See the <code>SOAPBinding</code> and <code>HTTPBinding</code>
       * for the definition of the standard binding identifiers.
       *
-      * @see javax.xml.ws.Binding
+      * @see Binding
       * @see javax.xml.ws.soap.SOAPBinding#SOAP11HTTP_BINDING
       * @see javax.xml.ws.soap.SOAPBinding#SOAP12HTTP_BINDING
       * @see javax.xml.ws.http.HTTPBinding#HTTP_BINDING

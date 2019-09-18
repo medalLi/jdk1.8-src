@@ -81,7 +81,7 @@ public abstract class ORB extends org.omg.CORBA.ORB {
  * @see <a href="package-summary.html#unimpl"><code>CORBA_2_3</code> package
  *      comments for unimplemented features</a>
  */
-     public void set_delegate(java.lang.Object wrapper) {
+     public void set_delegate(Object wrapper) {
        throw new org.omg.CORBA.NO_IMPLEMENT();
      }
 

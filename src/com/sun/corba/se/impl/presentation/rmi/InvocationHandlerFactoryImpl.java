@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.lang.reflect.InvocationHandler ;
 import java.lang.reflect.Proxy ;

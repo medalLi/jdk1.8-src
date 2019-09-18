@@ -38,8 +38,8 @@ import com.sun.corba.se.spi.logging.CORBALogDomains ;
 import com.sun.corba.se.impl.logging.ORBUtilSystemException ;
 
 public class DynAnyFactoryImpl
-    extends org.omg.CORBA.LocalObject
-    implements org.omg.DynamicAny.DynAnyFactory
+    extends LocalObject
+    implements DynAnyFactory
 {
     //
     // Instance variables
@@ -64,15 +64,15 @@ public class DynAnyFactoryImpl
     //
 
     // Returns the most derived DynAny type based on the Anys TypeCode.
-    public org.omg.DynamicAny.DynAny create_dyn_any (org.omg.CORBA.Any any)
-        throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+    public DynAny create_dyn_any (Any any)
+        throws InconsistentTypeCode
     {
         return DynAnyUtil.createMostDerivedDynAny(any, orb, true);
     }
 
     // Returns the most derived DynAny type based on the TypeCode.
-    public org.omg.DynamicAny.DynAny create_dyn_any_from_type_code (org.omg.CORBA.TypeCode type)
-        throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+    public DynAny create_dyn_any_from_type_code (TypeCode type)
+        throws InconsistentTypeCode
     {
         return DynAnyUtil.createMostDerivedDynAny(type, orb);
     }

@@ -294,7 +294,7 @@ public class Sequence {
      */
     public long getMicrosecondLength() {
 
-        return com.sun.media.sound.MidiUtils.tick2microsecond(this, getTickLength(), null);
+        return MidiUtils.tick2microsecond(this, getTickLength(), null);
     }
 
 

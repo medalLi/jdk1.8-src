@@ -123,8 +123,8 @@ public class DynEnumImpl extends DynAnyBasicImpl implements DynEnum
 
     // Calling current_component on a DynAny that cannot have components,
     // such as a DynEnum or an empty exception, raises TypeMismatch.
-    public org.omg.DynamicAny.DynAny current_component()
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+    public DynAny current_component()
+        throws TypeMismatch
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -149,7 +149,7 @@ public class DynEnumImpl extends DynAnyBasicImpl implements DynEnum
     // If value contains a string that is not a valid IDL identifier
     // for the corresponding enumerated type, the operation raises InvalidValue.
     public void set_as_string (String value)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -176,7 +176,7 @@ public class DynEnumImpl extends DynAnyBasicImpl implements DynEnum
     // If value contains a value that is outside the range of ordinal values
     // for the corresponding enumerated type, the operation raises InvalidValue.
     public void set_as_ulong (int value)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;

@@ -102,9 +102,9 @@ public class PipedReader extends Reader {
 
     /**
      * Creates a <code>PipedReader</code> so
-     * that it is not yet {@linkplain #connect(java.io.PipedWriter)
-     * connected}. It must be {@linkplain java.io.PipedWriter#connect(
-     * java.io.PipedReader) connected} to a <code>PipedWriter</code>
+     * that it is not yet {@linkplain #connect(PipedWriter)
+     * connected}. It must be {@linkplain PipedWriter#connect(
+     * PipedReader) connected} to a <code>PipedWriter</code>
      * before being used.
      */
     public PipedReader() {
@@ -113,10 +113,10 @@ public class PipedReader extends Reader {
 
     /**
      * Creates a <code>PipedReader</code> so that it is not yet
-     * {@link #connect(java.io.PipedWriter) connected} and uses
+     * {@link #connect(PipedWriter) connected} and uses
      * the specified pipe size for the pipe's buffer.
-     * It must be  {@linkplain java.io.PipedWriter#connect(
-     * java.io.PipedReader) connected} to a <code>PipedWriter</code>
+     * It must be  {@linkplain PipedWriter#connect(
+     * PipedReader) connected} to a <code>PipedWriter</code>
      * before being used.
      *
      * @param   pipeSize the size of the pipe's buffer.
@@ -184,7 +184,7 @@ public class PipedReader extends Reader {
             try {
                 wait(1000);
             } catch (InterruptedException ex) {
-                throw new java.io.InterruptedIOException();
+                throw new InterruptedIOException();
             }
         }
         if (in < 0) {
@@ -227,7 +227,7 @@ public class PipedReader extends Reader {
      *             stream is reached.
      * @exception  IOException  if the pipe is
      *          <a href=PipedInputStream.html#BROKEN> <code>broken</code></a>,
-     *          {@link #connect(java.io.PipedWriter) unconnected}, closed,
+     *          {@link #connect(PipedWriter) unconnected}, closed,
      *          or an I/O error occurs.
      */
     public synchronized int read()  throws IOException {
@@ -255,7 +255,7 @@ public class PipedReader extends Reader {
             try {
                 wait(1000);
             } catch (InterruptedException ex) {
-                throw new java.io.InterruptedIOException();
+                throw new InterruptedIOException();
             }
         }
         int ret = buffer[out++];
@@ -284,7 +284,7 @@ public class PipedReader extends Reader {
      *             the stream has been reached.
      * @exception  IOException  if the pipe is
      *                  <a href=PipedInputStream.html#BROKEN> <code>broken</code></a>,
-     *                  {@link #connect(java.io.PipedWriter) unconnected}, closed,
+     *                  {@link #connect(PipedWriter) unconnected}, closed,
      *                  or an I/O error occurs.
      */
     public synchronized int read(char cbuf[], int off, int len)  throws IOException {
@@ -331,7 +331,7 @@ public class PipedReader extends Reader {
      *
      * @exception  IOException  if the pipe is
      *                  <a href=PipedInputStream.html#BROKEN> <code>broken</code></a>,
-     *                  {@link #connect(java.io.PipedWriter) unconnected}, or closed.
+     *                  {@link #connect(PipedWriter) unconnected}, or closed.
      */
     public synchronized boolean ready() throws IOException {
         if (!connected) {

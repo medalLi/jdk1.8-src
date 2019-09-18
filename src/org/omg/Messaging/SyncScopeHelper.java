@@ -33,7 +33,7 @@ abstract public class SyncScopeHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_short);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.Messaging.SyncScopeHelper.id (), "SyncScope", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (SyncScopeHelper.id (), "SyncScope", __typeCode);
     }
     return __typeCode;
   }

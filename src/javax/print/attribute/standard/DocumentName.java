@@ -100,7 +100,7 @@ public final class DocumentName extends TextSyntax implements DocAttribute {
      * For class DocumentName, the category is class DocumentName itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return DocumentName.class;

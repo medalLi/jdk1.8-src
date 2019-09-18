@@ -39,7 +39,7 @@ import javax.print.attribute.SupportedValuesAttribute;
  * <B>IPP Compatibility:</B> The JobImpressionsSupported attribute's canonical
  * array form gives the lower and upper bound for the range of values to be
  * included in an IPP "job-impressions-supported" attribute. See class {@link
- * javax.print.attribute.SetOfIntegerSyntax SetOfIntegerSyntax} for an
+ * SetOfIntegerSyntax SetOfIntegerSyntax} for an
  * explanation of canonical array form. The category name returned by
  * <CODE>getName()</CODE> gives the IPP attribute name.
  * <P>
@@ -108,7 +108,7 @@ public final class JobImpressionsSupported extends SetOfIntegerSyntax
      * JobImpressionsSupported itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return JobImpressionsSupported.class;

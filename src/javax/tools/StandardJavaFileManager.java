@@ -163,14 +163,14 @@ public interface StandardJavaFileManager extends JavaFileManager {
      * a directory
      */
     Iterable<? extends JavaFileObject> getJavaFileObjectsFromFiles(
-        Iterable<? extends File> files);
+            Iterable<? extends File> files);
 
     /**
      * Gets file objects representing the given files.
      * Convenience method equivalent to:
      *
      * <pre>
-     *     getJavaFileObjectsFromFiles({@linkplain java.util.Arrays#asList Arrays.asList}(files))
+     *     getJavaFileObjectsFromFiles({@linkplain Arrays#asList Arrays.asList}(files))
      * </pre>
      *
      * @param files an array of files
@@ -191,14 +191,14 @@ public interface StandardJavaFileManager extends JavaFileManager {
      * includes a directory
      */
     Iterable<? extends JavaFileObject> getJavaFileObjectsFromStrings(
-        Iterable<String> names);
+            Iterable<String> names);
 
     /**
      * Gets file objects representing the given file names.
      * Convenience method equivalent to:
      *
      * <pre>
-     *     getJavaFileObjectsFromStrings({@linkplain java.util.Arrays#asList Arrays.asList}(names))
+     *     getJavaFileObjectsFromStrings({@linkplain Arrays#asList Arrays.asList}(names))
      * </pre>
      *
      * @param names a list of file names

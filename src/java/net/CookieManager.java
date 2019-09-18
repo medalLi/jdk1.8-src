@@ -283,7 +283,7 @@ public class CookieManager extends CookieHandler
                         cookies = HttpCookie.parse(headerValue);
                     } catch (IllegalArgumentException e) {
                         // Bogus header, make an empty list and log the error
-                        cookies = java.util.Collections.emptyList();
+                        cookies = Collections.emptyList();
                         if (logger.isLoggable(PlatformLogger.Level.SEVERE)) {
                             logger.severe("Invalid cookie for " + uri + ": " + headerValue);
                         }

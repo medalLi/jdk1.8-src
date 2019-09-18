@@ -157,7 +157,7 @@ public interface PropertyEditor {
      * as text.
      * @param text  The string to be parsed.
      */
-    void setAsText(String text) throws java.lang.IllegalArgumentException;
+    void setAsText(String text) throws IllegalArgumentException;
 
     //----------------------------------------------------------------------
 

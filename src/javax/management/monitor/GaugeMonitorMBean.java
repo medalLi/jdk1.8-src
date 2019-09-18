@@ -97,11 +97,11 @@ public interface GaugeMonitorMBean extends MonitorMBean {
      *
      * @param highValue The high threshold value.
      * @param lowValue The low threshold value.
-     * @exception java.lang.IllegalArgumentException The specified high/low threshold is null
+     * @exception IllegalArgumentException The specified high/low threshold is null
      * or the low threshold is greater than the high threshold
      * or the high threshold and the low threshold are not of the same type.
      */
-    public void setThresholds(Number highValue, Number lowValue) throws java.lang.IllegalArgumentException;
+    public void setThresholds(Number highValue, Number lowValue) throws IllegalArgumentException;
 
     /**
      * Gets the high notification's on/off switch value.

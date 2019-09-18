@@ -66,7 +66,7 @@ public interface TrayIconPeer {
      * @param text the actual message text
      * @param messageType the message type
      *
-     * @see TrayIcon#displayMessage(String, String, java.awt.TrayIcon.MessageType)
+     * @see TrayIcon#displayMessage(String, String, TrayIcon.MessageType)
      */
     void displayMessage(String caption, String text, String messageType);
 

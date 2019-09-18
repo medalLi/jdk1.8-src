@@ -103,7 +103,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      *
      * @param initialCapacity   the initial capacity of the defaults table
      * @param loadFactor        the load factor of the defaults table
-     * @see java.util.Hashtable
+     * @see Hashtable
      * @since 1.6
      */
     public UIDefaults(int initialCapacity, float loadFactor) {
@@ -154,7 +154,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      * @return the value for <code>key</code>
      * @see LazyValue
      * @see ActiveValue
-     * @see java.util.Hashtable#get
+     * @see Hashtable#get
      * @see #getDefaultLocale
      * @see #addResourceBundle
      * @since 1.4
@@ -258,7 +258,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      * @return the value for <code>key</code>
      * @see LazyValue
      * @see ActiveValue
-     * @see java.util.Hashtable#get
+     * @see Hashtable#get
      * @see #addResourceBundle
      * @since 1.4
      */
@@ -341,7 +341,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      *          that key
      * @return the previous <code>Object</code> value, or <code>null</code>
      * @see #putDefaults
-     * @see java.util.Hashtable#put
+     * @see Hashtable#put
      */
     public Object put(Object key, Object value) {
         Object oldValue = (value == null) ? super.remove(key) : super.put(key, value);
@@ -361,7 +361,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      *
      * @param keyValueList  an array of key/value pairs
      * @see #put
-     * @see java.util.Hashtable#put
+     * @see Hashtable#put
      */
     public void putDefaults(Object[] keyValueList) {
         for(int i = 0, max = keyValueList.length; i < max; i += 2) {
@@ -856,7 +856,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      * bundle is searched first.
      *
      * @param bundleName  the base name of the resource bundle to be added
-     * @see java.util.ResourceBundle
+     * @see ResourceBundle
      * @see #removeResourceBundle
      * @since 1.4
      */
@@ -879,7 +879,7 @@ public class UIDefaults extends Hashtable<Object,Object>
      * searched for localized defaults.
      *
      * @param bundleName  the base name of the resource bundle to be removed
-     * @see java.util.ResourceBundle
+     * @see ResourceBundle
      * @see #addResourceBundle
      * @since 1.4
      */
@@ -1140,9 +1140,9 @@ public class UIDefaults extends Hashtable<Object,Object>
                     /* PENDING(ges): At present only the primitive types
                        used are handled correctly; this should eventually
                        handle all primitive types */
-                    if (args[i] instanceof java.lang.Integer) {
+                    if (args[i] instanceof Integer) {
                         types[i]=Integer.TYPE;
-                    } else if (args[i] instanceof java.lang.Boolean) {
+                    } else if (args[i] instanceof Boolean) {
                         types[i]=Boolean.TYPE;
                     } else if (args[i] instanceof javax.swing.plaf.ColorUIResource) {
                         /* PENDING(ges) Currently the Reflection APIs do not
@@ -1153,7 +1153,7 @@ public class UIDefaults extends Hashtable<Object,Object>
                            of mechanism for this.  Eventually this will
                            probably need to handle the general case as well.
                            */
-                        types[i]=java.awt.Color.class;
+                        types[i]= Color.class;
                     } else {
                         types[i]=args[i].getClass();
                     }

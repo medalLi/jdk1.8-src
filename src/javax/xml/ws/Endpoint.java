@@ -63,8 +63,8 @@ import org.w3c.dom.Element;
  *
  * @since JAX-WS 2.0
  *
- * @see javax.xml.ws.Binding
- * @see javax.xml.ws.BindingType
+ * @see Binding
+ * @see BindingType
  * @see javax.xml.ws.soap.SOAPBinding
  * @see java.util.concurrent.Executor
  *
@@ -88,8 +88,8 @@ public abstract class Endpoint {
      * a default of SOAP 1.1 / HTTP binding MUST be used.
      * <p>
      * The newly created endpoint may be published by calling
-     * one of the {@link javax.xml.ws.Endpoint#publish(String)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods.
+     * one of the {@link Endpoint#publish(String)} and
+     * {@link Endpoint#publish(Object)} methods.
      *
      *
      * @param implementor The endpoint implementor.
@@ -108,8 +108,8 @@ public abstract class Endpoint {
      * binding MUST be used.
      * <p>
      * The newly created endpoint may be published by calling
-     * one of the {@link javax.xml.ws.Endpoint#publish(String)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods.
+     * one of the {@link Endpoint#publish(String)} and
+     * {@link Endpoint#publish(Object)} methods.
      *
      *
      * @param implementor The endpoint implementor.
@@ -131,8 +131,8 @@ public abstract class Endpoint {
      * implementor object.
      * <p>
      * The newly created endpoint may be published by calling
-     * one of the {@link javax.xml.ws.Endpoint#publish(String)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods.
+     * one of the {@link Endpoint#publish(String)} and
+     * {@link Endpoint#publish(Object)} methods.
      *
      * @param bindingId A URI specifying the binding to use. If the bindingID is
      * <code>null</code> and no binding is specified via a BindingType
@@ -152,8 +152,8 @@ public abstract class Endpoint {
      * implementor object, and web service features.
      * <p>
      * The newly created endpoint may be published by calling
-     * one of the {@link javax.xml.ws.Endpoint#publish(String)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods.
+     * one of the {@link Endpoint#publish(String)} and
+     * {@link Endpoint#publish(Object)} methods.
      *
      * @param bindingId A URI specifying the binding to use. If the bindingID is
      * <code>null</code> and no binding is specified via a BindingType
@@ -191,20 +191,20 @@ public abstract class Endpoint {
      * The necessary server infrastructure will be created and
      * configured by the JAX-WS implementation using some default configuration.
      * In order to get more control over the server configuration, please
-     * use the {@link javax.xml.ws.Endpoint#publish(Object)} method instead.
+     * use the {@link Endpoint#publish(Object)} method instead.
      *
      * @param address A URI specifying the address to use. The address
      *        MUST be compatible with the binding specified at the
      *        time the endpoint was created.
      *
-     * @throws java.lang.IllegalArgumentException
+     * @throws IllegalArgumentException
      *          If the provided address URI is not usable
      *          in conjunction with the endpoint's binding.
      *
-     * @throws java.lang.IllegalStateException
+     * @throws IllegalStateException
      *          If the endpoint has been published already or it has been stopped.
      *
-     * @throws java.lang.SecurityException
+     * @throws SecurityException
      *          If a <code>java.lang.SecurityManger</code>
      *          is being used and the application doesn't have the
      *          <code>WebServicePermission("publishEndpoint")</code> permission.
@@ -219,8 +219,8 @@ public abstract class Endpoint {
      * configured by the JAX-WS implementation using some default configuration.
      *
      * In order to get more control over the server configuration, please
-     * use the {@link javax.xml.ws.Endpoint#create(String,Object)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods instead.
+     * use the {@link Endpoint#create(String,Object)} and
+     * {@link Endpoint#publish(Object)} methods instead.
      *
      * @param address A URI specifying the address and transport/protocol
      *        to use. A http: URI MUST result in the SOAP 1.1/HTTP
@@ -230,7 +230,7 @@ public abstract class Endpoint {
      *
      * @return The newly created endpoint.
      *
-     * @throws java.lang.SecurityException
+     * @throws SecurityException
      *          If a <code>java.lang.SecurityManger</code>
      *          is being used and the application doesn't have the
      *          <code>WebServicePermission("publishEndpoint")</code> permission.
@@ -249,8 +249,8 @@ public abstract class Endpoint {
      * configured by the JAX-WS implementation using some default configuration.
      *
      * In order to get more control over the server configuration, please
-     * use the {@link javax.xml.ws.Endpoint#create(String,Object)} and
-     * {@link javax.xml.ws.Endpoint#publish(Object)} methods instead.
+     * use the {@link Endpoint#create(String,Object)} and
+     * {@link Endpoint#publish(Object)} methods instead.
      *
      * @param address A URI specifying the address and transport/protocol
      *        to use. A http: URI MUST result in the SOAP 1.1/HTTP
@@ -262,7 +262,7 @@ public abstract class Endpoint {
      *        </code> parameter will have their default values.
      * @return The newly created endpoint.
      *
-     * @throws java.lang.SecurityException
+     * @throws SecurityException
      *          If a <code>java.lang.SecurityManger</code>
      *          is being used and the application doesn't have the
      *          <code>WebServicePermission("publishEndpoint")</code> permission.
@@ -284,16 +284,16 @@ public abstract class Endpoint {
      * @param serverContext An object representing a server
      *           context to be used for publishing the endpoint.
      *
-     * @throws java.lang.IllegalArgumentException
+     * @throws IllegalArgumentException
      *              If the provided server context is not
      *              supported by the implementation or turns
      *              out to be unusable in conjunction with the
      *              endpoint's binding.
      *
-     * @throws java.lang.IllegalStateException
+     * @throws IllegalStateException
      *         If the endpoint has been published already or it has been stopped.
      *
-     * @throws java.lang.SecurityException
+     * @throws SecurityException
      *          If a <code>java.lang.SecurityManger</code>
      *          is being used and the application doesn't have the
      *          <code>WebServicePermission("publishEndpoint")</code> permission.
@@ -317,16 +317,16 @@ public abstract class Endpoint {
      * @param serverContext An object representing a server
      *           context to be used for publishing the endpoint.
      *
-     * @throws java.lang.IllegalArgumentException
+     * @throws IllegalArgumentException
      *              If the provided server context is not
      *              supported by the implementation or turns
      *              out to be unusable in conjunction with the
      *              endpoint's binding.
      *
-     * @throws java.lang.IllegalStateException
+     * @throws IllegalStateException
      *         If the endpoint has been published already or it has been stopped.
      *
-     * @throws java.lang.SecurityException
+     * @throws SecurityException
      *          If a <code>java.lang.SecurityManger</code>
      *          is being used and the application doesn't have the
      *          <code>WebServicePermission("publishEndpoint")</code> permission.
@@ -366,7 +366,7 @@ public abstract class Endpoint {
      *           metadata information for the endpoint (e.g.
      *           WSDL or XML Schema documents)
      *
-     * @throws java.lang.IllegalStateException  If the endpoint
+     * @throws IllegalStateException  If the endpoint
      *         has already been published.
      **/
     public abstract void setMetadata(List<javax.xml.transform.Source> metadata);
@@ -487,7 +487,7 @@ public abstract class Endpoint {
      * This needs to be set before publishing the endpoints.
      *
      * @param ctxt that is shared for multiple endpoints
-     * @throws java.lang.IllegalStateException
+     * @throws IllegalStateException
      *        If the endpoint has been published already or it has been stopped.
      *
      * @since JAX-WS 2.2

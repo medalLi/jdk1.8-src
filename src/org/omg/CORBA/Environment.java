@@ -42,7 +42,7 @@ public abstract class Environment {
      * @return                  the exception in this <code>Environment</code> object
      */
 
-    public abstract java.lang.Exception exception();
+    public abstract Exception exception();
 
     /**
      * Inserts the given exception into this <code>Environment</code> object.
@@ -50,7 +50,7 @@ public abstract class Environment {
      * @param except            the exception to be set
      */
 
-    public abstract void exception(java.lang.Exception except);
+    public abstract void exception(Exception except);
 
     /**
      * Clears this <code>Environment</code> object of its exception.

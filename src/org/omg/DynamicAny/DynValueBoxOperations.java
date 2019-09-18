@@ -16,7 +16,7 @@ package org.omg.DynamicAny;
     * of the boxed type. A DynValueBox representing a null value type has no components
     * and a current position of -1.
     */
-public interface DynValueBoxOperations  extends org.omg.DynamicAny.DynValueCommonOperations
+public interface DynValueBoxOperations  extends DynValueCommonOperations
 {
 
   /**
@@ -24,7 +24,7 @@ public interface DynValueBoxOperations  extends org.omg.DynamicAny.DynValueCommo
           *
           * @exception InvalidValue if this object represents a null value box type
           */
-  org.omg.CORBA.Any get_boxed_value () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  org.omg.CORBA.Any get_boxed_value() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Replaces the boxed value with the specified value.
@@ -33,14 +33,14 @@ public interface DynValueBoxOperations  extends org.omg.DynamicAny.DynValueCommo
           * @exception TypeMismatch if this object represents a non-null value box type and the type
           *            of the parameter is not matching the current boxed value type.
           */
-  void set_boxed_value (org.omg.CORBA.Any boxed) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
+  void set_boxed_value(org.omg.CORBA.Any boxed) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
 
   /**
           * Returns the boxed value as a DynAny.
           *
           * @exception InvalidValue if this object represents a null value box type
           */
-  org.omg.DynamicAny.DynAny get_boxed_value_as_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  DynAny get_boxed_value_as_dyn_any() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Replaces the boxed value with the value contained in the parameter.
@@ -49,5 +49,5 @@ public interface DynValueBoxOperations  extends org.omg.DynamicAny.DynValueCommo
           * @exception TypeMismatch if this object represents a non-null value box type and the type
           *            of the parameter is not matching the current boxed value type.
           */
-  void set_boxed_value_as_dyn_any (org.omg.DynamicAny.DynAny boxed) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
+  void set_boxed_value_as_dyn_any(DynAny boxed) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
 } // interface DynValueBoxOperations

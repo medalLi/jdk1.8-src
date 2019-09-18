@@ -34,8 +34,8 @@ import static java.security.KeyStore.*;
  * A keystore domain is a collection of keystores that are presented as a
  * single logical keystore. The configuration data is used during
  * {@code KeyStore}
- * {@link KeyStore#load(KeyStore.LoadStoreParameter) load} and
- * {@link KeyStore#store(KeyStore.LoadStoreParameter) store} operations.
+ * {@link KeyStore#load(LoadStoreParameter) load} and
+ * {@link KeyStore#store(LoadStoreParameter) store} operations.
  * <p>
  * The following syntax is supported for configuration data:
  * <pre>{@code
@@ -52,7 +52,7 @@ import static java.security.KeyStore.*;
  * string of colon-separated pairs of hexadecimal digits. Multi-valued
  * properties are represented as a comma-separated list of values,
  * enclosed in square brackets.
- * See {@link Arrays#toString(java.lang.Object[])}.
+ * See {@link Arrays#toString(Object[])}.
  * <p>
  * To ensure that keystore entries are uniquely identified, each
  * entry's alias is prefixed by its {@code keystoreName} followed
@@ -165,7 +165,7 @@ public final class DomainLoadStoreParameter implements LoadStoreParameter {
      * @return always returns {@code null}
      */
     @Override
-    public KeyStore.ProtectionParameter getProtectionParameter() {
+    public ProtectionParameter getProtectionParameter() {
         return null;
     }
 }

@@ -168,7 +168,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
    * @return The value of the property
    * @throws IllegalArgumentException if name is null
    */
-  public Object getProperty(java.lang.String name) throws java.lang.IllegalArgumentException;
+  public Object getProperty(String name) throws IllegalArgumentException;
 
   /**
    * Get next parsing event - a processor may return all contiguous
@@ -515,7 +515,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
    * If an ENTITY_REFERENCE has been resolved, any character data
    * will be reported as CHARACTERS events.
    * @return the current text or null
-   * @throws java.lang.IllegalStateException if this state is not
+   * @throws IllegalStateException if this state is not
    * a valid text state.
    */
   public String getText();
@@ -527,7 +527,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
    * Attempts to hold onto the character array beyond that time or modify the
    * contents of the array are breaches of the contract for this interface.
    * @return the current text or an empty array
-   * @throws java.lang.IllegalStateException if this state is not
+   * @throws IllegalStateException if this state is not
    * a valid text state.
    */
   public char[] getTextCharacters();
@@ -588,7 +588,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
   /**
    * Returns the offset into the text character array where the first
    * character (of this text event) is stored.
-   * @throws java.lang.IllegalStateException if this state is not
+   * @throws IllegalStateException if this state is not
    * a valid text state.
    */
   public int getTextStart();
@@ -596,7 +596,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
   /**
    * Returns the length of the sequence of characters for this
    * Text event within the text character array.
-   * @throws java.lang.IllegalStateException if this state is not
+   * @throws IllegalStateException if this state is not
    * a valid text state.
    */
   public int getTextLength();

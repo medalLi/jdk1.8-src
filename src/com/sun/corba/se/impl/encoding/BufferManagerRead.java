@@ -45,8 +45,8 @@ public interface BufferManagerRead
      *
      */
 
-    public void processFragment ( ByteBuffer byteBuffer,
-        FragmentMessage header);
+    public void processFragment(ByteBuffer byteBuffer,
+                                FragmentMessage header);
 
 
     /**
@@ -70,7 +70,7 @@ public interface BufferManagerRead
      *  If streaming then sync on bufQ and wait if empty.
      */
 
-    public ByteBufferWithInfo underflow (ByteBufferWithInfo bbwi);
+    public ByteBufferWithInfo underflow(ByteBufferWithInfo bbwi);
 
     /**
      * Called once after creating this buffer manager and before

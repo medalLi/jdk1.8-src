@@ -50,17 +50,17 @@ public final class FloatSeqHolder implements org.omg.CORBA.portable.Streamable
 
     public void _read (org.omg.CORBA.portable.InputStream i)
     {
-        value = org.omg.CORBA.FloatSeqHelper.read (i);
+        value = FloatSeqHelper.read (i);
     }
 
     public void _write (org.omg.CORBA.portable.OutputStream o)
     {
-        org.omg.CORBA.FloatSeqHelper.write (o, value);
+        FloatSeqHelper.write (o, value);
     }
 
-    public org.omg.CORBA.TypeCode _type ()
+    public TypeCode _type ()
     {
-        return org.omg.CORBA.FloatSeqHelper.type ();
+        return FloatSeqHelper.type ();
     }
 
 }

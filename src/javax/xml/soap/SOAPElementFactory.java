@@ -36,7 +36,7 @@ package javax.xml.soap;
  * elements are copied into the XML document tree when they are
  * inserted.
  * @deprecated - Use <code>javax.xml.soap.SOAPFactory</code> for creating SOAPElements.
- * @see javax.xml.soap.SOAPFactory
+ * @see SOAPFactory
  */
 public class SOAPElementFactory {
 
@@ -63,8 +63,8 @@ public class SOAPElementFactory {
      * javax.xml.soap.SOAPFactory.createElement(javax.xml.soap.Name)
      * instead
      *
-     * @see javax.xml.soap.SOAPFactory#createElement(javax.xml.soap.Name)
-     * @see javax.xml.soap.SOAPFactory#createElement(javax.xml.namespace.QName)
+     * @see SOAPFactory#createElement(Name)
+     * @see SOAPFactory#createElement(javax.xml.namespace.QName)
      */
     public SOAPElement create(Name name) throws SOAPException {
         return soapFactory.createElement(name);
@@ -86,7 +86,7 @@ public class SOAPElementFactory {
      * @deprecated Use
      * javax.xml.soap.SOAPFactory.createElement(String localName) instead
      *
-     * @see javax.xml.soap.SOAPFactory#createElement(java.lang.String)
+     * @see SOAPFactory#createElement(String)
      */
     public SOAPElement create(String localName) throws SOAPException {
         return soapFactory.createElement(localName);
@@ -111,7 +111,7 @@ public class SOAPElementFactory {
      *                      String uri)
      * instead
      *
-     * @see javax.xml.soap.SOAPFactory#createElement(java.lang.String, java.lang.String, java.lang.String)
+     * @see SOAPFactory#createElement(String, String, String)
      */
     public SOAPElement create(String localName, String prefix, String uri)
         throws SOAPException {

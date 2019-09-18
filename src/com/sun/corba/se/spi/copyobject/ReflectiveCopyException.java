@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.copyobject ;
+package com.sun.corba.se.spi.copyobject;
 
 public class ReflectiveCopyException extends Exception {
     public ReflectiveCopyException()

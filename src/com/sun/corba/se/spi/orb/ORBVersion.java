@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import org.omg.CORBA.portable.OutputStream ;
 
@@ -38,7 +38,7 @@ public interface ORBVersion extends Comparable
 
     byte getORBType() ;
 
-    void write( OutputStream os ) ;
+    void write(OutputStream os) ;
 
-    public boolean lessThan( ORBVersion version ) ;
+    public boolean lessThan(ORBVersion version) ;
 }

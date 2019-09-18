@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import java.util.Set ;
 import java.util.HashSet ;

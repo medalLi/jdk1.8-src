@@ -53,7 +53,7 @@ public interface NamingContextDataStore {
      * @param bt Type of binding (as object or as context).
      * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
      */
-    void Bind(NameComponent n, org.omg.CORBA.Object obj, BindingType bt)
+    void Bind(NameComponent n, Object obj, BindingType bt)
         throws org.omg.CORBA.SystemException;
 
     /**
@@ -66,7 +66,7 @@ public interface NamingContextDataStore {
      * @return the object reference bound under the supplied name.
      * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
      */
-    org.omg.CORBA.Object Resolve(NameComponent n,BindingTypeHolder bth)
+    Object Resolve(NameComponent n, BindingTypeHolder bth)
         throws org.omg.CORBA.SystemException;
 
     /**
@@ -74,7 +74,7 @@ public interface NamingContextDataStore {
      * @return the object reference bound to the name, or null if not found.
      * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
      */
-    org.omg.CORBA.Object Unbind(NameComponent n)
+    Object Unbind(NameComponent n)
         throws org.omg.CORBA.SystemException;
 
     /**
@@ -111,5 +111,5 @@ public interface NamingContextDataStore {
      */
     boolean IsEmpty();
 
-    POA getNSPOA( );
+    POA getNSPOA();
 }

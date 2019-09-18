@@ -265,7 +265,7 @@ abstract public class ObjectImpl implements org.omg.CORBA.Object
         // "InterfaceDef get_interface(..)" method using reflection
         // (will work for pre-JDK1.2 ORBs).
 
-        org.omg.CORBA.portable.Delegate delegate = _get_delegate();
+        Delegate delegate = _get_delegate();
         try {
             // If the ORB's delegate class does not implement
             // "Object get_interface_def(..)", this will call
@@ -525,7 +525,7 @@ abstract public class ObjectImpl implements org.omg.CORBA.Object
      *@return <code>true</code> if the two objects are equal;
      *        <code>false</code> otherwise
      */
-    public boolean equals(java.lang.Object obj) {
+    public boolean equals(Object obj) {
         if ( __delegate != null )
            return __delegate.equals(this, obj);
         else

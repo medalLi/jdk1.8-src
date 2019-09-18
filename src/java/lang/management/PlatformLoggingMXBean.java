@@ -29,14 +29,14 @@ package java.lang.management;
  * The management interface for the {@linkplain java.util.logging logging} facility.
  *
  * <p>There is a single global instance of the <tt>PlatformLoggingMXBean</tt>.
- * The {@link java.lang.management.ManagementFactory#getPlatformMXBean(Class)
+ * The {@link ManagementFactory#getPlatformMXBean(Class)
  * ManagementFactory.getPlatformMXBean} method can be used to obtain
  * the {@code PlatformLoggingMXBean} object as follows:
  * <pre>
  *     PlatformLoggingMXBean logging = ManagementFactory.getPlatformMXBean(PlatformLoggingMXBean.class);
  * </pre>
  * The {@code PlatformLoggingMXBean} object is also registered with the
- * platform {@linkplain java.lang.management.ManagementFactory#getPlatformMBeanServer
+ * platform {@linkplain ManagementFactory#getPlatformMBeanServer
  * MBeanServer}.
  * The {@link javax.management.ObjectName ObjectName} for uniquely
  * identifying the {@code PlatformLoggingMXBean} within an MBeanServer is:

@@ -104,7 +104,7 @@ public final class ShortHolder implements Streamable {
      * @return    the TypeCode of the value held in
      *            this <code>ShortHolder</code> object
      */
-    public org.omg.CORBA.TypeCode _type() {
+    public TypeCode _type() {
         return ORB.init().get_primitive_tc(TCKind.tk_short);
     }
 }

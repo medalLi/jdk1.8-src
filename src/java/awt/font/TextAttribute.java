@@ -52,7 +52,7 @@ import java.util.HashMap;
  * <code>TextAttribute</code> instances are used as attribute keys to
  * identify attributes in
  * {@link java.awt.Font Font},
- * {@link java.awt.font.TextLayout TextLayout},
+ * {@link TextLayout TextLayout},
  * {@link java.text.AttributedCharacterIterator AttributedCharacterIterator},
  * and other classes handling text attributes. Other constants defined
  * in this class can be used as attribute values.
@@ -224,7 +224,7 @@ import java.util.HashMap;
  * </tr>
  * <tr style="background-color:#eeeeff">
  * <td valign="TOP">{@link #NUMERIC_SHAPING}</td>
- * <td valign="TOP">{@link java.awt.font.NumericShaper}</td>
+ * <td valign="TOP">{@link NumericShaper}</td>
  * <td valign="TOP">none</td>
  * <td valign="TOP">null (do not shape digits)</td>
  * </tr>
@@ -249,7 +249,7 @@ import java.util.HashMap;
  * </table>
  *
  * @see java.awt.Font
- * @see java.awt.font.TextLayout
+ * @see TextLayout
  * @see java.text.AttributedCharacterIterator
  */
 public final class TextAttribute extends Attribute {

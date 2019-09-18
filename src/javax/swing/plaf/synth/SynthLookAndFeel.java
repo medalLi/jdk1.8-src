@@ -49,7 +49,7 @@ import sun.swing.plaf.synth.*;
  * {@link #load} method, or provide your own {@link SynthStyleFactory}
  * to {@link #setStyleFactory}. Refer to the
  * <a href="package-summary.html">package summary</a> for an example of
- * loading a file, and {@link javax.swing.plaf.synth.SynthStyleFactory} for
+ * loading a file, and {@link SynthStyleFactory} for
  * an example of providing your own <code>SynthStyleFactory</code> to
  * <code>setStyleFactory</code>.
  * <p>
@@ -909,7 +909,7 @@ public class SynthLookAndFeel extends BasicLookAndFeel {
         }
     }
 
-    private void writeObject(java.io.ObjectOutputStream out)
+    private void writeObject(ObjectOutputStream out)
             throws IOException {
         throw new NotSerializableException(this.getClass().getName());
     }

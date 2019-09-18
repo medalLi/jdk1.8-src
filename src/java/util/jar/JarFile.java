@@ -63,8 +63,8 @@ import sun.security.util.SignatureFileVerifier;
  *
  * @author  David Connelly
  * @see     Manifest
- * @see     java.util.zip.ZipFile
- * @see     java.util.jar.JarEntry
+ * @see     ZipFile
+ * @see     JarEntry
  * @since   1.2
  */
 public
@@ -217,7 +217,7 @@ class JarFile extends ZipFile {
      * @throws IllegalStateException
      *         may be thrown if the jar file has been closed
      *
-     * @see java.util.jar.JarEntry
+     * @see JarEntry
      */
     public JarEntry getJarEntry(String name) {
         return (JarEntry)getEntry(name);
@@ -234,7 +234,7 @@ class JarFile extends ZipFile {
      * @throws IllegalStateException
      *         may be thrown if the jar file has been closed
      *
-     * @see java.util.zip.ZipEntry
+     * @see ZipEntry
      */
     public ZipEntry getEntry(String name) {
         ZipEntry ze = super.getEntry(name);

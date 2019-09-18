@@ -43,7 +43,7 @@ import javax.management.MBeanOperationInfo;
 /**
  * The {@code OpenMBeanInfoSupport} class describes the management
  * information of an <i>open MBean</i>: it is a subclass of {@link
- * javax.management.MBeanInfo}, and it implements the {@link
+ * MBeanInfo}, and it implements the {@link
  * OpenMBeanInfo} interface.  Note that an <i>open MBean</i> is
  * recognized as such if its {@code getMBeanInfo()} method returns an
  * instance of a class which implements the OpenMBeanInfo interface,
@@ -326,7 +326,7 @@ public class OpenMBeanInfoSupport
      * <p>However, note that another instance of a class implementing
      * the {@code OpenMBeanInfo} interface may be equal to this {@code
      * OpenMBeanInfoSupport} instance as defined by {@link
-     * #equals(java.lang.Object)}, but may have a different hash code
+     * #equals(Object)}, but may have a different hash code
      * if it is calculated differently.</p>
      *
      * <p>As {@code OpenMBeanInfoSupport} instances are immutable, the

@@ -68,7 +68,7 @@ import sun.misc.SharedSecrets;
  * @since 1.4
  */
 
-public class LogRecord implements java.io.Serializable {
+public class LogRecord implements Serializable {
     private static final AtomicLong globalSequenceNumber
         = new AtomicLong(0);
 

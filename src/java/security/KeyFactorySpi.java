@@ -60,7 +60,7 @@ import java.security.spec.InvalidKeySpecException;
  * @see Key
  * @see PublicKey
  * @see PrivateKey
- * @see java.security.spec.KeySpec
+ * @see KeySpec
  * @see java.security.spec.DSAPublicKeySpec
  * @see java.security.spec.X509EncodedKeySpec
  *

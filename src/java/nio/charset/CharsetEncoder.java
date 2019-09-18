@@ -924,7 +924,7 @@ public abstract class CharsetEncoder {
      * <p> This method returns <tt>false</tt> if the given character is a
      * surrogate character; such characters can be interpreted only when they
      * are members of a pair consisting of a high surrogate followed by a low
-     * surrogate.  The {@link #canEncode(java.lang.CharSequence)
+     * surrogate.  The {@link #canEncode(CharSequence)
      * canEncode(CharSequence)} method may be used to test whether or not a
      * character sequence can be encoded.
      *

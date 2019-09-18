@@ -43,9 +43,9 @@ import java.security.PrivilegedExceptionAction;
  * appropriate to the local firewall.
  *
  * @author  unascribed
- * @see     java.net.SocketImpl
- * @see     java.net.ServerSocket#setSocketFactory(java.net.SocketImplFactory)
- * @see     java.nio.channels.ServerSocketChannel
+ * @see     SocketImpl
+ * @see     ServerSocket#setSocketFactory(SocketImplFactory)
+ * @see     ServerSocketChannel
  * @since   JDK1.0
  */
 public
@@ -119,9 +119,9 @@ class ServerSocket implements java.io.Closeable {
      *             the specified range of valid port values, which is between
      *             0 and 65535, inclusive.
      *
-     * @see        java.net.SocketImpl
-     * @see        java.net.SocketImplFactory#createSocketImpl()
-     * @see        java.net.ServerSocket#setSocketFactory(java.net.SocketImplFactory)
+     * @see        SocketImpl
+     * @see        SocketImplFactory#createSocketImpl()
+     * @see        ServerSocket#setSocketFactory(SocketImplFactory)
      * @see        SecurityManager#checkListen
      */
     public ServerSocket(int port) throws IOException {
@@ -172,9 +172,9 @@ class ServerSocket implements java.io.Closeable {
      *             the specified range of valid port values, which is between
      *             0 and 65535, inclusive.
      *
-     * @see        java.net.SocketImpl
-     * @see        java.net.SocketImplFactory#createSocketImpl()
-     * @see        java.net.ServerSocket#setSocketFactory(java.net.SocketImplFactory)
+     * @see        SocketImpl
+     * @see        SocketImplFactory#createSocketImpl()
+     * @see        ServerSocket#setSocketFactory(SocketImplFactory)
      * @see        SecurityManager#checkListen
      */
     public ServerSocket(int port, int backlog) throws IOException {
@@ -588,12 +588,12 @@ class ServerSocket implements java.io.Closeable {
     }
 
     /**
-     * Returns the unique {@link java.nio.channels.ServerSocketChannel} object
+     * Returns the unique {@link ServerSocketChannel} object
      * associated with this socket, if any.
      *
      * <p> A server socket will have a channel if, and only if, the channel
      * itself was created via the {@link
-     * java.nio.channels.ServerSocketChannel#open ServerSocketChannel.open}
+     * ServerSocketChannel#open ServerSocketChannel.open}
      * method.
      *
      * @return  the server-socket channel associated with this socket,
@@ -790,7 +790,7 @@ class ServerSocket implements java.io.Closeable {
      * @exception  SocketException  if the factory has already been defined.
      * @exception  SecurityException  if a security manager exists and its
      *             {@code checkSetFactory} method doesn't allow the operation.
-     * @see        java.net.SocketImplFactory#createSocketImpl()
+     * @see        SocketImplFactory#createSocketImpl()
      * @see        SecurityManager#checkSetFactory
      */
     public static synchronized void setSocketFactory(SocketImplFactory fac) throws IOException {

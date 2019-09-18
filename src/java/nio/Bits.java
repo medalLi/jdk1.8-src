@@ -679,8 +679,8 @@ class Bits {                            // package-private
         sun.misc.SharedSecrets.setJavaNioAccess(
             new sun.misc.JavaNioAccess() {
                 @Override
-                public sun.misc.JavaNioAccess.BufferPool getDirectBufferPool() {
-                    return new sun.misc.JavaNioAccess.BufferPool() {
+                public BufferPool getDirectBufferPool() {
+                    return new BufferPool() {
                         @Override
                         public String getName() {
                             return "direct";

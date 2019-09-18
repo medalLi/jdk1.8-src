@@ -54,11 +54,11 @@ public interface CommonDataSource {
      *
      * @return the log writer for this data source or null if
      *        logging is disabled
-     * @exception java.sql.SQLException if a database access error occurs
+     * @exception SQLException if a database access error occurs
      * @see #setLogWriter
      * @since 1.4
      */
-    java.io.PrintWriter getLogWriter() throws SQLException;
+    PrintWriter getLogWriter() throws SQLException;
 
     /**
      * <p>Sets the log writer for this <code>DataSource</code>
@@ -80,7 +80,7 @@ public interface CommonDataSource {
      * @see #getLogWriter
      * @since 1.4
      */
-    void setLogWriter(java.io.PrintWriter out) throws SQLException;
+    void setLogWriter(PrintWriter out) throws SQLException;
 
     /**
      * <p>Sets the maximum time in seconds that this data source will wait

@@ -61,7 +61,7 @@ public abstract class ActiveObjectMap
             return buffer.toString();
         }
 
-        public boolean equals(java.lang.Object key) {
+        public boolean equals(Object key) {
             if (!(key instanceof Key))
                 return false;
             Key k = (Key) key;

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.ior ;
+package com.sun.corba.se.spi.ior;
 
 import com.sun.corba.se.spi.orb.ORB ;
 
@@ -36,10 +36,10 @@ public interface IORFactory extends Writeable, MakeImmutable {
      * The same ObjectId will be used for all TaggedProfileTemplates in
      * the IORFactory.
      */
-    IOR makeIOR( ORB orb, String typeid, ObjectId oid ) ;
+    IOR makeIOR(ORB orb, String typeid, ObjectId oid) ;
 
     /** Return true iff this.makeIOR(orb,typeid,oid).isEquivalent(
      * other.makeIOR(orb,typeid,oid) for all orb, typeid, and oid.
      */
-    boolean isEquivalent( IORFactory other ) ;
+    boolean isEquivalent(IORFactory other) ;
 }

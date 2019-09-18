@@ -67,10 +67,10 @@ public class DynAnyUtil
     }
 
     static DynAny createMostDerivedDynAny(Any any, ORB orb, boolean copyValue)
-        throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+        throws InconsistentTypeCode
     {
         if (any == null || ! DynAnyUtil.isConsistentType(any.type()))
-            throw new org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode();
+            throw new InconsistentTypeCode();
 
         switch (any.type().kind().value()) {
             case TCKind._tk_sequence:
@@ -95,10 +95,10 @@ public class DynAnyUtil
     }
 
     static DynAny createMostDerivedDynAny(TypeCode typeCode, ORB orb)
-        throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+        throws InconsistentTypeCode
     {
         if (typeCode == null || ! DynAnyUtil.isConsistentType(typeCode))
-            throw new org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode();
+            throw new InconsistentTypeCode();
 
         switch (typeCode.kind().value()) {
             case TCKind._tk_sequence:

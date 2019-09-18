@@ -31,7 +31,7 @@ package java.awt;
  *
  * @author Doug Stein
  * @author Bill Spitzak (orignial NeWS &amp; OLIT implementation)
- * @see java.awt.GridBagLayout
+ * @see GridBagLayout
  * @since JDK1.0
  */
 public class GridBagConstraints implements Cloneable, java.io.Serializable {
@@ -41,10 +41,10 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * column or row (<code>gridwidth</code>, <code>gridheight</code>),
      * or that this component be placed next to the previously added
      * component (<code>gridx</code>, <code>gridy</code>).
-     * @see      java.awt.GridBagConstraints#gridwidth
-     * @see      java.awt.GridBagConstraints#gridheight
-     * @see      java.awt.GridBagConstraints#gridx
-     * @see      java.awt.GridBagConstraints#gridy
+     * @see      GridBagConstraints#gridwidth
+     * @see      GridBagConstraints#gridheight
+     * @see      GridBagConstraints#gridx
+     * @see      GridBagConstraints#gridy
      */
     public static final int RELATIVE = -1;
 
@@ -319,8 +319,8 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * <code>gridx</code> should be a non-negative value.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#gridy
-     * @see java.awt.ComponentOrientation
+     * @see GridBagConstraints#gridy
+     * @see ComponentOrientation
      */
     public int gridx;
 
@@ -335,7 +335,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * <code>gridy</code> should be a non-negative value.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#gridx
+     * @see GridBagConstraints#gridx
      */
     public int gridy;
 
@@ -354,7 +354,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * value is 1.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#gridheight
+     * @see GridBagConstraints#gridheight
      */
     public int gridwidth;
 
@@ -373,7 +373,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * default value is 1.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#gridwidth
+     * @see GridBagConstraints#gridwidth
      */
     public int gridheight;
 
@@ -394,7 +394,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * <code>weightx</code> should be a non-negative value.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#weighty
+     * @see GridBagConstraints#weighty
      */
     public double weightx;
 
@@ -415,7 +415,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * <code>weighty</code> should be a non-negative value.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#weightx
+     * @see GridBagConstraints#weightx
      */
     public double weighty;
 
@@ -447,7 +447,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * The default value is <code>CENTER</code>.
      * @serial
      * @see #clone()
-     * @see java.awt.ComponentOrientation
+     * @see ComponentOrientation
      */
     public int anchor;
 
@@ -498,7 +498,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * The default value is <code>0</code>.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#ipady
+     * @see GridBagConstraints#ipady
      */
     public int ipadx;
 
@@ -511,7 +511,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * The default value is 0.
      * @serial
      * @see #clone()
-     * @see java.awt.GridBagConstraints#ipadx
+     * @see GridBagConstraints#ipadx
      */
     public int ipady;
 
@@ -610,17 +610,17 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * @param ipadx     The initial ipadx value.
      * @param ipady     The initial ipady value.
      *
-     * @see java.awt.GridBagConstraints#gridx
-     * @see java.awt.GridBagConstraints#gridy
-     * @see java.awt.GridBagConstraints#gridwidth
-     * @see java.awt.GridBagConstraints#gridheight
-     * @see java.awt.GridBagConstraints#weightx
-     * @see java.awt.GridBagConstraints#weighty
-     * @see java.awt.GridBagConstraints#anchor
-     * @see java.awt.GridBagConstraints#fill
-     * @see java.awt.GridBagConstraints#insets
-     * @see java.awt.GridBagConstraints#ipadx
-     * @see java.awt.GridBagConstraints#ipady
+     * @see GridBagConstraints#gridx
+     * @see GridBagConstraints#gridy
+     * @see GridBagConstraints#gridwidth
+     * @see GridBagConstraints#gridheight
+     * @see GridBagConstraints#weightx
+     * @see GridBagConstraints#weighty
+     * @see GridBagConstraints#anchor
+     * @see GridBagConstraints#fill
+     * @see GridBagConstraints#insets
+     * @see GridBagConstraints#ipadx
+     * @see GridBagConstraints#ipady
      *
      * @since 1.2
      */

@@ -84,7 +84,7 @@ public class EncapsInputStream extends CDRInputStream
               BufferManagerFactory.newBufferManagerRead(
                                       BufferManagerFactory.GROW,
                                       Message.CDR_ENC_VERSION,
-                                      (com.sun.corba.se.spi.orb.ORB)orb));
+                                      (ORB)orb));
 
         performORBVersionSpecificInit();
     }

@@ -96,8 +96,8 @@ public class      BeanContextSupport extends BeanContextChildSupport
      *                  <tt>true</tt> if in design mode,
      *                  <tt>false</tt> if runtime.
      * @param visible   The initial visibility.
-     * @see java.util.Locale#getDefault()
-     * @see java.util.Locale#setDefault(java.util.Locale)
+     * @see Locale#getDefault()
+     * @see Locale#setDefault(Locale)
      */
     public BeanContextSupport(BeanContext peer, Locale lcle, boolean dTime, boolean visible) {
         super(peer);
@@ -121,8 +121,8 @@ public class      BeanContextSupport extends BeanContextChildSupport
      * @param dtime     The initial state, <tt>true</tt>
      *                  if in design mode,
      *                  <tt>false</tt> if runtime.
-     * @see java.util.Locale#getDefault()
-     * @see java.util.Locale#setDefault(java.util.Locale)
+     * @see Locale#getDefault()
+     * @see Locale#setDefault(Locale)
      */
     public BeanContextSupport(BeanContext peer, Locale lcle, boolean dtime) {
         this (peer, lcle, dtime, true);
@@ -141,8 +141,8 @@ public class      BeanContextSupport extends BeanContextChildSupport
      *                  the default locale
      *                  is assigned to the <tt>BeanContext</tt>
      *                  instance.
-     * @see java.util.Locale#getDefault()
-     * @see java.util.Locale#setDefault(java.util.Locale)
+     * @see Locale#getDefault()
+     * @see Locale#setDefault(Locale)
      */
     public BeanContextSupport(BeanContext peer, Locale lcle) {
         this (peer, lcle, false, true);
@@ -1025,11 +1025,11 @@ public class      BeanContextSupport extends BeanContextChildSupport
 
         while (count-- > 0) {
             Object                      child = null;
-            BeanContextSupport.BCSChild bscc  = null;
+            BCSChild bscc  = null;
 
             try {
                 child = ois.readObject();
-                bscc  = (BeanContextSupport.BCSChild)ois.readObject();
+                bscc  = (BCSChild)ois.readObject();
             } catch (IOException ioe) {
                 continue;
             } catch (ClassNotFoundException cnfe) {

@@ -41,7 +41,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * A {@link java.util.Map} providing thread safety and atomicity
+ * A {@link Map} providing thread safety and atomicity
  * guarantees.
  *
  * <p>Memory consistency effects: As with other concurrent
@@ -101,7 +101,7 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
     @Override
     default void forEach(BiConsumer<? super K, ? super V> action) {
         Objects.requireNonNull(action);
-        for (Map.Entry<K, V> entry : entrySet()) {
+        for (Entry<K, V> entry : entrySet()) {
             K k;
             V v;
             try {
@@ -317,7 +317,7 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
      */
     @Override
     default V computeIfAbsent(K key,
-            Function<? super K, ? extends V> mappingFunction) {
+                              Function<? super K, ? extends V> mappingFunction) {
         Objects.requireNonNull(mappingFunction);
         V v, newValue;
         return ((v = get(key)) == null &&
@@ -360,7 +360,7 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
      */
     @Override
     default V computeIfPresent(K key,
-            BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
+                               BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
         Objects.requireNonNull(remappingFunction);
         V oldValue;
         while((oldValue = get(key)) != null) {
@@ -414,7 +414,7 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
      */
     @Override
     default V compute(K key,
-            BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
+                      BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
         Objects.requireNonNull(remappingFunction);
         V oldValue = get(key);
         for(;;) {
@@ -493,7 +493,7 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
      */
     @Override
     default V merge(K key, V value,
-            BiFunction<? super V, ? super V, ? extends V> remappingFunction) {
+                    BiFunction<? super V, ? super V, ? extends V> remappingFunction) {
         Objects.requireNonNull(remappingFunction);
         Objects.requireNonNull(value);
         V oldValue = get(key);

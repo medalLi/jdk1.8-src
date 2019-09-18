@@ -40,7 +40,7 @@ public interface POAOperations
   	 *            administrative action that has not been
   	 *            performed.
   	 */
-  org.omg.PortableServer.POA create_POA (String adapter_name, org.omg.PortableServer.POAManager a_POAManager, org.omg.CORBA.Policy[] policies) throws org.omg.PortableServer.POAPackage.AdapterAlreadyExists, org.omg.PortableServer.POAPackage.InvalidPolicy;
+  POA create_POA(String adapter_name, POAManager a_POAManager, org.omg.CORBA.Policy[] policies) throws org.omg.PortableServer.POAPackage.AdapterAlreadyExists, org.omg.PortableServer.POAPackage.InvalidPolicy;
 
   /**
   	 * If the target POA is the parent of a child POA with 
@@ -58,7 +58,7 @@ public interface POAOperations
   	 *         a specified name cannot be found or
   	 *         activated using AdapaterActivator.
   	 */
-  org.omg.PortableServer.POA find_POA (String adapter_name, boolean activate_it) throws org.omg.PortableServer.POAPackage.AdapterNonExistent;
+  POA find_POA(String adapter_name, boolean activate_it) throws org.omg.PortableServer.POAPackage.AdapterNonExistent;
 
   /**
   	 * This operation destroys the POA and all descendant 
@@ -74,7 +74,7 @@ public interface POAOperations
   	 *        requests and the etherealization to complete.
   	 *
   	 */
-  void destroy (boolean etherealize_objects, boolean wait_for_completion);
+  void destroy(boolean etherealize_objects, boolean wait_for_completion);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -82,7 +82,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return ThreadPolcy Object
   	 */
-  org.omg.PortableServer.ThreadPolicy create_thread_policy (org.omg.PortableServer.ThreadPolicyValue value);
+  ThreadPolicy create_thread_policy(ThreadPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -90,7 +90,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return LifespanPolicy Object.
   	 */
-  org.omg.PortableServer.LifespanPolicy create_lifespan_policy (org.omg.PortableServer.LifespanPolicyValue value);
+  LifespanPolicy create_lifespan_policy(LifespanPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -98,7 +98,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return IdUniquenessPolicy Object.
   	 */
-  org.omg.PortableServer.IdUniquenessPolicy create_id_uniqueness_policy (org.omg.PortableServer.IdUniquenessPolicyValue value);
+  IdUniquenessPolicy create_id_uniqueness_policy(IdUniquenessPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -106,7 +106,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return IdAssignmentPolicy Object.
   	 */
-  org.omg.PortableServer.IdAssignmentPolicy create_id_assignment_policy (org.omg.PortableServer.IdAssignmentPolicyValue value);
+  IdAssignmentPolicy create_id_assignment_policy(IdAssignmentPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -114,7 +114,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return ImplicitActivationPolicy Object.
   	 */
-  org.omg.PortableServer.ImplicitActivationPolicy create_implicit_activation_policy (org.omg.PortableServer.ImplicitActivationPolicyValue value);
+  ImplicitActivationPolicy create_implicit_activation_policy(ImplicitActivationPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -122,7 +122,7 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return ServantRetentionPolicy Object.
   	 */
-  org.omg.PortableServer.ServantRetentionPolicy create_servant_retention_policy (org.omg.PortableServer.ServantRetentionPolicyValue value);
+  ServantRetentionPolicy create_servant_retention_policy(ServantRetentionPolicyValue value);
 
   /**
   	 * These operations each return a reference to a policy 
@@ -130,19 +130,19 @@ public interface POAOperations
   	 * @param value policy type
   	 * @return RequestProcessingPolicy Object.
   	 */
-  org.omg.PortableServer.RequestProcessingPolicy create_request_processing_policy (org.omg.PortableServer.RequestProcessingPolicyValue value);
+  RequestProcessingPolicy create_request_processing_policy(RequestProcessingPolicyValue value);
 
   /**
   	 * This attribute identifies the POA relative to its 
   	 * parent. This name is assigned when the POA is created.
   	 */
-  String the_name ();
+  String the_name();
 
   /**
   	 * This attribute identifies the parent of the POA. 
   	 * The parent of the root POA is null. 
   	 */
-  org.omg.PortableServer.POA the_parent ();
+  POA the_parent();
 
   /**
   	 * This attribute identifies the current set of all 
@@ -150,25 +150,25 @@ public interface POAOperations
   	 * includes only the POA's immediate children, and 
   	 * not their descendants.
   	 */
-  org.omg.PortableServer.POA[] the_children ();
+  POA[] the_children();
 
   /**
   	 * This attribute identifies the POA manager 
   	 * associated with the POA.
   	 */
-  org.omg.PortableServer.POAManager the_POAManager ();
+  POAManager the_POAManager();
 
   /**
   	 * This attribute identifies the adapter activator 
   	 * associated with the POA.
   	 */
-  org.omg.PortableServer.AdapterActivator the_activator ();
+  AdapterActivator the_activator();
 
   /**
   	 * This attribute identifies the adapter activator 
   	 * associated with the POA.
   	 */
-  void the_activator (org.omg.PortableServer.AdapterActivator newThe_activator);
+  void the_activator(AdapterActivator newThe_activator);
 
   /**
   	 *
@@ -184,7 +184,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the 
   	 *            USE_SERVANT_MANAGER policy is not specified.
   	 */
-  org.omg.PortableServer.ServantManager get_servant_manager () throws org.omg.PortableServer.POAPackage.WrongPolicy;
+  ServantManager get_servant_manager() throws org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 *
@@ -198,7 +198,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the 
   	 *            USE_SERVANT_MANAGER policy is not specified.
   	 */
-  void set_servant_manager (org.omg.PortableServer.ServantManager imgr) throws org.omg.PortableServer.POAPackage.WrongPolicy;
+  void set_servant_manager(ServantManager imgr) throws org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * This operation returns the default servant associated 
@@ -209,7 +209,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the 
   	 *            USE_DEFAULT_SERVANT policy is not specified.
   	 */
-  org.omg.PortableServer.Servant get_servant () throws org.omg.PortableServer.POAPackage.NoServant, org.omg.PortableServer.POAPackage.WrongPolicy;
+  Servant get_servant() throws org.omg.PortableServer.POAPackage.NoServant, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 *
@@ -221,7 +221,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the 
   	 *            USE_DEFAULT_SERVANT policy is not specified.
   	 */
-  void set_servant (org.omg.PortableServer.Servant p_servant) throws org.omg.PortableServer.POAPackage.WrongPolicy;
+  void set_servant(Servant p_servant) throws org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 *
@@ -237,7 +237,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the SYSTEM_ID and 
   	 *            RETAIN policies are not specified.
   	 */
-  byte[] activate_object (org.omg.PortableServer.Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantAlreadyActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  byte[] activate_object(Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantAlreadyActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
            * This operation enters an association between the 
@@ -254,7 +254,7 @@ public interface POAOperations
            * @exception WrongPolicy raised if the RETAIN policy is
            *            is not specified.
            */
-  void activate_object_with_id (byte[] id, org.omg.PortableServer.Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantAlreadyActive, org.omg.PortableServer.POAPackage.ObjectAlreadyActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  void activate_object_with_id(byte[] id, Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantAlreadyActive, org.omg.PortableServer.POAPackage.ObjectAlreadyActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 *
@@ -272,7 +272,7 @@ public interface POAOperations
   	 * @exception WrongPolicy raised if the RETAIN policy is
   	 *            is not specified.
   	 */
-  void deactivate_object (byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  void deactivate_object(byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * This operation creates an object reference that 
@@ -284,7 +284,7 @@ public interface POAOperations
   	 * @exception WrongPolicy if SYSTEM_ID policy is not 
   	 *            specified.
   	 */
-  org.omg.CORBA.Object create_reference (String intf) throws org.omg.PortableServer.POAPackage.WrongPolicy;
+  org.omg.CORBA.Object create_reference(String intf) throws org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * This operation creates an object reference that 
@@ -303,7 +303,7 @@ public interface POAOperations
   	 *             Object Id value was not generated by the 
   	 *             system or for this POA.
   	 */
-  org.omg.CORBA.Object create_reference_with_id (byte[] oid, String intf);
+  org.omg.CORBA.Object create_reference_with_id(byte[] oid, String intf);
 
   /**
   	 * This operation has four possible behaviors. 
@@ -332,7 +332,7 @@ public interface POAOperations
   	 *            either the UNIQUE_ID or IMPLICIT_ACTIVATION 
   	 *            policies are not present. 
   	 */
-  byte[] servant_to_id (org.omg.PortableServer.Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  byte[] servant_to_id(Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * This operation requires the RETAIN policy and either 
@@ -366,7 +366,7 @@ public interface POAOperations
   	 * @exception ServantNotActive if the above specified
   	 *            policies and rules are not met.
   	 */
-  org.omg.CORBA.Object servant_to_reference (org.omg.PortableServer.Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  org.omg.CORBA.Object servant_to_reference(Servant p_servant) throws org.omg.PortableServer.POAPackage.ServantNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * If the POA has the RETAIN policy and the specified 
@@ -392,7 +392,7 @@ public interface POAOperations
   	 * @exception WrongAdapter if reference was not created by
   	 *	      this POA instance.
   	 */
-  org.omg.PortableServer.Servant reference_to_servant (org.omg.CORBA.Object reference) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy, org.omg.PortableServer.POAPackage.WrongAdapter;
+  Servant reference_to_servant(org.omg.CORBA.Object reference) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy, org.omg.PortableServer.POAPackage.WrongAdapter;
 
   /**
   	 * This operation returns the Object Id value 
@@ -412,7 +412,7 @@ public interface POAOperations
   	 *            extensions. 
   	 *
   	 */
-  byte[] reference_to_id (org.omg.CORBA.Object reference) throws org.omg.PortableServer.POAPackage.WrongAdapter, org.omg.PortableServer.POAPackage.WrongPolicy;
+  byte[] reference_to_id(org.omg.CORBA.Object reference) throws org.omg.PortableServer.POAPackage.WrongAdapter, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * If the POA has the RETAIN policy and the specified 
@@ -435,7 +435,7 @@ public interface POAOperations
   	 *                        or the USE_DEFAULT_SERVANT 
   	 *                        policy is not present. 
   	 */
-  org.omg.PortableServer.Servant id_to_servant (byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  Servant id_to_servant(byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * If an object with the specified Object Id value is 
@@ -451,7 +451,7 @@ public interface POAOperations
   	 * @exception WrongPolicy if the RETAIN policy is not 
   	 *             present.
   	 */
-  org.omg.CORBA.Object id_to_reference (byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
+  org.omg.CORBA.Object id_to_reference(byte[] oid) throws org.omg.PortableServer.POAPackage.ObjectNotActive, org.omg.PortableServer.POAPackage.WrongPolicy;
 
   /**
   	 * This returns the unique id of the POA in the process in which it 
@@ -463,5 +463,5 @@ public interface POAOperations
   	 * are identical and, therefore, have the same id.  For transient 
   	 * POAs, each POA is unique.
   	 */
-  byte[] id ();
+  byte[] id();
 } // interface POAOperations

@@ -35,11 +35,11 @@ package org.omg.PortableServer.ServantLocatorPackage;
 
 final public class CookieHolder implements org.omg.CORBA.portable.Streamable
 {
-    public java.lang.Object value;
+    public Object value;
 
     public CookieHolder() { }
 
-    public CookieHolder(java.lang.Object initial) {
+    public CookieHolder(Object initial) {
         value = initial;
     }
 

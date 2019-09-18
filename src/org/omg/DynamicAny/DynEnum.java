@@ -13,6 +13,6 @@ package org.omg.DynamicAny;
     * DynEnum objects support the manipulation of IDL enumerated values.
     * The current position of a DynEnum is always -1.
     */
-public interface DynEnum extends DynEnumOperations, org.omg.DynamicAny.DynAny, org.omg.CORBA.portable.IDLEntity 
+public interface DynEnum extends DynEnumOperations, DynAny, org.omg.CORBA.portable.IDLEntity
 {
 } // interface DynEnum

@@ -69,7 +69,7 @@ public class TransientBindingIterator extends BindingIteratorImpl
    */
     public TransientBindingIterator(ORB orb, Hashtable aTable,
         POA thePOA )
-        throws java.lang.Exception
+        throws Exception
     {
         super(orb);
         theHashtable = aTable;
@@ -102,7 +102,7 @@ public class TransientBindingIterator extends BindingIteratorImpl
 
     /**
      * Destroys this BindingIterator by disconnecting from the ORB
-     * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
+     * @exception SystemException One of a fixed set of CORBA
      * system exceptions.
      */
     final public void Destroy()

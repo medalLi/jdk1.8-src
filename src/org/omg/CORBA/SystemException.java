@@ -48,7 +48,7 @@ import com.sun.corba.se.impl.util.SUNVMCID;
  * Java&nbsp;IDL exceptions</A>
  */
 
-public abstract class SystemException extends java.lang.RuntimeException {
+public abstract class SystemException extends RuntimeException {
 
     /**
      * The CORBA Exception minor code.

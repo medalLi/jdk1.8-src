@@ -323,7 +323,7 @@ public final class ORBUtility {
             IIOPProfile prof = ior.getProfile();
             IIOPProfileTemplate profTemp =
                 (IIOPProfileTemplate) prof.getTaggedProfileTemplate();
-            java.util.Iterator iter = profTemp.iteratorById(
+            Iterator iter = profTemp.iteratorById(
                                   ORBConstants.TAG_JAVA_SERIALIZATION_ID);
             if (iter.hasNext()) {
                 JavaSerializationComponent jc =
@@ -461,7 +461,7 @@ public final class ORBUtility {
         // construct className -> repositoryId hashtable
         //
         Enumeration keys = exceptionClassNames.keys();
-        java.lang.Object s;
+        Object s;
         String rId;
         String cName;
 
@@ -594,7 +594,7 @@ public final class ORBUtility {
     //
     // Implements all dprint calls in this package.
     //
-    public static synchronized void dprint(java.lang.Object obj, String msg) {
+    public static synchronized void dprint(Object obj, String msg) {
         System.out.println(
             compressClassName( obj.getClass().getName() ) + "("  +
             getThreadName( Thread.currentThread() ) + "): " + msg);
@@ -617,8 +617,8 @@ public final class ORBUtility {
         printStackTrace( thr.getStackTrace() ) ;
     }
 
-    public static synchronized void dprint(java.lang.Object caller,
-        String msg, Throwable t)
+    public static synchronized void dprint(Object caller,
+                                           String msg, Throwable t)
     {
         System.out.println(
             compressClassName( caller.getClass().getName() ) +
@@ -666,7 +666,7 @@ public final class ORBUtility {
     public static byte getMaxStreamFormatVersion() {
         ValueHandler vh = Util.createValueHandler();
 
-        if (!(vh instanceof javax.rmi.CORBA.ValueHandlerMultiFormat))
+        if (!(vh instanceof ValueHandlerMultiFormat))
             return ORBConstants.STREAM_FORMAT_VERSION_1;
         else
             return ((ValueHandlerMultiFormat)vh).getMaximumStreamFormatVersion();
@@ -815,7 +815,7 @@ public final class ORBUtility {
 
         String result =
             (String)AccessController.doPrivileged(new PrivilegedAction() {
-                public java.lang.Object run() {
+                public Object run() {
                     StringBuffer sb = new StringBuffer(500);
                     ProtectionDomain pd = cl.getProtectionDomain();
                     Policy policy = Policy.getPolicy();

@@ -944,7 +944,7 @@ public class JSplitPane extends JComponent implements Accessible
      *
      * @return true
      * @see JComponent#revalidate
-     * @see java.awt.Container#isValidateRoot
+     * @see Container#isValidateRoot
      *
      * @beaninfo
      *    hidden: true
@@ -983,7 +983,7 @@ public class JSplitPane extends JComponent implements Accessible
      *                    list.
      * @exception IllegalArgumentException  if the <code>constraints</code>
      *          object does not match an existing component
-     * @see java.awt.Container#addImpl(Component, Object, int)
+     * @see Container#addImpl(Component, Object, int)
      */
     protected void addImpl(Component comp, Object constraints, int index)
     {

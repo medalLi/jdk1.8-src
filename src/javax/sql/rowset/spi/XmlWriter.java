@@ -66,7 +66,7 @@ public interface XmlWriter extends RowSetWriter {
    *            this <code>XmlWriter</code> object is not the writer
    *            for the given <code>WebRowSet</code> object
    */
-  public void writeXML(WebRowSet caller, java.io.Writer writer)
+  public void writeXML(WebRowSet caller, Writer writer)
     throws SQLException;
 
 

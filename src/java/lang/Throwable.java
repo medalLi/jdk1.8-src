@@ -40,8 +40,8 @@ import  java.util.*;
  * subclass of either {@link RuntimeException} or {@link Error} are
  * regarded as checked exceptions.
  *
- * <p>Instances of two subclasses, {@link java.lang.Error} and
- * {@link java.lang.Exception}, are conventionally used to indicate
+ * <p>Instances of two subclasses, {@link Error} and
+ * {@link Exception}, are conventionally used to indicate
  * that exceptional situations have occurred. Typically, these instances
  * are freshly created in the context of the exceptional situation so
  * as to include relevant information (such as stack trace data).
@@ -74,10 +74,10 @@ import  java.util.*;
  * <p>A second reason that a throwable may have a cause is that the method
  * that throws it must conform to a general-purpose interface that does not
  * permit the method to throw the cause directly.  For example, suppose
- * a persistent collection conforms to the {@link java.util.Collection
+ * a persistent collection conforms to the {@link Collection
  * Collection} interface, and that its persistence is implemented atop
  * {@code java.io}.  Suppose the internals of the {@code add} method
- * can throw an {@link java.io.IOException IOException}.  The implementation
+ * can throw an {@link IOException IOException}.  The implementation
  * can communicate the details of the {@code IOException} to its caller
  * while conforming to the {@code Collection} interface by wrapping the
  * {@code IOException} in an appropriate unchecked exception.  (The
@@ -775,7 +775,7 @@ public class Throwable implements Serializable {
      * writable}, calling this method has no effect.
      *
      * @return  a reference to this {@code Throwable} instance.
-     * @see     java.lang.Throwable#printStackTrace()
+     * @see     Throwable#printStackTrace()
      */
     public synchronized Throwable fillInStackTrace() {
         if (stackTrace != null ||

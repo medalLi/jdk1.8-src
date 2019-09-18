@@ -42,11 +42,11 @@ import javax.xml.namespace.NamespaceContext;
  * @version 1.0
  * @author Copyright (c) 2009 by Oracle Corporation. All Rights Reserved.
  * @see XMLEventReader
- * @see javax.xml.stream.events.XMLEvent
- * @see javax.xml.stream.events.Characters
- * @see javax.xml.stream.events.ProcessingInstruction
- * @see javax.xml.stream.events.StartElement
- * @see javax.xml.stream.events.EndElement
+ * @see XMLEvent
+ * @see Characters
+ * @see ProcessingInstruction
+ * @see StartElement
+ * @see EndElement
  * @since 1.6
  */
 public interface XMLEventWriter extends XMLEventConsumer {

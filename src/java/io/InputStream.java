@@ -33,13 +33,13 @@ package java.io;
  * must always provide a method that returns the next byte of input.
  *
  * @author  Arthur van Hoff
- * @see     java.io.BufferedInputStream
- * @see     java.io.ByteArrayInputStream
- * @see     java.io.DataInputStream
- * @see     java.io.FilterInputStream
- * @see     java.io.InputStream#read()
- * @see     java.io.OutputStream
- * @see     java.io.PushbackInputStream
+ * @see     BufferedInputStream
+ * @see     ByteArrayInputStream
+ * @see     DataInputStream
+ * @see     FilterInputStream
+ * @see     InputStream#read()
+ * @see     OutputStream
+ * @see     PushbackInputStream
  * @since   JDK1.0
  */
 public abstract class InputStream implements Closeable {
@@ -95,7 +95,7 @@ public abstract class InputStream implements Closeable {
      * other than the end of the file, if the input stream has been closed, or
      * if some other I/O error occurs.
      * @exception  NullPointerException  if <code>b</code> is <code>null</code>.
-     * @see        java.io.InputStream#read(byte[], int, int)
+     * @see        InputStream#read(byte[], int, int)
      */
     public int read(byte b[]) throws IOException {
         return read(b, 0, b.length);
@@ -156,7 +156,7 @@ public abstract class InputStream implements Closeable {
      * @exception  IndexOutOfBoundsException If <code>off</code> is negative,
      * <code>len</code> is negative, or <code>len</code> is greater than
      * <code>b.length - off</code>
-     * @see        java.io.InputStream#read()
+     * @see        InputStream#read()
      */
     public int read(byte b[], int off, int len) throws IOException {
         if (b == null) {
@@ -296,7 +296,7 @@ public abstract class InputStream implements Closeable {
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
      *                      the mark position becomes invalid.
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#reset()
      */
     public synchronized void mark(int readlimit) {}
 
@@ -341,8 +341,8 @@ public abstract class InputStream implements Closeable {
      *
      * @exception  IOException  if this stream has not been marked or if the
      *               mark has been invalidated.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.IOException
+     * @see     InputStream#mark(int)
+     * @see     IOException
      */
     public synchronized void reset() throws IOException {
         throw new IOException("mark/reset not supported");
@@ -357,8 +357,8 @@ public abstract class InputStream implements Closeable {
      *
      * @return  <code>true</code> if this stream instance supports the mark
      *          and reset methods; <code>false</code> otherwise.
-     * @see     java.io.InputStream#mark(int)
-     * @see     java.io.InputStream#reset()
+     * @see     InputStream#mark(int)
+     * @see     InputStream#reset()
      */
     public boolean markSupported() {
         return false;

@@ -74,7 +74,7 @@ public interface PIHandler extends Closeable {
      * @param oa The adapter associated with the interceptors to be
      *   invoked.
      */
-    void objectAdapterCreated( ObjectAdapter oa )  ;
+    void objectAdapterCreated(ObjectAdapter oa)  ;
 
     /**
      * Called whenever a state change occurs in an adapter manager.
@@ -83,8 +83,8 @@ public interface PIHandler extends Closeable {
      * @param newState newState The new state of the adapter manager,
      * and by implication of all object adapters managed by this manager.
      */
-    void adapterManagerStateChanged( int managerId,
-        short newState ) ;
+    void adapterManagerStateChanged(int managerId,
+                                    short newState) ;
 
     /** Called whenever a state change occurs in an object adapter that
     * was not caused by an adapter manager state change.
@@ -93,8 +93,8 @@ public interface PIHandler extends Closeable {
     * @param newState The new state of the adapters identified by the
     * templates.
     */
-    void adapterStateChanged( ObjectReferenceTemplate[] templates,
-        short newState ) ;
+    void adapterStateChanged(ObjectReferenceTemplate[] templates,
+                             short newState) ;
 
     /*
      *****************
@@ -141,7 +141,7 @@ public interface PIHandler extends Closeable {
      *     SystemException, UserException, or RemarshalException.
      */
     Exception invokeClientPIEndingPoint(
-        int replyStatus, Exception exception ) ;
+            int replyStatus, Exception exception) ;
 
     /**
      * Called when a retry is needed after initiateClientPIRequest but
@@ -162,7 +162,7 @@ public interface PIHandler extends Closeable {
      *     SystemException, UserException, or RemarshalException.
      */
     Exception makeCompletedClientRequest(
-        int replyStatus, Exception exception ) ;
+            int replyStatus, Exception exception) ;
 
     /**
      * Invoked when a request is about to be created.  Must be called before
@@ -173,7 +173,7 @@ public interface PIHandler extends Closeable {
      *     is a "normal" request.  In the DII case, initiateClientPIRequest
      *     is called twice and we need to ignore the second one.
      */
-    void initiateClientPIRequest( boolean diiRequest ) ;
+    void initiateClientPIRequest(boolean diiRequest) ;
 
     /**
      * Invoked when a request is about to be cleaned up.  Must be called
@@ -188,7 +188,7 @@ public interface PIHandler extends Closeable {
      * PI will use this information as a source of information for the
      * ClientRequestInfo object.
      */
-    void setClientPIInfo( RequestImpl requestImpl ) ;
+    void setClientPIInfo(RequestImpl requestImpl) ;
 
     /**
      * Notify PI of the MessageMediator for the request.
@@ -233,7 +233,7 @@ public interface PIHandler extends Closeable {
      *     not modify the entire execution path to declare throwing
      *     ForwardException.
      */
-    void invokeServerPIEndingPoint( ReplyMessage replyMessage ) ;
+    void invokeServerPIEndingPoint(ReplyMessage replyMessage) ;
 
     /**
      * Notifies PI to start a new server request and set initial
@@ -242,8 +242,8 @@ public interface PIHandler extends Closeable {
      * ServerRequestInfo object.  poaimpl is declared as an Object so that
      * we need not introduce a dependency on the POA package.
      */
-    void initializeServerPIInfo( CorbaMessageMediator request,
-        ObjectAdapter oa, byte[] objectId, ObjectKeyTemplate oktemp ) ;
+    void initializeServerPIInfo(CorbaMessageMediator request,
+                                ObjectAdapter oa, byte[] objectId, ObjectKeyTemplate oktemp) ;
 
     /**
      * Notifies PI of additional information reqired for ServerRequestInfo.
@@ -256,34 +256,34 @@ public interface PIHandler extends Closeable {
      *     extra information in the POA case that we didn't want to bother
      *     creating extra methods for to pass in.
      */
-    void setServerPIInfo( java.lang.Object servant,
-                                    String targetMostDerivedInterface ) ;
+    void setServerPIInfo(Object servant,
+                         String targetMostDerivedInterface) ;
 
     /**
      * Notifies PI of additional information required for ServerRequestInfo.
      */
-    void setServerPIInfo( Exception exception ) ;
+    void setServerPIInfo(Exception exception) ;
 
     /**
      * Notifies PI of additional information for server-side interceptors.
      * PI will use this information as a source of information for the
      * ServerRequestInfo object.  These are the arguments for a DSI request.
      */
-    void setServerPIInfo( NVList arguments ) ;
+    void setServerPIInfo(NVList arguments) ;
 
     /**
      * Notifies PI of additional information for server-side interceptors.
      * PI will use this information as a source of information for the
      * ServerRequestInfo object.  This is the exception of a DSI request.
      */
-    void setServerPIExceptionInfo( Any exception ) ;
+    void setServerPIExceptionInfo(Any exception) ;
 
     /**
      * Notifies PI of additional information for server-side interceptors.
      * PI will use this information as a source of information for the
      * ServerRequestInfo object.  This is the result of a DSI request.
      */
-    void setServerPIInfo( Any result ) ;
+    void setServerPIInfo(Any result) ;
 
     /**
      * Invoked when a request is about to be cleaned up.  Must be called
@@ -293,14 +293,14 @@ public interface PIHandler extends Closeable {
      */
     void cleanupServerPIRequest() ;
 
-    Policy create_policy( int type, Any val ) throws PolicyError ;
+    Policy create_policy(int type, Any val) throws PolicyError ;
 
-    void register_interceptor( Interceptor interceptor, int type )
+    void register_interceptor(Interceptor interceptor, int type)
         throws DuplicateName ;
 
     Current getPICurrent() ;
 
-    void registerPolicyFactory( int type, PolicyFactory factory ) ;
+    void registerPolicyFactory(int type, PolicyFactory factory) ;
 
     int allocateServerRequestId() ;
 }

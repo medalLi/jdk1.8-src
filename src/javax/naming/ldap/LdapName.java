@@ -761,13 +761,13 @@ public class LdapName implements Name {
      * @serialData      The DN string
      */
     private void writeObject(ObjectOutputStream s)
-            throws java.io.IOException {
+            throws IOException {
         s.defaultWriteObject();
         s.writeObject(toString());
     }
 
     private void readObject(ObjectInputStream s)
-            throws java.io.IOException, ClassNotFoundException {
+            throws IOException, ClassNotFoundException {
         s.defaultReadObject();
         unparsed = (String)s.readObject();
         try {

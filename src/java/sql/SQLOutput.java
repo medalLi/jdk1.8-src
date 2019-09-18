@@ -194,7 +194,7 @@ package java.sql;
    * this method
    * @since 1.2
    */
-  void writeDate(java.sql.Date x) throws SQLException;
+  void writeDate(Date x) throws SQLException;
 
   /**
    * Writes the next attribute to the stream as a java.sql.Time object.
@@ -207,7 +207,7 @@ package java.sql;
    * this method
    * @since 1.2
    */
-  void writeTime(java.sql.Time x) throws SQLException;
+  void writeTime(Time x) throws SQLException;
 
   /**
    * Writes the next attribute to the stream as a java.sql.Timestamp object.
@@ -220,7 +220,7 @@ package java.sql;
    * this method
    * @since 1.2
    */
-  void writeTimestamp(java.sql.Timestamp x) throws SQLException;
+  void writeTimestamp(Timestamp x) throws SQLException;
 
   /**
    * Writes the next attribute to the stream as a stream of Unicode characters.

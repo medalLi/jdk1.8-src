@@ -54,7 +54,7 @@ public interface PolicyOperations
    * @return the constant value that corresponds to the type of
    * the policy object
    */
-  int policy_type ();
+  int policy_type();
 
   /**
    * Returns a copy of the <code>Policy</code> object. The copy does not retain
@@ -62,11 +62,11 @@ public interface PolicyOperations
    *
    * @return a copy of the <code>Policy</code> object
    */
-  org.omg.CORBA.Policy copy ();
+  Policy copy();
 
   /**
    * Destroys the <code>Policy</code> object.  It is the responsibility of
    * the <code>Policy</code> object to determine whether it can be destroyed.
    */
-  void destroy ();
+  void destroy();
 } // interface PolicyOperations

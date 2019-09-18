@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.org.omg.CORBA ;
+package com.sun.corba.se.org.omg.CORBA;
 
 import org.omg.CORBA.ORBPackage.InvalidName ;
 

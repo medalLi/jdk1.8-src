@@ -72,7 +72,7 @@ public class AttributeModificationException extends NamingException {
      * @param   explanation     Possibly null additional detail about this exception.
      * If null, this exception has no detail message.
 
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public AttributeModificationException(String explanation) {
         super(explanation);

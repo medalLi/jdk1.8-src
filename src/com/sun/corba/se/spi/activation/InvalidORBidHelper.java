@@ -12,7 +12,7 @@ abstract public class InvalidORBidHelper
 {
   private static String  _id = "IDL:activation/InvalidORBid:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.spi.activation.InvalidORBid that)
+  public static void insert (org.omg.CORBA.Any a, InvalidORBid that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class InvalidORBidHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.spi.activation.InvalidORBid extract (org.omg.CORBA.Any a)
+  public static InvalidORBid extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class InvalidORBidHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (com.sun.corba.se.spi.activation.InvalidORBidHelper.id (), "InvalidORBid", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (InvalidORBidHelper.id (), "InvalidORBid", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class InvalidORBidHelper
     return _id;
   }
 
-  public static com.sun.corba.se.spi.activation.InvalidORBid read (org.omg.CORBA.portable.InputStream istream)
+  public static InvalidORBid read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.spi.activation.InvalidORBid value = new com.sun.corba.se.spi.activation.InvalidORBid ();
+    InvalidORBid value = new InvalidORBid ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.spi.activation.InvalidORBid value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, InvalidORBid value)
   {
     // write the repository ID
     ostream.write_string (id ());

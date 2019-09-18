@@ -199,7 +199,7 @@ public class CorbaServerRequestDispatcherImpl
                 ObjectKeyTemplate oktemp = okey.getTemplate() ;
                 objectAdapter = findObjectAdapter(oktemp);
 
-                java.lang.Object servant = getServantWithPI(request, objectAdapter,
+                Object servant = getServantWithPI(request, objectAdapter,
                     objectId, oktemp, operation);
 
                 dispatchToServant(servant, request, objectId, objectAdapter);
@@ -311,7 +311,7 @@ public class CorbaServerRequestDispatcherImpl
     }
 
     // Note that objectAdapter.enter() must be called before getServant.
-    private java.lang.Object getServant(ObjectAdapter objectAdapter, byte[] objectId,
+    private Object getServant(ObjectAdapter objectAdapter, byte[] objectId,
         String operation)
         throws OADestroyed
     {
@@ -332,7 +332,7 @@ public class CorbaServerRequestDispatcherImpl
         }
     }
 
-    protected java.lang.Object getServantWithPI(CorbaMessageMediator request,
+    protected Object getServantWithPI(CorbaMessageMediator request,
                                                  ObjectAdapter objectAdapter,
         byte[] objectId, ObjectKeyTemplate oktemp, String operation)
         throws OADestroyed
@@ -357,7 +357,7 @@ public class CorbaServerRequestDispatcherImpl
             if (request != null)
                 request.setExecuteReturnServantInResponseConstructor(true);
 
-            java.lang.Object servant = getServant(objectAdapter, objectId,
+            Object servant = getServant(objectAdapter, objectId,
                 operation);
 
             // Note: we do not know the MDI on a null servant.
@@ -587,7 +587,7 @@ public class CorbaServerRequestDispatcherImpl
     }
 
     protected CorbaMessageMediator dispatchToServant(
-        java.lang.Object servant,
+        Object servant,
         CorbaMessageMediator req,
         byte[] objectId, ObjectAdapter objectAdapter)
     {
@@ -653,7 +653,7 @@ public class CorbaServerRequestDispatcherImpl
                 OutputStream stream =
                     (OutputStream)invhandle._invoke(
                       operation,
-                      (org.omg.CORBA.portable.InputStream)req.getInputObject(),
+                      (InputStream)req.getInputObject(),
                       req);
                 response = (CorbaMessageMediator)
                     ((OutputObject)stream).getMessageMediator();

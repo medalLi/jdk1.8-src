@@ -43,7 +43,7 @@ import javax.swing.event.*;
  *
  */
 
-class FrameSetView extends javax.swing.text.BoxView {
+class FrameSetView extends BoxView {
 
     String[] children;
     int[] percentChildren;

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.logging ;
+package com.sun.corba.se.spi.logging;
 
 import java.util.logging.Level ;
 import java.util.logging.Logger ;

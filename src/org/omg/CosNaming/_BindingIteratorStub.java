@@ -15,9 +15,9 @@ package org.omg.CosNaming;
    * 
    * The bindings iterator is obtained by using the <tt>list</tt>
    * method on the <tt>NamingContext</tt>. 
-   * @see org.omg.CosNaming.NamingContext#list
+   * @see NamingContext#list
    */
-public class _BindingIteratorStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.CosNaming.BindingIterator
+public class _BindingIteratorStub extends org.omg.CORBA.portable.ObjectImpl implements BindingIterator
 {
 
 
@@ -27,14 +27,14 @@ public class _BindingIteratorStub extends org.omg.CORBA.portable.ObjectImpl impl
        * 
        * @param b the returned binding
        */
-  public boolean next_one (org.omg.CosNaming.BindingHolder b)
+  public boolean next_one (BindingHolder b)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("next_one", true);
                 $in = _invoke ($out);
                 boolean $result = $in.read_boolean ();
-                b.value = org.omg.CosNaming.BindingHelper.read ($in);
+                b.value = BindingHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -55,7 +55,7 @@ public class _BindingIteratorStub extends org.omg.CORBA.portable.ObjectImpl impl
        * 
        * @param bl the returned bindings
        */
-  public boolean next_n (int how_many, org.omg.CosNaming.BindingListHolder bl)
+  public boolean next_n (int how_many, BindingListHolder bl)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -63,7 +63,7 @@ public class _BindingIteratorStub extends org.omg.CORBA.portable.ObjectImpl impl
                 $out.write_ulong (how_many);
                 $in = _invoke ($out);
                 boolean $result = $in.read_boolean ();
-                bl.value = org.omg.CosNaming.BindingListHelper.read ($in);
+                bl.value = BindingListHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();

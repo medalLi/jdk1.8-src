@@ -36,14 +36,14 @@ import javax.xml.stream.events.*;
  * XMLEvents
  * @version 1.2
  * @author Copyright (c) 2009 by Oracle Corporation. All Rights Reserved.
- * @see javax.xml.stream.events.StartElement
- * @see javax.xml.stream.events.EndElement
- * @see javax.xml.stream.events.ProcessingInstruction
- * @see javax.xml.stream.events.Comment
- * @see javax.xml.stream.events.Characters
- * @see javax.xml.stream.events.StartDocument
- * @see javax.xml.stream.events.EndDocument
- * @see javax.xml.stream.events.DTD
+ * @see StartElement
+ * @see EndElement
+ * @see ProcessingInstruction
+ * @see Comment
+ * @see Characters
+ * @see StartDocument
+ * @see EndDocument
+ * @see DTD
  * @since 1.6
  */
 public abstract class XMLEventFactory {
@@ -85,9 +85,9 @@ public abstract class XMLEventFactory {
    *   Use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to locate and load an
    *   implementation of the service using the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism}:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism}:
    *   the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -127,7 +127,7 @@ public abstract class XMLEventFactory {
    * @deprecated  This method has been deprecated to maintain API consistency.
    *              All newInstance methods have been replaced with corresponding
    *              newFactory methods. The replacement {@link
-   *              #newFactory(java.lang.String, java.lang.ClassLoader)}
+   *              #newFactory(String, ClassLoader)}
    *              method defines no changes in behavior.
    */
   public static XMLEventFactory newInstance(String factoryId,
@@ -158,12 +158,12 @@ public abstract class XMLEventFactory {
    *   If {@code factoryId} is "javax.xml.stream.XMLEventFactory",
    *   use the service-provider loading facilities, defined by the
    *   {@link java.util.ServiceLoader} class, to attempt to {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class, java.lang.ClassLoader) locate and load}
+   *   java.util.ServiceLoader#load(Class, ClassLoader) locate and load}
    *   an implementation of the service using the specified {@code ClassLoader}.
    *   If {@code classLoader} is null, the {@linkplain
-   *   java.util.ServiceLoader#load(java.lang.Class) default loading mechanism} will apply:
+   *   java.util.ServiceLoader#load(Class) default loading mechanism} will apply:
    *   That is, the service-provider loading facility will use the {@linkplain
-   *   java.lang.Thread#getContextClassLoader() current thread's context class loader}
+   *   Thread#getContextClassLoader() current thread's context class loader}
    *   to attempt to load the service. If the context class
    *   loader is null, the {@linkplain
    *   ClassLoader#getSystemClassLoader() system class loader} will be used.
@@ -175,7 +175,7 @@ public abstract class XMLEventFactory {
    *
    * <p>
    * Note that this is a new method that replaces the deprecated
-   *   {@link #newInstance(java.lang.String, java.lang.ClassLoader)
+   *   {@link #newInstance(String, ClassLoader)
    *   newInstance(String factoryId, ClassLoader classLoader)} method.
    * No changes in behavior are defined by this replacement method relative
    * to the deprecated method.

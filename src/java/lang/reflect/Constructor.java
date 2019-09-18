@@ -49,10 +49,10 @@ import java.lang.annotation.AnnotationFormatError;
  * @param <T> the class in which the constructor is declared
  *
  * @see Member
- * @see java.lang.Class
- * @see java.lang.Class#getConstructors()
- * @see java.lang.Class#getConstructor(Class[])
- * @see java.lang.Class#getDeclaredConstructors()
+ * @see Class
+ * @see Class#getConstructors()
+ * @see Class#getConstructor(Class[])
+ * @see Class#getDeclaredConstructors()
  *
  * @author      Kenneth Russell
  * @author      Nakul Saraiya
@@ -365,7 +365,7 @@ public final class Constructor<T> extends Executable {
      * @param initargs array of objects to be passed as arguments to
      * the constructor call; values of primitive types are wrapped in
      * a wrapper object of the appropriate type (e.g. a {@code float}
-     * in a {@link java.lang.Float Float})
+     * in a {@link Float Float})
      *
      * @return a new object created by calling the constructor
      * this object represents

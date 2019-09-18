@@ -59,7 +59,7 @@ public class HexOutputStream extends OutputStream
      * Writes a byte. Will block until the byte is actually
      * written.
      * param b The byte to write out.
-     * @exception java.io.IOException I/O error occurred.
+     * @exception IOException I/O error occurred.
      */
     public synchronized void write(int b) throws IOException {
         writer.write(hex[((b >> 4) & 0xF)]);

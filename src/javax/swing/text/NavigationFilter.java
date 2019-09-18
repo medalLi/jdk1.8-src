@@ -42,9 +42,9 @@ import java.awt.Shape;
  * where the cursor can be placed, or call directly into the
  * <code>FilterBypass</code>.
  *
- * @see javax.swing.text.Caret
- * @see javax.swing.text.DefaultCaret
- * @see javax.swing.text.View
+ * @see Caret
+ * @see DefaultCaret
+ * @see View
  *
  * @since 1.4
  */

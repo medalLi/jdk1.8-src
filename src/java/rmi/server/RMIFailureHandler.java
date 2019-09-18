@@ -52,7 +52,7 @@ public interface RMIFailureHandler {
      *           creation
      * @return if true, the RMI runtime attempts to retry
      * <code>ServerSocket</code> creation
-     * @see java.rmi.server.RMISocketFactory#setFailureHandler(RMIFailureHandler)
+     * @see RMISocketFactory#setFailureHandler(RMIFailureHandler)
      * @since JDK1.1
      */
     public boolean failure(Exception ex);

@@ -746,7 +746,7 @@ public abstract class AccessibleContext {
      * was changed.
      * @param oldValue  The old value of the property.
      * @param newValue  The new value of the property.
-     * @see java.beans.PropertyChangeSupport
+     * @see PropertyChangeSupport
      * @see #addPropertyChangeListener
      * @see #removePropertyChangeListener
      * @see #ACCESSIBLE_NAME_PROPERTY

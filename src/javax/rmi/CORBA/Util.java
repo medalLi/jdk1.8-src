@@ -60,11 +60,11 @@ import com.sun.corba.se.impl.orbutil.GetPropertyAction;
 public class Util {
 
     // This can only be set at static initialization time (no sync necessary).
-    private static final javax.rmi.CORBA.UtilDelegate utilDelegate;
+    private static final UtilDelegate utilDelegate;
     private static final String UtilClassKey = "javax.rmi.CORBA.UtilClass";
 
     static {
-        utilDelegate = (javax.rmi.CORBA.UtilDelegate)createDelegate(UtilClassKey);
+        utilDelegate = (UtilDelegate)createDelegate(UtilClassKey);
     }
 
     private Util(){}
@@ -118,7 +118,7 @@ public class Util {
      * @param obj the object to write.
      */
     public static void writeRemoteObject(OutputStream out,
-                                         java.lang.Object obj) {
+                                         Object obj) {
 
         if (utilDelegate != null) {
             utilDelegate.writeRemoteObject(out, obj);
@@ -138,7 +138,7 @@ an exported
      * @param obj the object to write.
      */
     public static void writeAbstractObject(OutputStream out,
-                                           java.lang.Object obj) {
+                                           Object obj) {
 
         if (utilDelegate != null) {
             utilDelegate.writeAbstractObject(out, obj);
@@ -151,8 +151,8 @@ an exported
      * @param tie the tie to register.
      * @param target the target for the tie.
      */
-    public static void registerTarget(javax.rmi.CORBA.Tie tie,
-                                      java.rmi.Remote target) {
+    public static void registerTarget(Tie tie,
+                                      Remote target) {
 
         if (utilDelegate != null) {
             utilDelegate.registerTarget(tie, target);
@@ -166,7 +166,7 @@ Tie#deactivate}
      * to deactivate the object.
      * @param target the object to unexport.
      */
-    public static void unexportObject(java.rmi.Remote target)
+    public static void unexportObject(Remote target)
         throws java.rmi.NoSuchObjectException
     {
 
@@ -207,7 +207,7 @@ Tie#deactivate}
      * @param clz the class to get a codebase for.
      * @return a space-separated list of URLs, or null.
      */
-    public static String getCodebase(java.lang.Class clz) {
+    public static String getCodebase(Class clz) {
         if (utilDelegate != null) {
             return utilDelegate.getCodebase(clz);
         }

@@ -94,7 +94,7 @@ public interface JMXConnector extends Closeable {
      * @exception SecurityException if the connection could not be
      * made for security reasons.
      */
-    public void connect(Map<String,?> env) throws IOException;
+    public void connect(Map<String, ?> env) throws IOException;
 
     /**
      * <p>Returns an <code>MBeanServerConnection</code> object
@@ -170,7 +170,7 @@ public interface JMXConnector extends Closeable {
      * connect} method), or it has been closed, or it has broken.
      */
     public MBeanServerConnection getMBeanServerConnection(
-                                               Subject delegationSubject)
+            Subject delegationSubject)
             throws IOException;
 
     /**

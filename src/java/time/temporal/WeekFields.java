@@ -832,7 +832,7 @@ public final class WeekFields implements Serializable {
          * of days.
          * @param temporal  a date of any chronology
          * @return the week of the year
-         * @see #localizedWeekBasedYear(java.time.temporal.TemporalAccessor)
+         * @see #localizedWeekBasedYear(TemporalAccessor)
          */
         private int localizedWeekOfWeekBasedYear(TemporalAccessor temporal) {
             int dow = localizedDayOfWeek(temporal);

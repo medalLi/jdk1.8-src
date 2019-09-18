@@ -49,7 +49,7 @@ public class InvalidAttributeValueException extends NamingException {
      * Constructs a new instance of InvalidAttributeValueException using
      * an explanation. All other fields are set to null.
      * @param   explanation     Additional detail about this exception. Can be null.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public InvalidAttributeValueException(String explanation) {
         super(explanation);

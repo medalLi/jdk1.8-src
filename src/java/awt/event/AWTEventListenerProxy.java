@@ -40,7 +40,7 @@ import java.awt.AWTEvent;
  * and {@code AWTEventListenerProxy} objects.
  *
  * @see java.awt.Toolkit
- * @see java.util.EventListenerProxy
+ * @see EventListenerProxy
  * @since 1.4
  */
 public class AWTEventListenerProxy

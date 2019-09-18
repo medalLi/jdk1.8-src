@@ -45,8 +45,8 @@ import java.io.ObjectStreamField;
  * The <i>wildcard</i> is a special local IP address. It usually means "any"
  * and can only be used for {@code bind} operations.
  *
- * @see java.net.Socket
- * @see java.net.ServerSocket
+ * @see Socket
+ * @see ServerSocket
  * @since 1.4
  */
 public class InetSocketAddress
@@ -398,7 +398,7 @@ public class InetSocketAddress
      * @param   obj   the object to compare against.
      * @return  {@code true} if the objects are the same;
      *          {@code false} otherwise.
-     * @see java.net.InetAddress#equals(java.lang.Object)
+     * @see InetAddress#equals(Object)
      */
     @Override
     public final boolean equals(Object obj) {

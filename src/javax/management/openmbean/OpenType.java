@@ -389,7 +389,7 @@ public abstract class OpenType<T> implements Serializable {
     public abstract String toString() ;
 
     /**
-     * Deserializes an {@link OpenType} from an {@link java.io.ObjectInputStream}.
+     * Deserializes an {@link OpenType} from an {@link ObjectInputStream}.
      */
     private void readObject(ObjectInputStream in)
             throws IOException, ClassNotFoundException {

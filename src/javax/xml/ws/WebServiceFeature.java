@@ -40,7 +40,7 @@ package javax.xml.ws;
  * of all vendors.  When defining a vendor specific feature ID,
  * use a vendor specific namespace in the ID string.
  *
- * @see javax.xml.ws.RespectBindingFeature
+ * @see RespectBindingFeature
  * @see javax.xml.ws.soap.AddressingFeature
  * @see javax.xml.ws.soap.MTOMFeature
  *

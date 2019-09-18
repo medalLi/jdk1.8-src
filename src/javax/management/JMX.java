@@ -307,7 +307,7 @@ public class JMX {
      * @return the new proxy instance.
      *
      * @throws IllegalArgumentException if {@code interfaceClass} is not
-     * a {@link javax.management.MXBean compliant MXBean interface}
+     * a {@link MXBean compliant MXBean interface}
      */
     public static <T> T newMXBeanProxy(MBeanServerConnection connection,
                                        ObjectName objectName,
@@ -350,7 +350,7 @@ public class JMX {
      * @return the new proxy instance.
      *
      * @throws IllegalArgumentException if {@code interfaceClass} is not
-     * a {@link javax.management.MXBean compliant MXBean interface}
+     * a {@link MXBean compliant MXBean interface}
      */
     public static <T> T newMXBeanProxy(MBeanServerConnection connection,
                                        ObjectName objectName,
@@ -369,7 +369,7 @@ public class JMX {
      * @param interfaceClass The candidate interface.
      *
      * @return true if {@code interfaceClass} is a
-     * {@link javax.management.MXBean compliant MXBean interface}
+     * {@link MXBean compliant MXBean interface}
      *
      * @throws NullPointerException if {@code interfaceClass} is null.
      */

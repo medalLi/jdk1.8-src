@@ -37,7 +37,7 @@ package java.util;
 
 /**
  * A collection designed for holding elements prior to processing.
- * Besides basic {@link java.util.Collection Collection} operations,
+ * Besides basic {@link Collection Collection} operations,
  * queues provide additional insertion, extraction, and inspection
  * operations.  Each of these methods exists in two forms: one throws
  * an exception if the operation fails, the other returns a special
@@ -85,7 +85,7 @@ package java.util;
  *
  * <p>The {@link #offer offer} method inserts an element if possible,
  * otherwise returning {@code false}.  This differs from the {@link
- * java.util.Collection#add Collection.add} method, which can fail to
+ * Collection#add Collection.add} method, which can fail to
  * add an element only by throwing an unchecked exception.  The
  * {@code offer} method is designed for use when failure is a normal,
  * rather than exceptional occurrence, for example, in fixed-capacity
@@ -129,7 +129,7 @@ package java.util;
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.
  *
- * @see java.util.Collection
+ * @see Collection
  * @see LinkedList
  * @see PriorityQueue
  * @see java.util.concurrent.LinkedBlockingQueue

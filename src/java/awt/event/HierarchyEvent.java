@@ -137,9 +137,9 @@ public class HierarchyEvent extends AWTEvent {
      * <code>Component.addNotify</code> and
      * <code>Component.removeNotify</code> methods.
      *
-     * @see java.awt.Component#isDisplayable()
-     * @see java.awt.Component#addNotify()
-     * @see java.awt.Component#removeNotify()
+     * @see Component#isDisplayable()
+     * @see Component#addNotify()
+     * @see Component#removeNotify()
      */
     public static final int DISPLAYABILITY_CHANGED = 0x2;
 
@@ -154,11 +154,11 @@ public class HierarchyEvent extends AWTEvent {
      * or implicit calls of the <code>Component.show</code> and
      * <code>Component.hide</code> methods.
      *
-     * @see java.awt.Component#isShowing()
-     * @see java.awt.Component#addNotify()
-     * @see java.awt.Component#removeNotify()
-     * @see java.awt.Component#show()
-     * @see java.awt.Component#hide()
+     * @see Component#isShowing()
+     * @see Component#addNotify()
+     * @see Component#removeNotify()
+     * @see Component#show()
+     * @see Component#hide()
      */
     public static final int SHOWING_CHANGED = 0x4;
 

@@ -108,7 +108,7 @@ public class AuthorizeCallback implements Callback, java.io.Serializable {
      * Sets whether the authorization is allowed.
      * @param ok {@code true} if authorization is allowed; {@code false} otherwise
      * @see #isAuthorized
-     * @see #setAuthorizedID(java.lang.String)
+     * @see #setAuthorizedID(String)
      */
     public void setAuthorized(boolean ok) {
         authorized = ok;
@@ -119,7 +119,7 @@ public class AuthorizeCallback implements Callback, java.io.Serializable {
      * @return The id of the authorized user. {@code null} means the
      * authorization failed.
      * @see #setAuthorized(boolean)
-     * @see #setAuthorizedID(java.lang.String)
+     * @see #setAuthorizedID(String)
      */
     public String getAuthorizedID() {
         if (!authorized) {

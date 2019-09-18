@@ -61,7 +61,7 @@ class Stack<E> extends Vector<E> {
      *
      * @param   item   the item to be pushed onto this stack.
      * @return  the <code>item</code> argument.
-     * @see     java.util.Vector#addElement
+     * @see     Vector#addElement
      */
     public E push(E item) {
         addElement(item);

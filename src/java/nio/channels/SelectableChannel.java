@@ -240,7 +240,7 @@ public abstract class SelectableChannel
      * behaves in exactly the same way as the invocation
      *
      * <blockquote><tt>sc.{@link
-     * #register(java.nio.channels.Selector,int,java.lang.Object)
+     * #register(Selector,int, Object)
      * register}(sel, ops, null)</tt></blockquote>
      *
      * @param  sel

@@ -470,7 +470,7 @@ public interface ChronoZonedDateTime<D extends ChronoLocalDate>
      * what the result of this method will be.
      * <p>
      * The result of this method is obtained by invoking the
-     * {@link java.time.temporal.TemporalQuery#queryFrom(TemporalAccessor)} method on the
+     * {@link TemporalQuery#queryFrom(TemporalAccessor)} method on the
      * specified query passing {@code this} as the argument.
      *
      * @param <R> the type of the result

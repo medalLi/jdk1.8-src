@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.resolver ;
+package com.sun.corba.se.impl.resolver;
 
 import org.omg.CORBA.ORBPackage.InvalidName;
 
@@ -65,7 +65,7 @@ public class FileResolverImpl implements Resolver
         return orb.string_to_object( stringifiedObject ) ;
     }
 
-    public java.util.Set list()
+    public Set list()
     {
         check() ;
 

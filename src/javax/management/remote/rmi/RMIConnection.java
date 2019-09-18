@@ -118,7 +118,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#createMBean(String,
+     * MBeanServerConnection#createMBean(String,
      * ObjectName)}.
      *
      * @param className The class name of the MBean to be instantiated.
@@ -169,7 +169,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#createMBean(String,
+     * MBeanServerConnection#createMBean(String,
      * ObjectName, ObjectName)}.
      *
      * @param className The class name of the MBean to be instantiated.
@@ -225,7 +225,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#createMBean(String,
+     * MBeanServerConnection#createMBean(String,
      * ObjectName, Object[], String[])}.  The <code>Object[]</code>
      * parameter is wrapped in a <code>MarshalledObject</code>.
      *
@@ -272,10 +272,10 @@ public interface RMIConnection extends Closeable, Remote {
      * @throws IOException if a general communication exception occurred.
      */
     public ObjectInstance createMBean(String className,
-                                ObjectName name,
-                                MarshalledObject params,
-                                String signature[],
-                                Subject delegationSubject)
+                                      ObjectName name,
+                                      MarshalledObject params,
+                                      String signature[],
+                                      Subject delegationSubject)
         throws
         ReflectionException,
         InstanceAlreadyExistsException,
@@ -286,7 +286,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#createMBean(String,
+     * MBeanServerConnection#createMBean(String,
      * ObjectName, ObjectName, Object[], String[])}.  The
      * <code>Object[]</code> parameter is wrapped in a
      * <code>MarshalledObject</code>.
@@ -337,11 +337,11 @@ public interface RMIConnection extends Closeable, Remote {
      * @throws IOException if a general communication exception occurred.
      */
     public ObjectInstance createMBean(String className,
-                                ObjectName name,
-                                ObjectName loaderName,
-                                MarshalledObject params,
-                                String signature[],
-                                Subject delegationSubject)
+                                      ObjectName name,
+                                      ObjectName loaderName,
+                                      MarshalledObject params,
+                                      String signature[],
+                                      Subject delegationSubject)
         throws
         ReflectionException,
         InstanceAlreadyExistsException,
@@ -353,7 +353,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#unregisterMBean(ObjectName)}.
+     * {@link MBeanServerConnection#unregisterMBean(ObjectName)}.
      *
      * @param name The object name of the MBean to be unregistered.
      * @param delegationSubject The <code>Subject</code> containing the
@@ -382,7 +382,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#getObjectInstance(ObjectName)}.
+     * {@link MBeanServerConnection#getObjectInstance(ObjectName)}.
      *
      * @param name The object name of the MBean.
      * @param delegationSubject The <code>Subject</code> containing the
@@ -409,7 +409,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#queryMBeans(ObjectName,
+     * MBeanServerConnection#queryMBeans(ObjectName,
      * QueryExp)}.  The <code>QueryExp</code> is wrapped in a
      * <code>MarshalledObject</code>.
      *
@@ -440,7 +440,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#queryNames(ObjectName,
+     * MBeanServerConnection#queryNames(ObjectName,
      * QueryExp)}.  The <code>QueryExp</code> is wrapped in a
      * <code>MarshalledObject</code>.
      *
@@ -471,7 +471,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#isRegistered(ObjectName)}.
+     * {@link MBeanServerConnection#isRegistered(ObjectName)}.
      *
      * @param name The object name of the MBean to be checked.
      * @param delegationSubject The <code>Subject</code> containing the
@@ -493,7 +493,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#getMBeanCount()}.
+     * {@link MBeanServerConnection#getMBeanCount()}.
      *
      * @param delegationSubject The <code>Subject</code> containing the
      * delegation principals or <code>null</code> if the authentication
@@ -510,7 +510,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#getAttribute(ObjectName,
+     * MBeanServerConnection#getAttribute(ObjectName,
      * String)}.
      *
      * @param name The object name of the MBean from which the
@@ -556,7 +556,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#getAttributes(ObjectName,
+     * MBeanServerConnection#getAttributes(ObjectName,
      * String[])}.
      *
      * @param name The object name of the MBean from which the
@@ -591,7 +591,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#setAttribute(ObjectName,
+     * MBeanServerConnection#setAttribute(ObjectName,
      * Attribute)}.  The <code>Attribute</code> parameter is wrapped
      * in a <code>MarshalledObject</code>.
      *
@@ -638,7 +638,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#setAttributes(ObjectName,
+     * MBeanServerConnection#setAttributes(ObjectName,
      * AttributeList)}.  The <code>AttributeList</code> parameter is
      * wrapped in a <code>MarshalledObject</code>.
      *
@@ -668,8 +668,8 @@ public interface RMIConnection extends Closeable, Remote {
      * @see #getAttributes
      */
     public AttributeList setAttributes(ObjectName name,
-                          MarshalledObject attributes,
-                          Subject delegationSubject)
+                                       MarshalledObject attributes,
+                                       Subject delegationSubject)
         throws
         InstanceNotFoundException,
         ReflectionException,
@@ -677,7 +677,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#invoke(ObjectName,
+     * MBeanServerConnection#invoke(ObjectName,
      * String, Object[], String[])}.  The <code>Object[]</code>
      * parameter is wrapped in a <code>MarshalledObject</code>.
      *
@@ -727,7 +727,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#getDefaultDomain()}.
+     * {@link MBeanServerConnection#getDefaultDomain()}.
      *
      * @param delegationSubject The <code>Subject</code> containing the
      * delegation principals or <code>null</code> if the authentication
@@ -744,7 +744,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#getDomains()}.
+     * {@link MBeanServerConnection#getDomains()}.
      *
      * @param delegationSubject The <code>Subject</code> containing the
      * delegation principals or <code>null</code> if the authentication
@@ -761,7 +761,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method
-     * {@link javax.management.MBeanServerConnection#getMBeanInfo(ObjectName)}.
+     * {@link MBeanServerConnection#getMBeanInfo(ObjectName)}.
      *
      * @param name The name of the MBean to analyze
      * @param delegationSubject The <code>Subject</code> containing the
@@ -793,7 +793,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#isInstanceOf(ObjectName,
+     * MBeanServerConnection#isInstanceOf(ObjectName,
      * String)}.
      *
      * @param name The <code>ObjectName</code> of the MBean.
@@ -821,7 +821,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#addNotificationListener(ObjectName,
+     * MBeanServerConnection#addNotificationListener(ObjectName,
      * ObjectName, NotificationFilter, Object)}.  The
      * <code>NotificationFilter</code> parameter is wrapped in a
      * <code>MarshalledObject</code>.  The <code>Object</code>
@@ -860,15 +860,15 @@ public interface RMIConnection extends Closeable, Remote {
      * MarshalledObject, MarshalledObject, Subject)
      */
     public void addNotificationListener(ObjectName name,
-                        ObjectName listener,
-                        MarshalledObject filter,
-                        MarshalledObject handback,
-                        Subject delegationSubject)
+                                        ObjectName listener,
+                                        MarshalledObject filter,
+                                        MarshalledObject handback,
+                                        Subject delegationSubject)
         throws InstanceNotFoundException, IOException;
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,
+     * MBeanServerConnection#removeNotificationListener(ObjectName,
      * ObjectName)}.
      *
      * @param name The name of the MBean on which the listener should
@@ -901,7 +901,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * Handles the method {@link
-     * javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,
+     * MBeanServerConnection#removeNotificationListener(ObjectName,
      * ObjectName, NotificationFilter, Object)}.  The
      * <code>NotificationFilter</code> parameter is wrapped in a
      * <code>MarshalledObject</code>.  The <code>Object</code>
@@ -934,10 +934,10 @@ public interface RMIConnection extends Closeable, Remote {
      * @see #addNotificationListener
      */
     public void removeNotificationListener(ObjectName name,
-                      ObjectName listener,
-                      MarshalledObject filter,
-                      MarshalledObject handback,
-                      Subject delegationSubject)
+                                           ObjectName listener,
+                                           MarshalledObject filter,
+                                           MarshalledObject handback,
+                                           Subject delegationSubject)
         throws
         InstanceNotFoundException,
         ListenerNotFoundException,
@@ -947,7 +947,7 @@ public interface RMIConnection extends Closeable, Remote {
 
     /**
      * <p>Handles the method {@link
-     * javax.management.MBeanServerConnection#addNotificationListener(ObjectName,
+     * MBeanServerConnection#addNotificationListener(ObjectName,
      * NotificationListener, NotificationFilter, Object)}.</p>
      *
      * <p>Register for notifications from the given MBeans that match
@@ -998,15 +998,15 @@ public interface RMIConnection extends Closeable, Remote {
      * @throws IOException if a general communication exception occurred.
      */
     public Integer[] addNotificationListeners(ObjectName[] names,
-                    MarshalledObject[] filters,
-                    Subject[] delegationSubjects)
+                                              MarshalledObject[] filters,
+                                              Subject[] delegationSubjects)
         throws InstanceNotFoundException, IOException;
 
     /**
      * <p>Handles the
-     * {@link javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,NotificationListener)
+     * {@link MBeanServerConnection#removeNotificationListener(ObjectName,NotificationListener)
      * removeNotificationListener(ObjectName, NotificationListener)} and
-     * {@link javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,NotificationListener,NotificationFilter,Object)
+     * {@link MBeanServerConnection#removeNotificationListener(ObjectName,NotificationListener,NotificationFilter,Object)
      * removeNotificationListener(ObjectName, NotificationListener, NotificationFilter, Object)} methods.</p>
      *
      * <p>This method removes one or more

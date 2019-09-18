@@ -52,11 +52,11 @@ public class StreamSource implements Source {
     /**
      * <p>Zero-argument default constructor.  If this constructor is used, and
      * no Stream source is set using
-     * {@link #setInputStream(java.io.InputStream inputStream)} or
-     * {@link #setReader(java.io.Reader reader)}, then the
+     * {@link #setInputStream(InputStream inputStream)} or
+     * {@link #setReader(Reader reader)}, then the
      * <code>Transformer</code> will
-     * create an empty source {@link java.io.InputStream} using
-     * {@link java.io.InputStream#InputStream() new InputStream()}.</p>
+     * create an empty source {@link InputStream} using
+     * {@link InputStream#InputStream() new InputStream()}.</p>
      *
      * @see javax.xml.transform.Transformer#transform(Source xmlSource, Result outputTarget)
      */

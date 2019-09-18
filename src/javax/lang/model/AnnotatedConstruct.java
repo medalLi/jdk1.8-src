@@ -34,8 +34,8 @@ import javax.lang.model.type.*;
  * Represents a construct that can be annotated.
  *
  * A construct is either an {@linkplain
- * javax.lang.model.element.Element element} or a {@linkplain
- * javax.lang.model.type.TypeMirror type}.  Annotations on an element
+ * Element element} or a {@linkplain
+ * TypeMirror type}.  Annotations on an element
  * are on a <em>declaration</em>, whereas annotations on a type are on
  * a specific <em>use</em> of a type name.
  *

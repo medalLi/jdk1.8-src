@@ -51,7 +51,7 @@ public interface Skeleton {
      * @param theCall object representing remote call
      * @param opnum operation number
      * @param hash stub/skeleton interface hash
-     * @exception java.lang.Exception if a general exception occurs.
+     * @exception Exception if a general exception occurs.
      * @since JDK1.1
      * @deprecated no replacement
      */

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.logging ;
+package com.sun.corba.se.spi.logging;
 
 /** Defines constants for all of the logging domains used in the ORB.
  * Note that this is the suffix to the log domain.  The full domain is given by

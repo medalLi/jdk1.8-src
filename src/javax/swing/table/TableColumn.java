@@ -73,10 +73,10 @@ import java.beans.PropertyChangeListener;
  *
  * @author Alan Chung
  * @author Philip Milne
- * @see javax.swing.table.TableColumnModel
+ * @see TableColumnModel
  *
- * @see javax.swing.table.DefaultTableColumnModel
- * @see javax.swing.table.JTableHeader#getDefaultRenderer()
+ * @see DefaultTableColumnModel
+ * @see JTableHeader#getDefaultRenderer()
  * @see JTable#getDefaultRenderer(Class)
  * @see JTable#getDefaultEditor(Class)
  * @see JTable#getCellRenderer(int, int)
@@ -414,7 +414,7 @@ public class TableColumn extends Object implements Serializable {
      * @return  the <code>headerRenderer</code> property
      * @see     #setHeaderRenderer
      * @see     #setHeaderValue
-     * @see     javax.swing.table.JTableHeader#getDefaultRenderer()
+     * @see     JTableHeader#getDefaultRenderer()
      */
     public TableCellRenderer getHeaderRenderer() {
         return headerRenderer;
@@ -798,7 +798,7 @@ public class TableColumn extends Object implements Serializable {
      * renderer, just as the <code>JTable</code> does for its cell renderers.
      *
      * @return the default header renderer
-     * @see javax.swing.table.JTableHeader#createDefaultRenderer()
+     * @see JTableHeader#createDefaultRenderer()
      */
     protected TableCellRenderer createDefaultHeaderRenderer() {
         DefaultTableCellRenderer label = new DefaultTableCellRenderer() {

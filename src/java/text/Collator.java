@@ -133,8 +133,8 @@ public abstract class Collator
      * considered significant during comparison. The assignment of strengths
      * to language features is locale dependant. A common example is for
      * different base letters ("a" vs "b") to be considered a PRIMARY difference.
-     * @see java.text.Collator#setStrength
-     * @see java.text.Collator#getStrength
+     * @see Collator#setStrength
+     * @see Collator#getStrength
      */
     public final static int PRIMARY = 0;
     /**
@@ -143,8 +143,8 @@ public abstract class Collator
      * to language features is locale dependant. A common example is for
      * different accented forms of the same base letter ("a" vs "\u00E4") to be
      * considered a SECONDARY difference.
-     * @see java.text.Collator#setStrength
-     * @see java.text.Collator#getStrength
+     * @see Collator#setStrength
+     * @see Collator#getStrength
      */
     public final static int SECONDARY = 1;
     /**
@@ -152,8 +152,8 @@ public abstract class Collator
      * considered significant during comparison. The assignment of strengths
      * to language features is locale dependant. A common example is for
      * case differences ("a" vs "A") to be considered a TERTIARY difference.
-     * @see java.text.Collator#setStrength
-     * @see java.text.Collator#getStrength
+     * @see Collator#setStrength
+     * @see Collator#getStrength
      */
     public final static int TERTIARY = 2;
 
@@ -175,8 +175,8 @@ public abstract class Collator
      * set, accented characters will not be decomposed for collation. This
      * is the default setting and provides the fastest collation but
      * will only produce correct results for languages that do not use accents.
-     * @see java.text.Collator#getDecomposition
-     * @see java.text.Collator#setDecomposition
+     * @see Collator#getDecomposition
+     * @see Collator#setDecomposition
      */
     public final static int NO_DECOMPOSITION = 0;
 
@@ -190,8 +190,8 @@ public abstract class Collator
      * described in
      * <a href="http://www.unicode.org/unicode/reports/tr15/tr15-23.html">Unicode
      * Technical Report #15</a>.
-     * @see java.text.Collator#getDecomposition
-     * @see java.text.Collator#setDecomposition
+     * @see Collator#getDecomposition
+     * @see Collator#setDecomposition
      */
     public final static int CANONICAL_DECOMPOSITION = 1;
 
@@ -209,8 +209,8 @@ public abstract class Collator
      * described in
      * <a href="http://www.unicode.org/unicode/reports/tr15/tr15-23.html">Unicode
      * Technical Report #15</a>.
-     * @see java.text.Collator#getDecomposition
-     * @see java.text.Collator#setDecomposition
+     * @see Collator#getDecomposition
+     * @see Collator#setDecomposition
      */
     public final static int FULL_DECOMPOSITION = 2;
 
@@ -218,7 +218,7 @@ public abstract class Collator
      * Gets the Collator for the current default locale.
      * The default locale is determined by java.util.Locale.getDefault.
      * @return the Collator for the default locale.(for example, en_US)
-     * @see java.util.Locale#getDefault
+     * @see Locale#getDefault
      */
     public static synchronized Collator getInstance() {
         return getInstance(Locale.getDefault());
@@ -228,8 +228,8 @@ public abstract class Collator
      * Gets the Collator for the desired locale.
      * @param desiredLocale the desired locale.
      * @return the Collator for the desired locale.
-     * @see java.util.Locale
-     * @see java.util.ResourceBundle
+     * @see Locale
+     * @see ResourceBundle
      */
     public static Collator getInstance(Locale desiredLocale) {
         SoftReference<Collator> ref = cache.get(desiredLocale);
@@ -279,8 +279,8 @@ public abstract class Collator
      * @return Returns an integer value. Value is less than zero if source is less than
      * target, value is zero if source and target are equal, value is greater than zero
      * if source is greater than target.
-     * @see java.text.CollationKey
-     * @see java.text.Collator#getCollationKey
+     * @see CollationKey
+     * @see Collator#getCollationKey
      */
     public abstract int compare(String source, String target);
 
@@ -312,8 +312,8 @@ public abstract class Collator
      * @param source the string to be transformed into a collation key.
      * @return the CollationKey for the given String based on this Collator's collation
      * rules. If the source String is null, a null CollationKey is returned.
-     * @see java.text.CollationKey
-     * @see java.text.Collator#compare
+     * @see CollationKey
+     * @see Collator#compare
      */
     public abstract CollationKey getCollationKey(String source);
 
@@ -324,7 +324,7 @@ public abstract class Collator
      * @param target the target string to be compared with.
      * @return true if the strings are equal according to the collation
      * rules.  false, otherwise.
-     * @see java.text.Collator#compare
+     * @see Collator#compare
      */
     public boolean equals(String source, String target)
     {
@@ -336,11 +336,11 @@ public abstract class Collator
      * the minimum level of difference considered significant during comparison.
      * See the Collator class description for an example of use.
      * @return this Collator's current strength property.
-     * @see java.text.Collator#setStrength
-     * @see java.text.Collator#PRIMARY
-     * @see java.text.Collator#SECONDARY
-     * @see java.text.Collator#TERTIARY
-     * @see java.text.Collator#IDENTICAL
+     * @see Collator#setStrength
+     * @see Collator#PRIMARY
+     * @see Collator#SECONDARY
+     * @see Collator#TERTIARY
+     * @see Collator#IDENTICAL
      */
     public synchronized int getStrength()
     {
@@ -352,11 +352,11 @@ public abstract class Collator
      * the minimum level of difference considered significant during comparison.
      * See the Collator class description for an example of use.
      * @param newStrength  the new strength value.
-     * @see java.text.Collator#getStrength
-     * @see java.text.Collator#PRIMARY
-     * @see java.text.Collator#SECONDARY
-     * @see java.text.Collator#TERTIARY
-     * @see java.text.Collator#IDENTICAL
+     * @see Collator#getStrength
+     * @see Collator#PRIMARY
+     * @see Collator#SECONDARY
+     * @see Collator#TERTIARY
+     * @see Collator#IDENTICAL
      * @exception  IllegalArgumentException If the new strength value is not one of
      * PRIMARY, SECONDARY, TERTIARY or IDENTICAL.
      */
@@ -384,10 +384,10 @@ public abstract class Collator
      * See the documentation for these three constants for a description
      * of their meaning.
      * @return the decomposition mode
-     * @see java.text.Collator#setDecomposition
-     * @see java.text.Collator#NO_DECOMPOSITION
-     * @see java.text.Collator#CANONICAL_DECOMPOSITION
-     * @see java.text.Collator#FULL_DECOMPOSITION
+     * @see Collator#setDecomposition
+     * @see Collator#NO_DECOMPOSITION
+     * @see Collator#CANONICAL_DECOMPOSITION
+     * @see Collator#FULL_DECOMPOSITION
      */
     public synchronized int getDecomposition()
     {
@@ -397,10 +397,10 @@ public abstract class Collator
      * Set the decomposition mode of this Collator. See getDecomposition
      * for a description of decomposition mode.
      * @param decompositionMode  the new decomposition mode.
-     * @see java.text.Collator#getDecomposition
-     * @see java.text.Collator#NO_DECOMPOSITION
-     * @see java.text.Collator#CANONICAL_DECOMPOSITION
-     * @see java.text.Collator#FULL_DECOMPOSITION
+     * @see Collator#getDecomposition
+     * @see Collator#NO_DECOMPOSITION
+     * @see Collator#CANONICAL_DECOMPOSITION
+     * @see Collator#FULL_DECOMPOSITION
      * @exception IllegalArgumentException If the given value is not a valid decomposition
      * mode.
      */
@@ -419,9 +419,9 @@ public abstract class Collator
      * localized instances.
      * The returned array represents the union of locales supported
      * by the Java runtime and by installed
-     * {@link java.text.spi.CollatorProvider CollatorProvider} implementations.
+     * {@link CollatorProvider CollatorProvider} implementations.
      * It must contain at least a Locale instance equal to
-     * {@link java.util.Locale#US Locale.US}.
+     * {@link Locale#US Locale.US}.
      *
      * @return An array of locales for which localized
      *         <code>Collator</code> instances are available.
@@ -478,7 +478,7 @@ public abstract class Collator
      * Default constructor.  This constructor is
      * protected so subclasses can get access to it. Users typically create
      * a Collator sub-class by calling the factory method getInstance.
-     * @see java.text.Collator#getInstance
+     * @see Collator#getInstance
      */
     protected Collator()
     {
@@ -497,19 +497,19 @@ public abstract class Collator
     /**
      * LESS is returned if source string is compared to be less than target
      * string in the compare() method.
-     * @see java.text.Collator#compare
+     * @see Collator#compare
      */
     final static int LESS = -1;
     /**
      * EQUAL is returned if source string is compared to be equal to target
      * string in the compare() method.
-     * @see java.text.Collator#compare
+     * @see Collator#compare
      */
     final static int EQUAL = 0;
     /**
      * GREATER is returned if source string is compared to be greater than
      * target string in the compare() method.
-     * @see java.text.Collator#compare
+     * @see Collator#compare
      */
     final static int GREATER = 1;
  }

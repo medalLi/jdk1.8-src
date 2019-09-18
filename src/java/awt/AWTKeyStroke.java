@@ -331,7 +331,7 @@ public class AWTKeyStroke implements Serializable {
      * @throws IllegalArgumentException if <code>keyChar</code> is
      *       <code>null</code>
      *
-     * @see java.awt.event.InputEvent
+     * @see InputEvent
      */
     public static AWTKeyStroke getAWTKeyStroke(Character keyChar, int modifiers)
     {
@@ -383,8 +383,8 @@ public class AWTKeyStroke implements Serializable {
      *        should represent a key release; <code>false</code> otherwise
      * @return an AWTKeyStroke object for that key
      *
-     * @see java.awt.event.KeyEvent
-     * @see java.awt.event.InputEvent
+     * @see KeyEvent
+     * @see InputEvent
      */
     public static AWTKeyStroke getAWTKeyStroke(int keyCode, int modifiers,
                                                boolean onKeyRelease) {
@@ -428,8 +428,8 @@ public class AWTKeyStroke implements Serializable {
      * @param modifiers a bitwise-ored combination of any modifiers
      * @return an <code>AWTKeyStroke</code> object for that key
      *
-     * @see java.awt.event.KeyEvent
-     * @see java.awt.event.InputEvent
+     * @see KeyEvent
+     * @see InputEvent
      */
     public static AWTKeyStroke getAWTKeyStroke(int keyCode, int modifiers) {
         return getCachedStroke(KeyEvent.CHAR_UNDEFINED, keyCode, modifiers,
@@ -676,7 +676,7 @@ public class AWTKeyStroke implements Serializable {
      * @return <code>KeyEvent.KEY_PRESSED</code>,
      *         <code>KeyEvent.KEY_TYPED</code>,
      *         or <code>KeyEvent.KEY_RELEASED</code>
-     * @see java.awt.event.KeyEvent
+     * @see KeyEvent
      */
     public final int getKeyEventType() {
         if (keyCode == KeyEvent.VK_UNDEFINED) {

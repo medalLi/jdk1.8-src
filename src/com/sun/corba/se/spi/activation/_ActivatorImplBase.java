@@ -9,7 +9,7 @@ package com.sun.corba.se.spi.activation;
 */
 
 public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.spi.activation.Activator, org.omg.CORBA.portable.InvokeHandler
+                implements Activator, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -20,14 +20,14 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("active", new java.lang.Integer (0));
-    _methods.put ("registerEndpoints", new java.lang.Integer (1));
-    _methods.put ("getActiveServers", new java.lang.Integer (2));
-    _methods.put ("activate", new java.lang.Integer (3));
-    _methods.put ("shutdown", new java.lang.Integer (4));
-    _methods.put ("install", new java.lang.Integer (5));
-    _methods.put ("getORBNames", new java.lang.Integer (6));
-    _methods.put ("uninstall", new java.lang.Integer (7));
+    _methods.put ("active", new Integer (0));
+    _methods.put ("registerEndpoints", new Integer (1));
+    _methods.put ("getActiveServers", new Integer (2));
+    _methods.put ("activate", new Integer (3));
+    _methods.put ("shutdown", new Integer (4));
+    _methods.put ("install", new Integer (5));
+    _methods.put ("getORBNames", new Integer (6));
+    _methods.put ("uninstall", new Integer (7));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -35,7 +35,7 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -46,13 +46,13 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 0:  // activation/Activator/active
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
-           com.sun.corba.se.spi.activation.Server serverObj = com.sun.corba.se.spi.activation.ServerHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
+           Server serverObj = ServerHelper.read (in);
            this.active (serverId, serverObj);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
+           ServerNotRegisteredHelper.write (out, $ex);
          }
          break;
        }
@@ -62,20 +62,20 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 1:  // activation/Activator/registerEndpoints
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
-           String orbId = com.sun.corba.se.spi.activation.ORBidHelper.read (in);
-           com.sun.corba.se.spi.activation.EndPointInfo endPointInfo[] = com.sun.corba.se.spi.activation.EndpointInfoListHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
+           String orbId = ORBidHelper.read (in);
+           EndPointInfo endPointInfo[] = EndpointInfoListHelper.read (in);
            this.registerEndpoints (serverId, orbId, endPointInfo);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.NoSuchEndPoint $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.NoSuchEndPointHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ORBAlreadyRegistered $ex) {
+           NoSuchEndPointHelper.write (out, $ex);
+         } catch (ORBAlreadyRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ORBAlreadyRegisteredHelper.write (out, $ex);
+           ORBAlreadyRegisteredHelper.write (out, $ex);
          }
          break;
        }
@@ -87,7 +87,7 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
          int $result[] = null;
          $result = this.getActiveServers ();
          out = $rh.createReply();
-         com.sun.corba.se.spi.activation.ServerIdsHelper.write (out, $result);
+         ServerIdsHelper.write (out, $result);
          break;
        }
 
@@ -96,18 +96,18 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 3:  // activation/Activator/activate
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            this.activate (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerAlreadyActive $ex) {
+         } catch (ServerAlreadyActive $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerAlreadyActiveHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+           ServerAlreadyActiveHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerHeldDown $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -117,15 +117,15 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 4:  // activation/Activator/shutdown
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            this.shutdown (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerNotActive $ex) {
+         } catch (ServerNotActive $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotActiveHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+           ServerNotActiveHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
+           ServerNotRegisteredHelper.write (out, $ex);
          }
          break;
        }
@@ -135,18 +135,18 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 5:  // activation/Activator/install
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            this.install (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerHeldDown $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerHeldDownHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerAlreadyInstalled $ex) {
+           ServerHeldDownHelper.write (out, $ex);
+         } catch (ServerAlreadyInstalled $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerAlreadyInstalledHelper.write (out, $ex);
+           ServerAlreadyInstalledHelper.write (out, $ex);
          }
          break;
        }
@@ -156,14 +156,14 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 6:  // activation/Activator/getORBNames
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            String $result[] = null;
            $result = this.getORBNames (serverId);
            out = $rh.createReply();
-           com.sun.corba.se.spi.activation.ORBidListHelper.write (out, $result);
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+           ORBidListHelper.write (out, $result);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
+           ServerNotRegisteredHelper.write (out, $ex);
          }
          break;
        }
@@ -173,18 +173,18 @@ public abstract class _ActivatorImplBase extends org.omg.CORBA.portable.ObjectIm
        case 7:  // activation/Activator/uninstall
        {
          try {
-           int serverId = com.sun.corba.se.spi.activation.ServerIdHelper.read (in);
+           int serverId = ServerIdHelper.read (in);
            this.uninstall (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.spi.activation.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerHeldDown $ex) {
+           ServerNotRegisteredHelper.write (out, $ex);
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerHeldDownHelper.write (out, $ex);
-         } catch (com.sun.corba.se.spi.activation.ServerAlreadyUninstalled $ex) {
+           ServerHeldDownHelper.write (out, $ex);
+         } catch (ServerAlreadyUninstalled $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.spi.activation.ServerAlreadyUninstalledHelper.write (out, $ex);
+           ServerAlreadyUninstalledHelper.write (out, $ex);
          }
          break;
        }

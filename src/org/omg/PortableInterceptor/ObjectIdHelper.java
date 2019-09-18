@@ -37,7 +37,7 @@ abstract public class ObjectIdHelper
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_octet);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
       __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.OctetSeqHelper.id (), "OctetSeq", __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.PortableInterceptor.ObjectIdHelper.id (), "ObjectId", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ObjectIdHelper.id (), "ObjectId", __typeCode);
     }
     return __typeCode;
   }

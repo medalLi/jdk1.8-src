@@ -50,11 +50,11 @@ import java.io.IOException;
  * An example of an RDN is "OU=Sales+CN=J.Smith". In this example,
  * the RDN consist of multiple attribute type/value pairs. The
  * RDN is parsed as described in the class description for
- * {@link javax.naming.ldap.LdapName <tt>LdapName</tt>}.
+ * {@link LdapName <tt>LdapName</tt>}.
  * <p>
  * The Rdn class represents an RDN as attribute type/value mappings,
  * which can be viewed using
- * {@link javax.naming.directory.Attributes Attributes}.
+ * {@link Attributes Attributes}.
  * In addition, it contains convenience methods that allow easy retrieval
  * of type and value when the Rdn consist of a single type/value pair,
  * which is how it appears in a typical usage.
@@ -114,7 +114,7 @@ public class Rdn implements Serializable, Comparable<Object> {
 
     /**
      * Constructs an Rdn from the given attribute set. See
-     * {@link javax.naming.directory.Attributes Attributes}.
+     * {@link Attributes Attributes}.
      * <p>
      * The string attribute values are not interpreted as
      * <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a>
@@ -154,7 +154,7 @@ public class Rdn implements Serializable, Comparable<Object> {
      * This constructor takes a string formatted according to the rules
      * defined in <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a>
      * and described in the class description for
-     * {@link javax.naming.ldap.LdapName}.
+     * {@link LdapName}.
      *
      * @param rdnString The non-null and non-empty RFC2253 formatted string.
      * @throws InvalidNameException If a syntax error occurs during
@@ -281,7 +281,7 @@ public class Rdn implements Serializable, Comparable<Object> {
     /**
      * Returns this Rdn as a string represented in a format defined by
      * <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a> and described
-     * in the class description for {@link javax.naming.ldap.LdapName LdapName}.
+     * in the class description for {@link LdapName LdapName}.
      *
      * @return The string representation of the Rdn.
      */
@@ -397,7 +397,7 @@ public class Rdn implements Serializable, Comparable<Object> {
     }
 
     /**
-     * Retrieves the {@link javax.naming.directory.Attributes Attributes}
+     * Retrieves the {@link Attributes Attributes}
      * view of the type/value mappings contained in this Rdn.
      *
      * @return  The non-null attributes containing the type/value
@@ -738,7 +738,7 @@ public class Rdn implements Serializable, Comparable<Object> {
      * @serialData      The RDN string
      */
     private void writeObject(ObjectOutputStream s)
-            throws java.io.IOException {
+            throws IOException {
         s.defaultWriteObject();
         s.writeObject(toString());
     }

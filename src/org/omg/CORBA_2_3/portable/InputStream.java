@@ -97,7 +97,7 @@ public abstract class InputStream extends org.omg.CORBA.portable.InputStream {
      * @param clz is the declared type of the value to be unmarshalled
      * @return the value unmarshalled from the input stream
      */
-    public java.io.Serializable read_value(java.lang.Class clz) {
+    public java.io.Serializable read_value(Class clz) {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
 
@@ -116,7 +116,7 @@ public abstract class InputStream extends org.omg.CORBA.portable.InputStream {
      * @param rep_id identifies the type of the value to be unmarshalled
      * @return value type unmarshalled from the input stream
      */
-    public java.io.Serializable read_value(java.lang.String rep_id) {
+    public java.io.Serializable read_value(String rep_id) {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
 
@@ -135,7 +135,7 @@ public abstract class InputStream extends org.omg.CORBA.portable.InputStream {
      * Unmarshal the value object or a suitable stub object.
      * @return ORB runtime returns the value object or a suitable stub object.
      */
-    public java.lang.Object read_abstract_interface() {
+    public Object read_abstract_interface() {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
 
@@ -145,7 +145,7 @@ public abstract class InputStream extends org.omg.CORBA.portable.InputStream {
      * the type that is statically expected.
      * @return ORB runtime returns the value object or a suitable stub object.
      */
-    public java.lang.Object read_abstract_interface(java.lang.Class clz) {
+    public Object read_abstract_interface(Class clz) {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
 

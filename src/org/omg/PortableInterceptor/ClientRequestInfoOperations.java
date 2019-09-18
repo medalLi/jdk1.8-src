@@ -223,7 +223,7 @@ package org.omg.PortableInterceptor;
    *
    * @see ClientRequestInterceptor
    */
-public interface ClientRequestInfoOperations  extends org.omg.PortableInterceptor.RequestInfoOperations
+public interface ClientRequestInfoOperations  extends RequestInfoOperations
 {
 
   /**
@@ -232,7 +232,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *
        * @see #effective_target
        */
-  org.omg.CORBA.Object target ();
+  org.omg.CORBA.Object target();
 
   /**
        * Returns the actual object on which the operation will be invoked. 
@@ -242,7 +242,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *
        * @see #target
        */
-  org.omg.CORBA.Object effective_target ();
+  org.omg.CORBA.Object effective_target();
 
   /**
        * Returns the profile that will be used to send the request. If a 
@@ -250,7 +250,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        * that object's profile changed accordingly, then this profile will 
        * be that located profile.
        */
-  org.omg.IOP.TaggedProfile effective_profile ();
+  org.omg.IOP.TaggedProfile effective_profile();
 
   /** 
        * Returns an any which contains the exception to be returned to 
@@ -266,7 +266,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        * 
        * @see #received_exception_id
        */
-  org.omg.CORBA.Any received_exception ();
+  org.omg.CORBA.Any received_exception();
 
   /**
        * Returns the repository id of the exception to be returned to 
@@ -277,7 +277,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  String received_exception_id ();
+  String received_exception_id();
 
   /** 
        * Returns the <code>IOP.TaggedComponent</code> with the given ID from 
@@ -296,7 +296,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *     no component exists for the given component ID.
        * @see #get_effective_components
        */
-  org.omg.IOP.TaggedComponent get_effective_component (int id);
+  org.omg.IOP.TaggedComponent get_effective_component(int id);
 
   /**
        * Returns an array of all tagged components with the given ID from the 
@@ -309,7 +309,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *     no component exists for the given component ID.
        * @see #get_effective_component
        */
-  org.omg.IOP.TaggedComponent[] get_effective_components (int id);
+  org.omg.IOP.TaggedComponent[] get_effective_components(int id);
 
   /**
        * Returns the given policy in effect for this operation. 
@@ -325,7 +325,7 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  org.omg.CORBA.Policy get_request_policy (int type);
+  org.omg.CORBA.Policy get_request_policy(int type);
 
   /** 
        * Allows Interceptors to add service contexts to the request. 
@@ -341,5 +341,5 @@ public interface ClientRequestInfoOperations  extends org.omg.PortableIntercepto
        *     is thrown. If true, then the existing service context is 
        *     replaced by the new one.
        */
-  void add_request_service_context (org.omg.IOP.ServiceContext service_context, boolean replace);
+  void add_request_service_context(org.omg.IOP.ServiceContext service_context, boolean replace);
 } // interface ClientRequestInfoOperations

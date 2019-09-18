@@ -198,7 +198,7 @@ public class AttributedString {
      * @exception NullPointerException if <code>text</code> is null.
      * @exception IllegalArgumentException if the subrange given by
      * beginIndex and endIndex is out of the text range.
-     * @see java.text.Annotation
+     * @see Annotation
      */
     public AttributedString(AttributedCharacterIterator text,
                             int beginIndex,
@@ -226,7 +226,7 @@ public class AttributedString {
      * @exception NullPointerException if <code>text</code> is null.
      * @exception IllegalArgumentException if the subrange given by
      * beginIndex and endIndex is out of the text range.
-     * @see java.text.Annotation
+     * @see Annotation
      */
     public AttributedString(AttributedCharacterIterator text,
                             int beginIndex,
@@ -1064,8 +1064,8 @@ public class AttributedString {
             this.endIndex = endIndex;
         }
 
-        public Set<Map.Entry<Attribute, Object>> entrySet() {
-            HashSet<Map.Entry<Attribute, Object>> set = new HashSet<>();
+        public Set<Entry<Attribute, Object>> entrySet() {
+            HashSet<Entry<Attribute, Object>> set = new HashSet<>();
             synchronized (AttributedString.this) {
                 int size = runAttributes[runIndex].size();
                 for (int i = 0; i < size; i++) {
@@ -1079,7 +1079,7 @@ public class AttributedString {
                         }
                     }
 
-                    Map.Entry<Attribute, Object> entry = new AttributeEntry(key, value);
+                    Entry<Attribute, Object> entry = new AttributeEntry(key, value);
                     set.add(entry);
                 }
             }

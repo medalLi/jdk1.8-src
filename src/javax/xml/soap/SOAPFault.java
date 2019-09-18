@@ -263,7 +263,7 @@ public interface SOAPFault extends SOAPBodyElement {
      *
      * @param faultString a <code>String</code> giving an explanation of
      *         the fault
-     * @param locale a {@link java.util.Locale Locale} object indicating
+     * @param locale a {@link Locale Locale} object indicating
      *         the native language of the <code>faultString</code>
      * @see #getFaultString
      *
@@ -443,7 +443,7 @@ public interface SOAPFault extends SOAPBodyElement {
      *
      * @since SAAJ 1.3
      */
-    public void addFaultReasonText(String text, java.util.Locale locale)
+    public void addFaultReasonText(String text, Locale locale)
         throws SOAPException;
 
     /**

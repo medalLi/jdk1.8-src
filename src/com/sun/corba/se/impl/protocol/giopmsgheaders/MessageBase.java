@@ -932,7 +932,7 @@ public abstract class MessageBase implements Message{
     }
 
     public void callback(MessageHandler handler)
-        throws java.io.IOException
+        throws IOException
     {
         handler.handleInput(this);
     }

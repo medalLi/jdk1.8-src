@@ -384,8 +384,8 @@ class StringTokenizer implements Enumeration<Object> {
      *
      * @return  <code>true</code> if there are more tokens;
      *          <code>false</code> otherwise.
-     * @see     java.util.Enumeration
-     * @see     java.util.StringTokenizer#hasMoreTokens()
+     * @see     Enumeration
+     * @see     StringTokenizer#hasMoreTokens()
      */
     public boolean hasMoreElements() {
         return hasMoreTokens();
@@ -400,8 +400,8 @@ class StringTokenizer implements Enumeration<Object> {
      * @return     the next token in the string.
      * @exception  NoSuchElementException  if there are no more tokens in this
      *               tokenizer's string.
-     * @see        java.util.Enumeration
-     * @see        java.util.StringTokenizer#nextToken()
+     * @see        Enumeration
+     * @see        StringTokenizer#nextToken()
      */
     public Object nextElement() {
         return nextToken();
@@ -414,7 +414,7 @@ class StringTokenizer implements Enumeration<Object> {
      *
      * @return  the number of tokens remaining in the string using the current
      *          delimiter set.
-     * @see     java.util.StringTokenizer#nextToken()
+     * @see     StringTokenizer#nextToken()
      */
     public int countTokens() {
         int count = 0;

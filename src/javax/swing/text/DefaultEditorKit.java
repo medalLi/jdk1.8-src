@@ -1164,7 +1164,7 @@ public class DefaultEditorKit extends EditorKit {
                     if (deleteNextWordAction == getValue(Action.NAME)) {
                         end = Utilities.
                             getNextWordInParagraph(target, line, start, false);
-                        if (end == java.text.BreakIterator.DONE) {
+                        if (end == BreakIterator.DONE) {
                             //last word in the paragraph
                             final int endOfLine = line.getEndOffset();
                             if (start == endOfLine - 1) {
@@ -1178,7 +1178,7 @@ public class DefaultEditorKit extends EditorKit {
                     } else {
                         end = Utilities.
                             getPrevWordInParagraph(target, line, start);
-                        if (end == java.text.BreakIterator.DONE) {
+                        if (end == BreakIterator.DONE) {
                             //there is no previous word in the paragraph
                             final int startOfLine = line.getStartOffset();
                             if (start == startOfLine) {

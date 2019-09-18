@@ -105,7 +105,7 @@ public interface ClassLoadingMXBean extends PlatformManagedObject {
      * @param value <tt>true</tt> to enable the verbose output;
      *              <tt>false</tt> to disable.
      *
-     * @exception  java.lang.SecurityException if a security manager
+     * @exception  SecurityException if a security manager
      *             exists and the caller does not have
      *             ManagementPermission("control").
      */

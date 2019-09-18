@@ -32,7 +32,7 @@ package org.omg.CORBA;
 * BAD_POLICY_VALUE, UNSUPPORTED_POLICY, UNSUPPORTED_POLICY_VALUE.
 */
 
-public final class PolicyError extends org.omg.CORBA.UserException {
+public final class PolicyError extends UserException {
 
     /**
      * The reason for the <code>PolicyError</code> exception being thrown.

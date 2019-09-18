@@ -43,7 +43,7 @@ public class InternalBindingValue
     // calling orb.string_to_object( ) everytime. Instead it
     // will be set once and then the result will be used everytime.
     public String strObjectRef;
-    transient private org.omg.CORBA.Object theObjectRef;
+    transient private Object theObjectRef;
 
     // Default constructor
     public InternalBindingValue() {
@@ -56,12 +56,12 @@ public class InternalBindingValue
         strObjectRef = o;
     }
 
-    public org.omg.CORBA.Object getObjectRef( )
+    public Object getObjectRef( )
     {
         return theObjectRef;
     }
 
-    public void setObjectRef( org.omg.CORBA.Object ObjectRef )
+    public void setObjectRef( Object ObjectRef )
     {
         theObjectRef = ObjectRef;
     }

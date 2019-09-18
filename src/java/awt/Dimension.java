@@ -47,8 +47,8 @@ import java.beans.Transient;
  *
  * @author      Sami Shaio
  * @author      Arthur van Hoff
- * @see         java.awt.Component
- * @see         java.awt.LayoutManager
+ * @see         Component
+ * @see         LayoutManager
  * @since       1.0
  */
 public class Dimension extends Dimension2D implements java.io.Serializable {
@@ -162,8 +162,8 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      *
      * @return   the size of this dimension, a new instance of
      *           <code>Dimension</code> with the same width and height
-     * @see      java.awt.Dimension#setSize
-     * @see      java.awt.Component#getSize
+     * @see      Dimension#setSize
+     * @see      Component#getSize
      * @since    1.1
      */
     @Transient
@@ -176,8 +176,8 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      * This method is included for completeness, to parallel the
      * <code>setSize</code> method defined by <code>Component</code>.
      * @param    d  the new size for this <code>Dimension</code> object
-     * @see      java.awt.Dimension#getSize
-     * @see      java.awt.Component#setSize
+     * @see      Dimension#getSize
+     * @see      Component#setSize
      * @since    1.1
      */
     public void setSize(Dimension d) {
@@ -192,8 +192,8 @@ public class Dimension extends Dimension2D implements java.io.Serializable {
      *
      * @param    width   the new width for this <code>Dimension</code> object
      * @param    height  the new height for this <code>Dimension</code> object
-     * @see      java.awt.Dimension#getSize
-     * @see      java.awt.Component#setSize
+     * @see      Dimension#getSize
+     * @see      Component#setSize
      * @since    1.1
      */
     public void setSize(int width, int height) {

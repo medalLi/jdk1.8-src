@@ -36,7 +36,7 @@ import sun.swing.SwingUtilities2;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JProgressBar}.
+ * {@link JProgressBar}.
  *
  * @author Joshua Outwater
  * @since 1.7

@@ -163,7 +163,7 @@ public interface TableColumnModel
      * required, <code>JTable.columnAtPoint</code> can be used instead.
      *
      * @return  the index of the column; or -1 if no column is found
-     * @see javax.swing.JTable#columnAtPoint
+     * @see JTable#columnAtPoint
      */
     public int getColumnIndexAtX(int xPosition);
 

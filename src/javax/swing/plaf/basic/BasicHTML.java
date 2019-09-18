@@ -77,8 +77,8 @@ public class BasicHTML {
      * @throws IllegalArgumentException if width or height is &lt; 0
      * @return baseline or a value &lt; 0 indicating there is no reasonable
      *                  baseline
-     * @see java.awt.FontMetrics
-     * @see javax.swing.JComponent#getBaseline(int,int)
+     * @see FontMetrics
+     * @see JComponent#getBaseline(int,int)
      * @since 1.6
      */
     public static int getHTMLBaseline(View view, int w, int h) {
@@ -362,7 +362,7 @@ public class BasicHTML {
          * a custom font or color.
          */
         private void setFontAndColor(Font font, Color fg) {
-            getStyleSheet().addRule(sun.swing.SwingUtilities2.
+            getStyleSheet().addRule(SwingUtilities2.
                                     displayPropertiesToCSS(font,fg));
         }
     }

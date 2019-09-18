@@ -39,7 +39,7 @@ abstract public class PolicyHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/Policy:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.Policy that)
+  public static void insert (Any a, Policy that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -47,17 +47,17 @@ abstract public class PolicyHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CORBA.Policy extract (org.omg.CORBA.Any a)
+  public static Policy extract (Any a)
   {
     return read (a.create_input_stream ());
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  private static TypeCode __typeCode = null;
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.CORBA.PolicyHelper.id (), "Policy");
+      __typeCode = ORB.init ().create_interface_tc (PolicyHelper.id (), "Policy");
     }
     return __typeCode;
   }
@@ -67,28 +67,28 @@ abstract public class PolicyHelper
     return _id;
   }
 
-  public static org.omg.CORBA.Policy read (org.omg.CORBA.portable.InputStream istream)
+  public static Policy read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_PolicyStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.Policy value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, Policy value)
   {
-    ostream.write_Object ((org.omg.CORBA.Object) value);
+    ostream.write_Object ((Object) value);
   }
 
-  public static org.omg.CORBA.Policy narrow (org.omg.CORBA.Object obj)
+  public static Policy narrow (Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.CORBA.Policy)
-      return (org.omg.CORBA.Policy)obj;
+    else if (obj instanceof Policy)
+      return (Policy)obj;
     else if (!obj._is_a (id ()))
-      throw new org.omg.CORBA.BAD_PARAM ();
+      throw new BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      return new org.omg.CORBA._PolicyStub (delegate);
+      return new _PolicyStub (delegate);
     }
   }
 

@@ -275,8 +275,8 @@ public abstract class InputEvent extends ComponentEvent {
      * @serial
      * @see #getModifiers()
      * @see #getModifiersEx()
-     * @see java.awt.event.KeyEvent
-     * @see java.awt.event.MouseEvent
+     * @see KeyEvent
+     * @see MouseEvent
      */
     int modifiers;
 

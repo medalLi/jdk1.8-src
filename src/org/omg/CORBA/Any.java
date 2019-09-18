@@ -466,7 +466,7 @@ abstract public class Any implements IDLEntity {
      *              <code>org.omg.CORBA.Object</code> or the
      *              <code>value</code> field has not yet been set
      */
-    abstract public org.omg.CORBA.Object extract_Object() throws BAD_OPERATION;
+    abstract public Object extract_Object() throws BAD_OPERATION;
 
     /**
      * Inserts the given <code>org.omg.CORBA.Object</code> object
@@ -475,7 +475,7 @@ abstract public class Any implements IDLEntity {
      * @param o         the <code>org.omg.CORBA.Object</code> object to insert into this
      *                <code>Any</code> object
      */
-    abstract public void insert_Object(org.omg.CORBA.Object o);
+    abstract public void insert_Object(Object o);
 
     /**
      * Extracts the <code>java.io.Serializable</code> object in this
@@ -527,7 +527,7 @@ abstract public class Any implements IDLEntity {
          *            <code>Any</code> object
      *
      */
-    abstract public void insert_Object(org.omg.CORBA.Object o, TypeCode t)
+    abstract public void insert_Object(Object o, TypeCode t)
         throws BAD_PARAM;
 
     /**
@@ -611,7 +611,7 @@ abstract public class Any implements IDLEntity {
      */
     @Deprecated
     public Principal extract_Principal() throws BAD_OPERATION {
-        throw new org.omg.CORBA.NO_IMPLEMENT() ;
+        throw new NO_IMPLEMENT() ;
     }
 
     /**
@@ -627,7 +627,7 @@ abstract public class Any implements IDLEntity {
      */
     @Deprecated
     public void    insert_Principal(Principal p) {
-        throw new org.omg.CORBA.NO_IMPLEMENT() ;
+        throw new NO_IMPLEMENT() ;
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -643,9 +643,9 @@ abstract public class Any implements IDLEntity {
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.portable.Streamable extract_Streamable()
-        throws org.omg.CORBA.BAD_INV_ORDER {
-        throw new org.omg.CORBA.NO_IMPLEMENT() ;
+    public Streamable extract_Streamable()
+        throws BAD_INV_ORDER {
+        throw new NO_IMPLEMENT() ;
     }
 
     /**
@@ -660,7 +660,7 @@ abstract public class Any implements IDLEntity {
      *      comments for unimplemented features</a>
      */
     public void insert_Streamable(Streamable s) {
-        throw new org.omg.CORBA.NO_IMPLEMENT() ;
+        throw new NO_IMPLEMENT() ;
     }
 
     /**
@@ -677,7 +677,7 @@ abstract public class Any implements IDLEntity {
      *      comments for unimplemented features</a>
      */
     public java.math.BigDecimal extract_fixed() {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -693,7 +693,7 @@ abstract public class Any implements IDLEntity {
      *      comments for unimplemented features</a>
      */
     public void insert_fixed(java.math.BigDecimal value) {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 
     /**
@@ -709,13 +709,13 @@ abstract public class Any implements IDLEntity {
      *              this <code>Any</code> object's <code>type</code> field
      *              and that describes the <code>java.math.BigDecimal</code>
      *              object being inserted
-     * @throws org.omg.CORBA.BAD_INV_ORDER if this method is  invoked improperly
+     * @throws BAD_INV_ORDER if this method is  invoked improperly
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public void insert_fixed(java.math.BigDecimal value, org.omg.CORBA.TypeCode type)
-        throws org.omg.CORBA.BAD_INV_ORDER
+    public void insert_fixed(java.math.BigDecimal value, TypeCode type)
+        throws BAD_INV_ORDER
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT();
+        throw new NO_IMPLEMENT();
     }
 }

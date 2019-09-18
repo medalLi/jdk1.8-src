@@ -106,7 +106,7 @@ public final class IntHolder implements Streamable {
      * @return    the type code for the value held in this <code>IntHolder</code>
      *            object
      */
-    public org.omg.CORBA.TypeCode _type() {
+    public TypeCode _type() {
         return ORB.init().get_primitive_tc(TCKind.tk_long);
     }
 }

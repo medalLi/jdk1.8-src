@@ -223,6 +223,6 @@ package org.omg.PortableInterceptor;
    *
    * @see ClientRequestInterceptor
    */
-public interface ClientRequestInfo extends ClientRequestInfoOperations, org.omg.PortableInterceptor.RequestInfo, org.omg.CORBA.portable.IDLEntity 
+public interface ClientRequestInfo extends ClientRequestInfoOperations, RequestInfo, org.omg.CORBA.portable.IDLEntity
 {
 } // interface ClientRequestInfo

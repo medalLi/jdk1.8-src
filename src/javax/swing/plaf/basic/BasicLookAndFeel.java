@@ -225,7 +225,7 @@ public abstract class BasicLookAndFeel extends LookAndFeel implements Serializab
      *        added to
      * @throws NullPointerException if {@code table} is {@code null}
      *
-     * @see javax.swing.LookAndFeel
+     * @see LookAndFeel
      * @see #getDefaults
      */
     protected void initClassDefaults(UIDefaults table)
@@ -315,7 +315,7 @@ public abstract class BasicLookAndFeel extends LookAndFeel implements Serializab
      * @param table the {@code UIDefaults} object the values are added to
      * @throws NullPointerException if {@code table} is {@code null}
      *
-     * @see java.awt.SystemColor
+     * @see SystemColor
      * @see #getDefaults
      * @see #loadSystemColors
      */
@@ -395,9 +395,9 @@ public abstract class BasicLookAndFeel extends LookAndFeel implements Serializab
      * @throws ArrayIndexOutOfBoundsException if {@code useNative} is
      *         {@code false} and {@code systemColors.length} is odd
      *
-     * @see #initSystemColorDefaults(javax.swing.UIDefaults)
-     * @see java.awt.SystemColor
-     * @see java.awt.Color#decode(String)
+     * @see #initSystemColorDefaults(UIDefaults)
+     * @see SystemColor
+     * @see Color#decode(String)
      */
     protected void loadSystemColors(UIDefaults table, String[] systemColors, boolean useNative)
     {

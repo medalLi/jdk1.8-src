@@ -19,5 +19,5 @@ public interface ServantRetentionPolicyOperations  extends org.omg.CORBA.PolicyO
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.ServantRetentionPolicyValue value ();
+  ServantRetentionPolicyValue value();
 } // interface ServantRetentionPolicyOperations

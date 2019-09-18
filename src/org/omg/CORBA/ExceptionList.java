@@ -81,13 +81,13 @@ public abstract class ExceptionList {
      *                    number of <code>TypeCode</code> objects
      *                    minus one, inclusive.
      * @return                  the <code>TypeCode</code> object  at the given index
-     * @exception org.omg.CORBA.Bounds   if the index given is greater than
+     * @exception Bounds   if the index given is greater than
      *                          or equal to the number of <code>TypeCode</code> objects
      *                in this <code>ExceptionList</code> object
      */
 
     public abstract TypeCode item(int index)
-        throws org.omg.CORBA.Bounds;
+        throws Bounds;
 
     /**
      * Removes the <code>TypeCode</code> object at the given index.
@@ -100,11 +100,11 @@ public abstract class ExceptionList {
      *                    number of <code>TypeCode</code> objects
      *                    minus one, inclusive.
      *
-     * @exception org.omg.CORBA.Bounds if the index is greater than
+     * @exception Bounds if the index is greater than
      *                          or equal to the number of <code>TypeCode</code> objects
      *                in this <code>ExceptionList</code> object
      */
 
     public abstract void remove(int index)
-        throws org.omg.CORBA.Bounds;
+        throws Bounds;
 }

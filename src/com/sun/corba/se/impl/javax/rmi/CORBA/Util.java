@@ -156,7 +156,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
     {
         for (Enumeration e = exportedServants.keys(); e.hasMoreElements(); )
         {
-            java.lang.Object key = e.nextElement();
+            Object key = e.nextElement();
             Remote target = (Remote)(key instanceof Tie ? ((Tie)key).getTarget() : key);
 
             // Bug 4476347: BAD_OPERATION is thrown if the ties delegate isn't set.
@@ -165,7 +165,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                 if (orb == getTie(target).orb()) {
                     try {
                         unexportObject(target);
-                    } catch( java.rmi.NoSuchObjectException ex ) {
+                    } catch( NoSuchObjectException ex ) {
                         // We neglect this exception if at all if it is
                         // raised. It is not harmful.
                     }
@@ -263,8 +263,8 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                 Class<?> cl = SharedSecrets.getJavaCorbaAccess().loadClass(
                                "javax.activity.ActivityRequiredException");
                 Class[] params = new Class[2];
-                params[0] = java.lang.String.class;
-                params[1] = java.lang.Throwable.class;
+                params[0] = String.class;
+                params[1] = Throwable.class;
                 Constructor cr = cl.getConstructor(params);
                 Object[] args = new Object[2];
                 args[0] = message;
@@ -279,8 +279,8 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                 Class<?> cl = SharedSecrets.getJavaCorbaAccess().loadClass(
                                "javax.activity.ActivityCompletedException");
                 Class[] params = new Class[2];
-                params[0] = java.lang.String.class;
-                params[1] = java.lang.Throwable.class;
+                params[0] = String.class;
+                params[1] = Throwable.class;
                 Constructor cr = cl.getConstructor(params);
                 Object[] args = new Object[2];
                 args[0] = message;
@@ -295,8 +295,8 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                 Class<?> cl = SharedSecrets.getJavaCorbaAccess().loadClass(
                                "javax.activity.InvalidActivityException");
                 Class[] params = new Class[2];
-                params[0] = java.lang.String.class;
-                params[1] = java.lang.Throwable.class;
+                params[0] = String.class;
+                params[1] = Throwable.class;
                 Constructor cr = cl.getConstructor(params);
                 Object[] args = new Object[2];
                 args[0] = message;
@@ -317,8 +317,8 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * @param out the stream in which to write the any.
      * @param obj the object to write as an any.
      */
-    public void writeAny( org.omg.CORBA.portable.OutputStream out,
-                         java.lang.Object obj)
+    public void writeAny( OutputStream out,
+                         Object obj)
     {
         org.omg.CORBA.ORB orb = out.orb();
 
@@ -326,7 +326,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
         Any any = orb.create_any();
 
         // Make sure we have a connected object...
-        java.lang.Object newObj = Utility.autoConnect(obj,orb,false);
+        Object newObj = Utility.autoConnect(obj,orb,false);
 
         if (newObj instanceof org.omg.CORBA.Object) {
             any.insert_Object((org.omg.CORBA.Object)newObj);
@@ -371,7 +371,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * This does not handle null objs.
      */
     private TypeCode createTypeCode(Serializable obj,
-                                    org.omg.CORBA.Any any,
+                                    Any any,
                                     org.omg.CORBA.ORB orb) {
 
         if (any instanceof com.sun.corba.se.impl.corba.AnyImpl &&
@@ -444,7 +444,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * @param out the stream in which to write the object.
      * @param obj the object to write.
      */
-    public void writeRemoteObject(OutputStream out, java.lang.Object obj)
+    public void writeRemoteObject(OutputStream out, Object obj)
     {
         // Make sure we have a connected object, then
         // write it out...
@@ -462,7 +462,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * @param out the stream in which to write the object.
      * @param obj the object to write.
      */
-    public void writeAbstractObject( OutputStream out, java.lang.Object obj )
+    public void writeAbstractObject( OutputStream out, Object obj )
     {
         // Make sure we have a connected object, then
         // write it out...
@@ -477,7 +477,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * @param tie the tie to register.
      * @param target the target for the tie.
      */
-    public void registerTarget(javax.rmi.CORBA.Tie tie, java.rmi.Remote target)
+    public void registerTarget(Tie tie, Remote target)
     {
         synchronized (exportedServants) {
             // Do we already have this target registered?
@@ -491,7 +491,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                     // Yes. Instantiate our keep-alive thread and start
                     // it up...
                     keepAlive = (KeepAlive)AccessController.doPrivileged(new PrivilegedAction() {
-                        public java.lang.Object run() {
+                        public Object run() {
                             return new KeepAlive();
                         }
                     });
@@ -506,8 +506,8 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * to deactivate the object.
      * @param target the object to unexport.
      */
-    public void unexportObject(java.rmi.Remote target)
-        throws java.rmi.NoSuchObjectException
+    public void unexportObject(Remote target)
+        throws NoSuchObjectException
     {
         synchronized (exportedServants) {
             Tie cachedTie = lookupTie(target);
@@ -530,13 +530,13 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
                     keepAlive = null;
                 }
             } else {
-                throw new java.rmi.NoSuchObjectException("Tie not found" );
+                throw new NoSuchObjectException("Tie not found" );
             }
         }
     }
 
     protected void cleanUpTie(Tie cachedTie)
-        throws java.rmi.NoSuchObjectException
+        throws NoSuchObjectException
     {
         cachedTie.setTarget(null);
         cachedTie.deactivate();
@@ -582,7 +582,7 @@ public class Util implements javax.rmi.CORBA.UtilDelegate
      * @param clz the class to get a codebase for.
      * @return a space-separated list of URLs, or null.
      */
-    public String getCodebase(java.lang.Class clz) {
+    public String getCodebase(Class clz) {
         return RMIClassLoader.getClassAnnotation(clz);
     }
 

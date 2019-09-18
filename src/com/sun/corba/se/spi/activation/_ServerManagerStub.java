@@ -8,25 +8,25 @@ package com.sun.corba.se.spi.activation;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.spi.activation.ServerManager
+public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implements ServerManager
 {
 
 
   // A new ORB started server registers itself with the Activator
-  public void active (int serverId, com.sun.corba.se.spi.activation.Server serverObj) throws com.sun.corba.se.spi.activation.ServerNotRegistered
+  public void active (int serverId, Server serverObj) throws ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("active", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
-                com.sun.corba.se.spi.activation.ServerHelper.write ($out, serverObj);
+                ServerIdHelper.write ($out, serverId);
+                ServerHelper.write ($out, serverObj);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -38,25 +38,25 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // Install a particular kind of endpoint
-  public void registerEndpoints (int serverId, String orbId, com.sun.corba.se.spi.activation.EndPointInfo[] endPointInfo) throws com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.NoSuchEndPoint, com.sun.corba.se.spi.activation.ORBAlreadyRegistered
+  public void registerEndpoints (int serverId, String orbId, EndPointInfo[] endPointInfo) throws ServerNotRegistered, NoSuchEndPoint, ORBAlreadyRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("registerEndpoints", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
-                com.sun.corba.se.spi.activation.ORBidHelper.write ($out, orbId);
-                com.sun.corba.se.spi.activation.EndpointInfoListHelper.write ($out, endPointInfo);
+                ServerIdHelper.write ($out, serverId);
+                ORBidHelper.write ($out, orbId);
+                EndpointInfoListHelper.write ($out, endPointInfo);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/NoSuchEndPoint:1.0"))
-                    throw com.sun.corba.se.spi.activation.NoSuchEndPointHelper.read ($in);
+                    throw NoSuchEndPointHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ORBAlreadyRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ORBAlreadyRegisteredHelper.read ($in);
+                    throw ORBAlreadyRegisteredHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -74,7 +74,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("getActiveServers", true);
                 $in = _invoke ($out);
-                int $result[] = com.sun.corba.se.spi.activation.ServerIdsHelper.read ($in);
+                int $result[] = ServerIdsHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -89,23 +89,23 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // If the server is not running, start it up.
-  public void activate (int serverId) throws com.sun.corba.se.spi.activation.ServerAlreadyActive, com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerHeldDown
+  public void activate (int serverId) throws ServerAlreadyActive, ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("activate", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerAlreadyActive:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerAlreadyActiveHelper.read ($in);
+                    throw ServerAlreadyActiveHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerHeldDown:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerHeldDownHelper.read ($in);
+                    throw ServerHeldDownHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -117,21 +117,21 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // If the server is running, shut it down
-  public void shutdown (int serverId) throws com.sun.corba.se.spi.activation.ServerNotActive, com.sun.corba.se.spi.activation.ServerNotRegistered
+  public void shutdown (int serverId) throws ServerNotActive, ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("shutdown", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotActive:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotActiveHelper.read ($in);
+                    throw ServerNotActiveHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -143,23 +143,23 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // currently running, this method will activate it.
-  public void install (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerHeldDown, com.sun.corba.se.spi.activation.ServerAlreadyInstalled
+  public void install (int serverId) throws ServerNotRegistered, ServerHeldDown, ServerAlreadyInstalled
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("install", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerHeldDown:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerHeldDownHelper.read ($in);
+                    throw ServerHeldDownHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerAlreadyInstalled:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerAlreadyInstalledHelper.read ($in);
+                    throw ServerAlreadyInstalledHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -171,20 +171,20 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // list all registered ORBs for a server
-  public String[] getORBNames (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered
+  public String[] getORBNames (int serverId) throws ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("getORBNames", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
-                String $result[] = com.sun.corba.se.spi.activation.ORBidListHelper.read ($in);
+                String $result[] = ORBidListHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -196,23 +196,23 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // After this hook completes, the server may still be running.
-  public void uninstall (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerHeldDown, com.sun.corba.se.spi.activation.ServerAlreadyUninstalled
+  public void uninstall (int serverId) throws ServerNotRegistered, ServerHeldDown, ServerAlreadyUninstalled
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("uninstall", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerHeldDown:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerHeldDownHelper.read ($in);
+                    throw ServerHeldDownHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerAlreadyUninstalled:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerAlreadyUninstalledHelper.read ($in);
+                    throw ServerAlreadyUninstalledHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -224,12 +224,12 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // Starts the server if it is not already running.
-  public com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation locateServer (int serverId, String endPoint) throws com.sun.corba.se.spi.activation.NoSuchEndPoint, com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerHeldDown
+  public com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation locateServer (int serverId, String endPoint) throws NoSuchEndPoint, ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("locateServer", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
+                ServerIdHelper.write ($out, serverId);
                 $out.write_string (endPoint);
                 $in = _invoke ($out);
                 com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation $result = com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationHelper.read ($in);
@@ -238,11 +238,11 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/NoSuchEndPoint:1.0"))
-                    throw com.sun.corba.se.spi.activation.NoSuchEndPointHelper.read ($in);
+                    throw NoSuchEndPointHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerHeldDown:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerHeldDownHelper.read ($in);
+                    throw ServerHeldDownHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -254,13 +254,13 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // Starts the server if it is not already running.
-  public com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB locateServerForORB (int serverId, String orbId) throws com.sun.corba.se.spi.activation.InvalidORBid, com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerHeldDown
+  public com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB locateServerForORB (int serverId, String orbId) throws InvalidORBid, ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("locateServerForORB", true);
-                com.sun.corba.se.spi.activation.ServerIdHelper.write ($out, serverId);
-                com.sun.corba.se.spi.activation.ORBidHelper.write ($out, orbId);
+                ServerIdHelper.write ($out, serverId);
+                ORBidHelper.write ($out, orbId);
                 $in = _invoke ($out);
                 com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB $result = com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORBHelper.read ($in);
                 return $result;
@@ -268,11 +268,11 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/InvalidORBid:1.0"))
-                    throw com.sun.corba.se.spi.activation.InvalidORBidHelper.read ($in);
+                    throw InvalidORBidHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerNotRegistered:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerNotRegisteredHelper.read ($in);
+                    throw ServerNotRegisteredHelper.read ($in);
                 else if (_id.equals ("IDL:activation/ServerHeldDown:1.0"))
-                    throw com.sun.corba.se.spi.activation.ServerHeldDownHelper.read ($in);
+                    throw ServerHeldDownHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -284,20 +284,20 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // get the port for the endpoint of the locator
-  public int getEndpoint (String endPointType) throws com.sun.corba.se.spi.activation.NoSuchEndPoint
+  public int getEndpoint (String endPointType) throws NoSuchEndPoint
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("getEndpoint", true);
                 $out.write_string (endPointType);
                 $in = _invoke ($out);
-                int $result = com.sun.corba.se.spi.activation.TCPPortHelper.read ($in);
+                int $result = TCPPortHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/NoSuchEndPoint:1.0"))
-                    throw com.sun.corba.se.spi.activation.NoSuchEndPointHelper.read ($in);
+                    throw NoSuchEndPointHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
@@ -309,7 +309,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
 
   // to pick a particular port type.
-  public int getServerPortForType (com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB location, String endPointType) throws com.sun.corba.se.spi.activation.NoSuchEndPoint
+  public int getServerPortForType (com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB location, String endPointType) throws NoSuchEndPoint
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -317,13 +317,13 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
                 com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORBHelper.write ($out, location);
                 $out.write_string (endPointType);
                 $in = _invoke ($out);
-                int $result = com.sun.corba.se.spi.activation.TCPPortHelper.read ($in);
+                int $result = TCPPortHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
                 String _id = $ex.getId ();
                 if (_id.equals ("IDL:activation/NoSuchEndPoint:1.0"))
-                    throw com.sun.corba.se.spi.activation.NoSuchEndPointHelper.read ($in);
+                    throw NoSuchEndPointHelper.read ($in);
                 else
                     throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {

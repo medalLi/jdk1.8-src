@@ -358,7 +358,7 @@ public abstract class RemoteObject implements Remote, java.io.Serializable {
      * <code>readExternal</code> method.
      */
     private void writeObject(java.io.ObjectOutputStream out)
-        throws java.io.IOException, java.lang.ClassNotFoundException
+        throws java.io.IOException, ClassNotFoundException
     {
         if (ref == null) {
             throw new java.rmi.MarshalException("Invalid remote object");
@@ -419,7 +419,7 @@ public abstract class RemoteObject implements Remote, java.io.Serializable {
      * instance of that implementation-specific class.
      */
     private void readObject(java.io.ObjectInputStream in)
-        throws java.io.IOException, java.lang.ClassNotFoundException
+        throws java.io.IOException, ClassNotFoundException
     {
         String refClassName = in.readUTF();
         if (refClassName == null || refClassName.length() == 0) {

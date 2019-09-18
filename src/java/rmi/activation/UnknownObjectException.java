@@ -37,12 +37,12 @@ package java.rmi.activation;
  *
  * @author  Ann Wollrath
  * @since   1.2
- * @see     java.rmi.activation.Activatable
- * @see     java.rmi.activation.ActivationGroup
- * @see     java.rmi.activation.ActivationID
- * @see     java.rmi.activation.ActivationMonitor
- * @see     java.rmi.activation.ActivationSystem
- * @see     java.rmi.activation.Activator
+ * @see     Activatable
+ * @see     ActivationGroup
+ * @see     ActivationID
+ * @see     ActivationMonitor
+ * @see     ActivationSystem
+ * @see     Activator
  */
 public class UnknownObjectException extends ActivationException {
 

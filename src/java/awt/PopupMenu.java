@@ -68,7 +68,7 @@ public class PopupMenu extends Menu {
      * Creates a new popup menu with an empty name.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public PopupMenu() throws HeadlessException {
         this("");
@@ -81,7 +81,7 @@ public class PopupMenu extends Menu {
      *                the popup menu's label
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public PopupMenu(String label) throws HeadlessException {
         super(label);

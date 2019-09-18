@@ -232,7 +232,7 @@ public class OpenMBeanConstructorInfoSupport
      * <p>However, note that another instance of a class implementing
      * the {@code OpenMBeanConstructorInfo} interface may be equal to
      * this {@code OpenMBeanConstructorInfoSupport} instance as
-     * defined by {@link #equals(java.lang.Object)}, but may have a
+     * defined by {@link #equals(Object)}, but may have a
      * different hash code if it is calculated differently.</p>
      *
      * <p>As {@code OpenMBeanConstructorInfoSupport} instances are

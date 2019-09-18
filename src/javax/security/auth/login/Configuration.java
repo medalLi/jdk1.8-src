@@ -182,15 +182,15 @@ import sun.security.jca.GetInstance;
  * Java Cryptography Architecture Standard Algorithm Name Documentation</a>
  * for a list of standard Configuration types.
  *
- * @see javax.security.auth.login.LoginContext
- * @see java.security.Security security properties
+ * @see LoginContext
+ * @see Security security properties
  */
 public abstract class Configuration {
 
     private static Configuration configuration;
 
     private final java.security.AccessControlContext acc =
-            java.security.AccessController.getContext();
+            AccessController.getContext();
 
     private static void checkPermission(String type) {
         SecurityManager sm = System.getSecurityManager();
@@ -233,7 +233,7 @@ public abstract class Configuration {
                 config_class = AccessController.doPrivileged
                     (new PrivilegedAction<String>() {
                     public String run() {
-                        return java.security.Security.getProperty
+                        return Security.getProperty
                                     ("login.configuration.provider");
                     }
                 });
@@ -341,7 +341,7 @@ public abstract class Configuration {
      * @since 1.6
      */
     public static Configuration getInstance(String type,
-                                Configuration.Parameters params)
+                                Parameters params)
                 throws NoSuchAlgorithmException {
 
         checkPermission(type);
@@ -404,7 +404,7 @@ public abstract class Configuration {
      * @since 1.6
      */
     public static Configuration getInstance(String type,
-                                Configuration.Parameters params,
+                                Parameters params,
                                 String provider)
                 throws NoSuchProviderException, NoSuchAlgorithmException {
 
@@ -466,7 +466,7 @@ public abstract class Configuration {
      * @since 1.6
      */
     public static Configuration getInstance(String type,
-                                Configuration.Parameters params,
+                                Parameters params,
                                 Provider provider)
                 throws NoSuchAlgorithmException {
 
@@ -541,7 +541,7 @@ public abstract class Configuration {
      *
      * @since 1.6
      */
-    public Configuration.Parameters getParameters() {
+    public Parameters getParameters() {
         return null;
     }
 
@@ -586,10 +586,10 @@ public abstract class Configuration {
         private ConfigurationSpi spi;
         private Provider p;
         private String type;
-        private Configuration.Parameters params;
+        private Parameters params;
 
         private ConfigDelegate(ConfigurationSpi spi, Provider p,
-                        String type, Configuration.Parameters params) {
+                        String type, Parameters params) {
             this.spi = spi;
             this.p = p;
             this.type = type;
@@ -598,7 +598,7 @@ public abstract class Configuration {
 
         public String getType() { return type; }
 
-        public Configuration.Parameters getParameters() { return params; }
+        public Parameters getParameters() { return params; }
 
         public Provider getProvider() { return p; }
 

@@ -38,7 +38,7 @@ public interface IORInfoOperations
        *     of that type is in effect, then this operation will return a 
        *     nil object reference.
        */
-  org.omg.CORBA.Policy get_effective_policy (int type);
+  org.omg.CORBA.Policy get_effective_policy(int type);
 
   /**
        * A portable ORB service implementation calls 
@@ -51,7 +51,7 @@ public interface IORInfoOperations
        * 
        * @param tagged_component The IOP.TaggedComponent to add.
        */
-  void add_ior_component (org.omg.IOP.TaggedComponent tagged_component);
+  void add_ior_component(org.omg.IOP.TaggedComponent tagged_component);
 
   /**
        * A portable ORB service implementation calls 
@@ -69,22 +69,22 @@ public interface IORInfoOperations
        *     given profile ID does not define a known profile or it is 
        *     impossible to add components to that profile.
        */
-  void add_ior_component_to_profile (org.omg.IOP.TaggedComponent tagged_component, int profile_id);
+  void add_ior_component_to_profile(org.omg.IOP.TaggedComponent tagged_component, int profile_id);
 
   /** Return the adapter manager id of the object adapter
        * that was just created and is running IOR interceptors.
        */
-  int manager_id ();
+  int manager_id();
 
   /** Return the adapter state of the object adapter
        * that was just created and is running IOR interceptors.
        */
-  short state ();
+  short state();
 
   /** Return the object reference template of the object adapter
        * that was just created and is running IOR interceptors.
        */
-  org.omg.PortableInterceptor.ObjectReferenceTemplate adapter_template ();
+  ObjectReferenceTemplate adapter_template();
 
   /** On read, returns the current factory that will be used to create
        * object references for the object adapter that was just created
@@ -93,7 +93,7 @@ public interface IORInfoOperations
        * may also be set to another object reference template inside an
        * IORInterceptor_3_0.
        */
-  org.omg.PortableInterceptor.ObjectReferenceFactory current_factory ();
+  ObjectReferenceFactory current_factory();
 
   /** On read, returns the current factory that will be used to create
        * object references for the object adapter that was just created
@@ -102,5 +102,5 @@ public interface IORInfoOperations
        * may also be set to another object reference template inside an
        * IORInterceptor_3_0.
        */
-  void current_factory (org.omg.PortableInterceptor.ObjectReferenceFactory newCurrent_factory);
+  void current_factory(ObjectReferenceFactory newCurrent_factory);
 } // interface IORInfoOperations

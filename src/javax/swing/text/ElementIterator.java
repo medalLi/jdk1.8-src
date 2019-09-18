@@ -111,7 +111,7 @@ public class ElementIterator implements Cloneable {
             return childIndex;
         }
 
-        protected Object clone() throws java.lang.CloneNotSupportedException {
+        protected Object clone() throws CloneNotSupportedException {
             return super.clone();
         }
     }

@@ -329,7 +329,7 @@ import java.util.Locale;
  * If multiple threads access a format concurrently, it must be synchronized
  * externally.
  *
- * @see          java.util.Locale
+ * @see          Locale
  * @see          Format
  * @see          NumberFormat
  * @see          DecimalFormat
@@ -347,7 +347,7 @@ public class MessageFormat extends Format {
 
     /**
      * Constructs a MessageFormat for the default
-     * {@link java.util.Locale.Category#FORMAT FORMAT} locale and the
+     * {@link Locale.Category#FORMAT FORMAT} locale and the
      * specified pattern.
      * The constructor first sets the locale, then parses the pattern and
      * creates a list of subformats for the format elements contained in it.
@@ -825,7 +825,7 @@ public class MessageFormat extends Format {
      * Creates a MessageFormat with the given pattern and uses it
      * to format the given arguments. This is equivalent to
      * <blockquote>
-     *     <code>(new {@link #MessageFormat(String) MessageFormat}(pattern)).{@link #format(java.lang.Object[], java.lang.StringBuffer, java.text.FieldPosition) format}(arguments, new StringBuffer(), null).toString()</code>
+     *     <code>(new {@link #MessageFormat(String) MessageFormat}(pattern)).{@link #format(Object[], StringBuffer, FieldPosition) format}(arguments, new StringBuffer(), null).toString()</code>
      * </blockquote>
      *
      * @param pattern   the pattern string
@@ -848,7 +848,7 @@ public class MessageFormat extends Format {
      * provided <code>StringBuffer</code>.
      * This is equivalent to
      * <blockquote>
-     *     <code>{@link #format(java.lang.Object[], java.lang.StringBuffer, java.text.FieldPosition) format}((Object[]) arguments, result, pos)</code>
+     *     <code>{@link #format(Object[], StringBuffer, FieldPosition) format}((Object[]) arguments, result, pos)</code>
      * </blockquote>
      *
      * @param arguments an array of objects to be formatted and substituted.
@@ -876,7 +876,7 @@ public class MessageFormat extends Format {
      * The text of the returned <code>AttributedCharacterIterator</code> is
      * the same that would be returned by
      * <blockquote>
-     *     <code>{@link #format(java.lang.Object[], java.lang.StringBuffer, java.text.FieldPosition) format}(arguments, new StringBuffer(), null).toString()</code>
+     *     <code>{@link #format(Object[], StringBuffer, FieldPosition) format}(arguments, new StringBuffer(), null).toString()</code>
      * </blockquote>
      * <p>
      * In addition, the <code>AttributedCharacterIterator</code> contains at
@@ -1150,7 +1150,7 @@ public class MessageFormat extends Format {
          * @return resolved MessageFormat.Field constant
          */
         protected Object readResolve() throws InvalidObjectException {
-            if (this.getClass() != MessageFormat.Field.class) {
+            if (this.getClass() != Field.class) {
                 throw new InvalidObjectException("subclass didn't correctly implement readResolve");
             }
 

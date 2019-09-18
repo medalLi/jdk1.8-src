@@ -363,7 +363,7 @@ public class POAImpl extends ObjectAdapterBase implements POA
             orb.poaConcurrencyDebugFlag ) ;
 
         isDestroying = new ThreadLocal () {
-            protected java.lang.Object initialValue() {
+            protected Object initialValue() {
                 return Boolean.FALSE;
             }
         };
@@ -1067,7 +1067,7 @@ public class POAImpl extends ObjectAdapterBase implements POA
     /**
      * <code>the_children</code>
      */
-    public org.omg.PortableServer.POA[] the_children()
+    public POA[] the_children()
     {
         try {
             lock() ;
@@ -1542,7 +1542,7 @@ public class POAImpl extends ObjectAdapterBase implements POA
         return manager.getORTState() ;
     }
 
-    public String[] getInterfaces( java.lang.Object servant, byte[] objectId )
+    public String[] getInterfaces( Object servant, byte[] objectId )
     {
         Servant serv = (Servant)servant ;
         return serv._all_interfaces( this, objectId ) ;
@@ -1628,7 +1628,7 @@ public class POAImpl extends ObjectAdapterBase implements POA
                     "Calling getInvocationServant on poa " + this ) ;
             }
 
-            java.lang.Object servant = null ;
+            Object servant = null ;
 
             try {
                 servant = mediator.getInvocationServant( info.id(),

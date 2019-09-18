@@ -129,8 +129,8 @@ public final class ClientRequestInfoImpl
     private CorbaMessageMediator messageMediator;
 
     // Cached information:
-    private org.omg.CORBA.Object cachedTargetObject;
-    private org.omg.CORBA.Object cachedEffectiveTargetObject;
+    private Object cachedTargetObject;
+    private Object cachedEffectiveTargetObject;
     private Parameter[] cachedArguments;
     private TypeCode[] cachedExceptions;
     private String[] cachedContexts;
@@ -279,7 +279,7 @@ public final class ClientRequestInfoImpl
     /**
      * The object which the client called to perform the operation.
      */
-    public org.omg.CORBA.Object target (){
+    public Object target (){
         // access is currently valid for all states:
         //checkAccess( MID_TARGET );
         if (cachedTargetObject == null) {
@@ -297,7 +297,7 @@ public final class ClientRequestInfoImpl
      * effective_target will contain the forwarded IOR while target will
      * remain unchanged.
      */
-    public org.omg.CORBA.Object effective_target() {
+    public Object effective_target() {
         // access is currently valid for all states:
         //checkAccess( MID_EFFECTIVE_TARGET );
 
@@ -743,7 +743,7 @@ public final class ClientRequestInfoImpl
     /**
      * See RequestInfoImpl for javadoc.
      */
-    public org.omg.IOP.ServiceContext get_request_service_context( int id ) {
+    public ServiceContext get_request_service_context( int id ) {
         checkAccess( MID_GET_REQUEST_SERVICE_CONTEXT );
 
         if( cachedRequestServiceContexts == null ) {
@@ -759,7 +759,7 @@ public final class ClientRequestInfoImpl
      * does not contain an etry for that ID, BAD_PARAM with a minor code of
      * TBD_BP is raised.
      */
-    public org.omg.IOP.ServiceContext get_reply_service_context( int id ) {
+    public ServiceContext get_reply_service_context( int id ) {
         checkAccess( MID_GET_REPLY_SERVICE_CONTEXT );
 
         if( cachedReplyServiceContexts == null ) {

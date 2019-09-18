@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import org.omg.CORBA.portable.OutputStream ;
 

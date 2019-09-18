@@ -328,8 +328,8 @@ public interface ORBSocketFactory
      *
      */
     public SocketInfo getEndPointInfo(org.omg.CORBA.ORB orb,
-                                        IOR ior,
-                                        SocketInfo socketInfo);
+                                      IOR ior,
+                                      SocketInfo socketInfo);
 
 
     /**

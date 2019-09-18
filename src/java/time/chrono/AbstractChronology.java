@@ -200,7 +200,7 @@ public abstract class AbstractChronology implements Chronology {
     /**
      * Initialization of the maps from id and type to Chronology.
      * The ServiceLoader is used to find and register any implementations
-     * of {@link java.time.chrono.AbstractChronology} found in the bootclass loader.
+     * of {@link AbstractChronology} found in the bootclass loader.
      * The built-in chronologies are registered explicitly.
      * Calendars configured via the Thread's context classloader are local
      * to that thread and are ignored.
@@ -249,7 +249,7 @@ public abstract class AbstractChronology implements Chronology {
      *
      * @param locale  the locale to use to obtain the calendar system, not null
      * @return the calendar system associated with the locale, not null
-     * @throws java.time.DateTimeException if the locale-specified calendar cannot be found
+     * @throws DateTimeException if the locale-specified calendar cannot be found
      */
     static Chronology ofLocale(Locale locale) {
         Objects.requireNonNull(locale, "locale");
@@ -287,7 +287,7 @@ public abstract class AbstractChronology implements Chronology {
      *
      * @param id  the chronology ID or calendar system type, not null
      * @return the chronology with the identifier requested, not null
-     * @throws java.time.DateTimeException if the chronology cannot be found
+     * @throws DateTimeException if the chronology cannot be found
      */
     static Chronology of(String id) {
         Objects.requireNonNull(id, "id");
@@ -437,7 +437,7 @@ public abstract class AbstractChronology implements Chronology {
      * </ul>
      * <p>
      * The default implementation is suitable for most calendar systems.
-     * If {@link java.time.temporal.ChronoField#YEAR_OF_ERA} is found without an {@link java.time.temporal.ChronoField#ERA}
+     * If {@link ChronoField#YEAR_OF_ERA} is found without an {@link ChronoField#ERA}
      * then the last era in {@link #eras()} is used.
      * The implementation assumes a 7 day week, that the first day-of-month
      * has the value 1, that first day-of-year has the value 1, and that the
@@ -446,7 +446,7 @@ public abstract class AbstractChronology implements Chronology {
      * @param fieldValues  the map of fields to values, which can be updated, not null
      * @param resolverStyle  the requested type of resolve, not null
      * @return the resolved date, null if insufficient information to create a date
-     * @throws java.time.DateTimeException if the date cannot be resolved, typically
+     * @throws DateTimeException if the date cannot be resolved, typically
      *  because of a conflict in the input data
      */
     @Override
@@ -668,7 +668,7 @@ public abstract class AbstractChronology implements Chronology {
      *
      * @param field  the field to add, not null
      * @param value  the value to add, not null
-     * @throws java.time.DateTimeException if the field is already present with a different value
+     * @throws DateTimeException if the field is already present with a different value
      */
     void addFieldValue(Map<TemporalField, Long> fieldValues, ChronoField field, long value) {
         Long old = fieldValues.get(field);  // check first for better error message
@@ -705,7 +705,7 @@ public abstract class AbstractChronology implements Chronology {
      *
      * @implSpec
      * This implementation checks the type and calls
-     * {@link #compareTo(java.time.chrono.Chronology)}.
+     * {@link #compareTo(Chronology)}.
      *
      * @param obj  the object to check, null returns false
      * @return true if this is equal to the other chronology
@@ -767,7 +767,7 @@ public abstract class AbstractChronology implements Chronology {
      * Defend against malicious streams.
      *
      * @param s the stream to read
-     * @throws java.io.InvalidObjectException always
+     * @throws InvalidObjectException always
      */
     private void readObject(ObjectInputStream s) throws ObjectStreamException {
         throw new InvalidObjectException("Deserialization via serialization delegate");

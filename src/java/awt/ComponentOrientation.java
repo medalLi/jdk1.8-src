@@ -171,7 +171,7 @@ public final class ComponentOrientation implements java.io.Serializable
      * <li>Return the default locale's orientation.
      * </ol>
      *
-     * @deprecated As of J2SE 1.4, use {@link #getOrientation(java.util.Locale)}.
+     * @deprecated As of J2SE 1.4, use {@link #getOrientation(Locale)}.
      */
     @Deprecated
     public static ComponentOrientation getOrientation(ResourceBundle bdl)

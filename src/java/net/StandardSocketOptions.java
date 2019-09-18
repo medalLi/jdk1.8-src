@@ -48,7 +48,7 @@ public final class StandardSocketOptions {
      *
      * <p> The value of this socket option is a {@code Boolean} that represents
      * whether the option is enabled or disabled. The option is specific to
-     * datagram-oriented sockets sending to {@link java.net.Inet4Address IPv4}
+     * datagram-oriented sockets sending to {@link Inet4Address IPv4}
      * broadcast addresses. When the socket option is enabled then the socket
      * can be used to send <em>broadcast datagrams</em>.
      *

@@ -31,7 +31,7 @@
  */
 
 package org.omg.CosNaming;
-public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplementation implements org.omg.CosNaming.NamingContext {
+public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplementation implements NamingContext {
     // Constructor
     public _NamingContextImplBase() {
         super();
@@ -45,32 +45,32 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
 
     private static java.util.Dictionary _methods = new java.util.Hashtable();
     static {
-        _methods.put("bind", new java.lang.Integer(0));
-        _methods.put("bind_context", new java.lang.Integer(1));
-        _methods.put("rebind", new java.lang.Integer(2));
-        _methods.put("rebind_context", new java.lang.Integer(3));
-        _methods.put("resolve", new java.lang.Integer(4));
-        _methods.put("unbind", new java.lang.Integer(5));
-        _methods.put("list", new java.lang.Integer(6));
-        _methods.put("new_context", new java.lang.Integer(7));
-        _methods.put("bind_new_context", new java.lang.Integer(8));
-        _methods.put("destroy", new java.lang.Integer(9));
+        _methods.put("bind", new Integer(0));
+        _methods.put("bind_context", new Integer(1));
+        _methods.put("rebind", new Integer(2));
+        _methods.put("rebind_context", new Integer(3));
+        _methods.put("resolve", new Integer(4));
+        _methods.put("unbind", new Integer(5));
+        _methods.put("list", new Integer(6));
+        _methods.put("new_context", new Integer(7));
+        _methods.put("bind_new_context", new Integer(8));
+        _methods.put("destroy", new Integer(9));
     }
     // DSI Dispatch call
     public void invoke(org.omg.CORBA.ServerRequest r) {
-        switch (((java.lang.Integer) _methods.get(r.op_name())).intValue()) {
+        switch (((Integer) _methods.get(r.op_name())).intValue()) {
         case 0: // org.omg.CosNaming.NamingContext.bind
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _obj = _orb().create_any();
                 _obj.type(org.omg.CORBA.ORB.init().get_primitive_tc(org.omg.CORBA.TCKind.tk_objref));
                 _list.add_value("obj", _obj, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
                 org.omg.CORBA.Object obj;
                 obj = _obj.extract_Object();
                 try {
@@ -109,16 +109,16 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _nc = _orb().create_any();
-                _nc.type(org.omg.CosNaming.NamingContextHelper.type());
+                _nc.type(NamingContextHelper.type());
                 _list.add_value("nc", _nc, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
-                org.omg.CosNaming.NamingContext nc;
-                nc = org.omg.CosNaming.NamingContextHelper.extract(_nc);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
+                NamingContext nc;
+                nc = NamingContextHelper.extract(_nc);
                 try {
                     this.bind_context(n, nc);
                 }
@@ -155,14 +155,14 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _obj = _orb().create_any();
                 _obj.type(org.omg.CORBA.ORB.init().get_primitive_tc(org.omg.CORBA.TCKind.tk_objref));
                 _list.add_value("obj", _obj, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
                 org.omg.CORBA.Object obj;
                 obj = _obj.extract_Object();
                 try {
@@ -195,16 +195,16 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _nc = _orb().create_any();
-                _nc.type(org.omg.CosNaming.NamingContextHelper.type());
+                _nc.type(NamingContextHelper.type());
                 _list.add_value("nc", _nc, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
-                org.omg.CosNaming.NamingContext nc;
-                nc = org.omg.CosNaming.NamingContextHelper.extract(_nc);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
+                NamingContext nc;
+                nc = NamingContextHelper.extract(_nc);
                 try {
                     this.rebind_context(n, nc);
                 }
@@ -235,11 +235,11 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
                 org.omg.CORBA.Object ___result;
                 try {
                     ___result = this.resolve(n);
@@ -271,11 +271,11 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
                 try {
                     this.unbind(n);
                 }
@@ -309,21 +309,21 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
                 _how_many.type(org.omg.CORBA.ORB.init().get_primitive_tc(org.omg.CORBA.TCKind.tk_ulong));
                 _list.add_value("how_many", _how_many, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _bl = _orb().create_any();
-                _bl.type(org.omg.CosNaming.BindingListHelper.type());
+                _bl.type(BindingListHelper.type());
                 _list.add_value("bl", _bl, org.omg.CORBA.ARG_OUT.value);
                 org.omg.CORBA.Any _bi = _orb().create_any();
-                _bi.type(org.omg.CosNaming.BindingIteratorHelper.type());
+                _bi.type(BindingIteratorHelper.type());
                 _list.add_value("bi", _bi, org.omg.CORBA.ARG_OUT.value);
                 r.params(_list);
                 int how_many;
                 how_many = _how_many.extract_ulong();
-                org.omg.CosNaming.BindingListHolder bl;
-                bl = new org.omg.CosNaming.BindingListHolder();
-                org.omg.CosNaming.BindingIteratorHolder bi;
-                bi = new org.omg.CosNaming.BindingIteratorHolder();
+                BindingListHolder bl;
+                bl = new BindingListHolder();
+                BindingIteratorHolder bi;
+                bi = new BindingIteratorHolder();
                 this.list(how_many, bl, bi);
-                org.omg.CosNaming.BindingListHelper.insert(_bl, bl.value);
-                org.omg.CosNaming.BindingIteratorHelper.insert(_bi, bi.value);
+                BindingListHelper.insert(_bl, bl.value);
+                BindingIteratorHelper.insert(_bi, bi.value);
                 org.omg.CORBA.Any __return = _orb().create_any();
                 __return.type(_orb().get_primitive_tc(org.omg.CORBA.TCKind.tk_void));
                 r.result(__return);
@@ -333,10 +333,10 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 r.params(_list);
-                org.omg.CosNaming.NamingContext ___result;
+                NamingContext ___result;
                 ___result = this.new_context();
                 org.omg.CORBA.Any __result = _orb().create_any();
-                org.omg.CosNaming.NamingContextHelper.insert(__result, ___result);
+                NamingContextHelper.insert(__result, ___result);
                 r.result(__result);
             }
             break;
@@ -344,12 +344,12 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _n = _orb().create_any();
-                _n.type(org.omg.CosNaming.NameHelper.type());
+                _n.type(NameHelper.type());
                 _list.add_value("n", _n, org.omg.CORBA.ARG_IN.value);
                 r.params(_list);
-                org.omg.CosNaming.NameComponent[] n;
-                n = org.omg.CosNaming.NameHelper.extract(_n);
-                org.omg.CosNaming.NamingContext ___result;
+                NameComponent[] n;
+                n = NameHelper.extract(_n);
+                NamingContext ___result;
                 try {
                     ___result = this.bind_new_context(n);
                 }
@@ -378,7 +378,7 @@ public abstract class _NamingContextImplBase extends org.omg.CORBA.DynamicImplem
                     return;
                 }
                 org.omg.CORBA.Any __result = _orb().create_any();
-                org.omg.CosNaming.NamingContextHelper.insert(__result, ___result);
+                NamingContextHelper.insert(__result, ___result);
                 r.result(__result);
             }
             break;

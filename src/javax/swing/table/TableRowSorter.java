@@ -121,10 +121,10 @@ import javax.swing.SortOrder;
  * @param <M> the type of the model, which must be an implementation of
  *            <code>TableModel</code>
  * @see javax.swing.JTable
- * @see javax.swing.RowFilter
- * @see javax.swing.table.DefaultTableModel
- * @see java.text.Collator
- * @see java.util.Comparator
+ * @see RowFilter
+ * @see DefaultTableModel
+ * @see Collator
+ * @see Comparator
  * @since 1.6
  */
 public class TableRowSorter<M extends TableModel> extends DefaultRowSorter<M, Integer> {

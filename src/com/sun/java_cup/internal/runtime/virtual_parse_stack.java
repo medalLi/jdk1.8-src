@@ -39,7 +39,7 @@ import java.util.Stack;
  *  modified).  Since parse ahead does not execute actions, only parse
  *  state is maintained on the virtual stack, not full Symbol objects.
  *
- * @see     com.sun.java_cup.internal.runtime.lr_parser
+ * @see     lr_parser
  * @author  Frank Flannery
  */
 
@@ -49,7 +49,7 @@ public class virtual_parse_stack {
   /*-----------------------------------------------------------*/
 
   /** Constructor to build a virtual stack out of a real stack. */
-  public virtual_parse_stack(Stack shadowing_stack) throws java.lang.Exception
+  public virtual_parse_stack(Stack shadowing_stack) throws Exception
     {
       /* sanity check */
       if (shadowing_stack == null)
@@ -130,7 +130,7 @@ public class virtual_parse_stack {
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
 
   /** Return value on the top of the stack (without popping it). */
-  public int top() throws java.lang.Exception
+  public int top() throws Exception
     {
       if (vstack.empty())
         throw new Exception(
@@ -142,7 +142,7 @@ public class virtual_parse_stack {
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
 
   /** Pop the stack. */
-  public void pop() throws java.lang.Exception
+  public void pop() throws Exception
     {
       if (vstack.empty())
         throw new Exception(

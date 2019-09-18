@@ -91,12 +91,12 @@ public interface StringMonitorMBean extends MonitorMBean {
      * Sets the string to compare with the observed attribute.
      *
      * @param value The string value.
-     * @exception java.lang.IllegalArgumentException The specified
+     * @exception IllegalArgumentException The specified
      * string to compare is null.
      *
      * @see #getStringToCompare
      */
-    public void setStringToCompare(String value) throws java.lang.IllegalArgumentException;
+    public void setStringToCompare(String value) throws IllegalArgumentException;
 
     /**
      * Gets the matching notification's on/off switch value.

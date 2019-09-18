@@ -69,7 +69,7 @@ package org.xml.sax;
  *
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.XMLReader#setDTDHandler
+ * @see XMLReader#setDTDHandler
  */
 public interface DTDHandler {
 
@@ -96,14 +96,14 @@ public interface DTDHandler {
      *        none was given.
      * @param systemId The notation's system identifier, or null if
      *        none was given.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @see #unparsedEntityDecl
-     * @see org.xml.sax.Attributes
+     * @see Attributes
      */
-    public abstract void notationDecl (String name,
-                                       String publicId,
-                                       String systemId)
+    public abstract void notationDecl(String name,
+                                      String publicId,
+                                      String systemId)
         throws SAXException;
 
 
@@ -120,7 +120,7 @@ public interface DTDHandler {
      * <p>If the system identifier is a URL, the parser must resolve it
      * fully before passing it to the application.</p>
      *
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @param name The unparsed entity's name.
      * @param publicId The entity's public identifier, or null if none
@@ -128,12 +128,12 @@ public interface DTDHandler {
      * @param systemId The entity's system identifier.
      * @param notationName The name of the associated notation.
      * @see #notationDecl
-     * @see org.xml.sax.Attributes
+     * @see Attributes
      */
-    public abstract void unparsedEntityDecl (String name,
-                                             String publicId,
-                                             String systemId,
-                                             String notationName)
+    public abstract void unparsedEntityDecl(String name,
+                                            String publicId,
+                                            String systemId,
+                                            String notationName)
         throws SAXException;
 
 }

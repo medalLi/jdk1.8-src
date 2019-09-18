@@ -54,7 +54,7 @@ public class InvalidSearchFilterException extends NamingException {
      * Constructs a new instance of InvalidSearchFilterException
      * with an explanation. All other fields are set to null.
      * @param msg Detail about this exception. Can be null.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public InvalidSearchFilterException(String msg) {
         super(msg);

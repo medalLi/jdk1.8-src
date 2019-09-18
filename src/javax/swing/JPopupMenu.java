@@ -73,7 +73,7 @@ import java.applet.Applet;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @beaninfo
  *   attribute: isContainer false
@@ -550,7 +550,7 @@ public class JPopupMenu extends JComponent implements Accessible,MenuElement {
      * Appends a new separator at the end of the menu.
      */
     public void addSeparator() {
-        add( new JPopupMenu.Separator() );
+        add( new Separator() );
     }
 
     /**
@@ -988,7 +988,7 @@ public class JPopupMenu extends JComponent implements Accessible,MenuElement {
      *
      * @param i  the index of the component, where 0 is the first
      * @return the <code>Component</code> at that index
-     * @deprecated replaced by {@link java.awt.Container#getComponent(int)}
+     * @deprecated replaced by {@link Container#getComponent(int)}
      */
     @Deprecated
     public Component getComponentAtIndex(int i) {

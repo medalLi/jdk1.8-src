@@ -12,7 +12,7 @@ abstract public class NotFoundHelper
 {
   private static String  _id = "IDL:omg.org/CosNaming/NamingContext/NotFound:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CosNaming.NamingContextPackage.NotFound that)
+  public static void insert (org.omg.CORBA.Any a, NotFound that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class NotFoundHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CosNaming.NamingContextPackage.NotFound extract (org.omg.CORBA.Any a)
+  public static NotFound extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class NotFoundHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [2];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          _tcOf_members0 = org.omg.CosNaming.NamingContextPackage.NotFoundReasonHelper.type ();
+          _tcOf_members0 = NotFoundReasonHelper.type ();
           _members0[0] = new org.omg.CORBA.StructMember (
             "why",
             _tcOf_members0,
@@ -54,7 +54,7 @@ abstract public class NotFoundHelper
             "rest_of_name",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.CosNaming.NamingContextPackage.NotFoundHelper.id (), "NotFound", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (NotFoundHelper.id (), "NotFound", _members0);
           __active = false;
         }
       }
@@ -67,21 +67,21 @@ abstract public class NotFoundHelper
     return _id;
   }
 
-  public static org.omg.CosNaming.NamingContextPackage.NotFound read (org.omg.CORBA.portable.InputStream istream)
+  public static NotFound read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.CosNaming.NamingContextPackage.NotFound value = new org.omg.CosNaming.NamingContextPackage.NotFound ();
+    NotFound value = new NotFound ();
     // read and discard the repository ID
     istream.read_string ();
-    value.why = org.omg.CosNaming.NamingContextPackage.NotFoundReasonHelper.read (istream);
+    value.why = NotFoundReasonHelper.read (istream);
     value.rest_of_name = org.omg.CosNaming.NameHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CosNaming.NamingContextPackage.NotFound value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, NotFound value)
   {
     // write the repository ID
     ostream.write_string (id ());
-    org.omg.CosNaming.NamingContextPackage.NotFoundReasonHelper.write (ostream, value.why);
+    NotFoundReasonHelper.write (ostream, value.why);
     org.omg.CosNaming.NameHelper.write (ostream, value.rest_of_name);
   }
 

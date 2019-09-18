@@ -162,9 +162,9 @@ public class KeyStoreLoginModule implements LoginModule {
     private String keyStorePasswordURL;
     private String privateKeyPasswordURL;
     private boolean debug;
-    private javax.security.auth.x500.X500Principal principal;
+    private X500Principal principal;
     private Certificate[] fromKeyStore;
-    private java.security.cert.CertPath certP = null;
+    private CertPath certP = null;
     private X500PrivateCredential privateCredential;
     private int status = UNINITIALIZED;
     private boolean nullStream = false;
@@ -673,7 +673,7 @@ public class KeyStoreLoginModule implements LoginModule {
         /* Get principal and keys */
         try {
             X509Certificate certificate = (X509Certificate)fromKeyStore[0];
-            principal = new javax.security.auth.x500.X500Principal
+            principal = new X500Principal
                 (certificate.getSubjectDN().getName());
 
             // if token, privateKeyPassword will be null

@@ -76,7 +76,7 @@ A view has the following responsibilities:
     <li>{@link #getPreferredSpan(int) getPreferredSpan}
     <li>{@link #getMaximumSpan(int) getMaximumSpan}
     <li>{@link #getAlignment(int) getAlignment}
-    <li>{@link #preferenceChanged(javax.swing.text.View, boolean, boolean) preferenceChanged}
+    <li>{@link #preferenceChanged(View, boolean, boolean) preferenceChanged}
     <li>{@link #setSize(float, float) setSize}
     </ul>
 
@@ -142,7 +142,7 @@ A view has the following responsibilities:
     </ul>
     <p>The methods for rendering are:
     <ul>
-    <li>{@link #paint(java.awt.Graphics, java.awt.Shape) paint}
+    <li>{@link #paint(Graphics, Shape) paint}
     </ul>
 
     <dt><b>Translate between the model and view coordinate systems.</b>
@@ -152,8 +152,8 @@ A view has the following responsibilities:
     to perform translation to properly locate spatial representation of the model.
     The methods for doing this are:
     <ul>
-    <li>{@link #modelToView(int, javax.swing.text.Position.Bias, int, javax.swing.text.Position.Bias, java.awt.Shape) modelToView}
-    <li>{@link #viewToModel(float, float, java.awt.Shape, javax.swing.text.Position.Bias[]) viewToModel}
+    <li>{@link #modelToView(int, Position.Bias, int, Position.Bias, Shape) modelToView}
+    <li>{@link #viewToModel(float, float, Shape, Position.Bias[]) viewToModel}
     <li>{@link #getDocument() getDocument}
     <li>{@link #getElement() getElement}
     <li>{@link #getStartOffset() getStartOffset}

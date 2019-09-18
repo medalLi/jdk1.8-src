@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.oa ;
+package com.sun.corba.se.spi.oa;
 
 import org.omg.CORBA.Policy ;
 
@@ -168,7 +168,7 @@ public interface ObjectAdapter
     */
     ORB getORB() ;
 
-    Policy getEffectivePolicy( int type ) ;
+    Policy getEffectivePolicy(int type) ;
 
     /** Returns the IOR template of this adapter.  The profiles
     * in this template may be updated only during the AdapterCreated call.
@@ -198,7 +198,7 @@ public interface ObjectAdapter
     /** Change the current factory.  This may only be called during the
     * AdapterCreated call.
     */
-    void setCurrentFactory( ObjectReferenceFactory factory ) ;
+    void setCurrentFactory(ObjectReferenceFactory factory) ;
 
     ////////////////////////////////////////////////////////////////////////////
     // Methods required for dispatching to servants
@@ -210,7 +210,7 @@ public interface ObjectAdapter
      * reference to be replaced by its servant when it is unmarshalled locally.
      * Such objects are not ORB mediated.
      */
-    org.omg.CORBA.Object getLocalServant( byte[] objectId ) ;
+    org.omg.CORBA.Object getLocalServant(byte[] objectId) ;
 
     /** Get the servant for the request given by the parameters.
     * info must contain a valid objectId in this call.
@@ -220,18 +220,18 @@ public interface ObjectAdapter
     * @exception ForwardException (a runtime exception) is thrown if the request
     * is to be handled by a different object reference.
     */
-    void getInvocationServant( OAInvocationInfo info ) ;
+    void getInvocationServant(OAInvocationInfo info) ;
 
     /** enter must be called before each request is invoked on a servant.
       * @exception OADestroyed is thrown when an OA has been destroyed, which
       * requires a retry in the case where an AdapterActivator is present.
       */
-    void enter( ) throws OADestroyed ;
+    void enter() throws OADestroyed ;
 
     /** exit must be called after each request has been completed.  If enter
     * is called, there must always be a corresponding exit.
     */
-    void exit( ) ;
+    void exit() ;
 
     /** Must be called every time getInvocationServant is called after
      * the request has completed.
@@ -241,9 +241,9 @@ public interface ObjectAdapter
     /** Create an instance of InvocationInfo that is appropriate for this
     * Object adapter.
     */
-    OAInvocationInfo makeInvocationInfo( byte[] objectId ) ;
+    OAInvocationInfo makeInvocationInfo(byte[] objectId) ;
 
     /** Return the most derived interface for the given servant and objectId.
     */
-    String[] getInterfaces( Object servant, byte[] objectId ) ;
+    String[] getInterfaces(Object servant, byte[] objectId) ;
 }

@@ -69,7 +69,7 @@ public interface MonitoredObject {
  * <p>
  * </p>
  */
-    public void addChild( MonitoredObject m );
+    public void addChild(MonitoredObject m);
 /**
  * <p>
  * This method will remove child Monitored Object identified by the given name
@@ -78,7 +78,7 @@ public interface MonitoredObject {
  * @param name of the ChildMonitored Object
  * </p>
  */
-    public void removeChild( String name );
+    public void removeChild(String name);
 
 /**
  * <p>
@@ -113,7 +113,7 @@ public interface MonitoredObject {
  * <p>
  * </p>
  */
-    public void setParent( MonitoredObject m );
+    public void setParent(MonitoredObject m);
 /**
  * <p>
  * There will be only one parent for an instance of MontoredObject, this

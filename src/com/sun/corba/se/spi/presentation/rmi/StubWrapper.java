@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.presentation.rmi ;
+package com.sun.corba.se.spi.presentation.rmi;
 
 import java.rmi.RemoteException ;
 

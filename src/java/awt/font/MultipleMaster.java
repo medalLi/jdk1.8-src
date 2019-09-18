@@ -96,11 +96,11 @@ public interface MultipleMaster {
    * information.
    */
   public Font deriveMMFont(
-                                   float[] glyphWidths,
-                                   float avgStemWidth,
-                                   float typicalCapHeight,
-                                   float typicalXHeight,
-                                   float italicAngle);
+          float[] glyphWidths,
+          float avgStemWidth,
+          float typicalCapHeight,
+          float typicalXHeight,
+          float italicAngle);
 
 
 }

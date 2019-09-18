@@ -31,9 +31,9 @@ abstract public class ServerIdsHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_long);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.ServerIdHelper.id (), "ServerId", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ServerIdHelper.id (), "ServerId", __typeCode);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.ServerIdsHelper.id (), "ServerIds", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ServerIdsHelper.id (), "ServerIds", __typeCode);
     }
     return __typeCode;
   }
@@ -49,7 +49,7 @@ abstract public class ServerIdsHelper
     int _len0 = istream.read_long ();
     value = new int[_len0];
     for (int _o1 = 0;_o1 < value.length; ++_o1)
-      value[_o1] = com.sun.corba.se.spi.activation.ServerIdHelper.read (istream);
+      value[_o1] = ServerIdHelper.read (istream);
     return value;
   }
 
@@ -57,7 +57,7 @@ abstract public class ServerIdsHelper
   {
     ostream.write_long (value.length);
     for (int _i0 = 0;_i0 < value.length; ++_i0)
-      com.sun.corba.se.spi.activation.ServerIdHelper.write (ostream, value[_i0]);
+      ServerIdHelper.write (ostream, value[_i0]);
   }
 
 }

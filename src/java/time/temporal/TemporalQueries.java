@@ -196,7 +196,7 @@ public final class TemporalQueries {
      * {@code ZoneOffset} returns null (does not represent a date)<br>
      * {@code Instant} returns null (does not represent a date)<br>
      * <p>
-     * The method {@link java.time.chrono.Chronology#from(TemporalAccessor)} can be used as a
+     * The method {@link Chronology#from(TemporalAccessor)} can be used as a
      * {@code TemporalQuery} via a method reference, {@code Chronology::from}.
      * That method is equivalent to this query, except that it throws an
      * exception if a chronology cannot be obtained.
@@ -278,7 +278,7 @@ public final class TemporalQueries {
      * The query implementation examines the {@link ChronoField#OFFSET_SECONDS OFFSET_SECONDS}
      * field and uses it to create a {@code ZoneOffset}.
      * <p>
-     * The method {@link java.time.ZoneOffset#from(TemporalAccessor)} can be used as a
+     * The method {@link ZoneOffset#from(TemporalAccessor)} can be used as a
      * {@code TemporalQuery} via a method reference, {@code ZoneOffset::from}.
      * This query and {@code ZoneOffset::from} will return the same result if the
      * temporal object contains an offset. If the temporal object does not contain

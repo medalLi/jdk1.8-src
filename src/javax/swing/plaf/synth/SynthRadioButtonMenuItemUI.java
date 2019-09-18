@@ -31,7 +31,7 @@ import javax.swing.plaf.*;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JRadioButtonMenuItem}.
+ * {@link JRadioButtonMenuItem}.
  *
  * @author Georges Saab
  * @author David Karlton

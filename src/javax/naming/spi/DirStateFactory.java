@@ -140,7 +140,7 @@ public interface DirStateFactory extends StateFactory {
  * @see DirectoryManager#getStateToBind
  */
     public Result getStateToBind(Object obj, Name name, Context nameCtx,
-                                 Hashtable<?,?> environment,
+                                 Hashtable<?, ?> environment,
                                  Attributes inAttrs)
         throws NamingException;
 

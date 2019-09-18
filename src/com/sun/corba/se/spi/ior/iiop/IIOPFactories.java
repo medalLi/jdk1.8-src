@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.ior.iiop ;
+package com.sun.corba.se.spi.ior.iiop;
 
 import org.omg.CORBA_2_3.portable.InputStream ;
 

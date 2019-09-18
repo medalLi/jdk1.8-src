@@ -39,8 +39,8 @@ import javax.imageio.ImageReader;
  * with an <code>ImageReader</code>.  It is up to the
  * <code>ImageReader</code> to provide localized messages.
  *
- * @see javax.imageio.ImageReader#addIIOReadWarningListener
- * @see javax.imageio.ImageReader#removeIIOReadWarningListener
+ * @see ImageReader#addIIOReadWarningListener
+ * @see ImageReader#removeIIOReadWarningListener
  *
  */
 public interface IIOReadWarningListener extends EventListener {

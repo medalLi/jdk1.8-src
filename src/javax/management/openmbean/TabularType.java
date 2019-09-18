@@ -89,8 +89,8 @@ public class TabularType extends OpenType<TabularData> {
      *                     cannot be null or empty. Each element should be an item name defined in <var>rowType</var>
      *                     (no null or empty string allowed).
      *                     It is important to note that the <b>order</b> of the item names in <var>indexNames</var>
-     *                     is used by the methods {@link TabularData#get(java.lang.Object[]) get} and
-     *                     {@link TabularData#remove(java.lang.Object[]) remove} of class
+     *                     is used by the methods {@link TabularData#get(Object[]) get} and
+     *                     {@link TabularData#remove(Object[]) remove} of class
      *                     <code>TabularData</code> to match their array of values parameter to items.
      * <br>&nbsp;
      * @throws IllegalArgumentException  if <var>rowType</var> is null,

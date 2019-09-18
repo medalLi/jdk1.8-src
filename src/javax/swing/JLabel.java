@@ -70,7 +70,7 @@ import java.util.*;
  * with the text and image vertically aligned.
  * <p>
  * A label's leading and trailing edge are determined from the value of its
- * {@link java.awt.ComponentOrientation} property.  At present, the default
+ * {@link ComponentOrientation} property.  At present, the default
  * ComponentOrientation setting maps the leading edge to left and the trailing
  * edge to right.
  *
@@ -421,7 +421,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
      *
      * @return the <code>disabledIcon</code> property
      * @see #setDisabledIcon
-     * @see javax.swing.LookAndFeel#getDisabledIcon
+     * @see LookAndFeel#getDisabledIcon
      * @see ImageIcon
      */
     @Transient
@@ -886,7 +886,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
      * not equal to the passed in Image <code>img</code>.
      *
      * @see     java.awt.image.ImageObserver
-     * @see     java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
+     * @see     Component#imageUpdate(Image, int, int, int, int, int)
      */
     public boolean imageUpdate(Image img, int infoflags,
                                int x, int y, int w, int h) {
@@ -1624,7 +1624,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
              * out of bounds
              * @see #getAccessibleKeyBindingCount
              */
-            public java.lang.Object getAccessibleKeyBinding(int i) {
+            public Object getAccessibleKeyBinding(int i) {
                 if (i != 0) {
                     throw new IllegalArgumentException();
                 }

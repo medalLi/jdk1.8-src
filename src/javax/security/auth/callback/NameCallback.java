@@ -30,7 +30,7 @@ package javax.security.auth.callback;
  * {@code NameCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to retrieve name information.
  *
- * @see javax.security.auth.callback.CallbackHandler
+ * @see CallbackHandler
  */
 public class NameCallback implements Callback, java.io.Serializable {
 

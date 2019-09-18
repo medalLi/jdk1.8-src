@@ -70,14 +70,14 @@ public final class ValueMember implements org.omg.CORBA.portable.IDLEntity {
      * The type of of this <code>value</code> member.
      * @serial
      */
-    public org.omg.CORBA.TypeCode type;
+    public TypeCode type;
 
     /**
      * The typedef that represents the IDL type of the <code>value</code>
      * member described by this <code>ValueMember</code> object.
      * @serial
      */
-    public org.omg.CORBA.IDLType type_def;
+    public IDLType type_def;
 
     /**
      * The type of access (public, private) for the <code>value</code>
@@ -109,7 +109,7 @@ public final class ValueMember implements org.omg.CORBA.portable.IDLEntity {
      *@param __access The type of access (public, private) for the <code>value</code>
      * member described by this <code>ValueMember</code> object.
      */
-    public ValueMember(String __name, String __id, String __defined_in, String __version, org.omg.CORBA.TypeCode __type, org.omg.CORBA.IDLType __type_def, short __access) {
+    public ValueMember(String __name, String __id, String __defined_in, String __version, TypeCode __type, IDLType __type_def, short __access) {
         name = __name;
         id = __id;
         defined_in = __defined_in;

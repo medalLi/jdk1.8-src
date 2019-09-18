@@ -103,7 +103,7 @@ public class NamingManager {
      * @see #getObjectInstance
      * @see ObjectFactory
      * @see ObjectFactoryBuilder
-     * @see java.lang.SecurityManager#checkSetFactory
+     * @see SecurityManager#checkSetFactory
      */
     public static synchronized void setObjectFactoryBuilder(
             ObjectFactoryBuilder builder) throws NamingException {
@@ -581,7 +581,7 @@ public class NamingManager {
      * @param nameCtx Context whose provider resource file will be searched
      *          for package prefix values (or null if none)
      * @param environment Environment properties for creating the context
-     * @see javax.naming.InitialContext
+     * @see InitialContext
      */
     private static Object getURLObject(String scheme, Object urlInfo,
                                        Name name, Context nameCtx,
@@ -644,7 +644,7 @@ public class NamingManager {
      *          or if the initial context could not be created for some other
      *          reason.
      * @exception NamingException If some other naming exception was encountered.
-     * @see javax.naming.InitialContext
+     * @see InitialContext
      * @see javax.naming.directory.InitialDirContext
      */
     public static Context getInitialContext(Hashtable<?,?> env)
@@ -700,7 +700,7 @@ public class NamingManager {
      *         a non-security-related reason.
      * @exception IllegalStateException If a builder was previous installed.
      * @see #hasInitialContextFactoryBuilder
-     * @see java.lang.SecurityManager#checkSetFactory
+     * @see SecurityManager#checkSetFactory
      */
     public static synchronized void setInitialContextFactoryBuilder(
         InitialContextFactoryBuilder builder)

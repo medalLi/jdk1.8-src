@@ -35,7 +35,7 @@ import com.sun.jmx.remote.util.ClassLogger;
 
 /**
  * <p>Provides an implementation of {@link
- * javax.management.NotificationEmitter NotificationEmitter}
+ * NotificationEmitter NotificationEmitter}
  * interface.  This can be used as the super class of an MBean that
  * sends notifications.</p>
  *
@@ -72,7 +72,7 @@ public class NotificationBroadcasterSupport implements NotificationEmitter {
 
     /**
      * Constructs a NotificationBroadcasterSupport where each listener is invoked using
-     * the given {@link java.util.concurrent.Executor}. When {@link #sendNotification
+     * the given {@link Executor}. When {@link #sendNotification
      * sendNotification} is called, a listener is selected if it was added with a null
      * {@link NotificationFilter}, or if {@link NotificationFilter#isNotificationEnabled
      * isNotificationEnabled} returns true for the notification being sent. The call to
@@ -119,7 +119,7 @@ public class NotificationBroadcasterSupport implements NotificationEmitter {
 
     /**
      * <p>Constructs a NotificationBroadcasterSupport with information about the notifications that may be sent,
-     * and where each listener is invoked using the given {@link java.util.concurrent.Executor}.</p>
+     * and where each listener is invoked using the given {@link Executor}.</p>
      *
      * <p>When {@link #sendNotification sendNotification} is called, a
      * listener is selected if it was added with a null {@link

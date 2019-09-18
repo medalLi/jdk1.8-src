@@ -37,21 +37,21 @@ import com.sun.corba.se.pept.transport.ContactInfoList;
 public interface ClientDelegate
 {
     /**
-     * The {@link com.sun.corba.se.pept.broker.Broker Broker} associated
+     * The {@link Broker Broker} associated
      * with an invocation.
      *
-     * @return {@link com.sun.corba.se.pept.broker.Broker Broker}
+     * @return {@link Broker Broker}
      */
     public Broker getBroker();
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.ContactInfoList ContactInfoList}
+     * {@link ContactInfoList ContactInfoList}
      * which represents they encoding/protocol/transport combinations that
      * may be used to contact the service.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.ContactInfoList ContactInfoList}
+     * {@link ContactInfoList ContactInfoList}
      */
     public ContactInfoList getContactInfoList();
 }

@@ -55,7 +55,7 @@ public final class TransientObjectManager {
         freeList = elementArray[0];
     }
 
-    public synchronized byte[] storeServant(java.lang.Object servant, java.lang.Object servantData)
+    public synchronized byte[] storeServant(Object servant, Object servantData)
     {
         if ( freeList == null )
             doubleSize();
@@ -69,7 +69,7 @@ public final class TransientObjectManager {
         return result ;
     }
 
-    public synchronized java.lang.Object lookupServant(byte transientKey[])
+    public synchronized Object lookupServant(byte transientKey[])
     {
         int index = ORBUtility.bytesToInt(transientKey,0);
         int counter = ORBUtility.bytesToInt(transientKey,4);
@@ -90,7 +90,7 @@ public final class TransientObjectManager {
         return null;
     }
 
-    public synchronized java.lang.Object lookupServantData(byte transientKey[])
+    public synchronized Object lookupServantData(byte transientKey[])
     {
         int index = ORBUtility.bytesToInt(transientKey,0);
         int counter = ORBUtility.bytesToInt(transientKey,4);
@@ -121,7 +121,7 @@ public final class TransientObjectManager {
         freeList = elementArray[index];
     }
 
-    public synchronized byte[] getKey(java.lang.Object servant)
+    public synchronized byte[] getKey(Object servant)
     {
         for ( int i=0; i<maxSize; i++ )
             if ( elementArray[i].valid &&
@@ -153,20 +153,20 @@ public final class TransientObjectManager {
 
 
 final class Element {
-    java.lang.Object servant=null;     // also stores "next pointer" in free list
-    java.lang.Object servantData=null;
+    Object servant=null;     // also stores "next pointer" in free list
+    Object servantData=null;
     int index=-1;
     int counter=0;
     boolean valid=false; // valid=true if this Element contains
     // a valid servant
 
-    Element(int i, java.lang.Object next)
+    Element(int i, Object next)
     {
         servant = next;
         index = i;
     }
 
-    byte[] getKey(java.lang.Object servant, java.lang.Object servantData)
+    byte[] getKey(Object servant, Object servantData)
     {
         this.servant = servant;
         this.servantData = servantData;

@@ -80,7 +80,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
 
             String propValue = (String) AccessController.doPrivileged(
                                         new PrivilegedAction() {
-                public java.lang.Object run() {
+                public Object run() {
                     return System.getProperty(ValueHandlerImpl.FORMAT_VERSION_PROPERTY);
                 }
             });
@@ -244,7 +244,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
      **/
     public java.io.Serializable readValue(org.omg.CORBA.portable.InputStream _in,
                                           int offset,
-                                          java.lang.Class clazz,
+                                          Class clazz,
                                           String repositoryID,
                                           org.omg.SendingContext.RunTime _sender)
     {
@@ -319,9 +319,9 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
     private java.io.Serializable readValueInternal(IIOPInputStream bridge,
                                                   org.omg.CORBA_2_3.portable.InputStream in,
                                                   int offset,
-                                                  java.lang.Class clazz,
+                                                  Class clazz,
                                                   String repositoryID,
-                                                  com.sun.org.omg.SendingContext.CodeBase sender)
+                                                  CodeBase sender)
     {
         java.io.Serializable result = null;
 
@@ -349,7 +349,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
      * @param clz The class to return a repository ID for.
      * @return the repository ID of the Class.
      **/
-    public java.lang.String getRMIRepositoryID(java.lang.Class clz) {
+    public String getRMIRepositoryID(Class clz) {
         return RepositoryId.createForJavaType(clz);
     }
 
@@ -360,7 +360,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
      * @return True if the class performs custom marshaling, false
      * if it does not.
      **/
-    public boolean isCustomMarshaled(java.lang.Class clz) {
+    public boolean isCustomMarshaled(Class clz) {
         return ObjectStreamClass.lookup(clz).isCustomMarshaled();
     }
 
@@ -524,7 +524,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
                 throw new Error("Invalid primitive type : " +
                     obj.getClass().getName());
             }
-        } else if (type == java.lang.Object.class) {
+        } else if (type == Object.class) {
             Object[] array = (Object[])((Object)obj);
             length = array.length;
             out.write_ulong(length);
@@ -587,10 +587,10 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
         in.read_wchar_array(array, offset, length);
     }
 
-    private java.lang.Object read_Array(IIOPInputStream bridge,
+    private Object read_Array(IIOPInputStream bridge,
                                         org.omg.CORBA_2_3.portable.InputStream in,
                                         Class sequence,
-                                        com.sun.org.omg.SendingContext.CodeBase sender,
+                                        CodeBase sender,
                                         int offset)
     {
         try {
@@ -646,7 +646,7 @@ public final class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMulti
                     // XXX I18N, logging needed.
                     throw new Error("Invalid primitive componentType : " + sequence.getName());
                 }
-            } else if (componentType == java.lang.Object.class) {
+            } else if (componentType == Object.class) {
                 Object[] array = (Object[])java.lang.reflect.Array.newInstance(
                     componentType, length);
 

@@ -58,7 +58,7 @@ public abstract class InputStreamHook extends ObjectInputStream
     static final UtilSystemException utilWrapper =
         UtilSystemException.get( CORBALogDomains.RPC_ENCODING ) ;
 
-    private class HookGetFields extends ObjectInputStream.GetField {
+    private class HookGetFields extends GetField {
         private Map fields = null;
 
         HookGetFields(Map fields){
@@ -203,15 +203,15 @@ public abstract class InputStreamHook extends ObjectInputStream
 
     abstract void defaultReadObjectDelegate();
 
-    abstract void readFields(java.util.Map fieldToValueMap)
-        throws java.io.InvalidClassException, java.io.StreamCorruptedException,
-               ClassNotFoundException, java.io.IOException;
+    abstract void readFields(Map fieldToValueMap)
+        throws java.io.InvalidClassException, StreamCorruptedException,
+               ClassNotFoundException, IOException;
 
 
     // See java.io.ObjectInputStream.GetField
     // Remember that this is equivalent to defaultReadObject
     // in RMI-IIOP
-    public ObjectInputStream.GetField readFields()
+    public GetField readFields()
         throws IOException, ClassNotFoundException, NotActiveException {
 
         HashMap fieldValueMap = new HashMap();
@@ -400,12 +400,12 @@ public abstract class InputStreamHook extends ObjectInputStream
         public void readData(InputStreamHook stream) throws IOException {
             org.omg.CORBA.ORB orb = stream.getOrbStream().orb();
             if ((orb == null) ||
-                    !(orb instanceof com.sun.corba.se.spi.orb.ORB)) {
+                    !(orb instanceof ORB)) {
                 throw new StreamCorruptedException(
                                      "Default data must be read first");
             }
             ORBVersion clientOrbVersion =
-                ((com.sun.corba.se.spi.orb.ORB)orb).getORBVersion();
+                ((ORB)orb).getORBVersion();
 
             // Fix Date interop bug. For older versions of the ORB don't do
             // anything for readData(). Before this used to throw

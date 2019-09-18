@@ -156,7 +156,7 @@ public class DynSequenceImpl extends DynAnyCollectionImpl implements DynSequence
     // ?f the current position indicates a valid element and that element is removed, the
     // current position is set to -1.
     public void set_length(int len)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -240,7 +240,7 @@ public class DynSequenceImpl extends DynAnyCollectionImpl implements DynSequence
     //
 
     protected void checkValue(Object[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (value == null || value.length == 0) {
             clearData();

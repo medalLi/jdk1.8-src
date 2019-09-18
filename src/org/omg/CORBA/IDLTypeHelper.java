@@ -39,7 +39,7 @@ abstract public class IDLTypeHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/IDLType:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.IDLType that)
+  public static void insert (Any a, IDLType that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -47,17 +47,17 @@ abstract public class IDLTypeHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CORBA.IDLType extract (org.omg.CORBA.Any a)
+  public static IDLType extract (Any a)
   {
     return read (a.create_input_stream ());
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  private static TypeCode __typeCode = null;
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.CORBA.IDLTypeHelper.id (), "IDLType");
+      __typeCode = ORB.init ().create_interface_tc (IDLTypeHelper.id (), "IDLType");
     }
     return __typeCode;
   }
@@ -67,28 +67,28 @@ abstract public class IDLTypeHelper
     return _id;
   }
 
-  public static org.omg.CORBA.IDLType read (org.omg.CORBA.portable.InputStream istream)
+  public static IDLType read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_IDLTypeStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.IDLType value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, IDLType value)
   {
-    ostream.write_Object ((org.omg.CORBA.Object) value);
+    ostream.write_Object ((Object) value);
   }
 
-  public static org.omg.CORBA.IDLType narrow (org.omg.CORBA.Object obj)
+  public static IDLType narrow (Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.CORBA.IDLType)
-      return (org.omg.CORBA.IDLType)obj;
+    else if (obj instanceof IDLType)
+      return (IDLType)obj;
     else if (!obj._is_a (id ()))
-      throw new org.omg.CORBA.BAD_PARAM ();
+      throw new BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      return new org.omg.CORBA._IDLTypeStub (delegate);
+      return new _IDLTypeStub (delegate);
     }
   }
 

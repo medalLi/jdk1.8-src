@@ -45,7 +45,7 @@ import javax.naming.*;
   *
   * @see InitialContextFactoryBuilder
   * @see NamingManager#getInitialContext
-  * @see javax.naming.InitialContext
+  * @see InitialContext
   * @see javax.naming.directory.InitialDirContext
   * @since 1.3
   */
@@ -67,6 +67,6 @@ public interface InitialContextFactory {
           *             interface.
           * @exception NamingException If cannot create an initial context.
           */
-        public Context getInitialContext(Hashtable<?,?> environment)
+        public Context getInitialContext(Hashtable<?, ?> environment)
             throws NamingException;
 }

@@ -119,8 +119,8 @@ public interface DocPrintJob {
      * all attributes that can change, as determined by the job.
      */
     public void addPrintJobAttributeListener(
-                                  PrintJobAttributeListener listener,
-                                  PrintJobAttributeSet attributes);
+            PrintJobAttributeListener listener,
+            PrintJobAttributeSet attributes);
 
     /**
      * Removes an attribute listener from this print job.
@@ -136,7 +136,7 @@ public interface DocPrintJob {
      *
      */
     public void removePrintJobAttributeListener(
-                                      PrintJobAttributeListener listener);
+            PrintJobAttributeListener listener);
 
     /**
      * Prints a document with the specified job attributes.

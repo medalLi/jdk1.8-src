@@ -437,7 +437,7 @@ public final class Utility {
             try {
                 factory = ((org.omg.CORBA_2_3.ORB)orb).lookup_value_factory(
                     repId);
-            } catch (org.omg.CORBA.BAD_PARAM ex) {
+            } catch (BAD_PARAM ex) {
                 // Try other way
             }
         }
@@ -668,7 +668,7 @@ public final class Utility {
                 try {
                     Delegate delegate = StubAdapter.getDelegate( tie ) ;
                     StubAdapter.setDelegate( stub, delegate ) ;
-                } catch( org.omg.CORBA.BAD_INV_ORDER bad) {
+                } catch( BAD_INV_ORDER bad) {
                     synchronized (stubToTieCache) {
                         stubToTieCache.put(stub,tie);
                     }

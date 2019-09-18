@@ -308,7 +308,7 @@ public interface ModelMBeanInfo
     /**
      * Creates and returns a copy of this object.
      */
-    public java.lang.Object clone();
+    public Object clone();
 
     /**
      * Returns the list of attributes exposed for management.
@@ -324,7 +324,7 @@ public interface ModelMBeanInfo
      *
      * @return the Java class name.
      */
-    public java.lang.String getClassName();
+    public String getClassName();
 
     /**
      * Returns the list of the public constructors  of the MBean.
@@ -339,7 +339,7 @@ public interface ModelMBeanInfo
      *
      * @return the description.
      */
-    public java.lang.String getDescription();
+    public String getDescription();
 
     /**
      * Returns the list of the notifications emitted by the MBean.

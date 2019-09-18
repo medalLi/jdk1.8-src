@@ -43,14 +43,14 @@ import sun.security.krb5.RealmException;
  * authentication process.
  * <p>
  * If a {@code KeyTab} object is obtained from {@link #getUnboundInstance()}
- * or {@link #getUnboundInstance(java.io.File)}, it is unbound and thus can be
+ * or {@link #getUnboundInstance(File)}, it is unbound and thus can be
  * used by any service principal. Otherwise, if it's obtained from
  * {@link #getInstance(KerberosPrincipal)} or
- * {@link #getInstance(KerberosPrincipal, java.io.File)}, it is bound to the
+ * {@link #getInstance(KerberosPrincipal, File)}, it is bound to the
  * specific service principal and can only be used by it.
  * <p>
  * Please note the constructors {@link #getInstance()} and
- * {@link #getInstance(java.io.File)} were created when there was no support
+ * {@link #getInstance(File)} were created when there was no support
  * for unbound keytabs. These methods should not be used anymore. An object
  * created with either of these methods are considered to be bound to an
  * unknown principal, which means, its {@link #isBound()} returns true and
@@ -62,7 +62,7 @@ import sun.security.krb5.RealmException;
  * instance from a Subject. This permission is not needed when the
  * application depends on the default JGSS Kerberos mechanism to access the
  * KeyTab. In that case, however, the application will need an appropriate
- * {@link javax.security.auth.kerberos.ServicePermission ServicePermission}.
+ * {@link ServicePermission ServicePermission}.
  * <p>
  * The keytab file format is described at
  * <a href="http://www.ioplex.com/utilities/keytab.txt">

@@ -43,7 +43,7 @@ public class MBeanException extends JMException   {
     /**
      * @serial Encapsulated {@link Exception}
      */
-    private java.lang.Exception exception ;
+    private Exception exception ;
 
 
     /**
@@ -51,7 +51,7 @@ public class MBeanException extends JMException   {
      *
      * @param e the wrapped exception.
      */
-    public MBeanException(java.lang.Exception e) {
+    public MBeanException(Exception e) {
         super() ;
         exception = e ;
     }
@@ -63,7 +63,7 @@ public class MBeanException extends JMException   {
      * @param e the wrapped exception.
      * @param message the detail message.
      */
-    public MBeanException(java.lang.Exception e, String message) {
+    public MBeanException(Exception e, String message) {
         super(message) ;
         exception = e ;
     }

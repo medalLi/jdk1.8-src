@@ -48,7 +48,7 @@ public abstract class Delegate extends org.omg.CORBA.portable.Delegate {
      * @return the codebase as a space delimited list of url strings or
      * null if none.
      */
-    public java.lang.String get_codebase(org.omg.CORBA.Object self) {
+    public String get_codebase(org.omg.CORBA.Object self) {
         return null;
     }
 }

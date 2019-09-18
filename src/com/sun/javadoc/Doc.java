@@ -141,7 +141,7 @@ public interface Doc extends Comparable<Object> {
      * negative integer, zero, or a positive integer as this doc object is less
      * than, equal to, or greater than the given object.
      * <p>
-     * This method satisfies the {@link java.lang.Comparable} interface.
+     * This method satisfies the {@link Comparable} interface.
      *
      * @param   obj  the <code>Object</code> to be compared.
      * @return  a negative integer, zero, or a positive integer as this Object

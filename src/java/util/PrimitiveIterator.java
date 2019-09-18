@@ -35,18 +35,18 @@ import java.util.function.LongConsumer;
  * {@link OfDouble double} values.
  *
  * <p>The specialized subtype default implementations of {@link Iterator#next}
- * and {@link Iterator#forEachRemaining(java.util.function.Consumer)} box
+ * and {@link Iterator#forEachRemaining(Consumer)} box
  * primitive values to instances of their corresponding wrapper class.  Such
  * boxing may offset any advantages gained when using the primitive
  * specializations.  To avoid boxing, the corresponding primitive-based methods
- * should be used.  For example, {@link PrimitiveIterator.OfInt#nextInt()} and
- * {@link PrimitiveIterator.OfInt#forEachRemaining(java.util.function.IntConsumer)}
- * should be used in preference to {@link PrimitiveIterator.OfInt#next()} and
- * {@link PrimitiveIterator.OfInt#forEachRemaining(java.util.function.Consumer)}.
+ * should be used.  For example, {@link OfInt#nextInt()} and
+ * {@link OfInt#forEachRemaining(IntConsumer)}
+ * should be used in preference to {@link OfInt#next()} and
+ * {@link OfInt#forEachRemaining(Consumer)}.
  *
  * <p>Iteration of primitive values using boxing-based methods
  * {@link Iterator#next next()} and
- * {@link Iterator#forEachRemaining(java.util.function.Consumer) forEachRemaining()},
+ * {@link Iterator#forEachRemaining(Consumer) forEachRemaining()},
  * does not affect the order in which the values, transformed to boxed values,
  * are encountered.
  *
@@ -59,8 +59,8 @@ import java.util.function.LongConsumer;
  *        type must be a wrapper type for a primitive type, such as
  *        {@code Integer} for the primitive {@code int} type.
  * @param <T_CONS> the type of primitive consumer.  The type must be a
- *        primitive specialization of {@link java.util.function.Consumer} for
- *        {@code T}, such as {@link java.util.function.IntConsumer} for
+ *        primitive specialization of {@link Consumer} for
+ *        {@code T}, such as {@link IntConsumer} for
  *        {@code Integer}.
  *
  * @since 1.8

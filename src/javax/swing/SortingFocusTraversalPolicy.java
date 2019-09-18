@@ -55,7 +55,7 @@ import sun.util.logging.PlatformLogger;
  *
  * @author David Mendenhall
  *
- * @see java.util.Comparator
+ * @see Comparator
  * @since 1.4
  */
 public class SortingFocusTraversalPolicy

@@ -117,7 +117,7 @@ public class TransferHandler implements Serializable {
      * This value is used to specify that data should be linked in a drag
      * and drop operation.
      *
-     * @see java.awt.dnd.DnDConstants#ACTION_LINK
+     * @see DnDConstants#ACTION_LINK
      * @since 1.6
      */
     public static final int LINK = DnDConstants.ACTION_LINK;
@@ -145,7 +145,7 @@ public class TransferHandler implements Serializable {
      * implementation by <code>TransferSupport</code> instances and by
      * components with a <code>getDropLocation()</code> method.
      *
-     * @see javax.swing.TransferHandler.TransferSupport#getDropLocation
+     * @see TransferSupport#getDropLocation
      * @since 1.6
      */
     public static class DropLocation {
@@ -206,8 +206,8 @@ public class TransferHandler implements Serializable {
      * class. Instead, they are something provided by the DnD
      * implementation to certain methods in <code>TransferHandler</code>.
      *
-     * @see #canImport(TransferHandler.TransferSupport)
-     * @see #importData(TransferHandler.TransferSupport)
+     * @see #canImport(TransferSupport)
+     * @see #importData(TransferSupport)
      * @since 1.6
      */
     public final static class TransferSupport {
@@ -461,8 +461,8 @@ public class TransferHandler implements Serializable {
          * {@code TransferSupport} represents a drop.
          * <p>
          * The user drop action is chosen for a drop as described in the
-         * documentation for {@link java.awt.dnd.DropTargetDragEvent} and
-         * {@link java.awt.dnd.DropTargetDropEvent}. A different action
+         * documentation for {@link DropTargetDragEvent} and
+         * {@link DropTargetDropEvent}. A different action
          * may be chosen as the drop action by way of the {@code setDropAction}
          * method.
          * <p>
@@ -641,14 +641,14 @@ public class TransferHandler implements Serializable {
     /**
      * image for the {@code startDrag} method
      *
-     * @see java.awt.dnd.DragGestureEvent#startDrag(Cursor dragCursor, Image dragImage, Point imageOffset, Transferable transferable, DragSourceListener dsl)
+     * @see DragGestureEvent#startDrag(Cursor dragCursor, Image dragImage, Point imageOffset, Transferable transferable, DragSourceListener dsl)
      */
     private  Image dragImage;
 
     /**
      * anchor offset for the {@code startDrag} method
      *
-     * @see java.awt.dnd.DragGestureEvent#startDrag(Cursor dragCursor, Image dragImage, Point imageOffset, Transferable transferable, DragSourceListener dsl)
+     * @see DragGestureEvent#startDrag(Cursor dragCursor, Image dragImage, Point imageOffset, Transferable transferable, DragSourceListener dsl)
      */
     private  Point dragImageOffset;
 
@@ -819,7 +819,7 @@ public class TransferHandler implements Serializable {
      * @return true if the data was inserted into the component,
      *         false otherwise
      * @throws NullPointerException if <code>support</code> is {@code null}
-     * @see #canImport(TransferHandler.TransferSupport)
+     * @see #canImport(TransferSupport)
      * @since 1.6
      */
     public boolean importData(TransferSupport support) {
@@ -845,7 +845,7 @@ public class TransferHandler implements Serializable {
      *              provided to enable sharing of <code>TransferHandler</code>s
      * @param t     the data to import
      * @return  true if the data was inserted into the component, false otherwise
-     * @see #importData(TransferHandler.TransferSupport)
+     * @see #importData(TransferSupport)
      */
     public boolean importData(JComponent comp, Transferable t) {
         PropertyDescriptor prop = getPropertyDescriptor(comp);
@@ -916,9 +916,9 @@ public class TransferHandler implements Serializable {
      * @return <code>true</code> if the import can happen,
      *         <code>false</code> otherwise
      * @throws NullPointerException if <code>support</code> is {@code null}
-     * @see #importData(TransferHandler.TransferSupport)
-     * @see javax.swing.TransferHandler.TransferSupport#setShowDropLocation
-     * @see javax.swing.TransferHandler.TransferSupport#setDropAction
+     * @see #importData(TransferSupport)
+     * @see TransferSupport#setShowDropLocation
+     * @see TransferSupport#setDropAction
      * @since 1.6
      */
     public boolean canImport(TransferSupport support) {
@@ -943,7 +943,7 @@ public class TransferHandler implements Serializable {
      *              provided to enable sharing of <code>TransferHandler</code>s
      * @param transferFlavors  the data formats available
      * @return  true if the data can be inserted into the component, false otherwise
-     * @see #canImport(TransferHandler.TransferSupport)
+     * @see #canImport(TransferSupport)
      */
     public boolean canImport(JComponent comp, DataFlavor[] transferFlavors) {
         PropertyDescriptor prop = getPropertyDescriptor(comp);
@@ -1775,11 +1775,11 @@ public class TransferHandler implements Serializable {
             if (SwingUtilities2.canAccessSystemClipboard()) {
                 return c.getToolkit().getSystemClipboard();
             }
-            Clipboard clipboard = (Clipboard)sun.awt.AppContext.getAppContext().
+            Clipboard clipboard = (Clipboard) AppContext.getAppContext().
                 get(SandboxClipboardKey);
             if (clipboard == null) {
                 clipboard = new Clipboard("Sandboxed Component Clipboard");
-                sun.awt.AppContext.getAppContext().put(SandboxClipboardKey,
+                AppContext.getAppContext().put(SandboxClipboardKey,
                                                        clipboard);
             }
             return clipboard;

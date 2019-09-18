@@ -176,7 +176,7 @@ public interface ButtonModel extends ItemSelectable {
      *
      * @param s the <code>String</code> that identifies the generated event
      * @see #getActionCommand
-     * @see java.awt.event.ActionEvent#getActionCommand
+     * @see ActionEvent#getActionCommand
      */
     public void setActionCommand(String s);
 

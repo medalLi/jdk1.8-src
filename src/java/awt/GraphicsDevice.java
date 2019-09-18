@@ -217,7 +217,7 @@ public abstract class GraphicsDevice {
      * that permission is granted.
      * @return whether full-screen exclusive mode is available for
      * this graphics device
-     * @see java.awt.AWTPermission
+     * @see AWTPermission
      * @since 1.4
      */
     public boolean isFullScreenSupported() {

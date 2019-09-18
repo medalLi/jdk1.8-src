@@ -59,7 +59,7 @@ import java.util.StringTokenizer;
  * with a {@code DomainCombiner}.  Extreme care must be taken when
  * granting this permission. Malicious code could create a DomainCombiner
  * that augments the set of permissions granted to code, and even grant the
- * code {@link java.security.AllPermission}.</td>
+ * code {@link AllPermission}.</td>
  * </tr>
  *
  * <tr>
@@ -205,7 +205,7 @@ import java.util.StringTokenizer;
  *   <td>Addition of a new provider, with the specified name</td>
  *   <td>Use of this permission is discouraged from further use because it is
  * possible to circumvent the name restrictions by overriding the
- * {@link java.security.Provider#getName} method. Also, there is an equivalent
+ * {@link Provider#getName} method. Also, there is an equivalent
  * level of risk associated with granting code permission to insert a provider
  * with a specific name, or any name it chooses. Users should use the
  * "insertProvider" permission instead.
@@ -299,11 +299,11 @@ import java.util.StringTokenizer;
  *
  * </table>
  *
- * @see java.security.BasicPermission
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see BasicPermission
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  *
  * @author Marianne Mueller

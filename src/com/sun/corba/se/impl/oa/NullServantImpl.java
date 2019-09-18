@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa ;
+package com.sun.corba.se.impl.oa;
 
 import org.omg.CORBA.SystemException ;
 

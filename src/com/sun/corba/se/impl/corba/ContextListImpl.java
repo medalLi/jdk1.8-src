@@ -41,10 +41,10 @@ public class ContextListImpl extends ContextList
     private final int    INITIAL_CAPACITY       = 2;
     private final int    CAPACITY_INCREMENT     = 2;
 
-    private org.omg.CORBA.ORB _orb;
+    private ORB _orb;
     private Vector _contexts;
 
-    public ContextListImpl(org.omg.CORBA.ORB orb)
+    public ContextListImpl(ORB orb)
     {
         // Note: This orb could be an instanceof ORBSingleton or ORB
         _orb = orb;

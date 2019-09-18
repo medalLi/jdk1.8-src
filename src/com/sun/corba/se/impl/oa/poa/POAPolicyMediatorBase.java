@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import java.util.Collection;
 import java.util.Enumeration ;
@@ -115,10 +115,10 @@ public abstract class POAPolicyMediatorBase implements POAPolicyMediator {
         sysIdCounter = 0 ;
     }
 
-    public final java.lang.Object getInvocationServant( byte[] id,
+    public final Object getInvocationServant( byte[] id,
         String operation ) throws ForwardRequest
     {
-        java.lang.Object result = internalGetServant( id, operation ) ;
+        Object result = internalGetServant( id, operation ) ;
 
         return result ;
     }
@@ -144,6 +144,6 @@ public abstract class POAPolicyMediatorBase implements POAPolicyMediator {
         return array;
     }
 
-    protected abstract  java.lang.Object internalGetServant( byte[] id,
+    protected abstract  Object internalGetServant( byte[] id,
         String operation ) throws ForwardRequest ;
 }

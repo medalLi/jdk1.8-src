@@ -245,8 +245,8 @@ public final class Boolean implements java.io.Serializable,
      * @return  the {@code boolean} value of the system property.
      * @throws  SecurityException for the same reasons as
      *          {@link System#getProperty(String) System.getProperty}
-     * @see     java.lang.System#getProperty(java.lang.String)
-     * @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
+     * @see     System#getProperty(String)
+     * @see     System#getProperty(String, String)
      */
     public static boolean getBoolean(String name) {
         boolean result = false;

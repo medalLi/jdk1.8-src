@@ -58,7 +58,7 @@ public interface LogicalMessage {
    *  @param  payload message payload
    *  @throws WebServiceException If any error during the setting
    *          of the payload in this message
-   *  @throws java.lang.UnsupportedOperationException If this
+   *  @throws UnsupportedOperationException If this
    *          operation is not supported
   **/
   public void setPayload(Source payload);
@@ -82,7 +82,7 @@ public interface LogicalMessage {
    *  @param  payload message payload
    *  @param  context The JAXBContext that should be used to marshall
    *          the payload
-   *  @throws java.lang.UnsupportedOperationException If this
+   *  @throws UnsupportedOperationException If this
    *          operation is not supported
    *  @throws WebServiceException If an error occurs when using the supplied
    *     JAXBContext to marshall the payload. The cause of

@@ -434,7 +434,7 @@ class JarVerifier {
         }
     }
 
-    static class VerifierStream extends java.io.InputStream {
+    static class VerifierStream extends InputStream {
 
         private InputStream is;
         private JarVerifier jv;

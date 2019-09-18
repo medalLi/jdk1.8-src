@@ -31,7 +31,7 @@ package java.io;
  * @since       JDK1.1
  */
 public class CharConversionException
-    extends java.io.IOException
+    extends IOException
 {
     private static final long serialVersionUID = -8680016352018427031L;
 

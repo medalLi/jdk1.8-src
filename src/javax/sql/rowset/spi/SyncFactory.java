@@ -198,8 +198,8 @@ import sun.reflect.misc.ReflectUtil;
  * <code>javax.sql.rowset.spi</code> package specification.
  *
  * @author  Jonathan Bruce
- * @see javax.sql.rowset.spi.SyncProvider
- * @see javax.sql.rowset.spi.SyncFactoryException
+ * @see SyncProvider
+ * @see SyncFactoryException
  */
 public class SyncFactory {
 
@@ -638,7 +638,7 @@ public class SyncFactory {
      * {@code java.lang.SecurityException}.
      *
      * @param logger A Logger object instance
-     * @throws java.lang.SecurityException if a security manager exists and its
+     * @throws SecurityException if a security manager exists and its
      *   {@code checkPermission} method denies calling {@code setLogger}
      * @throws NullPointerException if the logger is null
      * @see SecurityManager#checkPermission
@@ -674,7 +674,7 @@ public class SyncFactory {
      * @param logger a Logger object instance
      * @param level a Level object instance indicating the degree of logging
      * required
-     * @throws java.lang.SecurityException if a security manager exists and its
+     * @throws SecurityException if a security manager exists and its
      *   {@code checkPermission} method denies calling {@code setLogger}
      * @throws NullPointerException if the logger is null
      * @see SecurityManager#checkPermission
@@ -726,11 +726,11 @@ public class SyncFactory {
      *
      * @param ctx a valid JNDI context
      * @throws SyncFactoryException if the supplied JNDI context is null
-     * @throws java.lang.SecurityException if a security manager exists and its
+     * @throws SecurityException if a security manager exists and its
      *  {@code checkPermission} method denies calling {@code setJNDIContext}
      * @see SecurityManager#checkPermission
      */
-    public static synchronized void setJNDIContext(javax.naming.Context ctx)
+    public static synchronized void setJNDIContext(Context ctx)
             throws SyncFactoryException {
         SecurityManager sec = System.getSecurityManager();
         if (sec != null) {
@@ -817,7 +817,7 @@ public class SyncFactory {
                 }
 
             }
-        } catch (javax.naming.NotContextException e) {
+        } catch (NotContextException e) {
             bindings.next();
             // Re-entrant call into method
             enumerateBindings(bindings, properties);
@@ -915,7 +915,7 @@ class ProviderImpl extends SyncProvider {
     }
     }
      */
-    public javax.sql.RowSetReader getRowSetReader() {
+    public RowSetReader getRowSetReader() {
 
         RowSetReader rsReader = null;
 
@@ -929,7 +929,7 @@ class ProviderImpl extends SyncProvider {
 
     }
 
-    public javax.sql.RowSetWriter getRowSetWriter() {
+    public RowSetWriter getRowSetWriter() {
 
         RowSetWriter rsWriter = null;
         try {

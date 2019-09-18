@@ -195,7 +195,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to clear this provider
      *
      * @since 1.2
@@ -215,7 +215,7 @@ public abstract class Provider extends Properties {
      * @param inStream   the input stream.
      * @exception  IOException  if an error occurred when reading from the
      *               input stream.
-     * @see java.util.Properties#load
+     * @see Properties#load
      */
     @Override
     public synchronized void load(InputStream inStream) throws IOException {
@@ -248,7 +248,7 @@ public abstract class Provider extends Properties {
      * Returns an unmodifiable Set view of the property entries contained
      * in this Provider.
      *
-     * @see   java.util.Map.Entry
+     * @see   Map.Entry
      * @since 1.2
      */
     @Override
@@ -307,7 +307,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values.
      *
      * @since 1.2
@@ -334,7 +334,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values.
      *
      * @since 1.8
@@ -360,7 +360,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to remove this provider's properties.
      *
      * @since 1.2
@@ -385,7 +385,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to remove this provider's properties.
      *
      * @since 1.8
@@ -410,7 +410,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values.
      *
      * @since 1.8
@@ -437,7 +437,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values.
      *
      * @since 1.8
@@ -465,7 +465,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values.
      *
      * @since 1.8
@@ -493,7 +493,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values or remove properties.
      *
      * @since 1.8
@@ -524,7 +524,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values and remove properties.
      *
      * @since 1.8
@@ -553,7 +553,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values or remove properties.
      *
      * @since 1.8
@@ -585,7 +585,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to set property values or remove properties.
      *
      * @since 1.8
@@ -1110,7 +1110,7 @@ public abstract class Provider extends Properties {
      *
      * @throws SecurityException
      *      if a security manager exists and its {@link
-     *      java.lang.SecurityManager#checkSecurityAccess} method denies
+     *      SecurityManager#checkSecurityAccess} method denies
      *      access to set property values.
      * @throws NullPointerException if s is null
      *
@@ -1202,7 +1202,7 @@ public abstract class Provider extends Properties {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method denies
+     *          SecurityManager#checkSecurityAccess} method denies
      *          access to remove this provider's properties.
      * @throws NullPointerException if s is null
      *

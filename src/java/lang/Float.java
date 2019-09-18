@@ -178,7 +178,7 @@ public final class Float extends Number implements Comparable<Float> {
      *      <i>a</i>, followed by the letter '{@code E}'
      *      ({@code '\u005Cu0045'}), followed by a representation
      *      of <i>n</i> as a decimal integer, as produced by the
-     *      method {@link java.lang.Integer#toString(int)}.
+     *      method {@link Integer#toString(int)}.
      *
      * </ul>
      * </ul>
@@ -444,7 +444,7 @@ public final class Float extends Number implements Comparable<Float> {
      * @throws NullPointerException  if the string is null
      * @throws NumberFormatException if the string does not contain a
      *               parsable {@code float}.
-     * @see    java.lang.Float#valueOf(String)
+     * @see    Float#valueOf(String)
      * @since 1.2
      */
     public static float parseFloat(String s) throws NumberFormatException {
@@ -526,7 +526,7 @@ public final class Float extends Number implements Comparable<Float> {
      * @param      s   a string to be converted to a {@code Float}.
      * @throws  NumberFormatException  if the string does not contain a
      *               parsable number.
-     * @see        java.lang.Float#valueOf(java.lang.String)
+     * @see        Float#valueOf(String)
      */
     public Float(String s) throws NumberFormatException {
         value = parseFloat(s);
@@ -562,7 +562,7 @@ public final class Float extends Number implements Comparable<Float> {
      * {@code toString} of one argument.
      *
      * @return  a {@code String} representation of this object.
-     * @see java.lang.Float#toString(float)
+     * @see Float#toString(float)
      */
     public String toString() {
         return Float.toString(value);
@@ -702,7 +702,7 @@ public final class Float extends Number implements Comparable<Float> {
      * @param obj the object to be compared
      * @return  {@code true} if the objects are the same;
      *          {@code false} otherwise.
-     * @see java.lang.Float#floatToIntBits(float)
+     * @see Float#floatToIntBits(float)
      */
     public boolean equals(Object obj) {
         return (obj instanceof Float)

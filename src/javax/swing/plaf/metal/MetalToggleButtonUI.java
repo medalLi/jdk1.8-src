@@ -124,8 +124,8 @@ public class MetalToggleButtonUI extends BasicToggleButtonUI {
      * @param c JComponent painting on
      * @throws NullPointerException if <code>g</code> or <code>c</code> is
      *         null
-     * @see javax.swing.plaf.ComponentUI#update
-     * @see javax.swing.plaf.ComponentUI#paint
+     * @see ComponentUI#update
+     * @see ComponentUI#paint
      * @since 1.5
      */
     public void update(Graphics g, JComponent c) {

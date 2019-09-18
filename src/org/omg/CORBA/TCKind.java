@@ -531,7 +531,7 @@ public class TCKind {
         case _tk_abstract_interface:
             return tk_abstract_interface;
         default:
-            throw new org.omg.CORBA.BAD_PARAM();
+            throw new BAD_PARAM();
         }
     }
 

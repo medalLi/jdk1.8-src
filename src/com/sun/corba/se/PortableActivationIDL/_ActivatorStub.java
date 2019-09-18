@@ -8,13 +8,13 @@ package com.sun.corba.se.PortableActivationIDL;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public class _ActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.Activator
+public class _ActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements Activator
 {
 
 
   /** A new ORB started server registers itself with the Activator
   	*/
-  public void registerServer (String serverId, com.sun.corba.se.PortableActivationIDL.ServerProxy serverObj) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
+  public void registerServer (String serverId, ServerProxy serverObj) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -67,7 +67,7 @@ public class _ActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements
   	* Note that we cannot detect when an ORB shuts down, although
   	* all of the POA shutdowns should still be reported.
   	*/
-  public void registerORB (String serverId, String orbId, com.sun.corba.se.PortableActivationIDL.ORBProxy orb, com.sun.corba.se.PortableActivationIDL.EndPointInfo[] endPointInfo) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered
+  public void registerORB (String serverId, String orbId, ORBProxy orb, EndPointInfo[] endPointInfo) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {

@@ -250,7 +250,7 @@ public class ProtectionDomain {
      * However, if the ProtectionDomain was constructed with
      * the constructor variant which supports
      * {@link #ProtectionDomain(CodeSource, PermissionCollection,
-     * ClassLoader, java.security.Principal[]) dynamically binding}
+     * ClassLoader, Principal[]) dynamically binding}
      * permissions, then the permission will be checked against the
      * combination of the PermissionCollection supplied at construction and
      * the current Policy binding.
@@ -360,8 +360,8 @@ public class ProtectionDomain {
             return permissions;
 
         PermissionCollection perms =
-            java.security.AccessController.doPrivileged
-            (new java.security.PrivilegedAction<PermissionCollection>() {
+            AccessController.doPrivileged
+            (new PrivilegedAction<PermissionCollection>() {
                     public PermissionCollection run() {
                         Policy p = Policy.getPolicyNoCheck();
                         return p.getPermissions(ProtectionDomain.this);

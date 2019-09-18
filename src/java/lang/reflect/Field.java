@@ -50,11 +50,11 @@ import sun.reflect.annotation.TypeAnnotationParser;
  * narrowing conversion would occur.
  *
  * @see Member
- * @see java.lang.Class
- * @see java.lang.Class#getFields()
- * @see java.lang.Class#getField(String)
- * @see java.lang.Class#getDeclaredFields()
- * @see java.lang.Class#getDeclaredField(String)
+ * @see Class
+ * @see Class#getFields()
+ * @see Class#getField(String)
+ * @see Class#getDeclaredFields()
+ * @see Class#getDeclaredField(String)
  *
  * @author Kenneth Russell
  * @author Nakul Saraiya

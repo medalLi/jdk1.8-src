@@ -90,8 +90,8 @@ import java.util.Arrays;
  * it performs no synchronization.
  *
  * @author      Arthur van Hoff
- * @see     java.lang.StringBuilder
- * @see     java.lang.String
+ * @see     StringBuilder
+ * @see     String
  * @since   JDK1.0
  */
  public final class StringBuffer

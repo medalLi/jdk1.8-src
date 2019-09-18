@@ -258,9 +258,9 @@ public abstract class Rectangle2D extends RectangularShape {
         public Rectangle2D createIntersection(Rectangle2D r) {
             Rectangle2D dest;
             if (r instanceof Float) {
-                dest = new Rectangle2D.Float();
+                dest = new Float();
             } else {
-                dest = new Rectangle2D.Double();
+                dest = new Double();
             }
             Rectangle2D.intersect(this, r, dest);
             return dest;
@@ -273,9 +273,9 @@ public abstract class Rectangle2D extends RectangularShape {
         public Rectangle2D createUnion(Rectangle2D r) {
             Rectangle2D dest;
             if (r instanceof Float) {
-                dest = new Rectangle2D.Float();
+                dest = new Float();
             } else {
-                dest = new Rectangle2D.Double();
+                dest = new Double();
             }
             Rectangle2D.union(this, r, dest);
             return dest;
@@ -460,7 +460,7 @@ public abstract class Rectangle2D extends RectangularShape {
          * @since 1.2
          */
         public Rectangle2D createIntersection(Rectangle2D r) {
-            Rectangle2D dest = new Rectangle2D.Double();
+            Rectangle2D dest = new Double();
             Rectangle2D.intersect(this, r, dest);
             return dest;
         }
@@ -470,7 +470,7 @@ public abstract class Rectangle2D extends RectangularShape {
          * @since 1.2
          */
         public Rectangle2D createUnion(Rectangle2D r) {
-            Rectangle2D dest = new Rectangle2D.Double();
+            Rectangle2D dest = new Double();
             Rectangle2D.union(this, r, dest);
             return dest;
         }
@@ -503,8 +503,8 @@ public abstract class Rectangle2D extends RectangularShape {
      * the information necessary to satisfy the various accessor
      * methods below.
      *
-     * @see java.awt.geom.Rectangle2D.Float
-     * @see java.awt.geom.Rectangle2D.Double
+     * @see Float
+     * @see Double
      * @see java.awt.Rectangle
      * @since 1.2
      */

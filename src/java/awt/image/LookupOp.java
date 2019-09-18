@@ -70,8 +70,8 @@ import sun.awt.image.ImagingLib;
  * This class allows the Source to be the same as the Destination.
  *
  * @see LookupTable
- * @see java.awt.RenderingHints#KEY_COLOR_RENDERING
- * @see java.awt.RenderingHints#KEY_DITHERING
+ * @see RenderingHints#KEY_COLOR_RENDERING
+ * @see RenderingHints#KEY_DITHERING
  */
 
 public class LookupOp implements BufferedImageOp, RasterOp {

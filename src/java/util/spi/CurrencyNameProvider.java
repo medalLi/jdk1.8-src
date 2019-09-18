@@ -34,10 +34,10 @@ import java.util.ResourceBundle.Control;
 /**
  * An abstract class for service providers that
  * provide localized currency symbols and display names for the
- * {@link java.util.Currency Currency} class.
+ * {@link Currency Currency} class.
  * Note that currency symbols are considered names when determining
  * behaviors described in the
- * {@link java.util.spi.LocaleServiceProvider LocaleServiceProvider}
+ * {@link LocaleServiceProvider LocaleServiceProvider}
  * specification.
  *
  * @since        1.6
@@ -68,9 +68,9 @@ public abstract class CurrencyNameProvider extends LocaleServiceProvider {
      * @exception IllegalArgumentException if <code>currencyCode</code> is not in
      *     the form of three upper-case letters, or <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
-     * @see java.util.Currency#getSymbol(java.util.Locale)
+     * @see Currency#getSymbol(Locale)
      */
     public abstract String getSymbol(String currencyCode, Locale locale);
 
@@ -87,7 +87,7 @@ public abstract class CurrencyNameProvider extends LocaleServiceProvider {
      * @exception IllegalArgumentException if <code>currencyCode</code> is not in
      *     the form of three upper-case letters, or <code>locale</code> isn't
      *     one of the locales returned from
-     *     {@link java.util.spi.LocaleServiceProvider#getAvailableLocales()
+     *     {@link LocaleServiceProvider#getAvailableLocales()
      *     getAvailableLocales()}.
      * @exception NullPointerException if <code>currencyCode</code> or
      *     <code>locale</code> is <code>null</code>

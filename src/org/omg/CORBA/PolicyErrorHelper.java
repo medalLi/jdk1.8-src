@@ -17,7 +17,7 @@ abstract public class PolicyErrorHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/PolicyError:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.PolicyError that)
+  public static void insert (Any a, PolicyError that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -25,35 +25,35 @@ abstract public class PolicyErrorHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CORBA.PolicyError extract (org.omg.CORBA.Any a)
+  public static PolicyError extract (Any a)
   {
     return read (a.create_input_stream ());
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
+  private static TypeCode __typeCode = null;
   private static boolean __active = false;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      synchronized (org.omg.CORBA.TypeCode.class)
+      synchronized (TypeCode.class)
       {
         if (__typeCode == null)
         {
           if (__active)
           {
-            return org.omg.CORBA.ORB.init().create_recursive_tc ( _id );
+            return ORB.init().create_recursive_tc ( _id );
           }
           __active = true;
-          org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [1];
-          org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_short);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.PolicyErrorCodeHelper.id (), "PolicyErrorCode", _tcOf_members0);
-          _members0[0] = new org.omg.CORBA.StructMember (
+          StructMember[] _members0 = new StructMember [1];
+          TypeCode _tcOf_members0 = null;
+          _tcOf_members0 = ORB.init ().get_primitive_tc (TCKind.tk_short);
+          _tcOf_members0 = ORB.init ().create_alias_tc (PolicyErrorCodeHelper.id (), "PolicyErrorCode", _tcOf_members0);
+          _members0[0] = new StructMember (
             "reason",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.CORBA.PolicyErrorHelper.id (), "PolicyError", _members0);
+          __typeCode = ORB.init ().create_exception_tc (PolicyErrorHelper.id (), "PolicyError", _members0);
           __active = false;
         }
       }
@@ -66,16 +66,16 @@ abstract public class PolicyErrorHelper
     return _id;
   }
 
-  public static org.omg.CORBA.PolicyError read (org.omg.CORBA.portable.InputStream istream)
+  public static PolicyError read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.CORBA.PolicyError value = new org.omg.CORBA.PolicyError ();
+    PolicyError value = new PolicyError ();
     // read and discard the repository ID
     istream.read_string ();
     value.reason = istream.read_short ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.PolicyError value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, PolicyError value)
   {
     // write the repository ID
     ostream.write_string (id ());

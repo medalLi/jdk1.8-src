@@ -26,17 +26,17 @@ public final class ORBidListHolder implements org.omg.CORBA.portable.Streamable
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = com.sun.corba.se.PortableActivationIDL.ORBidListHelper.read (i);
+    value = ORBidListHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    com.sun.corba.se.PortableActivationIDL.ORBidListHelper.write (o, value);
+    ORBidListHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return com.sun.corba.se.PortableActivationIDL.ORBidListHelper.type ();
+    return ORBidListHelper.type ();
   }
 
 }

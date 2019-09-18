@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.closure ;
+package com.sun.corba.se.spi.orbutil.closure;
 
 import com.sun.corba.se.impl.orbutil.closure.Constant ;
 import com.sun.corba.se.impl.orbutil.closure.Future ;

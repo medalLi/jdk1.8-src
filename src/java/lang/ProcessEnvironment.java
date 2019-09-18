@@ -248,7 +248,7 @@ final class ProcessEnvironment
         public Set<String> keySet() {
             return new StringKeySet(m.keySet());
         }
-        public Set<Map.Entry<String,String>> entrySet() {
+        public Set<Entry<String,String>> entrySet() {
             return new StringEntrySet(m.entrySet());
         }
         public Collection<String> values() {
@@ -269,7 +269,7 @@ final class ProcessEnvironment
         // This keeps the JNI as simple and efficient as possible.
         public byte[] toEnvironmentBlock(int[]envc) {
             int count = m.size() * 2; // For added '=' and NUL
-            for (Map.Entry<Variable,Value> entry : m.entrySet()) {
+            for (Entry<Variable,Value> entry : m.entrySet()) {
                 count += entry.getKey().getBytes().length;
                 count += entry.getValue().getBytes().length;
             }
@@ -277,7 +277,7 @@ final class ProcessEnvironment
             byte[] block = new byte[count];
 
             int i = 0;
-            for (Map.Entry<Variable,Value> entry : m.entrySet()) {
+            for (Entry<Variable,Value> entry : m.entrySet()) {
                 byte[] key   = entry.getKey  ().getBytes();
                 byte[] value = entry.getValue().getBytes();
                 System.arraycopy(key, 0, block, i, key.length);

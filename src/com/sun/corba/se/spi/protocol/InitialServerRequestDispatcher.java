@@ -38,5 +38,5 @@ public interface InitialServerRequestDispatcher
      * use in order to lookup or list initial name to object reference
      * bindings.
      */
-    void init( Resolver resolver ) ;
+    void init(Resolver resolver) ;
 }

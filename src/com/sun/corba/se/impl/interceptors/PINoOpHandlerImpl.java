@@ -166,7 +166,7 @@ public class PINoOpHandlerImpl implements PIHandler
     {
     }
 
-    public void setServerPIInfo( java.lang.Object servant,
+    public void setServerPIInfo( Object servant,
                                           String targetMostDerivedInterface )
     {
     }
@@ -183,7 +183,7 @@ public class PINoOpHandlerImpl implements PIHandler
         return null;
     }
 
-    public org.omg.CORBA.Policy create_policy(int type, org.omg.CORBA.Any val)
+    public org.omg.CORBA.Policy create_policy(int type, Any val)
         throws org.omg.CORBA.PolicyError
     {
         return null;

@@ -65,9 +65,9 @@ import java.net.URISyntaxException;
  * @author  Ann Wollrath
  * @author  Roger Riggs
  * @since   JDK1.1
- * @see     java.rmi.registry.Registry
- * @see     java.rmi.registry.LocateRegistry
- * @see     java.rmi.registry.LocateRegistry#createRegistry(int)
+ * @see     Registry
+ * @see     LocateRegistry
+ * @see     LocateRegistry#createRegistry(int)
  */
 public final class Naming {
     /**
@@ -90,7 +90,7 @@ public final class Naming {
      */
     public static Remote lookup(String name)
         throws NotBoundException,
-            java.net.MalformedURLException,
+            MalformedURLException,
             RemoteException
     {
         ParsedNamingURL parsed = parseURL(name);
@@ -116,7 +116,7 @@ public final class Naming {
      */
     public static void bind(String name, Remote obj)
         throws AlreadyBoundException,
-            java.net.MalformedURLException,
+            MalformedURLException,
             RemoteException
     {
         ParsedNamingURL parsed = parseURL(name);
@@ -144,7 +144,7 @@ public final class Naming {
     public static void unbind(String name)
         throws RemoteException,
             NotBoundException,
-            java.net.MalformedURLException
+            MalformedURLException
     {
         ParsedNamingURL parsed = parseURL(name);
         Registry registry = getRegistry(parsed);
@@ -166,7 +166,7 @@ public final class Naming {
      * @since JDK1.1
      */
     public static void rebind(String name, Remote obj)
-        throws RemoteException, java.net.MalformedURLException
+        throws RemoteException, MalformedURLException
     {
         ParsedNamingURL parsed = parseURL(name);
         Registry registry = getRegistry(parsed);
@@ -193,7 +193,7 @@ public final class Naming {
      * @since JDK1.1
      */
     public static String[] list(String name)
-        throws RemoteException, java.net.MalformedURLException
+        throws RemoteException, MalformedURLException
     {
         ParsedNamingURL parsed = parseURL(name);
         Registry registry = getRegistry(parsed);

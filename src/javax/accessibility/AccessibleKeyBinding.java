@@ -59,5 +59,5 @@ public interface AccessibleKeyBinding {
      * @return a javax.lang.Object which specifies the key binding
      * @see #getAccessibleKeyBindingCount
      */
-    public java.lang.Object getAccessibleKeyBinding(int i);
+    public Object getAccessibleKeyBinding(int i);
 }

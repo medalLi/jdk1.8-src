@@ -9,7 +9,7 @@ package com.sun.corba.se.spi.activation;
 */
 
 public abstract class _InitialNameServiceImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.spi.activation.InitialNameService, org.omg.CORBA.portable.InvokeHandler
+                implements InitialNameService, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -20,7 +20,7 @@ public abstract class _InitialNameServiceImplBase extends org.omg.CORBA.portable
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("bind", new java.lang.Integer (0));
+    _methods.put ("bind", new Integer (0));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -28,7 +28,7 @@ public abstract class _InitialNameServiceImplBase extends org.omg.CORBA.portable
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 

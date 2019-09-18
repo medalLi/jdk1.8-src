@@ -120,7 +120,7 @@ public class StubIORImpl
         return StubAdapter.getDelegate( obj ) ;
     }
 
-    public  void doRead( java.io.ObjectInputStream stream )
+    public  void doRead( ObjectInputStream stream )
         throws IOException, ClassNotFoundException
     {
         // read the IOR from the ObjectInputStream
@@ -215,7 +215,7 @@ public class StubIORImpl
         return true ;
     }
 
-    public boolean equals(java.lang.Object obj)
+    public boolean equals(Object obj)
     {
         if (this == obj) {
             return true;

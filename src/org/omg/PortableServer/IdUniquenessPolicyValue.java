@@ -20,19 +20,19 @@ public class IdUniquenessPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
   private        int __value;
   private static int __size = 2;
-  private static org.omg.PortableServer.IdUniquenessPolicyValue[] __array = new org.omg.PortableServer.IdUniquenessPolicyValue [__size];
+  private static IdUniquenessPolicyValue[] __array = new IdUniquenessPolicyValue [__size];
 
   public static final int _UNIQUE_ID = 0;
-  public static final org.omg.PortableServer.IdUniquenessPolicyValue UNIQUE_ID = new org.omg.PortableServer.IdUniquenessPolicyValue(_UNIQUE_ID);
+  public static final IdUniquenessPolicyValue UNIQUE_ID = new IdUniquenessPolicyValue(_UNIQUE_ID);
   public static final int _MULTIPLE_ID = 1;
-  public static final org.omg.PortableServer.IdUniquenessPolicyValue MULTIPLE_ID = new org.omg.PortableServer.IdUniquenessPolicyValue(_MULTIPLE_ID);
+  public static final IdUniquenessPolicyValue MULTIPLE_ID = new IdUniquenessPolicyValue(_MULTIPLE_ID);
 
   public int value ()
   {
     return __value;
   }
 
-  public static org.omg.PortableServer.IdUniquenessPolicyValue from_int (int value)
+  public static IdUniquenessPolicyValue from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

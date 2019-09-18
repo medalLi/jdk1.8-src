@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -453,7 +453,7 @@ public class ORBConfiguratorImpl implements ORBConfigurator {
     {
         // Register the Dynamic Any factory
         Closure closure = new Closure() {
-            public java.lang.Object evaluate() {
+            public Object evaluate() {
                 return new DynAnyFactoryImpl( orb ) ;
             }
         } ;

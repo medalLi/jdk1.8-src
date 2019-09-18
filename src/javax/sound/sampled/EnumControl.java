@@ -42,7 +42,7 @@ package javax.sound.sampled;
  * However, a key feature of <code>EnumControl</code> is that the returned values
  * are arbitrary objects, rather than numerical or boolean values.  This means that each
  * returned object can provide further information.  As an example, the settings
- * of a <code>{@link EnumControl.Type#REVERB REVERB}</code> control are instances of
+ * of a <code>{@link Type#REVERB REVERB}</code> control are instances of
  * <code>{@link ReverbType}</code> that can be queried for the parameter values
  * used for each setting.
  *

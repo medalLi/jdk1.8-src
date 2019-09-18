@@ -12,7 +12,7 @@ package com.sun.corba.se.PortableActivationIDL;
 /** Server callback interface, passed to Activator in registerServer method.
     */
 public abstract class _ServerProxyImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.PortableActivationIDL.ServerProxy, org.omg.CORBA.portable.InvokeHandler
+                implements ServerProxy, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -23,9 +23,9 @@ public abstract class _ServerProxyImplBase extends org.omg.CORBA.portable.Object
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("shutdown", new java.lang.Integer (0));
-    _methods.put ("install", new java.lang.Integer (1));
-    _methods.put ("uninstall", new java.lang.Integer (2));
+    _methods.put ("shutdown", new Integer (0));
+    _methods.put ("install", new Integer (1));
+    _methods.put ("uninstall", new Integer (2));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -33,7 +33,7 @@ public abstract class _ServerProxyImplBase extends org.omg.CORBA.portable.Object
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 

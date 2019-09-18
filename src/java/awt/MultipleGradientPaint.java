@@ -303,7 +303,7 @@ public abstract class MultipleGradientPaint implements Paint {
      *         {@code Paint} object are opaque,
      *         {@code TRANSLUCENT} if at least one of the
      *         colors used by this {@code Paint} object is not opaque.
-     * @see java.awt.Transparency
+     * @see Transparency
      */
     public final int getTransparency() {
         return transparency;

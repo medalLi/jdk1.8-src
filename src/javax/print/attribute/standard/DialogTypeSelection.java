@@ -108,7 +108,7 @@ public final class DialogTypeSelection extends EnumSyntax
      * DialogTypeSelection itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class getCategory() {
         return DialogTypeSelection.class;

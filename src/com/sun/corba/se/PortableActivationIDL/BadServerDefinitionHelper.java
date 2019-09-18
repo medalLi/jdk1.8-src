@@ -12,7 +12,7 @@ abstract public class BadServerDefinitionHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/BadServerDefinition:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.BadServerDefinition that)
+  public static void insert (org.omg.CORBA.Any a, BadServerDefinition that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class BadServerDefinitionHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.BadServerDefinition extract (org.omg.CORBA.Any a)
+  public static BadServerDefinition extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -47,7 +47,7 @@ abstract public class BadServerDefinitionHelper
             "reason",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (com.sun.corba.se.PortableActivationIDL.BadServerDefinitionHelper.id (), "BadServerDefinition", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (BadServerDefinitionHelper.id (), "BadServerDefinition", _members0);
           __active = false;
         }
       }
@@ -60,16 +60,16 @@ abstract public class BadServerDefinitionHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.BadServerDefinition read (org.omg.CORBA.portable.InputStream istream)
+  public static BadServerDefinition read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.BadServerDefinition value = new com.sun.corba.se.PortableActivationIDL.BadServerDefinition ();
+    BadServerDefinition value = new BadServerDefinition ();
     // read and discard the repository ID
     istream.read_string ();
     value.reason = istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.BadServerDefinition value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, BadServerDefinition value)
   {
     // write the repository ID
     ostream.write_string (id ());

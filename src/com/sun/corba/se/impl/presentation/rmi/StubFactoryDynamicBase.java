@@ -23,7 +23,7 @@
  * questions.
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.io.SerializablePermission;
 import java.lang.reflect.InvocationHandler ;

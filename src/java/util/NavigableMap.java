@@ -106,7 +106,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @throws NullPointerException if the specified key is null
      *         and this map does not permit null keys
      */
-    Map.Entry<K,V> lowerEntry(K key);
+    Entry<K,V> lowerEntry(K key);
 
     /**
      * Returns the greatest key strictly less than the given key, or
@@ -135,7 +135,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @throws NullPointerException if the specified key is null
      *         and this map does not permit null keys
      */
-    Map.Entry<K,V> floorEntry(K key);
+    Entry<K,V> floorEntry(K key);
 
     /**
      * Returns the greatest key less than or equal to the given key,
@@ -164,7 +164,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @throws NullPointerException if the specified key is null
      *         and this map does not permit null keys
      */
-    Map.Entry<K,V> ceilingEntry(K key);
+    Entry<K,V> ceilingEntry(K key);
 
     /**
      * Returns the least key greater than or equal to the given key,
@@ -193,7 +193,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @throws NullPointerException if the specified key is null
      *         and this map does not permit null keys
      */
-    Map.Entry<K,V> higherEntry(K key);
+    Entry<K,V> higherEntry(K key);
 
     /**
      * Returns the least key strictly greater than the given key, or
@@ -216,7 +216,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @return an entry with the least key,
      *         or {@code null} if this map is empty
      */
-    Map.Entry<K,V> firstEntry();
+    Entry<K,V> firstEntry();
 
     /**
      * Returns a key-value mapping associated with the greatest
@@ -225,7 +225,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @return an entry with the greatest key,
      *         or {@code null} if this map is empty
      */
-    Map.Entry<K,V> lastEntry();
+    Entry<K,V> lastEntry();
 
     /**
      * Removes and returns a key-value mapping associated with
@@ -234,7 +234,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @return the removed first entry of this map,
      *         or {@code null} if this map is empty
      */
-    Map.Entry<K,V> pollFirstEntry();
+    Entry<K,V> pollFirstEntry();
 
     /**
      * Removes and returns a key-value mapping associated with
@@ -243,7 +243,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      * @return the removed last entry of this map,
      *         or {@code null} if this map is empty
      */
-    Map.Entry<K,V> pollLastEntry();
+    Entry<K,V> pollLastEntry();
 
     /**
      * Returns a reverse order view of the mappings contained in this map.
@@ -329,7 +329,7 @@ public interface NavigableMap<K,V> extends SortedMap<K,V> {
      *         outside the bounds of the range
      */
     NavigableMap<K,V> subMap(K fromKey, boolean fromInclusive,
-                             K toKey,   boolean toInclusive);
+                             K toKey, boolean toInclusive);
 
     /**
      * Returns a view of the portion of this map whose keys are less than (or

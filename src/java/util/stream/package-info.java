@@ -87,7 +87,7 @@
  *     <li>Streams of random numbers can be obtained from {@link java.util.Random#ints()};</li>
  *     <li>Numerous other stream-bearing methods in the JDK, including
  *     {@link java.util.BitSet#stream()},
- *     {@link java.util.regex.Pattern#splitAsStream(java.lang.CharSequence)},
+ *     {@link java.util.regex.Pattern#splitAsStream(CharSequence)},
  *     and {@link java.util.jar.JarFile#stream()}.</li>
  * </ul>
  *
@@ -378,8 +378,8 @@
  * application of a combining operation, such as finding the sum or maximum of
  * a set of numbers, or accumulating elements into a list.  The streams classes have
  * multiple forms of general reduction operations, called
- * {@link java.util.stream.Stream#reduce(java.util.function.BinaryOperator) reduce()}
- * and {@link java.util.stream.Stream#collect(java.util.stream.Collector) collect()},
+ * {@link java.util.stream.Stream#reduce(BinaryOperator) reduce()}
+ * and {@link java.util.stream.Stream#collect(Collector) collect()},
  * as well as multiple specialized reduction forms such as
  * {@link java.util.stream.IntStream#sum() sum()}, {@link java.util.stream.IntStream#max() max()},
  * or {@link java.util.stream.IntStream#count() count()}.
@@ -567,7 +567,7 @@
  * care about the intermediate representation used by this collector.)
  * If we wanted to create a collector to tabulate the sum of salaries by
  * department, we could reuse {@code summingSalaries} using
- * {@link java.util.stream.Collectors#groupingBy(java.util.function.Function, java.util.stream.Collector) groupingBy}:
+ * {@link java.util.stream.Collectors#groupingBy(java.util.function.Function, Collector) groupingBy}:
  *
  * <pre>{@code
  *     Map<Department, Integer> salariesByDept

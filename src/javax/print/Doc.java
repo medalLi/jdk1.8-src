@@ -55,7 +55,7 @@ import javax.print.attribute.DocAttributeSet;
  * the doc or that specify processing instructions to be applied to the doc.
  * Printing attributes are defined in package {@link javax.print.attribute
  * javax.print.attribute}. The doc returns its printing attributes stored in
- * an {@link javax.print.attribute.DocAttributeSet javax.print.attribute.DocAttributeSet}.
+ * an {@link DocAttributeSet javax.print.attribute.DocAttributeSet}.
  * </UL>
  * <P>
  * Each method in an implementation of interface Doc is permitted always to

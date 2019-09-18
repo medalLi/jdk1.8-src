@@ -207,6 +207,6 @@ public interface JMXConnectorServerMBean {
      * stub cannot be created.
      *
      */
-    public JMXConnector toJMXConnector(Map<String,?> env)
+    public JMXConnector toJMXConnector(Map<String, ?> env)
         throws IOException;
 }

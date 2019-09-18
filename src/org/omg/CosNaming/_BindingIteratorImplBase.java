@@ -31,7 +31,7 @@
  */
 
 package org.omg.CosNaming;
-public abstract class _BindingIteratorImplBase extends org.omg.CORBA.DynamicImplementation implements org.omg.CosNaming.BindingIterator {
+public abstract class _BindingIteratorImplBase extends org.omg.CORBA.DynamicImplementation implements BindingIterator {
     // Constructor
     public _BindingIteratorImplBase() {
         super();
@@ -45,25 +45,25 @@ public abstract class _BindingIteratorImplBase extends org.omg.CORBA.DynamicImpl
 
     private static java.util.Dictionary _methods = new java.util.Hashtable();
     static {
-        _methods.put("next_one", new java.lang.Integer(0));
-        _methods.put("next_n", new java.lang.Integer(1));
-        _methods.put("destroy", new java.lang.Integer(2));
+        _methods.put("next_one", new Integer(0));
+        _methods.put("next_n", new Integer(1));
+        _methods.put("destroy", new Integer(2));
     }
     // DSI Dispatch call
     public void invoke(org.omg.CORBA.ServerRequest r) {
-        switch (((java.lang.Integer) _methods.get(r.op_name())).intValue()) {
+        switch (((Integer) _methods.get(r.op_name())).intValue()) {
         case 0: // org.omg.CosNaming.BindingIterator.next_one
             {
                 org.omg.CORBA.NVList _list = _orb().create_list(0);
                 org.omg.CORBA.Any _b = _orb().create_any();
-                _b.type(org.omg.CosNaming.BindingHelper.type());
+                _b.type(BindingHelper.type());
                 _list.add_value("b", _b, org.omg.CORBA.ARG_OUT.value);
                 r.params(_list);
-                org.omg.CosNaming.BindingHolder b;
-                b = new org.omg.CosNaming.BindingHolder();
+                BindingHolder b;
+                b = new BindingHolder();
                 boolean ___result;
                 ___result = this.next_one(b);
-                org.omg.CosNaming.BindingHelper.insert(_b, b.value);
+                BindingHelper.insert(_b, b.value);
                 org.omg.CORBA.Any __result = _orb().create_any();
                 __result.insert_boolean(___result);
                 r.result(__result);
@@ -76,16 +76,16 @@ public abstract class _BindingIteratorImplBase extends org.omg.CORBA.DynamicImpl
                 _how_many.type(org.omg.CORBA.ORB.init().get_primitive_tc(org.omg.CORBA.TCKind.tk_ulong));
                 _list.add_value("how_many", _how_many, org.omg.CORBA.ARG_IN.value);
                 org.omg.CORBA.Any _bl = _orb().create_any();
-                _bl.type(org.omg.CosNaming.BindingListHelper.type());
+                _bl.type(BindingListHelper.type());
                 _list.add_value("bl", _bl, org.omg.CORBA.ARG_OUT.value);
                 r.params(_list);
                 int how_many;
                 how_many = _how_many.extract_ulong();
-                org.omg.CosNaming.BindingListHolder bl;
-                bl = new org.omg.CosNaming.BindingListHolder();
+                BindingListHolder bl;
+                bl = new BindingListHolder();
                 boolean ___result;
                 ___result = this.next_n(how_many, bl);
-                org.omg.CosNaming.BindingListHelper.insert(_bl, bl.value);
+                BindingListHelper.insert(_bl, bl.value);
                 org.omg.CORBA.Any __result = _orb().create_any();
                 __result.insert_boolean(___result);
                 r.result(__result);

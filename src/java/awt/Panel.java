@@ -35,7 +35,7 @@ import javax.accessibility.*;
  * <code>FlowLayout</code> layout manager.
  *
  * @author      Sami Shaio
- * @see     java.awt.FlowLayout
+ * @see     FlowLayout
  * @since   JDK1.0
  */
 public class Panel extends Container implements Accessible {

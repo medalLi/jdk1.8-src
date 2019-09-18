@@ -147,7 +147,7 @@ public final class TCUtility {
 
         case TCKind._tk_value:
         case TCKind._tk_value_box:
-            ((org.omg.CORBA_2_3.portable.OutputStream)s).write_value((Serializable)o);
+            ((OutputStream)s).write_value((Serializable)o);
             break;
 
         case TCKind._tk_fixed:
@@ -175,7 +175,7 @@ public final class TCUtility {
             break;
 
         case TCKind._tk_abstract_interface:
-            ((org.omg.CORBA_2_3.portable.OutputStream)s).write_abstract_interface(o);
+            ((OutputStream)s).write_abstract_interface(o);
             break;
 
         case TCKind._tk_longdouble:
@@ -282,7 +282,7 @@ public final class TCUtility {
 
         case TCKind._tk_value:
         case TCKind._tk_value_box:
-            o = ((org.omg.CORBA_2_3.portable.InputStream)s).read_value ();
+            o = ((InputStream)s).read_value ();
             break;
 
         case TCKind._tk_fixed:
@@ -310,7 +310,7 @@ public final class TCUtility {
             break;
 
         case TCKind._tk_abstract_interface:
-            o = ((org.omg.CORBA_2_3.portable.InputStream)s).read_abstract_interface();
+            o = ((InputStream)s).read_abstract_interface();
             break;
 
         case TCKind._tk_longdouble:

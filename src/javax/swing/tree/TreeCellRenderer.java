@@ -70,7 +70,7 @@ public interface TreeCellRenderer {
      * @return  the <code>Component</code> that the renderer uses to draw the value
      */
     Component getTreeCellRendererComponent(JTree tree, Object value,
-                                   boolean selected, boolean expanded,
-                                   boolean leaf, int row, boolean hasFocus);
+                                           boolean selected, boolean expanded,
+                                           boolean leaf, int row, boolean hasFocus);
 
 }

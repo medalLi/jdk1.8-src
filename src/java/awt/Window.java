@@ -142,7 +142,7 @@ import sun.util.logging.PlatformLogger;
  * @author      Arthur van Hoff
  * @see WindowEvent
  * @see #addWindowListener
- * @see java.awt.BorderLayout
+ * @see BorderLayout
  * @since       JDK1.0
  */
 public class Window extends Container implements Accessible {
@@ -286,7 +286,7 @@ public class Window extends Container implements Accessible {
     /**
      * @serial
      *
-     * @see java.awt.Dialog.ModalExclusionType
+     * @see Dialog.ModalExclusionType
      * @see #getModalExclusionType
      * @see #setModalExclusionType
      *
@@ -399,10 +399,10 @@ public class Window extends Container implements Accessible {
             initIDs();
         }
 
-        String s = java.security.AccessController.doPrivileged(
+        String s = AccessController.doPrivileged(
             new GetPropertyAction("java.awt.syncLWRequests"));
         systemSyncLWRequests = (s != null && s.equals("true"));
-        s = java.security.AccessController.doPrivileged(
+        s = AccessController.doPrivileged(
             new GetPropertyAction("java.awt.Window.locationByPlatform"));
         locationByPlatformProp = (s != null && s.equals("true"));
     }
@@ -430,7 +430,7 @@ public class Window extends Container implements Accessible {
      * @exception HeadlessException when
      *     {@code GraphicsEnvironment.isHeadless()} returns {@code true}
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     Window(GraphicsConfiguration gc) {
         init(gc);
@@ -514,7 +514,7 @@ public class Window extends Container implements Accessible {
 
         modalExclusionType = Dialog.ModalExclusionType.NO_EXCLUDE;
         disposerRecord = new WindowDisposerRecord(appContext, this);
-        sun.java2d.Disposer.addRecord(anchor, disposerRecord);
+        Disposer.addRecord(anchor, disposerRecord);
 
         SunToolkit.checkAndSetPolicy(this);
     }
@@ -530,7 +530,7 @@ public class Window extends Container implements Accessible {
      * @exception HeadlessException when
      *     {@code GraphicsEnvironment.isHeadless()} returns {@code true}
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     Window() throws HeadlessException {
         GraphicsEnvironment.checkHeadless();
@@ -554,7 +554,7 @@ public class Window extends Container implements Accessible {
      * @exception HeadlessException when
      *    {@code GraphicsEnvironment.isHeadless} returns {@code true}
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #isShowing
      */
     public Window(Frame owner) {
@@ -582,7 +582,7 @@ public class Window extends Container implements Accessible {
      *     {@code GraphicsEnvironment.isHeadless()} returns
      *     {@code true}
      *
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @see       #isShowing
      *
      * @since     1.2
@@ -616,7 +616,7 @@ public class Window extends Container implements Accessible {
      *     {@code GraphicsEnvironment.isHeadless()} returns
      *     {@code true}
      *
-     * @see       java.awt.GraphicsEnvironment#isHeadless
+     * @see       GraphicsEnvironment#isHeadless
      * @see       GraphicsConfiguration#getBounds
      * @see       #isShowing
      * @since     1.3
@@ -1003,12 +1003,12 @@ public class Window extends Container implements Accessible {
      * of its owned children.
      * The {@code Window} and its subcomponents can be made visible again
      * with a call to {@code #setVisible(true)}.
-     * @see java.awt.Component#isDisplayable
-     * @see java.awt.Component#setVisible
-     * @see java.awt.Window#toFront
-     * @see java.awt.Window#dispose
-     * @see java.awt.Window#setAutoRequestFocus
-     * @see java.awt.Window#isFocusableWindow
+     * @see Component#isDisplayable
+     * @see Component#setVisible
+     * @see Window#toFront
+     * @see Window#dispose
+     * @see Window#setAutoRequestFocus
+     * @see Window#isFocusableWindow
      */
     public void setVisible(boolean b) {
         super.setVisible(b);
@@ -1404,7 +1404,7 @@ public class Window extends Container implements Accessible {
      * If no locale has been set, then the default locale
      * is returned.
      * @return    the locale that is set for this window.
-     * @see       java.util.Locale
+     * @see       Locale
      * @since     JDK1.1
      */
     public Locale getLocale() {
@@ -1647,7 +1647,7 @@ public class Window extends Container implements Accessible {
     /**
      * Specifies the modal exclusion type for this window. If a window is modal
      * excluded, it is not blocked by some modal dialogs. See {@link
-     * java.awt.Dialog.ModalExclusionType Dialog.ModalExclusionType} for
+     * Dialog.ModalExclusionType Dialog.ModalExclusionType} for
      * possible modal exclusion types.
      * <p>
      * If the given type is not supported, {@code NO_EXCLUDE} is used.
@@ -1661,9 +1661,9 @@ public class Window extends Container implements Accessible {
      * @throws SecurityException if the calling thread does not have permission
      *     to set the modal exclusion property to the window with the given
      *     {@code exclusionType}
-     * @see java.awt.Dialog.ModalExclusionType
-     * @see java.awt.Window#getModalExclusionType
-     * @see java.awt.Toolkit#isModalExclusionTypeSupported
+     * @see Dialog.ModalExclusionType
+     * @see Window#getModalExclusionType
+     * @see Toolkit#isModalExclusionTypeSupported
      *
      * @since 1.6
      */
@@ -1702,8 +1702,8 @@ public class Window extends Container implements Accessible {
      *
      * @return the modal exclusion type of this window
      *
-     * @see java.awt.Dialog.ModalExclusionType
-     * @see java.awt.Window#setModalExclusionType
+     * @see Dialog.ModalExclusionType
+     * @see Window#setModalExclusionType
      *
      * @since 1.6
      */
@@ -2130,7 +2130,7 @@ public class Window extends Container implements Accessible {
      * exception.
      *
      * @param e the window state event
-     * @see java.awt.Component#enableEvents
+     * @see Component#enableEvents
      * @since 1.4
      */
     protected void processWindowStateEvent(WindowEvent e) {
@@ -2665,7 +2665,7 @@ public class Window extends Container implements Accessible {
      * @param    listener  the PropertyChangeListener to be added
      *
      * @see Component#removePropertyChangeListener
-     * @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+     * @see #addPropertyChangeListener(String, PropertyChangeListener)
      */
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         super.addPropertyChangeListener(listener);
@@ -2704,7 +2704,7 @@ public class Window extends Container implements Accessible {
      * @param propertyName one of the property names listed above
      * @param listener the PropertyChangeListener to be added
      *
-     * @see #addPropertyChangeListener(java.beans.PropertyChangeListener)
+     * @see #addPropertyChangeListener(PropertyChangeListener)
      * @see Component#removePropertyChangeListener
      */
     public void addPropertyChangeListener(String propertyName,
@@ -2720,7 +2720,7 @@ public class Window extends Container implements Accessible {
      *
      * @return {@code true}
      * @since 1.7
-     * @see java.awt.Container#isValidateRoot
+     * @see Container#isValidateRoot
      */
     @Override
     public boolean isValidateRoot() {
@@ -2909,7 +2909,7 @@ public class Window extends Container implements Accessible {
      *    {@code ownedWindowK} indicating a child
      *      {@code Window} object
      *
-     * @see AWTEventMulticaster#save(java.io.ObjectOutputStream, java.lang.String, java.util.EventListener)
+     * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
      * @see Component#windowListenerK
      * @see Component#windowFocusListenerK
      * @see Component#ownedWindowK
@@ -2972,7 +2972,7 @@ public class Window extends Container implements Accessible {
 
         anchor = new Object();
         disposerRecord = new WindowDisposerRecord(appContext, this);
-        sun.java2d.Disposer.addRecord(anchor, disposerRecord);
+        Disposer.addRecord(anchor, disposerRecord);
 
         addToWindowList();
         initGC(null);
@@ -3056,7 +3056,7 @@ public class Window extends Container implements Accessible {
      * @exception HeadlessException if
      *   {@code GraphicsEnvironment.isHeadless} returns
      *   {@code true}
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #writeObject
      */
     private void readObject(ObjectInputStream s)
@@ -3133,7 +3133,7 @@ public class Window extends Container implements Accessible {
          *
          * @return an instance of AccessibleRole describing the role of the
          * object
-         * @see javax.accessibility.AccessibleRole
+         * @see AccessibleRole
          */
         public AccessibleRole getAccessibleRole() {
             return AccessibleRole.WINDOW;
@@ -3144,7 +3144,7 @@ public class Window extends Container implements Accessible {
          *
          * @return an instance of AccessibleStateSet containing the current
          * state set of the object
-         * @see javax.accessibility.AccessibleState
+         * @see AccessibleState
          */
         public AccessibleStateSet getAccessibleStateSet() {
             AccessibleStateSet states = super.getAccessibleStateSet();
@@ -3225,7 +3225,7 @@ public class Window extends Container implements Accessible {
      *
      * @param c  the component in relation to which the window's location
      *           is determined
-     * @see java.awt.GraphicsEnvironment#getCenterPoint
+     * @see GraphicsEnvironment#getCenterPoint
      * @since 1.4
      */
     public void setLocationRelativeTo(Component c) {
@@ -3434,7 +3434,7 @@ public class Window extends Container implements Accessible {
      * @see #isShowing
      * @see #setVisible
      * @see #isLocationByPlatform
-     * @see java.lang.System#getProperty(String)
+     * @see System#getProperty(String)
      * @since 1.5
      */
     public void setLocationByPlatform(boolean locationByPlatform) {
@@ -4111,7 +4111,7 @@ public class Window extends Container implements Accessible {
  * This class is no longer used, but is maintained for Serialization
  * backward-compatibility.
  */
-class FocusManager implements java.io.Serializable {
+class FocusManager implements Serializable {
     Container focusRoot;
     Component focusOwner;
 

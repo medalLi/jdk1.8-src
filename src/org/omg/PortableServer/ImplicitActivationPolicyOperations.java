@@ -19,5 +19,5 @@ public interface ImplicitActivationPolicyOperations  extends org.omg.CORBA.Polic
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.ImplicitActivationPolicyValue value ();
+  ImplicitActivationPolicyValue value();
 } // interface ImplicitActivationPolicyOperations

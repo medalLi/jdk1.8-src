@@ -377,8 +377,8 @@ public class JViewport extends JComponent implements Accessible
      *
      * @param contentRect the <code>Rectangle</code> to display
      * @see JComponent#isValidateRoot
-     * @see java.awt.Component#isValid
-     * @see java.awt.Component#getPeer
+     * @see Component#isValid
+     * @see Component#getPeer
      */
     public void scrollRectToVisible(Rectangle contentRect) {
         Component view = getView();
@@ -1380,7 +1380,7 @@ public class JViewport extends JComponent implements Accessible
      * @param     y    the <code>y</code> coordinate (pixels down from top)
      * @param     w    the width
      * @param     h   the height
-     * @see       java.awt.Component#update(java.awt.Graphics)
+     * @see       Component#update(Graphics)
      */
     public void repaint(long tm, int x, int y, int w, int h) {
         Container parent = getParent();

@@ -467,7 +467,7 @@ public final class LocalDateTime
      * Obtains an instance of {@code LocalDateTime} from a text string such as {@code 2007-12-03T10:15:30}.
      * <p>
      * The string must represent a valid date-time and is parsed using
-     * {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE_TIME}.
+     * {@link DateTimeFormatter#ISO_LOCAL_DATE_TIME}.
      *
      * @param text  the text to parse such as "2007-12-03T10:15:30", not null
      * @return the parsed local date-time, not null
@@ -881,7 +881,7 @@ public final class LocalDateTime
      * A selection of common adjustments is provided in {@link TemporalAdjuster}.
      * These include finding the "last day of the month" and "next Wednesday".
      * Key date-time classes also implement the {@code TemporalAdjuster} interface,
-     * such as {@link Month} and {@link java.time.MonthDay MonthDay}.
+     * such as {@link Month} and {@link MonthDay MonthDay}.
      * The adjuster is responsible for handling special cases, such as the varying
      * lengths of month and leap years.
      * <p>
@@ -1575,7 +1575,7 @@ public final class LocalDateTime
      * what the result of this method will be.
      * <p>
      * The result of this method is obtained by invoking the
-     * {@link java.time.temporal.TemporalQuery#queryFrom(TemporalAccessor)} method on the
+     * {@link TemporalQuery#queryFrom(TemporalAccessor)} method on the
      * specified query passing {@code this} as the argument.
      *
      * @param <R> the type of the result

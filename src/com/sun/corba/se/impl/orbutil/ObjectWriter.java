@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil ;
+package com.sun.corba.se.impl.orbutil;
 
 import java.util.Arrays ;
 
@@ -119,7 +119,7 @@ public abstract class ObjectWriter {
                 result.append( arr.length ) ;
                 result.append( "]" ) ;
             } else { // array of object
-                java.lang.Object[] arr = (java.lang.Object[])obj ;
+                Object[] arr = (Object[])obj ;
                 result.append( arr.length ) ;
                 result.append( "]" ) ;
             }
@@ -154,7 +154,7 @@ public abstract class ObjectWriter {
             result.append( fill ) ;
         }
 
-        public void startObject( java.lang.Object obj )
+        public void startObject( Object obj )
         {
             appendObjectHeader( obj ) ;
             level++ ;
@@ -187,7 +187,7 @@ public abstract class ObjectWriter {
     }
 
     private static class SimpleObjectWriter extends ObjectWriter {
-        public void startObject( java.lang.Object obj )
+        public void startObject( Object obj )
         {
             appendObjectHeader( obj ) ;
             result.append( " " ) ;

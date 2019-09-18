@@ -150,7 +150,7 @@ import java.io.Serializable;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @beaninfo
  *   attribute: isContainer false
@@ -288,7 +288,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
      *
      * @see JComponent#revalidate
      * @see JComponent#isValidateRoot
-     * @see java.awt.Container#isValidateRoot
+     * @see Container#isValidateRoot
      */
     @Override
     public boolean isValidateRoot() {
@@ -941,7 +941,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
      * the same version of Swing.  As of 1.4, support for long term storage
      * of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package.
-     * Please see {@link java.beans.XMLEncoder}.
+     * Please see {@link XMLEncoder}.
      */
     protected class AccessibleJTextField extends AccessibleJTextComponent {
 

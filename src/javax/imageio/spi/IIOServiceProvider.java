@@ -36,10 +36,10 @@ import javax.imageio.spi.ServiceRegistry;
  * <code>IIORegistry</code> class.
  *
  * @see IIORegistry
- * @see javax.imageio.spi.ImageReaderSpi
- * @see javax.imageio.spi.ImageWriterSpi
- * @see javax.imageio.spi.ImageTranscoderSpi
- * @see javax.imageio.spi.ImageInputStreamSpi
+ * @see ImageReaderSpi
+ * @see ImageWriterSpi
+ * @see ImageTranscoderSpi
+ * @see ImageInputStreamSpi
  *
  */
 public abstract class IIOServiceProvider implements RegisterableService {

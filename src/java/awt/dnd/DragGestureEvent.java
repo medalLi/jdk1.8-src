@@ -65,10 +65,10 @@ import java.io.ObjectOutputStream;
  * </ul>
  * Assigning the value different from listed above will cause an unspecified behavior.
  *
- * @see java.awt.dnd.DragGestureRecognizer
- * @see java.awt.dnd.DragGestureListener
- * @see java.awt.dnd.DragSource
- * @see java.awt.dnd.DnDConstants
+ * @see DragGestureRecognizer
+ * @see DragGestureListener
+ * @see DragSource
+ * @see DnDConstants
  */
 
 public class DragGestureEvent extends EventObject {
@@ -94,7 +94,7 @@ public class DragGestureEvent extends EventObject {
      * @throws IllegalArgumentException if the act parameter does not comply with
      *                                  the values given in the class
      *                                  description for {@link DragGestureEvent}
-     * @see java.awt.dnd.DnDConstants
+     * @see DnDConstants
      */
 
     public DragGestureEvent(DragGestureRecognizer dgr, int act, Point ori,

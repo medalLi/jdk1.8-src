@@ -46,7 +46,7 @@ import sun.nio.cs.StreamEncoder;
  * <p>
  * If this virtual machine has a console then it is represented by a
  * unique instance of this class which can be obtained by invoking the
- * {@link java.lang.System#console()} method.  If no console device is
+ * {@link System#console()} method.  If no console device is
  * available then an invocation of that method will return <tt>null</tt>.
  * <p>
  * Read and write operations are synchronized to guarantee the atomic
@@ -92,7 +92,7 @@ import sun.nio.cs.StreamEncoder;
 public final class Console implements Flushable
 {
    /**
-    * Retrieves the unique {@link java.io.PrintWriter PrintWriter} object
+    * Retrieves the unique {@link PrintWriter PrintWriter} object
     * associated with this console.
     *
     * @return  The printwriter associated with this console
@@ -102,11 +102,11 @@ public final class Console implements Flushable
     }
 
    /**
-    * Retrieves the unique {@link java.io.Reader Reader} object associated
+    * Retrieves the unique {@link Reader Reader} object associated
     * with this console.
     * <p>
     * This method is intended to be used by sophisticated applications, for
-    * example, a {@link java.util.Scanner} object which utilizes the rich
+    * example, a {@link Scanner} object which utilizes the rich
     * parsing/scanning functionality provided by the <tt>Scanner</tt>:
     * <blockquote><pre>
     * Console con = System.console();
@@ -119,9 +119,9 @@ public final class Console implements Flushable
     * For simple applications requiring only line-oriented reading, use
     * <tt>{@link #readLine}</tt>.
     * <p>
-    * The bulk read operations {@link java.io.Reader#read(char[]) read(char[]) },
-    * {@link java.io.Reader#read(char[], int, int) read(char[], int, int) } and
-    * {@link java.io.Reader#read(java.nio.CharBuffer) read(java.nio.CharBuffer)}
+    * The bulk read operations {@link Reader#read(char[]) read(char[]) },
+    * {@link Reader#read(char[], int, int) read(char[], int, int) } and
+    * {@link Reader#read(java.nio.CharBuffer) read(java.nio.CharBuffer)}
     * on the returned object will not read in characters beyond the line
     * bound for each invocation, even if the destination buffer has space for
     * more characters. The {@code Reader}'s {@code read} methods may block if a

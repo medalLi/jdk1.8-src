@@ -758,7 +758,7 @@ public abstract class JAXBContext {
         } else {
             return (ClassLoader) java.security.AccessController.doPrivileged(
                     new java.security.PrivilegedAction() {
-                        public java.lang.Object run() {
+                        public Object run() {
                             return Thread.currentThread().getContextClassLoader();
                         }
                     });

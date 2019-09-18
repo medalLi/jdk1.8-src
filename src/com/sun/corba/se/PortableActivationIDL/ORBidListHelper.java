@@ -36,7 +36,7 @@ abstract public class ORBidListHelper
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
       __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.PortableInterceptor.ORBIdHelper.id (), "ORBId", __typeCode);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.PortableActivationIDL.ORBidListHelper.id (), "ORBidList", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ORBidListHelper.id (), "ORBidList", __typeCode);
     }
     return __typeCode;
   }

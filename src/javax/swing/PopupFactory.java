@@ -415,7 +415,7 @@ public class PopupFactory {
                                      popup.getComponent());
                 Map<Window, List<HeavyWeightPopup>> heavyPopupCache = getHeavyWeightPopupCache();
 
-                if (window instanceof Popup.DefaultFrame ||
+                if (window instanceof DefaultFrame ||
                                       !window.isVisible()) {
                     // If the Window isn't visible, we don't cache it as we
                     // likely won't ever get a windowClosed event to clean up.

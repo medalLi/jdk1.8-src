@@ -80,7 +80,7 @@ import javax.management.openmbean.OpenMBeanParameterInfoSupport;
  * <ul>
  *
  * <li>Using the public constructor
- *     {@link #StandardMBean(java.lang.Object, java.lang.Class, boolean)
+ *     {@link #StandardMBean(Object, Class, boolean)
  *     StandardMBean(impl,interface)}:
  *     <pre>
  *     MBeanServer mbs;
@@ -216,7 +216,7 @@ public class StandardMBean implements DynamicMBean, MBeanRegistration {
      * <p>Make a DynamicMBean out of <var>this</var>, using the specified
      * <var>mbeanInterface</var> class.</p>
      *
-     * <p>Calls {@link #StandardMBean(java.lang.Object, java.lang.Class)
+     * <p>Calls {@link #StandardMBean(Object, Class)
      *       this(this,mbeanInterface)}.
      * This constructor is reserved to subclasses.</p>
      *
@@ -280,7 +280,7 @@ public class StandardMBean implements DynamicMBean, MBeanRegistration {
      * constructor {@link #StandardMBean(Object, Class)}, it
      * does not throw NotCompliantMBeanException.</p>
      *
-     * <p>Calls {@link #StandardMBean(java.lang.Object, java.lang.Class, boolean)
+     * <p>Calls {@link #StandardMBean(Object, Class, boolean)
      *       this(this, mbeanInterface, isMXBean)}.
      * This constructor is reserved to subclasses.</p>
      *
@@ -409,7 +409,7 @@ public class StandardMBean implements DynamicMBean, MBeanRegistration {
      * Get the {@link MBeanInfo} for this MBean.
      * <p>
      * This method implements
-     * {@link javax.management.DynamicMBean#getMBeanInfo()
+     * {@link DynamicMBean#getMBeanInfo()
      *   DynamicMBean.getMBeanInfo()}.
      * <p>
      * This method first calls {@link #getCachedMBeanInfo()} in order to
@@ -422,7 +422,7 @@ public class StandardMBean implements DynamicMBean, MBeanRegistration {
      * While building the MBeanInfo, this method calls the customization
      * hooks that make it possible for subclasses to supply their custom
      * descriptions, parameter names, etc...<br>
-     * Finally, it calls {@link #cacheMBeanInfo(javax.management.MBeanInfo)
+     * Finally, it calls {@link #cacheMBeanInfo(MBeanInfo)
      * cacheMBeanInfo()} in order to cache the new MBeanInfo.
      * @return The cached MBeanInfo for that MBean, if not null, or a
      *         newly built MBeanInfo if none was cached.

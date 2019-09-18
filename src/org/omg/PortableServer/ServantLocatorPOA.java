@@ -27,8 +27,8 @@ package org.omg.PortableServer;
 	 * every request for objects associated with a POA to 
 	 * be mediated by the servant manager.
 	 */
-public abstract class ServantLocatorPOA extends org.omg.PortableServer.Servant
- implements org.omg.PortableServer.ServantLocatorOperations, org.omg.CORBA.portable.InvokeHandler
+public abstract class ServantLocatorPOA extends Servant
+ implements ServantLocatorOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -36,8 +36,8 @@ public abstract class ServantLocatorPOA extends org.omg.PortableServer.Servant
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("preinvoke", new java.lang.Integer (0));
-    _methods.put ("postinvoke", new java.lang.Integer (1));
+    _methods.put ("preinvoke", new Integer (0));
+    _methods.put ("postinvoke", new Integer (1));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -52,7 +52,7 @@ public abstract class ServantLocatorPOA extends org.omg.PortableServer.Servant
     "IDL:omg.org/PortableServer/ServantLocator:1.0", 
     "IDL:omg.org/PortableServer/ServantManager:1.0"};
 
-  public String[] _all_interfaces (org.omg.PortableServer.POA poa, byte[] objectId)
+  public String[] _all_interfaces (POA poa, byte[] objectId)
   {
     return (String[])__ids.clone ();
   }

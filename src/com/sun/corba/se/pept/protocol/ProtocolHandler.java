@@ -41,7 +41,7 @@ public interface ProtocolHandler
      * dispatches it appropriately.
      *
      * For example, on the server side, it may find a
-     * {@link com.sun.corba.se.pept.protocol.ServerRequestDispatcher
+     * {@link ServerRequestDispatcher
      * ServerRequestDispatcher} to handle the request.  On the client-side
      * it may signal a waiting thread to handle a reply.
      *

@@ -44,7 +44,7 @@ public class OAInvocationInfo extends ServantObject {
     // In the RMI-IIOP case, it is the RMI-IIOP Tie, and the servant is the
     // target of the Tie.
     // In all other cases, it is the same as the Servant.
-    private java.lang.Object    servantContainer ;
+    private Object    servantContainer ;
 
     // These fields are to support standard OMG APIs.
     private ObjectAdapter       oa;

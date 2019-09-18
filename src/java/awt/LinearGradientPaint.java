@@ -33,7 +33,7 @@ import java.beans.ConstructorProperties;
 
 /**
  * The {@code LinearGradientPaint} class provides a way to fill
- * a {@link java.awt.Shape} with a linear color gradient pattern.  The user
+ * a {@link Shape} with a linear color gradient pattern.  The user
  * may specify two or more gradient colors, and this paint will provide an
  * interpolation between each color.  The user also specifies start and end
  * points which define where in user space the color gradient should begin
@@ -96,8 +96,8 @@ import java.beans.ConstructorProperties;
  * alt="image showing the output of the example code">
  * </center>
  *
- * @see java.awt.Paint
- * @see java.awt.Graphics2D#setPaint
+ * @see Paint
+ * @see Graphics2D#setPaint
  * @author Nicholas Talian, Vincent Hardy, Jim Graham, Jerry Evans
  * @since 1.6
  */

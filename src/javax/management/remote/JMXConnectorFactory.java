@@ -100,8 +100,8 @@ import sun.reflect.misc.ReflectUtil;
  * key <code>jmx.remote.protocol.provider.class.loader</code> then the
  * associated value is the class loader to use to load the provider.
  * If the associated value is not an instance of {@link
- * java.lang.ClassLoader}, an {@link
- * java.lang.IllegalArgumentException} is thrown.</p>
+ * ClassLoader}, an {@link
+ * IllegalArgumentException} is thrown.</p>
  *
  * <p>If the <code>jmx.remote.protocol.provider.class.loader</code>
  * key is not present in the <code>environment</code> parameter, the

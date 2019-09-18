@@ -53,9 +53,9 @@ package javax.swing.text;
  * If a method doesn't follow these defaults, this must be explicitly stated
  * in the method documentation.
  *
- * @see javax.swing.text.Document
- * @see javax.swing.text.AbstractDocument
- * @see javax.swing.text.DefaultStyledDocument
+ * @see Document
+ * @see AbstractDocument
+ * @see DefaultStyledDocument
  *
  * @since 1.4
  */

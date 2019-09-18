@@ -63,7 +63,7 @@ import java.io.Serializable;
  * on the <code>Component</code> as a drag initiating gesture, it will notify
  * its unicast <code>DragGestureListener</code> by
  * invoking its
- * {@link java.awt.dnd.DragGestureListener#dragGestureRecognized gestureRecognized()}
+ * {@link DragGestureListener#dragGestureRecognized gestureRecognized()}
  * method.
  * <P>
  * When a concrete <code>DragGestureRecognizer</code>
@@ -78,9 +78,9 @@ import java.io.Serializable;
  * appropriate).
  * <P>
  * @author Laurence P. G. Cable
- * @see java.awt.dnd.DragGestureListener
- * @see java.awt.dnd.DragGestureEvent
- * @see java.awt.dnd.DragSource
+ * @see DragGestureListener
+ * @see DragGestureEvent
+ * @see DragSource
  */
 
 public abstract class DragGestureRecognizer implements Serializable {
@@ -314,7 +314,7 @@ public abstract class DragGestureRecognizer implements Serializable {
      * @param dgl the <code>DragGestureListener</code> to register
      * with this <code>DragGestureRecognizer</code>.
      * <P>
-     * @throws java.util.TooManyListenersException if a
+     * @throws TooManyListenersException if a
      * <code>DragGestureListener</code> has already been added.
      */
 

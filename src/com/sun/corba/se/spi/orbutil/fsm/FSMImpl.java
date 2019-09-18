@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.fsm ;
+package com.sun.corba.se.spi.orbutil.fsm;
 
 import java.util.Set ;
 import java.util.HashSet ;

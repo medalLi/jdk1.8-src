@@ -51,7 +51,7 @@ package java.awt;
  * style="float:center; margin: 7px 10px;">
  * <p>
  * @author      Sami Shaio
- * @see         java.awt.Checkbox
+ * @see         Checkbox
  * @since       JDK1.0
  */
 public class CheckboxGroup implements java.io.Serializable {
@@ -82,8 +82,8 @@ public class CheckboxGroup implements java.io.Serializable {
      * group are off.
      * @return   the check box that is currently in the
      *                 "on" state, or <code>null</code>.
-     * @see      java.awt.Checkbox
-     * @see      java.awt.CheckboxGroup#setSelectedCheckbox
+     * @see      Checkbox
+     * @see      CheckboxGroup#setSelectedCheckbox
      * @since    JDK1.1
      */
     public Checkbox getSelectedCheckbox() {
@@ -111,8 +111,8 @@ public class CheckboxGroup implements java.io.Serializable {
      * nothing.
      * @param     box   the <code>Checkbox</code> to set as the
      *                      current selection.
-     * @see      java.awt.Checkbox
-     * @see      java.awt.CheckboxGroup#getSelectedCheckbox
+     * @see      Checkbox
+     * @see      CheckboxGroup#getSelectedCheckbox
      * @since    JDK1.1
      */
     public void setSelectedCheckbox(Checkbox box) {

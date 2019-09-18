@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-package com.sun.org.apache.xerces.internal.impl ;
+package com.sun.org.apache.xerces.internal.impl;
 
 import com.sun.org.apache.xerces.internal.impl.Constants;
 import com.sun.org.apache.xerces.internal.impl.io.ASCIIReader;
@@ -829,7 +829,7 @@ public class XMLEntityManager implements XMLComponent, XMLEntityResolver {
          * in the prolog of the XML document is not considered. Hence, prolog can
          * be read in Chunks of data instead of byte by byte.
          */
-        fCurrentEntity = new com.sun.xml.internal.stream.Entity.ScannedEntity(name,new XMLResourceIdentifierImpl(publicId, literalSystemId, baseSystemId, expandedSystemId),stream, reader, encoding, literal, encodingExternallySpecified, isExternal);
+        fCurrentEntity = new Entity.ScannedEntity(name,new XMLResourceIdentifierImpl(publicId, literalSystemId, baseSystemId, expandedSystemId),stream, reader, encoding, literal, encodingExternallySpecified, isExternal);
         fCurrentEntity.setEncodingExternallySpecified(encodingExternallySpecified);
         fEntityScanner.setCurrentEntity(fCurrentEntity);
         fResourceIdentifier.setValues(publicId, literalSystemId, baseSystemId, expandedSystemId);
@@ -927,12 +927,12 @@ public class XMLEntityManager implements XMLComponent, XMLEntityResolver {
      * @param entityHandler The new entity handler.
      */
 
-    public void setEntityHandler(com.sun.org.apache.xerces.internal.impl.XMLEntityHandler entityHandler) {
+    public void setEntityHandler(XMLEntityHandler entityHandler) {
         fEntityHandler = (XMLEntityHandler) entityHandler;
     } // setEntityHandler(XMLEntityHandler)
 
     //this function returns StaxXMLInputSource
-    public StaxXMLInputSource resolveEntityAsPerStax(XMLResourceIdentifier resourceIdentifier) throws java.io.IOException{
+    public StaxXMLInputSource resolveEntityAsPerStax(XMLResourceIdentifier resourceIdentifier) throws IOException{
 
         if(resourceIdentifier == null ) return null;
 
@@ -1806,7 +1806,7 @@ public class XMLEntityManager implements XMLComponent, XMLEntityResolver {
         // record the new value as the global property value
         gUserDir = userDir;
 
-        char separator = java.io.File.separatorChar;
+        char separator = File.separatorChar;
         userDir = userDir.replace(separator, '/');
 
         int len = userDir.length(), ch;
@@ -1844,7 +1844,7 @@ public class XMLEntityManager implements XMLComponent, XMLEntityResolver {
             byte b;
             try {
                 bytes = userDir.substring(i).getBytes("UTF-8");
-            } catch (java.io.UnsupportedEncodingException e) {
+            } catch (UnsupportedEncodingException e) {
                 // should never happen
                 return new URI("file", "", userDir, null, null);
             }
@@ -2603,7 +2603,7 @@ public class XMLEntityManager implements XMLComponent, XMLEntityResolver {
     protected static String fixURI(String str) {
 
         // handle platform dependent strings
-        str = str.replace(java.io.File.separatorChar, '/');
+        str = str.replace(File.separatorChar, '/');
 
         // Windows fix
         if (str.length() >= 2) {

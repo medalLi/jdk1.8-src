@@ -45,5 +45,5 @@ public interface IdentifiableFactoryFinder
 
     /** Register a factory for the given id.
      */
-    void registerFactory( IdentifiableFactory factory ) ;
+    void registerFactory(IdentifiableFactory factory) ;
 }

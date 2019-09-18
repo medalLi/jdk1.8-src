@@ -92,7 +92,7 @@ import java.util.Collections;
  * outstanding then the ordering of the I/O operations, and the order that the
  * completion handlers are invoked, is not specified; they are not, in particular,
  * guaranteed to execute in the order that the operations were initiated. The
- * {@link java.nio.ByteBuffer ByteBuffers} used when reading or writing are not
+ * {@link ByteBuffer ByteBuffers} used when reading or writing are not
  * safe for use by multiple concurrent I/O operations. Furthermore, after an I/O
  * operation is initiated then care should be taken to ensure that the buffer is
  * not accessed until after the operation has completed.

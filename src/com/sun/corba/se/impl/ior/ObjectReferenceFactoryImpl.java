@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.ior ;
+package com.sun.corba.se.impl.ior;
 
 import java.util.Iterator ;
 

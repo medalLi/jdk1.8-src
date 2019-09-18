@@ -45,7 +45,7 @@ import javax.xml.stream.XMLStreamException;
  *
  * @version 1.0
  * @author Copyright (c) 2009 by Oracle Corporation. All Rights Reserved.
- * @see javax.xml.stream.XMLStreamReader
+ * @see XMLStreamReader
  * @see EventReaderDelegate
  * @since 1.6
  */

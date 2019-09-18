@@ -42,7 +42,7 @@ import com.sun.corba.se.spi.orb.ORB ;
 import com.sun.corba.se.spi.logging.CORBALogDomains ;
 import com.sun.corba.se.impl.logging.ORBUtilSystemException ;
 
-abstract class DynAnyImpl extends org.omg.CORBA.LocalObject implements DynAny
+abstract class DynAnyImpl extends LocalObject implements DynAny
 {
     protected static final int NO_INDEX = -1;
     // A DynAny is destroyable if it is the root of a DynAny hierarchy.
@@ -140,7 +140,7 @@ abstract class DynAnyImpl extends org.omg.CORBA.LocalObject implements DynAny
     // DynAny interface methods
     //
 
-    public org.omg.CORBA.TypeCode type() {
+    public TypeCode type() {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -148,8 +148,8 @@ abstract class DynAnyImpl extends org.omg.CORBA.LocalObject implements DynAny
     }
 
     // Makes a copy of the Any value inside the parameter
-    public void assign (org.omg.DynamicAny.DynAny dyn_any)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+    public void assign (DynAny dyn_any)
+        throws TypeMismatch
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -161,9 +161,9 @@ abstract class DynAnyImpl extends org.omg.CORBA.LocalObject implements DynAny
     }
 
     // Makes a copy of the Any parameter
-    public void from_any (org.omg.CORBA.Any value)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public void from_any (Any value)
+        throws TypeMismatch,
+               InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -185,10 +185,10 @@ abstract class DynAnyImpl extends org.omg.CORBA.LocalObject implements DynAny
         any = tempAny;
    }
 
-    public abstract org.omg.CORBA.Any to_any();
-    public abstract boolean equal (org.omg.DynamicAny.DynAny dyn_any);
+    public abstract Any to_any();
+    public abstract boolean equal (DynAny dyn_any);
     public abstract void destroy();
-    public abstract org.omg.DynamicAny.DynAny copy();
+    public abstract DynAny copy();
 
     // Needed for org.omg.CORBA.Object
 

@@ -63,8 +63,8 @@ import sun.awt.image.ImagingLib;
  *<p>
  * Note that the Source and the Destination may not be the same object.
  * @see Kernel
- * @see java.awt.RenderingHints#KEY_COLOR_RENDERING
- * @see java.awt.RenderingHints#KEY_DITHERING
+ * @see RenderingHints#KEY_COLOR_RENDERING
+ * @see RenderingHints#KEY_DITHERING
  */
 public class ConvolveOp implements BufferedImageOp, RasterOp {
     Kernel kernel;
@@ -96,7 +96,7 @@ public class ConvolveOp implements BufferedImageOp, RasterOp {
      * @see Kernel
      * @see #EDGE_NO_OP
      * @see #EDGE_ZERO_FILL
-     * @see java.awt.RenderingHints
+     * @see RenderingHints
      */
     public ConvolveOp(Kernel kernel, int edgeCondition, RenderingHints hints) {
         this.kernel   = kernel;

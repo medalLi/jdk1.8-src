@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.extension ;
+package com.sun.corba.se.spi.extension;
 
 import org.omg.CORBA.Policy ;
 import org.omg.CORBA.LocalObject ;
@@ -149,7 +149,7 @@ public class ServantCachingPolicy extends LocalObject implements Policy
         return ORBConstants.SERVANT_CACHING_POLICY ;
     }
 
-    public org.omg.CORBA.Policy copy ()
+    public Policy copy ()
     {
         return this ;
     }

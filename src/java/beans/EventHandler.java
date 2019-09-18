@@ -266,7 +266,7 @@ import sun.reflect.misc.ReflectUtil;
  * undefined.  For that reason we recommend against targeting overloaded
  * methods.
  *
- * @see java.lang.reflect.Proxy
+ * @see Proxy
  * @see java.util.EventObject
  *
  * @since 1.4
@@ -287,7 +287,7 @@ public class EventHandler implements InvocationHandler {
      * Creates a new <code>EventHandler</code> object;
      * you generally use one of the <code>create</code> methods
      * instead of invoking this constructor directly.  Refer to
-     * {@link java.beans.EventHandler#create(Class, Object, String, String)
+     * {@link EventHandler#create(Class, Object, String, String)
      * the general version of create} for a complete description of
      * the <code>eventPropertyName</code> and <code>listenerMethodName</code>
      * parameter.
@@ -502,7 +502,7 @@ public class EventHandler implements InvocationHandler {
      * implementation of the <code>create</code> method with both
      * the <code>eventPropertyName</code> and the <code>listenerMethodName</code>
      * taking the value <code>null</code>. Refer to
-     * {@link java.beans.EventHandler#create(Class, Object, String, String)
+     * {@link EventHandler#create(Class, Object, String, String)
      * the general version of create} for a complete description of
      * the <code>action</code> parameter.
      * <p>
@@ -545,7 +545,7 @@ public class EventHandler implements InvocationHandler {
      * more general, implementation of the <code>create</code> method with
      * the <code>listenerMethodName</code> taking the value <code>null</code>.
      * Refer to
-     * {@link java.beans.EventHandler#create(Class, Object, String, String)
+     * {@link EventHandler#create(Class, Object, String, String)
      * the general version of create} for a complete description of
      * the <code>action</code> and <code>eventPropertyName</code> parameters.
      * <p>

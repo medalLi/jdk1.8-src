@@ -43,7 +43,7 @@ package java.beans;
  * @see java.beans.beancontext.BeanContext
  * @see java.beans.beancontext.BeanContextChild
  * @see java.beans.beancontext.BeanContextMembershipListener
- * @see java.beans.PropertyChangeEvent
+ * @see PropertyChangeEvent
  */
 
 public interface DesignMode {
@@ -73,7 +73,7 @@ public interface DesignMode {
      * @param designTime  the current "value" of the "designTime" property
      * @see java.beans.beancontext.BeanContext
      * @see java.beans.beancontext.BeanContextMembershipListener
-     * @see java.beans.PropertyChangeEvent
+     * @see PropertyChangeEvent
      */
 
     void setDesignTime(boolean designTime);

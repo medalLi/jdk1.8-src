@@ -1705,7 +1705,7 @@ public class LogManager {
      * for the logging facility.
      *
      * @see java.lang.management.PlatformLoggingMXBean
-     * @see java.util.logging.LoggingMXBean
+     * @see LoggingMXBean
      *
      * @since 1.5
      */

@@ -105,7 +105,7 @@ public class DragSourceDragEvent extends DragSourceEvent {
      *
      * @throws IllegalArgumentException if <code>dsc</code> is <code>null</code>.
      *
-     * @see java.awt.event.InputEvent
+     * @see InputEvent
      * @see DragSourceEvent#getLocation
      */
 
@@ -156,7 +156,7 @@ public class DragSourceDragEvent extends DragSourceEvent {
      *
      * @throws IllegalArgumentException if <code>dsc</code> is <code>null</code>.
      *
-     * @see java.awt.event.InputEvent
+     * @see InputEvent
      * @since 1.4
      */
     public DragSourceDragEvent(DragSourceContext dsc, int dropAction,

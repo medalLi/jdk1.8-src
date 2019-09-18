@@ -490,23 +490,23 @@ public final class AttributeSetUtilities {
 
 
     /**
-     * Verify that the given object is a {@link java.lang.Class Class} that
+     * Verify that the given object is a {@link Class Class} that
      * implements the given interface, which is assumed to be interface {@link
      * Attribute Attribute} or a subinterface thereof.
      *
      * @param  object     Object to test.
      * @param  interfaceName  Interface the object must implement.
      *
-     * @return  If <CODE>object</CODE> is a {@link java.lang.Class Class}
+     * @return  If <CODE>object</CODE> is a {@link Class Class}
      *          that implements <CODE>interfaceName</CODE>,
      *          <CODE>object</CODE> is returned downcast to type {@link
-     *          java.lang.Class Class}; otherwise an exception is thrown.
+     *          Class Class}; otherwise an exception is thrown.
      *
      * @exception  NullPointerException
      *     (unchecked exception) Thrown if <CODE>object</CODE> is null.
      * @exception  ClassCastException
      *     (unchecked exception) Thrown if <CODE>object</CODE> is not a
-     *     {@link java.lang.Class Class} that implements
+     *     {@link Class Class} that implements
      *     <CODE>interfaceName</CODE>.
      */
     public static Class<?>

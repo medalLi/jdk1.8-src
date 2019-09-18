@@ -107,7 +107,7 @@ abstract class DynAnyCollectionImpl extends DynAnyConstructedImpl
     // Collection methods
     //
 
-    public org.omg.CORBA.Any[] get_elements () {
+    public Any[] get_elements () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -115,7 +115,7 @@ abstract class DynAnyCollectionImpl extends DynAnyConstructedImpl
     }
 
     protected abstract void checkValue(Object[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+        throws InvalidValue;
 
     // Initializes the elements of the ordered collection.
     // If value does not contain the same number of elements as the array dimension,
@@ -123,9 +123,9 @@ abstract class DynAnyCollectionImpl extends DynAnyConstructedImpl
     // If one or more elements have a type that is inconsistent with the collections TypeCode,
     // the operation raises TypeMismatch.
     // This operation does not change the current position.
-    public void set_elements (org.omg.CORBA.Any[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public void set_elements (Any[] value)
+        throws TypeMismatch,
+               InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
@@ -162,7 +162,7 @@ abstract class DynAnyCollectionImpl extends DynAnyConstructedImpl
         representations = REPRESENTATION_COMPONENTS;
     }
 
-    public org.omg.DynamicAny.DynAny[] get_elements_as_dyn_any () {
+    public DynAny[] get_elements_as_dyn_any () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -170,9 +170,9 @@ abstract class DynAnyCollectionImpl extends DynAnyConstructedImpl
     }
 
     // Same semantics as set_elements(Any[])
-    public void set_elements_as_dyn_any (org.omg.DynamicAny.DynAny[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+    public void set_elements_as_dyn_any (DynAny[] value)
+        throws TypeMismatch,
+               InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;

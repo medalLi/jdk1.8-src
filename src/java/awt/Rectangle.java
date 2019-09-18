@@ -304,7 +304,7 @@ public class Rectangle extends Rectangle2D
      * {@link Component}.
      * @return    a new <code>Rectangle</code>, equal to the
      * bounding <code>Rectangle</code> for this <code>Rectangle</code>.
-     * @see       java.awt.Component#getBounds
+     * @see       Component#getBounds
      * @see       #setBounds(Rectangle)
      * @see       #setBounds(int, int, int, int)
      * @since     1.1
@@ -330,7 +330,7 @@ public class Rectangle extends Rectangle2D
      * <code>setBounds</code> method of <code>Component</code>.
      * @param r the specified <code>Rectangle</code>
      * @see       #getBounds
-     * @see       java.awt.Component#setBounds(java.awt.Rectangle)
+     * @see       Component#setBounds(Rectangle)
      * @since     1.1
      */
     public void setBounds(Rectangle r) {
@@ -352,7 +352,7 @@ public class Rectangle extends Rectangle2D
      * @param width the new width for this <code>Rectangle</code>
      * @param height the new height for this <code>Rectangle</code>
      * @see       #getBounds
-     * @see       java.awt.Component#setBounds(int, int, int, int)
+     * @see       Component#setBounds(int, int, int, int)
      * @since     1.1
      */
     public void setBounds(int x, int y, int width, int height) {
@@ -447,7 +447,7 @@ public class Rectangle extends Rectangle2D
      * <code>getLocation</code> method of <code>Component</code>.
      * @return the <code>Point</code> that is the upper-left corner of
      *                  this <code>Rectangle</code>.
-     * @see       java.awt.Component#getLocation
+     * @see       Component#getLocation
      * @see       #setLocation(Point)
      * @see       #setLocation(int, int)
      * @since     1.1
@@ -463,7 +463,7 @@ public class Rectangle extends Rectangle2D
      * <code>setLocation</code> method of <code>Component</code>.
      * @param p the <code>Point</code> specifying the new location
      *                for this <code>Rectangle</code>
-     * @see       java.awt.Component#setLocation(java.awt.Point)
+     * @see       Component#setLocation(Point)
      * @see       #getLocation
      * @since     1.1
      */
@@ -479,7 +479,7 @@ public class Rectangle extends Rectangle2D
      * @param x the X coordinate of the new location
      * @param y the Y coordinate of the new location
      * @see       #getLocation
-     * @see       java.awt.Component#setLocation(int, int)
+     * @see       Component#setLocation(int, int)
      * @since     1.1
      */
     public void setLocation(int x, int y) {
@@ -508,8 +508,8 @@ public class Rectangle extends Rectangle2D
      *                 along the X axis
      * @param dy the distance to move this <code>Rectangle</code>
      *                 along the Y axis
-     * @see       java.awt.Rectangle#setLocation(int, int)
-     * @see       java.awt.Rectangle#setLocation(java.awt.Point)
+     * @see       Rectangle#setLocation(int, int)
+     * @see       Rectangle#setLocation(Point)
      */
     public void translate(int dx, int dy) {
         int oldv = this.x;
@@ -586,7 +586,7 @@ public class Rectangle extends Rectangle2D
      * <code>getSize</code> method of <code>Component</code>.
      * @return a <code>Dimension</code>, representing the size of
      *            this <code>Rectangle</code>.
-     * @see       java.awt.Component#getSize
+     * @see       Component#getSize
      * @see       #setSize(Dimension)
      * @see       #setSize(int, int)
      * @since     1.1
@@ -602,7 +602,7 @@ public class Rectangle extends Rectangle2D
      * This method is included for completeness, to parallel the
      * <code>setSize</code> method of <code>Component</code>.
      * @param d the new size for the <code>Dimension</code> object
-     * @see       java.awt.Component#setSize(java.awt.Dimension)
+     * @see       Component#setSize(Dimension)
      * @see       #getSize
      * @since     1.1
      */
@@ -618,7 +618,7 @@ public class Rectangle extends Rectangle2D
      * <code>setSize</code> method of <code>Component</code>.
      * @param width the new width for this <code>Rectangle</code>
      * @param height the new height for this <code>Rectangle</code>
-     * @see       java.awt.Component#setSize(int, int)
+     * @see       Component#setSize(int, int)
      * @see       #getSize
      * @since     1.1
      */
@@ -1163,7 +1163,7 @@ public class Rectangle extends Rectangle2D
         if (r instanceof Rectangle) {
             return intersection((Rectangle) r);
         }
-        Rectangle2D dest = new Rectangle2D.Double();
+        Rectangle2D dest = new Double();
         Rectangle2D.intersect(this, r, dest);
         return dest;
     }
@@ -1176,7 +1176,7 @@ public class Rectangle extends Rectangle2D
         if (r instanceof Rectangle) {
             return union((Rectangle) r);
         }
-        Rectangle2D dest = new Rectangle2D.Double();
+        Rectangle2D dest = new Double();
         Rectangle2D.union(this, r, dest);
         return dest;
     }

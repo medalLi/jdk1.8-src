@@ -56,7 +56,7 @@ import sun.security.jca.GetInstance.Instance;
  * </code></blockquote>
  *
  * <p><code>TransformService</code> implementations are registered and loaded
- * using the {@link java.security.Provider} mechanism.  Each
+ * using the {@link Provider} mechanism.  Each
  * <code>TransformService</code> service provider implementation should include
  * a <code>MechanismType</code> service attribute that identifies the XML
  * mechanism type that it supports. If the attribute is not specified,

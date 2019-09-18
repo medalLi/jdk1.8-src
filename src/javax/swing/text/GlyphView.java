@@ -537,7 +537,7 @@ public class GlyphView extends View implements TabableView, Cloneable {
      * @param axis  may be either {@code View.X_AXIS} or {@code View.Y_AXIS}
      * @return      the minimum span the view can be rendered into
      * @throws IllegalArgumentException if the {@code axis} parameter is invalid
-     * @see         javax.swing.text.View#getMinimumSpan
+     * @see         View#getMinimumSpan
      */
     @Override
     public float getMinimumSpan(int axis) {

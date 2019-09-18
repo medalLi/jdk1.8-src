@@ -141,7 +141,7 @@ public class Statement {
      * the algorithm specified in the Java Language Specification
      * (15.11). The dynamic class of the target and arguments are used
      * in place of the compile-time type information and, like the
-     * {@link java.lang.reflect.Method} class itself, conversion between
+     * {@link Method} class itself, conversion between
      * primitive values and their associated wrapper classes is handled
      * internally.
      * <p>
@@ -167,7 +167,7 @@ public class Statement {
      *                           it denies the method invocation
      * @throws Exception that is thrown by the invoked method
      *
-     * @see java.lang.reflect.Method
+     * @see Method
      */
     public void execute() throws Exception {
         invoke();

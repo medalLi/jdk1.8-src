@@ -125,7 +125,7 @@ public class TransientNameServer
                 // Try environment
                 String ips = System.getProperty( ORBConstants.INITIAL_PORT_PROPERTY ) ;
                 if (ips != null && ips.length() > 0 ) {
-                    initialPort = java.lang.Integer.parseInt(ips);
+                    initialPort = Integer.parseInt(ips);
                     // -Dorg.omg.CORBA.ORBInitialPort=0 is invalid
                     if( initialPort == 0 ) {
                         orbInitialPort0 = true;
@@ -138,7 +138,7 @@ public class TransientNameServer
                     invalidHostOption = true;
                     throw wrapper.transientNameServerBadHost() ;
                 }
-            } catch (java.lang.NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 // do nothing
             }
 
@@ -147,7 +147,7 @@ public class TransientNameServer
                 // Was the initial port specified?
                 if (args[i].equals("-ORBInitialPort") &&
                     i < args.length-1) {
-                    initialPort = java.lang.Integer.parseInt(args[i+1]);
+                    initialPort = Integer.parseInt(args[i+1]);
                     // -ORBInitialPort 0 is invalid
                     if( initialPort == 0 ) {
                         orbInitialPort0 = true;
@@ -165,15 +165,15 @@ public class TransientNameServer
             if( initialPort == 0 ) {
                 initialPort = ORBConstants.DEFAULT_INITIAL_PORT;
                 props.put( ORBConstants.INITIAL_PORT_PROPERTY,
-                    java.lang.Integer.toString(initialPort) );
+                    Integer.toString(initialPort) );
             }
 
             // Set -ORBInitialPort = Persistent Server Port so that ORBImpl
             // will start Boot Strap.
             props.put( ORBConstants.PERSISTENT_SERVER_PORT_PROPERTY,
-               java.lang.Integer.toString(initialPort) );
+               Integer.toString(initialPort) );
 
-            org.omg.CORBA.ORB corb = ORB.init( args, props ) ;
+            ORB corb = ORB.init( args, props ) ;
             trace( "ORB object returned from init: " + corb ) ;
 
             org.omg.CORBA.Object ns = initializeRootNamingContext( corb ) ;
@@ -205,7 +205,7 @@ public class TransientNameServer
             System.out.println(CorbaResourceUtil.getText("tnameserv.hs3"));
 
             // Serve objects.
-            java.lang.Object sync = new java.lang.Object();
+            Object sync = new Object();
             synchronized (sync) {sync.wait();}
         } catch (Exception e) {
             if( invalidHostOption ) {

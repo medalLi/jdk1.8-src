@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.presentation.rmi ;
+package com.sun.corba.se.spi.presentation.rmi;
 
 import java.lang.reflect.Method ;
 
@@ -46,11 +46,11 @@ public interface IDLNameTranslator
      * corresponds to the mangled name idlName.  Returns null
      * if there is no matching method.
      */
-    Method getMethod( String idlName )  ;
+    Method getMethod(String idlName)  ;
 
     /** Get the mangled name that corresponds to the given method
      * on this IDLNameTranslator's interface.  Returns null
      * if there is no matching name.
      */
-    String getIDLName( Method method )  ;
+    String getIDLName(Method method)  ;
 }

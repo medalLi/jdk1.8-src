@@ -38,7 +38,7 @@ import javax.swing.text.View;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JToolTip}.
+ * {@link JToolTip}.
  *
  * @author Joshua Outwater
  * @since 1.7

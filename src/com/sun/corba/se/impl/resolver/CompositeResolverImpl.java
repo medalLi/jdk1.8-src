@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.resolver ;
+package com.sun.corba.se.impl.resolver;
 
 import java.util.Set ;
 import java.util.HashSet ;
@@ -48,7 +48,7 @@ public class CompositeResolverImpl implements Resolver {
         return result ;
     }
 
-    public java.util.Set list()
+    public Set list()
     {
         Set result = new HashSet() ;
         result.addAll( first.list() ) ;

@@ -325,7 +325,7 @@ public class DefaultTableColumnModel implements TableColumnModel,
      *
      * @param  x  the horizontal location of interest
      * @return  the index of the column or -1 if no column is found
-     * @see javax.swing.JTable#columnAtPoint
+     * @see JTable#columnAtPoint
      */
     public int getColumnIndexAtX(int x) {
         if (x < 0) {

@@ -21,7 +21,7 @@ package org.omg.DynamicAny;
     * such activities as ORB bridging and debugging and should not be used to arbitrarily violate
     * the encapsulation of the value type. 
     */
-public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOperations
+public interface DynValueOperations  extends DynValueCommonOperations
 {
 
   /**
@@ -32,7 +32,7 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           * @exception TypeMismatch if the DynValue represents a null value type.
           * @exception InvalidValue if the current position does not indicate a member
           */
-  String current_member_name () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  String current_member_name() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the TCKind associated with the member at the current position.
@@ -40,7 +40,7 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           * @exception TypeMismatch if the DynValue represents a null value type.
           * @exception InvalidValue if the current position does not indicate a member
           */
-  org.omg.CORBA.TCKind current_member_kind () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  org.omg.CORBA.TCKind current_member_kind() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns a sequence of NameValuePairs describing the name and the value of each member
@@ -52,7 +52,7 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           *
           * @exception InvalidValue if this object represents a null value type
           */
-  org.omg.DynamicAny.NameValuePair[] get_members () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  NameValuePair[] get_members() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Initializes the value type's members from a sequence of NameValuePairs.
@@ -68,7 +68,7 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           * @exception InvalidValue if the passed sequence has a number of elements that disagrees
           *            with the number of members as indicated by the DynValue's TypeCode
           */
-  void set_members (org.omg.DynamicAny.NameValuePair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_members(NameValuePair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns a sequence of NameDynAnyPairs describing the name and the value of each member
@@ -80,7 +80,7 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           *
           * @exception InvalidValue if this object represents a null value type
           */
-  org.omg.DynamicAny.NameDynAnyPair[] get_members_as_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  NameDynAnyPair[] get_members_as_dyn_any() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Initializes the value type's members from a sequence of NameDynAnyPairs.
@@ -96,5 +96,5 @@ public interface DynValueOperations  extends org.omg.DynamicAny.DynValueCommonOp
           * @exception InvalidValue if the passed sequence has a number of elements that disagrees
           *            with the number of members as indicated by the DynValue's TypeCode
           */
-  void set_members_as_dyn_any (org.omg.DynamicAny.NameDynAnyPair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_members_as_dyn_any(NameDynAnyPair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 } // interface DynValueOperations

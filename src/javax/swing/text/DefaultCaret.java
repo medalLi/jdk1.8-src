@@ -100,7 +100,7 @@ import sun.swing.SwingUtilities2;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @author  Timothy Prinzing
  * @see     Caret
@@ -1056,7 +1056,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * with a forward bias.
      *
      * @param dot the position &gt;= 0
-     * @see #moveDot(int, javax.swing.text.Position.Bias)
+     * @see #moveDot(int, Position.Bias)
      * @see Caret#moveDot
      */
     public void moveDot(int dot) {

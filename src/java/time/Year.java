@@ -164,7 +164,7 @@ public final class Year
     /**
      * Obtains the current year from the system clock in the default time-zone.
      * <p>
-     * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
+     * This will query the {@link Clock#systemDefaultZone() system clock} in the default
      * time-zone to obtain the current year.
      * <p>
      * Using this method will prevent the ability to use an alternate clock for testing
@@ -179,7 +179,7 @@ public final class Year
     /**
      * Obtains the current year from the system clock in the specified time-zone.
      * <p>
-     * This will query the {@link Clock#system(java.time.ZoneId) system clock} to obtain the current year.
+     * This will query the {@link Clock#system(ZoneId) system clock} to obtain the current year.
      * Specifying the time-zone avoids dependence on the default time-zone.
      * <p>
      * Using this method will prevent the ability to use an alternate clock for testing

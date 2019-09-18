@@ -60,12 +60,12 @@ import java.io.IOException;
  * the JVM will need the RuntimePermission "getClassLoader".
  *
  * @author  James Gosling
- * @see     java.net.ContentHandler#getContent(java.net.URLConnection)
- * @see     java.net.ContentHandlerFactory
- * @see     java.net.URL#getContent()
- * @see     java.net.URLConnection
- * @see     java.net.URLConnection#getContent()
- * @see     java.net.URLConnection#setContentHandlerFactory(java.net.ContentHandlerFactory)
+ * @see     ContentHandler#getContent(URLConnection)
+ * @see     ContentHandlerFactory
+ * @see     URL#getContent()
+ * @see     URLConnection
+ * @see     URLConnection#getContent()
+ * @see     URLConnection#setContentHandlerFactory(ContentHandlerFactory)
  * @since   JDK1.0
  */
 abstract public class ContentHandler {

@@ -137,7 +137,7 @@ public final class Severity extends EnumSyntax implements Attribute {
      * For class Severity, the category is class Severity itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return Severity.class;

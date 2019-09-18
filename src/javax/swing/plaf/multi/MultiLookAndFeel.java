@@ -122,7 +122,7 @@ public class MultiLookAndFeel extends LookAndFeel {
      * (such as "javax.swing.plaf.multi.MultiButtonUI").
      *
      * @return an initialized <code>UIDefaults</code> object
-     * @see javax.swing.JComponent#getUIClassID
+     * @see JComponent#getUIClassID
      */
     public UIDefaults getDefaults() {
         String packageName = "javax.swing.plaf.multi.Multi";
@@ -214,8 +214,8 @@ public class MultiLookAndFeel extends LookAndFeel {
      *         otherwise, returns the UI object for the default look and feel
      *         or <code>null</code> if the default UI object couldn't be found
      *
-     * @see javax.swing.UIManager#getAuxiliaryLookAndFeels
-     * @see javax.swing.UIDefaults#getUI
+     * @see UIManager#getAuxiliaryLookAndFeels
+     * @see UIDefaults#getUI
      * @see MultiButtonUI#uis
      * @see MultiButtonUI#createUI
      */

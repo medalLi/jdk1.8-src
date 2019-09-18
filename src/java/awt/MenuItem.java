@@ -175,7 +175,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * shortcut.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since    JDK1.1
      */
     public MenuItem() throws HeadlessException {
@@ -191,7 +191,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * @param       label the label for this menu item.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since       JDK1.0
      */
     public MenuItem(String label) throws HeadlessException {
@@ -208,7 +208,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      *                       associated with this menu item.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since       JDK1.1
      */
     public MenuItem(String label, MenuShortcut s) throws HeadlessException {
@@ -241,7 +241,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * Gets the label for this menu item.
      * @return  the label of this menu item, or <code>null</code>
                        if this menu item has no label.
-     * @see     java.awt.MenuItem#setLabel
+     * @see     MenuItem#setLabel
      * @since   JDK1.0
      */
     public String getLabel() {
@@ -251,7 +251,7 @@ public class MenuItem extends MenuComponent implements Accessible {
     /**
      * Sets the label for this menu item to the specified label.
      * @param     label   the new label, or <code>null</code> for no label.
-     * @see       java.awt.MenuItem#getLabel
+     * @see       MenuItem#getLabel
      * @since     JDK1.0
      */
     public synchronized void setLabel(String label) {
@@ -264,7 +264,7 @@ public class MenuItem extends MenuComponent implements Accessible {
 
     /**
      * Checks whether this menu item is enabled.
-     * @see        java.awt.MenuItem#setEnabled
+     * @see        MenuItem#setEnabled
      * @since      JDK1.0
      */
     public boolean isEnabled() {
@@ -275,7 +275,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * Sets whether or not this menu item can be chosen.
      * @param      b  if <code>true</code>, enables this menu item;
      *                       if <code>false</code>, disables it.
-     * @see        java.awt.MenuItem#isEnabled
+     * @see        MenuItem#isEnabled
      * @since      JDK1.1
      */
     public synchronized void setEnabled(boolean b) {
@@ -326,7 +326,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * menu item,
      * @return      the menu shortcut associated with this menu item,
      *                   or <code>null</code> if none has been specified.
-     * @see         java.awt.MenuItem#setShortcut
+     * @see         MenuItem#setShortcut
      * @since       JDK1.1
      */
     public MenuShortcut getShortcut() {
@@ -339,7 +339,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * this menu item, it is replaced.
      * @param       s  the menu shortcut to associate
      *                           with this menu item.
-     * @see         java.awt.MenuItem#getShortcut
+     * @see         MenuItem#getShortcut
      * @since       JDK1.1
      */
     public void setShortcut(MenuShortcut s) {
@@ -452,9 +452,9 @@ public class MenuItem extends MenuComponent implements Accessible {
      * regardless of whether a listener is registered.
      *
      * @param       eventsToEnable the event mask defining the event types
-     * @see         java.awt.MenuItem#processEvent
-     * @see         java.awt.MenuItem#disableEvents
-     * @see         java.awt.Component#enableEvents
+     * @see         MenuItem#processEvent
+     * @see         MenuItem#disableEvents
+     * @see         Component#enableEvents
      * @since       JDK1.1
      */
     protected final void enableEvents(long eventsToEnable) {
@@ -467,9 +467,9 @@ public class MenuItem extends MenuComponent implements Accessible {
      * defined by the specified event mask parameter.
      *
      * @param       eventsToDisable the event mask defining the event types
-     * @see         java.awt.MenuItem#processEvent
-     * @see         java.awt.MenuItem#enableEvents
-     * @see         java.awt.Component#disableEvents
+     * @see         MenuItem#processEvent
+     * @see         MenuItem#enableEvents
+     * @see         Component#disableEvents
      * @since       JDK1.1
      */
     protected final void disableEvents(long eventsToDisable) {
@@ -484,7 +484,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * the menu item.
      * @param       command   the action command to be set
      *                                for this menu item.
-     * @see         java.awt.MenuItem#getActionCommand
+     * @see         MenuItem#getActionCommand
      * @since       JDK1.1
      */
     public void setActionCommand(String command) {
@@ -494,7 +494,7 @@ public class MenuItem extends MenuComponent implements Accessible {
     /**
      * Gets the command name of the action event that is fired
      * by this menu item.
-     * @see         java.awt.MenuItem#setActionCommand
+     * @see         MenuItem#setActionCommand
      * @since       JDK1.1
      */
     public String getActionCommand() {
@@ -516,8 +516,8 @@ public class MenuItem extends MenuComponent implements Accessible {
      * @param      l the action listener.
      * @see        #removeActionListener
      * @see        #getActionListeners
-     * @see        java.awt.event.ActionEvent
-     * @see        java.awt.event.ActionListener
+     * @see        ActionEvent
+     * @see        ActionListener
      * @since      JDK1.1
      */
     public synchronized void addActionListener(ActionListener l) {
@@ -538,8 +538,8 @@ public class MenuItem extends MenuComponent implements Accessible {
      * @param      l the action listener.
      * @see        #addActionListener
      * @see        #getActionListeners
-     * @see        java.awt.event.ActionEvent
-     * @see        java.awt.event.ActionListener
+     * @see        ActionEvent
+     * @see        ActionListener
      * @since      JDK1.1
      */
     public synchronized void removeActionListener(ActionListener l) {
@@ -559,8 +559,8 @@ public class MenuItem extends MenuComponent implements Accessible {
      *
      * @see        #addActionListener
      * @see        #removeActionListener
-     * @see        java.awt.event.ActionEvent
-     * @see        java.awt.event.ActionListener
+     * @see        ActionEvent
+     * @see        ActionListener
      * @since 1.4
      */
     public synchronized ActionListener[] getActionListeners() {
@@ -620,7 +620,7 @@ public class MenuItem extends MenuComponent implements Accessible {
      * exception.
      *
      * @param       e the event
-     * @see         java.awt.MenuItem#processActionEvent
+     * @see         MenuItem#processActionEvent
      * @since       JDK1.1
      */
     protected void processEvent(AWTEvent e) {
@@ -658,9 +658,9 @@ public class MenuItem extends MenuComponent implements Accessible {
      * exception.
      *
      * @param       e the action event
-     * @see         java.awt.event.ActionEvent
-     * @see         java.awt.event.ActionListener
-     * @see         java.awt.MenuItem#enableEvents
+     * @see         ActionEvent
+     * @see         ActionListener
+     * @see         MenuItem#enableEvents
      * @since       JDK1.1
      */
     protected void processActionEvent(ActionEvent e) {

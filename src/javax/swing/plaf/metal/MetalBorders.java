@@ -772,7 +772,7 @@ public class MetalBorders {
     public static Border getButtonBorder() {
         if (buttonBorder == null) {
             buttonBorder = new BorderUIResource.CompoundBorderUIResource(
-                                                   new MetalBorders.ButtonBorder(),
+                                                   new ButtonBorder(),
                                                    new BasicBorders.MarginBorder());
         }
         return buttonBorder;
@@ -787,7 +787,7 @@ public class MetalBorders {
     public static Border getTextBorder() {
         if (textBorder == null) {
             textBorder = new BorderUIResource.CompoundBorderUIResource(
-                                                   new MetalBorders.Flush3DBorder(),
+                                                   new Flush3DBorder(),
                                                    new BasicBorders.MarginBorder());
         }
         return textBorder;
@@ -802,7 +802,7 @@ public class MetalBorders {
     public static Border getTextFieldBorder() {
         if (textFieldBorder == null) {
             textFieldBorder = new BorderUIResource.CompoundBorderUIResource(
-                                                   new MetalBorders.TextFieldBorder(),
+                                                   new TextFieldBorder(),
                                                    new BasicBorders.MarginBorder());
         }
         return textFieldBorder;
@@ -883,7 +883,7 @@ public class MetalBorders {
     public static Border getToggleButtonBorder() {
         if (toggleButtonBorder == null) {
             toggleButtonBorder = new BorderUIResource.CompoundBorderUIResource(
-                                                   new MetalBorders.ToggleButtonBorder(),
+                                                   new ToggleButtonBorder(),
                                                    new BasicBorders.MarginBorder());
         }
         return toggleButtonBorder;
@@ -924,7 +924,7 @@ public class MetalBorders {
      * Border for a Table Header
      * @since 1.3
      */
-    public static class TableHeaderBorder extends javax.swing.border.AbstractBorder {
+    public static class TableHeaderBorder extends AbstractBorder {
         protected Insets editorBorderInsets = new Insets( 2, 2, 2, 0 );
 
         public void paintBorder(Component c, Graphics g, int x, int y, int w, int h) {
@@ -959,20 +959,20 @@ public class MetalBorders {
     static Border getToolBarRolloverBorder() {
         if (MetalLookAndFeel.usingOcean()) {
             return new CompoundBorder(
-                new MetalBorders.ButtonBorder(),
-                new MetalBorders.RolloverMarginBorder());
+                new ButtonBorder(),
+                new RolloverMarginBorder());
         }
-        return new CompoundBorder(new MetalBorders.RolloverButtonBorder(),
-                                  new MetalBorders.RolloverMarginBorder());
+        return new CompoundBorder(new RolloverButtonBorder(),
+                                  new RolloverMarginBorder());
     }
 
     static Border getToolBarNonrolloverBorder() {
         if (MetalLookAndFeel.usingOcean()) {
             new CompoundBorder(
-                new MetalBorders.ButtonBorder(),
-                new MetalBorders.RolloverMarginBorder());
+                new ButtonBorder(),
+                new RolloverMarginBorder());
         }
-        return new CompoundBorder(new MetalBorders.ButtonBorder(),
-                                  new MetalBorders.RolloverMarginBorder());
+        return new CompoundBorder(new ButtonBorder(),
+                                  new RolloverMarginBorder());
     }
 }

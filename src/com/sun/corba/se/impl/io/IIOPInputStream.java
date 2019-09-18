@@ -93,7 +93,7 @@ import com.sun.corba.se.spi.logging.CORBALogDomains ;
  */
 
 public class IIOPInputStream
-    extends com.sun.corba.se.impl.io.InputStreamHook
+    extends InputStreamHook
 {
     private static Bridge bridge =
         (Bridge)AccessController.doPrivileged(
@@ -204,7 +204,7 @@ public class IIOPInputStream
 
                 (Constructor) AccessController.doPrivileged(
                                     new PrivilegedExceptionAction() {
-                    public java.lang.Object run()
+                    public Object run()
                         throws NoSuchMethodException,
                         SecurityException {
 
@@ -295,7 +295,7 @@ public class IIOPInputStream
      * Dummy constructor; passes upper stream a dummy stream;
      **/
     public IIOPInputStream()
-        throws java.io.IOException {
+        throws IOException {
         super();
         resetStream();
     }
@@ -320,11 +320,11 @@ public class IIOPInputStream
     // 4365188 this is added to enable backward compatability w/ wrong
     // rep-ids
     public final void setValueHandler(ValueHandler vh) {
-        vhandler = (com.sun.corba.se.impl.io.ValueHandlerImpl) vh;
+        vhandler = (ValueHandlerImpl) vh;
     }
 
     public final ValueHandler getValueHandler() {
-        return (javax.rmi.CORBA.ValueHandler) vhandler;
+        return (ValueHandler) vhandler;
     }
 
     final void increaseRecursionDepth(){
@@ -359,7 +359,7 @@ public class IIOPInputStream
      * that should not be deserialized.  All exceptions are fatal to the
      * InputStream and leave it in an indeterminate state; it is up to the caller
      * to ignore or recover the stream state.
-     * @exception java.lang.ClassNotFoundException Class of a serialized object
+     * @exception ClassNotFoundException Class of a serialized object
      *      cannot be found.
      * @exception InvalidClassException Something is wrong with a class used by
      *     serialization.
@@ -391,7 +391,7 @@ public class IIOPInputStream
 
     final synchronized Object simpleReadObject(Class clz,
                                   String repositoryID,
-                                  com.sun.org.omg.SendingContext.CodeBase sender,
+                                  CodeBase sender,
                                   int offset)
                                          /* throws OptionalDataException, ClassNotFoundException, IOException */
     {
@@ -462,7 +462,7 @@ public class IIOPInputStream
     }
 
     public final synchronized  void simpleSkipObject(String repositoryID,
-                                       com.sun.org.omg.SendingContext.CodeBase sender)
+                                       CodeBase sender)
                                        /* throws OptionalDataException, ClassNotFoundException, IOException */
     {
 
@@ -552,7 +552,7 @@ public class IIOPInputStream
      * of the class being deserialized. It will throw the NotActiveException
      * if it is called otherwise.
      *
-     * @exception java.lang.ClassNotFoundException if the class of a serialized
+     * @exception ClassNotFoundException if the class of a serialized
      *              object could not be found.
      * @exception IOException        if an I/O error occurs.
      * @exception NotActiveException if the stream is not currently reading
@@ -990,7 +990,7 @@ public class IIOPInputStream
 
     private synchronized Object inputObject(Class clz,
                                String repositoryID,
-                               com.sun.org.omg.SendingContext.CodeBase sender,
+                               CodeBase sender,
                                int offset)
         throws IOException, ClassNotFoundException
     {
@@ -1286,7 +1286,7 @@ public class IIOPInputStream
     // repositoryID.  It is assumed that the sender will not provide base_value id's for non-serializable
     // classes!
     private Vector getOrderedDescriptions(String repositoryID,
-                                          com.sun.org.omg.SendingContext.CodeBase sender) {
+                                          CodeBase sender) {
         Vector descs = new Vector();
 
         if (sender == null) {
@@ -1319,7 +1319,7 @@ public class IIOPInputStream
      */
     private synchronized Object inputObjectUsingFVD(Class clz,
                                        String repositoryID,
-                                       com.sun.org.omg.SendingContext.CodeBase sender,
+                                       CodeBase sender,
                                        int offset)
         throws IOException, ClassNotFoundException
     {
@@ -1643,7 +1643,7 @@ public class IIOPInputStream
      *
      */
     private Object skipObjectUsingFVD(String repositoryID,
-                                      com.sun.org.omg.SendingContext.CodeBase sender)
+                                      CodeBase sender)
         throws IOException, ClassNotFoundException
     {
 
@@ -1824,8 +1824,8 @@ public class IIOPInputStream
         }
      }
 
-    private Object inputObjectField(org.omg.CORBA.ValueMember field,
-                                    com.sun.org.omg.SendingContext.CodeBase sender)
+    private Object inputObjectField(ValueMember field,
+                                    CodeBase sender)
         throws IndirectionException, ClassNotFoundException, IOException,
                StreamCorruptedException {
 
@@ -1847,7 +1847,7 @@ public class IIOPInputStream
         if (signature != null && (signature.equals("Ljava/lang/Object;") ||
                                   signature.equals("Ljava/io/Serializable;") ||
                                   signature.equals("Ljava/io/Externalizable;"))) {
-            objectValue = javax.rmi.CORBA.Util.readAny(orbStream);
+            objectValue = Util.readAny(orbStream);
         } else {
             // Decide what method call to make based on the type. If
             // it is a type for which we need to load a stub, convert
@@ -1934,7 +1934,7 @@ public class IIOPInputStream
                ClassNotFoundException, IndirectionException, IOException {
 
         if (ObjectStreamClassCorbaExt.isAny(field.getTypeString())) {
-            return javax.rmi.CORBA.Util.readAny(orbStream);
+            return Util.readAny(orbStream);
         }
 
         Object objectValue = null;
@@ -2020,7 +2020,7 @@ public class IIOPInputStream
         return defaultReadObjectFVDMembers != null;
     }
 
-    void readFields(java.util.Map fieldToValueMap)
+    void readFields(Map fieldToValueMap)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException {
 
@@ -2030,7 +2030,7 @@ public class IIOPInputStream
             inputCurrentClassFieldsForReadFields(fieldToValueMap);
     }
 
-    private final void inputRemoteMembersForReadFields(java.util.Map fieldToValueMap)
+    private final void inputRemoteMembersForReadFields(Map fieldToValueMap)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException {
 
@@ -2120,7 +2120,7 @@ public class IIOPInputStream
      * the given Map, name to value.  Wraps primitives in the
      * corresponding java.lang Objects.
      */
-    private final void inputCurrentClassFieldsForReadFields(java.util.Map fieldToValueMap)
+    private final void inputCurrentClassFieldsForReadFields(Map fieldToValueMap)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException {
 
@@ -2208,7 +2208,7 @@ public class IIOPInputStream
      */
     private void inputClassFields(Object o, Class cl,
                                   ObjectStreamField[] fields,
-                                  com.sun.org.omg.SendingContext.CodeBase sender)
+                                  CodeBase sender)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException
     {
@@ -2273,7 +2273,7 @@ public class IIOPInputStream
     private void inputClassFields(Object o, Class cl,
                                   ObjectStreamClass osc,
                                   ValueMember[] fields,
-                                  com.sun.org.omg.SendingContext.CodeBase sender)
+                                  CodeBase sender)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException
     {
@@ -2393,7 +2393,7 @@ public class IIOPInputStream
     }
 
     private void skipCustomUsingFVD(ValueMember[] fields,
-                                    com.sun.org.omg.SendingContext.CodeBase sender)
+                                    CodeBase sender)
                                     throws InvalidClassException, StreamCorruptedException,
                                            ClassNotFoundException, IOException
     {
@@ -2415,7 +2415,7 @@ public class IIOPInputStream
      * This must handle same switch logic as above.
      */
     private void throwAwayData(ValueMember[] fields,
-                               com.sun.org.omg.SendingContext.CodeBase sender)
+                               CodeBase sender)
         throws InvalidClassException, StreamCorruptedException,
                ClassNotFoundException, IOException
     {
@@ -2476,7 +2476,7 @@ public class IIOPInputStream
                         if ((signature != null) && ( signature.equals("Ljava/lang/Object;") ||
                                                      signature.equals("Ljava/io/Serializable;") ||
                                                      signature.equals("Ljava/io/Externalizable;")) ) {
-                            javax.rmi.CORBA.Util.readAny(orbStream);
+                            Util.readAny(orbStream);
                         }
                         else {
                             // Decide what method call to make based on the type.

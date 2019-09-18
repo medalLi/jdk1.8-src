@@ -49,7 +49,7 @@ public interface Action
         * @param FSM fsm is the state machine causing this action.
         * @param Input in is the input that caused the transition.
         */
-        public void doIt( FSM fsm, Input in ) ;
+        public void doIt(FSM fsm, Input in) ;
 }
 
 // end of Action.java

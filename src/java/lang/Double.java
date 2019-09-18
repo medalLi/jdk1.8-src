@@ -531,7 +531,7 @@ public final class Double extends Number implements Comparable<Double> {
      * @throws NullPointerException  if the string is null
      * @throws NumberFormatException if the string does not contain
      *         a parsable {@code double}.
-     * @see    java.lang.Double#valueOf(String)
+     * @see    Double#valueOf(String)
      * @since 1.2
      */
     public static double parseDouble(String s) throws NumberFormatException {
@@ -602,7 +602,7 @@ public final class Double extends Number implements Comparable<Double> {
      * @param  s  a string to be converted to a {@code Double}.
      * @throws    NumberFormatException  if the string does not contain a
      *            parsable number.
-     * @see       java.lang.Double#valueOf(java.lang.String)
+     * @see       Double#valueOf(String)
      */
     public Double(String s) throws NumberFormatException {
         value = parseDouble(s);
@@ -638,7 +638,7 @@ public final class Double extends Number implements Comparable<Double> {
      * {@code toString} of one argument.
      *
      * @return  a {@code String} representation of this object.
-     * @see java.lang.Double#toString(double)
+     * @see Double#toString(double)
      */
     public String toString() {
         return toString(value);
@@ -792,7 +792,7 @@ public final class Double extends Number implements Comparable<Double> {
      * @param   obj   the object to compare with.
      * @return  {@code true} if the objects are the same;
      *          {@code false} otherwise.
-     * @see java.lang.Double#doubleToLongBits(double)
+     * @see Double#doubleToLongBits(double)
      */
     public boolean equals(Object obj) {
         return (obj instanceof Double)

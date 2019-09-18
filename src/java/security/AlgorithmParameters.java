@@ -65,7 +65,7 @@ import java.security.spec.InvalidParameterSpecException;
  * @author Jan Luehe
  *
  *
- * @see java.security.spec.AlgorithmParameterSpec
+ * @see AlgorithmParameterSpec
  * @see java.security.spec.DSAParameterSpec
  * @see KeyPairGenerator
  *

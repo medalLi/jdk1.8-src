@@ -183,8 +183,8 @@ public interface ObjectStreamConstants {
      * Enable substitution of one object for another during
      * serialization/deserialization.
      *
-     * @see java.io.ObjectOutputStream#enableReplaceObject(boolean)
-     * @see java.io.ObjectInputStream#enableResolveObject(boolean)
+     * @see ObjectOutputStream#enableReplaceObject(boolean)
+     * @see ObjectInputStream#enableResolveObject(boolean)
      * @since 1.2
      */
     final static SerializablePermission SUBSTITUTION_PERMISSION =
@@ -193,8 +193,8 @@ public interface ObjectStreamConstants {
     /**
      * Enable overriding of readObject and writeObject.
      *
-     * @see java.io.ObjectOutputStream#writeObjectOverride(Object)
-     * @see java.io.ObjectInputStream#readObjectOverride()
+     * @see ObjectOutputStream#writeObjectOverride(Object)
+     * @see ObjectInputStream#readObjectOverride()
      * @since 1.2
      */
     final static SerializablePermission SUBCLASS_IMPLEMENTATION_PERMISSION =
@@ -207,7 +207,7 @@ public interface ObjectStreamConstants {
     * streams containing Externalizable data that can be read by
     * pre-JDK 1.1.6 JVMs.
     *
-    * @see java.io.ObjectOutputStream#useProtocolVersion(int)
+    * @see ObjectOutputStream#useProtocolVersion(int)
     * @since 1.2
     */
     public final static int PROTOCOL_VERSION_1 = 1;
@@ -227,7 +227,7 @@ public interface ObjectStreamConstants {
     * stream. The serialVersionUID of a nonSerializable class is
     * set to 0L.
     *
-    * @see java.io.ObjectOutputStream#useProtocolVersion(int)
+    * @see ObjectOutputStream#useProtocolVersion(int)
     * @see #SC_BLOCK_DATA
     * @since 1.2
     */

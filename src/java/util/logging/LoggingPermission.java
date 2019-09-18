@@ -44,15 +44,15 @@ import java.security.*;
  *
  *
  * @since 1.4
- * @see java.security.BasicPermission
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see BasicPermission
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  */
 
-public final class LoggingPermission extends java.security.BasicPermission {
+public final class LoggingPermission extends BasicPermission {
 
     private static final long serialVersionUID = 63564341580231582L;
 

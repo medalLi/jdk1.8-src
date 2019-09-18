@@ -12,7 +12,7 @@ abstract public class ForwardRequestHelper
 {
   private static String  _id = "IDL:omg.org/PortableServer/ForwardRequest:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableServer.ForwardRequest that)
+  public static void insert (org.omg.CORBA.Any a, ForwardRequest that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ForwardRequestHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableServer.ForwardRequest extract (org.omg.CORBA.Any a)
+  public static ForwardRequest extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -47,7 +47,7 @@ abstract public class ForwardRequestHelper
             "forward_reference",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.PortableServer.ForwardRequestHelper.id (), "ForwardRequest", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (ForwardRequestHelper.id (), "ForwardRequest", _members0);
           __active = false;
         }
       }
@@ -60,16 +60,16 @@ abstract public class ForwardRequestHelper
     return _id;
   }
 
-  public static org.omg.PortableServer.ForwardRequest read (org.omg.CORBA.portable.InputStream istream)
+  public static ForwardRequest read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.PortableServer.ForwardRequest value = new org.omg.PortableServer.ForwardRequest ();
+    ForwardRequest value = new ForwardRequest ();
     // read and discard the repository ID
     istream.read_string ();
     value.forward_reference = org.omg.CORBA.ObjectHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableServer.ForwardRequest value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ForwardRequest value)
   {
     // write the repository ID
     ostream.write_string (id ());

@@ -404,10 +404,10 @@ import org.xml.sax.*;
  * </data>
  * }</PRE>
  *
- * @see javax.sql.rowset.JdbcRowSet
- * @see javax.sql.rowset.CachedRowSet
- * @see javax.sql.rowset.FilteredRowSet
- * @see javax.sql.rowset.JoinRowSet
+ * @see JdbcRowSet
+ * @see CachedRowSet
+ * @see FilteredRowSet
+ * @see JoinRowSet
  */
 
 public interface WebRowSet extends CachedRowSet {
@@ -421,7 +421,7 @@ public interface WebRowSet extends CachedRowSet {
 
     * @throws SQLException if a database access error occurs
     */
-    public void readXml(java.io.Reader reader) throws SQLException;
+    public void readXml(Reader reader) throws SQLException;
 
     /**
      * Reads a stream based XML input to populate this {@code WebRowSet}
@@ -432,7 +432,7 @@ public interface WebRowSet extends CachedRowSet {
      * @throws SQLException if a data source access error occurs
      * @throws IOException if an IO exception occurs
      */
-    public void readXml(java.io.InputStream iStream) throws SQLException, IOException;
+    public void readXml(InputStream iStream) throws SQLException, IOException;
 
    /**
     * Populates this {@code WebRowSet} object with
@@ -450,7 +450,7 @@ public interface WebRowSet extends CachedRowSet {
     * @throws SQLException if an error occurs writing out the rowset
     *          contents in XML format
     */
-    public void writeXml(ResultSet rs, java.io.Writer writer) throws SQLException;
+    public void writeXml(ResultSet rs, Writer writer) throws SQLException;
 
    /**
     * Populates this {@code WebRowSet} object with
@@ -468,7 +468,7 @@ public interface WebRowSet extends CachedRowSet {
     * @throws SQLException if a data source access error occurs
     * @throws IOException if a IO exception occurs
     */
-    public void writeXml(ResultSet rs, java.io.OutputStream oStream) throws SQLException, IOException;
+    public void writeXml(ResultSet rs, OutputStream oStream) throws SQLException, IOException;
 
    /**
     * Writes the data, properties, and metadata for this {@code WebRowSet} object
@@ -478,7 +478,7 @@ public interface WebRowSet extends CachedRowSet {
     * @throws SQLException if an error occurs writing out the rowset
     *          contents to XML
     */
-    public void writeXml(java.io.Writer writer) throws SQLException;
+    public void writeXml(Writer writer) throws SQLException;
 
     /**
      * Writes the data, properties, and metadata for this {@code WebRowSet} object
@@ -488,7 +488,7 @@ public interface WebRowSet extends CachedRowSet {
      * @throws SQLException if a data source access error occurs
      * @throws IOException if a IO exception occurs
      */
-    public void writeXml(java.io.OutputStream oStream) throws SQLException, IOException;
+    public void writeXml(OutputStream oStream) throws SQLException, IOException;
 
     /**
      * The public identifier for the XML Schema definition that defines the XML

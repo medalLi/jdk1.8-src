@@ -12,7 +12,7 @@ abstract public class ServerLocationHelper
 {
   private static String  _id = "IDL:activation/Locator/ServerLocation:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation that)
+  public static void insert (org.omg.CORBA.Any a, ServerLocation that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ServerLocationHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation extract (org.omg.CORBA.Any a)
+  public static ServerLocation extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -54,7 +54,7 @@ abstract public class ServerLocationHelper
             "ports",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationHelper.id (), "ServerLocation", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (ServerLocationHelper.id (), "ServerLocation", _members0);
           __active = false;
         }
       }
@@ -67,15 +67,15 @@ abstract public class ServerLocationHelper
     return _id;
   }
 
-  public static com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation read (org.omg.CORBA.portable.InputStream istream)
+  public static ServerLocation read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation value = new com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation ();
+    ServerLocation value = new ServerLocation ();
     value.hostname = istream.read_string ();
     value.ports = com.sun.corba.se.spi.activation.ORBPortInfoListHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServerLocation value)
   {
     ostream.write_string (value.hostname);
     com.sun.corba.se.spi.activation.ORBPortInfoListHelper.write (ostream, value.ports);

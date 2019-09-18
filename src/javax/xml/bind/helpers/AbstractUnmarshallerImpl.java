@@ -57,7 +57,7 @@ import java.net.URL;
  *
  * <p>
  * This class provides a partial default implementation for the
- * {@link javax.xml.bind.Unmarshaller}interface.
+ * {@link Unmarshaller}interface.
  *
  * <p>
  * A JAXB Provider has to implement five methods (getUnmarshallerHandler,
@@ -67,7 +67,7 @@ import java.net.URL;
  * @author <ul>
  *         <li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li>
  *         </ul>
- * @see javax.xml.bind.Unmarshaller
+ * @see Unmarshaller
  * @since JAXB1.0
  */
 public abstract class AbstractUnmarshallerImpl implements Unmarshaller

@@ -46,7 +46,7 @@ import java.io.IOException;
  * <p>If a SAX application needs to implement customized handling
  * for external entities, it must implement this interface and
  * register an instance with the SAX driver using the
- * {@link org.xml.sax.XMLReader#setEntityResolver setEntityResolver}
+ * {@link XMLReader#setEntityResolver setEntityResolver}
  * method.</p>
  *
  * <p>The XML reader will then allow the application to intercept any
@@ -87,8 +87,8 @@ import java.io.IOException;
  *
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.XMLReader#setEntityResolver
- * @see org.xml.sax.InputSource
+ * @see XMLReader#setEntityResolver
+ * @see InputSource
  */
 public interface EntityResolver {
 
@@ -127,15 +127,15 @@ public interface EntityResolver {
      * @return An InputSource object describing the new input source,
      *         or null to request that the parser open a regular
      *         URI connection to the system identifier.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
-     * @exception java.io.IOException A Java-specific IO exception,
+     * @exception IOException A Java-specific IO exception,
      *            possibly the result of creating a new InputStream
      *            or Reader for the InputSource.
-     * @see org.xml.sax.InputSource
+     * @see InputSource
      */
-    public abstract InputSource resolveEntity (String publicId,
-                                               String systemId)
+    public abstract InputSource resolveEntity(String publicId,
+                                              String systemId)
         throws SAXException, IOException;
 
 }

@@ -583,9 +583,9 @@ public abstract class BreakIterator implements Cloneable
      * localized instances.
      * The returned array represents the union of locales supported by the Java
      * runtime and by installed
-     * {@link java.text.spi.BreakIteratorProvider BreakIteratorProvider} implementations.
+     * {@link BreakIteratorProvider BreakIteratorProvider} implementations.
      * It must contain at least a <code>Locale</code>
-     * instance equal to {@link java.util.Locale#US Locale.US}.
+     * instance equal to {@link Locale#US Locale.US}.
      *
      * @return An array of locales for which localized
      *         <code>BreakIterator</code> instances are available.

@@ -48,7 +48,7 @@ public interface IIOPProfile extends TaggedProfile
      * outside of an invocation.
      * XXX move this to the ObjectKeyTemplate
      */
-    java.lang.Object getServant() ;
+    Object getServant() ;
 
     /** Return the GIOPVersion of this profile.  Caches the result.
      */

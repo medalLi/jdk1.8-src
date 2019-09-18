@@ -40,7 +40,7 @@ class LegacyHookGetFields extends ObjectInputStream.GetField {
     /**
      * Get the ObjectStreamClass that describes the fields in the stream.
      */
-    public java.io.ObjectStreamClass getObjectStreamClass() {
+    public ObjectStreamClass getObjectStreamClass() {
         return null;
     }
 

@@ -42,7 +42,7 @@ abstract public class ObjectHelper
 {
     private static String  _id = "";
 
-    public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.Object that)
+    public static void insert (Any a, Object that)
     {
         org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
         a.type (type ());
@@ -50,17 +50,17 @@ abstract public class ObjectHelper
         a.read_value (out.create_input_stream (), type ());
     }
 
-    public static org.omg.CORBA.Object extract (org.omg.CORBA.Any a)
+    public static Object extract (Any a)
     {
         return read (a.create_input_stream ());
     }
 
-    private static org.omg.CORBA.TypeCode __typeCode = null;
-    synchronized public static org.omg.CORBA.TypeCode type ()
+    private static TypeCode __typeCode = null;
+    synchronized public static TypeCode type ()
     {
         if (__typeCode == null)
             {
-                __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (TCKind.tk_objref);
+                __typeCode = ORB.init ().get_primitive_tc (TCKind.tk_objref);
             }
         return __typeCode;
     }
@@ -70,12 +70,12 @@ abstract public class ObjectHelper
         return _id;
     }
 
-    public static org.omg.CORBA.Object read (org.omg.CORBA.portable.InputStream istream)
+    public static Object read (org.omg.CORBA.portable.InputStream istream)
     {
         return istream.read_Object ();
     }
 
-    public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.Object value)
+    public static void write (org.omg.CORBA.portable.OutputStream ostream, Object value)
     {
         ostream.write_Object (value);
     }

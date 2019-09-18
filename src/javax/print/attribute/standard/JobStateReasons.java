@@ -48,11 +48,11 @@ import javax.print.attribute.PrintJobAttribute;
  * overall {@link JobState JobState} also changed.
  * <P>
  * Class JobStateReasons inherits its implementation from class {@link
- * java.util.HashSet java.util.HashSet}. Unlike most printing attributes which
+ * HashSet java.util.HashSet}. Unlike most printing attributes which
  * are immutable once constructed, class JobStateReasons is designed to be
  * mutable; you can add {@link JobStateReason JobStateReason} objects to an
  * existing JobStateReasons object and remove them again. However, like class
- * {@link java.util.HashSet java.util.HashSet}, class JobStateReasons is not
+ * {@link HashSet java.util.HashSet}, class JobStateReasons is not
  * multiple thread safe. If a JobStateReasons object will be used by multiple
  * threads, be sure to synchronize its operations (e.g., using a synchronized
  * set view obtained from class {@link java.util.Collections
@@ -109,7 +109,7 @@ public final class JobStateReasons
      * {@link JobStateReason JobStateReason} objects as the given collection.
      * The underlying hash set's initial capacity and load factor are as
      * specified in the superclass constructor {@link
-     * java.util.HashSet#HashSet(java.util.Collection)
+     * HashSet#HashSet(Collection)
      * HashSet(Collection)}.
      *
      * @param  collection  Collection to copy.
@@ -159,7 +159,7 @@ public final class JobStateReasons
      * For class JobStateReasons, the category is class JobStateReasons itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return JobStateReasons.class;

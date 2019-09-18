@@ -25,7 +25,7 @@ package org.omg.PortableInterceptor;
    *
    * @see ServerRequestInfo
    */
-public interface ServerRequestInterceptorOperations  extends org.omg.PortableInterceptor.InterceptorOperations
+public interface ServerRequestInterceptorOperations  extends InterceptorOperations
 {
 
   /**
@@ -62,7 +62,7 @@ public interface ServerRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void receive_request_service_contexts (org.omg.PortableInterceptor.ServerRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void receive_request_service_contexts(ServerRequestInfo ri) throws ForwardRequest;
 
   /**
        * Allows an Interceptor to query request information after all the 
@@ -103,7 +103,7 @@ public interface ServerRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void receive_request (org.omg.PortableInterceptor.ServerRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void receive_request(ServerRequestInfo ri) throws ForwardRequest;
 
   /**
        * Allows an Interceptor to query reply information and modify the 
@@ -123,7 +123,7 @@ public interface ServerRequestInterceptorOperations  extends org.omg.PortableInt
        *
        * @param ri Information about the current request being intercepted.
        */
-  void send_reply (org.omg.PortableInterceptor.ServerRequestInfo ri);
+  void send_reply(ServerRequestInfo ri);
 
   /**
        * Allows an Interceptor to query the exception information and modify 
@@ -163,7 +163,7 @@ public interface ServerRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void send_exception (org.omg.PortableInterceptor.ServerRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void send_exception(ServerRequestInfo ri) throws ForwardRequest;
 
   /**
        * Allows an Interceptor to query the information available when a 
@@ -194,5 +194,5 @@ public interface ServerRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void send_other (org.omg.PortableInterceptor.ServerRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void send_other(ServerRequestInfo ri) throws ForwardRequest;
 } // interface ServerRequestInterceptorOperations

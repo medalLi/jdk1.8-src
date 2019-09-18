@@ -123,11 +123,11 @@ import java.io.Serializable;
  * If multiple threads access a format concurrently, it must be synchronized
  * externally.
  *
- * @see          java.text.ParsePosition
- * @see          java.text.FieldPosition
- * @see          java.text.NumberFormat
- * @see          java.text.DateFormat
- * @see          java.text.MessageFormat
+ * @see          ParsePosition
+ * @see          FieldPosition
+ * @see          NumberFormat
+ * @see          DateFormat
+ * @see          MessageFormat
  * @author       Mark Davis
  */
 public abstract class Format implements Serializable, Cloneable {
@@ -386,7 +386,7 @@ public abstract class Format implements Serializable, Cloneable {
          * @param buffer Contains current formatted value, receiver should
          *        NOT modify it.
          */
-        public void formatted(Format.Field attr, Object value, int start,
+        public void formatted(Field attr, Object value, int start,
                               int end, StringBuffer buffer);
 
         /**
@@ -400,7 +400,7 @@ public abstract class Format implements Serializable, Cloneable {
          * @param buffer Contains current formatted value, receiver should
          *        NOT modify it.
          */
-        public void formatted(int fieldID, Format.Field attr, Object value,
+        public void formatted(int fieldID, Field attr, Object value,
                               int start, int end, StringBuffer buffer);
     }
 }

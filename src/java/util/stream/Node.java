@@ -122,7 +122,7 @@ interface Node<T> {
             return this;
         Spliterator<T> spliterator = spliterator();
         long size = to - from;
-        Node.Builder<T> nodeBuilder = Nodes.builder(size, generator);
+        Builder<T> nodeBuilder = Nodes.builder(size, generator);
         nodeBuilder.begin(size);
         for (int i = 0; i < from && spliterator.tryAdvance(e -> { }); i++) { }
         for (int i = 0; (i < size) && spliterator.tryAdvance(nodeBuilder); i++) { }
@@ -198,7 +198,7 @@ interface Node<T> {
         /**
          * Specialized @{code Node.Builder} for int elements
          */
-        interface OfInt extends Node.Builder<Integer>, Sink.OfInt {
+        interface OfInt extends Builder<Integer>, Sink.OfInt {
             @Override
             Node.OfInt build();
         }
@@ -206,7 +206,7 @@ interface Node<T> {
         /**
          * Specialized @{code Node.Builder} for long elements
          */
-        interface OfLong extends Node.Builder<Long>, Sink.OfLong {
+        interface OfLong extends Builder<Long>, Sink.OfLong {
             @Override
             Node.OfLong build();
         }
@@ -214,7 +214,7 @@ interface Node<T> {
         /**
          * Specialized @{code Node.Builder} for double elements
          */
-        interface OfDouble extends Node.Builder<Double>, Sink.OfDouble {
+        interface OfDouble extends Builder<Double>, Sink.OfDouble {
             @Override
             Node.OfDouble build();
         }
@@ -261,8 +261,8 @@ interface Node<T> {
          */
         @Override
         default T[] asArray(IntFunction<T[]> generator) {
-            if (java.util.stream.Tripwire.ENABLED)
-                java.util.stream.Tripwire.trip(getClass(), "{0} calling Node.OfPrimitive.asArray");
+            if (Tripwire.ENABLED)
+                Tripwire.trip(getClass(), "{0} calling Node.OfPrimitive.asArray");
 
             long size = count();
             if (size >= Nodes.MAX_ARRAY_SIZE)
@@ -352,12 +352,12 @@ interface Node<T> {
         }
 
         @Override
-        default Node.OfInt truncate(long from, long to, IntFunction<Integer[]> generator) {
+        default OfInt truncate(long from, long to, IntFunction<Integer[]> generator) {
             if (from == 0 && to == count())
                 return this;
             long size = to - from;
             Spliterator.OfInt spliterator = spliterator();
-            Node.Builder.OfInt nodeBuilder = Nodes.intBuilder(size);
+            Builder.OfInt nodeBuilder = Nodes.intBuilder(size);
             nodeBuilder.begin(size);
             for (int i = 0; i < from && spliterator.tryAdvance((IntConsumer) e -> { }); i++) { }
             for (int i = 0; (i < size) && spliterator.tryAdvance((IntConsumer) nodeBuilder); i++) { }
@@ -425,12 +425,12 @@ interface Node<T> {
         }
 
         @Override
-        default Node.OfLong truncate(long from, long to, IntFunction<Long[]> generator) {
+        default OfLong truncate(long from, long to, IntFunction<Long[]> generator) {
             if (from == 0 && to == count())
                 return this;
             long size = to - from;
             Spliterator.OfLong spliterator = spliterator();
-            Node.Builder.OfLong nodeBuilder = Nodes.longBuilder(size);
+            Builder.OfLong nodeBuilder = Nodes.longBuilder(size);
             nodeBuilder.begin(size);
             for (int i = 0; i < from && spliterator.tryAdvance((LongConsumer) e -> { }); i++) { }
             for (int i = 0; (i < size) && spliterator.tryAdvance((LongConsumer) nodeBuilder); i++) { }
@@ -500,12 +500,12 @@ interface Node<T> {
         }
 
         @Override
-        default Node.OfDouble truncate(long from, long to, IntFunction<Double[]> generator) {
+        default OfDouble truncate(long from, long to, IntFunction<Double[]> generator) {
             if (from == 0 && to == count())
                 return this;
             long size = to - from;
             Spliterator.OfDouble spliterator = spliterator();
-            Node.Builder.OfDouble nodeBuilder = Nodes.doubleBuilder(size);
+            Builder.OfDouble nodeBuilder = Nodes.doubleBuilder(size);
             nodeBuilder.begin(size);
             for (int i = 0; i < from && spliterator.tryAdvance((DoubleConsumer) e -> { }); i++) { }
             for (int i = 0; (i < size) && spliterator.tryAdvance((DoubleConsumer) nodeBuilder); i++) { }

@@ -58,7 +58,7 @@ public class NameService
      * Create NameService which starts the Root Naming Context in Persistent CosNaming
      * @param orb an ORB object.
      * @param logDir a File
-     * @exception java.lang.Exception a Java exception.
+     * @exception Exception a Java exception.
      */
     public NameService(ORB orb, File logDir)
         throws Exception
@@ -176,7 +176,7 @@ public class NameService
         {
                 throw e;
         }
-        catch( java.lang.Exception e )
+        catch( Exception e )
         {
                 //throw e;
         }

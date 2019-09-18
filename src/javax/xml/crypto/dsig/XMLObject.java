@@ -70,7 +70,7 @@ import javax.xml.crypto.XMLStructure;
  *
  * <p>Note that this class is named <code>XMLObject</code> rather than
  * <code>Object</code> to avoid naming clashes with the existing
- * {@link java.lang.Object java.lang.Object} class.
+ * {@link Object java.lang.Object} class.
  *
  * @author Sean Mullan
  * @author JSR 105 Expert Group
@@ -95,7 +95,7 @@ public interface XMLObject extends XMLStructure {
      *<p>If there is a public subclass representing the type of
      * <code>XMLStructure</code>, it is returned as an instance of that class
      * (ex: a <code>SignatureProperties</code> element would be returned
-     * as an instance of {@link javax.xml.crypto.dsig.SignatureProperties}).
+     * as an instance of {@link SignatureProperties}).
      *
      * @return an unmodifiable list of <code>XMLStructure</code>s (may be empty
      *    but never <code>null</code>)

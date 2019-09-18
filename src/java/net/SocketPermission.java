@@ -146,7 +146,7 @@ import sun.security.util.Debug;
  */
 
 public final class SocketPermission extends Permission
-    implements java.io.Serializable
+    implements Serializable
 {
     private static final long serialVersionUID = -7204263841984476862L;
 
@@ -242,7 +242,7 @@ public final class SocketPermission extends Permission
     };
 
     static {
-        Boolean tmp = java.security.AccessController.doPrivileged(
+        Boolean tmp = AccessController.doPrivileged(
                 new sun.security.action.GetBooleanAction("sun.net.trustNameService"));
         trustNameService = tmp.booleanValue();
     }
@@ -1180,7 +1180,7 @@ public final class SocketPermission extends Permission
      * to a stream. The actions are serialized, and the superclass
      * takes care of the name.
      */
-    private synchronized void writeObject(java.io.ObjectOutputStream s)
+    private synchronized void writeObject(ObjectOutputStream s)
         throws IOException
     {
         // Write out the actions. The superclass takes care of the name
@@ -1194,7 +1194,7 @@ public final class SocketPermission extends Permission
      * readObject is called to restore the state of the SocketPermission from
      * a stream.
      */
-    private synchronized void readObject(java.io.ObjectInputStream s)
+    private synchronized void readObject(ObjectInputStream s)
          throws IOException, ClassNotFoundException
     {
         // Read in the action, then initialize the rest
@@ -1320,9 +1320,9 @@ if wildcard, its the wild card
 else its the cname?
 
  *
- * @see java.security.Permission
+ * @see Permission
  * @see java.security.Permissions
- * @see java.security.PermissionCollection
+ * @see PermissionCollection
  *
  *
  * @author Roland Schemers

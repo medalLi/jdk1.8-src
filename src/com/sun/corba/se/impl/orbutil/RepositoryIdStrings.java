@@ -42,9 +42,9 @@ public interface RepositoryIdStrings
     String createForJavaType(Class clz)
         throws TypeMismatchException;
 
-    String createSequenceRepID(java.lang.Object ser);
+    String createSequenceRepID(Object ser);
 
-    String createSequenceRepID(java.lang.Class clazz);
+    String createSequenceRepID(Class clazz);
 
     RepositoryIdInterface getFromString(String repIdString);
 

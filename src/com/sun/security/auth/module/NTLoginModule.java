@@ -55,7 +55,7 @@ import com.sun.security.auth.NTNumericCredential;
  * debug messages from the native component of the module
  * will be output to the output stream, System.out.
  *
- * @see javax.security.auth.spi.LoginModule
+ * @see LoginModule
  */
 @jdk.Exported
 public class NTLoginModule implements LoginModule {

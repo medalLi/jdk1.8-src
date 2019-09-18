@@ -106,7 +106,7 @@ public class StubDelegateImpl implements javax.rmi.CORBA.StubDelegate
      * @return <code>true</code> if this object is the same as the <code>obj</code>
      *          argument; <code>false</code> otherwise.
      */
-    public boolean equals(javax.rmi.CORBA.Stub self, java.lang.Object obj)
+    public boolean equals(javax.rmi.CORBA.Stub self, Object obj)
     {
         if (self == obj) {
             return true;

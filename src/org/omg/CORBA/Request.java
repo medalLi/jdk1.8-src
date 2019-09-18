@@ -60,7 +60,7 @@ package org.omg.CORBA;
  * In other words, a <code>create_request</code> method is performed on the
  * object which is to be invoked.
  *
- * @see org.omg.CORBA.NamedValue
+ * @see NamedValue
  *
  */
 
@@ -74,7 +74,7 @@ public abstract class Request {
      *                    to be invoked
      */
 
-    public abstract org.omg.CORBA.Object target();
+    public abstract Object target();
 
     /**
      * Retrieves the name of the method to be invoked.

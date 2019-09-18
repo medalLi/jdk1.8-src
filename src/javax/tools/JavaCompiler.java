@@ -89,7 +89,7 @@ import javax.annotation.processing.Processor;
  *
  *     Every compiler which implements this interface provides a
  *     standard file manager for operating on regular {@linkplain
- *     java.io.File files}.  The StandardJavaFileManager interface
+ *     File files}.  The StandardJavaFileManager interface
  *     defines additional methods for creating file objects from
  *     regular files.
  *
@@ -282,9 +282,9 @@ public interface JavaCompiler extends Tool, OptionChecker {
      * @return the standard file manager
      */
     StandardJavaFileManager getStandardFileManager(
-        DiagnosticListener<? super JavaFileObject> diagnosticListener,
-        Locale locale,
-        Charset charset);
+            DiagnosticListener<? super JavaFileObject> diagnosticListener,
+            Locale locale,
+            Charset charset);
 
     /**
      * Interface representing a future for a compilation task.  The

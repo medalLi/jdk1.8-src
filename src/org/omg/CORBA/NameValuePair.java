@@ -41,7 +41,7 @@ public final class NameValuePair implements org.omg.CORBA.portable.IDLEntity {
     /**
      * The value to be associated with a name by this <code>NameValuePair</code> object.
      */
-    public org.omg.CORBA.Any value;
+    public Any value;
 
     /**
      * Constructs an empty <code>NameValuePair</code> object.
@@ -56,7 +56,7 @@ public final class NameValuePair implements org.omg.CORBA.portable.IDLEntity {
      * @param __id the name to be associated with the given <code>Any</code> object
      * @param __value the <code>Any</code> object to be associated with the given name
      */
-    public NameValuePair(String __id, org.omg.CORBA.Any __value) {
+    public NameValuePair(String __id, Any __value) {
         id = __id;
         value = __value;
     }

@@ -191,7 +191,7 @@ public class KeyStroke extends AWTKeyStroke {
      *        a key release; <code>false</code> otherwise.
      * @return a KeyStroke object for that key
      *
-     * @see java.awt.event.KeyEvent
+     * @see KeyEvent
      * @see java.awt.event.InputEvent
      */
     public static KeyStroke getKeyStroke(int keyCode, int modifiers,
@@ -240,7 +240,7 @@ public class KeyStroke extends AWTKeyStroke {
      * @param modifiers a bitwise-ored combination of any modifiers
      * @return a KeyStroke object for that key
      *
-     * @see java.awt.event.KeyEvent
+     * @see KeyEvent
      * @see java.awt.event.InputEvent
      */
     public static KeyStroke getKeyStroke(int keyCode, int modifiers) {
@@ -298,7 +298,7 @@ public class KeyStroke extends AWTKeyStroke {
      * @return a KeyStroke object for that String, or null if the specified
      *         String is null, or is formatted incorrectly
      *
-     * @see java.awt.event.KeyEvent
+     * @see KeyEvent
      */
     public static KeyStroke getKeyStroke(String s) {
         if (s == null || s.length() == 0) {

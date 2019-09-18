@@ -169,7 +169,7 @@ public class MutableCallSite extends CallSite {
      * <p>
      * This operation does not reverse any calls that have already started
      * on an old target value.
-     * (Java supports {@linkplain java.lang.Object#wait() forward time travel} only.)
+     * (Java supports {@linkplain Object#wait() forward time travel} only.)
      * <p>
      * The overall effect is to force all future readers of each call site's target
      * to accept the most recently stored value.

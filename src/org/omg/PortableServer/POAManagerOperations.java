@@ -25,7 +25,7 @@ public interface POAManagerOperations
   	 * @exception AdapterInactive is raised if the operation is
   	 *            invoked on the POAManager in inactive state.
   	 */
-  void activate () throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
+  void activate() throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 
   /**
   	 * This operation changes the state of the POA manager 
@@ -38,7 +38,7 @@ public interface POAManagerOperations
   	 * @exception AdapterInactive is raised if the operation is
   	 *            invoked on the POAManager in inactive state.
   	 */
-  void hold_requests (boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
+  void hold_requests(boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 
   /**
   	 * This operation changes the state of the POA manager 
@@ -51,7 +51,7 @@ public interface POAManagerOperations
   	 * @exception AdapterInactive is raised if the operation is
   	 *            invoked on the POAManager in inactive state.
   	 */
-  void discard_requests (boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
+  void discard_requests(boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 
   /**
   	 * This operation changes the state of the POA manager 
@@ -69,10 +69,10 @@ public interface POAManagerOperations
   	 * @exception AdapterInactive is raised if the operation is
   	 *            invoked on the POAManager in inactive state.
   	 */
-  void deactivate (boolean etherealize_objects, boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
+  void deactivate(boolean etherealize_objects, boolean wait_for_completion) throws org.omg.PortableServer.POAManagerPackage.AdapterInactive;
 
   /**
   	 * This operation returns the state of the POA manager.
   	 */
-  org.omg.PortableServer.POAManagerPackage.State get_state ();
+  org.omg.PortableServer.POAManagerPackage.State get_state();
 } // interface POAManagerOperations

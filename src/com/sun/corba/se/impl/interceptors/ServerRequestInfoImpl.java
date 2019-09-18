@@ -415,7 +415,7 @@ public final class ServerRequestInfoImpl
         if( servant instanceof Servant ) {
             result = ((Servant)servant)._is_a( id );
         } else if (StubAdapter.isStub( servant )) {
-            result = ((org.omg.CORBA.Object)servant)._is_a( id );
+            result = ((Object)servant)._is_a( id );
         } else {
             throw wrapper.servantInvalid() ;
         }
@@ -628,7 +628,7 @@ public final class ServerRequestInfoImpl
     /**
      * See ServerRequestInfo for javadocs.
      */
-    public org.omg.IOP.ServiceContext get_request_service_context( int id ) {
+    public ServiceContext get_request_service_context( int id ) {
         checkAccess( MID_GET_REQUEST_SERVICE_CONTEXT );
 
         if( cachedRequestServiceContexts == null ) {
@@ -642,7 +642,7 @@ public final class ServerRequestInfoImpl
     /**
      * See ServerRequestInfo for javadocs.
      */
-    public org.omg.IOP.ServiceContext get_reply_service_context( int id ) {
+    public ServiceContext get_reply_service_context( int id ) {
         checkAccess( MID_GET_REPLY_SERVICE_CONTEXT );
 
         if( cachedReplyServiceContexts == null ) {

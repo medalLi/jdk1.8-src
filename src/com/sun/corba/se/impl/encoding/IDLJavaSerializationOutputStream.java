@@ -480,7 +480,7 @@ final class IDLJavaSerializationOutputStream extends CDROutputStreamBase {
     }
 
     public final void write_value(java.io.Serializable value,
-                                  java.lang.Class clz) {
+                                  Class clz) {
         write_value(value);
     }
 
@@ -498,7 +498,7 @@ final class IDLJavaSerializationOutputStream extends CDROutputStreamBase {
         this.write_value(value, (String) null);
     }
 
-    public final void write_abstract_interface(java.lang.Object obj) {
+    public final void write_abstract_interface(Object obj) {
 
         boolean isCorbaObject = false; // Assume value type.
         org.omg.CORBA.Object theCorbaObject = null;
@@ -563,7 +563,7 @@ final class IDLJavaSerializationOutputStream extends CDROutputStreamBase {
 
     // org.omg.CORBA.DataOutputStream
 
-    public final void write_Abstract (java.lang.Object value) {
+    public final void write_Abstract (Object value) {
         write_abstract_interface(value);
     }
 
@@ -571,7 +571,7 @@ final class IDLJavaSerializationOutputStream extends CDROutputStreamBase {
         write_value(value);
     }
 
-    public final void write_any_array(org.omg.CORBA.Any[] value,
+    public final void write_any_array(Any[] value,
                                       int offset, int length) {
         for(int i = 0; i < length; i++) {
             write_any(value[offset + i]);

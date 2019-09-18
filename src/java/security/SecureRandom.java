@@ -83,14 +83,14 @@ import sun.security.jca.GetInstance.Instance;
  * for example, if they need to read from /dev/random on various Unix-like
  * operating systems.
  *
- * @see java.security.SecureRandomSpi
- * @see java.util.Random
+ * @see SecureRandomSpi
+ * @see Random
  *
  * @author Benjamin Renaud
  * @author Josh Bloch
  */
 
-public class SecureRandom extends java.util.Random {
+public class SecureRandom extends Random {
 
     /**
      * The provider.

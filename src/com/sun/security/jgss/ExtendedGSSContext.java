@@ -56,7 +56,7 @@ public interface ExtendedGSSContext extends GSSContext {
      *    </ul>
      * <li>{@code KRB5_GET_AUTHZ_DATA}:
      * the returned object is an array of
-     * {@link com.sun.security.jgss.AuthorizationDataEntry}, or null if the
+     * {@link AuthorizationDataEntry}, or null if the
      * optional field is missing in the service ticket.
      * <li>{@code KRB5_GET_AUTHTIME}:
      * the returned object is a String object in the standard KerberosTime

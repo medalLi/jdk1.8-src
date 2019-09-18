@@ -64,7 +64,7 @@ public class SchemaViolationException extends NamingException {
      * Constructs a new instance of SchemaViolationException
      * using the explanation supplied. All other fields are set to null.
      * @param explanation Detail about this exception. Can be null.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public SchemaViolationException(String explanation) {
         super(explanation);

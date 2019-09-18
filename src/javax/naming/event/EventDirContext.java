@@ -84,10 +84,10 @@ public interface EventDirContext extends EventContext, DirContext {
      * @exception NamingException If a problem was encountered while
      * adding the listener.
      * @see EventContext#removeNamingListener
-     * @see javax.naming.directory.DirContext#search(javax.naming.Name, java.lang.String, javax.naming.directory.SearchControls)
+     * @see DirContext#search(Name, String, SearchControls)
      */
     void addNamingListener(Name target, String filter, SearchControls ctls,
-        NamingListener l) throws NamingException;
+                           NamingListener l) throws NamingException;
 
     /**
      * Adds a listener for receiving naming events fired when
@@ -104,10 +104,10 @@ public interface EventDirContext extends EventContext, DirContext {
      * @exception NamingException If a problem was encountered while
      * adding the listener.
      * @see EventContext#removeNamingListener
-     * @see javax.naming.directory.DirContext#search(java.lang.String, java.lang.String, javax.naming.directory.SearchControls)
+     * @see DirContext#search(String, String, SearchControls)
      */
     void addNamingListener(String target, String filter, SearchControls ctls,
-        NamingListener l) throws NamingException;
+                           NamingListener l) throws NamingException;
 
     /**
      * Adds a listener for receiving naming events fired
@@ -131,10 +131,10 @@ public interface EventDirContext extends EventContext, DirContext {
      * @exception NamingException If a problem was encountered while
      * adding the listener.
      * @see EventContext#removeNamingListener
-     * @see javax.naming.directory.DirContext#search(javax.naming.Name, java.lang.String, java.lang.Object[], javax.naming.directory.SearchControls)
+     * @see DirContext#search(Name, String, Object[], SearchControls)
      */
     void addNamingListener(Name target, String filter, Object[] filterArgs,
-        SearchControls ctls, NamingListener l) throws NamingException;
+                           SearchControls ctls, NamingListener l) throws NamingException;
 
     /**
      * Adds a listener for receiving naming events fired when
@@ -153,7 +153,7 @@ public interface EventDirContext extends EventContext, DirContext {
      * @exception NamingException If a problem was encountered while
      * adding the listener.
      * @see EventContext#removeNamingListener
-     * @see javax.naming.directory.DirContext#search(java.lang.String, java.lang.String, java.lang.Object[], javax.naming.directory.SearchControls)      */
+     * @see DirContext#search(String, String, Object[], SearchControls)      */
     void addNamingListener(String target, String filter, Object[] filterArgs,
-        SearchControls ctls, NamingListener l) throws NamingException;
+                           SearchControls ctls, NamingListener l) throws NamingException;
 }

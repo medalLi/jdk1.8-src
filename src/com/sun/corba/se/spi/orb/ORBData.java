@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.lang.reflect.Field ;
 
@@ -56,11 +56,11 @@ public interface ORBData {
 
     public String getListenOnAllInterfaces();
 
-    public com.sun.corba.se.spi.legacy.connection.ORBSocketFactory getLegacySocketFactory () ;
+    public com.sun.corba.se.spi.legacy.connection.ORBSocketFactory getLegacySocketFactory() ;
 
     public com.sun.corba.se.spi.transport.ORBSocketFactory getSocketFactory();
 
-    public USLPort[] getUserSpecifiedListenPorts () ;
+    public USLPort[] getUserSpecifiedListenPorts() ;
 
     public IORToSocketInfo getIORToSocketInfo();
 

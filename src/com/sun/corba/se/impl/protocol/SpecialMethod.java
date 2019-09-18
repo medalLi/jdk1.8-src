@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.protocol ;
+package com.sun.corba.se.impl.protocol;
 
 import javax.rmi.CORBA.Tie;
 
@@ -48,7 +48,7 @@ import com.sun.corba.se.spi.oa.NullServant ;
 public abstract class SpecialMethod {
     public abstract boolean isNonExistentMethod() ;
     public abstract String getName();
-    public abstract CorbaMessageMediator invoke(java.lang.Object servant,
+    public abstract CorbaMessageMediator invoke(Object servant,
                                                 CorbaMessageMediator request,
                                                 byte[] objectId,
                                                 ObjectAdapter objectAdapter);
@@ -78,7 +78,7 @@ class NonExistent extends SpecialMethod {
         return "_non_existent";
     }
 
-    public CorbaMessageMediator invoke(java.lang.Object servant,
+    public CorbaMessageMediator invoke(Object servant,
                                        CorbaMessageMediator request,
                                        byte[] objectId,
                                        ObjectAdapter objectAdapter)
@@ -106,7 +106,7 @@ class IsA extends SpecialMethod  {      // _is_a
     public String getName() {
         return "_is_a";
     }
-    public CorbaMessageMediator invoke(java.lang.Object servant,
+    public CorbaMessageMediator invoke(Object servant,
                                        CorbaMessageMediator request,
                                        byte[] objectId,
                                        ObjectAdapter objectAdapter)
@@ -146,7 +146,7 @@ class GetInterface extends SpecialMethod  {     // _get_interface
     public String getName() {
         return "_interface";
     }
-    public CorbaMessageMediator invoke(java.lang.Object servant,
+    public CorbaMessageMediator invoke(Object servant,
                                        CorbaMessageMediator request,
                                        byte[] objectId,
                                        ObjectAdapter objectAdapter)

@@ -32,7 +32,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynSequence.html">DynSequence</a> instead
  */
 @Deprecated
-public interface DynSequence extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
+public interface DynSequence extends Object, DynAny
 {
 
     /**
@@ -58,7 +58,7 @@ public interface DynSequence extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
          *         the sequence
          * @see #set_elements
      */
-    public org.omg.CORBA.Any[] get_elements();
+    public Any[] get_elements();
 
     /**
      * Sets the values of all elements in this sequence with the given
@@ -68,6 +68,6 @@ public interface DynSequence extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
      * @exception InvalidSeq if the array of values is bad
          * @see #get_elements
      */
-    public void set_elements(org.omg.CORBA.Any[] value)
+    public void set_elements(Any[] value)
         throws org.omg.CORBA.DynAnyPackage.InvalidSeq;
 }

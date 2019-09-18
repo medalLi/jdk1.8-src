@@ -11,7 +11,7 @@ package com.sun.corba.se.PortableActivationIDL;
 
 /** Server callback interface, passed to Activator in registerServer method.
     */
-public class _ServerProxyStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.ServerProxy
+public class _ServerProxyStub extends org.omg.CORBA.portable.ObjectImpl implements ServerProxy
 {
 
 

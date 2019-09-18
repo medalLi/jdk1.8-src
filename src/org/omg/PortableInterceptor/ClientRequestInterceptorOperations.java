@@ -25,7 +25,7 @@ package org.omg.PortableInterceptor;
    *
    * @see ClientRequestInfo
    */
-public interface ClientRequestInterceptorOperations  extends org.omg.PortableInterceptor.InterceptorOperations
+public interface ClientRequestInterceptorOperations  extends InterceptorOperations
 {
 
   /**
@@ -52,7 +52,7 @@ public interface ClientRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void send_request (org.omg.PortableInterceptor.ClientRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void send_request(ClientRequestInfo ri) throws ForwardRequest;
 
   /**
        * Allows an Interceptor to query information during a Time-Independent 
@@ -82,7 +82,7 @@ public interface ClientRequestInterceptorOperations  extends org.omg.PortableInt
        * @exception TIMEOUT thrown if the response is not available before 
        *     the poll time-out expires
        */
-  void send_poll (org.omg.PortableInterceptor.ClientRequestInfo ri);
+  void send_poll(ClientRequestInfo ri);
 
   /**
        * Allows an Interceptor to query the information on a reply after it 
@@ -101,7 +101,7 @@ public interface ClientRequestInterceptorOperations  extends org.omg.PortableInt
        *
        * @param ri Information about the current request being intercepted.
        */
-  void receive_reply (org.omg.PortableInterceptor.ClientRequestInfo ri);
+  void receive_reply(ClientRequestInfo ri);
 
   /**
        * Indicates to the interceptor that an exception occurred.  Allows
@@ -147,7 +147,7 @@ public interface ClientRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void receive_exception (org.omg.PortableInterceptor.ClientRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void receive_exception(ClientRequestInfo ri) throws ForwardRequest;
 
   /**
        * Allows an Interceptor to query the information available when a 
@@ -189,5 +189,5 @@ public interface ClientRequestInterceptorOperations  extends org.omg.PortableInt
        *     retry of the request should occur with the new object given in
        *     the exception.
        */
-  void receive_other (org.omg.PortableInterceptor.ClientRequestInfo ri) throws org.omg.PortableInterceptor.ForwardRequest;
+  void receive_other(ClientRequestInfo ri) throws ForwardRequest;
 } // interface ClientRequestInterceptorOperations

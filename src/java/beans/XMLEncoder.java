@@ -198,7 +198,7 @@ import java.nio.charset.UnsupportedCharsetException;
  href="http://java.sun.com/products/jfc/tsc/articles/persistence4">Using XMLEncoder</a>,
  * an article in <em>The Swing Connection.</em>
  * @see XMLDecoder
- * @see java.io.ObjectOutputStream
+ * @see ObjectOutputStream
  *
  * @since 1.4
  *
@@ -390,7 +390,7 @@ public class XMLEncoder extends Encoder implements AutoCloseable {
      *
      * @param oldStm The statement that will be written
      *               to the stream.
-     * @see java.beans.PersistenceDelegate#initialize
+     * @see PersistenceDelegate#initialize
      */
     public void writeStatement(Statement oldStm) {
         // System.out.println("XMLEncoder::writeStatement: " + oldStm);
@@ -443,7 +443,7 @@ public class XMLEncoder extends Encoder implements AutoCloseable {
      *
      * @param oldExp The expression that will be written
      *               to the stream.
-     * @see java.beans.PersistenceDelegate#initialize
+     * @see PersistenceDelegate#initialize
      */
     public void writeExpression(Expression oldExp) {
         boolean internal = this.internal;

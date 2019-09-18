@@ -31,7 +31,7 @@ abstract public class ServerIdHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_long);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.ServerIdHelper.id (), "ServerId", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ServerIdHelper.id (), "ServerId", __typeCode);
     }
     return __typeCode;
   }

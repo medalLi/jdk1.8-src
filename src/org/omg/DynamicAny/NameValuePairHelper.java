@@ -12,7 +12,7 @@ abstract public class NameValuePairHelper
 {
   private static String  _id = "IDL:omg.org/DynamicAny/NameValuePair:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.DynamicAny.NameValuePair that)
+  public static void insert (org.omg.CORBA.Any a, NameValuePair that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class NameValuePairHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.DynamicAny.NameValuePair extract (org.omg.CORBA.Any a)
+  public static NameValuePair extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -43,7 +43,7 @@ abstract public class NameValuePairHelper
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [2];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
           _tcOf_members0 = org.omg.CORBA.ORB.init ().create_string_tc (0);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.DynamicAny.FieldNameHelper.id (), "FieldName", _tcOf_members0);
+          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (FieldNameHelper.id (), "FieldName", _tcOf_members0);
           _members0[0] = new org.omg.CORBA.StructMember (
             "id",
             _tcOf_members0,
@@ -53,7 +53,7 @@ abstract public class NameValuePairHelper
             "value",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (org.omg.DynamicAny.NameValuePairHelper.id (), "NameValuePair", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (NameValuePairHelper.id (), "NameValuePair", _members0);
           __active = false;
         }
       }
@@ -66,15 +66,15 @@ abstract public class NameValuePairHelper
     return _id;
   }
 
-  public static org.omg.DynamicAny.NameValuePair read (org.omg.CORBA.portable.InputStream istream)
+  public static NameValuePair read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.DynamicAny.NameValuePair value = new org.omg.DynamicAny.NameValuePair ();
+    NameValuePair value = new NameValuePair ();
     value.id = istream.read_string ();
     value.value = istream.read_any ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.DynamicAny.NameValuePair value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, NameValuePair value)
   {
     ostream.write_string (value.id);
     ostream.write_any (value.value);

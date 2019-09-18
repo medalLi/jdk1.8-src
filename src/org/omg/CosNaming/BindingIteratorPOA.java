@@ -15,10 +15,10 @@ package org.omg.CosNaming;
    * 
    * The bindings iterator is obtained by using the <tt>list</tt>
    * method on the <tt>NamingContext</tt>. 
-   * @see org.omg.CosNaming.NamingContext#list
+   * @see NamingContext#list
    */
 public abstract class BindingIteratorPOA extends org.omg.PortableServer.Servant
- implements org.omg.CosNaming.BindingIteratorOperations, org.omg.CORBA.portable.InvokeHandler
+ implements BindingIteratorOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -26,9 +26,9 @@ public abstract class BindingIteratorPOA extends org.omg.PortableServer.Servant
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("next_one", new java.lang.Integer (0));
-    _methods.put ("next_n", new java.lang.Integer (1));
-    _methods.put ("destroy", new java.lang.Integer (2));
+    _methods.put ("next_one", new Integer (0));
+    _methods.put ("next_n", new Integer (1));
+    _methods.put ("destroy", new Integer (2));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -36,7 +36,7 @@ public abstract class BindingIteratorPOA extends org.omg.PortableServer.Servant
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -51,12 +51,12 @@ public abstract class BindingIteratorPOA extends org.omg.PortableServer.Servant
        */
        case 0:  // CosNaming/BindingIterator/next_one
        {
-         org.omg.CosNaming.BindingHolder b = new org.omg.CosNaming.BindingHolder ();
+         BindingHolder b = new BindingHolder ();
          boolean $result = false;
          $result = this.next_one (b);
          out = $rh.createReply();
          out.write_boolean ($result);
-         org.omg.CosNaming.BindingHelper.write (out, b.value);
+         BindingHelper.write (out, b.value);
          break;
        }
 
@@ -71,12 +71,12 @@ public abstract class BindingIteratorPOA extends org.omg.PortableServer.Servant
        case 1:  // CosNaming/BindingIterator/next_n
        {
          int how_many = in.read_ulong ();
-         org.omg.CosNaming.BindingListHolder bl = new org.omg.CosNaming.BindingListHolder ();
+         BindingListHolder bl = new BindingListHolder ();
          boolean $result = false;
          $result = this.next_n (how_many, bl);
          out = $rh.createReply();
          out.write_boolean ($result);
-         org.omg.CosNaming.BindingListHelper.write (out, bl.value);
+         BindingListHelper.write (out, bl.value);
          break;
        }
 

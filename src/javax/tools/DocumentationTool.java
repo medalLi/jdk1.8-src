@@ -40,7 +40,7 @@ public interface DocumentationTool extends Tool, OptionChecker {
      * completed as described in the DocumentationTask interface.
      *
      * <p>If a file manager is provided, it must be able to handle all
-     * locations defined in {@link DocumentationTool.Location},
+     * locations defined in {@link Location},
      * as well as
      * {@link StandardLocation#SOURCE_PATH},
      * {@link StandardLocation#CLASS_PATH}, and
@@ -76,11 +76,11 @@ public interface DocumentationTool extends Tool, OptionChecker {
      * {@linkplain JavaFileObject.Kind#SOURCE source}
      */
     DocumentationTask getTask(Writer out,
-                            JavaFileManager fileManager,
-                            DiagnosticListener<? super JavaFileObject> diagnosticListener,
-                            Class<?> docletClass,
-                            Iterable<String> options,
-                            Iterable<? extends JavaFileObject> compilationUnits);
+                              JavaFileManager fileManager,
+                              DiagnosticListener<? super JavaFileObject> diagnosticListener,
+                              Class<?> docletClass,
+                              Iterable<String> options,
+                              Iterable<? extends JavaFileObject> compilationUnits);
 
     /**
      * Gets a new instance of the standard file manager implementation
@@ -105,9 +105,9 @@ public interface DocumentationTool extends Tool, OptionChecker {
      * @return the standard file manager
      */
     StandardJavaFileManager getStandardFileManager(
-        DiagnosticListener<? super JavaFileObject> diagnosticListener,
-        Locale locale,
-        Charset charset);
+            DiagnosticListener<? super JavaFileObject> diagnosticListener,
+            Locale locale,
+            Charset charset);
 
     /**
      * Interface representing a future for a documentation task.  The

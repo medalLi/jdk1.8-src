@@ -142,8 +142,8 @@ public class PortableRemoteObject {
      * @return an object which can be cast to the desired type.
      * @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
      */
-    public static java.lang.Object narrow ( java.lang.Object narrowFrom,
-                                            java.lang.Class narrowTo)
+    public static Object narrow ( Object narrowFrom,
+                                            Class narrowTo)
         throws ClassCastException {
 
         if (proDelegate != null) {
@@ -242,7 +242,7 @@ class GetORBPropertiesFileAction implements PrivilegedAction {
         // class was loaded from rt.jar using the bootstrap classloader.
         String propValue = (String) AccessController.doPrivileged(
             new PrivilegedAction() {
-                public java.lang.Object run() {
+                public Object run() {
                     return System.getProperty(name);
                 }
             }

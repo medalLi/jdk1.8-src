@@ -20,5 +20,5 @@ public interface ThreadPolicyOperations  extends org.omg.CORBA.PolicyOperations
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.ThreadPolicyValue value ();
+  ThreadPolicyValue value();
 } // interface ThreadPolicyOperations

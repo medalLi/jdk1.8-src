@@ -205,7 +205,7 @@ public final class DelegationPermission extends BasicPermission
      * to a stream. The actions are serialized, and the superclass
      * takes care of the name.
      */
-    private synchronized void writeObject(java.io.ObjectOutputStream s)
+    private synchronized void writeObject(ObjectOutputStream s)
         throws IOException
     {
         s.defaultWriteObject();
@@ -215,7 +215,7 @@ public final class DelegationPermission extends BasicPermission
      * readObject is called to restore the state of the
      * DelegationPermission from a stream.
      */
-    private synchronized void readObject(java.io.ObjectInputStream s)
+    private synchronized void readObject(ObjectInputStream s)
          throws IOException, ClassNotFoundException
     {
         // Read in the action, then initialize the rest

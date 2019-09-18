@@ -2715,7 +2715,7 @@ public abstract class AbstractDocument implements Document, Serializable {
          * @param type the type of event (DocumentEvent.EventType)
          * @since 1.4
          */
-        public DefaultDocumentEvent(int offs, int len, DocumentEvent.EventType type) {
+        public DefaultDocumentEvent(int offs, int len, EventType type) {
             super();
             offset = offs;
             length = len;
@@ -2750,8 +2750,8 @@ public abstract class AbstractDocument implements Document, Serializable {
                 int n = edits.size();
                 for (int i = 0; i < n; i++) {
                     Object o = edits.elementAt(i);
-                    if (o instanceof DocumentEvent.ElementChange) {
-                        DocumentEvent.ElementChange ec = (DocumentEvent.ElementChange) o;
+                    if (o instanceof ElementChange) {
+                        ElementChange ec = (ElementChange) o;
                         changeLookup.put(ec.getElement(), ec);
                     }
                 }
@@ -2759,8 +2759,8 @@ public abstract class AbstractDocument implements Document, Serializable {
 
             // if we have a hashtable... add the entry if it's
             // an ElementChange.
-            if ((changeLookup != null) && (anEdit instanceof DocumentEvent.ElementChange)) {
-                DocumentEvent.ElementChange ec = (DocumentEvent.ElementChange) anEdit;
+            if ((changeLookup != null) && (anEdit instanceof ElementChange)) {
+                ElementChange ec = (ElementChange) anEdit;
                 changeLookup.put(ec.getElement(), ec);
             }
             return super.addEdit(anEdit);
@@ -2778,9 +2778,9 @@ public abstract class AbstractDocument implements Document, Serializable {
                 super.redo();
                 // fire a DocumentEvent to notify the view(s)
                 UndoRedoDocumentEvent ev = new UndoRedoDocumentEvent(this, false);
-                if (type == DocumentEvent.EventType.INSERT) {
+                if (type == EventType.INSERT) {
                     fireInsertUpdate(ev);
-                } else if (type == DocumentEvent.EventType.REMOVE) {
+                } else if (type == EventType.REMOVE) {
                     fireRemoveUpdate(ev);
                 } else {
                     fireChangedUpdate(ev);
@@ -2802,9 +2802,9 @@ public abstract class AbstractDocument implements Document, Serializable {
                 super.undo();
                 // fire a DocumentEvent to notify the view(s)
                 UndoRedoDocumentEvent ev = new UndoRedoDocumentEvent(this, true);
-                if (type == DocumentEvent.EventType.REMOVE) {
+                if (type == EventType.REMOVE) {
                     fireInsertUpdate(ev);
-                } else if (type == DocumentEvent.EventType.INSERT) {
+                } else if (type == EventType.INSERT) {
                     fireRemoveUpdate(ev);
                 } else {
                     fireChangedUpdate(ev);
@@ -2833,10 +2833,10 @@ public abstract class AbstractDocument implements Document, Serializable {
          * @return the description
          */
         public String getPresentationName() {
-            DocumentEvent.EventType type = getType();
-            if(type == DocumentEvent.EventType.INSERT)
+            EventType type = getType();
+            if(type == EventType.INSERT)
                 return UIManager.getString("AbstractDocument.additionText");
-            if(type == DocumentEvent.EventType.REMOVE)
+            if(type == EventType.REMOVE)
                 return UIManager.getString("AbstractDocument.deletionText");
             return UIManager.getString("AbstractDocument.styleChangeText");
         }
@@ -2873,7 +2873,7 @@ public abstract class AbstractDocument implements Document, Serializable {
          * @return the event type as a DocumentEvent.EventType
          * @see DocumentEvent#getType
          */
-        public DocumentEvent.EventType getType() {
+        public EventType getType() {
             return type;
         }
 
@@ -2913,15 +2913,15 @@ public abstract class AbstractDocument implements Document, Serializable {
          * @param elem the element
          * @return the changes
          */
-        public DocumentEvent.ElementChange getChange(Element elem) {
+        public ElementChange getChange(Element elem) {
             if (changeLookup != null) {
                 return changeLookup.get(elem);
             }
             int n = edits.size();
             for (int i = 0; i < n; i++) {
                 Object o = edits.elementAt(i);
-                if (o instanceof DocumentEvent.ElementChange) {
-                    DocumentEvent.ElementChange c = (DocumentEvent.ElementChange) o;
+                if (o instanceof ElementChange) {
+                    ElementChange c = (ElementChange) o;
                     if (elem.equals(c.getElement())) {
                         return c;
                     }
@@ -2935,7 +2935,7 @@ public abstract class AbstractDocument implements Document, Serializable {
         private int offset;
         private int length;
         private Hashtable<Element, ElementChange> changeLookup;
-        private DocumentEvent.EventType type;
+        private EventType type;
 
     }
 
@@ -2982,11 +2982,11 @@ public abstract class AbstractDocument implements Document, Serializable {
             return src.getDocument();
         }
 
-        public DocumentEvent.EventType getType() {
+        public EventType getType() {
             return type;
         }
 
-        public DocumentEvent.ElementChange getChange(Element elem) {
+        public ElementChange getChange(Element elem) {
             return src.getChange(elem);
         }
     }
@@ -3065,7 +3065,7 @@ public abstract class AbstractDocument implements Document, Serializable {
             added = tmp;
 
             // PENDING(prinz) need MutableElement interface, canRedo() should check
-            ((AbstractDocument.BranchElement)e).replace(index, removed.length, added);
+            ((BranchElement)e).replace(index, removed.length, added);
         }
 
         /**
@@ -3076,7 +3076,7 @@ public abstract class AbstractDocument implements Document, Serializable {
         public void undo() throws CannotUndoException {
             super.undo();
             // PENDING(prinz) need MutableElement interface, canUndo() should check
-            ((AbstractDocument.BranchElement)e).replace(index, added.length, removed);
+            ((BranchElement)e).replace(index, added.length, removed);
 
             // Since this event will be reused, switch around added/removed.
             Element[] tmp = removed;

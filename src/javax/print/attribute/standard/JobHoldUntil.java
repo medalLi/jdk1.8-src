@@ -64,11 +64,11 @@ import javax.print.attribute.PrintJobAttribute;
  * <P>
  * To construct a JobHoldUntil attribute from separate values of the year,
  * month, day, hour, minute, and so on, use a {@link java.util.Calendar
- * Calendar} object to construct a {@link java.util.Date Date} object, then use
- * the {@link java.util.Date Date} object to construct the JobHoldUntil
+ * Calendar} object to construct a {@link Date Date} object, then use
+ * the {@link Date Date} object to construct the JobHoldUntil
  * attribute. To convert a JobHoldUntil attribute to separate values of the
  * year, month, day, hour, minute, and so on, create a {@link java.util.Calendar
- * Calendar} object and set it to the {@link java.util.Date Date} from the
+ * Calendar} object and set it to the {@link Date Date} from the
  * JobHoldUntil attribute.
  * <P>
  * <B>IPP Compatibility:</B> Although IPP supports a "job-hold-until" attribute
@@ -90,9 +90,9 @@ public final class JobHoldUntil extends DateTimeSyntax
 
     /**
      * Construct a new job hold until date-time attribute with the given
-     * {@link java.util.Date Date} value.
+     * {@link Date Date} value.
      *
-     * @param  dateTime  {@link java.util.Date Date} value.
+     * @param  dateTime  {@link Date Date} value.
      *
      * @exception  NullPointerException
      *     (unchecked exception) Thrown if <CODE>dateTime</CODE> is null.
@@ -111,8 +111,8 @@ public final class JobHoldUntil extends DateTimeSyntax
      * <LI>
      * <CODE>object</CODE> is an instance of class JobHoldUntil.
      * <LI>
-     * This job hold until attribute's {@link java.util.Date Date} value and
-     * <CODE>object</CODE>'s {@link java.util.Date Date} value are equal.
+     * This job hold until attribute's {@link Date Date} value and
+     * <CODE>object</CODE>'s {@link Date Date} value are equal.
      * </OL>
      *
      * @param  object  Object to compare to.
@@ -132,7 +132,7 @@ public final class JobHoldUntil extends DateTimeSyntax
      * For class JobHoldUntil, the category is class JobHoldUntil itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return JobHoldUntil.class;

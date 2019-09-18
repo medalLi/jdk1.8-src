@@ -32,8 +32,8 @@ import java.lang.annotation.Native;
  * pages to be printed. The <code>Pageable</code> object returns
  * the total number of pages in the set as well as the
  * {@link PageFormat} and {@link Printable} for a specified page.
- * @see java.awt.print.PageFormat
- * @see java.awt.print.Printable
+ * @see PageFormat
+ * @see Printable
  */
 public interface Pageable {
 

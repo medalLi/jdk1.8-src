@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil ;
+package com.sun.corba.se.impl.orbutil;
 
 /**
  * A convenience class for retrieving the string value of a system

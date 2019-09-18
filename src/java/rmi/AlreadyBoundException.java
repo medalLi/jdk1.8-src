@@ -32,10 +32,10 @@ package java.rmi;
  * @since   JDK1.1
  * @author  Ann Wollrath
  * @author  Roger Riggs
- * @see     java.rmi.Naming#bind(String, java.rmi.Remote)
- * @see     java.rmi.registry.Registry#bind(String, java.rmi.Remote)
+ * @see     Naming#bind(String, Remote)
+ * @see     java.rmi.registry.Registry#bind(String, Remote)
  */
-public class AlreadyBoundException extends java.lang.Exception {
+public class AlreadyBoundException extends Exception {
 
     /* indicate compatibility with JDK 1.1.x version of class */
     private static final long serialVersionUID = 9218657361741657110L;

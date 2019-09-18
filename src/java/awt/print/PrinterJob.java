@@ -66,7 +66,7 @@ public abstract class PrinterJob {
      * @return a new <code>PrinterJob</code>.
      *
      * @throws  SecurityException if a security manager exists and its
-     *          {@link java.lang.SecurityManager#checkPrintJobAccess}
+     *          {@link SecurityManager#checkPrintJobAccess}
      *          method disallows this thread from creating a print job request
      */
     public static PrinterJob getPrinterJob() {
@@ -96,7 +96,7 @@ public abstract class PrinterJob {
      * Services returned from this method may be installed on
      * <code>PrinterJob</code>s which support print services.
      * Calling this method is equivalent to calling
-     * {@link javax.print.PrintServiceLookup#lookupPrintServices(
+     * {@link PrintServiceLookup#lookupPrintServices(
      * DocFlavor, AttributeSet)
      * PrintServiceLookup.lookupPrintServices()}
      * and specifying a Pageable DocFlavor.
@@ -135,7 +135,7 @@ public abstract class PrinterJob {
      * Services returned from this method may be installed on
      * <code>PrinterJob</code> instances which support print services.
      * Calling this method is equivalent to calling
-     * {@link javax.print.StreamPrintServiceFactory#lookupStreamPrintServiceFactories(DocFlavor, String)
+     * {@link StreamPrintServiceFactory#lookupStreamPrintServiceFactories(DocFlavor, String)
      * StreamPrintServiceFactory.lookupStreamPrintServiceFactories()
      * } and specifying a Pageable DocFlavor.
      *

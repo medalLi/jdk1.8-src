@@ -195,10 +195,10 @@ public class Timer extends NotificationBroadcasterSupport
      *
      * @return The name of the timer MBean registered.
      *
-     * @exception java.lang.Exception
+     * @exception Exception
      */
     public ObjectName preRegister(MBeanServer server, ObjectName name)
-        throws java.lang.Exception {
+        throws Exception {
         return name;
     }
 
@@ -217,9 +217,9 @@ public class Timer extends NotificationBroadcasterSupport
      * <P>
      * Stops the timer.
      *
-     * @exception java.lang.Exception
+     * @exception Exception
      */
-    public void preDeregister() throws java.lang.Exception {
+    public void preDeregister() throws Exception {
 
         TIMER_LOGGER.logp(Level.FINER, Timer.class.getName(),
                 "preDeregister", "stop the timer");
@@ -409,7 +409,7 @@ public class Timer extends NotificationBroadcasterSupport
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period or the number of occurrences is negative.
      *
      * @see #addNotification(String, String, Object, Date, long, long)
@@ -421,10 +421,10 @@ public class Timer extends NotificationBroadcasterSupport
 
     public synchronized Integer addNotification(String type, String message, Object userData,
                                                 Date date, long period, long nbOccurences, boolean fixedRate)
-        throws java.lang.IllegalArgumentException {
+        throws IllegalArgumentException {
 
         if (date == null) {
-            throw new java.lang.IllegalArgumentException("Timer notification date cannot be null.");
+            throw new IllegalArgumentException("Timer notification date cannot be null.");
         }
 
         // Check that all the timer notification attributes are valid.
@@ -434,7 +434,7 @@ public class Timer extends NotificationBroadcasterSupport
         // Check that the period and the nbOccurences are POSITIVE VALUES.
         //
         if ((period < 0) || (nbOccurences < 0)) {
-            throw new java.lang.IllegalArgumentException("Negative values for the periodicity");
+            throw new IllegalArgumentException("Negative values for the periodicity");
         }
 
         Date currentDate = new Date();
@@ -554,7 +554,7 @@ public class Timer extends NotificationBroadcasterSupport
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period or the number of occurrences is negative.
      *
      * @see #addNotification(String, String, Object, Date, long, long, boolean)
@@ -566,7 +566,7 @@ public class Timer extends NotificationBroadcasterSupport
 
     public synchronized Integer addNotification(String type, String message, Object userData,
                                                 Date date, long period, long nbOccurences)
-        throws java.lang.IllegalArgumentException {
+        throws IllegalArgumentException {
 
       return addNotification(type, message, userData, date, period, nbOccurences, false);
     }
@@ -594,7 +594,7 @@ public class Timer extends NotificationBroadcasterSupport
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period is negative.
      */
 // NPCTE fix for bugId 4464388, esc 0,  MR , to be added after modification of jmx spec
@@ -604,7 +604,7 @@ public class Timer extends NotificationBroadcasterSupport
 
     public synchronized Integer addNotification(String type, String message, Object userData,
                                                 Date date, long period)
-        throws java.lang.IllegalArgumentException {
+        throws IllegalArgumentException {
 
         return (addNotification(type, message, userData, date, period, 0));
     }
@@ -627,7 +627,7 @@ public class Timer extends NotificationBroadcasterSupport
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null}.
+     * @exception IllegalArgumentException The date is {@code null}.
      */
 // NPCTE fix for bugId 4464388, esc 0,  MR, to be added after modification of jmx spec
 //  public synchronized Integer addNotification(String type, String message, Serializable userData, Date date)
@@ -635,7 +635,7 @@ public class Timer extends NotificationBroadcasterSupport
 // end of NPCTE fix for bugId 4464388
 
     public synchronized Integer addNotification(String type, String message, Object userData, Date date)
-        throws java.lang.IllegalArgumentException {
+        throws IllegalArgumentException {
 
 
         return (addNotification(type, message, userData, date, 0, 0));
@@ -1090,7 +1090,7 @@ public class Timer extends NotificationBroadcasterSupport
             if ((nbOccurences.longValue() == 0) || (nbOccurences.longValue() > 1)) {
 
                 date.setTime(date.getTime() + period.longValue());
-                obj[TIMER_NB_OCCUR_INDEX] = Long.valueOf(java.lang.Math.max(0L, (nbOccurences.longValue() - 1)));
+                obj[TIMER_NB_OCCUR_INDEX] = Long.valueOf(Math.max(0L, (nbOccurences.longValue() - 1)));
                 nbOccurences = (Long)obj[TIMER_NB_OCCUR_INDEX];
 
                 if (isActive == true) {

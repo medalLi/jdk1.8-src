@@ -60,11 +60,11 @@ import javax.accessibility.*;
  * menu bar is managing.
  *
  * @author Sami Shaio
- * @see        java.awt.Frame
- * @see        java.awt.Frame#setMenuBar(java.awt.MenuBar)
- * @see        java.awt.Menu
- * @see        java.awt.MenuItem
- * @see        java.awt.MenuShortcut
+ * @see        Frame
+ * @see        Frame#setMenuBar(MenuBar)
+ * @see        Menu
+ * @see        MenuItem
+ * @see        MenuShortcut
  * @since      JDK1.0
  */
 public class MenuBar extends MenuComponent implements MenuContainer, Accessible {
@@ -120,7 +120,7 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      * Creates a new menu bar.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public MenuBar() throws HeadlessException {
     }
@@ -214,8 +214,8 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      *
      * @param        m   the menu to be added
      * @return       the menu added
-     * @see          java.awt.MenuBar#remove(int)
-     * @see          java.awt.MenuBar#remove(java.awt.MenuComponent)
+     * @see          MenuBar#remove(int)
+     * @see          MenuBar#remove(MenuComponent)
      */
     public Menu add(Menu m) {
         synchronized (getTreeLock()) {
@@ -240,7 +240,7 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      * Removes the menu located at the specified
      * index from this menu bar.
      * @param        index   the position of the menu to be removed.
-     * @see          java.awt.MenuBar#add(java.awt.Menu)
+     * @see          MenuBar#add(Menu)
      */
     public void remove(int index) {
         synchronized (getTreeLock()) {
@@ -258,7 +258,7 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
     /**
      * Removes the specified menu component from this menu bar.
      * @param        m the menu component to be removed.
-     * @see          java.awt.MenuBar#add(java.awt.Menu)
+     * @see          MenuBar#add(Menu)
      */
     public void remove(MenuComponent m) {
         synchronized (getTreeLock()) {
@@ -317,7 +317,7 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      * is managing.
      * @return      an enumeration of menu shortcuts that this
      *                      menu bar is managing.
-     * @see         java.awt.MenuShortcut
+     * @see         MenuShortcut
      * @since       JDK1.1
      */
     public synchronized Enumeration<MenuShortcut> shortcuts() {
@@ -339,8 +339,8 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      * by this menu bar is associated with the specified menu
      * shortcut.
      * @param        s the specified menu shortcut.
-     * @see          java.awt.MenuItem
-     * @see          java.awt.MenuShortcut
+     * @see          MenuItem
+     * @see          MenuShortcut
      * @since        JDK1.1
      */
      public MenuItem getShortcutMenuItem(MenuShortcut s) {
@@ -412,11 +412,11 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      *
      * @param s the <code>ObjectOutputStream</code> to write
      * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
-     * @see #readObject(java.io.ObjectInputStream)
+     * @see #readObject(ObjectInputStream)
      */
     private void writeObject(java.io.ObjectOutputStream s)
-      throws java.lang.ClassNotFoundException,
-             java.io.IOException
+      throws ClassNotFoundException,
+             IOException
     {
       s.defaultWriteObject();
     }
@@ -429,7 +429,7 @@ public class MenuBar extends MenuComponent implements MenuContainer, Accessible 
      * @exception HeadlessException if
      *   <code>GraphicsEnvironment.isHeadless</code> returns
      *   <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #writeObject(java.io.ObjectOutputStream)
      */
     private void readObject(ObjectInputStream s)

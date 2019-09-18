@@ -191,8 +191,8 @@ public class MouseWheelEvent extends MouseEvent {
      *                       wheel was rotated
      *
      * @throws IllegalArgumentException if <code>source</code> is null
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, boolean)
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, boolean)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
      */
     public MouseWheelEvent (Component source, int id, long when, int modifiers,
                       int x, int y, int clickCount, boolean popupTrigger,
@@ -237,8 +237,8 @@ public class MouseWheelEvent extends MouseEvent {
      *                       wheel was rotated
      *
      * @throws IllegalArgumentException if <code>source</code> is null
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, boolean)
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, boolean)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
      * @since 1.6
      */
     public MouseWheelEvent (Component source, int id, long when, int modifiers,
@@ -291,8 +291,8 @@ public class MouseWheelEvent extends MouseEvent {
      *                       was rotated
      *
      * @throws IllegalArgumentException if <code>source</code> is null
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, boolean)
-     * @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, boolean)
+     * @see MouseEvent#MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
      * @since 1.7
      */
     public MouseWheelEvent (Component source, int id, long when, int modifiers,

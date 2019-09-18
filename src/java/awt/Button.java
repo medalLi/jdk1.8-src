@@ -78,10 +78,10 @@ import javax.accessibility.*;
  * make use of the button's action command as a messaging protocol.
  *
  * @author      Sami Shaio
- * @see         java.awt.event.ActionEvent
- * @see         java.awt.event.ActionListener
- * @see         java.awt.Component#processMouseEvent
- * @see         java.awt.Component#addMouseListener
+ * @see         ActionEvent
+ * @see         ActionListener
+ * @see         Component#processMouseEvent
+ * @see         Component#addMouseListener
  * @since       JDK1.0
  */
 public class Button extends Component implements Accessible {
@@ -133,7 +133,7 @@ public class Button extends Component implements Accessible {
      *
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public Button() throws HeadlessException {
         this("");
@@ -146,7 +146,7 @@ public class Button extends Component implements Accessible {
      *               <code>null</code> for no label
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public Button(String label) throws HeadlessException {
         GraphicsEnvironment.checkHeadless();
@@ -168,8 +168,8 @@ public class Button extends Component implements Accessible {
      * application to change the look of the button without changing
      * its functionality.
      *
-     * @see     java.awt.Toolkit#createButton(java.awt.Button)
-     * @see     java.awt.Component#getToolkit()
+     * @see     Toolkit#createButton(Button)
+     * @see     Component#getToolkit()
      */
     public void addNotify() {
         synchronized(getTreeLock()) {
@@ -184,7 +184,7 @@ public class Button extends Component implements Accessible {
      *
      * @return    the button's label, or <code>null</code>
      *                if the button has no label.
-     * @see       java.awt.Button#setLabel
+     * @see       Button#setLabel
      */
     public String getLabel() {
         return label;
@@ -195,7 +195,7 @@ public class Button extends Component implements Accessible {
      *
      * @param     label   the new label, or <code>null</code>
      *                if the button has no label.
-     * @see       java.awt.Button#getLabel
+     * @see       Button#getLabel
      */
     public void setLabel(String label) {
         boolean testvalid = false;
@@ -227,7 +227,7 @@ public class Button extends Component implements Accessible {
      *                  action command.
      *            If the string is <code>null</code> then the action command
      *            is set to match the label of the button.
-     * @see       java.awt.event.ActionEvent
+     * @see       ActionEvent
      * @since     JDK1.1
      */
     public void setActionCommand(String command) {
@@ -254,7 +254,7 @@ public class Button extends Component implements Accessible {
      * @param         l the action listener
      * @see           #removeActionListener
      * @see           #getActionListeners
-     * @see           java.awt.event.ActionListener
+     * @see           ActionListener
      * @since         JDK1.1
      */
     public synchronized void addActionListener(ActionListener l) {
@@ -276,7 +276,7 @@ public class Button extends Component implements Accessible {
      * @param           l     the action listener
      * @see             #addActionListener
      * @see             #getActionListeners
-     * @see             java.awt.event.ActionListener
+     * @see             ActionListener
      * @since           JDK1.1
      */
     public synchronized void removeActionListener(ActionListener l) {
@@ -296,7 +296,7 @@ public class Button extends Component implements Accessible {
      *
      * @see             #addActionListener
      * @see             #removeActionListener
-     * @see             java.awt.event.ActionListener
+     * @see             ActionListener
      * @since 1.4
      */
     public synchronized ActionListener[] getActionListeners() {
@@ -368,8 +368,8 @@ public class Button extends Component implements Accessible {
      * exception.
      *
      * @param        e the event
-     * @see          java.awt.event.ActionEvent
-     * @see          java.awt.Button#processActionEvent
+     * @see          ActionEvent
+     * @see          Button#processActionEvent
      * @since        JDK1.1
      */
     protected void processEvent(AWTEvent e) {
@@ -398,9 +398,9 @@ public class Button extends Component implements Accessible {
      * exception.
      *
      * @param       e the action event
-     * @see         java.awt.event.ActionListener
-     * @see         java.awt.Button#addActionListener
-     * @see         java.awt.Component#enableEvents
+     * @see         ActionListener
+     * @see         Button#addActionListener
+     * @see         Component#enableEvents
      * @since       JDK1.1
      */
     protected void processActionEvent(ActionEvent e) {
@@ -449,7 +449,7 @@ public class Button extends Component implements Accessible {
      *
      * @param s the <code>ObjectOutputStream</code> to write
      * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
-     * @see java.awt.Component#actionListenerK
+     * @see Component#actionListenerK
      * @see #readObject(ObjectInputStream)
      */
     private void writeObject(ObjectOutputStream s)
@@ -474,7 +474,7 @@ public class Button extends Component implements Accessible {
      * @serial
      * @see #removeActionListener(ActionListener)
      * @see #addActionListener(ActionListener)
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #writeObject(ObjectOutputStream)
      */
     private void readObject(ObjectInputStream s)

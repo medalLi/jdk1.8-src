@@ -585,7 +585,7 @@ import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
         return SimpleMethodHandle.make(srcType, form);
     }
 
-    @LambdaForm.Hidden
+    @Hidden
     static
     MethodHandle selectAlternative(boolean testResult, MethodHandle target, MethodHandle fallback) {
         return testResult ? target : fallback;
@@ -732,7 +732,7 @@ import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
      * Intrinsified during LambdaForm compilation
      * (see {@link InvokerBytecodeGenerator#emitGuardWithCatch emitGuardWithCatch}).
      */
-    @LambdaForm.Hidden
+    @Hidden
     static Object guardWithCatch(MethodHandle target, Class<? extends Throwable> exType, MethodHandle catcher,
                                  Object... av) throws Throwable {
         // Use asFixedArity() to avoid unnecessary boxing of last argument for VarargsCollector case.
@@ -745,7 +745,7 @@ import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
     }
 
     /** Prepend an element {@code elem} to an {@code array}. */
-    @LambdaForm.Hidden
+    @Hidden
     private static Object[] prepend(Object elem, Object[] array) {
         Object[] newArray = new Object[array.length+1];
         newArray[0] = elem;

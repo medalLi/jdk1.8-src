@@ -185,9 +185,9 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
     private Vector            dynamicRequests ;
     private SynchVariable     svResponseReceived ;
 
-    private java.lang.Object runObj = new java.lang.Object();
-    private java.lang.Object shutdownObj = new java.lang.Object();
-    private java.lang.Object waitForCompletionObj = new java.lang.Object();
+    private Object runObj = new Object();
+    private Object shutdownObj = new Object();
+    private Object waitForCompletionObj = new Object();
     private static final byte STATUS_OPERATING = 1;
     private static final byte STATUS_SHUTTING_DOWN = 2;
     private static final byte STATUS_SHUTDOWN = 3;
@@ -195,13 +195,13 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
     private byte status = STATUS_OPERATING;
 
     // XXX Should we move invocation tracking to the first level server dispatcher?
-    private java.lang.Object invocationObj = new java.lang.Object();
+    private Object invocationObj = new Object();
     private int numInvocations = 0;
 
     // thread local variable to store a boolean to detect deadlock in
     // ORB.shutdown(true).
     private ThreadLocal isProcessingInvocation = new ThreadLocal () {
-        protected java.lang.Object initialValue() {
+        protected Object initialValue() {
             return Boolean.FALSE;
         }
     };
@@ -264,7 +264,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 
     // Converts strings to object references for resolvers and string_to_object
     private Operation urlOperation ;
-    private final Object urlOperationLock = new java.lang.Object() ;
+    private final Object urlOperationLock = new Object() ;
 
     private CorbaServerRequestDispatcher insNamingDelegate ;
 
@@ -374,7 +374,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         transientServerId = (int)System.currentTimeMillis();
 
         orbVersionThreadLocal  = new ThreadLocal () {
-            protected java.lang.Object initialValue() {
+            protected Object initialValue() {
                 // set default to version of the ORB with correct Rep-ids
                 return ORBVersionFactory.getORBVersion() ;
             }
@@ -397,7 +397,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 
         OAInvocationInfoStack =
             new ThreadLocal () {
-                protected java.lang.Object initialValue()
+                protected Object initialValue()
                 {
                     return new StackImpl();
                 }
@@ -405,7 +405,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 
         clientInvocationInfoStack =
             new ThreadLocal() {
-                protected java.lang.Object initialValue() {
+                protected Object initialValue() {
                     return new StackImpl();
                 }
             };
@@ -624,7 +624,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @result          ExceptionList created
      */
-    public synchronized org.omg.CORBA.ExceptionList create_exception_list()
+    public synchronized ExceptionList create_exception_list()
     {
         checkShutdownState();
         return new ExceptionListImpl();
@@ -635,7 +635,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @result          ContextList created
      */
-    public synchronized org.omg.CORBA.ContextList create_context_list()
+    public synchronized ContextList create_context_list()
     {
         checkShutdownState();
         return new ContextListImpl(this);
@@ -646,7 +646,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @result          the default Context object
      */
-    public synchronized org.omg.CORBA.Context get_default_context()
+    public synchronized Context get_default_context()
     {
         checkShutdownState();
         throw wrapper.genericNoImpl() ;
@@ -657,7 +657,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @result          Environment created
      */
-    public synchronized org.omg.CORBA.Environment create_environment()
+    public synchronized Environment create_environment()
     {
         checkShutdownState();
         return new EnvironmentImpl();
@@ -690,7 +690,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         // Invoke the send_deferred on each new Request
         for (int i = 0; i < req.length; i++) {
             AsynchInvoke invokeObject = new AsynchInvoke( this,
-                (com.sun.corba.se.impl.corba.RequestImpl)req[i], true);
+                (RequestImpl)req[i], true);
             new Thread(invokeObject).start();
         }
     }
@@ -720,7 +720,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @result            the next request ready with a response.
      */
-    public org.omg.CORBA.Request get_next_response()
+    public Request get_next_response()
         throws org.omg.CORBA.WrongTransaction
     {
         synchronized( this ) {
@@ -747,7 +747,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
                 while (!this.svResponseReceived.value()) {
                     try {
                         this.svResponseReceived.wait();
-                    } catch(java.lang.InterruptedException ex) {
+                    } catch(InterruptedException ex) {
                         // NO-OP
                     }
                 }
@@ -1032,14 +1032,14 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
     }
 
 
-    public synchronized org.omg.CORBA.TypeCode create_native_tc(String id,
+    public synchronized TypeCode create_native_tc(String id,
                                                    String name)
     {
         checkShutdownState();
         return new TypeCodeImpl(this, TCKind._tk_native, id, name);
     }
 
-    public synchronized org.omg.CORBA.TypeCode create_abstract_interface_tc(
+    public synchronized TypeCode create_abstract_interface_tc(
                                                                String id,
                                                                String name)
     {
@@ -1047,13 +1047,13 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         return new TypeCodeImpl(this, TCKind._tk_abstract_interface, id, name);
     }
 
-    public synchronized org.omg.CORBA.TypeCode create_fixed_tc(short digits, short scale)
+    public synchronized TypeCode create_fixed_tc(short digits, short scale)
     {
         checkShutdownState();
         return new TypeCodeImpl(this, TCKind._tk_fixed, digits, scale);
     }
 
-    public synchronized org.omg.CORBA.TypeCode create_value_tc(String id,
+    public synchronized TypeCode create_value_tc(String id,
                                                   String name,
                                                   short type_modifier,
                                                   TypeCode concrete_base,
@@ -1064,12 +1064,12 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
                                 type_modifier, concrete_base, members);
     }
 
-    public synchronized org.omg.CORBA.TypeCode create_recursive_tc(String id) {
+    public synchronized TypeCode create_recursive_tc(String id) {
         checkShutdownState();
         return new TypeCodeImpl(this, id);
     }
 
-    public synchronized org.omg.CORBA.TypeCode create_value_box_tc(String id,
+    public synchronized TypeCode create_value_box_tc(String id,
                                                       String name,
                                                       TypeCode boxed_type)
     {
@@ -1140,7 +1140,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         }
 
         synchronized (resolverLock) {
-            java.util.Set keys = res.list() ;
+            Set keys = res.list() ;
             return (String[])keys.toArray( new String[keys.size()] ) ;
         }
     }
@@ -1207,7 +1207,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         synchronized (resolverLock) {
             insnd = insNamingDelegate ;
 
-            java.lang.Object obj2 = localResolver.resolve( id ) ;
+            Object obj2 = localResolver.resolve( id ) ;
             if (obj2 != null)
                 throw new InvalidName(id + " already registered") ;
 
@@ -1472,7 +1472,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      * @param factory the factory.
      * @return the previously registered factory for the given repository ID,
      * or null if no such factory was previously registered.
-     * @exception org.omg.CORBA.BAD_PARAM if the registration fails.
+     * @exception BAD_PARAM if the registration fails.
      **/
     public synchronized ValueFactory register_value_factory(String repositoryID,
         ValueFactory factory)
@@ -1505,7 +1505,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
      *
      * @param repositoryID the repository ID.
      * @return the value factory.
-     * @exception org.omg.CORBA.BAD_PARAM if unable to locate a factory.
+     * @exception BAD_PARAM if unable to locate a factory.
      **/
     public synchronized ValueFactory lookup_value_factory(String repositoryID)
     {
@@ -1517,7 +1517,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         if (factory == null) {
             try {
                 factory = Utility.getFactory(null, null, null, repositoryID);
-            } catch(org.omg.CORBA.MARSHAL ex) {
+            } catch(MARSHAL ex) {
                 throw wrapper.unableFindValueFactory( ex ) ;
             }
         }
@@ -1569,7 +1569,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
             if (cls != null) {
                 try {
                     Class[] params = new Class[] { org.omg.CORBA.ORB.class };
-                    java.lang.Object[] args = new java.lang.Object[]{this};
+                    Object[] args = new Object[]{this};
                     Constructor cons = cls.getConstructor(params);
                     badServerIdHandler =
                         (BadServerIdHandler) cons.newInstance(args);
@@ -1604,7 +1604,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
     }
 
     public synchronized org.omg.CORBA.Policy create_policy( int type,
-        org.omg.CORBA.Any val ) throws org.omg.CORBA.PolicyError
+        Any val ) throws org.omg.CORBA.PolicyError
     {
         checkShutdownState() ;
 
@@ -1621,7 +1621,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
             throw wrapper.noToa() ;
 
         try {
-            String codebase = javax.rmi.CORBA.Util.getCodebase( servant.getClass() ) ;
+            String codebase = Util.getCodebase( servant.getClass() ) ;
             getTOAFactory().getTOA( codebase ).connect( servant ) ;
         } catch ( Exception ex ) {
             throw wrapper.orbConnectError( ex ) ;
@@ -1767,7 +1767,7 @@ public class ORBImpl extends com.sun.corba.se.spi.orb.ORB
         throw wrapper.genericNoImpl() ;
     }
 
-    public synchronized void set_delegate(java.lang.Object servant){
+    public synchronized void set_delegate(Object servant){
         checkShutdownState();
 
         POAFactory poaFactory = getPOAFactory() ;

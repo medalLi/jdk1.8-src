@@ -119,8 +119,8 @@ import javax.swing.plaf.ProgressBarUI;
  * Please see {@link java.beans.XMLEncoder}.
  *
  * @see javax.swing.plaf.basic.BasicProgressBarUI
- * @see javax.swing.BoundedRangeModel
- * @see javax.swing.SwingWorker
+ * @see BoundedRangeModel
+ * @see SwingWorker
  *
  * @beaninfo
  *      attribute: isContainer false
@@ -665,8 +665,8 @@ public class JProgressBar extends JComponent implements SwingConstants, Accessib
      *
      * @see #changeListener
      * @see #fireStateChanged
-     * @see javax.swing.event.ChangeListener
-     * @see javax.swing.BoundedRangeModel
+     * @see ChangeListener
+     * @see BoundedRangeModel
      */
     protected ChangeListener createChangeListener() {
         return new ModelListener();

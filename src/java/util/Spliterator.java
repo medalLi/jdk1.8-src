@@ -107,20 +107,20 @@ import java.util.function.LongConsumer;
  * <p>Primitive subtype specializations of {@code Spliterator} are provided for
  * {@link OfInt int}, {@link OfLong long}, and {@link OfDouble double} values.
  * The subtype default implementations of
- * {@link Spliterator#tryAdvance(java.util.function.Consumer)}
- * and {@link Spliterator#forEachRemaining(java.util.function.Consumer)} box
+ * {@link Spliterator#tryAdvance(Consumer)}
+ * and {@link Spliterator#forEachRemaining(Consumer)} box
  * primitive values to instances of their corresponding wrapper class.  Such
  * boxing may undermine any performance advantages gained by using the primitive
  * specializations.  To avoid boxing, the corresponding primitive-based methods
  * should be used.  For example,
- * {@link Spliterator.OfInt#tryAdvance(java.util.function.IntConsumer)}
- * and {@link Spliterator.OfInt#forEachRemaining(java.util.function.IntConsumer)}
+ * {@link OfInt#tryAdvance(IntConsumer)}
+ * and {@link OfInt#forEachRemaining(IntConsumer)}
  * should be used in preference to
- * {@link Spliterator.OfInt#tryAdvance(java.util.function.Consumer)} and
- * {@link Spliterator.OfInt#forEachRemaining(java.util.function.Consumer)}.
+ * {@link OfInt#tryAdvance(Consumer)} and
+ * {@link OfInt#forEachRemaining(Consumer)}.
  * Traversal of primitive values using boxing-based methods
  * {@link #tryAdvance tryAdvance()} and
- * {@link #forEachRemaining(java.util.function.Consumer) forEachRemaining()}
+ * {@link #forEachRemaining(Consumer) forEachRemaining()}
  * does not affect the order in which the values, transformed to boxed values,
  * are encountered.
  *
@@ -584,19 +584,19 @@ public interface Spliterator<T> {
      * type must be a wrapper type for a primitive type, such as {@code Integer}
      * for the primitive {@code int} type.
      * @param <T_CONS> the type of primitive consumer.  The type must be a
-     * primitive specialization of {@link java.util.function.Consumer} for
-     * {@code T}, such as {@link java.util.function.IntConsumer} for
+     * primitive specialization of {@link Consumer} for
+     * {@code T}, such as {@link IntConsumer} for
      * {@code Integer}.
      * @param <T_SPLITR> the type of primitive Spliterator.  The type must be
      * a primitive specialization of Spliterator for {@code T}, such as
-     * {@link Spliterator.OfInt} for {@code Integer}.
+     * {@link OfInt} for {@code Integer}.
      *
-     * @see Spliterator.OfInt
-     * @see Spliterator.OfLong
-     * @see Spliterator.OfDouble
+     * @see OfInt
+     * @see OfLong
+     * @see OfDouble
      * @since 1.8
      */
-    public interface OfPrimitive<T, T_CONS, T_SPLITR extends Spliterator.OfPrimitive<T, T_CONS, T_SPLITR>>
+    public interface OfPrimitive<T, T_CONS, T_SPLITR extends OfPrimitive<T, T_CONS, T_SPLITR>>
             extends Spliterator<T> {
         @Override
         T_SPLITR trySplit();
@@ -659,10 +659,10 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code IntConsumer} then it is cast
          * to {@code IntConsumer} and passed to
-         * {@link #tryAdvance(java.util.function.IntConsumer)}; otherwise
+         * {@link #tryAdvance(IntConsumer)}; otherwise
          * the action is adapted to an instance of {@code IntConsumer}, by
          * boxing the argument of {@code IntConsumer}, and then passed to
-         * {@link #tryAdvance(java.util.function.IntConsumer)}.
+         * {@link #tryAdvance(IntConsumer)}.
          */
         @Override
         default boolean tryAdvance(Consumer<? super Integer> action) {
@@ -682,10 +682,10 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code IntConsumer} then it is cast
          * to {@code IntConsumer} and passed to
-         * {@link #forEachRemaining(java.util.function.IntConsumer)}; otherwise
+         * {@link #forEachRemaining(IntConsumer)}; otherwise
          * the action is adapted to an instance of {@code IntConsumer}, by
          * boxing the argument of {@code IntConsumer}, and then passed to
-         * {@link #forEachRemaining(java.util.function.IntConsumer)}.
+         * {@link #forEachRemaining(IntConsumer)}.
          */
         @Override
         default void forEachRemaining(Consumer<? super Integer> action) {
@@ -723,10 +723,10 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code LongConsumer} then it is cast
          * to {@code LongConsumer} and passed to
-         * {@link #tryAdvance(java.util.function.LongConsumer)}; otherwise
+         * {@link #tryAdvance(LongConsumer)}; otherwise
          * the action is adapted to an instance of {@code LongConsumer}, by
          * boxing the argument of {@code LongConsumer}, and then passed to
-         * {@link #tryAdvance(java.util.function.LongConsumer)}.
+         * {@link #tryAdvance(LongConsumer)}.
          */
         @Override
         default boolean tryAdvance(Consumer<? super Long> action) {
@@ -746,10 +746,10 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code LongConsumer} then it is cast
          * to {@code LongConsumer} and passed to
-         * {@link #forEachRemaining(java.util.function.LongConsumer)}; otherwise
+         * {@link #forEachRemaining(LongConsumer)}; otherwise
          * the action is adapted to an instance of {@code LongConsumer}, by
          * boxing the argument of {@code LongConsumer}, and then passed to
-         * {@link #forEachRemaining(java.util.function.LongConsumer)}.
+         * {@link #forEachRemaining(LongConsumer)}.
          */
         @Override
         default void forEachRemaining(Consumer<? super Long> action) {
@@ -787,10 +787,10 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code DoubleConsumer} then it is
          * cast to {@code DoubleConsumer} and passed to
-         * {@link #tryAdvance(java.util.function.DoubleConsumer)}; otherwise
+         * {@link #tryAdvance(DoubleConsumer)}; otherwise
          * the action is adapted to an instance of {@code DoubleConsumer}, by
          * boxing the argument of {@code DoubleConsumer}, and then passed to
-         * {@link #tryAdvance(java.util.function.DoubleConsumer)}.
+         * {@link #tryAdvance(DoubleConsumer)}.
          */
         @Override
         default boolean tryAdvance(Consumer<? super Double> action) {
@@ -810,11 +810,11 @@ public interface Spliterator<T> {
          * @implSpec
          * If the action is an instance of {@code DoubleConsumer} then it is
          * cast to {@code DoubleConsumer} and passed to
-         * {@link #forEachRemaining(java.util.function.DoubleConsumer)};
+         * {@link #forEachRemaining(DoubleConsumer)};
          * otherwise the action is adapted to an instance of
          * {@code DoubleConsumer}, by boxing the argument of
          * {@code DoubleConsumer}, and then passed to
-         * {@link #forEachRemaining(java.util.function.DoubleConsumer)}.
+         * {@link #forEachRemaining(DoubleConsumer)}.
          */
         @Override
         default void forEachRemaining(Consumer<? super Double> action) {

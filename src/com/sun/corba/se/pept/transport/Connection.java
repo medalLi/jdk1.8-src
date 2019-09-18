@@ -44,9 +44,9 @@ public interface Connection
     /**
      * Used to determine if the <code>Connection</code> should register
      * with the
-     * {@link com.sun.corba.se.pept.transport.TransportManager
+     * {@link TransportManager
      * TransportManager}
-     * {@link com.sun.corba.se.pept.transport.Selector Selector}
+     * {@link Selector Selector}
      * to handle read events.
      *
      * For example, an HTTP transport would not register since the requesting
@@ -59,9 +59,9 @@ public interface Connection
     /**
      * Used to determine if the <code>Connection</code> should register
      * with the
-     * {@link com.sun.corba.se.pept.transport.TransportManager
+     * {@link TransportManager
      * TransportManager}
-     * {@link com.sun.corba.se.pept.transport.Selector Selector}
+     * {@link Selector Selector}
      * to handle read events.
      *
      * For example, an HTTP transport would not register since the requesting
@@ -89,44 +89,44 @@ public interface Connection
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
+     * {@link Acceptor Acceptor}
      * that created this <code>Connection</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
+     * {@link Acceptor Acceptor}
      */
     public Acceptor getAcceptor();
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * that created this <code>Connection</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      */
     public ContactInfo getContactInfo();
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
+     * {@link EventHandler EventHandler}
      * associated with this <code>Acceptor</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
+     * {@link EventHandler EventHandler}
      */
     public EventHandler getEventHandler();
 
     /**
      * Indicates whether a
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * or a
-     * {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
+     * {@link Acceptor Acceptor}
      * created the
      * <code>Connection</code>.
      *
      * @return <code>true</code> if <code>Connection</code> an
-     * {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
+     * {@link Acceptor Acceptor}
      * created the <code>Connection</code>.
      */
     public boolean isServer();
@@ -189,7 +189,7 @@ public interface Connection
 
     /**
      * Register an invocation's
-     * {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
+     * {@link MessageMediator MessageMediator}
      * with the <code>Connection</code>.
      *
      * This is useful in protocols which support fragmentation.
@@ -212,7 +212,7 @@ public interface Connection
 
     /**
      * Unregister an invocation's
-     * {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
+     * {@link MessageMediator MessageMediator}
      * with the <code>Connection</code>.
      *
      * @param messageMediator

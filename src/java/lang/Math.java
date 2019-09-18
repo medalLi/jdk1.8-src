@@ -661,8 +661,8 @@ public final class Math {
      * @param   a   a floating-point value to be rounded to an integer.
      * @return  the value of the argument rounded to the nearest
      *          {@code int} value.
-     * @see     java.lang.Integer#MAX_VALUE
-     * @see     java.lang.Integer#MIN_VALUE
+     * @see     Integer#MAX_VALUE
+     * @see     Integer#MIN_VALUE
      */
     public static int round(float a) {
         int intBits = Float.floatToRawIntBits(a);
@@ -710,8 +710,8 @@ public final class Math {
      *          {@code long}.
      * @return  the value of the argument rounded to the nearest
      *          {@code long} value.
-     * @see     java.lang.Long#MAX_VALUE
-     * @see     java.lang.Long#MIN_VALUE
+     * @see     Long#MAX_VALUE
+     * @see     Long#MIN_VALUE
      */
     public static long round(double a) {
         long longBits = Double.doubleToRawLongBits(a);

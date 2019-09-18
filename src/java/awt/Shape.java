@@ -67,8 +67,8 @@ import java.awt.geom.Rectangle2D;
  * determining if a shape contains or intersects a rectangle or if a
  * shape contains a point.
  *
- * @see java.awt.geom.PathIterator
- * @see java.awt.geom.AffineTransform
+ * @see PathIterator
+ * @see AffineTransform
  * @see java.awt.geom.FlatteningPathIterator
  * @see java.awt.geom.GeneralPath
  *

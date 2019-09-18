@@ -64,5 +64,5 @@ public interface Stroke {
      * @param p a <code>Shape</code> to be stroked
      * @return the stroked outline <code>Shape</code>.
      */
-    Shape createStrokedShape (Shape p);
+    Shape createStrokedShape(Shape p);
 }

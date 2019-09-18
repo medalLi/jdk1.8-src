@@ -29,7 +29,7 @@ package javax.sound.sampled;
  * {@link Line Lines} often have a set of controls, such as gain and pan, that affect
  * the audio signal passing through the line.  Java Sound's <code>Line</code> objects
  * let you obtain a particular control object by passing its class as the
- * argument to a {@link Line#getControl(Control.Type) getControl} method.
+ * argument to a {@link Line#getControl(Type) getControl} method.
  * <p>
  * Because the various types of controls have different purposes and features,
  * all of their functionality is accessed from the subclasses that define

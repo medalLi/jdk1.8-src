@@ -100,7 +100,7 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
      *          {@code SubjectDomainCombiner}.
      */
     public Subject getSubject() {
-        java.lang.SecurityManager sm = System.getSecurityManager();
+        SecurityManager sm = System.getSecurityManager();
         if (sm != null) {
             sm.checkPermission(new AuthPermission
                 ("getSubjectFromDomainCombiner"));
@@ -162,7 +162,7 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
             } else {
                 final Subject s = subject;
                 AccessController.doPrivileged
-                    (new java.security.PrivilegedAction<Void>() {
+                    (new PrivilegedAction<Void>() {
                     public Void run() {
                         debug.println(s.toString());
                         return null;
@@ -299,7 +299,7 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
         ProtectionDomain[] assignedDomains) {
 
         if (!allowCaching) {
-            java.security.AccessController.doPrivileged
+            AccessController.doPrivileged
                 (new PrivilegedAction<Void>() {
                     @SuppressWarnings("deprecation")
                     public Void run() {
@@ -368,7 +368,7 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
                     final java.security.CodeSource finalCs = pd.getCodeSource();
                     final Subject finalS = subject;
                     PermissionCollection newPerms =
-                        java.security.AccessController.doPrivileged
+                        AccessController.doPrivileged
                         (new PrivilegedAction<PermissionCollection>() {
                         @SuppressWarnings("deprecation")
                         public PermissionCollection run() {

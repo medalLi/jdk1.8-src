@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.oa ;
+package com.sun.corba.se.spi.oa;
 
 import org.omg.PortableInterceptor.ObjectReferenceTemplate ;
 import org.omg.PortableInterceptor.ObjectReferenceFactory ;

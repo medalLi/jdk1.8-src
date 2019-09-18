@@ -34,7 +34,7 @@ import javax.naming.ldap.LdapName;
  * <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a>.
  *
  * <p>
- * After successful authentication, a user {@link java.security.Principal}
+ * After successful authentication, a user {@link Principal}
  * can be associated with a particular {@link javax.security.auth.Subject}
  * to augment that <code>Subject</code> with an additional identity.
  * Authorization decisions can then be based upon the

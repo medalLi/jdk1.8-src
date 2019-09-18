@@ -32,7 +32,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynStruct.html">DynStruct</a> instead
  */
 @Deprecated
-public interface DynStruct extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
+public interface DynStruct extends Object, DynAny
 {
     /**
      * During a traversal, returns the name of the current member.
@@ -47,7 +47,7 @@ public interface DynStruct extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
      *
      * @return the <code>TCKind</code> object that describes the current member
      */
-    public org.omg.CORBA.TCKind current_member_kind();
+    public TCKind current_member_kind();
 
     /**
      * Returns an array containing all the members of the stored struct.
@@ -55,7 +55,7 @@ public interface DynStruct extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
      * @return the array of name-value pairs
          * @see #set_members
      */
-    public org.omg.CORBA.NameValuePair[] get_members();
+    public NameValuePair[] get_members();
 
     /**
      * Set the members of the struct.
@@ -65,6 +65,6 @@ public interface DynStruct extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
          *         is invalid
          * @see #get_members
      */
-    public void set_members(org.omg.CORBA.NameValuePair[] value)
+    public void set_members(NameValuePair[] value)
         throws org.omg.CORBA.DynAnyPackage.InvalidSeq;
 }

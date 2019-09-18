@@ -319,7 +319,7 @@ public class HTML {
             return false;
         }
 
-        private void writeObject(java.io.ObjectOutputStream s)
+        private void writeObject(ObjectOutputStream s)
                      throws IOException {
             s.defaultWriteObject();
             s.writeBoolean(blockTag);

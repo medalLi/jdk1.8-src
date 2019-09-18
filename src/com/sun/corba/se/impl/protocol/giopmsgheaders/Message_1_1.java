@@ -41,7 +41,7 @@ import com.sun.corba.se.impl.logging.ORBUtilSystemException ;
  */
 
 public class Message_1_1
-        extends com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase {
+        extends MessageBase {
 
     // Constants
     final static int UPPER_THREE_BYTES_OF_INT_MASK = 0xFF;

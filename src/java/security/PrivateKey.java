@@ -41,7 +41,7 @@ package java.security;
  * where such information is immutable, unreferenced.
  * Finally, since {@code PrivateKey} is {@code Serializable}, implementations
  * should also override
- * {@link java.io.ObjectOutputStream#writeObject(java.lang.Object)}
+ * {@link java.io.ObjectOutputStream#writeObject(Object)}
  * to prevent keys that have been destroyed from being serialized.
  *
  * @see Key

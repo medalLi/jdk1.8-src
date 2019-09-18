@@ -12,7 +12,7 @@ abstract public class InconsistentTypeCodeHelper
 {
   private static String  _id = "IDL:omg.org/DynamicAny/DynAnyFactory/InconsistentTypeCode:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode that)
+  public static void insert (org.omg.CORBA.Any a, InconsistentTypeCode that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class InconsistentTypeCodeHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode extract (org.omg.CORBA.Any a)
+  public static InconsistentTypeCode extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class InconsistentTypeCodeHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCodeHelper.id (), "InconsistentTypeCode", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (InconsistentTypeCodeHelper.id (), "InconsistentTypeCode", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class InconsistentTypeCodeHelper
     return _id;
   }
 
-  public static org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode read (org.omg.CORBA.portable.InputStream istream)
+  public static InconsistentTypeCode read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode value = new org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode ();
+    InconsistentTypeCode value = new InconsistentTypeCode ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, InconsistentTypeCode value)
   {
     // write the repository ID
     ostream.write_string (id ());

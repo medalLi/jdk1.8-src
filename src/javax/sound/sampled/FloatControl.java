@@ -32,7 +32,7 @@ package javax.sound.sampled;
  * adjustable objects such as sliders or rotary knobs.  Concrete subclasses
  * of <code>FloatControl</code> implement controls, such as gain and pan, that
  * affect a line's audio signal in some way that an application can manipulate.
- * The <code>{@link FloatControl.Type}</code>
+ * The <code>{@link Type}</code>
  * inner class provides static instances of types that are used to
  * identify some common kinds of float control.
  * <p>

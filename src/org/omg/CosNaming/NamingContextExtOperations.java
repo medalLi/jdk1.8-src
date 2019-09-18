@@ -22,7 +22,7 @@ package org.omg.CosNaming;
  * CORBA COS 
  * Naming Specification.</a>
  */
-public interface NamingContextExtOperations  extends org.omg.CosNaming.NamingContextOperations
+public interface NamingContextExtOperations  extends NamingContextOperations
 {
 
   /**
@@ -35,7 +35,7 @@ public interface NamingContextExtOperations  extends org.omg.CosNaming.NamingCon
    * Indicates the name does not identify a binding.<p>
    * 
    */
-  String to_string (org.omg.CosNaming.NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.InvalidName;
+  String to_string(NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.InvalidName;
 
   /**
    * This operation  converts a Stringified Name into an  equivalent array
@@ -47,7 +47,7 @@ public interface NamingContextExtOperations  extends org.omg.CosNaming.NamingCon
    * Indicates the name does not identify a binding.<p>
    * 
    */
-  org.omg.CosNaming.NameComponent[] to_name (String sn) throws org.omg.CosNaming.NamingContextPackage.InvalidName;
+  NameComponent[] to_name(String sn) throws org.omg.CosNaming.NamingContextPackage.InvalidName;
 
   /**
    * This operation creates a URL based "iiopname://" format name
@@ -63,7 +63,7 @@ public interface NamingContextExtOperations  extends org.omg.CosNaming.NamingCon
    * incorrect <p>
    * 
    */
-  String to_url (String addr, String sn) throws org.omg.CosNaming.NamingContextExtPackage.InvalidAddress, org.omg.CosNaming.NamingContextPackage.InvalidName;
+  String to_url(String addr, String sn) throws org.omg.CosNaming.NamingContextExtPackage.InvalidAddress, org.omg.CosNaming.NamingContextPackage.InvalidName;
 
   /**
    * This operation resolves the Stringified name into the object
@@ -79,5 +79,5 @@ public interface NamingContextExtOperations  extends org.omg.CosNaming.NamingCon
    * Indicates the name does not identify a binding.<p>
    * 
    */
-  org.omg.CORBA.Object resolve_str (String sn) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName;
+  org.omg.CORBA.Object resolve_str(String sn) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName;
 } // interface NamingContextExtOperations

@@ -39,7 +39,7 @@ import java.util.Collections;
  * options.  Please refer to the {@code Configuration} class for
  * more information on the different control flags and their semantics.
  *
- * @see javax.security.auth.login.Configuration
+ * @see Configuration
  */
 public class AppConfigurationEntry {
 

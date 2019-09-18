@@ -349,11 +349,11 @@ public class CorbaClientRequestDispatcherImpl
       }
     }
 
-    public InputObject marshalingComplete(java.lang.Object self,
+    public InputObject marshalingComplete(Object self,
                                           OutputObject outputObject)
         throws
             ApplicationException,
-            org.omg.CORBA.portable.RemarshalException
+            RemarshalException
     {
         ORB orb = null;
         CorbaMessageMediator messageMediator = null;
@@ -383,7 +383,7 @@ public class CorbaClientRequestDispatcherImpl
             ORB orb, CorbaMessageMediator messageMediator)
         throws
             ApplicationException,
-            org.omg.CORBA.portable.RemarshalException
+            RemarshalException
     {
         try {
             messageMediator.finishSendingRequest();
@@ -442,7 +442,7 @@ public class CorbaClientRequestDispatcherImpl
                                           InputObject inputObject)
         throws
             ApplicationException,
-            org.omg.CORBA.portable.RemarshalException
+            RemarshalException
     {
         ORBUtilSystemException wrapper =
             ORBUtilSystemException.get( orb,

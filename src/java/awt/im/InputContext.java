@@ -67,8 +67,8 @@ import sun.awt.im.InputMethodContext;
  * input contexts can still be created and used; their behavior is specified with
  * the individual methods below.
  *
- * @see java.awt.Component#getInputContext
- * @see java.awt.Component#enableInputMethods
+ * @see Component#getInputContext
+ * @see Component#enableInputMethods
  * @author JavaSoft Asia/Pacific
  * @since 1.2
  */
@@ -89,7 +89,7 @@ public class InputContext {
      * Returns a new InputContext instance.
      */
     public static InputContext getInstance() {
-        return new sun.awt.im.InputMethodContext();
+        return new InputMethodContext();
     }
 
     /**
@@ -202,7 +202,7 @@ public class InputContext {
      * determine whether this operation is supported. For example, an input method may enable
      * composition only for some locales, and do nothing for other locales. For such input
      * methods, it is possible that this method does not throw
-     * {@link java.lang.UnsupportedOperationException UnsupportedOperationException},
+     * {@link UnsupportedOperationException UnsupportedOperationException},
      * but also does not affect whether composition is enabled.
      *
      * @param enable whether to enable the current input method for composition
@@ -275,7 +275,7 @@ public class InputContext {
      * removed from its containment hierarchy, or that input method
      * support has been disabled for the component. This method is
      * usually called from the client component's
-     * {@link java.awt.Component#removeNotify() Component.removeNotify}
+     * {@link Component#removeNotify() Component.removeNotify}
      * method. Potentially pending input from input methods
      * for this component is discarded.
      * If no input methods are available, then this method has no effect.

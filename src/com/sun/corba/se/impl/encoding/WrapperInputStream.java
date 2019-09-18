@@ -64,7 +64,7 @@ import com.sun.corba.se.impl.encoding.CodeSetConversion;
 import com.sun.corba.se.impl.encoding.CDRInputStream;
 import com.sun.corba.se.impl.encoding.CDROutputStream;
 
-public class WrapperInputStream extends org.omg.CORBA_2_3.portable.InputStream implements TypeCodeReader
+public class WrapperInputStream extends InputStream implements TypeCodeReader
 {
     private CDRInputStream stream;
     private Map typeMap = null;
@@ -146,7 +146,7 @@ public class WrapperInputStream extends org.omg.CORBA_2_3.portable.InputStream i
     public TypeCode read_TypeCode() { return stream.read_TypeCode(); }
     public Any read_any() { return stream.read_any(); }
     public Principal read_Principal() { return stream.read_Principal(); }
-    public java.math.BigDecimal read_fixed() { return stream.read_fixed(); }
+    public BigDecimal read_fixed() { return stream.read_fixed(); }
     public org.omg.CORBA.Context read_Context() { return stream.read_Context(); }
 
     public org.omg.CORBA.ORB orb() { return stream.orb(); }

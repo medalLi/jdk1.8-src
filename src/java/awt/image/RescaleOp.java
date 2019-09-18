@@ -77,8 +77,8 @@ import sun.awt.image.ImagingLib;
  * <p>
  * Note that in-place operation is allowed (i.e. the source and destination can
  * be the same object).
- * @see java.awt.RenderingHints#KEY_COLOR_RENDERING
- * @see java.awt.RenderingHints#KEY_DITHERING
+ * @see RenderingHints#KEY_COLOR_RENDERING
+ * @see RenderingHints#KEY_DITHERING
  */
 public class RescaleOp implements BufferedImageOp, RasterOp {
     float[] scaleFactors;

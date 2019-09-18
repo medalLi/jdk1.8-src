@@ -12,29 +12,29 @@ public interface RepositoryOperations
 {
 
   // always uninstalled.
-  int registerServer (com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef serverDef) throws com.sun.corba.se.spi.activation.ServerAlreadyRegistered, com.sun.corba.se.spi.activation.BadServerDefinition;
+  int registerServer(com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef serverDef) throws ServerAlreadyRegistered, BadServerDefinition;
 
   // unregister server definition
-  void unregisterServer (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered;
+  void unregisterServer(int serverId) throws ServerNotRegistered;
 
   // get server definition
-  com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef getServer (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered;
+  com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef getServer(int serverId) throws ServerNotRegistered;
 
   // Return whether the server has been installed
-  boolean isInstalled (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered;
+  boolean isInstalled(int serverId) throws ServerNotRegistered;
 
   // if the server is currently marked as installed.
-  void install (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerAlreadyInstalled;
+  void install(int serverId) throws ServerNotRegistered, ServerAlreadyInstalled;
 
   // if the server is currently marked as uninstalled.
-  void uninstall (int serverId) throws com.sun.corba.se.spi.activation.ServerNotRegistered, com.sun.corba.se.spi.activation.ServerAlreadyUninstalled;
+  void uninstall(int serverId) throws ServerNotRegistered, ServerAlreadyUninstalled;
 
   // list registered servers
-  int[] listRegisteredServers ();
+  int[] listRegisteredServers();
 
   // servers.
-  String[] getApplicationNames ();
+  String[] getApplicationNames();
 
   // Find the ServerID associated with the given application name.
-  int getServerID (String applicationName) throws com.sun.corba.se.spi.activation.ServerNotRegistered;
+  int getServerID(String applicationName) throws ServerNotRegistered;
 } // interface RepositoryOperations

@@ -43,7 +43,7 @@ public interface Attribute extends Serializable {
    * for this printing attribute value when it is added to an attribute set.
    *
    * @return  Printing attribute class (category), an instance of class
-   *          {@link java.lang.Class java.lang.Class}.
+   *          {@link Class java.lang.Class}.
    */
   public Class<? extends Attribute> getCategory();
 

@@ -158,7 +158,7 @@ public abstract class Transformer {
      *
      * <p>New parameters in the list are added to any existing parameters.
      * If the name of a new parameter is equal to the name of an existing
-     * parameter as determined by {@link java.lang.Object#equals(Object obj)},
+     * parameter as determined by {@link Object#equals(Object obj)},
      *  the existing parameter is set to the new value.</p>
      *
      * @param params Parameters to set.
@@ -222,8 +222,8 @@ public abstract class Transformer {
      * @throws IllegalArgumentException When keys are not recognized and
      *   are not namespace qualified.
      *
-     * @see javax.xml.transform.OutputKeys
-     * @see java.util.Properties
+     * @see OutputKeys
+     * @see Properties
      *
      */
     public abstract void setOutputProperties(Properties oformat);
@@ -258,8 +258,8 @@ public abstract class Transformer {
      * @return A copy of the set of output properties in effect for
      *   the next transformation.
      *
-     * @see javax.xml.transform.OutputKeys
-     * @see java.util.Properties
+     * @see OutputKeys
+     * @see Properties
      * @see <a href="http://www.w3.org/TR/xslt#output">
      *   XSL Transformations (XSLT) Version 1.0</a>
      */
@@ -290,7 +290,7 @@ public abstract class Transformer {
      * @throws IllegalArgumentException If the property is not supported, and is
      * not qualified with a namespace.
      *
-     * @see javax.xml.transform.OutputKeys
+     * @see OutputKeys
      */
     public abstract void setOutputProperty(String name, String value)
         throws IllegalArgumentException;
@@ -314,7 +314,7 @@ public abstract class Transformer {
      *
      * @throws IllegalArgumentException If the property is not supported.
      *
-     * @see javax.xml.transform.OutputKeys
+     * @see OutputKeys
      */
     public abstract String getOutputProperty(String name)
         throws IllegalArgumentException;

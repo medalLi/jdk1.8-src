@@ -51,7 +51,7 @@ public abstract class LongSeqHelper
 {
     private static String  _id = "IDL:omg.org/CORBA/LongSeq:1.0";
 
-    public static void insert (org.omg.CORBA.Any a, int[] that)
+    public static void insert (Any a, int[] that)
     {
         org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
         a.type (type ());
@@ -59,19 +59,19 @@ public abstract class LongSeqHelper
         a.read_value (out.create_input_stream (), type ());
     }
 
-    public static int[] extract (org.omg.CORBA.Any a)
+    public static int[] extract (Any a)
     {
         return read (a.create_input_stream ());
     }
 
-    private static org.omg.CORBA.TypeCode __typeCode = null;
-    synchronized public static org.omg.CORBA.TypeCode type ()
+    private static TypeCode __typeCode = null;
+    synchronized public static TypeCode type ()
     {
         if (__typeCode == null)
             {
-                __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_long);
-                __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-                __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.LongSeqHelper.id (), "LongSeq", __typeCode);
+                __typeCode = ORB.init ().get_primitive_tc (TCKind.tk_long);
+                __typeCode = ORB.init ().create_sequence_tc (0, __typeCode);
+                __typeCode = ORB.init ().create_alias_tc (LongSeqHelper.id (), "LongSeq", __typeCode);
             }
         return __typeCode;
     }

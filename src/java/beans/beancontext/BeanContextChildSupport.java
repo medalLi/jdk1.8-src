@@ -51,9 +51,9 @@ import java.io.Serializable;
  * @author      Laurence P. G. Cable
  * @since       1.2
  *
- * @see java.beans.beancontext.BeanContext
- * @see java.beans.beancontext.BeanContextServices
- * @see java.beans.beancontext.BeanContextChild
+ * @see BeanContext
+ * @see BeanContextServices
+ * @see BeanContextChild
  */
 
 public class BeanContextChildSupport implements BeanContextChild, BeanContextServicesListener, Serializable {

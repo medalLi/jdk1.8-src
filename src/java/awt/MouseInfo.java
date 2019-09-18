@@ -65,7 +65,7 @@ public class MouseInfo {
      *            <code>checkPermission</code> method doesn't allow the operation
      * @see       GraphicsConfiguration
      * @see       SecurityManager#checkPermission
-     * @see       java.awt.AWTPermission
+     * @see       AWTPermission
      * @return    location of the mouse pointer
      * @since     1.5
      */

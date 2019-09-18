@@ -29,7 +29,7 @@ import java.util.Iterator;
 
 /**
  * <code>ContactInfoIterator</code> is used to retrieve individual
- * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}.
+ * {@link ContactInfo ContactInfo}.
  *
  * @author Harold Carr
  */
@@ -49,7 +49,7 @@ public interface ContactInfoListIterator
      * in future invocations.
      *
      * @param contactInfo The
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * obtained from this iterator which resulted in a successful invocation.
      */
     public void reportSuccess(ContactInfo contactInfo);
@@ -59,10 +59,10 @@ public interface ContactInfoListIterator
      * in future invocations.
      *
      * @param contactInfo The
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * in effect when an invocation exception occurs.
      * @param exception The
-     * {@link java.lang.RuntimeException RuntimeException}.
+     * {@link RuntimeException RuntimeException}.
      *
      * @return Returns true if the request should be retried.
      */

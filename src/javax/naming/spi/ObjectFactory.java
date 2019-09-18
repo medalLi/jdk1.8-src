@@ -169,6 +169,6 @@ public interface ObjectFactory {
  * @see NamingManager#getURLContext
  */
     public Object getObjectInstance(Object obj, Name name, Context nameCtx,
-                                    Hashtable<?,?> environment)
+                                    Hashtable<?, ?> environment)
         throws Exception;
 }

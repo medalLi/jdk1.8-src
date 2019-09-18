@@ -37,7 +37,7 @@ import javax.management.MBeanServer; // for Javadoc
  * always the MBean Server's own ClassLoader.</p>
  *
  * <p>When an MBean is registered in an MBean Server, if it is of a
- * subclass of {@link java.lang.ClassLoader} and if it does not
+ * subclass of {@link ClassLoader} and if it does not
  * implement the interface {@link PrivateClassLoader}, it is added to
  * the end of the MBean Server's <code>ClassLoaderRepository</code>.
  * If it is subsequently unregistered from the MBean Server, it is

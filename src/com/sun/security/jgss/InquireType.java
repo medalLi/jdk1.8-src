@@ -27,7 +27,7 @@ package com.sun.security.jgss;
 
 /**
  * Attribute types that can be specified as an argument of
- * {@link com.sun.security.jgss.ExtendedGSSContext#inquireSecContext}
+ * {@link ExtendedGSSContext#inquireSecContext}
  */
 @jdk.Exported
 public enum InquireType {

@@ -88,32 +88,32 @@ abstract class CDRInputStreamBase extends java.io.InputStream
     public abstract TypeCode read_TypeCode();
     public abstract Any read_any();
     public abstract Principal read_Principal();
-    public int read() throws java.io.IOException {
+    public int read() throws IOException {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
-    public abstract java.math.BigDecimal read_fixed();
+    public abstract BigDecimal read_fixed();
     public org.omg.CORBA.Context read_Context() {
         throw new org.omg.CORBA.NO_IMPLEMENT();
     }
-    public abstract org.omg.CORBA.Object read_Object(java.lang.Class clz);
+    public abstract org.omg.CORBA.Object read_Object(Class clz);
     public abstract org.omg.CORBA.ORB orb();
 
     // org.omg.CORBA_2_3.portable.InputStream
-    public abstract java.io.Serializable read_value();
-    public abstract java.io.Serializable read_value(java.lang.Class clz);
-    public abstract java.io.Serializable read_value(org.omg.CORBA.portable.BoxedValueHelper factory);
-    public abstract java.io.Serializable read_value(java.lang.String rep_id);
-    public abstract java.io.Serializable read_value(java.io.Serializable value);
-    public abstract java.lang.Object read_abstract_interface();
-    public abstract java.lang.Object read_abstract_interface(java.lang.Class clz);
+    public abstract Serializable read_value();
+    public abstract Serializable read_value(Class clz);
+    public abstract Serializable read_value(org.omg.CORBA.portable.BoxedValueHelper factory);
+    public abstract Serializable read_value(String rep_id);
+    public abstract Serializable read_value(Serializable value);
+    public abstract Object read_abstract_interface();
+    public abstract Object read_abstract_interface(Class clz);
 
     // com.sun.corba.se.impl.encoding.MarshalInputStream
     public abstract void consumeEndian();
     public abstract int getPosition();
 
     // org.omg.CORBA.DataInputStream
-    public abstract java.lang.Object read_Abstract ();
-    public abstract java.io.Serializable read_Value ();
+    public abstract Object read_Abstract ();
+    public abstract Serializable read_Value ();
     public abstract void read_any_array (org.omg.CORBA.AnySeqHolder seq, int offset, int length);
     public abstract void read_boolean_array (org.omg.CORBA.BooleanSeqHolder seq, int offset, int length);
     public abstract void read_char_array (org.omg.CORBA.CharSeqHolder seq, int offset, int length);
@@ -159,7 +159,7 @@ abstract class CDRInputStreamBase extends java.io.InputStream
     public abstract CDRInputStreamBase dup();
 
     // Needed by TCUtility
-    public abstract java.math.BigDecimal read_fixed(short digits, short scale);
+    public abstract BigDecimal read_fixed(short digits, short scale);
 
     // Needed by TypeCodeImpl
     public abstract boolean isLittleEndian();

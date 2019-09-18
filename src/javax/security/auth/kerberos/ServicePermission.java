@@ -389,7 +389,7 @@ public final class ServicePermission extends Permission
      * to a stream. The actions are serialized, and the superclass
      * takes care of the name.
      */
-    private void writeObject(java.io.ObjectOutputStream s)
+    private void writeObject(ObjectOutputStream s)
         throws IOException
     {
         // Write out the actions. The superclass takes care of the name
@@ -403,7 +403,7 @@ public final class ServicePermission extends Permission
      * readObject is called to restore the state of the
      * ServicePermission from a stream.
      */
-    private void readObject(java.io.ObjectInputStream s)
+    private void readObject(ObjectInputStream s)
          throws IOException, ClassNotFoundException
     {
         // Read in the action, then initialize the rest

@@ -299,7 +299,7 @@ public abstract class SOAPMessage {
      * @exception IllegalArgumentException
      *               if there was a problem with the specified <code>DataHandler</code>
      *               object
-     * @see javax.activation.DataHandler
+     * @see DataHandler
      * @see javax.activation.DataContentHandler
      */
     public AttachmentPart createAttachmentPart(DataHandler dataHandler) {
@@ -336,7 +336,7 @@ public abstract class SOAPMessage {
      *               of the content object, or if there was no
      *               <code>DataContentHandler</code> object for the given
      *               content object
-     * @see javax.activation.DataHandler
+     * @see DataHandler
      * @see javax.activation.DataContentHandler
      */
     public AttachmentPart createAttachmentPart(

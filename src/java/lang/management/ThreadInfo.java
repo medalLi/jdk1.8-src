@@ -335,7 +335,7 @@ public class ThreadInfo {
      * has blocked to enter or reenter a monitor
      * since thread contention monitoring is enabled.
      * I.e. the total accumulated time the thread has been in the
-     * {@link java.lang.Thread.State#BLOCKED BLOCKED} state since thread
+     * {@link Thread.State#BLOCKED BLOCKED} state since thread
      * contention monitoring was last enabled.
      * This method returns <tt>-1</tt> if thread contention monitoring
      * is disabled.
@@ -348,7 +348,7 @@ public class ThreadInfo {
      * that a thread entered the <tt>BLOCKED</tt> state;
      * <tt>-1</tt> if thread contention monitoring is disabled.
      *
-     * @throws java.lang.UnsupportedOperationException if the Java
+     * @throws UnsupportedOperationException if the Java
      * virtual machine does not support this operation.
      *
      * @see ThreadMXBean#isThreadContentionMonitoringSupported
@@ -363,7 +363,7 @@ public class ThreadInfo {
      * the thread associated with this <tt>ThreadInfo</tt>
      * blocked to enter or reenter a monitor.
      * I.e. the number of times a thread has been in the
-     * {@link java.lang.Thread.State#BLOCKED BLOCKED} state.
+     * {@link Thread.State#BLOCKED BLOCKED} state.
      *
      * @return the total number of times that the thread
      * entered the <tt>BLOCKED</tt> state.
@@ -378,8 +378,8 @@ public class ThreadInfo {
      * has waited for notification
      * since thread contention monitoring is enabled.
      * I.e. the total accumulated time the thread has been in the
-     * {@link java.lang.Thread.State#WAITING WAITING}
-     * or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state
+     * {@link Thread.State#WAITING WAITING}
+     * or {@link Thread.State#TIMED_WAITING TIMED_WAITING} state
      * since thread contention monitoring is enabled.
      * This method returns <tt>-1</tt> if thread contention monitoring
      * is disabled.
@@ -393,7 +393,7 @@ public class ThreadInfo {
      * <tt>TIMED_WAITING</tt> state;
      * <tt>-1</tt> if thread contention monitoring is disabled.
      *
-     * @throws java.lang.UnsupportedOperationException if the Java
+     * @throws UnsupportedOperationException if the Java
      * virtual machine does not support this operation.
      *
      * @see ThreadMXBean#isThreadContentionMonitoringSupported
@@ -408,8 +408,8 @@ public class ThreadInfo {
      * the thread associated with this <tt>ThreadInfo</tt>
      * waited for notification.
      * I.e. the number of times that a thread has been
-     * in the {@link java.lang.Thread.State#WAITING WAITING}
-     * or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state.
+     * in the {@link Thread.State#WAITING WAITING}
+     * or {@link Thread.State#TIMED_WAITING TIMED_WAITING} state.
      *
      * @return the total number of times that the thread
      * was in the <tt>WAITING</tt> or <tt>TIMED_WAITING</tt> state.
@@ -426,18 +426,18 @@ public class ThreadInfo {
      * <ul>
      * <li>an object monitor to be acquired for entering or reentering
      *     a synchronization block/method.
-     *     <br>The thread is in the {@link java.lang.Thread.State#BLOCKED BLOCKED}
+     *     <br>The thread is in the {@link Thread.State#BLOCKED BLOCKED}
      *     state waiting to enter the <tt>synchronized</tt> statement
      *     or method.
      *     <p></li>
      * <li>an object monitor to be notified by another thread.
-     *     <br>The thread is in the {@link java.lang.Thread.State#WAITING WAITING}
-     *     or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state
+     *     <br>The thread is in the {@link Thread.State#WAITING WAITING}
+     *     or {@link Thread.State#TIMED_WAITING TIMED_WAITING} state
      *     due to a call to the {@link Object#wait Object.wait} method.
      *     <p></li>
      * <li>a synchronization object responsible for the thread parking.
-     *     <br>The thread is in the {@link java.lang.Thread.State#WAITING WAITING}
-     *     or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state
+     *     <br>The thread is in the {@link Thread.State#WAITING WAITING}
+     *     or {@link Thread.State#TIMED_WAITING TIMED_WAITING} state
      *     due to a call to the
      *     {@link java.util.concurrent.locks.LockSupport#park(Object)
      *     LockSupport.park} method.  The synchronization object

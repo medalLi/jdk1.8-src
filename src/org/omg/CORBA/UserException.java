@@ -34,7 +34,7 @@ package org.omg.CORBA;
  * @see <A href="../../../../technotes/guides/idl/jidlExceptions.html">documentation on
  * Java&nbsp;IDL exceptions</A>
  */
-public abstract class UserException extends java.lang.Exception implements org.omg.CORBA.portable.IDLEntity {
+public abstract class UserException extends Exception implements org.omg.CORBA.portable.IDLEntity {
 
     /**
      * Constructs a <code>UserException</code> object.

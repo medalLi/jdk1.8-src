@@ -50,7 +50,7 @@ public interface IOR extends List, Writeable, MakeImmutable
     * identifier id.  It is not possible to modify the list through this
     * iterator.
     */
-    Iterator iteratorById( int id ) ;
+    Iterator iteratorById(int id) ;
 
     /** Return a representation of this IOR in the standard GIOP stringified
      * format that begins with "IOR:".

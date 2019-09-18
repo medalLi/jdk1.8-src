@@ -33,7 +33,7 @@ import javax.imageio.ImageTranscoder;
  * for the <code>IIORegistry</code> class.
  *
  * @see IIORegistry
- * @see javax.imageio.ImageTranscoder
+ * @see ImageTranscoder
  *
  */
 public abstract class ImageTranscoderSpi extends IIOServiceProvider {

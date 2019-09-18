@@ -52,7 +52,7 @@ public class NotContextException extends NamingException {
      * explanation. All other fields default to null.
      *
      * @param   explanation     Possibly null additional detail about this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public NotContextException(String explanation) {
         super(explanation);

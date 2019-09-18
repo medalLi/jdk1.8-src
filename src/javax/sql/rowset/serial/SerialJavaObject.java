@@ -85,7 +85,7 @@ public class SerialJavaObject implements Serializable, Cloneable {
         Class<?> c = obj.getClass();
 
         // determine if object implements Serializable i/f
-        if (!(obj instanceof java.io.Serializable)) {
+        if (!(obj instanceof Serializable)) {
             setWarning(new RowSetWarning("Warning, the object passed to the constructor does not implement Serializable"));
         }
 
@@ -141,7 +141,7 @@ public class SerialJavaObject implements Serializable, Cloneable {
                  * Check if the caller is allowed to access the specified class's package.
                  * If access is denied, throw a SecurityException.
                  */
-                Class<?> caller = sun.reflect.Reflection.getCallerClass();
+                Class<?> caller = Reflection.getCallerClass();
                 if (ReflectUtil.needsPackageAccessCheck(caller.getClassLoader(),
                                                         c.getClassLoader())) {
                     ReflectUtil.checkPackageAccess(c);

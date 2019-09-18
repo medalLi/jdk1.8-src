@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * The <tt>Formattable</tt> interface must be implemented by any class that
  * needs to perform custom formatting using the <tt>'s'</tt> conversion
- * specifier of {@link java.util.Formatter}.  This interface allows basic
+ * specifier of {@link Formatter}.  This interface allows basic
  * control for formatting arbitrary objects.
  *
  * For example, the following class prints out different representations of a
@@ -91,7 +91,7 @@ import java.io.IOException;
  *   }
  * }
  *
- * <p> When used in conjunction with the {@link java.util.Formatter}, the above
+ * <p> When used in conjunction with the {@link Formatter}, the above
  * class produces the following output for various format strings.
  *
  * {@code

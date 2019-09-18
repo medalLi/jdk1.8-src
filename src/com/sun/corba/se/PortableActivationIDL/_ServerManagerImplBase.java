@@ -14,7 +14,7 @@ package com.sun.corba.se.PortableActivationIDL;
     * for our implementation.
     */
 public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.ObjectImpl
-                implements com.sun.corba.se.PortableActivationIDL.ServerManager, org.omg.CORBA.portable.InvokeHandler
+                implements ServerManager, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -25,22 +25,22 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("registerServer", new java.lang.Integer (0));
-    _methods.put ("serverGoingDown", new java.lang.Integer (1));
-    _methods.put ("registerORB", new java.lang.Integer (2));
-    _methods.put ("registerPOA", new java.lang.Integer (3));
-    _methods.put ("poaDestroyed", new java.lang.Integer (4));
-    _methods.put ("activate", new java.lang.Integer (5));
-    _methods.put ("shutdown", new java.lang.Integer (6));
-    _methods.put ("install", new java.lang.Integer (7));
-    _methods.put ("uninstall", new java.lang.Integer (8));
-    _methods.put ("getActiveServers", new java.lang.Integer (9));
-    _methods.put ("getORBNames", new java.lang.Integer (10));
-    _methods.put ("lookupPOATemplate", new java.lang.Integer (11));
-    _methods.put ("locateServer", new java.lang.Integer (12));
-    _methods.put ("locateServerForORB", new java.lang.Integer (13));
-    _methods.put ("getEndpoint", new java.lang.Integer (14));
-    _methods.put ("getServerPortForType", new java.lang.Integer (15));
+    _methods.put ("registerServer", new Integer (0));
+    _methods.put ("serverGoingDown", new Integer (1));
+    _methods.put ("registerORB", new Integer (2));
+    _methods.put ("registerPOA", new Integer (3));
+    _methods.put ("poaDestroyed", new Integer (4));
+    _methods.put ("activate", new Integer (5));
+    _methods.put ("shutdown", new Integer (6));
+    _methods.put ("install", new Integer (7));
+    _methods.put ("uninstall", new Integer (8));
+    _methods.put ("getActiveServers", new Integer (9));
+    _methods.put ("getORBNames", new Integer (10));
+    _methods.put ("lookupPOATemplate", new Integer (11));
+    _methods.put ("locateServer", new Integer (12));
+    _methods.put ("locateServerForORB", new Integer (13));
+    _methods.put ("getEndpoint", new Integer (14));
+    _methods.put ("getServerPortForType", new Integer (15));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -48,7 +48,7 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -61,10 +61,10 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
        {
          try {
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
-           com.sun.corba.se.PortableActivationIDL.ServerProxy serverObj = com.sun.corba.se.PortableActivationIDL.ServerProxyHelper.read (in);
+           ServerProxy serverObj = ServerProxyHelper.read (in);
            this.registerServer (serverId, serverObj);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
          }
@@ -95,17 +95,17 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
          try {
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
            String orbId = org.omg.PortableInterceptor.ORBIdHelper.read (in);
-           com.sun.corba.se.PortableActivationIDL.ORBProxy orb = com.sun.corba.se.PortableActivationIDL.ORBProxyHelper.read (in);
-           com.sun.corba.se.PortableActivationIDL.EndPointInfo endPointInfo[] = com.sun.corba.se.PortableActivationIDL.EndpointInfoListHelper.read (in);
+           ORBProxy orb = ORBProxyHelper.read (in);
+           EndPointInfo endPointInfo[] = com.sun.corba.se.PortableActivationIDL.EndpointInfoListHelper.read (in);
            this.registerORB (serverId, orbId, orb, endPointInfo);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.NoSuchEndPointHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered $ex) {
+           NoSuchEndPointHelper.write (out, $ex);
+         } catch (ORBAlreadyRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegisteredHelper.write (out, $ex);
          }
@@ -152,15 +152,15 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
            this.activate (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerAlreadyActive $ex) {
+         } catch (ServerAlreadyActive $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerAlreadyActiveHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerHeldDown $ex) {
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -174,10 +174,10 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
            this.shutdown (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotActive $ex) {
+         } catch (ServerNotActive $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerNotActiveHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+           ServerNotActiveHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
          }
@@ -194,12 +194,12 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
            this.install (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerHeldDown $ex) {
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          } catch (com.sun.corba.se.PortableActivationIDL.ServerAlreadyInstalled $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerAlreadyInstalledHelper.write (out, $ex);
@@ -218,12 +218,12 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            String serverId = org.omg.PortableInterceptor.ServerIdHelper.read (in);
            this.uninstall (serverId);
            out = $rh.createReply();
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerHeldDown $ex) {
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          } catch (com.sun.corba.se.PortableActivationIDL.ServerAlreadyUninstalled $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerAlreadyUninstalledHelper.write (out, $ex);
@@ -239,7 +239,7 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
          String $result[] = null;
          $result = this.getActiveServers ();
          out = $rh.createReply();
-         com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.write (out, $result);
+         ServerIdsHelper.write (out, $result);
          break;
        }
 
@@ -253,8 +253,8 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            String $result[] = null;
            $result = this.getORBNames (serverId);
            out = $rh.createReply();
-           com.sun.corba.se.PortableActivationIDL.ORBidListHelper.write (out, $result);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+           ORBidListHelper.write (out, $result);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
          }
@@ -291,15 +291,15 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            $result = this.locateServer (serverId, endPoint);
            out = $rh.createReply();
            com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerTypeHelper.write (out, $result);
-         } catch (com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.NoSuchEndPointHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+           NoSuchEndPointHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerHeldDown $ex) {
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -318,15 +318,15 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            $result = this.locateServerForORB (serverId, orbId);
            out = $rh.createReply();
            com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORBHelper.write (out, $result);
-         } catch (com.sun.corba.se.PortableActivationIDL.InvalidORBid $ex) {
+         } catch (InvalidORBid $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.InvalidORBidHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerNotRegistered $ex) {
+           InvalidORBidHelper.write (out, $ex);
+         } catch (ServerNotRegistered $ex) {
            out = $rh.createExceptionReply ();
            com.sun.corba.se.PortableActivationIDL.ServerNotRegisteredHelper.write (out, $ex);
-         } catch (com.sun.corba.se.PortableActivationIDL.ServerHeldDown $ex) {
+         } catch (ServerHeldDown $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.ServerHeldDownHelper.write (out, $ex);
+           ServerHeldDownHelper.write (out, $ex);
          }
          break;
        }
@@ -342,9 +342,9 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            $result = this.getEndpoint (endPointType);
            out = $rh.createReply();
            out.write_long ($result);
-         } catch (com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.NoSuchEndPointHelper.write (out, $ex);
+           NoSuchEndPointHelper.write (out, $ex);
          }
          break;
        }
@@ -362,9 +362,9 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
            $result = this.getServerPortForType (location, endPointType);
            out = $rh.createReply();
            out.write_long ($result);
-         } catch (com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint $ex) {
+         } catch (NoSuchEndPoint $ex) {
            out = $rh.createExceptionReply ();
-           com.sun.corba.se.PortableActivationIDL.NoSuchEndPointHelper.write (out, $ex);
+           NoSuchEndPointHelper.write (out, $ex);
          }
          break;
        }

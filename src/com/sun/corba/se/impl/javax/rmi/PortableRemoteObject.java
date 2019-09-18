@@ -142,7 +142,7 @@ public class PortableRemoteObject
         }
 
         // If the class is already a JRMP stub then return it.
-        if (obj instanceof java.rmi.server.RemoteStub) {
+        if (obj instanceof RemoteStub) {
             return obj;
         }
 
@@ -179,7 +179,7 @@ public class PortableRemoteObject
         }
 
         if (StubAdapter.isStub(obj) ||
-            obj instanceof java.rmi.server.RemoteStub) {
+            obj instanceof RemoteStub) {
             throw new NoSuchObjectException(
                 "Can only unexport a server object.");
         }
@@ -204,10 +204,10 @@ public class PortableRemoteObject
      * @return an object which can be cast to the desired type.
      * @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
      */
-    public java.lang.Object narrow ( java.lang.Object narrowFrom,
-        java.lang.Class narrowTo) throws ClassCastException
+    public Object narrow ( Object narrowFrom,
+        Class narrowTo) throws ClassCastException
     {
-        java.lang.Object result = null;
+        Object result = null;
 
         if (narrowFrom == null)
             return null;

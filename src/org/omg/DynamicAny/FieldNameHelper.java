@@ -31,7 +31,7 @@ abstract public class FieldNameHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.DynamicAny.FieldNameHelper.id (), "FieldName", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (FieldNameHelper.id (), "FieldName", __typeCode);
     }
     return __typeCode;
   }

@@ -56,7 +56,7 @@ import java.awt.ItemSelectable;
  *
  * @author Carl Quinn
  *
- * @see java.awt.ItemSelectable
+ * @see ItemSelectable
  * @see ItemListener
  * @see <a href="http://docs.oracle.com/javase/tutorial/uiswing/events/itemlistener.html">Tutorial: Writing an Item Listener</a>
  *

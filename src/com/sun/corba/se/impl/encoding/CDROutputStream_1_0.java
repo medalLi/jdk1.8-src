@@ -607,7 +607,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         tci.write_value((org.omg.CORBA_2_3.portable.OutputStream)parent);
     }
 
-    public void write_Object(org.omg.CORBA.Object ref)
+    public void write_Object(Object ref)
     {
         if (ref == null) {
             IOR nullIOR = IORFactories.makeIOR( orb ) ;
@@ -628,15 +628,15 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
 
     public void write_abstract_interface(java.lang.Object obj) {
         boolean corbaObject = false; // Assume value type.
-        org.omg.CORBA.Object theObject = null;
+        Object theObject = null;
 
         // Is it a CORBA.Object?
 
-        if (obj != null && obj instanceof org.omg.CORBA.Object) {
+        if (obj != null && obj instanceof Object) {
 
             // Yes.
 
-            theObject = (org.omg.CORBA.Object)obj;
+            theObject = (Object)obj;
             corbaObject = true;
         }
 
@@ -650,9 +650,9 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
             write_Object(theObject);
         } else {
             try {
-                write_value((java.io.Serializable)obj);
+                write_value((Serializable)obj);
             } catch(ClassCastException cce) {
-                if (obj instanceof java.io.Serializable)
+                if (obj instanceof Serializable)
                     throw cce;
                 else
                     ORBUtility.throwNotSerializableForCorba(obj.getClass().getName());
@@ -728,7 +728,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         writeEndTag(mustChunk);
     }
 
-    private void writeValueBase(org.omg.CORBA.portable.ValueBase object,
+    private void writeValueBase(ValueBase object,
                                 Class clazz) {
         // _REVISIT_ could check to see whether chunking really needed
         mustChunk = true;
@@ -842,14 +842,14 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         if (clazz.isArray()) {
             // Handle arrays
             writeArray(object, clazz);
-        } else if (object instanceof org.omg.CORBA.portable.ValueBase) {
+        } else if (object instanceof ValueBase) {
             // Handle IDL Value types
-            writeValueBase((org.omg.CORBA.portable.ValueBase)object, clazz);
+            writeValueBase((ValueBase)object, clazz);
         } else if (shouldWriteAsIDLEntity(object)) {
             writeIDLEntity((IDLEntity)object);
-        } else if (object instanceof java.lang.String) {
+        } else if (object instanceof String) {
             writeWStringValue((String)object);
-        } else if (object instanceof java.lang.Class) {
+        } else if (object instanceof Class) {
             writeClass(repository_id, (Class)object);
         } else {
             // RMI-IIOP value type
@@ -870,7 +870,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         write_value(object, (String)null);
     }
 
-    public void write_value(Serializable object, org.omg.CORBA.portable.BoxedValueHelper factory)
+    public void write_value(Serializable object, BoxedValueHelper factory)
     {
         // Handle null references
         if (object == null) {
@@ -1199,7 +1199,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
             write_wstring(value[offset + i]);
     }
 
-    public final void write_any_array(org.omg.CORBA.Any value[], int offset, int length)
+    public final void write_any_array(Any value[], int offset, int length)
     {
         for(int i = 0; i < length; i++)
             write_any(value[offset + i]);
@@ -1210,7 +1210,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
     //
 
     public void writeTo(java.io.OutputStream s)
-        throws java.io.IOException
+        throws IOException
     {
         byte[] tmpBuf = null;
 
@@ -1231,7 +1231,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         s.write(tmpBuf, 0, bbwi.position());
     }
 
-    public void writeOctetSequenceTo(org.omg.CORBA.portable.OutputStream s) {
+    public void writeOctetSequenceTo(OutputStream s) {
 
         byte[] buf = null;
 
@@ -1520,7 +1520,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
     private boolean shouldWriteAsIDLEntity(Serializable object)
     {
         return ((object instanceof IDLEntity) && (!(object instanceof ValueBase)) &&
-                (!(object instanceof org.omg.CORBA.Object)));
+                (!(object instanceof Object)));
 
     }
 
@@ -1550,7 +1550,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
             ClassLoader clazzLoader = (clazz == null ? null : clazz.getClassLoader());
             final Class helperClass = Utility.loadClassForClass(clazz.getName()+"Helper", codebase,
                                                    clazzLoader, clazz, clazzLoader);
-            final Class argTypes[] = {org.omg.CORBA.portable.OutputStream.class, clazz};
+            final Class argTypes[] = {OutputStream.class, clazz};
             // getDeclaredMethod requires RuntimePermission accessDeclaredMembers
             // if a different class loader is used (even though the javadoc says otherwise)
             Method writeMethod = null;
@@ -1589,7 +1589,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
         write_abstract_interface(value);
     }
 
-    public void write_Value (java.io.Serializable value) {
+    public void write_Value (Serializable value) {
         write_value(value);
     }
 
@@ -1598,7 +1598,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
     //
     // Pads the string representation of bigDecimal with zeros to fit the given
     // digits and scale before it gets written to the stream.
-    public void write_fixed(java.math.BigDecimal bigDecimal, short digits, short scale) {
+    public void write_fixed(BigDecimal bigDecimal, short digits, short scale) {
         String string = bigDecimal.toString();
         String integerPart;
         String fractionPart;
@@ -1643,7 +1643,7 @@ public class CDROutputStream_1_0 extends CDROutputStreamBase
 
     // This method should be remove by the java-rtf issue.
     // Right now the scale and digits information of the type code is lost.
-    public void write_fixed(java.math.BigDecimal bigDecimal) {
+    public void write_fixed(BigDecimal bigDecimal) {
         // This string might contain sign and/or dot
         this.write_fixed(bigDecimal.toString(), bigDecimal.signum());
     }

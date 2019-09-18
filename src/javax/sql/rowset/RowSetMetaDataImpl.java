@@ -97,7 +97,7 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
      */
     private void checkColType(int SQLType) throws SQLException {
         try {
-            Class<?> c = java.sql.Types.class;
+            Class<?> c = Types.class;
             Field[] publicFields = c.getFields();
             int fieldValue = 0;
             for (int i = 0; i < publicFields.length; i++) {
@@ -449,7 +449,7 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
      *         the given column number is out of bounds, or the column type
      *         specified is not one of the constants in
      *         <code>java.sql.Types</code>
-     * @see java.sql.Types
+     * @see Types
      */
     public void setColumnType(int columnIndex, int SQLType) throws SQLException {
         // examine java.sql.Type reflectively, loop on the fields and check
@@ -733,7 +733,7 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
      * stored in the designated column
      * @throws SQLException if a database access error occurs
      * or the given column number is out of bounds
-     * @see java.sql.Types
+     * @see Types
      */
     public int getColumnType(int columnIndex) throws SQLException {
         checkColRange(columnIndex);
@@ -839,32 +839,32 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
             break;
 
         case Types.BIT:
-            className = java.lang.Boolean.class.getName();
+            className = Boolean.class.getName();
             break;
 
         case Types.TINYINT:
-            className = java.lang.Byte.class.getName();
+            className = Byte.class.getName();
             break;
 
         case Types.SMALLINT:
-            className = java.lang.Short.class.getName();
+            className = Short.class.getName();
             break;
 
         case Types.INTEGER:
-            className = java.lang.Integer.class.getName();
+            className = Integer.class.getName();
             break;
 
         case Types.BIGINT:
-            className = java.lang.Long.class.getName();
+            className = Long.class.getName();
             break;
 
         case Types.REAL:
-            className = java.lang.Float.class.getName();
+            className = Float.class.getName();
             break;
 
         case Types.FLOAT:
         case Types.DOUBLE:
-            className = java.lang.Double.class.getName();
+            className = Double.class.getName();
             break;
 
         case Types.BINARY:
@@ -874,23 +874,23 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
             break;
 
         case Types.DATE:
-            className = java.sql.Date.class.getName();
+            className = Date.class.getName();
             break;
 
         case Types.TIME:
-            className = java.sql.Time.class.getName();
+            className = Time.class.getName();
             break;
 
         case Types.TIMESTAMP:
-            className = java.sql.Timestamp.class.getName();
+            className = Timestamp.class.getName();
             break;
 
         case Types.BLOB:
-            className = java.sql.Blob.class.getName();
+            className = Blob.class.getName();
             break;
 
         case Types.CLOB:
-            className = java.sql.Clob.class.getName();
+            className = Clob.class.getName();
             break;
         }
 
@@ -908,10 +908,10 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
      *
      * @param iface A Class defining an interface that the result must implement.
      * @return an object that implements the interface. May be a proxy for the actual implementing object.
-     * @throws java.sql.SQLException If no object found that implements the interface
+     * @throws SQLException If no object found that implements the interface
      * @since 1.6
      */
-    public <T> T unwrap(java.lang.Class<T> iface) throws java.sql.SQLException {
+    public <T> T unwrap(Class<T> iface) throws SQLException {
 
         if(isWrapperFor(iface)) {
             return iface.cast(this);
@@ -931,7 +931,7 @@ public class RowSetMetaDataImpl implements RowSetMetaData,  Serializable {
      *
      * @param interfaces a Class defining an interface.
      * @return true if this implements the interface or directly or indirectly wraps an object that does.
-     * @throws java.sql.SQLException  if an error occurs while determining whether this is a wrapper
+     * @throws SQLException  if an error occurs while determining whether this is a wrapper
      * for an object with the given interface.
      * @since 1.6
      */

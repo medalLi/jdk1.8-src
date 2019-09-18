@@ -267,7 +267,7 @@ public interface Collector<T, A, R> {
         Objects.requireNonNull(characteristics);
         Set<Characteristics> cs = (characteristics.length == 0)
                                   ? Collectors.CH_ID
-                                  : Collections.unmodifiableSet(EnumSet.of(Collector.Characteristics.IDENTITY_FINISH,
+                                  : Collections.unmodifiableSet(EnumSet.of(Characteristics.IDENTITY_FINISH,
                                                                            characteristics));
         return new Collectors.CollectorImpl<>(supplier, accumulator, combiner, cs);
     }

@@ -145,8 +145,8 @@ public abstract class AbstractBorder implements Border, Serializable
      * @return the baseline or &lt; 0 indicating there is no reasonable
      *         baseline
      * @throws IllegalArgumentException if width or height is &lt; 0
-     * @see java.awt.Component#getBaseline(int,int)
-     * @see java.awt.Component#getBaselineResizeBehavior()
+     * @see Component#getBaseline(int,int)
+     * @see Component#getBaselineResizeBehavior()
      * @since 1.6
      */
     public int getBaseline(Component c, int width, int height) {
@@ -176,8 +176,8 @@ public abstract class AbstractBorder implements Border, Serializable
      * @param c <code>Component</code> to return baseline resize behavior for
      * @return an enum indicating how the baseline changes as the border is
      *         resized
-     * @see java.awt.Component#getBaseline(int,int)
-     * @see java.awt.Component#getBaselineResizeBehavior()
+     * @see Component#getBaseline(int,int)
+     * @see Component#getBaselineResizeBehavior()
      * @since 1.6
      */
     public Component.BaselineResizeBehavior getBaselineResizeBehavior(

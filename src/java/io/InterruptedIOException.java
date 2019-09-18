@@ -34,9 +34,9 @@ package java.io;
  * the interruption occurred.
  *
  * @author  unascribed
- * @see     java.io.InputStream
- * @see     java.io.OutputStream
- * @see     java.lang.Thread#interrupt()
+ * @see     InputStream
+ * @see     OutputStream
+ * @see     Thread#interrupt()
  * @since   JDK1.0
  */
 public
@@ -55,7 +55,7 @@ class InterruptedIOException extends IOException {
      * Constructs an <code>InterruptedIOException</code> with the
      * specified detail message. The string <code>s</code> can be
      * retrieved later by the
-     * <code>{@link java.lang.Throwable#getMessage}</code>
+     * <code>{@link Throwable#getMessage}</code>
      * method of class <code>java.lang.Throwable</code>.
      *
      * @param   s   the detail message.

@@ -42,7 +42,7 @@ import java.security.spec.InvalidParameterSpecException;
  *
  *
  * @see AlgorithmParameters
- * @see java.security.spec.AlgorithmParameterSpec
+ * @see AlgorithmParameterSpec
  * @see java.security.spec.DSAParameterSpec
  *
  * @since 1.2

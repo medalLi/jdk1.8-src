@@ -76,7 +76,7 @@ import java.io.IOException;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @beaninfo
  *   attribute: isContainer false
@@ -282,7 +282,7 @@ public class JRadioButton extends JToggleButton implements Accessible {
      * the same version of Swing.  As of 1.4, support for long term storage
      * of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package.
-     * Please see {@link java.beans.XMLEncoder}.
+     * Please see {@link XMLEncoder}.
      */
     protected class AccessibleJRadioButton extends AccessibleJToggleButton {
 

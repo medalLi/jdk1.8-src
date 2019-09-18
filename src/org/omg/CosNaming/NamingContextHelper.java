@@ -22,7 +22,7 @@ abstract public class NamingContextHelper
 {
   private static String  _id = "IDL:omg.org/CosNaming/NamingContext:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CosNaming.NamingContext that)
+  public static void insert (org.omg.CORBA.Any a, NamingContext that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -30,7 +30,7 @@ abstract public class NamingContextHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CosNaming.NamingContext extract (org.omg.CORBA.Any a)
+  public static NamingContext extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -40,7 +40,7 @@ abstract public class NamingContextHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.CosNaming.NamingContextHelper.id (), "NamingContext");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (NamingContextHelper.id (), "NamingContext");
     }
     return __typeCode;
   }
@@ -50,43 +50,43 @@ abstract public class NamingContextHelper
     return _id;
   }
 
-  public static org.omg.CosNaming.NamingContext read (org.omg.CORBA.portable.InputStream istream)
+  public static NamingContext read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_NamingContextStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CosNaming.NamingContext value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, NamingContext value)
   {
     ostream.write_Object ((org.omg.CORBA.Object) value);
   }
 
-  public static org.omg.CosNaming.NamingContext narrow (org.omg.CORBA.Object obj)
+  public static NamingContext narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.CosNaming.NamingContext)
-      return (org.omg.CosNaming.NamingContext)obj;
+    else if (obj instanceof NamingContext)
+      return (NamingContext)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.CosNaming._NamingContextStub stub = new org.omg.CosNaming._NamingContextStub ();
+      _NamingContextStub stub = new _NamingContextStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static org.omg.CosNaming.NamingContext unchecked_narrow (org.omg.CORBA.Object obj)
+  public static NamingContext unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.CosNaming.NamingContext)
-      return (org.omg.CosNaming.NamingContext)obj;
+    else if (obj instanceof NamingContext)
+      return (NamingContext)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.CosNaming._NamingContextStub stub = new org.omg.CosNaming._NamingContextStub ();
+      _NamingContextStub stub = new _NamingContextStub ();
       stub._set_delegate(delegate);
       return stub;
     }

@@ -60,7 +60,7 @@ public interface Mixer extends Line {
      * Obtains information about this mixer, including the product's name,
      * version, vendor, etc.
      * @return a mixer info object that describes this mixer
-     * @see Mixer.Info
+     * @see Info
      */
     public Info getMixerInfo();
 

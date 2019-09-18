@@ -41,7 +41,7 @@ package org.xml.sax;
  * </blockquote>
  *
  * <p>This was the main event-handling interface for SAX1; in
- * SAX2, it has been replaced by {@link org.xml.sax.ContentHandler
+ * SAX2, it has been replaced by {@link ContentHandler
  * ContentHandler}, which provides Namespace support and reporting
  * of skipped entities.  This interface is included in SAX2 only
  * to support legacy SAX1 applications.</p>
@@ -60,13 +60,13 @@ package org.xml.sax;
  * supplied by the Parser through the setDocumentLocator method.</p>
  *
  * @deprecated This interface has been replaced by the SAX2
- *             {@link org.xml.sax.ContentHandler ContentHandler}
+ *             {@link ContentHandler ContentHandler}
  *             interface, which includes Namespace support.
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.Parser#setDocumentHandler
- * @see org.xml.sax.Locator
- * @see org.xml.sax.HandlerBase
+ * @see Parser#setDocumentHandler
+ * @see Locator
+ * @see HandlerBase
  */
 public interface DocumentHandler {
 
@@ -94,9 +94,9 @@ public interface DocumentHandler {
      *
      * @param locator An object that can return the location of
      *                any SAX document event.
-     * @see org.xml.sax.Locator
+     * @see Locator
      */
-    public abstract void setDocumentLocator (Locator locator);
+    public abstract void setDocumentLocator(Locator locator);
 
 
     /**
@@ -106,10 +106,10 @@ public interface DocumentHandler {
      * other methods in this interface or in DTDHandler (except for
      * setDocumentLocator).</p>
      *
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      */
-    public abstract void startDocument ()
+    public abstract void startDocument()
         throws SAXException;
 
 
@@ -122,10 +122,10 @@ public interface DocumentHandler {
      * (because of an unrecoverable error) or reached the end of
      * input.</p>
      *
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      */
-    public abstract void endDocument ()
+    public abstract void endDocument()
         throws SAXException;
 
 
@@ -146,12 +146,12 @@ public interface DocumentHandler {
      *
      * @param name The element type name.
      * @param atts The attributes attached to the element, if any.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @see #endElement
-     * @see org.xml.sax.AttributeList
+     * @see AttributeList
      */
-    public abstract void startElement (String name, AttributeList atts)
+    public abstract void startElement(String name, AttributeList atts)
         throws SAXException;
 
 
@@ -167,10 +167,10 @@ public interface DocumentHandler {
      * still be attached to the name.</p>
      *
      * @param name The element type name
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      */
-    public abstract void endElement (String name)
+    public abstract void endElement(String name)
         throws SAXException;
 
 
@@ -194,12 +194,12 @@ public interface DocumentHandler {
      * @param ch The characters from the XML document.
      * @param start The start position in the array.
      * @param length The number of characters to read from the array.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @see #ignorableWhitespace
-     * @see org.xml.sax.Locator
+     * @see Locator
      */
-    public abstract void characters (char ch[], int start, int length)
+    public abstract void characters(char ch[], int start, int length)
         throws SAXException;
 
 
@@ -223,11 +223,11 @@ public interface DocumentHandler {
      * @param ch The characters from the XML document.
      * @param start The start position in the array.
      * @param length The number of characters to read from the array.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @see #characters
      */
-    public abstract void ignorableWhitespace (char ch[], int start, int length)
+    public abstract void ignorableWhitespace(char ch[], int start, int length)
         throws SAXException;
 
 
@@ -245,10 +245,10 @@ public interface DocumentHandler {
      * @param target The processing instruction target.
      * @param data The processing instruction data, or null if
      *        none was supplied.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception SAXException Any SAX exception, possibly
      *            wrapping another exception.
      */
-    public abstract void processingInstruction (String target, String data)
+    public abstract void processingInstruction(String target, String data)
         throws SAXException;
 
 }

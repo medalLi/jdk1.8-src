@@ -639,7 +639,7 @@ public class GroupLayout implements LayoutManager2 {
      * axis. A {@code ParallelGroup} created with a baseline alignment
      * along the horizontal axis is treated as {@code LEADING}.
      * <p>
-     * Refer to {@link GroupLayout.ParallelGroup ParallelGroup} for details on
+     * Refer to {@link ParallelGroup ParallelGroup} for details on
      * the behavior of baseline groups.
      *
      * @param alignment the alignment for the elements of the group
@@ -649,7 +649,7 @@ public class GroupLayout implements LayoutManager2 {
      * @throws IllegalArgumentException if {@code alignment} is {@code null}
      * @return a new {@code ParallelGroup}
      * @see #createBaselineGroup
-     * @see GroupLayout.ParallelGroup
+     * @see ParallelGroup
      */
     public ParallelGroup createParallelGroup(Alignment alignment,
             boolean resizable){
@@ -851,7 +851,7 @@ public class GroupLayout implements LayoutManager2 {
      * {@code Container}.
      *
      * @param component the component to be removed
-     * @see java.awt.Component#remove
+     * @see Component#remove
      */
     public void removeLayoutComponent(Component component) {
         ComponentInfo info = componentInfos.remove(component);
@@ -871,7 +871,7 @@ public class GroupLayout implements LayoutManager2 {
      *         the same {@code Container} this was created with
      * @throws IllegalStateException if any of the components added to
      *         this layout are not in both a horizontal and vertical group
-     * @see java.awt.Container#getPreferredSize
+     * @see Container#getPreferredSize
      */
     public Dimension preferredLayoutSize(Container parent) {
         checkParent(parent);
@@ -889,7 +889,7 @@ public class GroupLayout implements LayoutManager2 {
      *         the same {@code Container} that this was created with
      * @throws IllegalStateException if any of the components added to
      *         this layout are not in both a horizontal and vertical group
-     * @see java.awt.Container#getMinimumSize
+     * @see Container#getMinimumSize
      */
     public Dimension minimumLayoutSize(Container parent) {
         checkParent(parent);
@@ -953,7 +953,7 @@ public class GroupLayout implements LayoutManager2 {
      *         the same {@code Container} that this was created with
      * @throws IllegalStateException if any of the components added to
      *         this layout are not in both a horizontal and vertical group
-     * @see java.awt.Container#getMaximumSize
+     * @see Container#getMaximumSize
      */
     public Dimension maximumLayoutSize(Container parent) {
         checkParent(parent);
@@ -2384,9 +2384,9 @@ public class GroupLayout implements LayoutManager2 {
      * baseline can be a constant distance. The possible choices
      * correspond to the {@code BaselineResizeBehavior} constants
      * {@link
-     * java.awt.Component.BaselineResizeBehavior#CONSTANT_ASCENT CONSTANT_ASCENT} and
+     * BaselineResizeBehavior#CONSTANT_ASCENT CONSTANT_ASCENT} and
      * {@link
-     * java.awt.Component.BaselineResizeBehavior#CONSTANT_DESCENT CONSTANT_DESCENT}.
+     * BaselineResizeBehavior#CONSTANT_DESCENT CONSTANT_DESCENT}.
      * <p>
      * The baseline anchor may be explicitly specified by the
      * {@code createBaselineGroup} method, or determined based on the elements.

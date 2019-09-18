@@ -59,7 +59,7 @@ public interface PortableRemoteObjectDelegate {
     /**
      * Delegation call for {@link javax.rmi.PortableRemoteObject#toStub}.
      */
-    Remote toStub (Remote obj)
+    Remote toStub(Remote obj)
         throws NoSuchObjectException;
 
     /**
@@ -71,14 +71,14 @@ public interface PortableRemoteObjectDelegate {
     /**
      * Delegation call for {@link javax.rmi.PortableRemoteObject#narrow}.
      */
-    java.lang.Object narrow (java.lang.Object narrowFrom,
-                                    java.lang.Class narrowTo)
+    Object narrow(Object narrowFrom,
+                  Class narrowTo)
         throws ClassCastException;
 
     /**
      * Delegation call for {@link javax.rmi.PortableRemoteObject#connect}.
      */
-    void connect (Remote target, Remote source)
+    void connect(Remote target, Remote source)
         throws RemoteException;
 
 }

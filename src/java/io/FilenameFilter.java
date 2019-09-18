@@ -34,9 +34,9 @@ package java.io;
  *
  * @author  Arthur van Hoff
  * @author  Jonathan Payne
- * @see     java.awt.FileDialog#setFilenameFilter(java.io.FilenameFilter)
- * @see     java.io.File
- * @see     java.io.File#list(java.io.FilenameFilter)
+ * @see     java.awt.FileDialog#setFilenameFilter(FilenameFilter)
+ * @see     File
+ * @see     File#list(FilenameFilter)
  * @since   JDK1.0
  */
 @FunctionalInterface

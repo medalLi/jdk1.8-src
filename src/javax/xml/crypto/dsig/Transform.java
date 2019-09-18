@@ -143,6 +143,6 @@ public interface Transform extends XMLStructure, AlgorithmMethod {
      *    transform
      */
     public abstract Data transform
-        (Data data, XMLCryptoContext context, OutputStream os)
+    (Data data, XMLCryptoContext context, OutputStream os)
         throws TransformException;
 }

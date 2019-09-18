@@ -79,13 +79,13 @@ import java.util.Set;
  * <p>This class supports two different programming interfaces to
  * represent Unicode ranges for script-specific digits: bit
  * mask-based ones, such as {@link #ARABIC NumericShaper.ARABIC}, and
- * enum-based ones, such as {@link NumericShaper.Range#ARABIC}.
+ * enum-based ones, such as {@link Range#ARABIC}.
  * Multiple ranges can be specified by ORing bit mask-based constants,
  * such as:
  * <blockquote><pre>
  * NumericShaper.ARABIC | NumericShaper.TAMIL
  * </pre></blockquote>
- * or creating a {@code Set} with the {@link NumericShaper.Range}
+ * or creating a {@code Set} with the {@link Range}
  * constants, such as:
  * <blockquote><pre>
  * EnumSet.of(NumericShaper.Scirpt.ARABIC, NumericShaper.Range.TAMIL)
@@ -118,15 +118,15 @@ import java.util.Set;
  *       <td>{@link NumericShaper#EASTERN_ARABIC NumericShaper.EASTERN_ARABIC}</td>
  *    </tr>
  *    <tr>
- *       <td>{@link NumericShaper.Range#ARABIC}<br>
- *           {@link NumericShaper.Range#EASTERN_ARABIC}</td>
- *       <td>{@link NumericShaper.Range#EASTERN_ARABIC}</td>
+ *       <td>{@link Range#ARABIC}<br>
+ *           {@link Range#EASTERN_ARABIC}</td>
+ *       <td>{@link Range#EASTERN_ARABIC}</td>
  *    </tr>
  *    <tr>
  *       <td>Tai Tham</td>
- *       <td>{@link NumericShaper.Range#TAI_THAM_HORA}<br>
- *           {@link NumericShaper.Range#TAI_THAM_THAM}</td>
- *       <td>{@link NumericShaper.Range#TAI_THAM_THAM}</td>
+ *       <td>{@link Range#TAI_THAM_HORA}<br>
+ *           {@link Range#TAI_THAM_THAM}</td>
+ *       <td>{@link Range#TAI_THAM_THAM}</td>
  *    </tr>
  * </table>
  *
@@ -137,7 +137,7 @@ public final class NumericShaper implements java.io.Serializable {
     /**
      * A {@code NumericShaper.Range} represents a Unicode range of a
      * script having its own decimal digits. For example, the {@link
-     * NumericShaper.Range#THAI} range has the Thai digits, THAI DIGIT
+     * Range#THAI} range has the Thai digits, THAI DIGIT
      * ZERO (U+0E50) to THAI DIGIT NINE (U+0E59).
      *
      * <p>The <code>Range</code> enum replaces the traditional bit
@@ -951,7 +951,7 @@ public final class NumericShaper implements java.io.Serializable {
      * corresponding decimal digits of the specified Unicode range.
      *
      * @param singleRange the Unicode range given by a {@link
-     *                    NumericShaper.Range} constant.
+     *                    Range} constant.
      * @return a non-contextual {@code NumericShaper}.
      * @throws NullPointerException if {@code singleRange} is {@code null}
      * @since 1.7
@@ -1340,7 +1340,7 @@ public final class NumericShaper implements java.io.Serializable {
     /**
      * Returns a hash code for this shaper.
      * @return this shaper's hash code.
-     * @see java.lang.Object#hashCode
+     * @see Object#hashCode
      */
     public int hashCode() {
         int hash = mask;
@@ -1370,7 +1370,7 @@ public final class NumericShaper implements java.io.Serializable {
      * @return <code>true</code> if <code>o</code> is an instance
      *         of <code>NumericShaper</code> and shapes in the same way;
      *         <code>false</code> otherwise.
-     * @see java.lang.Object#equals(java.lang.Object)
+     * @see Object#equals(Object)
      */
     public boolean equals(Object o) {
         if (o != null) {

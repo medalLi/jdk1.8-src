@@ -46,7 +46,7 @@ import java.security.spec.AlgorithmParameterSpec;
  *
  *
  * @see KeyPairGenerator
- * @see java.security.spec.AlgorithmParameterSpec
+ * @see AlgorithmParameterSpec
  */
 
 public abstract class KeyPairGeneratorSpi {

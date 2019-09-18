@@ -41,7 +41,7 @@ public interface MutableComboBoxModel<E> extends ComboBoxModel<E> {
      *
      * @param item the item to be added
      */
-    public void addElement( E item );
+    public void addElement(E item);
 
     /**
      * Removes an item from the model. The implementation of this method should
@@ -50,7 +50,7 @@ public interface MutableComboBoxModel<E> extends ComboBoxModel<E> {
      *
      * @param obj the <code>Object</code> to be removed
      */
-    public void removeElement( Object obj );
+    public void removeElement(Object obj);
 
     /**
      * Adds an item at a specific index.  The implementation of this method
@@ -60,7 +60,7 @@ public interface MutableComboBoxModel<E> extends ComboBoxModel<E> {
      * @param item  the item to be added
      * @param index  location to add the object
      */
-    public void insertElementAt( E item, int index );
+    public void insertElementAt(E item, int index);
 
     /**
      * Removes an item at a specific index. The implementation of this method
@@ -69,5 +69,5 @@ public interface MutableComboBoxModel<E> extends ComboBoxModel<E> {
      *
      * @param index  location of the item to be removed
      */
-    public void removeElementAt( int index );
+    public void removeElementAt(int index);
 }

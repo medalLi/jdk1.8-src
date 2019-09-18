@@ -50,7 +50,7 @@ public abstract class NamingSecurityException extends NamingException {
      * explanation supplied. All other fields default to null.
      *
      * @param   explanation     Possibly null additional detail about this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public NamingSecurityException(String explanation) {
         super(explanation);

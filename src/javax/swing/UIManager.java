@@ -101,7 +101,7 @@ import sun.awt.AWTAccessor;
  *   <li>If the system property <code>swing.defaultlaf</code> is
  *       {@code non-null}, use its value as the default look and feel class
  *       name.
- *   <li>If the {@link java.util.Properties} file <code>swing.properties</code>
+ *   <li>If the {@link Properties} file <code>swing.properties</code>
  *       exists and contains the key <code>swing.defaultlaf</code>,
  *       use its value as the default look and feel class name. The location
  *       that is checked for <code>swing.properties</code> may vary depending
@@ -1225,7 +1225,7 @@ public class UIManager implements Serializable
         else {
             final Properties props = new Properties();
 
-            java.security.AccessController.doPrivileged(
+            AccessController.doPrivileged(
                 new java.security.PrivilegedAction<Object>() {
                 public Object run() {
                     OSInfo.OSType osType = AccessController.doPrivileged(OSInfo.getOSTypeAction());

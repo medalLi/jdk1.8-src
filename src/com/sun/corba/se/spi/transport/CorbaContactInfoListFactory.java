@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.transport ;
+package com.sun.corba.se.spi.transport;
 
 import com.sun.corba.se.spi.transport.CorbaContactInfoList ;
 
@@ -46,5 +46,5 @@ public interface CorbaContactInfoListFactory {
      */
     public void setORB(ORB orb);
 
-    public CorbaContactInfoList create( IOR ior ) ;
+    public CorbaContactInfoList create(IOR ior) ;
 }

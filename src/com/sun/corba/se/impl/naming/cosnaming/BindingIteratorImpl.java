@@ -64,10 +64,10 @@ public abstract class BindingIteratorImpl extends BindingIteratorPOA
      * Create a binding iterator servant.
      * runs the super constructor.
      * @param orb an ORB object.
-     * @exception java.lang.Exception a Java exception.
+     * @exception Exception a Java exception.
      */
     public BindingIteratorImpl(ORB orb)
-        throws java.lang.Exception
+        throws Exception
     {
         super();
         this.orb = orb ;
@@ -82,7 +82,7 @@ public abstract class BindingIteratorImpl extends BindingIteratorPOA
      * system exceptions.
      * @see NextOne
      */
-    public synchronized boolean next_one(org.omg.CosNaming.BindingHolder b)
+    public synchronized boolean next_one(BindingHolder b)
     {
         // NextOne actually returns the next one
         return NextOne(b);
@@ -99,7 +99,7 @@ public abstract class BindingIteratorImpl extends BindingIteratorPOA
      * @see NextOne
      */
     public synchronized boolean next_n(int how_many,
-        org.omg.CosNaming.BindingListHolder blh)
+        BindingListHolder blh)
     {
         if( how_many == 0 ) {
             throw new BAD_PARAM( " 'how_many' parameter is set to 0 which is" +
@@ -117,7 +117,7 @@ public abstract class BindingIteratorImpl extends BindingIteratorPOA
      * @param bl The BindingList as an out parameter.
      * @return true if there were more bindings.
      */
-    public boolean list( int how_many, org.omg.CosNaming.BindingListHolder blh)
+    public boolean list( int how_many, BindingListHolder blh)
     {
         // Take the smallest of what's left and what's being asked for
         int numberToGet = Math.min(RemainingElements(),how_many);
@@ -168,7 +168,7 @@ public abstract class BindingIteratorImpl extends BindingIteratorPOA
      * @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
      * system exceptions.
      */
-    protected abstract boolean NextOne(org.omg.CosNaming.BindingHolder b);
+    protected abstract boolean NextOne(BindingHolder b);
 
     /**
      * Abstract method for destroying this BindingIterator.

@@ -550,7 +550,7 @@ public class Krb5LoginModule implements LoginModule {
                 if (debug) {
                     System.out.println("Refreshing Kerberos configuration");
                 }
-                sun.security.krb5.Config.refresh();
+                Config.refresh();
             } catch (KrbException ke) {
                 LoginException le = new LoginException(ke.getMessage());
                 le.initCause(ke);
@@ -861,7 +861,7 @@ public class Krb5LoginModule implements LoginModule {
                     username = defUsername;
                 krb5PrincName.insert(0, username);
 
-            } catch (java.io.IOException ioe) {
+            } catch (IOException ioe) {
                 throw new LoginException(ioe.getMessage());
             } catch (UnsupportedCallbackException uce) {
                 throw new LoginException
@@ -934,7 +934,7 @@ public class Krb5LoginModule implements LoginModule {
                                        krb5PrincName);
                     System.out.println();
                 }
-            } catch (java.io.IOException ioe) {
+            } catch (IOException ioe) {
                 throw new LoginException(ioe.getMessage());
             } catch (UnsupportedCallbackException uce) {
                 throw new LoginException(uce.getMessage()

@@ -12,7 +12,7 @@ abstract public class ServerDefHelper
 {
   private static String  _id = "IDL:activation/Repository/ServerDef:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef that)
+  public static void insert (org.omg.CORBA.Any a, ServerDef that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ServerDefHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef extract (org.omg.CORBA.Any a)
+  public static ServerDef extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -67,7 +67,7 @@ abstract public class ServerDefHelper
             "serverVmArgs",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (com.sun.corba.se.spi.activation.RepositoryPackage.ServerDefHelper.id (), "ServerDef", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (ServerDefHelper.id (), "ServerDef", _members0);
           __active = false;
         }
       }
@@ -80,9 +80,9 @@ abstract public class ServerDefHelper
     return _id;
   }
 
-  public static com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef read (org.omg.CORBA.portable.InputStream istream)
+  public static ServerDef read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef value = new com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef ();
+    ServerDef value = new ServerDef ();
     value.applicationName = istream.read_string ();
     value.serverName = istream.read_string ();
     value.serverClassPath = istream.read_string ();
@@ -91,7 +91,7 @@ abstract public class ServerDefHelper
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServerDef value)
   {
     ostream.write_string (value.applicationName);
     ostream.write_string (value.serverName);

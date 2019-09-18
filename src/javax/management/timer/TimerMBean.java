@@ -93,7 +93,7 @@ public interface TimerMBean {
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period or the number of occurrences is negative.
      *
      * @see #addNotification(String, String, Object, Date, long, long)
@@ -105,7 +105,7 @@ public interface TimerMBean {
 
     public Integer addNotification(String type, String message, Object userData,
                                    Date date, long period, long nbOccurences, boolean fixedRate)
-        throws java.lang.IllegalArgumentException;
+        throws IllegalArgumentException;
 
     /**
      * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -134,7 +134,7 @@ public interface TimerMBean {
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period or the number of occurrences is negative.
      *
      * @see #addNotification(String, String, Object, Date, long, long, boolean)
@@ -146,7 +146,7 @@ public interface TimerMBean {
 
     public Integer addNotification(String type, String message, Object userData,
                                    Date date, long period, long nbOccurences)
-        throws java.lang.IllegalArgumentException;
+        throws IllegalArgumentException;
 
     /**
      * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -171,7 +171,7 @@ public interface TimerMBean {
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null} or
+     * @exception IllegalArgumentException The date is {@code null} or
      * the period is negative.
      */
 // NPCTE fix for bugId 4464388, esc 0,  MR , to be added after modification of jmx spec
@@ -181,7 +181,7 @@ public interface TimerMBean {
 
     public Integer addNotification(String type, String message, Object userData,
                                    Date date, long period)
-        throws java.lang.IllegalArgumentException;
+        throws IllegalArgumentException;
 
     /**
      * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -201,7 +201,7 @@ public interface TimerMBean {
      *
      * @return The identifier of the new created timer notification.
      *
-     * @exception java.lang.IllegalArgumentException The date is {@code null}.
+     * @exception IllegalArgumentException The date is {@code null}.
      */
 // NPCTE fix for bugId 4464388, esc 0,  MR, to be added after modification of jmx spec
 //  public synchronized Integer addNotification(String type, String message, Serializable userData, Date date)
@@ -209,7 +209,7 @@ public interface TimerMBean {
 // end of NPCTE fix for bugId 4464388
 
     public Integer addNotification(String type, String message, Object userData, Date date)
-        throws java.lang.IllegalArgumentException;
+        throws IllegalArgumentException;
 
     /**
      * Removes the timer notification corresponding to the specified identifier from the list of notifications.

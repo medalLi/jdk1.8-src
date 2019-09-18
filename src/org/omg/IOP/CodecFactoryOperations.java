@@ -25,5 +25,5 @@ public interface CodecFactoryOperations
        * @exception UnknownEncoding thrown if this factory cannot create a 
        *     <code>Codec</code> of the given encoding.
        */
-  org.omg.IOP.Codec create_codec (org.omg.IOP.Encoding enc) throws org.omg.IOP.CodecFactoryPackage.UnknownEncoding;
+  Codec create_codec(Encoding enc) throws org.omg.IOP.CodecFactoryPackage.UnknownEncoding;
 } // interface CodecFactoryOperations

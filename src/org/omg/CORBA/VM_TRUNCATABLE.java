@@ -31,7 +31,7 @@ package org.omg.CORBA;
 * general inherited type.
 * This is one of the possible results of the <code>type_modifier</code>
 * method on the <code>TypeCode</code> interface.
-* @see org.omg.CORBA.TypeCode
+* @see TypeCode
 */
 public interface VM_TRUNCATABLE {
     /** The value representing a truncatable value type in

@@ -84,8 +84,8 @@ public abstract class CertificateFactorySpi {
      * the end by -----END CERTIFICATE-----.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream. Otherwise, each call to this
      * method consumes one certificate and the read position of the input stream
      * is positioned to the next available byte after the inherent
@@ -219,7 +219,7 @@ public abstract class CertificateFactorySpi {
      * <p>In the case of a certificate factory for X.509 certificates,
      * {@code inStream} may contain a single DER-encoded certificate
      * in the formats described for
-     * {@link CertificateFactory#generateCertificate(java.io.InputStream)
+     * {@link CertificateFactory#generateCertificate(InputStream)
      * generateCertificate}.
      * In addition, {@code inStream} may contain a PKCS#7 certificate
      * chain. This is a PKCS#7 <i>SignedData</i> object, with the only
@@ -229,8 +229,8 @@ public abstract class CertificateFactorySpi {
      * an empty collection is returned.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream.
      *
      * @param inStream the input stream with the certificates.
@@ -257,8 +257,8 @@ public abstract class CertificateFactorySpi {
      * can be typecast to the {@code X509CRL} class.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream. Otherwise, each call to this
      * method consumes one CRL and the read position of the input stream
      * is positioned to the next available byte after the inherent
@@ -298,8 +298,8 @@ public abstract class CertificateFactorySpi {
      * an empty collection is returned.
      *
      * <p>Note that if the given input stream does not support
-     * {@link java.io.InputStream#mark(int) mark} and
-     * {@link java.io.InputStream#reset() reset}, this method will
+     * {@link InputStream#mark(int) mark} and
+     * {@link InputStream#reset() reset}, this method will
      * consume the entire input stream.
      *
      * @param inStream the input stream with the CRLs.

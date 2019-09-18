@@ -33,7 +33,7 @@ import javax.swing.plaf.*;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JCheckBoxMenuItem}.
+ * {@link JCheckBoxMenuItem}.
  *
  * @author Leif Samuelsson
  * @author Georges Saab

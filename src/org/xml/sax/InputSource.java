@@ -76,10 +76,10 @@ import java.io.InputStream;
  *
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.XMLReader#parse(org.xml.sax.InputSource)
- * @see org.xml.sax.EntityResolver#resolveEntity
- * @see java.io.InputStream
- * @see java.io.Reader
+ * @see XMLReader#parse(InputSource)
+ * @see EntityResolver#resolveEntity
+ * @see InputStream
+ * @see Reader
  */
 public class InputSource {
 
@@ -170,8 +170,8 @@ public class InputSource {
      *
      * @param publicId The public identifier as a string.
      * @see #getPublicId
-     * @see org.xml.sax.Locator#getPublicId
-     * @see org.xml.sax.SAXParseException#getPublicId
+     * @see Locator#getPublicId
+     * @see SAXParseException#getPublicId
      */
     public void setPublicId (String publicId)
     {
@@ -211,8 +211,8 @@ public class InputSource {
      * @param systemId The system identifier as a string.
      * @see #setEncoding
      * @see #getSystemId
-     * @see org.xml.sax.Locator#getSystemId
-     * @see org.xml.sax.SAXParseException#getSystemId
+     * @see Locator#getSystemId
+     * @see SAXParseException#getSystemId
      */
     public void setSystemId (String systemId)
     {
@@ -253,7 +253,7 @@ public class InputSource {
      * @see #setEncoding
      * @see #getByteStream
      * @see #getEncoding
-     * @see java.io.InputStream
+     * @see InputStream
      */
     public void setByteStream (InputStream byteStream)
     {
@@ -324,7 +324,7 @@ public class InputSource {
      * @param characterStream The character stream containing the
      *        XML document or other entity.
      * @see #getCharacterStream
-     * @see java.io.Reader
+     * @see Reader
      */
     public void setCharacterStream (Reader characterStream)
     {

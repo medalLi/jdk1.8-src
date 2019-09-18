@@ -19,13 +19,13 @@ package org.omg.DynamicAny;
     * The component_count value for a union depends on the current discriminator:
     * it is 2 for a union whose discriminator indicates a named member, and 1 otherwise.
     */
-public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
+public interface DynUnionOperations  extends DynAnyOperations
 {
 
   /**
           * Returns the current discriminator value.
           */
-  org.omg.DynamicAny.DynAny get_discriminator ();
+  DynAny get_discriminator();
 
   /**
           * Sets the discriminator of the DynUnion to the specified value.
@@ -42,7 +42,7 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           * @exception TypeMismatch if the TypeCode of the parameter is not equivalent to the TypeCode
           *            of the union's discriminator
           */
-  void set_discriminator (org.omg.DynamicAny.DynAny d) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
+  void set_discriminator(DynAny d) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
 
   /**
           * Sets the discriminator to a value that is consistent with the value of the default case of a union.
@@ -50,7 +50,7 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           *
           * @exception TypeMismatch if the union does not have an explicit default case
           */
-  void set_to_default_member () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
+  void set_to_default_member() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
 
   /**
           * Sets the discriminator to a value that does not correspond to any of the unions case labels.
@@ -59,7 +59,7 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           * @exception TypeMismatch if the union has an explicit default case or if it uses the entire range
           *            of discriminator values for explicit case labels
           */
-  void set_to_no_active_member () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
+  void set_to_no_active_member() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
 
   /**
           * Returns true if the union has no active member, that is, the unions value consists solely
@@ -68,19 +68,19 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           * Calling this operation on a union that uses the entire range of discriminator values
           * for explicit case labels returns false.
           */
-  boolean has_no_active_member ();
+  boolean has_no_active_member();
 
   /**
           * Returns the TCKind value of the discriminators TypeCode.
           */
-  org.omg.CORBA.TCKind discriminator_kind ();
+  org.omg.CORBA.TCKind discriminator_kind();
 
   /**
           * Returns the TCKind value of the currently active members TypeCode. 
           *
           * @exception InvalidValue if the union does not have a currently active member
           */
-  org.omg.CORBA.TCKind member_kind () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  org.omg.CORBA.TCKind member_kind() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the currently active member. Note that the returned reference remains valid only
@@ -89,7 +89,7 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           *
           * @exception InvalidValue if the union has no active member
           */
-  org.omg.DynamicAny.DynAny member () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  DynAny member() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the name of the currently active member. If the unions TypeCode does not contain
@@ -97,5 +97,5 @@ public interface DynUnionOperations  extends org.omg.DynamicAny.DynAnyOperations
           *
           * @exception InvalidValue if the union has no active member
           */
-  String member_name () throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  String member_name() throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 } // interface DynUnionOperations

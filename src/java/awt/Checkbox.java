@@ -69,8 +69,8 @@ import javax.accessibility.*;
  * into the "off" state.
  *
  * @author      Sami Shaio
- * @see         java.awt.GridLayout
- * @see         java.awt.CheckboxGroup
+ * @see         GridLayout
+ * @see         CheckboxGroup
  * @since       JDK1.0
  */
 public class Checkbox extends Component implements ItemSelectable, Accessible {
@@ -138,7 +138,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * part of any check box group.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public Checkbox() throws HeadlessException {
         this("", false, null);
@@ -154,7 +154,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @exception HeadlessException if
      *      <code>GraphicsEnvironment.isHeadless</code>
      *      returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public Checkbox(String label) throws HeadlessException {
         this(label, false, null);
@@ -171,7 +171,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @exception HeadlessException if
      *     <code>GraphicsEnvironment.isHeadless</code>
      *     returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public Checkbox(String label, boolean state) throws HeadlessException {
         this(label, state, null);
@@ -189,7 +189,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @exception HeadlessException if
      *     <code>GraphicsEnvironment.isHeadless</code>
      *     returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since     JDK1.1
      */
     public Checkbox(String label, boolean state, CheckboxGroup group)
@@ -215,7 +215,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @exception HeadlessException if
      *    <code>GraphicsEnvironment.isHeadless</code>
      *    returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @since     JDK1.1
      */
     public Checkbox(String label, CheckboxGroup group, boolean state)
@@ -239,8 +239,8 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * Creates the peer of the Checkbox. The peer allows you to change the
      * look of the Checkbox without changing its functionality.
      *
-     * @see     java.awt.Toolkit#createCheckbox(java.awt.Checkbox)
-     * @see     java.awt.Component#getToolkit()
+     * @see     Toolkit#createCheckbox(Checkbox)
+     * @see     Component#getToolkit()
      */
     public void addNotify() {
         synchronized (getTreeLock()) {
@@ -422,8 +422,8 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @see           #removeItemListener
      * @see           #getItemListeners
      * @see           #setState
-     * @see           java.awt.event.ItemEvent
-     * @see           java.awt.event.ItemListener
+     * @see           ItemEvent
+     * @see           ItemListener
      * @since         JDK1.1
      */
     public synchronized void addItemListener(ItemListener l) {
@@ -444,8 +444,8 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @param         l    the item listener
      * @see           #addItemListener
      * @see           #getItemListeners
-     * @see           java.awt.event.ItemEvent
-     * @see           java.awt.event.ItemListener
+     * @see           ItemEvent
+     * @see           ItemListener
      * @since         JDK1.1
      */
     public synchronized void removeItemListener(ItemListener l) {
@@ -465,8 +465,8 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      *
      * @see           #addItemListener
      * @see           #removeItemListener
-     * @see           java.awt.event.ItemEvent
-     * @see           java.awt.event.ItemListener
+     * @see           ItemEvent
+     * @see           ItemListener
      * @since 1.4
      */
     public synchronized ItemListener[] getItemListeners() {
@@ -538,7 +538,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * exception.
      *
      * @param         e the event
-     * @see           java.awt.event.ItemEvent
+     * @see           ItemEvent
      * @see           #processItemEvent
      * @since         JDK1.1
      */
@@ -568,10 +568,10 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * exception.
      *
      * @param       e the item event
-     * @see         java.awt.event.ItemEvent
-     * @see         java.awt.event.ItemListener
+     * @see         ItemEvent
+     * @see         ItemListener
      * @see         #addItemListener
-     * @see         java.awt.Component#enableEvents
+     * @see         Component#enableEvents
      * @since       JDK1.1
      */
     protected void processItemEvent(ItemEvent e) {
@@ -625,11 +625,11 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      *     <code>ItemListener</code> object
      *
      * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
-     * @see java.awt.Component#itemListenerK
+     * @see Component#itemListenerK
      * @see #readObject(ObjectInputStream)
      */
     private void writeObject(ObjectOutputStream s)
-      throws java.io.IOException
+      throws IOException
     {
       s.defaultWriteObject();
 
@@ -650,7 +650,7 @@ public class Checkbox extends Component implements ItemSelectable, Accessible {
      * @serial
      * @see #removeItemListener(ItemListener)
      * @see #addItemListener(ItemListener)
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #writeObject(ObjectOutputStream)
      */
     private void readObject(ObjectInputStream s)

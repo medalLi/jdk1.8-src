@@ -348,7 +348,7 @@ public abstract class Buffer {
      * out.write(buf);    // Write header + data to channel</pre></blockquote>
      *
      * <p> This method is often used in conjunction with the {@link
-     * java.nio.ByteBuffer#compact compact} method when transferring data from
+     * ByteBuffer#compact compact} method when transferring data from
      * one place to another.  </p>
      *
      * @return  This buffer

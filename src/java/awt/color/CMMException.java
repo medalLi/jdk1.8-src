@@ -46,7 +46,7 @@ package java.awt.color;
  * This exception is thrown if the native CMM returns an error.
  */
 
-public class CMMException extends java.lang.RuntimeException {
+public class CMMException extends RuntimeException {
 
     /**
      *  Constructs a CMMException with the specified detail message.

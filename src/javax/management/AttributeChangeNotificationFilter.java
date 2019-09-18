@@ -30,8 +30,8 @@ import java.util.Vector;
 
 
 /**
- * This class implements of the {@link javax.management.NotificationFilter NotificationFilter}
- * interface for the {@link javax.management.AttributeChangeNotification attribute change notification}.
+ * This class implements of the {@link NotificationFilter NotificationFilter}
+ * interface for the {@link AttributeChangeNotification attribute change notification}.
  * The filtering is performed on the name of the observed attribute.
  * <P>
  * It manages a list of enabled attribute names.
@@ -83,12 +83,12 @@ public class AttributeChangeNotificationFilter implements NotificationFilter {
      * this method has no effect.
      *
      * @param name The attribute name.
-     * @exception java.lang.IllegalArgumentException The attribute name parameter is null.
+     * @exception IllegalArgumentException The attribute name parameter is null.
      */
-    public synchronized void enableAttribute(String name) throws java.lang.IllegalArgumentException {
+    public synchronized void enableAttribute(String name) throws IllegalArgumentException {
 
         if (name == null) {
-            throw new java.lang.IllegalArgumentException("The name cannot be null.");
+            throw new IllegalArgumentException("The name cannot be null.");
         }
         if (!enabledAttributes.contains(name)) {
             enabledAttributes.addElement(name);

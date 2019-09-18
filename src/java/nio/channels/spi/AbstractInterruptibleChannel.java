@@ -74,7 +74,7 @@ import sun.nio.ch.Interruptible;
  * {@link #end end} method will throw the appropriate exception.
  *
  * <p> This class performs the synchronization required to implement the {@link
- * java.nio.channels.Channel} specification.  Implementations of the {@link
+ * Channel} specification.  Implementations of the {@link
  * #implCloseChannel implCloseChannel} method need not synchronize against
  * other threads that might be attempting to close the channel.  </p>
  *

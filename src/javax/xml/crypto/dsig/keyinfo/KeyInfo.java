@@ -88,7 +88,7 @@ public interface KeyInfo extends XMLStructure {
      * <p>If there is a public subclass representing the type of
      * <code>XMLStructure</code>, it is returned as an instance of that
      * class (ex: an <code>X509Data</code> element would be returned as an
-     * instance of {@link javax.xml.crypto.dsig.keyinfo.X509Data}).
+     * instance of {@link X509Data}).
      *
      * @return an unmodifiable list of one or more <code>XMLStructure</code>s
      *    in this <code>KeyInfo</code>. Never returns <code>null</code> or an

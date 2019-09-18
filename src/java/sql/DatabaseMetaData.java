@@ -2350,9 +2350,9 @@ public interface DatabaseMetaData extends Wrapper {
      * @see #getImportedKeys
      */
     ResultSet getCrossReference(
-                                String parentCatalog, String parentSchema, String parentTable,
-                                String foreignCatalog, String foreignSchema, String foreignTable
-                                ) throws SQLException;
+            String parentCatalog, String parentSchema, String parentTable,
+            String foreignCatalog, String foreignSchema, String foreignTable
+    ) throws SQLException;
 
     /**
      * Retrieves a description of all the data types supported by
@@ -3342,7 +3342,7 @@ public interface DatabaseMetaData extends Wrapper {
      * @since 1.6
      */
     ResultSet getFunctions(String catalog, String schemaPattern,
-                            String functionNamePattern) throws SQLException;
+                           String functionNamePattern) throws SQLException;
     /**
      * Retrieves a description of the given catalog's system or user
      * function parameters and return type.
@@ -3438,9 +3438,9 @@ public interface DatabaseMetaData extends Wrapper {
      * @since 1.6
      */
     ResultSet getFunctionColumns(String catalog,
-                                  String schemaPattern,
-                                  String functionNamePattern,
-                                  String columnNamePattern) throws SQLException;
+                                 String schemaPattern,
+                                 String functionNamePattern,
+                                 String columnNamePattern) throws SQLException;
 
 
     /**
@@ -3638,7 +3638,7 @@ public interface DatabaseMetaData extends Wrapper {
      * @since 1.7
      */
     ResultSet getPseudoColumns(String catalog, String schemaPattern,
-                         String tableNamePattern, String columnNamePattern)
+                               String tableNamePattern, String columnNamePattern)
         throws SQLException;
 
     /**

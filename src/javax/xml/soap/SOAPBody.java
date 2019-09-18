@@ -84,7 +84,7 @@ public interface SOAPBody extends SOAPElement {
      *         of SOAP specification in use
      * @param faultString a <code>String</code> giving an explanation of
      *         the fault
-     * @param locale a {@link java.util.Locale} object indicating
+     * @param locale a {@link Locale} object indicating
      *         the native language of the <code>faultString</code>
      * @return the new <code>SOAPFault</code> object
      * @exception SOAPException if there is a SOAP error
@@ -118,7 +118,7 @@ public interface SOAPBody extends SOAPElement {
      * @param faultString
      *            a <code>String</code> giving an explanation of the fault
      * @param locale
-     *            a {@link java.util.Locale Locale} object indicating the
+     *            a {@link Locale Locale} object indicating the
      *            native language of the <code>faultString</code>
      * @return the new <code>SOAPFault</code> object
      * @exception SOAPException
@@ -236,7 +236,7 @@ public interface SOAPBody extends SOAPElement {
      * @return the new <code>SOAPBodyElement</code> object
      * @exception SOAPException
      *                if a SOAP error occurs
-     * @see SOAPBody#addBodyElement(javax.xml.namespace.QName)
+     * @see SOAPBody#addBodyElement(QName)
      */
     public SOAPBodyElement addBodyElement(Name name) throws SOAPException;
 
@@ -257,7 +257,7 @@ public interface SOAPBody extends SOAPElement {
     public SOAPBodyElement addBodyElement(QName qname) throws SOAPException;
 
     /**
-     * Adds the root node of the DOM <code>{@link org.w3c.dom.Document}</code>
+     * Adds the root node of the DOM <code>{@link Document}</code>
      * to this <code>SOAPBody</code> object.
      * <p>
      * Calling this method invalidates the <code>document</code> parameter.
@@ -274,16 +274,16 @@ public interface SOAPBody extends SOAPElement {
      *                if the <code>Document</code> cannot be added
      * @since SAAJ 1.2
      */
-    public SOAPBodyElement addDocument(org.w3c.dom.Document document)
+    public SOAPBodyElement addDocument(Document document)
         throws SOAPException;
 
     /**
-     * Creates a new DOM <code>{@link org.w3c.dom.Document}</code> and sets
+     * Creates a new DOM <code>{@link Document}</code> and sets
      * the first child of this <code>SOAPBody</code> as it's document
      * element. The child <code>SOAPElement</code> is removed as part of the
      * process.
      *
-     * @return the <code>{@link org.w3c.dom.Document}</code> representation
+     * @return the <code>{@link Document}</code> representation
      *         of the <code>SOAPBody</code> content.
      *
      * @exception SOAPException
@@ -292,6 +292,6 @@ public interface SOAPBody extends SOAPElement {
      *
      * @since SAAJ 1.3
      */
-    public org.w3c.dom.Document extractContentAsDocument()
+    public Document extractContentAsDocument()
         throws SOAPException;
 }

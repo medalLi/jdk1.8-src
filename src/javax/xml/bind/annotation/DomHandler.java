@@ -76,7 +76,7 @@ public interface DomHandler<ElementT,ResultT extends Result> {
      *      null if the operation fails. The error must have been reported
      *      to the error handler.
      */
-    ResultT createUnmarshaller( ValidationEventHandler errorHandler );
+    ResultT createUnmarshaller(ValidationEventHandler errorHandler);
 
     /**
      * Once the portion is sent to the {@link Result}. This method is called
@@ -115,5 +115,5 @@ public interface DomHandler<ElementT,ResultT extends Result> {
      *      null if there was an error. The error should have been reported
      *      to the handler.
      */
-    Source marshal( ElementT n, ValidationEventHandler errorHandler );
+    Source marshal(ElementT n, ValidationEventHandler errorHandler);
 }

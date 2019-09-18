@@ -56,7 +56,7 @@ public interface TypeVariable<D extends GenericDeclaration> extends Type, Annota
      *
      * <p>For each upper bound B: <ul> <li>if B is a parameterized
      * type or a type variable, it is created, (see {@link
-     * java.lang.reflect.ParameterizedType ParameterizedType} for the
+     * ParameterizedType ParameterizedType} for the
      * details of the creation process for parameterized types).
      * <li>Otherwise, B is resolved.  </ul>
      *

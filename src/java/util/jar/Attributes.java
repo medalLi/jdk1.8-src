@@ -113,7 +113,7 @@ public class Attributes implements Map<Object,Object>, Cloneable {
      * @throws IllegalArgumentException if the attribute name is invalid
      */
     public String getValue(String name) {
-        return (String)get(new Attributes.Name(name));
+        return (String)get(new Name(name));
     }
 
     /**
@@ -145,7 +145,7 @@ public class Attributes implements Map<Object,Object>, Cloneable {
      *            or the value is not a String
      */
     public Object put(Object name, Object value) {
-        return map.put((Attributes.Name)name, (String)value);
+        return map.put((Name)name, (String)value);
     }
 
     /**
@@ -212,7 +212,7 @@ public class Attributes implements Map<Object,Object>, Cloneable {
         // ## javac bug?
         if (!Attributes.class.isInstance(attr))
             throw new ClassCastException();
-        for (Map.Entry<?,?> me : (attr).entrySet())
+        for (Entry<?,?> me : (attr).entrySet())
             put(me.getKey(), me.getValue());
     }
 
@@ -255,7 +255,7 @@ public class Attributes implements Map<Object,Object>, Cloneable {
      * Returns a Collection view of the attribute name-value mappings
      * contained in this Map.
      */
-    public Set<Map.Entry<Object,Object>> entrySet() {
+    public Set<Entry<Object,Object>> entrySet() {
         return map.entrySet();
     }
 
@@ -296,9 +296,9 @@ public class Attributes implements Map<Object,Object>, Cloneable {
      * XXX Need to handle UTF8 values and break up lines longer than 72 bytes
      */
      void write(DataOutputStream os) throws IOException {
-        Iterator<Map.Entry<Object, Object>> it = entrySet().iterator();
+        Iterator<Entry<Object, Object>> it = entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry<Object, Object> e = it.next();
+            Entry<Object, Object> e = it.next();
             StringBuffer buffer = new StringBuffer(
                                         ((Name)e.getKey()).toString());
             buffer.append(": ");
@@ -340,9 +340,9 @@ public class Attributes implements Map<Object,Object>, Cloneable {
 
         // write out all attributes except for the version
         // we wrote out earlier
-        Iterator<Map.Entry<Object, Object>> it = entrySet().iterator();
+        Iterator<Entry<Object, Object>> it = entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry<Object, Object> e = it.next();
+            Entry<Object, Object> e = it.next();
             String name = ((Name)e.getKey()).toString();
             if ((version != null) && ! (name.equalsIgnoreCase(vername))) {
 

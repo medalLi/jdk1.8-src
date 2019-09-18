@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.toa ;
+package com.sun.corba.se.impl.oa.toa;
 
 import org.omg.CORBA.Policy ;
 import org.omg.PortableInterceptor.ObjectReferenceTemplate ;
@@ -122,7 +122,7 @@ public class TOAImpl extends ObjectAdapterBase implements TOA
     */
     public void getInvocationServant( OAInvocationInfo info )
     {
-        java.lang.Object servant = servants.lookupServant( info.id() ) ;
+        Object servant = servants.lookupServant( info.id() ) ;
         if (servant == null)
             // This is expected to result in an RMI-IIOP NoSuchObjectException.
             // See bug 4973160.

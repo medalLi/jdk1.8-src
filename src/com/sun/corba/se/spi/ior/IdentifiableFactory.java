@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.ior ;
+package com.sun.corba.se.spi.ior;
 
 import org.omg.CORBA_2_3.portable.InputStream ;
 
@@ -40,5 +40,5 @@ public interface IdentifiableFactory {
     /** Construct the appropriate Identifiable object with the
      * given id from the InputStream is.
      */
-    public Identifiable create( InputStream in ) ;
+    public Identifiable create(InputStream in) ;
 }

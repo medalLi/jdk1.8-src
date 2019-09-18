@@ -344,7 +344,7 @@ public class MotifComboBoxUI extends BasicComboBoxUI implements Serializable {
      * This class should be made &quot;protected&quot; in future releases.
      */
     private class MotifPropertyChangeListener
-            extends BasicComboBoxUI.PropertyChangeHandler {
+            extends PropertyChangeHandler {
         public void propertyChange(PropertyChangeEvent e) {
             super.propertyChange(e);
             String propertyName = e.getPropertyName();

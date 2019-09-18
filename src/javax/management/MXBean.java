@@ -186,8 +186,8 @@ public class MemoryUsage {
       define the management interface in almost exactly the same way,
       the MXBean framework <em>converts</em> model-specific classes into
       standard classes from the Java platform.  Using arrays and the
-      {@link javax.management.openmbean.CompositeData CompositeData} and
-      {@link javax.management.openmbean.TabularData TabularData} classes
+      {@link CompositeData CompositeData} and
+      {@link TabularData TabularData} classes
       from the standard {@link javax.management.openmbean} package, it
       is possible to build data structures of arbitrary complexity
       using only standard classes.</p>
@@ -420,7 +420,7 @@ public class MemoryPool
       javax.management.openmbean} package.  This means that the types of
       attributes, operation parameters, and operation return values must
       all be describable using <em>Open Types</em>, that is the four
-      standard subclasses of {@link javax.management.openmbean.OpenType}.
+      standard subclasses of {@link OpenType}.
       MXBeans achieve this by mapping Java types into Open Types.</p>
 
     <p>For every Java type <em>J</em>, the MXBean mapping is described
@@ -429,7 +429,7 @@ public class MemoryPool
     <ul>
       <li>The corresponding Open Type, <em>opentype(J)</em>.  This is
         an instance of a subclass of {@link
-        javax.management.openmbean.OpenType}.</li>
+        OpenType}.</li>
       <li>The <em>mapped</em> Java type, <em>opendata(J)</em>, which is
         always the same for any given <em>opentype(J)</em>.  This is a Java
         class.</li>
@@ -589,7 +589,7 @@ public class MemoryPool
     <p>A {@code SortedSet<}<em>E</em>{@code >} is also mapped in the
       same way as an <em>E</em>{@code []}, but it is only convertible if
       <em>E</em> is a class or interface that implements {@link
-      java.lang.Comparable}.  Thus, a {@code SortedSet<String>} or
+      Comparable}.  Thus, a {@code SortedSet<String>} or
         {@code SortedSet<Integer>} is convertible, but a {@code
           SortedSet<int[]>} or {@code SortedSet<List<String>>} is not.  The
                 conversion of a {@code SortedSet} instance will fail with an
@@ -640,7 +640,7 @@ TabularType tabularType =
     <p>A {@code SortedMap<}<em>K</em>,<em>V</em>{@code >} is mapped in the
       same way, but it is only convertible if
       <em>K</em> is a class or interface that implements {@link
-      java.lang.Comparable}.  Thus, a {@code SortedMap<String,int[]>}
+      Comparable}.  Thus, a {@code SortedMap<String,int[]>}
         is convertible, but a
         {@code SortedMap<int[],String>} is not.  The conversion of a
           {@code SortedMap} instance will fail with an {@code

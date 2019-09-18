@@ -39,8 +39,8 @@ import java.io.*;
  * and all equivalent flavors is <b>deprecated</b>. No other
  * <code>DataFlavor</code>s are supported.
  *
- * @see java.awt.datatransfer.DataFlavor#stringFlavor
- * @see java.awt.datatransfer.DataFlavor#plainTextFlavor
+ * @see DataFlavor#stringFlavor
+ * @see DataFlavor#plainTextFlavor
  */
 public class StringSelection implements Transferable, ClipboardOwner {
 
@@ -121,7 +121,7 @@ public class StringSelection implements Transferable, ClipboardOwner {
      *         By default, StringSelection never throws this exception, but a
      *         subclass may.
      * @throws NullPointerException if flavor is <code>null</code>
-     * @see java.io.Reader
+     * @see Reader
      */
     public Object getTransferData(DataFlavor flavor)
         throws UnsupportedFlavorException, IOException

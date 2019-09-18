@@ -44,7 +44,7 @@ public interface DocSourcePositions extends SourcePositions {
      * file, or if the starting position is not available,
      * return {@link javax.tools.Diagnostic#NOPOS}.
      * The given tree should be under the given comment tree, and the given documentation
-     * comment tree should be returned from a {@link DocTrees#getDocCommentTree(com.sun.source.util.TreePath) }
+     * comment tree should be returned from a {@link DocTrees#getDocCommentTree(TreePath) }
      * for a tree under the given file.
      * The returned position must be at the start of the yield of this tree, that
      * is for any sub-tree of this tree, the following must hold:
@@ -68,7 +68,7 @@ public interface DocSourcePositions extends SourcePositions {
      * file, or if the ending position is not available,
      * return {@link javax.tools.Diagnostic#NOPOS}.
      * The given tree should be under the given comment tree, and the given documentation
-     * comment tree should be returned from a {@link DocTrees#getDocCommentTree(com.sun.source.util.TreePath) }
+     * comment tree should be returned from a {@link DocTrees#getDocCommentTree(TreePath) }
      * for a tree under the given file.
      * The returned position must be at the end of the yield of this tree,
      * that is for any sub-tree of this tree, the following must hold:

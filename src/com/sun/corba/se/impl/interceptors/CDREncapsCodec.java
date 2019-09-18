@@ -51,7 +51,7 @@ import org.omg.IOP.CodecPackage.TypeMismatch;
  * 1.2.
  */
 public final class CDREncapsCodec
-    extends org.omg.CORBA.LocalObject
+    extends LocalObject
     implements Codec
 {
     // The ORB that created the factory this codec was created from

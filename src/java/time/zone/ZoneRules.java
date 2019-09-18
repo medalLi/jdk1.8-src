@@ -770,8 +770,8 @@ public final class ZoneRules implements Serializable {
      * Time-zones are second-based, so the nanosecond part of the duration will be zero.
      * <p>
      * This default implementation calculates the duration from the
-     * {@link #getOffset(java.time.Instant) actual} and
-     * {@link #getStandardOffset(java.time.Instant) standard} offsets.
+     * {@link #getOffset(Instant) actual} and
+     * {@link #getStandardOffset(Instant) standard} offsets.
      *
      * @param instant  the instant to find the daylight savings for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
@@ -793,8 +793,8 @@ public final class ZoneRules implements Serializable {
      * for the specified instant.
      * If they are not, it is assumed that daylight savings is in operation.
      * <p>
-     * This default implementation compares the {@link #getOffset(java.time.Instant) actual}
-     * and {@link #getStandardOffset(java.time.Instant) standard} offsets.
+     * This default implementation compares the {@link #getOffset(Instant) actual}
+     * and {@link #getStandardOffset(Instant) standard} offsets.
      *
      * @param instant  the instant to find the offset information for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
@@ -810,7 +810,7 @@ public final class ZoneRules implements Serializable {
      * To be valid, the local date-time must not be in a gap and the offset
      * must match one of the valid offsets.
      * <p>
-     * This default implementation checks if {@link #getValidOffsets(java.time.LocalDateTime)}
+     * This default implementation checks if {@link #getValidOffsets(LocalDateTime)}
      * contains the specified offset.
      *
      * @param localDateTime  the date-time to check, not null, but null

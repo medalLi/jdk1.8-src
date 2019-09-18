@@ -162,7 +162,7 @@ public class WindowsLookAndFeel extends BasicLookAndFeel
         // performance and compatibility issues, so allow this feature
         // to be switched off either at runtime or programmatically
         //
-        String systemFonts = java.security.AccessController.doPrivileged(
+        String systemFonts = AccessController.doPrivileged(
                new GetPropertyAction("swing.useSystemFontSettings"));
         useSystemFontSettings = (systemFonts == null ||
                                  Boolean.valueOf(systemFonts).booleanValue());
@@ -2017,7 +2017,7 @@ public class WindowsLookAndFeel extends BasicLookAndFeel
      *                  not directly associated with a
      *                  <code>Component</code>.
      *
-     * @see javax.swing.LookAndFeel#provideErrorFeedback
+     * @see LookAndFeel#provideErrorFeedback
      */
      public void provideErrorFeedback(Component component) {
          super.provideErrorFeedback(component);

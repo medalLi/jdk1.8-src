@@ -11,7 +11,7 @@ package com.sun.corba.se.PortableActivationIDL;
 
 /** ORB callback interface, passed to Activator in registerORB method.
     */
-public class _ORBProxyStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.ORBProxy
+public class _ORBProxyStub extends org.omg.CORBA.portable.ObjectImpl implements ORBProxy
 {
 
 

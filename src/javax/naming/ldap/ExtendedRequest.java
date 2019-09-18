@@ -142,7 +142,7 @@ public interface ExtendedRequest extends java.io.Serializable {
       * @see ExtendedResponse
       */
     public ExtendedResponse createExtendedResponse(String id,
-                byte[] berValue, int offset, int length) throws NamingException;
+                                                   byte[] berValue, int offset, int length) throws NamingException;
 
     // static final long serialVersionUID = -7560110759229059814L;
 }

@@ -30,9 +30,9 @@ package org.omg.DynamicAny;
     * invoking operations on the resulting object. Finally, the to_any operation can be invoked
     * to create an any value from the constructed DynAny.
     */
-public class _DynAnyFactoryStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.DynamicAny.DynAnyFactory
+public class _DynAnyFactoryStub extends org.omg.CORBA.portable.ObjectImpl implements DynAnyFactory
 {
-  final public static java.lang.Class _opsClass = DynAnyFactoryOperations.class;
+  final public static Class _opsClass = DynAnyFactoryOperations.class;
 
 
 
@@ -46,7 +46,7 @@ public class _DynAnyFactoryStub extends org.omg.CORBA.portable.ObjectImpl implem
           * @exception InconsistentTypeCode if value has a TypeCode with a TCKind of tk_Principal,
           * tk_native, or tk_abstract_interface
           */
-  public org.omg.DynamicAny.DynAny create_dyn_any (org.omg.CORBA.Any value) throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+  public DynAny create_dyn_any (org.omg.CORBA.Any value) throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("create_dyn_any", _opsClass);
       DynAnyFactoryOperations  $self = (DynAnyFactoryOperations) $so.servant;
@@ -90,7 +90,7 @@ public class _DynAnyFactoryStub extends org.omg.CORBA.portable.ObjectImpl implem
           * <LI>For DynValue and DynValueBox it initializes to a null value.
           * </UL>
           */
-  public org.omg.DynamicAny.DynAny create_dyn_any_from_type_code (org.omg.CORBA.TypeCode type) throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
+  public DynAny create_dyn_any_from_type_code (org.omg.CORBA.TypeCode type) throws org.omg.DynamicAny.DynAnyFactoryPackage.InconsistentTypeCode
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("create_dyn_any_from_type_code", _opsClass);
       DynAnyFactoryOperations  $self = (DynAnyFactoryOperations) $so.servant;

@@ -12,13 +12,13 @@ package org.omg.DynamicAny;
 /**
     * DynSequence objects support the manipulation of IDL sequences.
     */
-public interface DynSequenceOperations  extends org.omg.DynamicAny.DynAnyOperations
+public interface DynSequenceOperations  extends DynAnyOperations
 {
 
   /**
           * Returns the current length of the sequence.
           */
-  int get_length ();
+  int get_length();
 
   /**
           * Sets the length of the sequence.
@@ -41,12 +41,12 @@ public interface DynSequenceOperations  extends org.omg.DynamicAny.DynAnyOperati
           *
           * @exception InvalidValue if this is a bounded sequence and len is larger than the bound
           */
-  void set_length (int len) throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_length(int len) throws org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the elements of the sequence.
           */
-  org.omg.CORBA.Any[] get_elements ();
+  org.omg.CORBA.Any[] get_elements();
 
   /**
           * Sets the elements of a sequence.
@@ -57,12 +57,12 @@ public interface DynSequenceOperations  extends org.omg.DynamicAny.DynAnyOperati
           *            to the element TypeCode of the DynSequence
           * @exception InvalidValue if the length of value exceeds the bound of a bounded sequence
           */
-  void set_elements (org.omg.CORBA.Any[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_elements(org.omg.CORBA.Any[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the DynAnys representing the elements of the sequence.
           */
-  org.omg.DynamicAny.DynAny[] get_elements_as_dyn_any ();
+  DynAny[] get_elements_as_dyn_any();
 
   /**
           * Sets the elements of a sequence using DynAnys.
@@ -73,5 +73,5 @@ public interface DynSequenceOperations  extends org.omg.DynamicAny.DynAnyOperati
           *            to the element TypeCode of the DynSequence
           * @exception InvalidValue if the length of value exceeds the bound of a bounded sequence
           */
-  void set_elements_as_dyn_any (org.omg.DynamicAny.DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_elements_as_dyn_any(DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 } // interface DynSequenceOperations

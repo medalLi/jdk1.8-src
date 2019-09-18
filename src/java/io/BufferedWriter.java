@@ -206,7 +206,7 @@ public class BufferedWriter extends Writer {
      *
      * <p> If the value of the <tt>len</tt> parameter is negative then no
      * characters are written.  This is contrary to the specification of this
-     * method in the {@linkplain java.io.Writer#write(java.lang.String,int,int)
+     * method in the {@linkplain Writer#write(String,int,int)
      * superclass}, which requires that an {@link IndexOutOfBoundsException} be
      * thrown.
      *

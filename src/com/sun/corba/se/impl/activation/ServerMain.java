@@ -188,7 +188,7 @@ public class ServerMain
 
     private Method getNamedMethod( Class serverClass, String methodName )
     {
-        Class argTypes[] = new Class[] { org.omg.CORBA.ORB.class } ;
+        Class argTypes[] = new Class[] { ORB.class } ;
         Method method = null ;
 
         try {

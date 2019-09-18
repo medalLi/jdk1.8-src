@@ -63,7 +63,7 @@ public interface CorbaConnection
         throws IOException;
 
     public ByteBuffer read(ByteBuffer byteBuffer, int offset,
-                          int length, long max_wait_time) throws IOException;
+                           int length, long max_wait_time) throws IOException;
 
     public void write(ByteBuffer byteBuffer)
         throws IOException;

@@ -15,7 +15,7 @@ package org.omg.CosNaming;
    * 
    * The bindings iterator is obtained by using the <tt>list</tt>
    * method on the <tt>NamingContext</tt>. 
-   * @see org.omg.CosNaming.NamingContext#list
+   * @see NamingContext#list
    */
 public interface BindingIteratorOperations 
 {
@@ -26,7 +26,7 @@ public interface BindingIteratorOperations
        * 
        * @param b the returned binding
        */
-  boolean next_one (org.omg.CosNaming.BindingHolder b);
+  boolean next_one(BindingHolder b);
 
   /**
        * This operation returns at most the requested number of bindings.
@@ -35,10 +35,10 @@ public interface BindingIteratorOperations
        * 
        * @param bl the returned bindings
        */
-  boolean next_n (int how_many, org.omg.CosNaming.BindingListHolder bl);
+  boolean next_n(int how_many, BindingListHolder bl);
 
   /**
        * This operation destroys the iterator.
        */
-  void destroy ();
+  void destroy();
 } // interface BindingIteratorOperations

@@ -375,8 +375,8 @@ public class SwingUtilities implements SwingConstants
                 if(c instanceof JComponent) {
                     x = c.getX();
                     y = c.getY();
-                } else if(c instanceof java.applet.Applet ||
-                          c instanceof java.awt.Window) {
+                } else if(c instanceof Applet ||
+                          c instanceof Window) {
                     try {
                         Point pp = c.getLocationOnScreen();
                         x = pp.x;
@@ -393,7 +393,7 @@ public class SwingUtilities implements SwingConstants
                 p.x += x;
                 p.y += y;
 
-                if(c instanceof java.awt.Window || c instanceof java.applet.Applet)
+                if(c instanceof Window || c instanceof Applet)
                     break;
                 c = c.getParent();
             } while(c != null);
@@ -414,8 +414,8 @@ public class SwingUtilities implements SwingConstants
             if(c instanceof JComponent) {
                 x = c.getX();
                 y = c.getY();
-            }  else if(c instanceof java.applet.Applet ||
-                       c instanceof java.awt.Window) {
+            }  else if(c instanceof Applet ||
+                       c instanceof Window) {
                 try {
                     Point pp = c.getLocationOnScreen();
                     x = pp.x;
@@ -432,7 +432,7 @@ public class SwingUtilities implements SwingConstants
             p.x -= x;
             p.y -= y;
 
-            if(c instanceof java.awt.Window || c instanceof java.applet.Applet)
+            if(c instanceof Window || c instanceof Applet)
                 break;
             c = c.getParent();
         } while(c != null);
@@ -1171,7 +1171,7 @@ public class SwingUtilities implements SwingConstants
      * @param h  an int specifying the height of the area draw in, in pixels
      *
      * @see CellRendererPane
-     * @see java.awt.Component#isLightweight
+     * @see Component#isLightweight
      */
     public static void paintComponent(Graphics g, Component c, Container p, int x, int y, int w, int h) {
         getCellRendererPane(c, p).paintComponent(g, c, p, x, y, w, h,false);
@@ -1478,7 +1478,7 @@ public class SwingUtilities implements SwingConstants
      *         owner, or if the focus owner is not <code>comp</code>, or a
      *         descendant of <code>comp</code>
      *
-     * @see java.awt.KeyboardFocusManager#getFocusOwner
+     * @see KeyboardFocusManager#getFocusOwner
      * @deprecated As of 1.4, replaced by
      *   <code>KeyboardFocusManager.getFocusOwner()</code>.
      */
@@ -1824,7 +1824,7 @@ public class SwingUtilities implements SwingConstants
      * {@code null} owners.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     static Frame getSharedOwnerFrame() throws HeadlessException {
         Frame sharedOwnerFrame =
@@ -1842,7 +1842,7 @@ public class SwingUtilities implements SwingConstants
      * if it has no more displayable children.
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     static WindowListener getSharedOwnerFrameShutdownListener() throws HeadlessException {
         Frame sharedOwnerFrame = getSharedOwnerFrame();
@@ -2053,8 +2053,8 @@ public class SwingUtilities implements SwingConstants
      * visible. Otherwise this method returns {@code null}.
      *
      * @return the validate root of the given container or null
-     * @see java.awt.Component#isDisplayable()
-     * @see java.awt.Component#isVisible()
+     * @see Component#isDisplayable()
+     * @see Component#isVisible()
      * @since 1.7
      */
     static Container getValidateRoot(Container c, boolean visibleOnly) {

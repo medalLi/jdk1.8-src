@@ -29,7 +29,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class IdUniquenessPolicyImpl
-    extends org.omg.CORBA.LocalObject implements IdUniquenessPolicy {
+    extends LocalObject implements IdUniquenessPolicy {
 
     public IdUniquenessPolicyImpl(IdUniquenessPolicyValue value) {
         this.value = value;

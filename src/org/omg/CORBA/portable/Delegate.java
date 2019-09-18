@@ -402,7 +402,7 @@ public abstract class Delegate {
      * @return <code>true</code> if <code>obj</code> equals <code>self</code>;
      *         <code>false</code> otherwise
      */
-    public boolean equals(org.omg.CORBA.Object self, java.lang.Object obj) {
+    public boolean equals(org.omg.CORBA.Object self, Object obj) {
         return (self == obj);
     }
 }

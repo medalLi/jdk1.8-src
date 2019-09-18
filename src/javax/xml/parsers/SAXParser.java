@@ -42,15 +42,15 @@ import org.xml.sax.helpers.DefaultHandler;
 
 
 /**
- * Defines the API that wraps an {@link org.xml.sax.XMLReader}
+ * Defines the API that wraps an {@link XMLReader}
  * implementation class. In JAXP 1.0, this class wrapped the
- * {@link org.xml.sax.Parser} interface, however this interface was
- * replaced by the {@link org.xml.sax.XMLReader}. For ease
+ * {@link Parser} interface, however this interface was
+ * replaced by the {@link XMLReader}. For ease
  * of transition, this class continues to support the same name
  * and interface as well as supporting new methods.
  *
  * An instance of this class can be obtained from the
- * {@link javax.xml.parsers.SAXParserFactory#newSAXParser()} method.
+ * {@link SAXParserFactory#newSAXParser()} method.
  * Once an instance of this class is obtained, XML can be parsed from
  * a variety of input sources. These input sources are InputStreams,
  * Files, URLs, and SAX InputSources.<p>
@@ -66,8 +66,8 @@ import org.xml.sax.helpers.DefaultHandler;
  * will be used.</p>
  *
  * As the content is parsed by the underlying parser, methods of the
- * given {@link org.xml.sax.HandlerBase} or the
- * {@link org.xml.sax.helpers.DefaultHandler} are called.<p>
+ * given {@link HandlerBase} or the
+ * {@link DefaultHandler} are called.<p>
  *
  * Implementors of this class which wrap an underlaying implementation
  * can consider using the {@link org.xml.sax.helpers.ParserAdapter}
@@ -80,7 +80,7 @@ public abstract class SAXParser {
 
     /**
      * <p>Protected constructor to prevent instaniation.
-     * Use {@link javax.xml.parsers.SAXParserFactory#newSAXParser()}.</p>
+     * Use {@link SAXParserFactory#newSAXParser()}.</p>
      */
     protected SAXParser () {
 
@@ -114,8 +114,8 @@ public abstract class SAXParser {
         }
 
     /**
-     * <p>Parse the content of the given {@link java.io.InputStream}
-     * instance as XML using the specified {@link org.xml.sax.HandlerBase}.
+     * <p>Parse the content of the given {@link InputStream}
+     * instance as XML using the specified {@link HandlerBase}.
      * <i> Use of the DefaultHandler version of this method is recommended as
      * the HandlerBase class has been deprecated in SAX 2.0</i>.</p>
      *
@@ -140,8 +140,8 @@ public abstract class SAXParser {
     }
 
     /**
-     * <p>Parse the content of the given {@link java.io.InputStream}
-     * instance as XML using the specified {@link org.xml.sax.HandlerBase}.
+     * <p>Parse the content of the given {@link InputStream}
+     * instance as XML using the specified {@link HandlerBase}.
      * <i> Use of the DefaultHandler version of this method is recommended as
      * the HandlerBase class has been deprecated in SAX 2.0</i>.</p>
      *
@@ -172,9 +172,9 @@ public abstract class SAXParser {
     }
 
     /**
-     * Parse the content of the given {@link java.io.InputStream}
+     * Parse the content of the given {@link InputStream}
      * instance as XML using the specified
-     * {@link org.xml.sax.helpers.DefaultHandler}.
+     * {@link DefaultHandler}.
      *
      * @param is InputStream containing the content to be parsed.
      * @param dh The SAX DefaultHandler to use.
@@ -196,9 +196,9 @@ public abstract class SAXParser {
     }
 
     /**
-     * Parse the content of the given {@link java.io.InputStream}
+     * Parse the content of the given {@link InputStream}
      * instance as XML using the specified
-     * {@link org.xml.sax.helpers.DefaultHandler}.
+     * {@link DefaultHandler}.
      *
      * @param is InputStream containing the content to be parsed.
      * @param dh The SAX DefaultHandler to use.
@@ -227,7 +227,7 @@ public abstract class SAXParser {
     /**
      * Parse the content described by the giving Uniform Resource
      * Identifier (URI) as XML using the specified
-     * {@link org.xml.sax.HandlerBase}.
+     * {@link HandlerBase}.
      * <i> Use of the DefaultHandler version of this method is recommended as
      * the <code>HandlerBase</code> class has been deprecated in SAX 2.0</i>
      *
@@ -253,7 +253,7 @@ public abstract class SAXParser {
     /**
      * Parse the content described by the giving Uniform Resource
      * Identifier (URI) as XML using the specified
-     * {@link org.xml.sax.helpers.DefaultHandler}.
+     * {@link DefaultHandler}.
      *
      * @param uri The location of the content to be parsed.
      * @param dh The SAX DefaultHandler to use.
@@ -276,7 +276,7 @@ public abstract class SAXParser {
 
     /**
      * Parse the content of the file specified as XML using the
-     * specified {@link org.xml.sax.HandlerBase}.
+     * specified {@link HandlerBase}.
      * <i> Use of the DefaultHandler version of this method is recommended as
      * the HandlerBase class has been deprecated in SAX 2.0</i>
      *
@@ -304,7 +304,7 @@ public abstract class SAXParser {
 
     /**
      * Parse the content of the file specified as XML using the
-     * specified {@link org.xml.sax.helpers.DefaultHandler}.
+     * specified {@link DefaultHandler}.
      *
      * @param f The file containing the XML to parse
      * @param dh The SAX DefaultHandler to use.
@@ -329,9 +329,9 @@ public abstract class SAXParser {
     }
 
     /**
-     * Parse the content given {@link org.xml.sax.InputSource}
+     * Parse the content given {@link InputSource}
      * as XML using the specified
-     * {@link org.xml.sax.HandlerBase}.
+     * {@link HandlerBase}.
      * <i> Use of the DefaultHandler version of this method is recommended as
      * the HandlerBase class has been deprecated in SAX 2.0</i>
      *
@@ -362,9 +362,9 @@ public abstract class SAXParser {
     }
 
     /**
-     * Parse the content given {@link org.xml.sax.InputSource}
+     * Parse the content given {@link InputSource}
      * as XML using the specified
-     * {@link org.xml.sax.helpers.DefaultHandler}.
+     * {@link DefaultHandler}.
      *
      * @param is The InputSource containing the content to be parsed.
      * @param dh The SAX DefaultHandler to use.
@@ -401,10 +401,10 @@ public abstract class SAXParser {
      *
      * @throws SAXException If any SAX errors occur during processing.
      */
-    public abstract org.xml.sax.Parser getParser() throws SAXException;
+    public abstract Parser getParser() throws SAXException;
 
     /**
-     * Returns the {@link org.xml.sax.XMLReader} that is encapsulated by the
+     * Returns the {@link XMLReader} that is encapsulated by the
      * implementation of this class.
      *
      * @return The XMLReader that is encapsulated by the
@@ -413,7 +413,7 @@ public abstract class SAXParser {
      * @throws SAXException If any SAX errors occur during processing.
      */
 
-    public abstract org.xml.sax.XMLReader getXMLReader() throws SAXException;
+    public abstract XMLReader getXMLReader() throws SAXException;
 
     /**
      * Indicates whether or not this parser is configured to
@@ -437,7 +437,7 @@ public abstract class SAXParser {
 
     /**
      * <p>Sets the particular property in the underlying implementation of
-     * {@link org.xml.sax.XMLReader}.
+     * {@link XMLReader}.
      * A list of the core features and properties can be found at
      * <a href="http://sax.sourceforge.net/?selected=get-set">
      * http://sax.sourceforge.net/?selected=get-set</a>.</p>
@@ -452,15 +452,15 @@ public abstract class SAXParser {
      *      Setting the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD} property
      *      restricts the access to external DTDs, external Entity References to
      *      the protocols specified by the property.  If access is denied during parsing
-     *      due to the restriction of this property, {@link org.xml.sax.SAXException}
-     *      will be thrown by the parse methods defined by {@link javax.xml.parsers.SAXParser}.
+     *      due to the restriction of this property, {@link SAXException}
+     *      will be thrown by the parse methods defined by {@link SAXParser}.
      *      </p>
      *      <p>
      *      Setting the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_SCHEMA} property
      *      restricts the access to external Schema set by the schemaLocation attribute to
      *      the protocols specified by the property.  If access is denied during parsing
-     *      due to the restriction of this property, {@link org.xml.sax.SAXException}
-     *      will be thrown by the parse methods defined by the {@link javax.xml.parsers.SAXParser}.
+     *      due to the restriction of this property, {@link SAXException}
+     *      will be thrown by the parse methods defined by the {@link SAXParser}.
      *      </p>
      *   </li>
      * </ul>
@@ -473,14 +473,14 @@ public abstract class SAXParser {
      * @throws SAXNotSupportedException When the underlying XMLReader
      *  recognizes the property name but doesn't support the property.
      *
-     * @see org.xml.sax.XMLReader#setProperty
+     * @see XMLReader#setProperty
      */
     public abstract void setProperty(String name, Object value)
         throws SAXNotRecognizedException, SAXNotSupportedException;
 
     /**
      * <p>Returns the particular property requested for in the underlying
-     * implementation of {@link org.xml.sax.XMLReader}.</p>
+     * implementation of {@link XMLReader}.</p>
      *
      * @param name The name of the property to be retrieved.
      * @return Value of the requested property.
@@ -490,7 +490,7 @@ public abstract class SAXParser {
      * @throws SAXNotSupportedException When the underlying XMLReader
      *  recognizes the property name but doesn't support the property.
      *
-     * @see org.xml.sax.XMLReader#getProperty
+     * @see XMLReader#getProperty
      */
     public abstract Object getProperty(String name)
         throws SAXNotRecognizedException, SAXNotSupportedException;

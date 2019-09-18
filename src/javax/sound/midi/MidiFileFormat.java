@@ -58,17 +58,17 @@ import java.util.Map;
  *  </tr>
  *  <tr>
  *   <td>&quot;author&quot;</td>
- *   <td>{@link java.lang.String String}</td>
+ *   <td>{@link String String}</td>
  *   <td>name of the author of this file</td>
  *  </tr>
  *  <tr>
  *   <td>&quot;title&quot;</td>
- *   <td>{@link java.lang.String String}</td>
+ *   <td>{@link String String}</td>
  *   <td>title of this file</td>
  *  </tr>
  *  <tr>
  *   <td>&quot;copyright&quot;</td>
- *   <td>{@link java.lang.String String}</td>
+ *   <td>{@link String String}</td>
  *   <td>copyright message</td>
  *  </tr>
  *  <tr>
@@ -78,13 +78,13 @@ import java.util.Map;
  *  </tr>
  *  <tr>
  *   <td>&quot;comment&quot;</td>
- *   <td>{@link java.lang.String String}</td>
+ *   <td>{@link String String}</td>
  *   <td>an arbitrary text</td>
  *  </tr>
  * </table>
  *
  * @see MidiSystem#getMidiFileFormat(java.io.File)
- * @see Sequencer#setSequence(java.io.InputStream stream)
+ * @see Sequencer#setSequence(InputStream stream)
  *
  * @author Kara Kytle
  * @author Florian Bomers

@@ -129,7 +129,7 @@ public class DynArrayImpl extends DynAnyCollectionImpl implements DynArray
     //
 
     protected void checkValue(Object[] value)
-        throws org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws InvalidValue
     {
         if (value == null || value.length != getBound()) {
             throw new InvalidValue();

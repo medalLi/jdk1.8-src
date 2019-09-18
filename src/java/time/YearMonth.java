@@ -157,7 +157,7 @@ public final class YearMonth
     /**
      * Obtains the current year-month from the system clock in the default time-zone.
      * <p>
-     * This will query the {@link java.time.Clock#systemDefaultZone() system clock} in the default
+     * This will query the {@link Clock#systemDefaultZone() system clock} in the default
      * time-zone to obtain the current year-month.
      * The zone and offset will be set based on the time-zone in the clock.
      * <p>
@@ -173,7 +173,7 @@ public final class YearMonth
     /**
      * Obtains the current year-month from the system clock in the specified time-zone.
      * <p>
-     * This will query the {@link Clock#system(java.time.ZoneId) system clock} to obtain the current year-month.
+     * This will query the {@link Clock#system(ZoneId) system clock} to obtain the current year-month.
      * Specifying the time-zone avoids dependence on the default time-zone.
      * <p>
      * Using this method will prevent the ability to use an alternate clock for testing

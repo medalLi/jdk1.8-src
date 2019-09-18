@@ -71,8 +71,8 @@ import static java.lang.annotation.RetentionPolicy.*;
  * service except in the case of EJBs where the EJB can handle exceptions and
  * even recover from them.</li></ul>
  * @since Common Annotations 1.0
- * @see javax.annotation.PreDestroy
- * @see javax.annotation.Resource
+ * @see PreDestroy
+ * @see Resource
  */
 @Documented
 @Retention (RUNTIME)

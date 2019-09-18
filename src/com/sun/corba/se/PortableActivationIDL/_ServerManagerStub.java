@@ -13,19 +13,19 @@ package com.sun.corba.se.PortableActivationIDL;
     * implemented together in the same process, as is currently the case
     * for our implementation.
     */
-public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.ServerManager
+public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implements ServerManager
 {
 
 
   /** A new ORB started server registers itself with the Activator
   	*/
-  public void registerServer (String serverId, com.sun.corba.se.PortableActivationIDL.ServerProxy serverObj) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
+  public void registerServer (String serverId, ServerProxy serverObj) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("registerServer", true);
                 org.omg.PortableInterceptor.ServerIdHelper.write ($out, serverId);
-                com.sun.corba.se.PortableActivationIDL.ServerProxyHelper.write ($out, serverObj);
+                ServerProxyHelper.write ($out, serverObj);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
@@ -72,14 +72,14 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   	* Note that we cannot detect when an ORB shuts down, although
   	* all of the POA shutdowns should still be reported.
   	*/
-  public void registerORB (String serverId, String orbId, com.sun.corba.se.PortableActivationIDL.ORBProxy orb, com.sun.corba.se.PortableActivationIDL.EndPointInfo[] endPointInfo) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered
+  public void registerORB (String serverId, String orbId, ORBProxy orb, EndPointInfo[] endPointInfo) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("registerORB", true);
                 org.omg.PortableInterceptor.ServerIdHelper.write ($out, serverId);
                 org.omg.PortableInterceptor.ORBIdHelper.write ($out, orbId);
-                com.sun.corba.se.PortableActivationIDL.ORBProxyHelper.write ($out, orb);
+                ORBProxyHelper.write ($out, orb);
                 com.sun.corba.se.PortableActivationIDL.EndpointInfoListHelper.write ($out, endPointInfo);
                 $in = _invoke ($out);
                 return;
@@ -156,7 +156,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   /** If the server is not running, start it up.  This is allowed
   	* whether or not the server has been installed.
   	*/
-  public void activate (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerAlreadyActive, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown
+  public void activate (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerAlreadyActive, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -185,7 +185,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
   /** If the server is running, shut it down
   	*/
-  public void shutdown (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerNotActive, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
+  public void shutdown (String serverId) throws ServerNotActive, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -213,7 +213,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   /** Invoke the server install hook.  If the server is not 
   	* currently running, this method will activate it.
   	*/
-  public void install (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown, com.sun.corba.se.PortableActivationIDL.ServerAlreadyInstalled
+  public void install (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown, com.sun.corba.se.PortableActivationIDL.ServerAlreadyInstalled
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -244,7 +244,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   	* currently running, this method will activate it.
   	* After this hook completes, the server may still be running.
   	*/
-  public void uninstall (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown, com.sun.corba.se.PortableActivationIDL.ServerAlreadyUninstalled
+  public void uninstall (String serverId) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown, com.sun.corba.se.PortableActivationIDL.ServerAlreadyUninstalled
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -279,7 +279,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("getActiveServers", true);
                 $in = _invoke ($out);
-                String $result[] = com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.read ($in);
+                String $result[] = ServerIdsHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -302,7 +302,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
                 org.omg.CORBA.portable.OutputStream $out = _request ("getORBNames", true);
                 org.omg.PortableInterceptor.ServerIdHelper.write ($out, serverId);
                 $in = _invoke ($out);
-                String $result[] = com.sun.corba.se.PortableActivationIDL.ORBidListHelper.read ($in);
+                String $result[] = ORBidListHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -349,7 +349,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   	* ORBs of an active server.
   	* Starts the server if it is not already running.
   	*/
-  public com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType locateServer (String serverId, String endPoint) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown
+  public com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType locateServer (String serverId, String endPoint) throws NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -382,7 +382,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   	* an active server
   	* Starts the server if it is not already running.
   	*/
-  public com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB locateServerForORB (String serverId, String orbId) throws com.sun.corba.se.PortableActivationIDL.InvalidORBid, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown
+  public com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB locateServerForORB (String serverId, String orbId) throws InvalidORBid, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -413,14 +413,14 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
 
   /** get the port for the endpoint of the locator
   	*/
-  public int getEndpoint (String endPointType) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint
+  public int getEndpoint (String endPointType) throws NoSuchEndPoint
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("getEndpoint", true);
                 $out.write_string (endPointType);
                 $in = _invoke ($out);
-                int $result = com.sun.corba.se.PortableActivationIDL.TCPPortHelper.read ($in);
+                int $result = TCPPortHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -440,7 +440,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
   /** Useful from external BadServerIdHandlers which need
   	* to pick a particular port type.
   	*/
-  public int getServerPortForType (com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB location, String endPointType) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint
+  public int getServerPortForType (com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB location, String endPointType) throws NoSuchEndPoint
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -448,7 +448,7 @@ public class _ServerManagerStub extends org.omg.CORBA.portable.ObjectImpl implem
                 com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORBHelper.write ($out, location);
                 $out.write_string (endPointType);
                 $in = _invoke ($out);
-                int $result = com.sun.corba.se.PortableActivationIDL.TCPPortHelper.read ($in);
+                int $result = TCPPortHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();

@@ -78,7 +78,7 @@ package org.xml.sax;
  * available.</p>
  *
  * <p>This interface replaces the now-deprecated SAX1 {@link
- * org.xml.sax.AttributeList AttributeList} interface, which does not
+ * AttributeList AttributeList} interface, which does not
  * contain Namespace support.  In addition to Namespace support, it
  * adds the <var>getIndex</var> methods (below).</p>
  *
@@ -112,7 +112,7 @@ public interface Attributes
      * @see #getType(int)
      * @see #getValue(int)
      */
-    public abstract int getLength ();
+    public abstract int getLength();
 
 
     /**
@@ -124,7 +124,7 @@ public interface Attributes
      *         range.
      * @see #getLength
      */
-    public abstract String getURI (int index);
+    public abstract String getURI(int index);
 
 
     /**
@@ -136,7 +136,7 @@ public interface Attributes
      *         if the index is out of range.
      * @see #getLength
      */
-    public abstract String getLocalName (int index);
+    public abstract String getLocalName(int index);
 
 
     /**
@@ -148,7 +148,7 @@ public interface Attributes
      *         is out of range.
      * @see #getLength
      */
-    public abstract String getQName (int index);
+    public abstract String getQName(int index);
 
 
     /**
@@ -171,7 +171,7 @@ public interface Attributes
      *         index is out of range.
      * @see #getLength
      */
-    public abstract String getType (int index);
+    public abstract String getType(int index);
 
 
     /**
@@ -187,7 +187,7 @@ public interface Attributes
      *         index is out of range.
      * @see #getLength
      */
-    public abstract String getValue (int index);
+    public abstract String getValue(int index);
 
 
 
@@ -205,7 +205,7 @@ public interface Attributes
      * @return The index of the attribute, or -1 if it does not
      *         appear in the list.
      */
-    public int getIndex (String uri, String localName);
+    public int getIndex(String uri, String localName);
 
 
     /**
@@ -215,7 +215,7 @@ public interface Attributes
      * @return The index of the attribute, or -1 if it does not
      *         appear in the list.
      */
-    public int getIndex (String qName);
+    public int getIndex(String qName);
 
 
     /**
@@ -231,7 +231,7 @@ public interface Attributes
      *         attribute is not in the list or if Namespace
      *         processing is not being performed.
      */
-    public abstract String getType (String uri, String localName);
+    public abstract String getType(String uri, String localName);
 
 
     /**
@@ -245,7 +245,7 @@ public interface Attributes
      *         attribute is not in the list or if qualified names
      *         are not available.
      */
-    public abstract String getType (String qName);
+    public abstract String getType(String qName);
 
 
     /**
@@ -260,7 +260,7 @@ public interface Attributes
      * @return The attribute value as a string, or null if the
      *         attribute is not in the list.
      */
-    public abstract String getValue (String uri, String localName);
+    public abstract String getValue(String uri, String localName);
 
 
     /**
@@ -274,7 +274,7 @@ public interface Attributes
      *         attribute is not in the list or if qualified names
      *         are not available.
      */
-    public abstract String getValue (String qName);
+    public abstract String getValue(String qName);
 
 }
 

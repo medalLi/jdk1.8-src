@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.fsm ;
+package com.sun.corba.se.spi.orbutil.fsm;
 
 /**
  * This interface must be implemented by any class that is used as
@@ -45,12 +45,12 @@ public interface State
     /** Method that defines action that occurs whenever this state is entered.
     * Any exceptions thrown by this method are ignored.
     */
-    void preAction( FSM fsm ) ;
+    void preAction(FSM fsm) ;
 
     /** Method that defines action that occurs whenever this state is exited.
     * Any exceptions thrown by this method are ignored.
     */
-    void postAction( FSM fsm ) ;
+    void postAction(FSM fsm) ;
 }
 
 // end of State.java

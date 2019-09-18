@@ -16,15 +16,15 @@ public interface ServerOperations
 
   /** Shutdown this server.  Returns after orb.shutdown() completes.
   	*/
-  void shutdown ();
+  void shutdown();
 
   /** Install the server.  Returns after the install hook completes
   	* execution in the server.
   	*/
-  void install ();
+  void install();
 
   /** Uninstall the server.  Returns after the uninstall hook
   	* completes execution.
   	*/
-  void uninstall ();
+  void uninstall();
 } // interface ServerOperations

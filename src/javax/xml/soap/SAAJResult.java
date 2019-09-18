@@ -127,7 +127,7 @@ public class SAAJResult extends DOMResult {
      * @return the resulting Tree that was created under the specified root Node.
      * @since SAAJ 1.3
      */
-    public javax.xml.soap.Node getResult() {
-        return (javax.xml.soap.Node)super.getNode().getFirstChild();
+    public Node getResult() {
+        return (Node)super.getNode().getFirstChild();
      }
 }

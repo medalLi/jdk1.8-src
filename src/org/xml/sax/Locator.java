@@ -44,7 +44,7 @@ package org.xml.sax;
  * <p>If a SAX parser provides location information to the SAX
  * application, it does so by implementing this interface and then
  * passing an instance to the application using the content
- * handler's {@link org.xml.sax.ContentHandler#setDocumentLocator
+ * handler's {@link ContentHandler#setDocumentLocator
  * setDocumentLocator} method.  The application can use the
  * object to obtain the location of any other SAX event
  * in the XML source document.</p>
@@ -58,13 +58,13 @@ package org.xml.sax;
  * very strongly encouraged to do so.  If the parser supplies a
  * locator, it must do so before reporting any other document events.
  * If no locator has been set by the time the application receives
- * the {@link org.xml.sax.ContentHandler#startDocument startDocument}
+ * the {@link ContentHandler#startDocument startDocument}
  * event, the application should assume that a locator is not
  * available.</p>
  *
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.ContentHandler#setDocumentLocator
+ * @see ContentHandler#setDocumentLocator
  */
 public interface Locator {
 
@@ -80,7 +80,7 @@ public interface Locator {
      *         null if none is available.
      * @see #getSystemId
      */
-    public abstract String getPublicId ();
+    public abstract String getPublicId();
 
 
     /**
@@ -99,7 +99,7 @@ public interface Locator {
      *         if none is available.
      * @see #getPublicId
      */
-    public abstract String getSystemId ();
+    public abstract String getSystemId();
 
 
     /**
@@ -126,7 +126,7 @@ public interface Locator {
      * @return The line number, or -1 if none is available.
      * @see #getColumnNumber
      */
-    public abstract int getLineNumber ();
+    public abstract int getLineNumber();
 
 
     /**
@@ -153,7 +153,7 @@ public interface Locator {
      * @return The column number, or -1 if none is available.
      * @see #getLineNumber
      */
-    public abstract int getColumnNumber ();
+    public abstract int getColumnNumber();
 
 }
 

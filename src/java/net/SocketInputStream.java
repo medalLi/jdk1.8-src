@@ -64,7 +64,7 @@ class SocketInputStream extends FileInputStream
     }
 
     /**
-     * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
+     * Returns the unique {@link FileChannel FileChannel}
      * object associated with this file input stream.</p>
      *
      * The {@code getChannel} method of {@code SocketInputStream}

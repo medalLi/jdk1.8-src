@@ -327,7 +327,7 @@ public final class Security {
      * <p>A provider cannot be added if it is already installed.
      *
      * <p>If there is a security manager, the
-     * {@link java.lang.SecurityManager#checkSecurityAccess} method is called
+     * {@link SecurityManager#checkSecurityAccess} method is called
      * with the {@code "insertProvider"} permission target name to see if
      * it's ok to add a new provider. If this permission check is denied,
      * {@code checkSecurityAccess} is called again with the
@@ -346,12 +346,12 @@ public final class Security {
      * @throws  NullPointerException if provider is null
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to add a new provider
      *
      * @see #getProvider
      * @see #removeProvider
-     * @see java.security.SecurityPermission
+     * @see SecurityPermission
      */
     public static synchronized int insertProviderAt(Provider provider,
             int position) {
@@ -370,7 +370,7 @@ public final class Security {
      * Adds a provider to the next position available.
      *
      * <p>If there is a security manager, the
-     * {@link java.lang.SecurityManager#checkSecurityAccess} method is called
+     * {@link SecurityManager#checkSecurityAccess} method is called
      * with the {@code "insertProvider"} permission target name to see if
      * it's ok to add a new provider. If this permission check is denied,
      * {@code checkSecurityAccess} is called again with the
@@ -386,12 +386,12 @@ public final class Security {
      * @throws  NullPointerException if provider is null
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies access to add a new provider
      *
      * @see #getProvider
      * @see #removeProvider
-     * @see java.security.SecurityPermission
+     * @see SecurityPermission
      */
     public static int addProvider(Provider provider) {
         /*
@@ -428,7 +428,7 @@ public final class Security {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkSecurityAccess} method
+     *          SecurityManager#checkSecurityAccess} method
      *          denies
      *          access to remove the provider
      *
@@ -473,7 +473,7 @@ public final class Security {
      * specified selection criterion, or null if no such providers have been
      * installed. The returned providers are ordered
      * according to their
-     * {@linkplain #insertProviderAt(java.security.Provider, int) preference order}.
+     * {@linkplain #insertProviderAt(Provider, int) preference order}.
      *
      * <p> A cryptographic service is always associated with a particular
      * algorithm or type. For example, a digital signature service is
@@ -525,7 +525,7 @@ public final class Security {
      *         if the filter is not in the required format
      * @throws NullPointerException if filter is null
      *
-     * @see #getProviders(java.util.Map)
+     * @see #getProviders(Map)
      * @since 1.3
      */
     public static Provider[] getProviders(String filter) {
@@ -552,7 +552,7 @@ public final class Security {
      * specified* selection criteria, or null if no such providers have been
      * installed. The returned providers are ordered
      * according to their
-     * {@linkplain #insertProviderAt(java.security.Provider, int)
+     * {@linkplain #insertProviderAt(Provider, int)
      * preference order}.
      *
      * <p>The selection criteria are represented by a map.
@@ -596,7 +596,7 @@ public final class Security {
      *         if the filter is not in the required format
      * @throws NullPointerException if filter is null
      *
-     * @see #getProviders(java.lang.String)
+     * @see #getProviders(String)
      * @since 1.3
      */
     public static Provider[] getProviders(Map<String,String> filter) {
@@ -746,13 +746,13 @@ public final class Security {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkPermission} method
+     *          SecurityManager#checkPermission} method
      *          denies
      *          access to retrieve the specified security property value
      * @throws  NullPointerException is key is null
      *
      * @see #setProperty
-     * @see java.security.SecurityPermission
+     * @see SecurityPermission
      */
     public static String getProperty(String key) {
         SecurityManager sm = System.getSecurityManager();
@@ -781,12 +781,12 @@ public final class Security {
      *
      * @throws  SecurityException
      *          if a security manager exists and its {@link
-     *          java.lang.SecurityManager#checkPermission} method
+     *          SecurityManager#checkPermission} method
      *          denies access to set the specified security property value
      * @throws  NullPointerException if key or datum is null
      *
      * @see #getProperty
-     * @see java.security.SecurityPermission
+     * @see SecurityPermission
      */
     public static void setProperty(String key, String datum) {
         check("setProperty."+key);

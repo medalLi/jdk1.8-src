@@ -544,7 +544,7 @@ public class TreeSet<E> extends AbstractSet<E>
      * the reporting of additional characteristic values.
      *
      * <p>The spliterator's comparator (see
-     * {@link java.util.Spliterator#getComparator()}) is {@code null} if
+     * {@link Spliterator#getComparator()}) is {@code null} if
      * the tree set's comparator (see {@link #comparator()}) is {@code null}.
      * Otherwise, the spliterator's comparator is the same as or imposes the
      * same total ordering as the tree set's comparator.

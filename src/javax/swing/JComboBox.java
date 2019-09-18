@@ -1515,7 +1515,7 @@ implements ItemSelectable,ListDataListener,ActionListener, Accessible {
          * @return an int equal to the selected row, where 0 is the
          *         first item and -1 is none.
          */
-        int selectionForKey(char aKey,ComboBoxModel aModel);
+        int selectionForKey(char aKey, ComboBoxModel aModel);
     }
 
     class DefaultKeySelectionManager implements KeySelectionManager, Serializable {

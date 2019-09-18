@@ -133,6 +133,6 @@ public interface StateFactory {
  * @see DirectoryManager#getStateToBind
  */
     public Object getStateToBind(Object obj, Name name, Context nameCtx,
-                                 Hashtable<?,?> environment)
+                                 Hashtable<?, ?> environment)
         throws NamingException;
 }

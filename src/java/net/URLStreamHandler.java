@@ -46,7 +46,7 @@ import sun.net.www.ParseUtil;
  * automatically loaded.
  *
  * @author  James Gosling
- * @see     java.net.URL#URL(java.lang.String, java.lang.String, int, java.lang.String)
+ * @see     URL#URL(String, String, int, String)
  * @since   JDK1.0
  */
 public abstract class URLStreamHandler {
@@ -523,7 +523,7 @@ public abstract class URLStreamHandler {
      * @param   ref       the reference.
      * @exception       SecurityException       if the protocol handler of the URL is
      *                                  different from this one
-     * @see     java.net.URL#set(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)
+     * @see     URL#set(String, String, int, String, String)
      * @since 1.3
      */
        protected void setURL(URL u, String protocol, String host, int port,

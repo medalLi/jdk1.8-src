@@ -57,7 +57,7 @@ public abstract class CalendarDataProvider extends LocaleServiceProvider {
      *         or 0 if the value isn't available for the {@code locale}
      * @throws NullPointerException
      *         if {@code locale} is {@code null}.
-     * @see java.util.Calendar#getFirstDayOfWeek()
+     * @see Calendar#getFirstDayOfWeek()
      * @see <a href="../Calendar.html#first_week">First Week</a>
      */
     public abstract int getFirstDayOfWeek(Locale locale);
@@ -75,7 +75,7 @@ public abstract class CalendarDataProvider extends LocaleServiceProvider {
      *         or 0 if the value isn't available for the {@code locale}
      * @throws NullPointerException
      *         if {@code locale} is {@code null}.
-     * @see java.util.Calendar#getMinimalDaysInFirstWeek()
+     * @see Calendar#getMinimalDaysInFirstWeek()
      */
     public abstract int getMinimalDaysInFirstWeek(Locale locale);
 }

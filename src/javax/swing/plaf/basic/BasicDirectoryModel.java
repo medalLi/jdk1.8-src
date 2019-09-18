@@ -397,7 +397,7 @@ public class BasicDirectoryModel extends AbstractListModel<Object> implements Pr
      *
      * @see      #addPropertyChangeListener
      * @see      #removePropertyChangeListener
-     * @see      java.beans.PropertyChangeSupport#getPropertyChangeListeners
+     * @see      PropertyChangeSupport#getPropertyChangeListeners
      *
      * @since 1.6
      */

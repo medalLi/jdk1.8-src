@@ -32,7 +32,7 @@ abstract public class StringSeqHelper
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.RepositoryPackage.StringSeqHelper.id (), "StringSeq", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (StringSeqHelper.id (), "StringSeq", __typeCode);
     }
     return __typeCode;
   }

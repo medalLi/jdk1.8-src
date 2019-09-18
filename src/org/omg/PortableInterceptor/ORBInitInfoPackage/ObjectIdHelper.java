@@ -33,7 +33,7 @@ abstract public class ObjectIdHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.PortableInterceptor.ORBInitInfoPackage.ObjectIdHelper.id (), "ObjectId", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ObjectIdHelper.id (), "ObjectId", __typeCode);
     }
     return __typeCode;
   }

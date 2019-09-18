@@ -62,7 +62,7 @@ public interface CompilationMXBean extends PlatformManagedObject {
      *
      * @return the name of the JIT compiler.
      */
-    public java.lang.String    getName();
+    public String    getName();
 
     /**
      * Tests if the Java virtual machine supports the monitoring of
@@ -92,7 +92,7 @@ public interface CompilationMXBean extends PlatformManagedObject {
      * measurements of the compilation time.
      *
      * @return Compilation time in milliseconds
-     * @throws java.lang.UnsupportedOperationException if the Java
+     * @throws UnsupportedOperationException if the Java
      * virtual machine does not support
      * this operation.
      *

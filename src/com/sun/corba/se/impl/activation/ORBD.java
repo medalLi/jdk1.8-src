@@ -169,7 +169,7 @@ public class ORBD
             System.out.println( CorbaResourceUtil.getText("orbd.commfailure"));
             System.out.println( cex );
             cex.printStackTrace();
-        } catch( org.omg.CORBA.INTERNAL iex ) {
+        } catch( INTERNAL iex ) {
             System.out.println( CorbaResourceUtil.getText(
                 "orbd.internalexception"));
             System.out.println( iex );

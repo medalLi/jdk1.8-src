@@ -48,9 +48,9 @@ import java.rmi.server.UID;
  * pieces of information needed for activating an object:
  * <ul>
  * <li> a remote reference to the object's activator (a {@link
- * java.rmi.server.RemoteRef RemoteRef}
+ * RemoteRef RemoteRef}
  * instance), and
- * <li> a unique identifier (a {@link java.rmi.server.UID UID}
+ * <li> a unique identifier (a {@link UID UID}
  * instance) for the object. </ul> <p>
  *
  * An activation identifier for an object can be obtained by registering
@@ -167,10 +167,10 @@ public class ActivationID implements Serializable {
      *
      * <p>The <code>writeObject</code> method is invoked on
      * <code>out</code> passing this object's unique identifier
-     * (a {@link java.rmi.server.UID UID} instance) as the argument.
+     * (a {@link UID UID} instance) as the argument.
      *
      * <p>Next, the {@link
-     * java.rmi.server.RemoteRef#getRefClass(java.io.ObjectOutput)
+     * RemoteRef#getRefClass(java.io.ObjectOutput)
      * getRefClass} method is invoked on the activator's
      * <code>RemoteRef</code> instance to obtain its external ref
      * type name.  Next, the <code>writeUTF</code> method is
@@ -192,7 +192,7 @@ public class ActivationID implements Serializable {
      * <p>The external ref type name of the
      * <code>RemoteRef</Code> instance is
      * determined using the definitions of external ref type
-     * names specified in the {@link java.rmi.server.RemoteObject
+     * names specified in the {@link RemoteObject
      * RemoteObject} <code>writeObject</code> method
      * <b>serialData</b> specification.  Similarly, the data
      * written by the <code>writeExternal</code> method and read
@@ -200,7 +200,7 @@ public class ActivationID implements Serializable {
      * <code>RemoteRef</code> implementation classes
      * corresponding to each of the defined external ref type
      * names is specified in the {@link
-     * java.rmi.server.RemoteObject RemoteObject}
+     * RemoteObject RemoteObject}
      * <code>writeObject</code> method <b>serialData</b>
      * specification.
      **/
@@ -235,7 +235,7 @@ public class ActivationID implements Serializable {
      *
      * <p>The <code>readObject</code> method is invoked on
      * <code>in</code> to read this object's unique identifier
-     * (a {@link java.rmi.server.UID UID} instance).
+     * (a {@link UID UID} instance).
      *
      * <p>Next, the <code>readUTF</code> method is invoked on
      * <code>in</code> to read the external ref type name of the

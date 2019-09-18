@@ -85,7 +85,7 @@ public class Reference implements Cloneable, java.io.Serializable {
      * Contains the fully-qualified name of the class of the object to which
      * this Reference refers.
      * @serial
-     * @see java.lang.Class#getName
+     * @see Class#getName
      */
     protected String className;
     /**

@@ -171,7 +171,7 @@ public final class NumberUp extends IntegerSyntax
      * For class NumberUp, the category is class NumberUp itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return NumberUp.class;

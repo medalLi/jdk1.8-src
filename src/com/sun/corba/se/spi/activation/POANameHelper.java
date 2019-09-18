@@ -32,7 +32,7 @@ abstract public class POANameHelper
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.spi.activation.POANameHelper.id (), "POAName", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (POANameHelper.id (), "POAName", __typeCode);
     }
     return __typeCode;
   }

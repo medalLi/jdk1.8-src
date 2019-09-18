@@ -299,7 +299,7 @@ public abstract class SignatureSpi {
      * and cannot be set again, a security exception occurs, and so on.
      *
      * @deprecated Replaced by {@link
-     * #engineSetParameter(java.security.spec.AlgorithmParameterSpec)
+     * #engineSetParameter(AlgorithmParameterSpec)
      * engineSetParameter}.
      */
     @Deprecated

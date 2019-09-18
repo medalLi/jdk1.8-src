@@ -107,8 +107,8 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * should be justified to the leading edge of the container's
      * orientation, for example, to the left in left-to-right orientations.
      *
-     * @see     java.awt.Component#getComponentOrientation
-     * @see     java.awt.ComponentOrientation
+     * @see     Component#getComponentOrientation
+     * @see     ComponentOrientation
      * @since   1.2
      */
     public static final int LEADING     = 3;
@@ -118,8 +118,8 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * should be justified to the trailing edge of the container's
      * orientation, for example, to the right in left-to-right orientations.
      *
-     * @see     java.awt.Component#getComponentOrientation
-     * @see     java.awt.ComponentOrientation
+     * @see     Component#getComponentOrientation
+     * @see     ComponentOrientation
      * @since   1.2
      */
     public static final int TRAILING = 4;
@@ -245,7 +245,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * <code>FlowLayout.LEADING</code>,
      * or <code>FlowLayout.TRAILING</code>.
      * @return     the alignment value for this layout
-     * @see        java.awt.FlowLayout#setAlignment
+     * @see        FlowLayout#setAlignment
      * @since      JDK1.1
      */
     public int getAlignment() {
@@ -294,7 +294,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * @return     the horizontal gap between components
      *             and between the components and the borders
      *             of the <code>Container</code>
-     * @see        java.awt.FlowLayout#setHgap
+     * @see        FlowLayout#setHgap
      * @since      JDK1.1
      */
     public int getHgap() {
@@ -309,7 +309,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * @param hgap the horizontal gap between components
      *             and between the components and the borders
      *             of the <code>Container</code>
-     * @see        java.awt.FlowLayout#getHgap
+     * @see        FlowLayout#getHgap
      * @since      JDK1.1
      */
     public void setHgap(int hgap) {
@@ -324,7 +324,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * @return     the vertical gap between components
      *             and between the components and the borders
      *             of the <code>Container</code>
-     * @see        java.awt.FlowLayout#setVgap
+     * @see        FlowLayout#setVgap
      * @since      JDK1.1
      */
     public int getVgap() {
@@ -338,7 +338,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * @param vgap the vertical gap between components
      *             and between the components and the borders
      *             of the <code>Container</code>
-     * @see        java.awt.FlowLayout#getVgap
+     * @see        FlowLayout#getVgap
      * @since      JDK1.1
      */
     public void setVgap(int vgap) {
@@ -383,7 +383,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * Removes the specified component from the layout.
      * Not used by this class.
      * @param comp the component to remove
-     * @see       java.awt.Container#removeAll
+     * @see       Container#removeAll
      */
     public void removeLayoutComponent(Component comp) {
     }
@@ -397,7 +397,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      *            subcomponents of the specified container
      * @see Container
      * @see #minimumLayoutSize
-     * @see       java.awt.Container#getPreferredSize
+     * @see       Container#getPreferredSize
      */
     public Dimension preferredLayoutSize(Container target) {
       synchronized (target.getTreeLock()) {
@@ -445,8 +445,8 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      * @return    the minimum dimensions to lay out the
      *            subcomponents of the specified container
      * @see #preferredLayoutSize
-     * @see       java.awt.Container
-     * @see       java.awt.Container#doLayout
+     * @see       Container
+     * @see       Container#doLayout
      */
     public Dimension minimumLayoutSize(Container target) {
       synchronized (target.getTreeLock()) {
@@ -582,7 +582,7 @@ public class FlowLayout implements LayoutManager, java.io.Serializable {
      *
      * @param target the specified component being laid out
      * @see Container
-     * @see       java.awt.Container#doLayout
+     * @see       Container#doLayout
      */
     public void layoutContainer(Container target) {
       synchronized (target.getTreeLock()) {

@@ -42,7 +42,7 @@ package java.rmi.server;
  *
  * @author  Ann Wollrath
  * @since   JDK1.1
- * @see     java.rmi.server.UnicastRemoteObject#clone()
+ * @see     UnicastRemoteObject#clone()
  */
 public class ServerCloneException extends CloneNotSupportedException {
 

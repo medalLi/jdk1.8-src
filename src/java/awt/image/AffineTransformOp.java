@@ -58,10 +58,10 @@ import sun.awt.image.ImagingLib;
  * </ul>
  * @see AffineTransform
  * @see BufferedImageFilter
- * @see java.awt.RenderingHints#KEY_INTERPOLATION
- * @see java.awt.RenderingHints#KEY_RENDERING
- * @see java.awt.RenderingHints#KEY_COLOR_RENDERING
- * @see java.awt.RenderingHints#KEY_DITHERING
+ * @see RenderingHints#KEY_INTERPOLATION
+ * @see RenderingHints#KEY_RENDERING
+ * @see RenderingHints#KEY_COLOR_RENDERING
+ * @see RenderingHints#KEY_DITHERING
  */
 public class AffineTransformOp implements BufferedImageOp, RasterOp {
     private AffineTransform xform;
@@ -101,8 +101,8 @@ public class AffineTransformOp implements BufferedImageOp, RasterOp {
      * the interpolation type for the operation.
      *
      * @throws ImagingOpException if the transform is non-invertible.
-     * @see java.awt.RenderingHints#KEY_INTERPOLATION
-     * @see java.awt.RenderingHints#KEY_RENDERING
+     * @see RenderingHints#KEY_INTERPOLATION
+     * @see RenderingHints#KEY_RENDERING
      */
     public AffineTransformOp(AffineTransform xform, RenderingHints hints){
         validateTransform(xform);

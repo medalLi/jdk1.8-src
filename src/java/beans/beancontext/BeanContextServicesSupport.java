@@ -156,7 +156,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
      * when the BeanContextSupport is serialized.
      */
 
-    protected class BCSSChild extends BeanContextSupport.BCSChild  {
+    protected class BCSSChild extends BCSChild  {
 
         private static final long serialVersionUID = -3263851306889194873L;
 
@@ -431,7 +431,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
             boolean                        noMoreRefs  = false;
 
             while (i.hasNext() && serviceRequestors != null) {
-                Map.Entry                         entry    = (Map.Entry)i.next();
+                Entry                         entry    = (Entry)i.next();
                 BeanContextServiceRevokedListener listener = (BeanContextServiceRevokedListener)entry.getValue();
 
                 if (revokeNow) {
@@ -442,7 +442,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
                         Iterator i1 = services.entrySet().iterator();
 
                         while (i1.hasNext()) {
-                            Map.Entry       tmp        = (Map.Entry)i1.next();
+                            Entry       tmp        = (Entry)i1.next();
 
                             BCSSCServiceRef serviceRef = (BCSSCServiceRef)tmp.getValue();
                             if (serviceRef.getServiceClassRef().equals(serviceClassRef) && isDelegated == serviceRef.isDelegated()) {
@@ -482,14 +482,14 @@ public class      BeanContextServicesSupport extends BeanContextSupport
             Iterator requestors = serviceRequestors.entrySet().iterator();
 
             while(requestors.hasNext()) {
-                Map.Entry            tmp       = (Map.Entry)requestors.next();
+                Entry            tmp       = (Entry)requestors.next();
                 Object               requestor = tmp.getKey();
                 Iterator             services  = ((Map)tmp.getValue()).entrySet().iterator();
 
                 requestors.remove();
 
                 while (services.hasNext()) {
-                    Map.Entry       entry   = (Map.Entry)services.next();
+                    Entry       entry   = (Entry)services.next();
                     Object          service = entry.getKey();
                     BCSSCServiceRef sref    = (BCSSCServiceRef)entry.getValue();
 
@@ -526,7 +526,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
                 boolean                        noMoreRefs  = false;
 
                 while (i.hasNext()) {
-                    Map.Entry                         entry     = (Map.Entry)i.next();
+                    Entry                         entry     = (Entry)i.next();
                     BeanContextServiceRevokedListener listener  = (BeanContextServiceRevokedListener)entry.getValue();
 
                     Object                            requestor = entry.getKey();
@@ -536,7 +536,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
                         Iterator i1 = services.entrySet().iterator();
 
                         while (i1.hasNext()) {
-                            Map.Entry       tmp        = (Map.Entry)i1.next();
+                            Entry       tmp        = (Entry)i1.next();
 
                             BCSSCServiceRef serviceRef = (BCSSCServiceRef)tmp.getValue();
                             if (serviceRef.getServiceClassRef().equals(serviceClassRef) && serviceRef.isDelegated()) {
@@ -1162,7 +1162,7 @@ public class      BeanContextServicesSupport extends BeanContextSupport
         Iterator i = services.entrySet().iterator();
 
         while (i.hasNext() && count < serializable) {
-            Map.Entry           entry = (Map.Entry)i.next();
+            Entry           entry = (Entry)i.next();
             BCSSServiceProvider bcsp  = null;
 
              try {

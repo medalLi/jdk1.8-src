@@ -129,7 +129,7 @@ public final class IdentityHashtable extends Dictionary {
      * Returns an enumeration of the keys in this hashtable.
      *
      * @return  an enumeration of the keys in this hashtable.
-     * @see     java.util.Enumeration
+     * @see     Enumeration
      * @see     java.util.Hashtable#elements()
      * @since   JDK1.0
      */
@@ -143,7 +143,7 @@ public final class IdentityHashtable extends Dictionary {
      * sequentially.
      *
      * @return  an enumeration of the values in this hashtable.
-     * @see     java.util.Enumeration
+     * @see     Enumeration
      * @see     java.util.Hashtable#keys()
      * @since   JDK1.0
      */
@@ -161,7 +161,7 @@ public final class IdentityHashtable extends Dictionary {
      *             <code>value</code> argument in this hashtable;
      *             <code>false</code> otherwise.
      * @exception  NullPointerException  if the value is <code>null</code>.
-     * @see        java.util.Hashtable#containsKey(java.lang.Object)
+     * @see        java.util.Hashtable#containsKey(Object)
      * @since      JDK1.0
      */
     public boolean contains(Object value) {
@@ -186,7 +186,7 @@ public final class IdentityHashtable extends Dictionary {
      * @param   key   possible key.
      * @return  <code>true</code> if the specified object is a key in this
      *          hashtable; <code>false</code> otherwise.
-     * @see     java.util.Hashtable#contains(java.lang.Object)
+     * @see     java.util.Hashtable#contains(Object)
      * @since   JDK1.0
      */
     public boolean containsKey(Object key) {
@@ -208,7 +208,7 @@ public final class IdentityHashtable extends Dictionary {
      * @return  the value to which the key is mapped in this hashtable;
      *          <code>null</code> if the key is not mapped to any value in
      *          this hashtable.
-     * @see     java.util.Hashtable#put(java.lang.Object, java.lang.Object)
+     * @see     java.util.Hashtable#put(Object, Object)
      * @since   JDK1.0
      */
     public Object get(Object key) {
@@ -269,7 +269,7 @@ public final class IdentityHashtable extends Dictionary {
      *             or <code>null</code> if it did not have one.
      * @exception  NullPointerException  if the key or value is
      *               <code>null</code>.
-     * @see     java.util.Hashtable#get(java.lang.Object)
+     * @see     java.util.Hashtable#get(Object)
      * @since   JDK1.0
      */
     public Object put(Object key, Object value) {

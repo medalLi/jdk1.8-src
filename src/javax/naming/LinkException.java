@@ -115,7 +115,7 @@ public class LinkException extends NamingException {
       * All the other fields are initialized to null.
       * @param  explanation     A possibly null string containing additional
       *                         detail about this exception.
-      * @see java.lang.Throwable#getMessage
+      * @see Throwable#getMessage
       */
     public LinkException(String explanation) {
         super(explanation);

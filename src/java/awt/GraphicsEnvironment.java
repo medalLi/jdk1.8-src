@@ -39,7 +39,7 @@ import sun.security.action.GetPropertyAction;
 /**
  *
  * The <code>GraphicsEnvironment</code> class describes the collection
- * of {@link GraphicsDevice} objects and {@link java.awt.Font} objects
+ * of {@link GraphicsDevice} objects and {@link Font} objects
  * available to a Java(tm) application on a particular platform.
  * The resources in this <code>GraphicsEnvironment</code> might be local
  * or on a remote machine.  <code>GraphicsDevice</code> objects can be
@@ -133,7 +133,7 @@ public abstract class GraphicsEnvironment {
      * @return <code>true</code> if this environment cannot support
      * a display, keyboard, and mouse; <code>false</code>
      * otherwise
-     * @see java.awt.HeadlessException
+     * @see HeadlessException
      * @since 1.4
      */
     public static boolean isHeadless() {
@@ -160,7 +160,7 @@ public abstract class GraphicsEnvironment {
      */
     private static boolean getHeadlessProperty() {
         if (headless == null) {
-            java.security.AccessController.doPrivileged(
+            AccessController.doPrivileged(
             new java.security.PrivilegedAction<Object>() {
                 public Object run() {
                     String nm = System.getProperty("java.awt.headless");
@@ -217,7 +217,7 @@ public abstract class GraphicsEnvironment {
      * @return <code>true</code> if a display, keyboard, and mouse
      * can be supported in this environment; <code>false</code>
      * otherwise
-     * @see java.awt.HeadlessException
+     * @see HeadlessException
      * @see #isHeadless
      * @since 1.4
      */
@@ -279,9 +279,9 @@ public abstract class GraphicsEnvironment {
      *
      * @return an array of <code>Font</code> objects
      * @see #getAvailableFontFamilyNames
-     * @see java.awt.Font
-     * @see java.awt.Font#deriveFont
-     * @see java.awt.Font#getFontName
+     * @see Font
+     * @see Font#deriveFont
+     * @see Font#getFontName
      * @since 1.2
      */
     public abstract Font[] getAllFonts();
@@ -301,8 +301,8 @@ public abstract class GraphicsEnvironment {
      * localized for the default locale, or a suitable alternative
      * name if no name exists for this locale.
      * @see #getAllFonts
-     * @see java.awt.Font
-     * @see java.awt.Font#getFamily
+     * @see Font
+     * @see Font#getFamily
      * @since 1.2
      */
     public abstract String[] getAvailableFontFamilyNames();
@@ -325,8 +325,8 @@ public abstract class GraphicsEnvironment {
      * localized for the specified <code>Locale</code>, or a
      * suitable alternative name if no name exists for the specified locale.
      * @see #getAllFonts
-     * @see java.awt.Font
-     * @see java.awt.Font#getFamily
+     * @see Font
+     * @see Font#getFamily
      * @since 1.2
      */
     public abstract String[] getAvailableFontFamilyNames(Locale l);

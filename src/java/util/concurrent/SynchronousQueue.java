@@ -1070,7 +1070,7 @@ public class SynchronousQueue<E> extends AbstractQueue<E>
 
     /**
      * Returns an empty spliterator in which calls to
-     * {@link java.util.Spliterator#trySplit()} always return {@code null}.
+     * {@link Spliterator#trySplit()} always return {@code null}.
      *
      * @return an empty spliterator
      * @since 1.8

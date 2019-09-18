@@ -67,7 +67,7 @@ import java.nio.charset.StandardCharsets;
  * </ul>
  *
  * <p> Unless otherwise noted, passing a {@code null} argument to a
- * method of this class will cause a {@link java.lang.NullPointerException
+ * method of this class will cause a {@link NullPointerException
  * NullPointerException} to be thrown.
  *
  * @author  Xueming Shen
@@ -181,7 +181,7 @@ public class Base64 {
      *
      * <p> Unless otherwise noted, passing a {@code null} argument to
      * a method of this class will cause a
-     * {@link java.lang.NullPointerException NullPointerException} to
+     * {@link NullPointerException NullPointerException} to
      * be thrown.
      *
      * @see     Decoder
@@ -299,7 +299,7 @@ public class Base64 {
          *
          * <p> This method first encodes all input bytes into a base64 encoded
          * byte array and then constructs a new String by using the encoded byte
-         * array and the {@link java.nio.charset.StandardCharsets#ISO_8859_1
+         * array and the {@link StandardCharsets#ISO_8859_1
          * ISO-8859-1} charset.
          *
          * <p> In other words, an invocation of this method has exactly the same
@@ -458,7 +458,7 @@ public class Base64 {
      *
      * <p> Unless otherwise noted, passing a {@code null} argument to
      * a method of this class will cause a
-     * {@link java.lang.NullPointerException NullPointerException} to
+     * {@link NullPointerException NullPointerException} to
      * be thrown.
      *
      * @see     Encoder

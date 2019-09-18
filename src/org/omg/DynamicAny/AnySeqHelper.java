@@ -32,7 +32,7 @@ abstract public class AnySeqHelper
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_any);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.DynamicAny.AnySeqHelper.id (), "AnySeq", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (AnySeqHelper.id (), "AnySeq", __typeCode);
     }
     return __typeCode;
   }

@@ -139,7 +139,7 @@ public @interface XmlElementDecl {
      * scope of the mapping.
      *
      * <p>
-     * If this is not {@link XmlElementDecl.GLOBAL}, then this element
+     * If this is not {@link GLOBAL}, then this element
      * declaration mapping is only active within the specified class.
      */
     Class scope() default GLOBAL.class;

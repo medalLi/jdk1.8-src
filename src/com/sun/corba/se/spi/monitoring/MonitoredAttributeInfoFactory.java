@@ -42,6 +42,6 @@ public interface MonitoredAttributeInfoFactory {
     /**
      *  A Simple Factory Method to create the Monitored Attribute Info.
      */
-    MonitoredAttributeInfo createMonitoredAttributeInfo( String description,
-        Class type, boolean isWritable, boolean isStatistic  );
+    MonitoredAttributeInfo createMonitoredAttributeInfo(String description,
+                                                        Class type, boolean isWritable, boolean isStatistic);
 }

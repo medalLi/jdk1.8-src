@@ -63,7 +63,7 @@ public class NamingUtils {
      * Prints the stacktrace of the supplied exception to the error stream.
      * @param e any Java exception.
      */
-    public static void printException(java.lang.Exception e) {
+    public static void printException(Exception e) {
         if (errStream != null)
             e.printStackTrace(errStream);
         else
@@ -76,13 +76,13 @@ public class NamingUtils {
      * @exception IOException thrown if the file cannot be opened for output.
      */
     public static void makeDebugStream(File logFile)
-        throws java.io.IOException {
+        throws IOException {
         // Create an outputstream for debugging
-        java.io.OutputStream logOStream =
-            new java.io.FileOutputStream(logFile);
-        java.io.DataOutputStream logDStream =
-            new java.io.DataOutputStream(logOStream);
-        debugStream = new java.io.PrintStream(logDStream);
+        OutputStream logOStream =
+            new FileOutputStream(logFile);
+        DataOutputStream logDStream =
+            new DataOutputStream(logOStream);
+        debugStream = new PrintStream(logDStream);
 
         // Emit first message
         debugStream.println("Debug Stream Enabled.");
@@ -94,14 +94,14 @@ public class NamingUtils {
      * @exception IOException thrown if the file cannot be opened for output.
      */
     public static void makeErrStream(File errFile)
-        throws java.io.IOException {
+        throws IOException {
         if (debug) {
             // Create an outputstream for errors
-            java.io.OutputStream errOStream =
-                new java.io.FileOutputStream(errFile);
-            java.io.DataOutputStream errDStream =
-                new java.io.DataOutputStream(errOStream);
-            errStream = new java.io.PrintStream(errDStream);
+            OutputStream errOStream =
+                new FileOutputStream(errFile);
+            DataOutputStream errDStream =
+                new DataOutputStream(errOStream);
+            errStream = new PrintStream(errDStream);
             dprint("Error stream setup completed.");
         }
     }
@@ -123,10 +123,10 @@ public class NamingUtils {
     /**
      * The debug printstream.
      */
-    public static java.io.PrintStream debugStream;
+    public static PrintStream debugStream;
 
     /**
      * The error printstream.
      */
-    public static java.io.PrintStream errStream;
+    public static PrintStream errStream;
 }

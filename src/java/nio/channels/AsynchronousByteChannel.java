@@ -39,7 +39,7 @@ import java.util.concurrent.Future;
  * I/O operations may proceed concurrently with a read operation depends upon
  * the type of the channel.
  *
- * <p> Note that {@link java.nio.ByteBuffer ByteBuffers} are not safe for use by
+ * <p> Note that {@link ByteBuffer ByteBuffers} are not safe for use by
  * multiple concurrent threads. When a read or write operation is initiated then
  * care must be taken to ensure that the buffer is not accessed until the
  * operation completes.
@@ -107,7 +107,7 @@ public interface AsynchronousByteChannel
      */
     <A> void read(ByteBuffer dst,
                   A attachment,
-                  CompletionHandler<Integer,? super A> handler);
+                  CompletionHandler<Integer, ? super A> handler);
 
     /**
      * Reads a sequence of bytes from this channel into the given buffer.
@@ -186,7 +186,7 @@ public interface AsynchronousByteChannel
      */
     <A> void write(ByteBuffer src,
                    A attachment,
-                   CompletionHandler<Integer,? super A> handler);
+                   CompletionHandler<Integer, ? super A> handler);
 
     /**
      * Writes a sequence of bytes to this channel from the given buffer.

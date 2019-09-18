@@ -87,7 +87,7 @@ public class RequestImpl
     protected boolean            _isOneWay      = false;
     private int[]                _paramCodes;
     private long[]               _paramLongs;
-    private java.lang.Object[]   _paramObjects;
+    private Object[]   _paramObjects;
 
     // support for deferred invocations.
     // protected instead of private since it needs to be set by the
@@ -194,32 +194,32 @@ public class RequestImpl
 
     public synchronized Any add_in_arg()
     {
-        return _arguments.add(org.omg.CORBA.ARG_IN.value).value();
+        return _arguments.add(ARG_IN.value).value();
     }
 
     public synchronized Any add_named_in_arg(String name)
     {
-        return _arguments.add_item(name, org.omg.CORBA.ARG_IN.value).value();
+        return _arguments.add_item(name, ARG_IN.value).value();
     }
 
     public synchronized Any add_inout_arg()
     {
-        return _arguments.add(org.omg.CORBA.ARG_INOUT.value).value();
+        return _arguments.add(ARG_INOUT.value).value();
     }
 
     public synchronized Any add_named_inout_arg(String name)
     {
-        return _arguments.add_item(name, org.omg.CORBA.ARG_INOUT.value).value();
+        return _arguments.add_item(name, ARG_INOUT.value).value();
     }
 
     public synchronized Any add_out_arg()
     {
-        return _arguments.add(org.omg.CORBA.ARG_OUT.value).value();
+        return _arguments.add(ARG_OUT.value).value();
     }
 
     public synchronized Any add_named_out_arg(String name)
     {
-        return _arguments.add_item(name, org.omg.CORBA.ARG_OUT.value).value();
+        return _arguments.add_item(name, ARG_OUT.value).value();
     }
 
     public synchronized void set_return_type(TypeCode tc)
@@ -269,7 +269,7 @@ public class RequestImpl
     }
 
     public synchronized void get_response()
-        throws org.omg.CORBA.WrongTransaction
+        throws WrongTransaction
     {
         while (gotResponse == false) {
             // release the lock. wait to be notified by the thread that is
@@ -318,7 +318,7 @@ public class RequestImpl
                         break;
                     }
                 }
-            } catch ( org.omg.CORBA.Bounds ex ) {
+            } catch ( Bounds ex ) {
                 throw _wrapper.boundsErrorInDiiRequest( ex ) ;
             }
 
@@ -367,7 +367,7 @@ public class RequestImpl
                 }
             }
         }
-        catch ( org.omg.CORBA.Bounds ex ) {
+        catch ( Bounds ex ) {
             // Cannot happen since we only iterate till _arguments.count()
         }
     }

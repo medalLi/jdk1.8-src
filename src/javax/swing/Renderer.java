@@ -41,7 +41,7 @@ public interface Renderer {
      * @param aValue      an Object object
      * @param isSelected  a boolean
      */
-    void setValue(Object aValue,boolean isSelected);
+    void setValue(Object aValue, boolean isSelected);
     /**
      * Returns the component used to render the value.
      *

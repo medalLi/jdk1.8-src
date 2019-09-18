@@ -69,7 +69,7 @@ public interface UtilDelegate {
     /**
      * Delegation call for {@link Util#readAny}.
      */
-    java.lang.Object readAny(InputStream in);
+    Object readAny(InputStream in);
 
     /**
      * Delegation call for {@link Util#writeRemoteObject}.

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 abstract class POAPolicyMediatorFactory {
     // create an appropriate policy mediator based on the policies.

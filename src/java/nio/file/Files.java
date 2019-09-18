@@ -301,7 +301,7 @@ public final class Files {
      * file-attributes} to set atomically when a new file is created.
      *
      * <p> In the case of the default provider, the returned seekable byte channel
-     * is a {@link java.nio.channels.FileChannel}.
+     * is a {@link FileChannel}.
      *
      * <p> <b>Usage Examples:</b>
      * <pre>
@@ -351,7 +351,7 @@ public final class Files {
      *          invoked to check delete access if the file is opened with the
      *          {@code DELETE_ON_CLOSE} option.
      *
-     * @see java.nio.channels.FileChannel#open(Path,Set,FileAttribute[])
+     * @see FileChannel#open(Path,Set,FileAttribute[])
      */
     public static SeekableByteChannel newByteChannel(Path path,
                                                      Set<? extends OpenOption> options,
@@ -397,7 +397,7 @@ public final class Files {
      *          invoked to check delete access if the file is opened with the
      *          {@code DELETE_ON_CLOSE} option.
      *
-     * @see java.nio.channels.FileChannel#open(Path,OpenOption[])
+     * @see FileChannel#open(Path,OpenOption[])
      */
     public static SeekableByteChannel newByteChannel(Path path, OpenOption... options)
         throws IOException
@@ -795,7 +795,7 @@ public final class Files {
      * implementation dependent and therefore not specified. Where possible
      * the {@code prefix} and {@code suffix} are used to construct candidate
      * names in the same manner as the {@link
-     * java.io.File#createTempFile(String,String,File)} method.
+     * File#createTempFile(String,String,File)} method.
      *
      * <p> As with the {@code File.createTempFile} methods, this method is only
      * part of a temporary-file facility. Where used as a <em>work files</em>,
@@ -803,7 +803,7 @@ public final class Files {
      * StandardOpenOption#DELETE_ON_CLOSE DELETE_ON_CLOSE} option so that the
      * file is deleted when the appropriate {@code close} method is invoked.
      * Alternatively, a {@link Runtime#addShutdownHook shutdown-hook}, or the
-     * {@link java.io.File#deleteOnExit} mechanism may be used to delete the
+     * {@link File#deleteOnExit} mechanism may be used to delete the
      * file automatically.
      *
      * <p> The {@code attrs} parameter is optional {@link FileAttribute
@@ -812,7 +812,7 @@ public final class Files {
      * attribute of the same name is included in the array then all but the last
      * occurrence is ignored. When no file attributes are specified, then the
      * resulting file may have more restrictive access permissions to files
-     * created by the {@link java.io.File#createTempFile(String,String,File)}
+     * created by the {@link File#createTempFile(String,String,File)}
      * method.
      *
      * @param   dir
@@ -908,7 +908,7 @@ public final class Files {
      *
      * <p> As with the {@code createTempFile} methods, this method is only
      * part of a temporary-file facility. A {@link Runtime#addShutdownHook
-     * shutdown-hook}, or the {@link java.io.File#deleteOnExit} mechanism may be
+     * shutdown-hook}, or the {@link File#deleteOnExit} mechanism may be
      * used to delete the directory automatically.
      *
      * <p> The {@code attrs} parameter is optional {@link FileAttribute
@@ -1498,7 +1498,7 @@ public final class Files {
      *          installed, the {@link SecurityManager#checkRead(String) checkRead}
      *          method is invoked to check read access to both files.
      *
-     * @see java.nio.file.attribute.BasicFileAttributes#fileKey
+     * @see BasicFileAttributes#fileKey
      */
     public static boolean isSameFile(Path path, Path path2) throws IOException {
         return provider(path).isSameFile(path, path2);
@@ -2571,7 +2571,7 @@ public final class Files {
      * and the error or exception is propagated to the caller of this method.
      *
      * <p> For each file encountered this method attempts to read its {@link
-     * java.nio.file.attribute.BasicFileAttributes}. If the file is not a
+     * BasicFileAttributes}. If the file is not a
      * directory then the {@link FileVisitor#visitFile visitFile} method is
      * invoked with the file attributes. If the file attributes cannot be read,
      * due to an I/O exception, then the {@link FileVisitor#visitFileFailed
@@ -2604,7 +2604,7 @@ public final class Files {
      * track of directories visited so that cycles can be detected. A cycle
      * arises when there is an entry in a directory that is an ancestor of the
      * directory. Cycle detection is done by recording the {@link
-     * java.nio.file.attribute.BasicFileAttributes#fileKey file-key} of directories,
+     * BasicFileAttributes#fileKey file-key} of directories,
      * or if file keys are not available, by invoking the {@link #isSameFile
      * isSameFile} method to test if a directory is the same file as an
      * ancestor. When a cycle is detected it is treated as an I/O error, and the
@@ -3519,7 +3519,7 @@ public final class Files {
      * track of directories visited so that cycles can be detected. A cycle
      * arises when there is an entry in a directory that is an ancestor of the
      * directory. Cycle detection is done by recording the {@link
-     * java.nio.file.attribute.BasicFileAttributes#fileKey file-key} of directories,
+     * BasicFileAttributes#fileKey file-key} of directories,
      * or if file keys are not available, by invoking the {@link #isSameFile
      * isSameFile} method to test if a directory is the same file as an
      * ancestor. When a cycle is detected it is treated as an I/O error with
@@ -3539,7 +3539,7 @@ public final class Files {
      * {@code try}-with-resources construct should be used to ensure that the
      * stream's {@link Stream#close close} method is invoked after the stream
      * operations are completed.  Operating on a closed stream will result in an
-     * {@link java.lang.IllegalStateException}.
+     * {@link IllegalStateException}.
      *
      * <p> If an {@link IOException} is thrown when accessing the directory
      * after this method has returned, it is wrapped in an {@link
@@ -3601,7 +3601,7 @@ public final class Files {
      * {@code try}-with-resources construct should be used to ensure that the
      * stream's {@link Stream#close close} method is invoked after the stream
      * operations are completed.  Operating on a closed stream will result in an
-     * {@link java.lang.IllegalStateException}.
+     * {@link IllegalStateException}.
      *
      * @param   start
      *          the starting file
@@ -3637,7 +3637,7 @@ public final class Files {
      * {@link Path#resolve(Path) resolving} the relative path against {@code
      * start} and is only included in the returned {@link Stream} if
      * the {@code BiPredicate} returns true. Compare to calling {@link
-     * java.util.stream.Stream#filter filter} on the {@code Stream}
+     * Stream#filter filter} on the {@code Stream}
      * returned by {@code walk} method, this method may be more efficient by
      * avoiding redundant retrieval of the {@code BasicFileAttributes}.
      *
@@ -3646,7 +3646,7 @@ public final class Files {
      * {@code try}-with-resources construct should be used to ensure that the
      * stream's {@link Stream#close close} method is invoked after the stream
      * operations are completed.  Operating on a closed stream will result in an
-     * {@link java.lang.IllegalStateException}.
+     * {@link IllegalStateException}.
      *
      * <p> If an {@link IOException} is thrown when accessing the directory
      * after returned from this method, it is wrapped in an {@link
@@ -3710,7 +3710,7 @@ public final class Files {
      * occurs while reading from the file or when a malformed or unmappable byte
      * sequence is read, is wrapped in an {@link UncheckedIOException} that will
      * be thrown from the
-     * {@link java.util.stream.Stream} method that caused the read to take
+     * {@link Stream} method that caused the read to take
      * place. In case an {@code IOException} is thrown when closing the file,
      * it is also wrapped as an {@code UncheckedIOException}.
      *
@@ -3737,7 +3737,7 @@ public final class Files {
      *
      * @see     #readAllLines(Path, Charset)
      * @see     #newBufferedReader(Path, Charset)
-     * @see     java.io.BufferedReader#lines()
+     * @see     BufferedReader#lines()
      * @since   1.8
      */
     public static Stream<String> lines(Path path, Charset cs) throws IOException {

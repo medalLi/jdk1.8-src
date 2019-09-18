@@ -35,7 +35,7 @@ abstract public class AppNamesHelper
     {
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.PortableActivationIDL.RepositoryPackage.AppNamesHelper.id (), "AppNames", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (AppNamesHelper.id (), "AppNames", __typeCode);
     }
     return __typeCode;
   }

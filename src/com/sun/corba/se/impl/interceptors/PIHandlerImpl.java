@@ -712,7 +712,7 @@ public class PIHandlerImpl implements PIHandler
         info.setInfo( request, oa, objectId, oktemp );
     }
 
-    public void setServerPIInfo( java.lang.Object servant,
+    public void setServerPIInfo( Object servant,
                                           String targetMostDerivedInterface )
     {
         if( !hasServerInterceptors ) return;
@@ -945,7 +945,7 @@ public class PIHandlerImpl implements PIHandler
      *  _REVISIT_, Once Policy Framework work is completed, Reorganize
      *  this method to com.sun.corba.se.spi.orb.ORB.
      */
-    public org.omg.CORBA.Policy create_policy(int type, org.omg.CORBA.Any val)
+    public org.omg.CORBA.Policy create_policy(int type, Any val)
         throws org.omg.CORBA.PolicyError
     {
         if( val == null ) {
@@ -976,7 +976,7 @@ public class PIHandlerImpl implements PIHandler
             policyFactoryTable = new HashMap();
         }
         Integer key = new Integer( type );
-        java.lang.Object val = policyFactoryTable.get( key );
+        Object val = policyFactoryTable.get( key );
         if( val == null ) {
             policyFactoryTable.put( key, factory );
         }

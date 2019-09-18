@@ -12,7 +12,7 @@ abstract public class DuplicateNameHelper
 {
   private static String  _id = "IDL:omg.org/PortableInterceptor/ORBInitInfo/DuplicateName:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName that)
+  public static void insert (org.omg.CORBA.Any a, DuplicateName that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class DuplicateNameHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName extract (org.omg.CORBA.Any a)
+  public static DuplicateName extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -47,7 +47,7 @@ abstract public class DuplicateNameHelper
             "name",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateNameHelper.id (), "DuplicateName", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (DuplicateNameHelper.id (), "DuplicateName", _members0);
           __active = false;
         }
       }
@@ -60,16 +60,16 @@ abstract public class DuplicateNameHelper
     return _id;
   }
 
-  public static org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName read (org.omg.CORBA.portable.InputStream istream)
+  public static DuplicateName read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName value = new org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName ();
+    DuplicateName value = new DuplicateName ();
     // read and discard the repository ID
     istream.read_string ();
     value.name = istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, DuplicateName value)
   {
     // write the repository ID
     ostream.write_string (id ());

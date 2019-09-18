@@ -35,7 +35,7 @@ import com.sun.corba.se.impl.orbutil.ORBConstants;
 
 // REVISIT: After Merlin to see if we can get rid of this Thread and
 // make the registration of PNameService for INS and BootStrap neat.
-public class NameServiceStartThread extends java.lang.Thread
+public class NameServiceStartThread extends Thread
 {
     private ORB orb;
     private File dbDir;

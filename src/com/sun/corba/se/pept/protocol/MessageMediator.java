@@ -42,26 +42,26 @@ import java.io.IOException;
 public interface MessageMediator
 {
     /**
-     * The {@link com.sun.corba.se.pept.broker.Broker Broker} associated
+     * The {@link Broker Broker} associated
      * with an invocation.
      *
-     * @return {@link com.sun.corba.se.pept.broker.Broker Broker}
+     * @return {@link Broker Broker}
      */
     public Broker getBroker();
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * which created this <code>MessageMediator</code>.
      *
      * @return
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      */
     public ContactInfo getContactInfo();
 
     /**
      * Get the
-     * {@link com.sun.corba.se.pept.transport.Connection Connection}
+     * {@link Connection Connection}
      * on which this message is sent or received.
      */
     public Connection getConnection();
@@ -90,7 +90,7 @@ public interface MessageMediator
 
     /**
      * Used to set the
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      * used for the message.
      *
      * @param outputObject
@@ -99,17 +99,17 @@ public interface MessageMediator
 
     /**
      * Used to get the
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      * used for the message.
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      */
     public OutputObject getOutputObject();
 
     /**
      * Used to set the
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      * used for the message.
      *
      * @param inputObject
@@ -118,11 +118,11 @@ public interface MessageMediator
 
     /**
      * Used to get the
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      * used for the message.
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      */
     public InputObject getInputObject();
 }

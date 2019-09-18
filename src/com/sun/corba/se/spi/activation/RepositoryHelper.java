@@ -12,7 +12,7 @@ abstract public class RepositoryHelper
 {
   private static String  _id = "IDL:activation/Repository:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.spi.activation.Repository that)
+  public static void insert (org.omg.CORBA.Any a, Repository that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class RepositoryHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.spi.activation.Repository extract (org.omg.CORBA.Any a)
+  public static Repository extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -30,7 +30,7 @@ abstract public class RepositoryHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (com.sun.corba.se.spi.activation.RepositoryHelper.id (), "Repository");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (RepositoryHelper.id (), "Repository");
     }
     return __typeCode;
   }
@@ -40,43 +40,43 @@ abstract public class RepositoryHelper
     return _id;
   }
 
-  public static com.sun.corba.se.spi.activation.Repository read (org.omg.CORBA.portable.InputStream istream)
+  public static Repository read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_RepositoryStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.spi.activation.Repository value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, Repository value)
   {
     ostream.write_Object ((org.omg.CORBA.Object) value);
   }
 
-  public static com.sun.corba.se.spi.activation.Repository narrow (org.omg.CORBA.Object obj)
+  public static Repository narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof com.sun.corba.se.spi.activation.Repository)
-      return (com.sun.corba.se.spi.activation.Repository)obj;
+    else if (obj instanceof Repository)
+      return (Repository)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      com.sun.corba.se.spi.activation._RepositoryStub stub = new com.sun.corba.se.spi.activation._RepositoryStub ();
+      _RepositoryStub stub = new _RepositoryStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static com.sun.corba.se.spi.activation.Repository unchecked_narrow (org.omg.CORBA.Object obj)
+  public static Repository unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof com.sun.corba.se.spi.activation.Repository)
-      return (com.sun.corba.se.spi.activation.Repository)obj;
+    else if (obj instanceof Repository)
+      return (Repository)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      com.sun.corba.se.spi.activation._RepositoryStub stub = new com.sun.corba.se.spi.activation._RepositoryStub ();
+      _RepositoryStub stub = new _RepositoryStub ();
       stub._set_delegate(delegate);
       return stub;
     }

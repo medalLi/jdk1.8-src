@@ -108,5 +108,5 @@ public interface DomainCombiner {
      *          or {@code null}.
      */
     ProtectionDomain[] combine(ProtectionDomain[] currentDomains,
-                                ProtectionDomain[] assignedDomains);
+                               ProtectionDomain[] assignedDomains);
 }

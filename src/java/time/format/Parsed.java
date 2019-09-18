@@ -263,7 +263,7 @@ final class Parsed implements TemporalAccessor {
             int changedCount = 0;
             outer:
             while (changedCount < 50) {
-                for (Map.Entry<TemporalField, Long> entry : fieldValues.entrySet()) {
+                for (Entry<TemporalField, Long> entry : fieldValues.entrySet()) {
                     TemporalField targetField = entry.getKey();
                     TemporalAccessor resolvedObject = targetField.resolve(fieldValues, this, resolverStyle);
                     if (resolvedObject != null) {

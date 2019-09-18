@@ -175,12 +175,12 @@ public class PropertyEditorSupport implements PropertyEditor {
      *
      * @param text  The string to be parsed.
      */
-    public void setAsText(String text) throws java.lang.IllegalArgumentException {
+    public void setAsText(String text) throws IllegalArgumentException {
         if (value instanceof String) {
             setValue(text);
             return;
         }
-        throw new java.lang.IllegalArgumentException(text);
+        throw new IllegalArgumentException(text);
     }
 
     //----------------------------------------------------------------------

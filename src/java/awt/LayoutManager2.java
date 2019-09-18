@@ -55,7 +55,7 @@ public interface LayoutManager2 extends LayoutManager {
     /**
      * Calculates the maximum size dimensions for the specified container,
      * given the components it contains.
-     * @see java.awt.Component#getMaximumSize
+     * @see Component#getMaximumSize
      * @see LayoutManager
      */
     public Dimension maximumLayoutSize(Container target);

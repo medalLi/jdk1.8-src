@@ -33,7 +33,7 @@ import javax.swing.JTree;
   * Adds to CellEditor the extensions necessary to configure an editor
   * in a tree.
   *
-  * @see javax.swing.JTree
+  * @see JTree
   *
   * @author Scott Violet
   */

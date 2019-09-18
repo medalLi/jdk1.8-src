@@ -48,7 +48,7 @@ package org.xml.sax;
  *
  * @since SAX 2.0
  * @author David Megginson
- * @see org.xml.sax.SAXNotSupportedException
+ * @see SAXNotSupportedException
  */
 public class SAXNotRecognizedException extends SAXException
 {

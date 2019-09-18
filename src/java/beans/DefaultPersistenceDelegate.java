@@ -50,7 +50,7 @@ import sun.reflect.misc.*;
  * as arguments.
  *
  * @see #DefaultPersistenceDelegate(String[])
- * @see java.beans.Introspector
+ * @see Introspector
  *
  * @since 1.4
  *
@@ -65,7 +65,7 @@ public class DefaultPersistenceDelegate extends PersistenceDelegate {
     /**
      * Creates a persistence delegate for a class with a nullary constructor.
      *
-     * @see #DefaultPersistenceDelegate(java.lang.String[])
+     * @see #DefaultPersistenceDelegate(String[])
      */
     public DefaultPersistenceDelegate() {
         this.constructor = EMPTY;
@@ -393,8 +393,8 @@ public class DefaultPersistenceDelegate extends PersistenceDelegate {
      *
      * @throws NullPointerException if {@code out} is {@code null}
      *
-     * @see java.beans.Introspector#getBeanInfo
-     * @see java.beans.PropertyDescriptor
+     * @see Introspector#getBeanInfo
+     * @see PropertyDescriptor
      */
     protected void initialize(Class<?> type,
                               Object oldInstance, Object newInstance,

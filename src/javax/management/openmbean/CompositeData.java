@@ -127,7 +127,7 @@ public interface CompositeData {
      * This ensures that this <tt>equals</tt> method works properly for
      * <var>obj</var> parameters which are different implementations of the
      * <code>CompositeData</code> interface, with the restrictions mentioned in the
-     * {@link java.util.Collection#equals(Object) equals}
+     * {@link Collection#equals(Object) equals}
      * method of the <tt>java.util.Collection</tt> interface.
      *
      * @param  obj  the object to be compared for equality with this

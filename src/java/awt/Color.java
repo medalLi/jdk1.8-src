@@ -404,7 +404,7 @@ public class Color implements Paint, java.io.Serializable {
      * defaulted to 255.
      *
      * @param rgb the combined RGB components
-     * @see java.awt.image.ColorModel#getRGBdefault
+     * @see ColorModel#getRGBdefault
      * @see #getRed
      * @see #getGreen
      * @see #getBlue
@@ -424,7 +424,7 @@ public class Color implements Paint, java.io.Serializable {
      * @param rgba the combined RGBA components
      * @param hasalpha <code>true</code> if the alpha bits are valid;
      *        <code>false</code> otherwise
-     * @see java.awt.image.ColorModel#getRGBdefault
+     * @see ColorModel#getRGBdefault
      * @see #getRed
      * @see #getGreen
      * @see #getBlue
@@ -593,7 +593,7 @@ public class Color implements Paint, java.io.Serializable {
      * blue).
      * @return the RGB value of the color in the default sRGB
      *         <code>ColorModel</code>.
-     * @see java.awt.image.ColorModel#getRGBdefault
+     * @see ColorModel#getRGBdefault
      * @see #getRed
      * @see #getGreen
      * @see #getBlue
@@ -620,7 +620,7 @@ public class Color implements Paint, java.io.Serializable {
      * @return     a new <code>Color</code> object that is
      *                 a brighter version of this <code>Color</code>
      *                 with the same {@code alpha} value.
-     * @see        java.awt.Color#darker
+     * @see        Color#darker
      * @since      JDK1.0
      */
     public Color brighter() {
@@ -663,7 +663,7 @@ public class Color implements Paint, java.io.Serializable {
      * @return  a new <code>Color</code> object that is
      *                    a darker version of this <code>Color</code>
      *                    with the same {@code alpha} value.
-     * @see        java.awt.Color#brighter
+     * @see        Color#brighter
      * @since      JDK1.0
      */
     public Color darker() {
@@ -719,7 +719,7 @@ public class Color implements Paint, java.io.Serializable {
      * @param      nm a <code>String</code> that represents
      *                            an opaque color as a 24-bit integer
      * @return     the new <code>Color</code> object.
-     * @see        java.lang.Integer#decode
+     * @see        Integer#decode
      * @exception  NumberFormatException  if the specified string cannot
      *                      be interpreted as a decimal,
      *                      octal, or hexadecimal integer.
@@ -744,9 +744,9 @@ public class Color implements Paint, java.io.Serializable {
      * @param    nm the name of the color property
      * @return   the <code>Color</code> converted from the system
      *          property.
-     * @see      java.lang.System#getProperty(java.lang.String)
-     * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      java.awt.Color#Color(int)
+     * @see      System#getProperty(String)
+     * @see      Integer#getInteger(String)
+     * @see      Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm) {
@@ -768,9 +768,9 @@ public class Color implements Paint, java.io.Serializable {
      * @param    v    the default <code>Color</code>
      * @return   the <code>Color</code> converted from the system
      *          property, or the specified <code>Color</code>.
-     * @see      java.lang.System#getProperty(java.lang.String)
-     * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      java.awt.Color#Color(int)
+     * @see      System#getProperty(String)
+     * @see      Integer#getInteger(String)
+     * @see      Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm, Color v) {
@@ -798,9 +798,9 @@ public class Color implements Paint, java.io.Serializable {
      * @return   the <code>Color</code> converted from the system
      *          property or the <code>Color</code> converted from
      *          the specified integer.
-     * @see      java.lang.System#getProperty(java.lang.String)
-     * @see      java.lang.Integer#getInteger(java.lang.String)
-     * @see      java.awt.Color#Color(int)
+     * @see      System#getProperty(String)
+     * @see      Integer#getInteger(String)
+     * @see      Color#Color(int)
      * @since    JDK1.0
      */
     public static Color getColor(String nm, int v) {
@@ -831,9 +831,9 @@ public class Color implements Paint, java.io.Serializable {
      * @param     brightness   the brightness of the color
      * @return    the RGB value of the color with the indicated hue,
      *                            saturation, and brightness.
-     * @see       java.awt.Color#getRGB()
-     * @see       java.awt.Color#Color(int)
-     * @see       java.awt.image.ColorModel#getRGBdefault()
+     * @see       Color#getRGB()
+     * @see       Color#Color(int)
+     * @see       ColorModel#getRGBdefault()
      * @since     JDK1.0
      */
     public static int HSBtoRGB(float hue, float saturation, float brightness) {
@@ -842,7 +842,7 @@ public class Color implements Paint, java.io.Serializable {
             r = g = b = (int) (brightness * 255.0f + 0.5f);
         } else {
             float h = (hue - (float)Math.floor(hue)) * 6.0f;
-            float f = h - (float)java.lang.Math.floor(h);
+            float f = h - (float) Math.floor(h);
             float p = brightness * (1.0f - saturation);
             float q = brightness * (1.0f - saturation * f);
             float t = brightness * (1.0f - (saturation * (1.0f - f)));
@@ -899,9 +899,9 @@ public class Color implements Paint, java.io.Serializable {
      * @return    an array of three elements containing the hue, saturation,
      *                     and brightness (in that order), of the color with
      *                     the indicated red, green, and blue components.
-     * @see       java.awt.Color#getRGB()
-     * @see       java.awt.Color#Color(int)
-     * @see       java.awt.image.ColorModel#getRGBdefault()
+     * @see       Color#getRGB()
+     * @see       Color#Color(int)
+     * @see       ColorModel#getRGBdefault()
      * @since     JDK1.0
      */
     public static float[] RGBtoHSB(int r, int g, int b, float[] hsbvals) {

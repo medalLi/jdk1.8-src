@@ -32,7 +32,7 @@ package java.awt.geom;
  * <code>AffineTransform</code> is in a non-invertible state.
  */
 
-public class NoninvertibleTransformException extends java.lang.Exception {
+public class NoninvertibleTransformException extends Exception {
     /**
      * Constructs an instance of
      * <code>NoninvertibleTransformException</code>

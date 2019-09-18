@@ -18,7 +18,7 @@ package org.omg.CosNaming;
  * CORBA COS 
  * Naming Specification.</a>
  */
-public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.CosNaming.NamingContext
+public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implements NamingContext
 {
 
 
@@ -45,12 +45,12 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound 
    * Indicates an object is already bound to the specified name.<p> 
    */
-  public void bind (org.omg.CosNaming.NameComponent[] n, org.omg.CORBA.Object obj) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, org.omg.CosNaming.NamingContextPackage.AlreadyBound
+  public void bind (NameComponent[] n, org.omg.CORBA.Object obj) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, org.omg.CosNaming.NamingContextPackage.AlreadyBound
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("bind", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
+                NameHelper.write ($out, n);
                 org.omg.CORBA.ObjectHelper.write ($out, obj);
                 $in = _invoke ($out);
                 return;
@@ -95,13 +95,13 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound Indicates an object is already 
    * bound to the specified name.<p>
    */
-  public void bind_context (org.omg.CosNaming.NameComponent[] n, org.omg.CosNaming.NamingContext nc) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, org.omg.CosNaming.NamingContextPackage.AlreadyBound
+  public void bind_context (NameComponent[] n, NamingContext nc) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, org.omg.CosNaming.NamingContextPackage.AlreadyBound
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("bind_context", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
-                org.omg.CosNaming.NamingContextHelper.write ($out, nc);
+                NameHelper.write ($out, n);
+                NamingContextHelper.write ($out, nc);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
@@ -143,12 +143,12 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
    */
-  public void rebind (org.omg.CosNaming.NameComponent[] n, org.omg.CORBA.Object obj) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
+  public void rebind (NameComponent[] n, org.omg.CORBA.Object obj) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("rebind", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
+                NameHelper.write ($out, n);
                 org.omg.CORBA.ObjectHelper.write ($out, obj);
                 $in = _invoke ($out);
                 return;
@@ -189,13 +189,13 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
    */
-  public void rebind_context (org.omg.CosNaming.NameComponent[] n, org.omg.CosNaming.NamingContext nc) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
+  public void rebind_context (NameComponent[] n, NamingContext nc) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("rebind_context", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
-                org.omg.CosNaming.NamingContextHelper.write ($out, nc);
+                NameHelper.write ($out, n);
+                NamingContextHelper.write ($out, nc);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
@@ -235,12 +235,12 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
    */
-  public org.omg.CORBA.Object resolve (org.omg.CosNaming.NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
+  public org.omg.CORBA.Object resolve (NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("resolve", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
+                NameHelper.write ($out, n);
                 $in = _invoke ($out);
                 org.omg.CORBA.Object $result = org.omg.CORBA.ObjectHelper.read ($in);
                 return $result;
@@ -276,12 +276,12 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
    */
-  public void unbind (org.omg.CosNaming.NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
+  public void unbind (NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("unbind", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
+                NameHelper.write ($out, n);
                 $in = _invoke ($out);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
@@ -323,15 +323,15 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @param bi the returned binding iterator <p>
    */
-  public void list (int how_many, org.omg.CosNaming.BindingListHolder bl, org.omg.CosNaming.BindingIteratorHolder bi)
+  public void list (int how_many, BindingListHolder bl, BindingIteratorHolder bi)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("list", true);
                 $out.write_ulong (how_many);
                 $in = _invoke ($out);
-                bl.value = org.omg.CosNaming.BindingListHelper.read ($in);
-                bi.value = org.omg.CosNaming.BindingIteratorHelper.read ($in);
+                bl.value = BindingListHelper.read ($in);
+                bi.value = BindingIteratorHelper.read ($in);
                 return;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -350,13 +350,13 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * naming server as the context on which the operation was invoked. 
    * The new context is not bound to any name.
    */
-  public org.omg.CosNaming.NamingContext new_context ()
+  public NamingContext new_context ()
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("new_context", true);
                 $in = _invoke ($out);
-                org.omg.CosNaming.NamingContext $result = org.omg.CosNaming.NamingContextHelper.read ($in);
+                NamingContext $result = NamingContextHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();
@@ -390,14 +390,14 @@ public class _NamingContextStub extends org.omg.CORBA.portable.ObjectImpl implem
    * 
    * @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
    */
-  public org.omg.CosNaming.NamingContext bind_new_context (org.omg.CosNaming.NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.AlreadyBound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
+  public NamingContext bind_new_context (NameComponent[] n) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.AlreadyBound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
                 org.omg.CORBA.portable.OutputStream $out = _request ("bind_new_context", true);
-                org.omg.CosNaming.NameHelper.write ($out, n);
+                NameHelper.write ($out, n);
                 $in = _invoke ($out);
-                org.omg.CosNaming.NamingContext $result = org.omg.CosNaming.NamingContextHelper.read ($in);
+                NamingContext $result = NamingContextHelper.read ($in);
                 return $result;
             } catch (org.omg.CORBA.portable.ApplicationException $ex) {
                 $in = $ex.getInputStream ();

@@ -162,7 +162,7 @@ public class Timestamp extends java.util.Date {
      * and <code>dd</code> may also be omitted.
      *
      * @return corresponding <code>Timestamp</code> value
-     * @exception java.lang.IllegalArgumentException if the given argument
+     * @exception IllegalArgumentException if the given argument
      * does not have the format <code>yyyy-[m]m-[d]d hh:mm:ss[.f...]</code>
      */
     public static Timestamp valueOf(String s) {
@@ -192,7 +192,7 @@ public class Timestamp extends java.util.Date {
         String delimiterDate = "-";
         String delimiterTime = ":";
 
-        if (s == null) throw new java.lang.IllegalArgumentException("null string");
+        if (s == null) throw new IllegalArgumentException("null string");
 
         // Split the string into date and time components
         s = s.trim();
@@ -201,7 +201,7 @@ public class Timestamp extends java.util.Date {
             date_s = s.substring(0,dividingSpace);
             time_s = s.substring(dividingSpace+1);
         } else {
-            throw new java.lang.IllegalArgumentException(formatError);
+            throw new IllegalArgumentException(formatError);
         }
 
         // Parse the date
@@ -210,7 +210,7 @@ public class Timestamp extends java.util.Date {
 
         // Parse the time
         if (time_s == null)
-            throw new java.lang.IllegalArgumentException(formatError);
+            throw new IllegalArgumentException(formatError);
         firstColon = time_s.indexOf(':');
         secondColon = time_s.indexOf(':', firstColon+1);
         period = time_s.indexOf('.', secondColon+1);
@@ -234,7 +234,7 @@ public class Timestamp extends java.util.Date {
             }
         }
         if (! parsedDate) {
-            throw new java.lang.IllegalArgumentException(formatError);
+            throw new IllegalArgumentException(formatError);
         }
 
         // Convert the time; default missing nanos
@@ -248,18 +248,18 @@ public class Timestamp extends java.util.Date {
                     Integer.parseInt(time_s.substring(secondColon+1, period));
                 nanos_s = time_s.substring(period+1);
                 if (nanos_s.length() > 9)
-                    throw new java.lang.IllegalArgumentException(formatError);
+                    throw new IllegalArgumentException(formatError);
                 if (!Character.isDigit(nanos_s.charAt(0)))
-                    throw new java.lang.IllegalArgumentException(formatError);
+                    throw new IllegalArgumentException(formatError);
                 nanos_s = nanos_s + zeros.substring(0,9-nanos_s.length());
                 a_nanos = Integer.parseInt(nanos_s);
             } else if (period > 0) {
-                throw new java.lang.IllegalArgumentException(formatError);
+                throw new IllegalArgumentException(formatError);
             } else {
                 second = Integer.parseInt(time_s.substring(secondColon+1));
             }
         } else {
-            throw new java.lang.IllegalArgumentException(formatError);
+            throw new IllegalArgumentException(formatError);
         }
 
         return new Timestamp(year - 1900, month - 1, day, hour, minute, second, a_nanos);
@@ -380,7 +380,7 @@ public class Timestamp extends java.util.Date {
      * to the given value.
      *
      * @param n the new fractional seconds component
-     * @exception java.lang.IllegalArgumentException if the given argument
+     * @exception IllegalArgumentException if the given argument
      *            is greater than 999999999 or less than 0
      * @see #getNanos
      */
@@ -430,7 +430,7 @@ public class Timestamp extends java.util.Date {
      *         is equal to this <code>Timestamp</code> object;
      *         <code>false</code> otherwise
      */
-    public boolean equals(java.lang.Object ts) {
+    public boolean equals(Object ts) {
       if (ts instanceof Timestamp) {
         return this.equals((Timestamp)ts);
       } else {

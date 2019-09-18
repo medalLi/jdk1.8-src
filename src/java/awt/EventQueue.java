@@ -781,9 +781,9 @@ public class EventQueue {
      *         dispatched, or <code>System.currentTimeMillis()</code> if this
      *         method is invoked on a thread other than an event dispatching
      *         thread
-     * @see java.awt.event.InputEvent#getWhen
-     * @see java.awt.event.ActionEvent#getWhen
-     * @see java.awt.event.InvocationEvent#getWhen
+     * @see InputEvent#getWhen
+     * @see ActionEvent#getWhen
+     * @see InvocationEvent#getWhen
      * @see #isDispatchThread
      *
      * @since 1.4
@@ -847,7 +847,7 @@ public class EventQueue {
      *
      * @param newEventQueue an <code>EventQueue</code>
      *          (or subclass thereof) instance to be use
-     * @see      java.awt.EventQueue#pop
+     * @see      EventQueue#pop
      * @throws NullPointerException if <code>newEventQueue</code> is <code>null</code>
      * @since           1.2
      */
@@ -913,7 +913,7 @@ public class EventQueue {
      *
      * @exception EmptyStackException if no previous push was made
      *  on this <code>EventQueue</code>
-     * @see      java.awt.EventQueue#push
+     * @see      EventQueue#push
      * @since           1.2
      */
     protected void pop() throws EmptyStackException {

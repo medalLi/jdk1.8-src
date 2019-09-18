@@ -37,10 +37,10 @@ public interface ObjectKeyFactory
 {
     /** Create an ObjectKey from its octet sequence representation.
      */
-    ObjectKey create( byte[] key ) ;
+    ObjectKey create(byte[] key) ;
 
     /** Create an ObjectKeyTemplate from its representation
      * in an InputStream.
      */
-    ObjectKeyTemplate createTemplate( InputStream is ) ;
+    ObjectKeyTemplate createTemplate(InputStream is) ;
 }

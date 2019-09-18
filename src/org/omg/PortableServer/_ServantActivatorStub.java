@@ -13,9 +13,9 @@ package org.omg.PortableServer;
 	 * When the POA has the RETAIN policy it uses servant 
 	 * managers that are ServantActivators. 
 	 */
-public class _ServantActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.PortableServer.ServantActivator
+public class _ServantActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements ServantActivator
 {
-  final public static java.lang.Class _opsClass = ServantActivatorOperations.class;
+  final public static Class _opsClass = ServantActivatorOperations.class;
 
 
 
@@ -36,7 +36,7 @@ public class _ServantActivatorStub extends org.omg.CORBA.portable.ObjectImpl imp
   	 *            requests to the object denoted in the 
   	 *            forward_reference member of the exception.
   	 */
-  public org.omg.PortableServer.Servant incarnate (byte[] oid, org.omg.PortableServer.POA adapter) throws org.omg.PortableServer.ForwardRequest
+  public Servant incarnate (byte[] oid, POA adapter) throws ForwardRequest
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("incarnate", _opsClass);
       ServantActivatorOperations  $self = (ServantActivatorOperations) $so.servant;
@@ -70,7 +70,7 @@ public class _ServantActivatorStub extends org.omg.CORBA.portable.ObjectImpl imp
   	 *        until all invocations in progress have
   	 *        completed.
   	 */
-  public void etherealize (byte[] oid, org.omg.PortableServer.POA adapter, org.omg.PortableServer.Servant serv, boolean cleanup_in_progress, boolean remaining_activations)
+  public void etherealize (byte[] oid, POA adapter, Servant serv, boolean cleanup_in_progress, boolean remaining_activations)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("etherealize", _opsClass);
       ServantActivatorOperations  $self = (ServantActivatorOperations) $so.servant;

@@ -36,7 +36,7 @@ from which all other Interface Repository interfaces are derived,
 even the Repository itself.
 */
 
-public interface IRObject extends IRObjectOperations, org.omg.CORBA.Object,
+public interface IRObject extends IRObjectOperations, Object,
     org.omg.CORBA.portable.IDLEntity
 {
 }

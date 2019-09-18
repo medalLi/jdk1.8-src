@@ -41,11 +41,11 @@ package org.xml.sax;
  * </blockquote>
  *
  * <p>This is the original SAX1 interface for reporting an element's
- * attributes.  Unlike the new {@link org.xml.sax.Attributes Attributes}
+ * attributes.  Unlike the new {@link Attributes Attributes}
  * interface, it does not support Namespace-related information.</p>
  *
  * <p>When an attribute list is supplied as part of a
- * {@link org.xml.sax.DocumentHandler#startElement startElement}
+ * {@link DocumentHandler#startElement startElement}
  * event, the list will return valid results only during the
  * scope of the event; once the event handler returns control
  * to the parser, the attribute list is invalid.  To save a
@@ -86,11 +86,11 @@ package org.xml.sax;
  * </pre>
  *
  * @deprecated This interface has been replaced by the SAX2
- *             {@link org.xml.sax.Attributes Attributes}
+ *             {@link Attributes Attributes}
  *             interface, which includes Namespace support.
  * @since SAX 1.0
  * @author David Megginson
- * @see org.xml.sax.DocumentHandler#startElement startElement
+ * @see DocumentHandler#startElement startElement
  * @see org.xml.sax.helpers.AttributeListImpl AttributeListImpl
  */
 public interface AttributeList {
@@ -111,7 +111,7 @@ public interface AttributeList {
      *
      * @return The number of attributes in the list.
      */
-    public abstract int getLength ();
+    public abstract int getLength();
 
 
     /**
@@ -130,7 +130,7 @@ public interface AttributeList {
      *         if the index is out of range.
      * @see #getLength
      */
-    public abstract String getName (int i);
+    public abstract String getName(int i);
 
 
     /**
@@ -152,9 +152,9 @@ public interface AttributeList {
      * @return The attribute type as a string, or
      *         null if the index is out of range.
      * @see #getLength
-     * @see #getType(java.lang.String)
+     * @see #getType(String)
      */
-    public abstract String getType (int i);
+    public abstract String getType(int i);
 
 
     /**
@@ -168,9 +168,9 @@ public interface AttributeList {
      * @return The attribute value as a string, or
      *         null if the index is out of range.
      * @see #getLength
-     * @see #getValue(java.lang.String)
+     * @see #getValue(String)
      */
-    public abstract String getValue (int i);
+    public abstract String getValue(int i);
 
 
 
@@ -193,7 +193,7 @@ public interface AttributeList {
      *         such attribute exists.
      * @see #getType(int)
      */
-    public abstract String getType (String name);
+    public abstract String getType(String name);
 
 
     /**
@@ -210,7 +210,7 @@ public interface AttributeList {
      *         no such attribute exists.
      * @see #getValue(int)
      */
-    public abstract String getValue (String name);
+    public abstract String getValue(String name);
 
 }
 

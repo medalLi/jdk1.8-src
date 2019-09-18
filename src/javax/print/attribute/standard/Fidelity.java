@@ -107,7 +107,7 @@ public final class Fidelity extends EnumSyntax
      * For class Fidelity the category is class Fidelity itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return Fidelity.class;

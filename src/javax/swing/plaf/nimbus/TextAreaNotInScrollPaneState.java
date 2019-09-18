@@ -35,7 +35,7 @@ class TextAreaNotInScrollPaneState extends State {
 
     @Override protected boolean isInState(JComponent c) {
 
-                          return !(c.getParent() instanceof javax.swing.JViewport);
+                          return !(c.getParent() instanceof JViewport);
     }
 }
 

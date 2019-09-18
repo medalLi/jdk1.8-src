@@ -41,11 +41,11 @@ import javax.xml.ws.WebServiceException;
  * to allow pluggability of JAX-WS implementations.
  * <p>
  * Every <code>Service</code> object has its own delegate, created using
- * the {@link javax.xml.ws.spi.Provider#createServiceDelegate} method. A <code>Service</code>
+ * the {@link Provider#createServiceDelegate} method. A <code>Service</code>
  * object delegates all of its instance methods to its delegate.
  *
- * @see javax.xml.ws.Service
- * @see javax.xml.ws.spi.Provider
+ * @see Service
+ * @see Provider
  *
  * @since JAX-WS 2.0
  */
@@ -431,7 +431,7 @@ public abstract class ServiceDelegate {
      * @throws WebServiceException If any error in the creation of
      *                  the <code>Dispatch</code> object
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      **/
     public abstract Dispatch<Object> createDispatch(QName portName,
             JAXBContext context, Service.Mode mode);
@@ -459,7 +459,7 @@ public abstract class ServiceDelegate {
      *                  feature is enabled that is not compatible with
      *                  this port or is unsupported.
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      * @see WebServiceFeature
      *
      * @since JAX-WS 2.1
@@ -529,7 +529,7 @@ public abstract class ServiceDelegate {
      *                    compatible with this port or is unsupported.
      *                  </UL>
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      * @see WebServiceFeature
      *
      * @since JAX-WS 2.1
@@ -555,7 +555,7 @@ public abstract class ServiceDelegate {
      * @throws WebServiceException If this Service class does not
      *         have access to the required WSDL metadata
      **/
-    public abstract Iterator<javax.xml.namespace.QName> getPorts();
+    public abstract Iterator<QName> getPorts();
 
     /**
      * Gets the location of the WSDL document for this Service.
@@ -585,7 +585,7 @@ public abstract class ServiceDelegate {
      * @param handlerResolver The <code>HandlerResolver</code> to use
      *        for all subsequently created proxy/dispatch objects.
      *
-     * @see javax.xml.ws.handler.HandlerResolver
+     * @see HandlerResolver
      **/
     public abstract void setHandlerResolver(HandlerResolver handlerResolver);
 

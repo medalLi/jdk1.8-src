@@ -13,9 +13,9 @@ package org.omg.DynamicAny;
     * DynEnum objects support the manipulation of IDL enumerated values.
     * The current position of a DynEnum is always -1.
     */
-public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.DynamicAny.DynEnum
+public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements DynEnum
 {
-  final public static java.lang.Class _opsClass = DynEnumOperations.class;
+  final public static Class _opsClass = DynEnumOperations.class;
 
 
 
@@ -122,7 +122,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           * @param dyn_any
           * @exception TypeMismatch if the type of the passed DynAny is not equivalent to the type of target DynAny
           */
-  public void assign (org.omg.DynamicAny.DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public void assign (DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("assign", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;
@@ -184,7 +184,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           *
           * @return true of the DynAnys are equal, false otherwise
           */
-  public boolean equal (org.omg.DynamicAny.DynAny dyn_any)
+  public boolean equal (DynAny dyn_any)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("equal", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;
@@ -231,7 +231,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           *
           * @return a deep copy of the DynAny object
           */
-  public org.omg.DynamicAny.DynAny copy ()
+  public DynAny copy ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("copy", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;
@@ -577,7 +577,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           */
-  public void insert_dyn_any (org.omg.DynamicAny.DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void insert_dyn_any (DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("insert_dyn_any", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;
@@ -978,7 +978,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           */
-  public org.omg.DynamicAny.DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_dyn_any", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;
@@ -1116,7 +1116,7 @@ public class _DynEnumStub extends org.omg.CORBA.portable.ObjectImpl implements o
           * @exception TypeMismatch If called on a DynAny that cannot have components,
           * such as a DynEnum or an empty exception
           */
-  public org.omg.DynamicAny.DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("current_component", _opsClass);
       DynEnumOperations  $self = (DynEnumOperations) $so.servant;

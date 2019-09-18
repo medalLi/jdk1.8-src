@@ -269,7 +269,7 @@ public abstract class Identity implements Principal, Serializable {
         if (aKeyFormat != null && anotherKeyFormat != null)
             if (!aKeyFormat.equalsIgnoreCase(anotherKeyFormat))
                 return false;
-        return java.util.Arrays.equals(aKey.getEncoded(),
+        return Arrays.equals(aKey.getEncoded(),
                                      anotherKey.getEncoded());
     }
 

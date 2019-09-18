@@ -56,14 +56,14 @@ public final class StructMember implements org.omg.CORBA.portable.IDLEntity {
      * this <code>StructMember</code> object.
      * @serial
      */
-    public org.omg.CORBA.TypeCode type;
+    public TypeCode type;
 
     /**
      * The typedef that represents the IDL type of the struct member described by
      * this <code>StructMember</code> object.
      * @serial
      */
-    public org.omg.CORBA.IDLType type_def;
+    public IDLType type_def;
     //  constructors
 
     /**
@@ -81,7 +81,7 @@ public final class StructMember implements org.omg.CORBA.portable.IDLEntity {
      * @param __type_def an <code>IDLType</code> object representing the IDL type
      *        of the struct member
      */
-    public StructMember(String __name, org.omg.CORBA.TypeCode __type, org.omg.CORBA.IDLType __type_def) {
+    public StructMember(String __name, TypeCode __type, IDLType __type_def) {
         name = __name;
         type = __type;
         type_def = __type_def;

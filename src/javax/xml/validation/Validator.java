@@ -450,14 +450,14 @@ public abstract class Validator {
      *      <p>Access to external DTDs in source or Schema file is restricted to
      *      the protocols specified by the {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_DTD}
      *      property.  If access is denied during validation due to the restriction
-     *      of this property, {@link org.xml.sax.SAXException} will be thrown by the
+     *      of this property, {@link SAXException} will be thrown by the
      *      {@link #validate(Source)} method.</p>
      *
      *      <p>Access to external reference set by the schemaLocation attribute is
      *      restricted to the protocols specified by the
      *      {@link javax.xml.XMLConstants#ACCESS_EXTERNAL_SCHEMA} property.
      *      If access is denied during validation due to the restriction of this property,
-     *      {@link org.xml.sax.SAXException} will be thrown by the
+     *      {@link SAXException} will be thrown by the
      *      {@link #validate(Source)} method.</p>
      *   </li>
      * </ul>

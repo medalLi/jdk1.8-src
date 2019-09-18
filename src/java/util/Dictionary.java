@@ -40,10 +40,10 @@ package java.util;
  * implement the Map interface, rather than extending this class.</strong>
  *
  * @author  unascribed
- * @see     java.util.Map
- * @see     java.lang.Object#equals(java.lang.Object)
- * @see     java.lang.Object#hashCode()
- * @see     java.util.Hashtable
+ * @see     Map
+ * @see     Object#equals(Object)
+ * @see     Object#hashCode()
+ * @see     Hashtable
  * @since   JDK1.0
  */
 public abstract
@@ -79,8 +79,8 @@ class Dictionary<K,V> {
      * contains entries.
      *
      * @return  an enumeration of the keys in this dictionary.
-     * @see     java.util.Dictionary#elements()
-     * @see     java.util.Enumeration
+     * @see     Dictionary#elements()
+     * @see     Enumeration
      */
     abstract public Enumeration<K> keys();
 
@@ -91,8 +91,8 @@ class Dictionary<K,V> {
      * contained in entries in this dictionary.
      *
      * @return  an enumeration of the values in this dictionary.
-     * @see     java.util.Dictionary#keys()
-     * @see     java.util.Enumeration
+     * @see     Dictionary#keys()
+     * @see     Enumeration
      */
     abstract public Enumeration<V> elements();
 
@@ -107,7 +107,7 @@ class Dictionary<K,V> {
      *          <code>null</code> if the key is not mapped to any value in
      *          this dictionary.
      * @exception NullPointerException if the <tt>key</tt> is <tt>null</tt>.
-     * @see     java.util.Dictionary#put(java.lang.Object, java.lang.Object)
+     * @see     Dictionary#put(Object, Object)
      */
     abstract public V get(Object key);
 
@@ -135,8 +135,8 @@ class Dictionary<K,V> {
      *             have a previous mapping.
      * @exception  NullPointerException  if the <code>key</code> or
      *               <code>value</code> is <code>null</code>.
-     * @see        java.lang.Object#equals(java.lang.Object)
-     * @see        java.util.Dictionary#get(java.lang.Object)
+     * @see        Object#equals(Object)
+     * @see        Dictionary#get(Object)
      */
     abstract public V put(K key, V value);
 

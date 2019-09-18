@@ -178,7 +178,7 @@ public interface Validator {
      *         event handler
      * @deprecated since JAXB2.0
      */
-    public void setEventHandler( ValidationEventHandler handler )
+    public void setEventHandler(ValidationEventHandler handler)
         throws JAXBException;
 
     /**
@@ -215,7 +215,7 @@ public interface Validator {
      *         otherwise
      * @deprecated since JAXB2.0
      */
-    public boolean validate( Object subrootObj ) throws JAXBException;
+    public boolean validate(Object subrootObj) throws JAXBException;
 
     /**
      * Validate the Java content tree rooted at <tt>rootObj</tt>.
@@ -238,7 +238,7 @@ public interface Validator {
      *         otherwise
      * @deprecated since JAXB2.0
      */
-    public boolean validateRoot( Object rootObj ) throws JAXBException;
+    public boolean validateRoot(Object rootObj) throws JAXBException;
 
     /**
      * Set the particular property in the underlying implementation of
@@ -259,7 +259,7 @@ public interface Validator {
      *      If the name parameter is null
      * @deprecated since JAXB2.0
      */
-    public void setProperty( String name, Object value )
+    public void setProperty(String name, Object value)
         throws PropertyException;
 
     /**
@@ -280,6 +280,6 @@ public interface Validator {
      *      If the name parameter is null
      * @deprecated since JAXB2.0
      */
-    public Object getProperty( String name ) throws PropertyException;
+    public Object getProperty(String name) throws PropertyException;
 
 }

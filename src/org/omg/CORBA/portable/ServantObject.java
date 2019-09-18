@@ -44,5 +44,5 @@ public class ServantObject
      * invoke the operation directly. Note, the object may or may not be the actual servant
      * instance.
      */
-    public java.lang.Object servant;
+    public Object servant;
 }

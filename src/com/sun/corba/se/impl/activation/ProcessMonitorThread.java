@@ -36,7 +36,7 @@ import com.sun.corba.se.impl.orbutil.ORBConstants;
   * Note: This thread can be killed from the main thread by calling
   *       interrupThread()
   */
-public class ProcessMonitorThread extends java.lang.Thread {
+public class ProcessMonitorThread extends Thread {
     private HashMap serverTable;
     private int sleepTime;
     private static ProcessMonitorThread instance = null;
@@ -53,7 +53,7 @@ public class ProcessMonitorThread extends java.lang.Thread {
                 // the Servers health. This will repeat as long as
                 // the ServerManager (ORBD) is up and running.
                 Thread.sleep( sleepTime );
-            } catch( java.lang.InterruptedException e ) {
+            } catch( InterruptedException e ) {
                 break;
             }
             Iterator serverList;

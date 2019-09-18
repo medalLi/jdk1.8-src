@@ -16,6 +16,6 @@ package org.omg.DynamicAny;
     * of the boxed type. A DynValueBox representing a null value type has no components
     * and a current position of -1.
     */
-public interface DynValueBox extends DynValueBoxOperations, org.omg.DynamicAny.DynValueCommon, org.omg.CORBA.portable.IDLEntity 
+public interface DynValueBox extends DynValueBoxOperations, DynValueCommon, org.omg.CORBA.portable.IDLEntity
 {
 } // interface DynValueBox

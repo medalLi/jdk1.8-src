@@ -95,8 +95,8 @@ public class DynFixedImpl extends DynAnyBasicImpl implements DynFixed
     // other than leading or trailing white space, the operation raises TypeMismatch.
     //
     public boolean set_value (String val)
-        throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
-               org.omg.DynamicAny.DynAnyPackage.InvalidValue
+        throws TypeMismatch,
+               InvalidValue
     {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;

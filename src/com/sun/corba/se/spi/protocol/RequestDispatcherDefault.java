@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.protocol ;
+package com.sun.corba.se.spi.protocol;
 
 import com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 
@@ -55,7 +55,7 @@ public final class RequestDispatcherDefault {
 
     public static CorbaServerRequestDispatcher makeServerRequestDispatcher( ORB orb )
     {
-        return new CorbaServerRequestDispatcherImpl( (com.sun.corba.se.spi.orb.ORB)orb ) ;
+        return new CorbaServerRequestDispatcherImpl( (ORB)orb ) ;
     }
 
     public static CorbaServerRequestDispatcher makeBootstrapServerRequestDispatcher( ORB orb )

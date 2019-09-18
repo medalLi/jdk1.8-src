@@ -116,12 +116,12 @@ import sun.awt.image.SunWritableRaster;
  * standard Interleaved, Banded, and Packed SampleModels and that may
  * be processed more efficiently than a Raster created by combining
  * an externally generated SampleModel and DataBuffer.
- * @see java.awt.image.DataBuffer
- * @see java.awt.image.SampleModel
- * @see java.awt.image.PixelInterleavedSampleModel
- * @see java.awt.image.BandedSampleModel
- * @see java.awt.image.SinglePixelPackedSampleModel
- * @see java.awt.image.MultiPixelPackedSampleModel
+ * @see DataBuffer
+ * @see SampleModel
+ * @see PixelInterleavedSampleModel
+ * @see BandedSampleModel
+ * @see SinglePixelPackedSampleModel
+ * @see MultiPixelPackedSampleModel
  */
 public class Raster {
 
@@ -1449,7 +1449,7 @@ public class Raster {
      * checking is not guaranteed.
      * A ClassCastException will be thrown if the input object is non null
      * and references anything other than an array of TransferType.
-     * @see java.awt.image.SampleModel#getDataElements(int, int, Object, DataBuffer)
+     * @see SampleModel#getDataElements(int, int, Object, DataBuffer)
      * @param x        The X coordinate of the pixel location
      * @param y        The Y coordinate of the pixel location
      * @param outData  An object reference to an array of type defined by
@@ -1481,7 +1481,7 @@ public class Raster {
      * checking is not guaranteed.
      * A ClassCastException will be thrown if the input object is non null
      * and references anything other than an array of TransferType.
-     * @see java.awt.image.SampleModel#getDataElements(int, int, int, int, Object, DataBuffer)
+     * @see SampleModel#getDataElements(int, int, int, int, Object, DataBuffer)
      * @param x    The X coordinate of the upper-left pixel location
      * @param y    The Y coordinate of the upper-left pixel location
      * @param w    Width of the pixel rectangle

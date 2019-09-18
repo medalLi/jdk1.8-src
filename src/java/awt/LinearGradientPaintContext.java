@@ -36,9 +36,9 @@ import java.awt.image.ColorModel;
  * Provides the actual implementation for the LinearGradientPaint.
  * This is where the pixel processing is done.
  *
- * @see java.awt.LinearGradientPaint
- * @see java.awt.PaintContext
- * @see java.awt.Paint
+ * @see LinearGradientPaint
+ * @see PaintContext
+ * @see Paint
  * @author Nicholas Talian, Vincent Hardy, Jim Graham, Jerry Evans
  */
 final class LinearGradientPaintContext extends MultipleGradientPaintContext {

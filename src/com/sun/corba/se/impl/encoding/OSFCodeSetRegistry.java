@@ -105,11 +105,11 @@ public final class OSFCodeSetRegistry
             if (this == obj)
                 return true;
 
-            if (!(obj instanceof OSFCodeSetRegistry.Entry))
+            if (!(obj instanceof Entry))
                 return false;
 
-            OSFCodeSetRegistry.Entry other
-                = (OSFCodeSetRegistry.Entry)obj;
+            Entry other
+                = (Entry)obj;
 
             return (javaName.equals(other.javaName) &&
                     encodingNum == other.encodingNum &&

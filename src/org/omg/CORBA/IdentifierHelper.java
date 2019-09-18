@@ -39,7 +39,7 @@ abstract public class IdentifierHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/Identifier:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, String that)
+  public static void insert (Any a, String that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -47,18 +47,18 @@ abstract public class IdentifierHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static String extract (org.omg.CORBA.Any a)
+  public static String extract (Any a)
   {
     return read (a.create_input_stream ());
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  private static TypeCode __typeCode = null;
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.IdentifierHelper.id (), "Identifier", __typeCode);
+      __typeCode = ORB.init ().create_string_tc (0);
+      __typeCode = ORB.init ().create_alias_tc (IdentifierHelper.id (), "Identifier", __typeCode);
     }
     return __typeCode;
   }

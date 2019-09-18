@@ -39,5 +39,5 @@ public interface MonitoredObjectFactory {
      *  A Simple Factory Method to create the Monitored Object. The name
      *  should be the leaf level name.
      */
-    MonitoredObject createMonitoredObject( String name, String description );
+    MonitoredObject createMonitoredObject(String name, String description);
 }

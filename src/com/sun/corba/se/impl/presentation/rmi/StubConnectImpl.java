@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.rmi.RemoteException;
 
@@ -61,7 +61,7 @@ public abstract class StubConnectImpl
     * @param orb The ORB to which we connect the stub.
     */
     public static StubIORImpl connect( StubIORImpl ior, org.omg.CORBA.Object proxy,
-        org.omg.CORBA.portable.ObjectImpl stub, ORB orb ) throws RemoteException
+        ObjectImpl stub, ORB orb ) throws RemoteException
     {
         Delegate del = null ;
 
@@ -71,10 +71,10 @@ public abstract class StubConnectImpl
 
                 if (del.orb(stub) != orb)
                     throw wrapper.connectWrongOrb() ;
-            } catch (org.omg.CORBA.BAD_OPERATION err) {
+            } catch (BAD_OPERATION err) {
                 if (ior == null) {
                     // No IOR, can we get a Tie for this stub?
-                    Tie tie = (javax.rmi.CORBA.Tie) Utility.getAndForgetTie(proxy);
+                    Tie tie = (Tie) Utility.getAndForgetTie(proxy);
                     if (tie == null)
                         throw wrapper.connectNoTie() ;
 

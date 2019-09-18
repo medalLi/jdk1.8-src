@@ -32,7 +32,7 @@ package javax.security.auth;
  * may implement this interface to allow callers to refresh the time period
  * for which it is valid.
  *
- * @see javax.security.auth.Subject
+ * @see Subject
  */
 public interface Refreshable {
 

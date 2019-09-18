@@ -12,6 +12,6 @@ package org.omg.DynamicAny;
 /**
     * DynSequence objects support the manipulation of IDL sequences.
     */
-public interface DynSequence extends DynSequenceOperations, org.omg.DynamicAny.DynAny, org.omg.CORBA.portable.IDLEntity 
+public interface DynSequence extends DynSequenceOperations, DynAny, org.omg.CORBA.portable.IDLEntity
 {
 } // interface DynSequence

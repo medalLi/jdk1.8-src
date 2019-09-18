@@ -29,8 +29,8 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class IdAssignmentPolicyImpl
-extends org.omg.CORBA.LocalObject
-implements org.omg.PortableServer.IdAssignmentPolicy {
+extends LocalObject
+implements IdAssignmentPolicy {
 
     public IdAssignmentPolicyImpl(IdAssignmentPolicyValue value) {
         this.value = value;

@@ -225,27 +225,27 @@ public class ORBSingleton extends ORB
         return new TypeCodeImpl(this, TCKind._tk_array, length, element_type);
     }
 
-    public org.omg.CORBA.TypeCode create_native_tc(String id,
+    public TypeCode create_native_tc(String id,
                                                    String name)
     {
         return new TypeCodeImpl(this, TCKind._tk_native, id, name);
     }
 
-    public org.omg.CORBA.TypeCode create_abstract_interface_tc(
+    public TypeCode create_abstract_interface_tc(
                                                                String id,
                                                                String name)
     {
         return new TypeCodeImpl(this, TCKind._tk_abstract_interface, id, name);
     }
 
-    public org.omg.CORBA.TypeCode create_fixed_tc(short digits, short scale)
+    public TypeCode create_fixed_tc(short digits, short scale)
     {
         return new TypeCodeImpl(this, TCKind._tk_fixed, digits, scale);
     }
 
     // orbos 98-01-18: Objects By Value -- begin
 
-    public org.omg.CORBA.TypeCode create_value_tc(String id,
+    public TypeCode create_value_tc(String id,
                                                   String name,
                                                   short type_modifier,
                                                   TypeCode concrete_base,
@@ -255,11 +255,11 @@ public class ORBSingleton extends ORB
                                 type_modifier, concrete_base, members);
     }
 
-    public org.omg.CORBA.TypeCode create_recursive_tc(String id) {
+    public TypeCode create_recursive_tc(String id) {
         return new TypeCodeImpl(this, id);
     }
 
-    public org.omg.CORBA.TypeCode create_value_box_tc(String id,
+    public TypeCode create_value_box_tc(String id,
                                                       String name,
                                                       TypeCode boxed_type)
     {
@@ -286,30 +286,30 @@ public class ORBSingleton extends ORB
         return new NVListImpl(this, count);
     }
 
-    public org.omg.CORBA.NVList
-        create_operation_list(org.omg.CORBA.Object oper) {
+    public NVList
+        create_operation_list(Object oper) {
         throw wrapper.genericNoImpl() ;
     }
 
-    public org.omg.CORBA.NamedValue
+    public NamedValue
         create_named_value(String s, Any any, int flags) {
         return new NamedValueImpl(this, s, any, flags);
     }
 
-    public org.omg.CORBA.ExceptionList create_exception_list() {
+    public ExceptionList create_exception_list() {
         return new ExceptionListImpl();
     }
 
-    public org.omg.CORBA.ContextList create_context_list() {
+    public ContextList create_context_list() {
         return new ContextListImpl(this);
     }
 
-    public org.omg.CORBA.Context get_default_context()
+    public Context get_default_context()
     {
         throw wrapper.genericNoImpl() ;
     }
 
-    public org.omg.CORBA.Environment create_environment()
+    public Environment create_environment()
     {
         return new EnvironmentImpl();
     }
@@ -328,14 +328,14 @@ public class ORBSingleton extends ORB
         throw wrapper.genericNoImpl() ;
     }
 
-    public org.omg.CORBA.Object resolve_initial_references(String identifier)
+    public Object resolve_initial_references(String identifier)
         throws InvalidName
     {
         throw wrapper.genericNoImpl() ;
     }
 
     public void register_initial_reference(
-        String id, org.omg.CORBA.Object obj ) throws InvalidName
+        String id, Object obj ) throws InvalidName
     {
         throw wrapper.genericNoImpl() ;
     }
@@ -352,15 +352,15 @@ public class ORBSingleton extends ORB
         throw new SecurityException("ORBSingleton: access denied");
     }
 
-    public org.omg.CORBA.Request get_next_response() {
+    public Request get_next_response() {
         throw new SecurityException("ORBSingleton: access denied");
     }
 
-    public String object_to_string(org.omg.CORBA.Object obj) {
+    public String object_to_string(Object obj) {
         throw new SecurityException("ORBSingleton: access denied");
     }
 
-    public org.omg.CORBA.Object string_to_object(String s) {
+    public Object string_to_object(String s) {
         throw new SecurityException("ORBSingleton: access denied");
     }
 
@@ -370,11 +370,11 @@ public class ORBSingleton extends ORB
         throw new SecurityException("ORBSingleton: access denied");
     }
 
-    public void connect(org.omg.CORBA.Object servant) {
+    public void connect(Object servant) {
         throw new SecurityException("ORBSingleton: access denied");
     }
 
-    public void disconnect(org.omg.CORBA.Object obj) {
+    public void disconnect(Object obj) {
         throw new SecurityException("ORBSingleton: access denied");
     }
 

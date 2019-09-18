@@ -20,5 +20,5 @@ public interface ORBProxyOperations
   	* This method returns true if adapter activation succeeded, otherwise it
   	* returns false.
   	*/
-  boolean activate_adapter (String[] name);
+  boolean activate_adapter(String[] name);
 } // interface ORBProxyOperations

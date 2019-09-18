@@ -17,7 +17,7 @@ abstract public class ObjectReferenceFactoryHelper
   private static String  _id = "IDL:omg.org/PortableInterceptor/ObjectReferenceFactory:1.0";
 
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableInterceptor.ObjectReferenceFactory that)
+  public static void insert (org.omg.CORBA.Any a, ObjectReferenceFactory that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -25,7 +25,7 @@ abstract public class ObjectReferenceFactoryHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableInterceptor.ObjectReferenceFactory extract (org.omg.CORBA.Any a)
+  public static ObjectReferenceFactory extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -60,12 +60,12 @@ abstract public class ObjectReferenceFactoryHelper
     return _id;
   }
 
-  public static org.omg.PortableInterceptor.ObjectReferenceFactory read (org.omg.CORBA.portable.InputStream istream)
+  public static ObjectReferenceFactory read (org.omg.CORBA.portable.InputStream istream)
   {
-    return (org.omg.PortableInterceptor.ObjectReferenceFactory)((org.omg.CORBA_2_3.portable.InputStream) istream).read_value (id ());
+    return (ObjectReferenceFactory)((org.omg.CORBA_2_3.portable.InputStream) istream).read_value (id ());
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableInterceptor.ObjectReferenceFactory value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ObjectReferenceFactory value)
   {
     ((org.omg.CORBA_2_3.portable.OutputStream) ostream).write_value (value, id ());
   }

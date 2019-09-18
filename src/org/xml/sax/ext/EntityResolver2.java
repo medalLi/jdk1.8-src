@@ -78,7 +78,7 @@ import org.xml.sax.SAXException;
  * if the original SAX 1.0 style entity resolution method is invoked.
  * </p>
  *
- * @see org.xml.sax.XMLReader#setEntityResolver
+ * @see XMLReader#setEntityResolver
  *
  * @since SAX 2.0 (extensions 1.1 alpha)
  * @author David Brownell
@@ -155,7 +155,7 @@ public interface EntityResolver2 extends EntityResolver
      * @exception IOException Probably indicating a failure to create
      *  a new InputStream or Reader, or an illegal URL.
      */
-    public InputSource getExternalSubset (String name, String baseURI)
+    public InputSource getExternalSubset(String name, String baseURI)
     throws SAXException, IOException;
 
     /**
@@ -212,7 +212,7 @@ public interface EntityResolver2 extends EntityResolver
      * @exception IOException Probably indicating a failure to create
      *  a new InputStream or Reader, or an illegal URL.
      */
-    public InputSource resolveEntity (
+    public InputSource resolveEntity(
             String name,
             String publicId,
             String baseURI,

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import java.util.Properties ;
 
@@ -44,5 +44,5 @@ public interface ParserAction {
 
     /** Apply this action to props and return the result.
     */
-    Object apply( Properties props ) ;
+    Object apply(Properties props) ;
 }

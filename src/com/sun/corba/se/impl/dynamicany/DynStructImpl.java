@@ -69,7 +69,7 @@ public class DynStructImpl extends DynAnyComplexImpl implements DynStruct
     // Methods differing from DynValues
     //
 
-    public org.omg.DynamicAny.NameValuePair[] get_members () {
+    public NameValuePair[] get_members () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }
@@ -77,7 +77,7 @@ public class DynStructImpl extends DynAnyComplexImpl implements DynStruct
         return nameValuePairs;
     }
 
-    public org.omg.DynamicAny.NameDynAnyPair[] get_members_as_dyn_any () {
+    public NameDynAnyPair[] get_members_as_dyn_any () {
         if (status == STATUS_DESTROYED) {
             throw wrapper.dynAnyDestroyed() ;
         }

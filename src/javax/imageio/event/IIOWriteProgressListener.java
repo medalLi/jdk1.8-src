@@ -32,7 +32,7 @@ import javax.imageio.ImageWriter;
  * An interface used by <code>ImageWriter</code> implementations to notify
  * callers of their image writing methods of progress.
  *
- * @see javax.imageio.ImageWriter#write
+ * @see ImageWriter#write
  *
  */
 public interface IIOWriteProgressListener extends EventListener {

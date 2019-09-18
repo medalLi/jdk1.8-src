@@ -31,12 +31,12 @@ package java.lang.instrument;
 
 /**
  * Thrown by an implementation of
- * {@link java.lang.instrument.ClassFileTransformer#transform ClassFileTransformer.transform}
+ * {@link ClassFileTransformer#transform ClassFileTransformer.transform}
  * when its input parameters are invalid.
  * This may occur either because the initial class file bytes were
  * invalid or a previously applied transform corrupted the bytes.
  *
- * @see     java.lang.instrument.ClassFileTransformer#transform
+ * @see     ClassFileTransformer#transform
  * @since   1.5
  */
 public class IllegalClassFormatException extends Exception {

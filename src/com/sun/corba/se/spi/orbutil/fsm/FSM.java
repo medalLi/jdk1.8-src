@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.orbutil.fsm ;
+package com.sun.corba.se.spi.orbutil.fsm;
 
 /**
  * An FSM is used to represent an instance of a finite state machine
@@ -50,7 +50,7 @@ public interface FSM
     /** Perform the action and transition to the next state based
     * on the current state of the FSM and the input.
     */
-    public void doIt( Input in ) ;
+    public void doIt(Input in) ;
 }
 
 // end of FSM.java

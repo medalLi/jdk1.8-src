@@ -237,7 +237,7 @@ public class XMLFormatter extends Formatter {
 
         if (encoding == null) {
             // Figure out the default encoding.
-            encoding = java.nio.charset.Charset.defaultCharset().name();
+            encoding = Charset.defaultCharset().name();
         }
         // Try to map the encoding name to a canonical name.
         try {

@@ -68,11 +68,11 @@ public class TransientNameService
      * NamingContext, whose object
      * reference can be obtained by the initialNamingContext method.
      * @param orb The ORB object
-     * @exception org.omg.CORBA.INITIALIZE Thrown if
+     * @exception INITIALIZE Thrown if
      * the TransientNameService cannot initialize.
      */
     public TransientNameService(com.sun.corba.se.spi.orb.ORB orb )
-        throws org.omg.CORBA.INITIALIZE
+        throws INITIALIZE
     {
         // Default constructor uses "NameService" as the key for the Root Naming
         // Context. If default constructor is used then INS's object key for
@@ -86,11 +86,11 @@ public class TransientNameService
      * reference can be obtained by the initialNamingContext method.
      * @param orb The ORB object
      * @param nameserviceName Stringified key used for INS Service registry
-     * @exception org.omg.CORBA.INITIALIZE Thrown if
+     * @exception INITIALIZE Thrown if
      * the TransientNameService cannot initialize.
      */
     public TransientNameService(com.sun.corba.se.spi.orb.ORB orb,
-        String serviceName ) throws org.omg.CORBA.INITIALIZE
+        String serviceName ) throws INITIALIZE
     {
         // This constructor gives the flexibility of providing the Object Key
         // for the Root Naming Context that is registered with INS.
@@ -104,7 +104,7 @@ public class TransientNameService
      */
     private void initialize( com.sun.corba.se.spi.orb.ORB orb,
         String nameServiceName )
-        throws org.omg.CORBA.INITIALIZE
+        throws INITIALIZE
     {
         NamingSystemException wrapper = NamingSystemException.get( orb,
             CORBALogDomains.NAMING ) ;

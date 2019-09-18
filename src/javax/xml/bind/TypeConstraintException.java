@@ -45,7 +45,7 @@ package javax.xml.bind;
  * @since JAXB1.0
  */
 
-public class TypeConstraintException extends java.lang.RuntimeException {
+public class TypeConstraintException extends RuntimeException {
 
     /**
      * Vendor specific error code

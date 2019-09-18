@@ -111,7 +111,7 @@ import com.sun.media.sound.MidiDeviceTransmitterEnvelope;
  * The property value consists of the provider class name
  * and the device name, separated by the hash mark (&quot;#&quot;).
  * The provider class name is the fully-qualified
- * name of a concrete {@link javax.sound.midi.spi.MidiDeviceProvider
+ * name of a concrete {@link MidiDeviceProvider
  * MIDI device provider} class. The device name is matched against
  * the <code>String</code> returned by the <code>getName</code>
  * method of <code>MidiDevice.Info</code>.
@@ -249,15 +249,15 @@ public class MidiSystem {
      * to the native receiver.
      *
      * <p>If this method returns successfully, the {@link
-     * javax.sound.midi.MidiDevice MidiDevice} the
+     * MidiDevice MidiDevice} the
      * <code>Receiver</code> belongs to is opened implicitly, if it is
      * not already open. It is possible to close an implicitly opened
-     * device by calling {@link javax.sound.midi.Receiver#close close}
+     * device by calling {@link Receiver#close close}
      * on the returned <code>Receiver</code>. All open <code>Receiver</code>
      * instances have to be closed in order to release system resources
      * hold by the <code>MidiDevice</code>. For a
      * detailed description of open/close behaviour see the class
-     * description of {@link javax.sound.midi.MidiDevice MidiDevice}.
+     * description of {@link MidiDevice MidiDevice}.
      *
      *
      * @return the default MIDI receiver
@@ -300,16 +300,16 @@ public class MidiSystem {
      * to the native transmitter.
      *
      * <p>If this method returns successfully, the {@link
-     * javax.sound.midi.MidiDevice MidiDevice} the
+     * MidiDevice MidiDevice} the
      * <code>Transmitter</code> belongs to is opened implicitly, if it
      * is not already open. It is possible to close an implicitly
      * opened device by calling {@link
-     * javax.sound.midi.Transmitter#close close} on the returned
+     * Transmitter#close close} on the returned
      * <code>Transmitter</code>. All open <code>Transmitter</code>
      * instances have to be closed in order to release system resources
      * hold by the <code>MidiDevice</code>. For a detailed description
      * of open/close behaviour see the class description of {@link
-     * javax.sound.midi.MidiDevice MidiDevice}.
+     * MidiDevice MidiDevice}.
      *
      * @return the default MIDI transmitter
      * @throws MidiUnavailableException if the default transmitter is not

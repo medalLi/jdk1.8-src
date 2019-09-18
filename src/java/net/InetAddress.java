@@ -178,11 +178,11 @@ import sun.net.spi.nameservice.*;
  * </blockquote>
  *
  * @author  Chris Warth
- * @see     java.net.InetAddress#getByAddress(byte[])
- * @see     java.net.InetAddress#getByAddress(java.lang.String, byte[])
- * @see     java.net.InetAddress#getAllByName(java.lang.String)
- * @see     java.net.InetAddress#getByName(java.lang.String)
- * @see     java.net.InetAddress#getLocalHost()
+ * @see     InetAddress#getByAddress(byte[])
+ * @see     InetAddress#getByAddress(String, byte[])
+ * @see     InetAddress#getAllByName(String)
+ * @see     InetAddress#getByName(String)
+ * @see     InetAddress#getLocalHost()
  * @since JDK1.0
  */
 public
@@ -265,7 +265,7 @@ class InetAddress implements java.io.Serializable {
      * Load net library into runtime, and perform initializations.
      */
     static {
-        preferIPv6Address = java.security.AccessController.doPrivileged(
+        preferIPv6Address = AccessController.doPrivileged(
             new GetBooleanAction("java.net.preferIPv6Addresses")).booleanValue();
         AccessController.doPrivileged(
             new java.security.PrivilegedAction<Void>() {
@@ -683,7 +683,7 @@ class InetAddress implements java.io.Serializable {
      * @param   obj   the object to compare against.
      * @return  {@code true} if the objects are the same;
      *          {@code false} otherwise.
-     * @see     java.net.InetAddress#getAddress()
+     * @see     InetAddress#getAddress()
      */
     public boolean equals(Object obj) {
         return false;
@@ -914,7 +914,7 @@ class InetAddress implements java.io.Serializable {
         } else {
             final String providerName = provider;
             try {
-                nameService = java.security.AccessController.doPrivileged(
+                nameService = AccessController.doPrivileged(
                     new java.security.PrivilegedExceptionAction<NameService>() {
                         public NameService run() {
                             Iterator<NameServiceDescriptor> itr =
@@ -1444,7 +1444,7 @@ class InetAddress implements java.io.Serializable {
      *             be resolved into an address.
      *
      * @see SecurityManager#checkConnect
-     * @see java.net.InetAddress#getByName(java.lang.String)
+     * @see InetAddress#getByName(String)
      */
     public static InetAddress getLocalHost() throws UnknownHostException {
 
@@ -1491,7 +1491,7 @@ class InetAddress implements java.io.Serializable {
                 }
             }
             return ret;
-        } catch (java.lang.SecurityException e) {
+        } catch (SecurityException e) {
             return impl.loopbackAddress();
         }
     }

@@ -170,7 +170,7 @@ public class StreamHandler extends Handler {
      */
     @Override
     public synchronized void setEncoding(String encoding)
-                        throws SecurityException, java.io.UnsupportedEncodingException {
+                        throws SecurityException, UnsupportedEncodingException {
         super.setEncoding(encoding);
         if (output == null) {
             return;

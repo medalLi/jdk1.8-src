@@ -29,7 +29,7 @@ import java.util.Iterator;
 
 /**
  * <p> <code>ContactInfoList</code> contains one or more
- * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}.
+ * {@link ContactInfo ContactInfo}.
  *
  * @author Harold Carr
  */
@@ -37,13 +37,13 @@ public interface ContactInfoList
 {
     /**
      * Used to get a
-     * {@link com.sun.corba.se.pept.transport.ContactInfoListIterator
+     * {@link ContactInfoListIterator
      * ContactInfoListIterator} to retrieve individual
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * from the list.
      *
      * @return A
-     * {@link com.sun.corba.se.pept.transport.ContactInfoListIterator
+     * {@link ContactInfoListIterator
      * ContactInfoListIterator}.
      */
     public Iterator iterator();

@@ -26,7 +26,7 @@
 package java.lang.reflect;
 
 /**
- * Thrown when {@link java.lang.reflect.Executable#getParameters the
+ * Thrown when {@link Executable#getParameters the
  * java.lang.reflect package} attempts to read method parameters from
  * a class file and determines that one or more parameters are
  * malformed.
@@ -42,10 +42,10 @@ package java.lang.reflect;
  *     FINAL, SYNTHETIC, or MANDATED)
  * </ul>
  *
- * See {@link java.lang.reflect.Executable#getParameters} for more
+ * See {@link Executable#getParameters} for more
  * information.
  *
- * @see java.lang.reflect.Executable#getParameters
+ * @see Executable#getParameters
  * @since 1.8
  */
 public class MalformedParametersException extends RuntimeException {

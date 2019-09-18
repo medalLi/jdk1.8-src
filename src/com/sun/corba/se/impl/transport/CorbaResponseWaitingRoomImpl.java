@@ -59,7 +59,7 @@ public class CorbaResponseWaitingRoomImpl
 {
     final static class OutCallDesc
     {
-        java.lang.Object done = new java.lang.Object();
+        Object done = new Object();
         Thread thread;
         MessageMediator messageMediator;
         SystemException exception;

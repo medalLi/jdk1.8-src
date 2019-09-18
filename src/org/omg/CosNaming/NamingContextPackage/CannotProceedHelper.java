@@ -12,7 +12,7 @@ abstract public class CannotProceedHelper
 {
   private static String  _id = "IDL:omg.org/CosNaming/NamingContext/CannotProceed:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CosNaming.NamingContextPackage.CannotProceed that)
+  public static void insert (org.omg.CORBA.Any a, CannotProceed that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class CannotProceedHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CosNaming.NamingContextPackage.CannotProceed extract (org.omg.CORBA.Any a)
+  public static CannotProceed extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -54,7 +54,7 @@ abstract public class CannotProceedHelper
             "rest_of_name",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.CosNaming.NamingContextPackage.CannotProceedHelper.id (), "CannotProceed", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (CannotProceedHelper.id (), "CannotProceed", _members0);
           __active = false;
         }
       }
@@ -67,9 +67,9 @@ abstract public class CannotProceedHelper
     return _id;
   }
 
-  public static org.omg.CosNaming.NamingContextPackage.CannotProceed read (org.omg.CORBA.portable.InputStream istream)
+  public static CannotProceed read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.CosNaming.NamingContextPackage.CannotProceed value = new org.omg.CosNaming.NamingContextPackage.CannotProceed ();
+    CannotProceed value = new CannotProceed ();
     // read and discard the repository ID
     istream.read_string ();
     value.cxt = org.omg.CosNaming.NamingContextHelper.read (istream);
@@ -77,7 +77,7 @@ abstract public class CannotProceedHelper
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CosNaming.NamingContextPackage.CannotProceed value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, CannotProceed value)
   {
     // write the repository ID
     ostream.write_string (id ());

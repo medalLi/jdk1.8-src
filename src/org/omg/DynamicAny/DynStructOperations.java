@@ -13,7 +13,7 @@ package org.omg.DynamicAny;
     * DynStruct objects support the manipulation of IDL struct and exception values.
     * Members of the exceptions are handled in the same way as members of a struct.
     */
-public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperations
+public interface DynStructOperations  extends DynAnyOperations
 {
 
   /**
@@ -24,7 +24,7 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * @exception TypeMismatch if the DynStruct represents an empty exception.
           * @exception InvalidValue if the current position does not indicate a member
           */
-  String current_member_name () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  String current_member_name() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns the TCKind associated with the member at the current position.
@@ -32,7 +32,7 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * @exception TypeMismatch if the DynStruct represents an empty exception.
           * @exception InvalidValue if the current position does not indicate a member
           */
-  org.omg.CORBA.TCKind current_member_kind () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  org.omg.CORBA.TCKind current_member_kind() throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns a sequence of NameValuePairs describing the name and the value of each member
@@ -42,7 +42,7 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * The member names in the returned sequence will be empty strings if the DynStruct's TypeCode
           * does not contain member names.
           */
-  org.omg.DynamicAny.NameValuePair[] get_members ();
+  NameValuePair[] get_members();
 
   /**
           * Initializes the struct data value associated with a DynStruct object from a sequence of NameValuePairs.
@@ -57,7 +57,7 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * @exception InvalidValue if the passed sequence has a number of elements that disagrees
           *            with the number of members as indicated by the DynStruct's TypeCode
           */
-  void set_members (org.omg.DynamicAny.NameValuePair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_members(NameValuePair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 
   /**
           * Returns a sequence of NameDynAnyPairs describing the name and the value of each member
@@ -67,7 +67,7 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * The member names in the returned sequence will be empty strings if the DynStruct's TypeCode
           * does not contain member names.
           */
-  org.omg.DynamicAny.NameDynAnyPair[] get_members_as_dyn_any ();
+  NameDynAnyPair[] get_members_as_dyn_any();
 
   /**
           * Initializes the struct data value associated with a DynStruct object from a sequence of NameDynAnyPairs.
@@ -82,5 +82,5 @@ public interface DynStructOperations  extends org.omg.DynamicAny.DynAnyOperation
           * @exception InvalidValue if the passed sequence has a number of elements that disagrees
           *            with the number of members as indicated by the DynStruct's TypeCode
           */
-  void set_members_as_dyn_any (org.omg.DynamicAny.NameDynAnyPair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  void set_members_as_dyn_any(NameDynAnyPair[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 } // interface DynStructOperations

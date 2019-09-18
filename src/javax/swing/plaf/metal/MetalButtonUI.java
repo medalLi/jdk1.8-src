@@ -46,7 +46,7 @@ import javax.swing.plaf.*;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @author Tom Santos
  */
@@ -122,8 +122,8 @@ public class MetalButtonUI extends BasicButtonUI {
      * @param c JComponent painting on
      * @throws NullPointerException if <code>g</code> or <code>c</code> is
      *         null
-     * @see javax.swing.plaf.ComponentUI#update
-     * @see javax.swing.plaf.ComponentUI#paint
+     * @see ComponentUI#update
+     * @see ComponentUI#paint
      * @since 1.5
      */
     public void update(Graphics g, JComponent c) {

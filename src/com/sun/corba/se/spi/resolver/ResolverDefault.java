@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.resolver ;
+package com.sun.corba.se.spi.resolver;
 
 import java.io.File ;
 
@@ -88,7 +88,7 @@ public class ResolverDefault {
     public static Operation makeINSURLOperation( ORB orb, Resolver bootstrapResolver )
     {
         return new INSURLOperationImpl(
-            (com.sun.corba.se.spi.orb.ORB)orb, bootstrapResolver ) ;
+            (ORB)orb, bootstrapResolver ) ;
     }
 
     public static LocalResolver makeSplitLocalResolver( Resolver resolver,

@@ -47,8 +47,8 @@ package java.net;
  * All methods that request authentication have a default implementation
  * that fails.
  *
- * @see java.net.Authenticator#setDefault(java.net.Authenticator)
- * @see java.net.Authenticator#getPasswordAuthentication()
+ * @see Authenticator#setDefault(Authenticator)
+ * @see Authenticator#getPasswordAuthentication()
  *
  * @author  Bill Foote
  * @since   1.2
@@ -117,7 +117,7 @@ class Authenticator {
      *        setting the default authenticator.
      *
      * @see SecurityManager#checkPermission
-     * @see java.net.NetPermission
+     * @see NetPermission
      */
     public synchronized static void setDefault(Authenticator a) {
         SecurityManager sm = System.getSecurityManager();
@@ -143,7 +143,7 @@ class Authenticator {
      *             or null if not known.
      * @param port the port for the requested connection
      * @param protocol The protocol that's requesting the connection
-     *          ({@link java.net.Authenticator#getRequestingProtocol()})
+     *          ({@link Authenticator#getRequestingProtocol()})
      * @param prompt A prompt string for the user
      * @param scheme The authentication scheme
      *
@@ -155,7 +155,7 @@ class Authenticator {
      *        the password authentication request.
      *
      * @see SecurityManager#checkPermission
-     * @see java.net.NetPermission
+     * @see NetPermission
      */
     public static PasswordAuthentication requestPasswordAuthentication(
                                             InetAddress addr,
@@ -203,7 +203,7 @@ class Authenticator {
      *             or null if not known.
      * @param port the port for the requested connection.
      * @param protocol The protocol that's requesting the connection
-     *          ({@link java.net.Authenticator#getRequestingProtocol()})
+     *          ({@link Authenticator#getRequestingProtocol()})
      * @param prompt A prompt string for the user which identifies the authentication realm.
      * @param scheme The authentication scheme
      *
@@ -215,7 +215,7 @@ class Authenticator {
      *        the password authentication request.
      *
      * @see SecurityManager#checkPermission
-     * @see java.net.NetPermission
+     * @see NetPermission
      * @since 1.4
      */
     public static PasswordAuthentication requestPasswordAuthentication(
@@ -264,7 +264,7 @@ class Authenticator {
      *             or null if not known.
      * @param port the port for the requested connection
      * @param protocol The protocol that's requesting the connection
-     *          ({@link java.net.Authenticator#getRequestingProtocol()})
+     *          ({@link Authenticator#getRequestingProtocol()})
      * @param prompt A prompt string for the user
      * @param scheme The authentication scheme
      * @param url The requesting URL that caused the authentication
@@ -279,7 +279,7 @@ class Authenticator {
      *        the password authentication request.
      *
      * @see SecurityManager#checkPermission
-     * @see java.net.NetPermission
+     * @see NetPermission
      *
      * @since 1.5
      */
@@ -361,7 +361,7 @@ class Authenticator {
      * @return the protocol, optionally followed by "/version", where
      *          version is a version number.
      *
-     * @see java.net.URL#getProtocol()
+     * @see URL#getProtocol()
      */
     protected final String getRequestingProtocol() {
         return requestingProtocol;

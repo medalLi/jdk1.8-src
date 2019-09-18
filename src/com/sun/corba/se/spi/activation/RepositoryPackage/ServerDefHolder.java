@@ -9,30 +9,30 @@ package com.sun.corba.se.spi.activation.RepositoryPackage;
 
 public final class ServerDefHolder implements org.omg.CORBA.portable.Streamable
 {
-  public com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef value = null;
+  public ServerDef value = null;
 
   public ServerDefHolder ()
   {
   }
 
-  public ServerDefHolder (com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef initialValue)
+  public ServerDefHolder (ServerDef initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = com.sun.corba.se.spi.activation.RepositoryPackage.ServerDefHelper.read (i);
+    value = ServerDefHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    com.sun.corba.se.spi.activation.RepositoryPackage.ServerDefHelper.write (o, value);
+    ServerDefHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return com.sun.corba.se.spi.activation.RepositoryPackage.ServerDefHelper.type ();
+    return ServerDefHelper.type ();
   }
 
 }

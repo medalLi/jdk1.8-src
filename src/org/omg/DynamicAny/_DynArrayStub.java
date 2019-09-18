@@ -14,9 +14,9 @@ package org.omg.DynamicAny;
     * Note that the dimension of the array is contained in the TypeCode which is accessible
     * through the type attribute. It can also be obtained by calling the component_count operation.
     */
-public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.DynamicAny.DynArray
+public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements DynArray
 {
-  final public static java.lang.Class _opsClass = DynArrayOperations.class;
+  final public static Class _opsClass = DynArrayOperations.class;
 
 
 
@@ -58,7 +58,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
   /**
           * Returns the elements of the DynArray as DynAnys.
           */
-  public org.omg.DynamicAny.DynAny[] get_elements_as_dyn_any ()
+  public DynAny[] get_elements_as_dyn_any ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_elements_as_dyn_any", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -77,7 +77,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch if one or more elements have a type that is inconsistent with the DynArrays TypeCode
           * @exception InvalidValue if the sequence does not contain the same number of elements as the array dimension
           */
-  public void set_elements_as_dyn_any (org.omg.DynamicAny.DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void set_elements_as_dyn_any (DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("set_elements_as_dyn_any", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -121,7 +121,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @param dyn_any
           * @exception TypeMismatch if the type of the passed DynAny is not equivalent to the type of target DynAny
           */
-  public void assign (org.omg.DynamicAny.DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public void assign (DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("assign", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -183,7 +183,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           *
           * @return true of the DynAnys are equal, false otherwise
           */
-  public boolean equal (org.omg.DynamicAny.DynAny dyn_any)
+  public boolean equal (DynAny dyn_any)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("equal", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -230,7 +230,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           *
           * @return a deep copy of the DynAny object
           */
-  public org.omg.DynamicAny.DynAny copy ()
+  public DynAny copy ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("copy", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -576,7 +576,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           */
-  public void insert_dyn_any (org.omg.DynamicAny.DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void insert_dyn_any (DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("insert_dyn_any", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -977,7 +977,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           */
-  public org.omg.DynamicAny.DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_dyn_any", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;
@@ -1115,7 +1115,7 @@ public class _DynArrayStub extends org.omg.CORBA.portable.ObjectImpl implements 
           * @exception TypeMismatch If called on a DynAny that cannot have components,
           * such as a DynEnum or an empty exception
           */
-  public org.omg.DynamicAny.DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("current_component", _opsClass);
       DynArrayOperations  $self = (DynArrayOperations) $so.servant;

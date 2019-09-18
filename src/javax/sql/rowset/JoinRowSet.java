@@ -368,7 +368,7 @@ public interface JoinRowSet extends WebRowSet {
      * @throws SQLException if an error occurs generating the
      *         <code>Collection</code> object to be returned
      */
-    public Collection<?> getRowSets() throws java.sql.SQLException;
+    public Collection<?> getRowSets() throws SQLException;
 
     /**
      * Returns a <code>String</code> array containing the names of the
@@ -382,7 +382,7 @@ public interface JoinRowSet extends WebRowSet {
      *         the <code>RowSet</code> objects
      * @see CachedRowSet#setTableName
      */
-    public String[] getRowSetNames() throws java.sql.SQLException;
+    public String[] getRowSetNames() throws SQLException;
 
     /**
      * Creates a new <code>CachedRowSet</code> object containing the
@@ -408,11 +408,11 @@ public interface JoinRowSet extends WebRowSet {
      * @return a CachedRowSet containing the contents of the JoinRowSet
      * @throws SQLException if an error occurs assembling the CachedRowSet
      * object
-     * @see javax.sql.RowSet
-     * @see javax.sql.rowset.CachedRowSet
+     * @see RowSet
+     * @see CachedRowSet
      * @see javax.sql.rowset.spi.SyncProvider
      */
-    public CachedRowSet toCachedRowSet() throws java.sql.SQLException;
+    public CachedRowSet toCachedRowSet() throws SQLException;
 
     /**
      * Indicates if CROSS_JOIN is supported by a JoinRowSet

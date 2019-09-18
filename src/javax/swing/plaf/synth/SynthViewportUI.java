@@ -33,7 +33,7 @@ import java.awt.*;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JViewport}.
+ * {@link JViewport}.
  *
  * @since 1.7
  */

@@ -255,7 +255,7 @@ enum PlatformComponent {
         true, // singleton
         new MXBeanFetcher<UnixOperatingSystemMXBean>() {
             public List<UnixOperatingSystemMXBean> getMXBeans() {
-                return getOSMXBeanList(com.sun.management.UnixOperatingSystemMXBean.class);
+                return getOSMXBeanList(UnixOperatingSystemMXBean.class);
             }
         }),
 

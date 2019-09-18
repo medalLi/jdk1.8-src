@@ -8,7 +8,7 @@ package com.sun.corba.se.PortableActivationIDL;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public class _LocatorStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.Locator
+public class _LocatorStub extends org.omg.CORBA.portable.ObjectImpl implements Locator
 {
 
 

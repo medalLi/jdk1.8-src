@@ -29,12 +29,12 @@ public interface ORBInitInfoOperations
        * Returns the arguments passed to <code>ORB.init</code>.  They may or
        * may not contain the ORB's arguments.
        */
-  String[] arguments ();
+  String[] arguments();
 
   /** 
        * Returns the ID of the ORB being initialized.
        */
-  String orb_id ();
+  String orb_id();
 
   /** 
        * Returns the <code>IOP.CodecFactory</code>. The 
@@ -45,7 +45,7 @@ public interface ORBInitInfoOperations
        * means of obtaining a <code>Codec</code> is necessary during ORB 
        * initialization.
        */
-  org.omg.IOP.CodecFactory codec_factory ();
+  org.omg.IOP.CodecFactory codec_factory();
 
   /** 
        * Identical to <code>ORB.register_initial_reference</code>. This same 
@@ -58,7 +58,7 @@ public interface ORBInitInfoOperations
        * interface uses IDL defined in this interface; the semantics are 
        * identical.
        */
-  void register_initial_reference (String id, org.omg.CORBA.Object obj) throws org.omg.PortableInterceptor.ORBInitInfoPackage.InvalidName;
+  void register_initial_reference(String id, org.omg.CORBA.Object obj) throws org.omg.PortableInterceptor.ORBInitInfoPackage.InvalidName;
 
   /**
        * Identical to <code>ORB.resolve_initial_references</code>. This same 
@@ -73,7 +73,7 @@ public interface ORBInitInfoOperations
        * <p>
        * This operation is only valid during post_init.
        */
-  org.omg.CORBA.Object resolve_initial_references (String id) throws org.omg.PortableInterceptor.ORBInitInfoPackage.InvalidName;
+  org.omg.CORBA.Object resolve_initial_references(String id) throws org.omg.PortableInterceptor.ORBInitInfoPackage.InvalidName;
 
   /**
        * Used to add a client-side request Interceptor to the list of 
@@ -84,7 +84,7 @@ public interface ORBInitInfoOperations
        * @exception DuplicateName thrown if a client-side request Interceptor 
        *     has already been registered with this Interceptor's name.
        */
-  void add_client_request_interceptor (org.omg.PortableInterceptor.ClientRequestInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
+  void add_client_request_interceptor(ClientRequestInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
   /** 
        * Used to add a server-side request Interceptor to the list of 
@@ -94,7 +94,7 @@ public interface ORBInitInfoOperations
        * @exception DuplicateName thrown if a server-side request Interceptor 
        *     has already been registered with this Interceptor's name
        */
-  void add_server_request_interceptor (org.omg.PortableInterceptor.ServerRequestInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
+  void add_server_request_interceptor(ServerRequestInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
   /**
        * Used to add an IOR Interceptor to the list of IOR Interceptors. 
@@ -103,7 +103,7 @@ public interface ORBInitInfoOperations
        * @exception DuplicateName thrown if an IOR Interceptor has already 
        *     been registered with this Interceptor's name. 
        */
-  void add_ior_interceptor (org.omg.PortableInterceptor.IORInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
+  void add_ior_interceptor(IORInterceptor interceptor) throws org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
   /**
        * Called to allocate a slot on <code>PortableInterceptor.Current</code>. 
@@ -117,7 +117,7 @@ public interface ORBInitInfoOperations
        *     <code>PICurrent</code> within an ORB initializer. 
        * @see Current
        */
-  int allocate_slot_id ();
+  int allocate_slot_id();
 
   /**
        * Registers a <code>PolicyFactory</code> for the given 
@@ -130,5 +130,5 @@ public interface ORBInitInfoOperations
        *     a <code>PolicyFactory</code> already exists for the given 
        *     <code>PolicyType</code>.
        */
-  void register_policy_factory (int type, org.omg.PortableInterceptor.PolicyFactory policy_factory);
+  void register_policy_factory(int type, PolicyFactory policy_factory);
 } // interface ORBInitInfoOperations

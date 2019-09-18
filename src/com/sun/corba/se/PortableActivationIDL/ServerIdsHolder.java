@@ -26,17 +26,17 @@ public final class ServerIdsHolder implements org.omg.CORBA.portable.Streamable
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.read (i);
+    value = ServerIdsHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.write (o, value);
+    ServerIdsHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.type ();
+    return ServerIdsHelper.type ();
   }
 
 }

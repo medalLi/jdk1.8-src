@@ -62,7 +62,7 @@ import java.util.Objects;
  * This representation is stateless and only decriptive.
  * It provides no private information and no capability to use the member.
  * <p>
- * By contrast, a {@linkplain java.lang.reflect.Method} contains fuller information
+ * By contrast, a {@linkplain Method} contains fuller information
  * about the internals of a method (except its bytecodes) and also
  * allows invocation.  A MemberName is much lighter than a Method,
  * since it contains about 7 fields to the 16 of Method (plus its sub-arrays),
@@ -238,7 +238,7 @@ import java.util.Objects;
     }
 
     /** Return the modifier flags of this member.
-     *  @see java.lang.reflect.Modifier
+     *  @see Modifier
      */
     public int getModifiers() {
         return (flags & RECOGNIZED_MODIFIERS);

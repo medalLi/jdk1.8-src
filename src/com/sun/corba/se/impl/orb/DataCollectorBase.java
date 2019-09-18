@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orb ;
+package com.sun.corba.se.impl.orb;
 
 import com.sun.corba.se.impl.orbutil.GetPropertyAction ;
 
@@ -393,7 +393,7 @@ public abstract class DataCollectorBase implements DataCollector {
         Enumeration enumeration = (Enumeration)
             AccessController.doPrivileged(
                 new PrivilegedAction() {
-                      public java.lang.Object run() {
+                      public Object run() {
                           return System.getProperties().propertyNames();
                       }
                 }

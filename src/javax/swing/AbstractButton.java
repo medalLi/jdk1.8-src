@@ -645,7 +645,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * @return the <code>disabledIcon</code> property
      * @see #getPressedIcon
      * @see #setDisabledIcon
-     * @see javax.swing.LookAndFeel#getDisabledIcon
+     * @see LookAndFeel#getDisabledIcon
      */
     @Transient
     public Icon getDisabledIcon() {
@@ -696,7 +696,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * @return the <code>disabledSelectedIcon</code> property
      * @see #getDisabledIcon
      * @see #setDisabledSelectedIcon
-     * @see javax.swing.LookAndFeel#getDisabledSelectedIcon
+     * @see LookAndFeel#getDisabledSelectedIcon
      */
     public Icon getDisabledSelectedIcon() {
         if (disabledSelectedIcon == null) {
@@ -1563,7 +1563,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * will be underlined to indicate the mnemonic to the user.
      *
      * @param mnemonic the key code which represents the mnemonic
-     * @see     java.awt.event.KeyEvent
+     * @see     KeyEvent
      * @see     #setDisplayedMnemonicIndex
      *
      * @beaninfo
@@ -1834,7 +1834,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
     /**
      * Adds the specified component to this container at the specified
      * index, refer to
-     * {@link java.awt.Container#addImpl(Component, Object, int)}
+     * {@link Container#addImpl(Component, Object, int)}
      * for a complete description of this method.
      *
      * @param     comp the component to be added
@@ -1858,7 +1858,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
 
     /**
      * Sets the layout manager for this container, refer to
-     * {@link java.awt.Container#setLayout(LayoutManager)}
+     * {@link Container#setLayout(LayoutManager)}
      * for a complete description of this method.
      *
      * @param mgr the specified layout manager
@@ -2192,8 +2192,8 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * @param y  the y coordinate
      * @param w  the width
      * @param h  the height
-     * @see     java.awt.image.ImageObserver
-     * @see     java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
+     * @see     ImageObserver
+     * @see     Component#imageUpdate(Image, int, int, int, int, int)
      */
     public boolean imageUpdate(Image img, int infoflags,
                                int x, int y, int w, int h) {
@@ -3095,7 +3095,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
              * out of bounds
              * @see #getAccessibleKeyBindingCount
              */
-            public java.lang.Object getAccessibleKeyBinding(int i) {
+            public Object getAccessibleKeyBinding(int i) {
                 if (i != 0) {
                     throw new IllegalArgumentException();
                 }

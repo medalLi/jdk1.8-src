@@ -361,7 +361,7 @@ public abstract class Arc2D extends RectangularShape {
          * </ol>
          */
         private void readObject(java.io.ObjectInputStream s)
-            throws java.lang.ClassNotFoundException, java.io.IOException
+            throws ClassNotFoundException, java.io.IOException
         {
             s.defaultReadObject();
 
@@ -653,7 +653,7 @@ public abstract class Arc2D extends RectangularShape {
          * </ol>
          */
         private void readObject(java.io.ObjectInputStream s)
-            throws java.lang.ClassNotFoundException, java.io.IOException
+            throws ClassNotFoundException, java.io.IOException
         {
             s.defaultReadObject();
 
@@ -678,8 +678,8 @@ public abstract class Arc2D extends RectangularShape {
      * type of {@link #OPEN}.  It is provided only to enable
      * serialization of subclasses.
      *
-     * @see java.awt.geom.Arc2D.Float
-     * @see java.awt.geom.Arc2D.Double
+     * @see Float
+     * @see Double
      */
     protected Arc2D() {
         this(OPEN);
@@ -694,8 +694,8 @@ public abstract class Arc2D extends RectangularShape {
      *
      * @param type The closure type of this arc:
      * {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
-     * @see java.awt.geom.Arc2D.Float
-     * @see java.awt.geom.Arc2D.Double
+     * @see Float
+     * @see Double
      * @since 1.2
      */
     protected Arc2D(int type) {

@@ -122,7 +122,7 @@ public abstract class AbstractSelector
      * <p> An implementation of this method must arrange for any other thread
      * that is blocked in a selection operation upon this selector to return
      * immediately as if by invoking the {@link
-     * java.nio.channels.Selector#wakeup wakeup} method. </p>
+     * Selector#wakeup wakeup} method. </p>
      *
      * @throws  IOException
      *          If an I/O error occurs while closing the selector

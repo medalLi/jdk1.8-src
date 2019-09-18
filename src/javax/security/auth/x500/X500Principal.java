@@ -61,7 +61,7 @@ import sun.security.util.*;
  * @see java.security.cert.X509Certificate
  * @since 1.4
  */
-public final class X500Principal implements Principal, java.io.Serializable {
+public final class X500Principal implements Principal, Serializable {
 
     private static final long serialVersionUID = -500463348111345721L;
 
@@ -168,12 +168,12 @@ public final class X500Principal implements Principal, java.io.Serializable {
     public X500Principal(String name, Map<String, String> keywordMap) {
         if (name == null) {
             throw new NullPointerException
-                (sun.security.util.ResourcesMgr.getString
+                (ResourcesMgr.getString
                 ("provided.null.name"));
         }
         if (keywordMap == null) {
             throw new NullPointerException
-                (sun.security.util.ResourcesMgr.getString
+                (ResourcesMgr.getString
                 ("provided.null.keyword.map"));
         }
 
@@ -404,7 +404,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
     public String getName(String format, Map<String, String> oidMap) {
         if (oidMap == null) {
             throw new NullPointerException
-                (sun.security.util.ResourcesMgr.getString
+                (ResourcesMgr.getString
                 ("provided.null.OID.map"));
         }
         if (format != null) {
@@ -494,7 +494,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
      *          by writing out its DER-encoded form
      *          (the value of {@code getEncoded} is serialized).
      */
-    private void writeObject(java.io.ObjectOutputStream s)
+    private void writeObject(ObjectOutputStream s)
         throws IOException {
         s.writeObject(thisX500Name.getEncodedInternal());
     }
@@ -502,9 +502,9 @@ public final class X500Principal implements Principal, java.io.Serializable {
     /**
      * Reads this object from a stream (i.e., deserializes it).
      */
-    private void readObject(java.io.ObjectInputStream s)
-        throws java.io.IOException,
-               java.io.NotActiveException,
+    private void readObject(ObjectInputStream s)
+        throws IOException,
+               NotActiveException,
                ClassNotFoundException {
 
         // re-create thisX500Name

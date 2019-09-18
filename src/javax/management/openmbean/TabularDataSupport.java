@@ -455,7 +455,7 @@ public class TabularDataSupport
         try {
             values =
                 t.values().toArray(new CompositeData[t.size()]);
-        } catch (java.lang.ArrayStoreException e) {
+        } catch (ArrayStoreException e) {
             throw new ClassCastException("Map argument t contains values which are not instances of <tt>CompositeData</tt>");
         }
 
@@ -643,10 +643,10 @@ public class TabularDataSupport
      *
      * @return a collection view ({@code Set<Map.Entry<List<?>,CompositeData>>})
      * of the mappings contained in this map.
-     * @see java.util.Map.Entry
+     * @see Entry
      */
     @SuppressWarnings("unchecked")  // historical confusion about the return type
-    public Set<Map.Entry<Object,Object>> entrySet() {
+    public Set<Entry<Object,Object>> entrySet() {
 
         return Util.cast(dataMap.entrySet());
     }
@@ -773,7 +773,7 @@ public class TabularDataSupport
      * The string representation consists of the name of this class (ie <code>javax.management.openmbean.TabularDataSupport</code>),
      * the string representation of the tabular type of this instance, and the string representation of the contents
      * (ie list the key=value mappings as returned by a call to
-     * <tt>dataMap.</tt>{@link java.util.HashMap#toString() toString()}).
+     * <tt>dataMap.</tt>{@link HashMap#toString() toString()}).
      *
      * @return  a string representation of this <code>TabularDataSupport</code> instance
      */

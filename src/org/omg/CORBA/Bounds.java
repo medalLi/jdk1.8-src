@@ -34,7 +34,7 @@ package org.omg.CORBA;
  * Java&nbsp;IDL exceptions</A>
  */
 
-public final class Bounds extends org.omg.CORBA.UserException {
+public final class Bounds extends UserException {
 
     /**
      * Constructs an <code>Bounds</code> with no specified detail message.

@@ -33,7 +33,7 @@ import java.util.Enumeration;
  * <p>
  * Implementations of <code>TreeNode</code> that override <code>equals</code>
  * will typically need to override <code>hashCode</code> as well.  Refer
- * to {@link javax.swing.tree.TreeModel} for more information.
+ * to {@link TreeModel} for more information.
  *
  * For further information and examples of using tree nodes,
  * see <a

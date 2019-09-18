@@ -40,7 +40,7 @@ public interface TransportManager
     public ByteBufferPool getByteBufferPool(int id);
 
     public OutboundConnectionCache getOutboundConnectionCache(
-        ContactInfo contactInfo);
+            ContactInfo contactInfo);
 
     public Collection getOutboundConnectionCaches();
 

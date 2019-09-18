@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import com.sun.corba.se.impl.orb.NormalParserData ;
 import com.sun.corba.se.impl.orb.PrefixParserData ;

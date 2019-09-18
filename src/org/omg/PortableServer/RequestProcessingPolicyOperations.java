@@ -20,5 +20,5 @@ public interface RequestProcessingPolicyOperations  extends org.omg.CORBA.Policy
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.RequestProcessingPolicyValue value ();
+  RequestProcessingPolicyValue value();
 } // interface RequestProcessingPolicyOperations

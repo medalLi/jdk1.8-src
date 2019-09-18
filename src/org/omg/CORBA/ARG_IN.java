@@ -41,7 +41,7 @@ package org.omg.CORBA;
  *         "IDLArgumentIdentifier", myAny, org.omg.CORBA.ARG_IN.value);
  * </PRE>
  *
- * @see     org.omg.CORBA.NamedValue
+ * @see     NamedValue
  * @since   JDK1.2
  */
 public interface ARG_IN {

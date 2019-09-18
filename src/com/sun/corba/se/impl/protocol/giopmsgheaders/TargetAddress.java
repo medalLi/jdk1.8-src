@@ -37,7 +37,7 @@ public final class TargetAddress implements org.omg.CORBA.portable.IDLEntity
 {
   private byte[] ___object_key;
   private org.omg.IOP.TaggedProfile ___profile;
-  private com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo ___ior;
+  private IORAddressingInfo ___ior;
   private short __discriminator;
   private boolean __uninitialized = true;
 
@@ -62,14 +62,14 @@ public final class TargetAddress implements org.omg.CORBA.portable.IDLEntity
 
   public void object_key (byte[] value)
   {
-    __discriminator = com.sun.corba.se.impl.protocol.giopmsgheaders.KeyAddr.value;
+    __discriminator = KeyAddr.value;
     ___object_key = value;
     __uninitialized = false;
   }
 
   private void verifyobject_key (short discriminator)
   {
-    if (discriminator != com.sun.corba.se.impl.protocol.giopmsgheaders.KeyAddr.value)
+    if (discriminator != KeyAddr.value)
       throw new org.omg.CORBA.BAD_OPERATION ();
   }
 
@@ -83,18 +83,18 @@ public final class TargetAddress implements org.omg.CORBA.portable.IDLEntity
 
   public void profile (org.omg.IOP.TaggedProfile value)
   {
-    __discriminator = com.sun.corba.se.impl.protocol.giopmsgheaders.ProfileAddr.value;
+    __discriminator = ProfileAddr.value;
     ___profile = value;
     __uninitialized = false;
   }
 
   private void verifyprofile (short discriminator)
   {
-    if (discriminator != com.sun.corba.se.impl.protocol.giopmsgheaders.ProfileAddr.value)
+    if (discriminator != ProfileAddr.value)
       throw new org.omg.CORBA.BAD_OPERATION ();
   }
 
-  public com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo ior ()
+  public IORAddressingInfo ior ()
   {
     if (__uninitialized)
       throw new org.omg.CORBA.BAD_OPERATION ();
@@ -102,16 +102,16 @@ public final class TargetAddress implements org.omg.CORBA.portable.IDLEntity
     return ___ior;
   }
 
-  public void ior (com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo value)
+  public void ior (IORAddressingInfo value)
   {
-    __discriminator = com.sun.corba.se.impl.protocol.giopmsgheaders.ReferenceAddr.value;
+    __discriminator = ReferenceAddr.value;
     ___ior = value;
     __uninitialized = false;
   }
 
   private void verifyior (short discriminator)
   {
-    if (discriminator != com.sun.corba.se.impl.protocol.giopmsgheaders.ReferenceAddr.value)
+    if (discriminator != ReferenceAddr.value)
       throw new org.omg.CORBA.BAD_OPERATION ();
   }
 

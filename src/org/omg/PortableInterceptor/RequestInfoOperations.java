@@ -35,12 +35,12 @@ public interface RequestInfoOperations
        * then these IDs may very well be the same, but this is not guaranteed 
        * nor required.
        */
-  int request_id ();
+  int request_id();
 
   /**
        * Returns the name of the operation being invoked.
        */
-  String operation ();
+  String operation();
 
   /**
        * Returns an array of <code>Parameter</code> objects, containing the 
@@ -60,7 +60,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  org.omg.Dynamic.Parameter[] arguments ();
+  org.omg.Dynamic.Parameter[] arguments();
 
   /**
        * Returns an array of <code>TypeCode</code> objects describing the 
@@ -81,7 +81,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  org.omg.CORBA.TypeCode[] exceptions ();
+  org.omg.CORBA.TypeCode[] exceptions();
 
   /**
        * Returns an array of <code>String</code> objects describing the 
@@ -101,7 +101,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  String[] contexts ();
+  String[] contexts();
 
   /**
        * Returns an array of <code>String</code> objects containing the 
@@ -120,7 +120,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  String[] operation_context ();
+  String[] operation_context();
 
   /**
        * Returns an any containing the result of the operation invocation. 
@@ -141,7 +141,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  org.omg.CORBA.Any result ();
+  org.omg.CORBA.Any result();
 
   /**
        * Indicates whether a response is expected. 
@@ -154,7 +154,7 @@ public interface RequestInfoOperations
        * <p>
        * On the client, within <code>send_poll</code>, this attribute is true.
        */
-  boolean response_expected ();
+  boolean response_expected();
 
   /**
        * Defines how far the request shall progress before control is returned
@@ -186,7 +186,7 @@ public interface RequestInfoOperations
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  short sync_scope ();
+  short sync_scope();
 
   /**
        * Describes the state of the result of the operation invocation. The
@@ -236,14 +236,14 @@ public interface RequestInfoOperations
        * @see LOCATION_FORWARD
        * @see TRANSPORT_RETRY
        */
-  short reply_status ();
+  short reply_status();
 
   /** 
        * Contains the object to which the request will be forwarded, if the 
        * <code>reply_status</code> attribute is <code>LOCATION_FORWARD</code>.
        * It is indeterminate whether a forwarded request will actually occur.
        */
-  org.omg.CORBA.Object forward_reference ();
+  org.omg.CORBA.Object forward_reference();
 
   /**
        * Returns the data from the given slot of the 
@@ -262,7 +262,7 @@ public interface RequestInfoOperations
        *    allocated slot.
        * @see Current
        */
-  org.omg.CORBA.Any get_slot (int id) throws org.omg.PortableInterceptor.InvalidSlot;
+  org.omg.CORBA.Any get_slot(int id) throws InvalidSlot;
 
   /**
        * Returns a copy of the service context with the given ID that 
@@ -275,7 +275,7 @@ public interface RequestInfoOperations
        * @exception BAD_PARAM thrown with a standard minor code of 26, if the 
        *     request's service context does not contain an entry for that ID.
        */
-  org.omg.IOP.ServiceContext get_request_service_context (int id);
+  org.omg.IOP.ServiceContext get_request_service_context(int id);
 
   /**
        * Returns a copy of the service context with the given ID that 
@@ -288,5 +288,5 @@ public interface RequestInfoOperations
        * @exception BAD_PARAM thrown with a standard minor code of 26 if the 
        *     request's service context does not contain an entry for that ID.
        */
-  org.omg.IOP.ServiceContext get_reply_service_context (int id);
+  org.omg.IOP.ServiceContext get_reply_service_context(int id);
 } // interface RequestInfoOperations

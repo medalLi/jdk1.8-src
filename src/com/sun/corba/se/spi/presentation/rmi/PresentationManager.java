@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.presentation.rmi ;
+package com.sun.corba.se.spi.presentation.rmi;
 
 import java.util.Map ;
 
@@ -58,7 +58,7 @@ public interface PresentationManager
          * and rmic).  This is needed so that the name of a stub is known for
          * standalone clients of the app server.
          */
-        String getStubName( String className ) ;
+        String getStubName(String className) ;
 
         /** Create a stub factory for stubs for the interface whose type is given by
          * className.  className may identify either an IDL interface or an RMI-IIOP
@@ -70,13 +70,13 @@ public interface PresentationManager
          * @param expectedClass The expected stub type (may be null or unused).
          * @param classLoader The classLoader to use (may be null).
          */
-        PresentationManager.StubFactory createStubFactory( String className,
-            boolean isIDLStub, String remoteCodeBase, Class expectedClass,
-            ClassLoader classLoader);
+        StubFactory createStubFactory(String className,
+                                      boolean isIDLStub, String remoteCodeBase, Class expectedClass,
+                                      ClassLoader classLoader);
 
         /** Return a Tie for the given class.
          */
-        Tie getTie( Class cls ) ;
+        Tie getTie(Class cls) ;
 
         /** Return whether or not this StubFactoryFactory creates StubFactory
          * instances that create dynamic stubs and ties.  At the top level,
@@ -139,22 +139,22 @@ public interface PresentationManager
      * all of the remote interfaces are related by inheritance, then the type
      * IDs have the implementation class as element 0.
      */
-    ClassData getClassData( Class cls ) ;
+    ClassData getClassData(Class cls) ;
 
     /** Given a particular method, return a DynamicMethodMarshaller
      * for that method.  This is used for dynamic stubs and ties.
      */
-    DynamicMethodMarshaller getDynamicMethodMarshaller( Method method ) ;
+    DynamicMethodMarshaller getDynamicMethodMarshaller(Method method) ;
 
     /** Return the registered StubFactoryFactory.
      */
-    StubFactoryFactory getStubFactoryFactory( boolean isDynamic ) ;
+    StubFactoryFactory getStubFactoryFactory(boolean isDynamic) ;
 
     /** Register the StubFactoryFactory.  Note that
      * a static StubFactoryFactory is always required for IDL.  The
      * dynamic stubFactoryFactory is optional.
      */
-    void setStubFactoryFactory( boolean isDynamic, StubFactoryFactory sff ) ;
+    void setStubFactoryFactory(boolean isDynamic, StubFactoryFactory sff) ;
 
     /** Equivalent to getStubFactoryFactory( true ).getTie( null ).
      * Provided for compatibility with earlier versions of PresentationManager

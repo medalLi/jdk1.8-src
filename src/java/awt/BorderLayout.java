@@ -117,8 +117,8 @@ import java.util.Hashtable;
  * </pre></blockquote><hr>
  * <p>
  * @author      Arthur van Hoff
- * @see         java.awt.Container#add(String, Component)
- * @see         java.awt.ComponentOrientation
+ * @see         Container#add(String, Component)
+ * @see         ComponentOrientation
  * @since       JDK1.0
  */
 public class BorderLayout implements LayoutManager2,
@@ -304,7 +304,7 @@ public class BorderLayout implements LayoutManager2,
      * For Western, left-to-right and top-to-bottom orientations, this is
      * equivalent to NORTH.
      *
-     * @see java.awt.Component#getComponentOrientation
+     * @see Component#getComponentOrientation
      * @since 1.4
      */
     public static final String PAGE_START = BEFORE_FIRST_LINE;
@@ -314,7 +314,7 @@ public class BorderLayout implements LayoutManager2,
      * For Western, left-to-right and top-to-bottom orientations, this is
      * equivalent to SOUTH.
      *
-     * @see java.awt.Component#getComponentOrientation
+     * @see Component#getComponentOrientation
      * @since 1.4
      */
     public static final String PAGE_END = AFTER_LAST_LINE;
@@ -324,7 +324,7 @@ public class BorderLayout implements LayoutManager2,
      * layout. For Western, left-to-right and top-to-bottom orientations,
      * this is equivalent to WEST.
      *
-     * @see java.awt.Component#getComponentOrientation
+     * @see Component#getComponentOrientation
      * @since 1.4
      */
     public static final String LINE_START = BEFORE_LINE_BEGINS;
@@ -334,7 +334,7 @@ public class BorderLayout implements LayoutManager2,
      * layout. For Western, left-to-right and top-to-bottom orientations,
      * this is equivalent to EAST.
      *
-     * @see java.awt.Component#getComponentOrientation
+     * @see Component#getComponentOrientation
      * @since 1.4
      */
     public static final String LINE_END = AFTER_LINE_ENDS;
@@ -412,7 +412,7 @@ public class BorderLayout implements LayoutManager2,
      * @param   comp         the component to be added.
      * @param   constraints  an object that specifies how and where
      *                       the component is added to the layout.
-     * @see     java.awt.Container#add(java.awt.Component, java.lang.Object)
+     * @see     Container#add(Component, Object)
      * @exception   IllegalArgumentException  if the constraint object is not
      *                 a string, or if it not one of the five specified
          *              constants.
@@ -471,8 +471,8 @@ public class BorderLayout implements LayoutManager2,
      * <code>removeAll</code> methods. Most applications do not call this
      * method directly.
      * @param   comp   the component to be removed.
-     * @see     java.awt.Container#remove(java.awt.Component)
-     * @see     java.awt.Container#removeAll()
+     * @see     Container#remove(Component)
+     * @see     Container#removeAll()
      */
     public void removeLayoutComponent(Component comp) {
       synchronized (comp.getTreeLock()) {
@@ -511,7 +511,7 @@ public class BorderLayout implements LayoutManager2,
      *          the location is empty
      * @exception   IllegalArgumentException  if the constraint object is
      *              not one of the nine specified constants
-     * @see     #addLayoutComponent(java.awt.Component, java.lang.Object)
+     * @see     #addLayoutComponent(Component, Object)
      * @since 1.5
      */
     public Component getLayoutComponent(Object constraints) {
@@ -560,7 +560,7 @@ public class BorderLayout implements LayoutManager2,
      * @exception   IllegalArgumentException  if the constraint object is
      *              not one of the five specified constants
      * @exception   NullPointerException  if the target parameter is null
-     * @see     #addLayoutComponent(java.awt.Component, java.lang.Object)
+     * @see     #addLayoutComponent(Component, Object)
      * @since 1.5
      */
     public Component getLayoutComponent(Container target, Object constraints) {
@@ -598,7 +598,7 @@ public class BorderLayout implements LayoutManager2,
      * @return  the constraint for the specified component,
      *          or null if component is null or is not present
      *          in this layout
-     * @see #addLayoutComponent(java.awt.Component, java.lang.Object)
+     * @see #addLayoutComponent(Component, Object)
      * @since 1.5
      */
     public Object getConstraints(Component comp) {
@@ -638,9 +638,9 @@ public class BorderLayout implements LayoutManager2,
      * @param   target   the container in which to do the layout.
      * @return  the minimum dimensions needed to lay out the subcomponents
      *          of the specified container.
-     * @see     java.awt.Container
-     * @see     java.awt.BorderLayout#preferredLayoutSize
-     * @see     java.awt.Container#getMinimumSize()
+     * @see     Container
+     * @see     BorderLayout#preferredLayoutSize
+     * @see     Container#getMinimumSize()
      */
     public Dimension minimumLayoutSize(Container target) {
       synchronized (target.getTreeLock()) {
@@ -694,9 +694,9 @@ public class BorderLayout implements LayoutManager2,
      * @param   target   the container in which to do the layout.
      * @return  the preferred dimensions to lay out the subcomponents
      *          of the specified container.
-     * @see     java.awt.Container
-     * @see     java.awt.BorderLayout#minimumLayoutSize
-     * @see     java.awt.Container#getPreferredSize()
+     * @see     Container
+     * @see     BorderLayout#minimumLayoutSize
+     * @see     Container#getPreferredSize()
      */
     public Dimension preferredLayoutSize(Container target) {
       synchronized (target.getTreeLock()) {
@@ -796,8 +796,8 @@ public class BorderLayout implements LayoutManager2,
      * Most applications do not call this method directly. This method
      * is called when a container calls its <code>doLayout</code> method.
      * @param   target   the container in which to do the layout.
-     * @see     java.awt.Container
-     * @see     java.awt.Container#doLayout()
+     * @see     Container
+     * @see     Container#doLayout()
      */
     public void layoutContainer(Container target) {
       synchronized (target.getTreeLock()) {

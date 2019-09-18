@@ -46,7 +46,7 @@ import org.xml.sax.SAXParseException;
  * @see javax.xml.bind.Validator
  * @see javax.xml.bind.ValidationEventHandler
  * @see javax.xml.bind.ValidationEvent
- * @see javax.xml.bind.ValidationEventLocator
+ * @see ValidationEventLocator
  * @since JAXB1.0
  */
 public class ValidationEventLocatorImpl implements ValidationEventLocator
@@ -160,7 +160,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
 
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getURL()
+     * @see ValidationEventLocator#getURL()
      */
     public URL getURL() {
         return url;
@@ -176,7 +176,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
     }
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getOffset()
+     * @see ValidationEventLocator#getOffset()
      */
     public int getOffset() {
         return offset;
@@ -192,7 +192,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
     }
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getLineNumber()
+     * @see ValidationEventLocator#getLineNumber()
      */
     public int getLineNumber() {
         return lineNumber;
@@ -208,7 +208,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
     }
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getColumnNumber()
+     * @see ValidationEventLocator#getColumnNumber()
      */
     public int getColumnNumber() {
         return columnNumber;
@@ -224,7 +224,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
     }
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getObject()
+     * @see ValidationEventLocator#getObject()
      */
     public Object getObject() {
         return object;
@@ -240,7 +240,7 @@ public class ValidationEventLocatorImpl implements ValidationEventLocator
     }
 
     /**
-     * @see javax.xml.bind.ValidationEventLocator#getNode()
+     * @see ValidationEventLocator#getNode()
      */
     public Node getNode() {
         return node;

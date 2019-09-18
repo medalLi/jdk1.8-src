@@ -120,7 +120,7 @@ public final class ObjectStreamClassUtil_1_3 {
 
             // Get SUID of parent
             Class<?> parent = cl.getSuperclass();
-            if ((parent != null) && (parent != java.lang.Object.class)) {
+            if ((parent != null) && (parent != Object.class)) {
                 boolean hasWriteObjectFlag = false;
                 Class [] args = {java.io.ObjectOutputStream.class};
                 Method hasWriteObjectMethod = ObjectStreamClassUtil_1_3.getDeclaredMethod(parent, "writeObject", args,

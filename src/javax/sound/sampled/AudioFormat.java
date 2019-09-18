@@ -93,18 +93,18 @@ import java.util.Map;
  *  </tr>
  *  <tr>
  *   <td>&quot;bitrate&quot;</td>
- *   <td>{@link java.lang.Integer Integer}</td>
+ *   <td>{@link Integer Integer}</td>
  *   <td>average bit rate in bits per second</td>
  *  </tr>
  *  <tr>
  *   <td>&quot;vbr&quot;</td>
- *   <td>{@link java.lang.Boolean Boolean}</td>
+ *   <td>{@link Boolean Boolean}</td>
  *   <td><code>true</code>, if the file is encoded in variable bit
  *       rate (VBR)</td>
  *  </tr>
  *  <tr>
  *   <td>&quot;quality&quot;</td>
- *   <td>{@link java.lang.Integer Integer}</td>
+ *   <td>{@link Integer Integer}</td>
  *   <td>encoding/conversion quality, 1..100</td>
  *  </tr>
  * </table>

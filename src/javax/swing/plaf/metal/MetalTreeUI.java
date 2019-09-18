@@ -49,8 +49,8 @@ import javax.swing.plaf.basic.*;
  *    <th><p style="text-align:left">Angled</p></th>
  *    <td>A line is drawn connecting the child to the parent. For handling
  *          of the root node refer to
- *          {@link javax.swing.JTree#setRootVisible} and
- *          {@link javax.swing.JTree#setShowsRootHandles}.
+ *          {@link JTree#setRootVisible} and
+ *          {@link JTree#setShowsRootHandles}.
  *    </td>
  *  </tr>
  *  <tr>

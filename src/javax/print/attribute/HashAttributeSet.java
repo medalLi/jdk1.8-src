@@ -257,7 +257,7 @@ public class HashAttributeSet implements AttributeSet, Serializable {
      *
      * @param  category  Attribute category whose associated attribute value
      *                   is to be returned. It must be a
-     *                   {@link java.lang.Class Class}
+     *                   {@link Class Class}
      *                   that implements interface {@link Attribute
      *                   Attribute}.
      *
@@ -270,7 +270,7 @@ public class HashAttributeSet implements AttributeSet, Serializable {
      *     (unchecked exception) Thrown if the <CODE>category</CODE> is null.
      * @throws  ClassCastException
      *     (unchecked exception) Thrown if the <CODE>category</CODE> is not a
-     *     {@link java.lang.Class Class} that implements interface {@link
+     *     {@link Class Class} that implements interface {@link
      *     Attribute Attribute}.
      */
     public Attribute get(Class<?> category) {
@@ -512,7 +512,7 @@ public class HashAttributeSet implements AttributeSet, Serializable {
      * This ensures that <tt>t1.equals(t2)</tt> implies that
      * <tt>t1.hashCode()==t2.hashCode()</tt> for any two attribute sets
      * <tt>t1</tt> and <tt>t2</tt>, as required by the general contract of
-     * {@link java.lang.Object#hashCode() Object.hashCode()}.
+     * {@link Object#hashCode() Object.hashCode()}.
      *
      * @return  The hash code value for this attribute set.
      */

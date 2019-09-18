@@ -59,8 +59,8 @@ import java.rmi.RemoteException;
  * mutate the registry's bindings may be restricted to calls
  * originating from the local host).  If a <code>Registry</code>
  * method chooses to deny access for a given invocation, its
- * implementation may throw {@link java.rmi.AccessException}, which
- * (because it extends {@link java.rmi.RemoteException}) will be
+ * implementation may throw {@link AccessException}, which
+ * (because it extends {@link RemoteException}) will be
  * wrapped in a {@link java.rmi.ServerException} when caught by a
  * remote client.
  *

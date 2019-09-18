@@ -68,7 +68,7 @@ package java.text;
  * <code>formatToCharacterIterator</code>.
  *
  * @author      Mark Davis
- * @see         java.text.Format
+ * @see         Format
  */
 public class FieldPosition {
 
@@ -101,10 +101,10 @@ public class FieldPosition {
      * in the various subclasses of Format.
      *
      * @param field the field identifier
-     * @see java.text.NumberFormat#INTEGER_FIELD
-     * @see java.text.NumberFormat#FRACTION_FIELD
-     * @see java.text.DateFormat#YEAR_FIELD
-     * @see java.text.DateFormat#MONTH_FIELD
+     * @see NumberFormat#INTEGER_FIELD
+     * @see NumberFormat#FRACTION_FIELD
+     * @see DateFormat#YEAR_FIELD
+     * @see DateFormat#MONTH_FIELD
      */
     public FieldPosition(int field) {
         this.field = field;

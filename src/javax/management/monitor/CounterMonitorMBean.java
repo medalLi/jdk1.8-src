@@ -76,11 +76,11 @@ public interface CounterMonitorMBean extends MonitorMBean {
      * @see #getThreshold()
      *
      * @param value The threshold value.
-     * @exception java.lang.IllegalArgumentException The specified threshold is null or the threshold value is less than zero.
+     * @exception IllegalArgumentException The specified threshold is null or the threshold value is less than zero.
      * @deprecated As of JMX 1.2, replaced by {@link #setInitThreshold}
      */
     @Deprecated
-    public void setThreshold(Number value) throws java.lang.IllegalArgumentException;
+    public void setThreshold(Number value) throws IllegalArgumentException;
 
     /**
      * Gets the derived gauge for the specified MBean.
@@ -128,13 +128,13 @@ public interface CounterMonitorMBean extends MonitorMBean {
      * Sets the initial threshold value common to all observed MBeans.
      *
      * @param value The initial threshold value.
-     * @exception java.lang.IllegalArgumentException The specified
+     * @exception IllegalArgumentException The specified
      * threshold is null or the threshold value is less than zero.
      *
      * @see #getInitThreshold
      *
      */
-    public void setInitThreshold(Number value) throws java.lang.IllegalArgumentException;
+    public void setInitThreshold(Number value) throws IllegalArgumentException;
 
     /**
      * Gets the offset value.
@@ -149,12 +149,12 @@ public interface CounterMonitorMBean extends MonitorMBean {
      * Sets the offset value.
      *
      * @param value The offset value.
-     * @exception java.lang.IllegalArgumentException The specified
+     * @exception IllegalArgumentException The specified
      * offset is null or the offset value is less than zero.
      *
      * @see #getOffset()
      */
-    public void setOffset(Number value) throws java.lang.IllegalArgumentException;
+    public void setOffset(Number value) throws IllegalArgumentException;
 
     /**
      * Gets the modulus value.
@@ -169,12 +169,12 @@ public interface CounterMonitorMBean extends MonitorMBean {
      * Sets the modulus value.
      *
      * @param value The modulus value.
-     * @exception java.lang.IllegalArgumentException The specified
+     * @exception IllegalArgumentException The specified
      * modulus is null or the modulus value is less than zero.
      *
      * @see #getModulus
      */
-    public void setModulus(Number value) throws java.lang.IllegalArgumentException;
+    public void setModulus(Number value) throws IllegalArgumentException;
 
     /**
      * Gets the notification's on/off switch value.

@@ -74,7 +74,7 @@ public interface InputMethod {
      * <li>by {@link java.awt.im.InputContext#selectInputMethod InputContext.selectInputMethod},
      * <li>when switching to this input method through the user interface if the user
      *     specified a locale or if the previously selected input method's
-     *     {@link java.awt.im.spi.InputMethod#getLocale getLocale} method
+     *     {@link InputMethod#getLocale getLocale} method
      *     returns a non-null value.
      * </ul>
      *
@@ -131,7 +131,7 @@ public interface InputMethod {
      * determine whether this operation is supported. For example, an input method may enable
      * composition only for some locales, and do nothing for other locales. For such input
      * methods, it is possible that this method does not throw
-     * {@link java.lang.UnsupportedOperationException UnsupportedOperationException},
+     * {@link UnsupportedOperationException UnsupportedOperationException},
      * but also does not affect whether composition is enabled.
      * <p>
      * This method is called
@@ -141,7 +141,7 @@ public interface InputMethod {
      *     user interface or
      *     {@link java.awt.im.InputContext#selectInputMethod InputContext.selectInputMethod},
      *     if the previously selected input method's
-     *     {@link java.awt.im.spi.InputMethod#isCompositionEnabled isCompositionEnabled}
+     *     {@link InputMethod#isCompositionEnabled isCompositionEnabled}
      *     method returns without throwing an exception.
      * </ul>
      *

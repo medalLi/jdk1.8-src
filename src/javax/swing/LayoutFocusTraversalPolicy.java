@@ -44,7 +44,7 @@ import sun.awt.SunToolkit;
  *
  * @author David Mendenhall
  *
- * @see java.awt.ComponentOrientation
+ * @see ComponentOrientation
  * @since 1.4
  */
 public class LayoutFocusTraversalPolicy extends SortingFocusTraversalPolicy
@@ -213,12 +213,12 @@ public class LayoutFocusTraversalPolicy extends SortingFocusTraversalPolicy
      *
      * @param aComponent the <code>Component</code> whose fitness
      *                   as a focus owner is to be tested
-     * @see java.awt.Component#isVisible
-     * @see java.awt.Component#isDisplayable
-     * @see java.awt.Component#isEnabled
-     * @see java.awt.Component#isFocusable
+     * @see Component#isVisible
+     * @see Component#isDisplayable
+     * @see Component#isEnabled
+     * @see Component#isFocusable
      * @see javax.swing.plaf.ComboBoxUI#isFocusTraversable
-     * @see javax.swing.JComponent#getInputMap
+     * @see JComponent#getInputMap
      * @see java.awt.DefaultFocusTraversalPolicy#accept
      * @return <code>true</code> if <code>aComponent</code> is a valid choice
      *         for a focus owner;

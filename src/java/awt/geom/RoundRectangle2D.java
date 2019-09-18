@@ -446,8 +446,8 @@ public abstract class RoundRectangle2D extends RectangularShape {
      * the information necessary to satisfy the various accessor
      * methods below.
      *
-     * @see java.awt.geom.RoundRectangle2D.Float
-     * @see java.awt.geom.RoundRectangle2D.Double
+     * @see Float
+     * @see Double
      * @since 1.2
      */
     protected RoundRectangle2D() {

@@ -420,7 +420,7 @@ public class DefinitionKind implements org.omg.CORBA.portable.IDLEntity {
          * <code>DefinitionKind</code>
          * @return the <code>DefinitionKind</code> instance corresponding
          *         to the given code
-         * @throws org.omg.CORBA.BAD_PARAM if the given parameter is not
+         * @throws BAD_PARAM if the given parameter is not
  one
          *         of the <code>int</code> constants from the class
          *         <code>DefinitionKind</code>
@@ -477,7 +477,7 @@ public class DefinitionKind implements org.omg.CORBA.portable.IDLEntity {
         case _dk_Native:
             return dk_Native;
         default:
-            throw new org.omg.CORBA.BAD_PARAM();
+            throw new BAD_PARAM();
         }
     }
 

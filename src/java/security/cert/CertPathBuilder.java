@@ -155,7 +155,7 @@ public class CertPathBuilder {
      *          CertPathBuilderSpi implementation for the
      *          specified algorithm.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertPathBuilder getInstance(String algorithm)
             throws NoSuchAlgorithmException {
@@ -198,7 +198,7 @@ public class CertPathBuilder {
      * @exception IllegalArgumentException if the {@code provider} is
      *          null or empty.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertPathBuilder getInstance(String algorithm, String provider)
            throws NoSuchAlgorithmException, NoSuchProviderException {
@@ -235,7 +235,7 @@ public class CertPathBuilder {
      * @exception IllegalArgumentException if the {@code provider} is
      *          null.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertPathBuilder getInstance(String algorithm,
             Provider provider) throws NoSuchAlgorithmException {
@@ -294,7 +294,7 @@ public class CertPathBuilder {
      * setting the value of the {@code certpathbuilder.type} security property
      * to the desired type.
      *
-     * @see java.security.Security security properties
+     * @see Security security properties
      * @return the default {@code CertPathBuilder} type as specified
      * by the {@code certpathbuilder.type} security property, or the string
      * {@literal "PKIX"} if no such property exists.

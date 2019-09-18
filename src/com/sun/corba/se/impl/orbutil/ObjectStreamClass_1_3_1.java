@@ -84,7 +84,7 @@ import com.sun.corba.se.impl.io.ObjectStreamClass;
  * @author  Roger Riggs
  * @since   JDK1.1
  */
-public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
+public class ObjectStreamClass_1_3_1 implements Serializable {
 
     public static final long kDefaultUID = -1;
 
@@ -171,7 +171,7 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
      * that have evolved from a common root class and agree to be serialized
      * and deserialized using a common format.
      */
-    public static final long getSerialVersionUID( java.lang.Class<?> clazz) {
+    public static final long getSerialVersionUID( Class<?> clazz) {
         ObjectStreamClass_1_3_1 theosc = ObjectStreamClass_1_3_1.lookup( clazz );
         if( theosc != null )
         {
@@ -205,7 +205,7 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
     /**
      * Return the actual (computed) serialVersionUID for this class.
      */
-    public static final long getActualSerialVersionUID( java.lang.Class<?> clazz )
+    public static final long getActualSerialVersionUID( Class<?> clazz )
     {
         ObjectStreamClass_1_3_1 theosc = ObjectStreamClass_1_3_1.lookup( clazz );
         if( theosc != null )
@@ -334,8 +334,8 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
      * Create a new ObjectStreamClass_1_3_1 from a loaded class.
      * Don't call this directly, call lookup instead.
      */
-    private ObjectStreamClass_1_3_1(java.lang.Class<?> cl, ObjectStreamClass_1_3_1 superdesc,
-                              boolean serial, boolean extern)
+    private ObjectStreamClass_1_3_1(Class<?> cl, ObjectStreamClass_1_3_1 superdesc,
+                                    boolean serial, boolean extern)
     {
         ofClass = cl;           /* created from this class */
 
@@ -630,9 +630,9 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
             if (translation != null)
                 return translation;
             else {
-                Class<?> osfClass = com.sun.corba.se.impl.orbutil.ObjectStreamField.class;
+                Class<?> osfClass = ObjectStreamField.class;
 
-                translation = (Object[])java.lang.reflect.Array.newInstance(osfClass, objs.length);
+                translation = (Object[]) Array.newInstance(osfClass, objs.length);
                 Object arg[] = new Object[2];
                 Class<?> types[] = {String.class, Class.class};
                 Constructor constructor = osfClass.getDeclaredConstructor(types);
@@ -811,12 +811,12 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
         long h = 0;
         try {
 
-            if ((!java.io.Serializable.class.isAssignableFrom(cl)) ||
+            if ((!Serializable.class.isAssignableFrom(cl)) ||
                 (cl.isInterface())){
                 return 0;
             }
 
-            if (java.io.Externalizable.class.isAssignableFrom(cl)) {
+            if (Externalizable.class.isAssignableFrom(cl)) {
                 return 1;
             }
 
@@ -854,7 +854,7 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
                 if (fields[i].getField() != null)
                     numNonNullFields++;
 
-            Field [] field = new java.lang.reflect.Field[numNonNullFields];
+            Field [] field = new Field[numNonNullFields];
             for (int i = 0, fieldNum = 0; i < fields.length; i++) {
                 if (fields[i].getField() != null) {
                     field[fieldNum++] = fields[i].getField();

@@ -15,20 +15,20 @@ public interface LocatorOperations
   	* ORBs of an active server.
   	* Starts the server if it is not already running.
   	*/
-  com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType locateServer (String serverId, String endPoint) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown;
+  com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerType locateServer(String serverId, String endPoint) throws NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown;
 
   /** locate server - returns all ports registered with a specified ORB for
   	* an active server
   	* Starts the server if it is not already running.
   	*/
-  com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB locateServerForORB (String serverId, String orbId) throws com.sun.corba.se.PortableActivationIDL.InvalidORBid, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.ServerHeldDown;
+  com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB locateServerForORB(String serverId, String orbId) throws InvalidORBid, com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, ServerHeldDown;
 
   /** get the port for the endpoint of the locator
   	*/
-  int getEndpoint (String endPointType) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint;
+  int getEndpoint(String endPointType) throws NoSuchEndPoint;
 
   /** Useful from external BadServerIdHandlers which need
   	* to pick a particular port type.
   	*/
-  int getServerPortForType (com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB location, String endPointType) throws com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint;
+  int getServerPortForType(com.sun.corba.se.PortableActivationIDL.LocatorPackage.ServerLocationPerORB location, String endPointType) throws NoSuchEndPoint;
 } // interface LocatorOperations

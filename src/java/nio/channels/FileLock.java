@@ -93,7 +93,7 @@ import java.io.IOException;
  * they were advisory locks.
  *
  * <p> On some systems, acquiring a mandatory lock on a region of a file
- * prevents that region from being {@link java.nio.channels.FileChannel#map
+ * prevents that region from being {@link FileChannel#map
  * <i>mapped into memory</i>}, and vice versa.  Programs that combine
  * locking and mapping should be prepared for this combination to fail.
  *

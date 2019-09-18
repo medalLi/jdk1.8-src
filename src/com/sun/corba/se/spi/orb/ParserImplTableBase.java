@@ -22,7 +22,7 @@
  *
  *
  */
-package com.sun.corba.se.spi.orb ;
+package com.sun.corba.se.spi.orb;
 
 import java.util.Map ;
 import java.util.AbstractMap ;
@@ -136,7 +136,7 @@ public abstract class ParserImplTableBase extends ParserImplBase {
                         public Object next()
                         {
                             ParserData pd = entries[ctr++] ;
-                            Map.Entry result = new MapEntry( pd.getFieldName() ) ;
+                            Entry result = new MapEntry( pd.getFieldName() ) ;
                             if (useDefault)
                                 result.setValue( pd.getDefaultValue() ) ;
                             else

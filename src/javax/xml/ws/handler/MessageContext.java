@@ -188,18 +188,18 @@ public interface MessageContext extends Map<String, Object> {
      * @param name Name of the property associated with the
      *             <code>MessageContext</code>
      * @param scope Desired scope of the property
-     * @throws java.lang.IllegalArgumentException if an illegal
+     * @throws IllegalArgumentException if an illegal
      *             property name is specified
      */
-    public void setScope(String name,  Scope scope);
+    public void setScope(String name, Scope scope);
 
     /**
      * Gets the scope of a property.
      *
      * @param name Name of the property
      * @return Scope of the property
-     * @throws java.lang.IllegalArgumentException if a non-existant
+     * @throws IllegalArgumentException if a non-existant
      *             property name is specified
      */
-    public Scope getScope(String  name);
+    public Scope getScope(String name);
 }

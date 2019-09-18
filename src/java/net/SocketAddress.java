@@ -34,8 +34,8 @@ package java.net;
  * It provides an immutable object used by sockets for binding, connecting, or
  * as returned values.
  *
- * @see java.net.Socket
- * @see java.net.ServerSocket
+ * @see Socket
+ * @see ServerSocket
  * @since 1.4
  */
 public abstract class SocketAddress implements java.io.Serializable {

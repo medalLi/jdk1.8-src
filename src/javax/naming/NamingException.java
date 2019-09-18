@@ -120,7 +120,7 @@ public class NamingException extends Exception {
      *
      * @param   explanation     A possibly null string containing
      *                          additional detail about this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public NamingException(String explanation) {
         super(explanation);
@@ -185,7 +185,7 @@ public class NamingException extends Exception {
       *         about this exception. If null, it means there is no
       *         detail message for this exception.
       *
-      * @see java.lang.Throwable#getMessage
+      * @see Throwable#getMessage
       */
     public String getExplanation() {
         return getMessage();

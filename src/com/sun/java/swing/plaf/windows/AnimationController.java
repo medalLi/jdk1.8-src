@@ -103,7 +103,7 @@ class AnimationController implements ActionListener, PropertyChangeListener {
 
     private static void triggerAnimation(JComponent c,
                            Part part, State newState) {
-        if (c instanceof javax.swing.JTabbedPane
+        if (c instanceof JTabbedPane
             || part == Part.TP_BUTTON) {
             //idk: we can not handle tabs animation because
             //the same (component,part) is used to handle all the tabs

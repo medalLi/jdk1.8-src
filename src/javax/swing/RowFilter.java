@@ -151,12 +151,12 @@ public abstract class RowFilter<M,I> {
      *   RowFilter.regexFilter("^a");
      * </pre>
      * <p>
-     * The returned filter uses {@link java.util.regex.Matcher#find}
+     * The returned filter uses {@link Matcher#find}
      * to test for inclusion.  To test for exact matches use the
      * characters '^' and '$' to match the beginning and end of the
      * string respectively.  For example, "^foo$" includes only rows whose
      * string is exactly "foo" and not, for example, "food".  See
-     * {@link java.util.regex.Pattern} for a complete description of
+     * {@link Pattern} for a complete description of
      * the supported regular-expression constructs.
      *
      * @param regex the regular expression to filter on
@@ -169,7 +169,7 @@ public abstract class RowFilter<M,I> {
      *         are &lt; 0
      * @throws PatternSyntaxException if <code>regex</code> is
      *         not a valid regular expression.
-     * @see java.util.regex.Pattern
+     * @see Pattern
      */
     public static <M,I> RowFilter<M,I> regexFilter(String regex,
                                                        int... indices) {
@@ -197,7 +197,7 @@ public abstract class RowFilter<M,I> {
      *         are &lt; 0 or <code>type</code> is
      *         <code>null</code>
      * @see java.util.Calendar
-     * @see java.util.Date
+     * @see Date
      */
     public static <M,I> RowFilter<M,I> dateFilter(ComparisonType type,
                                             Date date, int... indices) {
@@ -324,8 +324,8 @@ public abstract class RowFilter<M,I> {
      * @param <M> the type of the model; for example <code>PersonModel</code>
      * @param <I> the type of the identifier; when using
      *            <code>TableRowSorter</code> this will be <code>Integer</code>
-     * @see javax.swing.RowFilter
-     * @see javax.swing.DefaultRowSorter#setRowFilter(javax.swing.RowFilter)
+     * @see RowFilter
+     * @see DefaultRowSorter#setRowFilter(RowFilter)
      * @since 1.6
      */
     public static abstract class Entry<M, I> {

@@ -282,7 +282,7 @@ final class MethodTypeForm {
         }
     }
 
-    /** Codes for {@link #canonicalize(java.lang.Class, int)}.
+    /** Codes for {@link #canonicalize(Class, int)}.
      * ERASE means change every reference to {@code Object}.
      * WRAP means convert primitives (including {@code void} to their
      * corresponding wrapper types.  UNWRAP means the reverse of WRAP.

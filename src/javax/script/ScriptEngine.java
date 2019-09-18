@@ -135,7 +135,7 @@ public interface ScriptEngine  {
      * @throws ScriptException if an error occurs in script.
      * @throws NullPointerException if either argument is null.
      */
-    public Object eval(Reader reader , ScriptContext context) throws ScriptException;
+    public Object eval(Reader reader, ScriptContext context) throws ScriptException;
 
     /**
      * Executes the specified script.  The default <code>ScriptContext</code> for the <code>ScriptEngine</code>
@@ -194,7 +194,7 @@ public interface ScriptEngine  {
      * @throws ScriptException if an error occurs.
      * @throws NullPointerException if either argument is null.
      */
-    public Object eval(Reader reader , Bindings n) throws ScriptException;
+    public Object eval(Reader reader, Bindings n) throws ScriptException;
 
 
 

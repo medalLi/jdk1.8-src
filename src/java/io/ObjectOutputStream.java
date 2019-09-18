@@ -152,10 +152,10 @@ import sun.reflect.misc.ReflectUtil;
  *
  * @author      Mike Warres
  * @author      Roger Riggs
- * @see java.io.DataOutput
- * @see java.io.ObjectInputStream
- * @see java.io.Serializable
- * @see java.io.Externalizable
+ * @see DataOutput
+ * @see ObjectInputStream
+ * @see Serializable
+ * @see Externalizable
  * @see <a href="../../../platform/serialization/spec/output.html">Object Serialization Specification, Section 2, Object Output Classes</a>
  * @since       JDK1.1
  */
@@ -210,7 +210,7 @@ public class ObjectOutputStream
      * as true or false for extended information about exception's place
      */
     private static final boolean extendedDebugInfo =
-        java.security.AccessController.doPrivileged(
+        AccessController.doPrivileged(
             new sun.security.action.GetBooleanAction(
                 "sun.io.serialization.extendedDebugInfo")).booleanValue();
 
@@ -267,7 +267,7 @@ public class ObjectOutputStream
      *          subclassing.
      * @throws  IOException if an I/O error occurs while creating this stream
      * @see SecurityManager#checkPermission
-     * @see java.io.SerializablePermission
+     * @see SerializablePermission
      */
     protected ObjectOutputStream() throws IOException, SecurityException {
         SecurityManager sm = System.getSecurityManager();
@@ -297,8 +297,8 @@ public class ObjectOutputStream
      *          have been serialized.
      * @throws  IllegalArgumentException if invalid version is passed in.
      * @throws  IOException if I/O errors occur
-     * @see java.io.ObjectStreamConstants#PROTOCOL_VERSION_1
-     * @see java.io.ObjectStreamConstants#PROTOCOL_VERSION_2
+     * @see ObjectStreamConstants#PROTOCOL_VERSION_1
+     * @see ObjectStreamConstants#PROTOCOL_VERSION_2
      * @since   1.2
      */
     public void useProtocolVersion(int version) throws IOException {
@@ -452,7 +452,7 @@ public class ObjectOutputStream
      * @throws  IOException if I/O errors occur
      * @since 1.2
      */
-    public ObjectOutputStream.PutField putFields() throws IOException {
+    public PutField putFields() throws IOException {
         if (curPut == null) {
             SerialCallbackContext ctx = curContext;
             if (ctx == null) {
@@ -606,7 +606,7 @@ public class ObjectOutputStream
      *          <code>checkPermission</code> method denies enabling the stream
      *          to do replacement of objects in the stream.
      * @see SecurityManager#checkPermission
-     * @see java.io.SerializablePermission
+     * @see SerializablePermission
      */
     protected boolean enableReplaceObject(boolean enable)
         throws SecurityException
@@ -657,9 +657,9 @@ public class ObjectOutputStream
      *
      * @param   desc class descriptor to write to the stream
      * @throws  IOException If an I/O error has occurred.
-     * @see java.io.ObjectInputStream#readClassDescriptor()
+     * @see ObjectInputStream#readClassDescriptor()
      * @see #useProtocolVersion(int)
-     * @see java.io.ObjectStreamConstants#PROTOCOL_VERSION_1
+     * @see ObjectStreamConstants#PROTOCOL_VERSION_1
      * @since 1.3
      */
     protected void writeClassDescriptor(ObjectStreamClass desc)
@@ -1001,7 +1001,7 @@ public class ObjectOutputStream
          *         <code>PutField</code> object in a proper format, and may
          *         result in corruption of the serialization stream.  The
          *         correct way to write <code>PutField</code> data is by
-         *         calling the {@link java.io.ObjectOutputStream#writeFields()}
+         *         calling the {@link ObjectOutputStream#writeFields()}
          *         method.
          */
         @Deprecated

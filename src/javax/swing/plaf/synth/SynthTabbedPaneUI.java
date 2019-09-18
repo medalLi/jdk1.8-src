@@ -38,7 +38,7 @@ import sun.swing.SwingUtilities2;
 
 /**
  * Provides the Synth L&amp;F UI delegate for
- * {@link javax.swing.JTabbedPane}.
+ * {@link JTabbedPane}.
  *
  * <p>Looks up the {@code selectedTabPadInsets} property from the Style,
  * which represents additional insets for the selected tab.

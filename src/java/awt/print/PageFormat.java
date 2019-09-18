@@ -331,7 +331,7 @@ public class PageFormat implements Cloneable
      * constructor.
      * @return the matrix used to translate user space rendering
      * to the orientation of the page.
-     * @see java.awt.geom.AffineTransform
+     * @see AffineTransform
      */
     public double[] getMatrix() {
         double[] matrix = new double[6];

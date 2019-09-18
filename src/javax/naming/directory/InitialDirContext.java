@@ -39,7 +39,7 @@ import javax.naming.*;
  * @author Rosanna Lee
  * @author Scott Seligman
  *
- * @see javax.naming.InitialContext
+ * @see InitialContext
  * @since 1.3
  */
 

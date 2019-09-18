@@ -144,8 +144,8 @@ import java.beans.ConstructorProperties;
  * output of the sample code">
  * </center>
  *
- * @see java.awt.Paint
- * @see java.awt.Graphics2D#setPaint
+ * @see Paint
+ * @see Graphics2D#setPaint
  * @author Nicholas Talian, Vincent Hardy, Jim Graham, Jerry Evans
  * @since 1.6
  */

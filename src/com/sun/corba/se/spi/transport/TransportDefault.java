@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.transport ;
+package com.sun.corba.se.spi.transport;
 
 import com.sun.corba.se.spi.protocol.CorbaClientDelegate ;
 import com.sun.corba.se.spi.protocol.ClientDelegateFactory ;
@@ -52,7 +52,7 @@ public abstract class TransportDefault {
             public void setORB(ORB orb) { }
             public CorbaContactInfoList create( IOR ior ) {
                 return new CorbaContactInfoListImpl(
-                    (com.sun.corba.se.spi.orb.ORB)broker, ior ) ;
+                    (ORB)broker, ior ) ;
             }
         };
     }
@@ -63,7 +63,7 @@ public abstract class TransportDefault {
         return new ClientDelegateFactory() {
             public CorbaClientDelegate create( CorbaContactInfoList info ) {
                 return new CorbaClientDelegateImpl(
-                    (com.sun.corba.se.spi.orb.ORB)broker, info ) ;
+                    (ORB)broker, info ) ;
             }
         };
     }

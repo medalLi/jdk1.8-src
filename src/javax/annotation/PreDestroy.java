@@ -70,8 +70,8 @@ import static java.lang.annotation.RetentionPolicy.*;
  * case of EJBs where the EJB can handle exceptions.</li>
  * </ul>
  *
- * @see javax.annotation.PostConstruct
- * @see javax.annotation.Resource
+ * @see PostConstruct
+ * @see Resource
  * @since Common Annotations 1.0
  */
 

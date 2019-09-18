@@ -649,7 +649,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
         try {
             urlConnection = url.openConnection();
             p = urlConnection.getPermission();
-        } catch (java.io.IOException ioe) {
+        } catch (IOException ioe) {
             p = null;
             urlConnection = null;
         }

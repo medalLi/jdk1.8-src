@@ -319,8 +319,8 @@ public class GridLayout implements LayoutManager, java.io.Serializable {
      * @param     parent   the container in which to do the layout
      * @return    the preferred dimensions to lay out the
      *                      subcomponents of the specified container
-     * @see       java.awt.GridLayout#minimumLayoutSize
-     * @see       java.awt.Container#getPreferredSize()
+     * @see       GridLayout#minimumLayoutSize
+     * @see       Container#getPreferredSize()
      */
     public Dimension preferredLayoutSize(Container parent) {
       synchronized (parent.getTreeLock()) {
@@ -368,8 +368,8 @@ public class GridLayout implements LayoutManager, java.io.Serializable {
      * @param       parent   the container in which to do the layout
      * @return      the minimum dimensions needed to lay out the
      *                      subcomponents of the specified container
-     * @see         java.awt.GridLayout#preferredLayoutSize
-     * @see         java.awt.Container#doLayout
+     * @see         GridLayout#preferredLayoutSize
+     * @see         Container#doLayout
      */
     public Dimension minimumLayoutSize(Container parent) {
       synchronized (parent.getTreeLock()) {
@@ -415,8 +415,8 @@ public class GridLayout implements LayoutManager, java.io.Serializable {
      * gap. All components in a grid layout are given the same size.
      *
      * @param      parent   the container in which to do the layout
-     * @see        java.awt.Container
-     * @see        java.awt.Container#doLayout
+     * @see        Container
+     * @see        Container#doLayout
      */
     public void layoutContainer(Container parent) {
       synchronized (parent.getTreeLock()) {

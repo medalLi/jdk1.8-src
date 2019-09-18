@@ -18,7 +18,7 @@ abstract public class DynArrayHelper
 {
   private static String  _id = "IDL:omg.org/DynamicAny/DynArray:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.DynamicAny.DynArray that)
+  public static void insert (org.omg.CORBA.Any a, DynArray that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -26,7 +26,7 @@ abstract public class DynArrayHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.DynamicAny.DynArray extract (org.omg.CORBA.Any a)
+  public static DynArray extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -36,7 +36,7 @@ abstract public class DynArrayHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.DynamicAny.DynArrayHelper.id (), "DynArray");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (DynArrayHelper.id (), "DynArray");
     }
     return __typeCode;
   }
@@ -46,43 +46,43 @@ abstract public class DynArrayHelper
     return _id;
   }
 
-  public static org.omg.DynamicAny.DynArray read (org.omg.CORBA.portable.InputStream istream)
+  public static DynArray read (org.omg.CORBA.portable.InputStream istream)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.DynamicAny.DynArray value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, DynArray value)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static org.omg.DynamicAny.DynArray narrow (org.omg.CORBA.Object obj)
+  public static DynArray narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.DynamicAny.DynArray)
-      return (org.omg.DynamicAny.DynArray)obj;
+    else if (obj instanceof DynArray)
+      return (DynArray)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.DynamicAny._DynArrayStub stub = new org.omg.DynamicAny._DynArrayStub ();
+      _DynArrayStub stub = new _DynArrayStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static org.omg.DynamicAny.DynArray unchecked_narrow (org.omg.CORBA.Object obj)
+  public static DynArray unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.DynamicAny.DynArray)
-      return (org.omg.DynamicAny.DynArray)obj;
+    else if (obj instanceof DynArray)
+      return (DynArray)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.DynamicAny._DynArrayStub stub = new org.omg.DynamicAny._DynArrayStub ();
+      _DynArrayStub stub = new _DynArrayStub ();
       stub._set_delegate(delegate);
       return stub;
     }

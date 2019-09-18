@@ -428,7 +428,7 @@ class TextLayoutStrategy extends FlowView.FlowStrategy {
          * Returns the index of the first character of the run
          * with respect to the given attribute containing the current character.
          */
-        public int getRunStart(AttributedCharacterIterator.Attribute attribute) {
+        public int getRunStart(Attribute attribute) {
             if (attribute instanceof TextAttribute) {
                 int pos = toModelPosition(getIndex());
                 int i = v.getViewIndex(pos, Position.Bias.Forward);
@@ -468,7 +468,7 @@ class TextLayoutStrategy extends FlowView.FlowStrategy {
          * Returns the index of the first character following the run
          * with respect to the given attribute containing the current character.
          */
-        public int getRunLimit(AttributedCharacterIterator.Attribute attribute) {
+        public int getRunLimit(Attribute attribute) {
             if (attribute instanceof TextAttribute) {
                 int pos = toModelPosition(getIndex());
                 int i = v.getViewIndex(pos, Position.Bias.Forward);
@@ -515,7 +515,7 @@ class TextLayoutStrategy extends FlowView.FlowStrategy {
          * Returns null if the attribute is not defined.
          * @param attribute the key of the attribute whose value is requested.
          */
-        public Object getAttribute(AttributedCharacterIterator.Attribute attribute) {
+        public Object getAttribute(Attribute attribute) {
             int pos = toModelPosition(getIndex());
             int childIndex = v.getViewIndex(pos, Position.Bias.Forward);
             if (attribute == TextAttribute.FONT) {

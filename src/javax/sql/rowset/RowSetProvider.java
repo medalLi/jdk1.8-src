@@ -271,7 +271,7 @@ public class RowSetProvider {
         RowSetFactory theFactory = null;
         try {
             trace("***in loadViaServiceLoader():");
-            for (RowSetFactory factory : ServiceLoader.load(javax.sql.rowset.RowSetFactory.class)) {
+            for (RowSetFactory factory : ServiceLoader.load(RowSetFactory.class)) {
                 trace(" Loading done by the java.util.ServiceLoader :" + factory.getClass().getName());
                 theFactory = factory;
                 break;

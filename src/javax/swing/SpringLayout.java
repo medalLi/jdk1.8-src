@@ -70,9 +70,9 @@ import java.util.*;
  * that make their associated component
  * have the minimum, preferred, and maximum sizes
  * returned by the component's
- * {@link java.awt.Component#getMinimumSize},
- * {@link java.awt.Component#getPreferredSize}, and
- * {@link java.awt.Component#getMaximumSize}
+ * {@link Component#getMinimumSize},
+ * {@link Component#getPreferredSize}, and
+ * {@link Component#getMaximumSize}
  * methods. The <em>x</em> and <em>y</em> positions are initially not
  * constrained, so that until you constrain them the <code>Component</code>
  * will be positioned at 0,0 relative to the <code>Insets</code> of the
@@ -177,7 +177,7 @@ import java.util.*;
  * Please see {@link java.beans.XMLEncoder}.
  *
  * @see Spring
- * @see SpringLayout.Constraints
+ * @see Constraints
  *
  * @author      Philip Milne
  * @author      Scott Violet
@@ -507,7 +507,7 @@ public class SpringLayout implements LayoutManager2 {
         *          of a component's location
         *
         * @see #getX
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public void setX(Spring x) {
            this.x = x;
@@ -521,7 +521,7 @@ public class SpringLayout implements LayoutManager2 {
         *         of a component's location
         *
         * @see #setX
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public Spring getX() {
            if (x == null) {
@@ -545,7 +545,7 @@ public class SpringLayout implements LayoutManager2 {
         *          of a component's location
         *
         * @see #getY
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public void setY(Spring y) {
            this.y = y;
@@ -559,7 +559,7 @@ public class SpringLayout implements LayoutManager2 {
         *         of a component's location
         *
         * @see #setY
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public Spring getY() {
            if (y == null) {
@@ -590,7 +590,7 @@ public class SpringLayout implements LayoutManager2 {
         * <code>Constraints</code> object
         *
         * @see #getWidth
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public void setWidth(Spring width) {
            this.width = width;
@@ -603,7 +603,7 @@ public class SpringLayout implements LayoutManager2 {
         * @return the spring controlling the width of a component
         *
         * @see #setWidth
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public Spring getWidth() {
            if (width == null) {
@@ -624,7 +624,7 @@ public class SpringLayout implements LayoutManager2 {
         * object
         *
         * @see #getHeight
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public void setHeight(Spring height) {
            this.height = height;
@@ -637,7 +637,7 @@ public class SpringLayout implements LayoutManager2 {
         * @return the spring controlling the height of a component
         *
         * @see #setHeight
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public Spring getHeight() {
            if (height == null) {
@@ -746,7 +746,7 @@ public class SpringLayout implements LayoutManager2 {
         * @see #BASELINE
         * @see #WIDTH
         * @see #HEIGHT
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public void setConstraint(String edgeName, Spring s) {
            edgeName = edgeName.intern();
@@ -805,7 +805,7 @@ public class SpringLayout implements LayoutManager2 {
         * @see #BASELINE
         * @see #WIDTH
         * @see #HEIGHT
-        * @see SpringLayout.Constraints
+        * @see Constraints
         */
        public Spring getConstraint(String edgeName) {
            edgeName = edgeName.intern();
@@ -994,7 +994,7 @@ public class SpringLayout implements LayoutManager2 {
      * @param   component the component being added
      * @param   constraints the component's constraints
      *
-     * @see SpringLayout.Constraints
+     * @see Constraints
      */
     public void addLayoutComponent(Component component, Object constraints) {
         if (constraints instanceof Constraints) {
@@ -1148,8 +1148,8 @@ public class SpringLayout implements LayoutManager2 {
     public Constraints getConstraints(Component c) {
        Constraints result = componentConstraints.get(c);
        if (result == null) {
-           if (c instanceof javax.swing.JComponent) {
-                Object cp = ((javax.swing.JComponent)c).getClientProperty(SpringLayout.class);
+           if (c instanceof JComponent) {
+                Object cp = ((JComponent)c).getClientProperty(SpringLayout.class);
                 if (cp instanceof Constraints) {
                     return applyDefaults(c, (Constraints)cp);
                 }

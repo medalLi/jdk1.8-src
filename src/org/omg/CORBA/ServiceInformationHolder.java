@@ -69,7 +69,7 @@ public final class ServiceInformationHolder
      *                the <code>value</code> field of the newly-created
      *                <code>ServiceInformationHolder</code> object
      */
-    public ServiceInformationHolder(org.omg.CORBA.ServiceInformation arg) {
+    public ServiceInformationHolder(ServiceInformation arg) {
         value = arg;
     }
 
@@ -82,7 +82,7 @@ public final class ServiceInformationHolder
      *               the CDR formatted data
      */
     public void _write(org.omg.CORBA.portable.OutputStream out) {
-        org.omg.CORBA.ServiceInformationHelper.write(out, value);
+        ServiceInformationHelper.write(out, value);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class ServiceInformationHolder
      *              formatted data from the wire
      */
     public void _read(org.omg.CORBA.portable.InputStream in) {
-        value = org.omg.CORBA.ServiceInformationHelper.read(in);
+        value = ServiceInformationHelper.read(in);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class ServiceInformationHolder
      * @return    the type code for the value held in this <code>ServiceInformationHolder</code>
      *            object
      */
-    public org.omg.CORBA.TypeCode _type() {
-        return org.omg.CORBA.ServiceInformationHelper.type();
+    public TypeCode _type() {
+        return ServiceInformationHelper.type();
     }
 }

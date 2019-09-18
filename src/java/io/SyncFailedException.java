@@ -29,8 +29,8 @@ package java.io;
  * Signals that a sync operation has failed.
  *
  * @author  Ken Arnold
- * @see     java.io.FileDescriptor#sync
- * @see     java.io.IOException
+ * @see     FileDescriptor#sync
+ * @see     IOException
  * @since   JDK1.1
  */
 public class SyncFailedException extends IOException {

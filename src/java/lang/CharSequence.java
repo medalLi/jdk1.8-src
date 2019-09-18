@@ -42,8 +42,8 @@ import java.util.stream.StreamSupport;
  * href="Character.html#unicode">Unicode Character Representation</a> for details.
  *
  * <p> This interface does not refine the general contracts of the {@link
- * java.lang.Object#equals(java.lang.Object) equals} and {@link
- * java.lang.Object#hashCode() hashCode} methods.  The result of comparing two
+ * Object#equals(Object) equals} and {@link
+ * Object#hashCode() hashCode} methods.  The result of comparing two
  * objects that implement <tt>CharSequence</tt> is therefore, in general,
  * undefined.  Each object may be implemented by a different class, and there
  * is no guarantee that each class will be capable of testing its instances

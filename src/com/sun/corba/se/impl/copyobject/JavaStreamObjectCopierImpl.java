@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.copyobject ;
+package com.sun.corba.se.impl.copyobject;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

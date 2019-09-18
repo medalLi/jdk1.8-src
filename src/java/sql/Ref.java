@@ -83,7 +83,7 @@ public interface Ref {
      * @since 1.4
      * @see #setObject
      */
-    Object getObject(java.util.Map<String,Class<?>> map) throws SQLException;
+    Object getObject(java.util.Map<String, Class<?>> map) throws SQLException;
 
 
     /**

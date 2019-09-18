@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import org.omg.CORBA.INTERNAL ;
 
@@ -132,7 +132,7 @@ public class AOMEntry extends FSMImpl {
     } ;
 
     private static Guard waitGuard = new GuardBase( "wait" ) {
-        public Guard.Result evaluate( FSM fsm, Input in ) {
+        public Result evaluate( FSM fsm, Input in ) {
             AOMEntry entry = (AOMEntry)fsm ;
             try {
                 entry.wait.await() ;
@@ -141,7 +141,7 @@ public class AOMEntry extends FSMImpl {
                 // NO-OP
             }
 
-            return Guard.Result.DEFERED ;
+            return Result.DEFERED ;
         }
     } ;
 
@@ -155,10 +155,10 @@ public class AOMEntry extends FSMImpl {
             this.value = value ;
         }
 
-        public Guard.Result evaluate( FSM fsm, Input in )
+        public Result evaluate( FSM fsm, Input in )
         {
             AOMEntry entry = (AOMEntry)fsm ;
-            return Guard.Result.convert( entry.counter[0] > value ) ;
+            return Result.convert( entry.counter[0] > value ) ;
         }
     } ;
 

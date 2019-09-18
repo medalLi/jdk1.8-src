@@ -96,7 +96,7 @@ public class RoleList extends ArrayList<Object> {
      * is {@code null} or if the {@code list} parameter contains any
      * non-Role objects.
      *
-     * @see ArrayList#ArrayList(java.util.Collection)
+     * @see ArrayList#ArrayList(Collection)
      */
     public RoleList(List<Role> list) throws IllegalArgumentException {
         // Check for null parameter

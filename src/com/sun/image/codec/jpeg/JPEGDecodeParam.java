@@ -26,14 +26,14 @@ package com.sun.image.codec.jpeg;
  * application may need to set some/all of the values it's self.  <p>
 
  * When working with BufferedImages ({@link
- * com.sun.image.codec.jpeg.JPEGImageDecoder#decodeAsBufferedImage}),
+ * JPEGImageDecoder#decodeAsBufferedImage}),
  * the codec will attempt to
  * generate an appropriate ColorModel for the JPEG COLOR_ID. This is
  * not always possible (example mappings are listed below) .  In cases
  * where unsupported conversions are required, or unknown encoded
  * COLOR_ID's are in use, the user must request the data as a Raster
  * and perform the transformations themselves.  When decoding into a
- * raster ({@link com.sun.image.codec.jpeg.JPEGImageDecoder#decodeAsRaster})
+ * raster ({@link JPEGImageDecoder#decodeAsRaster})
  * no ColorSpace adjustments are made.
 
  * Note: The color ids described herein are simply enumerated values
@@ -222,7 +222,7 @@ public interface JPEGDecodeParam extends Cloneable {
          * @param tableNum the index of the table to be returned.
          * @return Quantization table stored at index tableNum.
          */
-        public JPEGQTable  getQTable(int tableNum );
+        public JPEGQTable  getQTable(int tableNum);
 
         /**
          * Returns the Quantization table for the requested component.
@@ -237,7 +237,7 @@ public interface JPEGDecodeParam extends Cloneable {
          * @param tableNum the index of the table to be returned.
          * @return Huffman table stored at index tableNum.
          */
-        public JPEGHuffmanTable getDCHuffmanTable( int tableNum );
+        public JPEGHuffmanTable getDCHuffmanTable(int tableNum);
         /**
          * Returns the DC Huffman coding table for the requested component.
          * @param component the image component of interest.
@@ -252,7 +252,7 @@ public interface JPEGDecodeParam extends Cloneable {
          * @param tableNum the index of the table to be returned.
          * @return Huffman table stored at index tableNum.
          */
-        public JPEGHuffmanTable getACHuffmanTable( int tableNum );
+        public JPEGHuffmanTable getACHuffmanTable(int tableNum);
         /**
          * Returns the AC Huffman coding table for the requested component.
          * @param component the image component of interest.

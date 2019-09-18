@@ -58,7 +58,7 @@ public class AuthenticationException extends SaslException {
      * The root exception is null.
      * @param detail A possibly null string containing details of the exception.
      *
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public AuthenticationException (String detail) {
         super(detail);
@@ -71,7 +71,7 @@ public class AuthenticationException extends SaslException {
      * @param detail A possibly null string containing details of the exception.
      * @param ex A possibly null root exception that caused this exception.
      *
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      * @see #getCause
      */
     public AuthenticationException (String detail, Throwable ex) {

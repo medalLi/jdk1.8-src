@@ -52,7 +52,7 @@ final class RuleBasedCollationKey extends CollationKey {
      * @return Returns an integer value. Value is less than zero if this is less
      * than target, value is zero if this and target are equal and value is greater than
      * zero if this is greater than target.
-     * @see java.text.Collator#compare
+     * @see Collator#compare
      */
     public int compareTo(CollationKey target)
     {

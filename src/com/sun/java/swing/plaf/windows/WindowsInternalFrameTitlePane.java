@@ -382,7 +382,7 @@ public class WindowsInternalFrameTitlePane extends BasicInternalFrameTitlePane {
         return new WindowsTitlePaneLayout();
     }
 
-    public class WindowsTitlePaneLayout extends BasicInternalFrameTitlePane.TitlePaneLayout {
+    public class WindowsTitlePaneLayout extends TitlePaneLayout {
         private Insets captionMargin = null;
         private Insets contentMargin = null;
         private XPStyle xp = XPStyle.getXP();

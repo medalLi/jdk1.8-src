@@ -47,8 +47,8 @@ import java.io.IOException;
  * <p> There are two distinguished supported locations (subtrees
  * within the logical file system) where newly created files are
  * placed: one for {@linkplain
- * javax.tools.StandardLocation#SOURCE_OUTPUT new source files}, and
- * one for {@linkplain javax.tools.StandardLocation#CLASS_OUTPUT new
+ * StandardLocation#SOURCE_OUTPUT new source files}, and
+ * one for {@linkplain StandardLocation#CLASS_OUTPUT new
  * class files}.  (These might be specified on a tool's command line,
  * for example, using flags such as {@code -s} and {@code -d}.)  The
  * actual locations for new source files and new class files may or

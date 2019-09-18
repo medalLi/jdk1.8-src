@@ -49,7 +49,7 @@ public class SignatureDSA extends SignatureAlgorithmSpi {
     public static final String URI = Constants.SignatureSpecNS + "dsa-sha1";
 
     /** Field algorithm */
-    private java.security.Signature signatureAlgorithm = null;
+    private Signature signatureAlgorithm = null;
 
     /**
      * Method engineGetURI

@@ -61,7 +61,7 @@ public class NameServer
     protected NameServer(String args[])
     {
         // create the ORB Object
-        java.util.Properties props = System.getProperties();
+        Properties props = System.getProperties();
         props.put( ORBConstants.SERVER_ID_PROPERTY, "1000" ) ;
         props.put("org.omg.CORBA.ORBClass",
                   "com.sun.corba.se.impl.orb.ORBImpl");

@@ -74,7 +74,7 @@ import sun.misc.Unsafe;
  * @since   1.0
  */
 public
-class Random implements java.io.Serializable {
+class Random implements Serializable {
     /** use serialVersionUID from JDK 1.1 for interoperability */
     static final long serialVersionUID = 3905348978240129619L;
 
@@ -1178,8 +1178,8 @@ class Random implements java.io.Serializable {
      * Reconstitute the {@code Random} instance from a stream (that is,
      * deserialize it).
      */
-    private void readObject(java.io.ObjectInputStream s)
-        throws java.io.IOException, ClassNotFoundException {
+    private void readObject(ObjectInputStream s)
+        throws IOException, ClassNotFoundException {
 
         ObjectInputStream.GetField fields = s.readFields();
 
@@ -1187,7 +1187,7 @@ class Random implements java.io.Serializable {
         // historical reasons, but it is converted to an AtomicLong.
         long seedVal = fields.get("seed", -1L);
         if (seedVal < 0)
-          throw new java.io.StreamCorruptedException(
+          throw new StreamCorruptedException(
                               "Random: invalid seed");
         resetSeed(seedVal);
         nextNextGaussian = fields.get("nextNextGaussian", 0.0);

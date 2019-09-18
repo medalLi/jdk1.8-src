@@ -40,7 +40,7 @@ import java.awt.dnd.DropTargetContext;
  *
  */
 
-public class DropTargetEvent extends java.util.EventObject {
+public class DropTargetEvent extends EventObject {
 
     private static final long serialVersionUID = 2821229066521922993L;
 

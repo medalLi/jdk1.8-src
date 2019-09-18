@@ -94,7 +94,7 @@ public interface BufferedImageOp {
      * @return The <CODE>Rectangle2D</CODE> representing the destination
      * image's bounding box.
      */
-    public Rectangle2D getBounds2D (BufferedImage src);
+    public Rectangle2D getBounds2D(BufferedImage src);
 
     /**
      * Creates a zeroed destination image with the correct size and number of
@@ -109,8 +109,8 @@ public interface BufferedImageOp {
      *
      * @return The zeroed destination image.
      */
-    public BufferedImage createCompatibleDestImage (BufferedImage src,
-                                                    ColorModel destCM);
+    public BufferedImage createCompatibleDestImage(BufferedImage src,
+                                                   ColorModel destCM);
 
     /**
      * Returns the location of the corresponding destination point given a
@@ -123,7 +123,7 @@ public interface BufferedImageOp {
      * @return The <CODE>Point2D</CODE> in the destination image that
      * corresponds to the specified point in the source image.
      */
-    public Point2D getPoint2D (Point2D srcPt, Point2D dstPt);
+    public Point2D getPoint2D(Point2D srcPt, Point2D dstPt);
 
     /**
      * Returns the rendering hints for this operation.

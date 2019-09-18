@@ -32,7 +32,7 @@ package javax.sound.sampled;
  * might represent the control by a two-state button, an on/off switch, two
  * mutually exclusive buttons, or a checkbox (among other possibilities).
  * For example, depressing a button might activate a
- * <code>{@link BooleanControl.Type#MUTE MUTE}</code> control to silence
+ * <code>{@link Type#MUTE MUTE}</code> control to silence
  * the line's audio.
  * <p>
  * As with other <code>{@link Control}</code> subclasses, a method is

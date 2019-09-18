@@ -347,7 +347,7 @@ public abstract class ZoneId implements Serializable {
      *  The detailed format of the region ID depends on the group supplying the data.
      *  The default set of data is supplied by the IANA Time Zone Database (TZDB).
      *  This has region IDs of the form '{area}/{city}', such as 'Europe/Paris' or 'America/New_York'.
-     *  This is compatible with most IDs from {@link java.util.TimeZone}.
+     *  This is compatible with most IDs from {@link TimeZone}.
      * </ul>
      *
      * @param zoneId  the time-zone ID, not null

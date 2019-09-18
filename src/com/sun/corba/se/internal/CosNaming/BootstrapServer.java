@@ -76,7 +76,7 @@ public class BootstrapServer
             // define the server port that the with which the resolvers
             // communicate.
             if (args[i].equals("-ORBInitialPort") && i < args.length-1) {
-                initialPort = java.lang.Integer.parseInt(args[i+1]);
+                initialPort = Integer.parseInt(args[i+1]);
             }
         }
 

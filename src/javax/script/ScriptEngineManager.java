@@ -54,7 +54,7 @@ public class ScriptEngineManager  {
      * The effect of calling this constructor is the same as calling
      * <code>ScriptEngineManager(Thread.currentThread().getContextClassLoader())</code>.
      *
-     * @see java.lang.Thread#getContextClassLoader
+     * @see Thread#getContextClassLoader
      */
     public ScriptEngineManager() {
         ClassLoader ctxtLoader = Thread.currentThread().getContextClassLoader();

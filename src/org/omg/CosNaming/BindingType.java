@@ -17,19 +17,19 @@ public class BindingType implements org.omg.CORBA.portable.IDLEntity
 {
   private        int __value;
   private static int __size = 2;
-  private static org.omg.CosNaming.BindingType[] __array = new org.omg.CosNaming.BindingType [__size];
+  private static BindingType[] __array = new BindingType [__size];
 
   public static final int _nobject = 0;
-  public static final org.omg.CosNaming.BindingType nobject = new org.omg.CosNaming.BindingType(_nobject);
+  public static final BindingType nobject = new BindingType(_nobject);
   public static final int _ncontext = 1;
-  public static final org.omg.CosNaming.BindingType ncontext = new org.omg.CosNaming.BindingType(_ncontext);
+  public static final BindingType ncontext = new BindingType(_ncontext);
 
   public int value ()
   {
     return __value;
   }
 
-  public static org.omg.CosNaming.BindingType from_int (int value)
+  public static BindingType from_int (int value)
   {
     if (value >= 0 && value < __size)
       return __array[value];

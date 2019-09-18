@@ -43,6 +43,6 @@ package org.omg.CORBA;
 * Saturday, July 17, 1999 12:26:21 AM PDT.
 */
 
-public interface Current extends CurrentOperations, org.omg.CORBA.Object, org.omg.CORBA.portable.IDLEntity
+public interface Current extends CurrentOperations, Object, org.omg.CORBA.portable.IDLEntity
 {
 } // interface Current

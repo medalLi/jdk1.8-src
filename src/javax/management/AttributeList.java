@@ -100,7 +100,7 @@ public class AttributeList extends ArrayList<Object> {
      * @param list the <code>AttributeList</code> that defines the initial
      * contents of the new <code>AttributeList</code>.
      *
-     * @see ArrayList#ArrayList(java.util.Collection)
+     * @see ArrayList#ArrayList(Collection)
      */
     public AttributeList(AttributeList list) {
         super(list);
@@ -118,7 +118,7 @@ public class AttributeList extends ArrayList<Object> {
      * is {@code null} or if the {@code list} parameter contains any
      * non-Attribute objects.
      *
-     * @see ArrayList#ArrayList(java.util.Collection)
+     * @see ArrayList#ArrayList(Collection)
      *
      * @since 1.6
      */
@@ -224,7 +224,7 @@ public class AttributeList extends ArrayList<Object> {
      *
      * @return true if this list changed as a result of the call.
      *
-     * @see ArrayList#addAll(java.util.Collection)
+     * @see ArrayList#addAll(Collection)
      */
     public boolean addAll(AttributeList list)  {
         return (super.addAll(list));
@@ -244,7 +244,7 @@ public class AttributeList extends ArrayList<Object> {
      *
      * @return true if this list changed as a result of the call.
      *
-     * @see ArrayList#addAll(int, java.util.Collection)
+     * @see ArrayList#addAll(int, Collection)
      */
     public boolean addAll(int index, AttributeList list)  {
         try {

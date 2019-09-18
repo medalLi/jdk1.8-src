@@ -334,7 +334,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * of {@code 0x6382BF}.
      *
      * @return the primary 1 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getPrimary1() {
         return PRIMARY1;
@@ -345,7 +345,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * of {@code 0xA3B8CC}.
      *
      * @return the primary 2 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getPrimary2() {
         return PRIMARY2;
@@ -356,7 +356,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * of {@code 0xB8CFE5}.
      *
      * @return the primary 3 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getPrimary3() {
         return PRIMARY3;
@@ -367,7 +367,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * value of {@code 0x7A8A99}.
      *
      * @return the secondary 1 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getSecondary1() {
         return SECONDARY1;
@@ -378,7 +378,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * value of {@code 0xB8CFE5}.
      *
      * @return the secondary 2 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getSecondary2() {
         return SECONDARY2;
@@ -389,7 +389,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * value of {@code 0xEEEEEE}.
      *
      * @return the secondary 3 color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getSecondary3() {
         return SECONDARY3;
@@ -400,7 +400,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * value of {@code 0x333333}.
      *
      * @return the black color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     protected ColorUIResource getBlack() {
         return OCEAN_BLACK;
@@ -411,7 +411,7 @@ public class OceanTheme extends DefaultMetalTheme {
      * value of {@code 0xFFFFFF}.
      *
      * @return the desktop color
-     * @see java.awt.Color#decode
+     * @see Color#decode
      */
     public ColorUIResource getDesktopColor() {
         return MetalTheme.white;

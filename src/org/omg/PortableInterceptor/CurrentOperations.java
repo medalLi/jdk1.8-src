@@ -45,7 +45,7 @@ public interface CurrentOperations  extends org.omg.CORBA.CurrentOperations
        * @exception BAD_INV_ORDER thrown if <code>get_slot</code> is called 
        *     from within an ORB initializer 
        */
-  org.omg.CORBA.Any get_slot (int id) throws org.omg.PortableInterceptor.InvalidSlot;
+  org.omg.CORBA.Any get_slot(int id) throws InvalidSlot;
 
   /**
        * Sets data in a slot. The data is in the form of an Any. If data 
@@ -60,5 +60,5 @@ public interface CurrentOperations  extends org.omg.CORBA.CurrentOperations
        * @exception BAD_INV_ORDER thrown if <code>set_slot</code> is called 
        *     from within an ORB initializer. 
        */
-  void set_slot (int id, org.omg.CORBA.Any data) throws org.omg.PortableInterceptor.InvalidSlot;
+  void set_slot(int id, org.omg.CORBA.Any data) throws InvalidSlot;
 } // interface CurrentOperations

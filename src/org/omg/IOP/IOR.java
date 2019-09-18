@@ -18,13 +18,13 @@ public final class IOR implements org.omg.CORBA.portable.IDLEntity
   	 * An array of tagged profiles associated with this 
   	 * object reference. 
   	 */
-  public org.omg.IOP.TaggedProfile profiles[] = null;
+  public TaggedProfile profiles[] = null;
 
   public IOR ()
   {
   } // ctor
 
-  public IOR (String _type_id, org.omg.IOP.TaggedProfile[] _profiles)
+  public IOR (String _type_id, TaggedProfile[] _profiles)
   {
     type_id = _type_id;
     profiles = _profiles;

@@ -35,12 +35,12 @@ package java.io;
  * that writes one byte of output.
  *
  * @author  Arthur van Hoff
- * @see     java.io.BufferedOutputStream
- * @see     java.io.ByteArrayOutputStream
- * @see     java.io.DataOutputStream
- * @see     java.io.FilterOutputStream
- * @see     java.io.InputStream
- * @see     java.io.OutputStream#write(int)
+ * @see     BufferedOutputStream
+ * @see     ByteArrayOutputStream
+ * @see     DataOutputStream
+ * @see     FilterOutputStream
+ * @see     InputStream
+ * @see     OutputStream#write(int)
  * @since   JDK1.0
  */
 public abstract class OutputStream implements Closeable, Flushable {
@@ -69,7 +69,7 @@ public abstract class OutputStream implements Closeable, Flushable {
      *
      * @param      b   the data.
      * @exception  IOException  if an I/O error occurs.
-     * @see        java.io.OutputStream#write(byte[], int, int)
+     * @see        OutputStream#write(byte[], int, int)
      */
     public void write(byte b[]) throws IOException {
         write(b, 0, b.length);

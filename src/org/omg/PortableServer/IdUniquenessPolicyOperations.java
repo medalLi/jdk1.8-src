@@ -20,5 +20,5 @@ public interface IdUniquenessPolicyOperations  extends org.omg.CORBA.PolicyOpera
   /**
   	 * specifies the policy value
   	 */
-  org.omg.PortableServer.IdUniquenessPolicyValue value ();
+  IdUniquenessPolicyValue value();
 } // interface IdUniquenessPolicyOperations

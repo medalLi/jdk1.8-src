@@ -57,7 +57,7 @@ import java.io.IOException;
  * control-change events encountered while playing back the sequence.</li>
  * </ul>
  *
- * @see Sequencer.SyncMode
+ * @see SyncMode
  * @see #addMetaEventListener
  * @see ControllerEventListener
  * @see Receiver
@@ -391,7 +391,7 @@ public interface Sequencer extends MidiDevice {
      *
      * @return the current master synchronization mode
      *
-     * @see #setMasterSyncMode(Sequencer.SyncMode)
+     * @see #setMasterSyncMode(SyncMode)
      * @see #getMasterSyncModes
      */
     public SyncMode getMasterSyncMode();
@@ -407,7 +407,7 @@ public interface Sequencer extends MidiDevice {
      * @see SyncMode#MIDI_SYNC
      * @see SyncMode#MIDI_TIME_CODE
      * @see #getMasterSyncMode
-     * @see #setMasterSyncMode(Sequencer.SyncMode)
+     * @see #setMasterSyncMode(SyncMode)
      */
     public SyncMode[] getMasterSyncModes();
 
@@ -434,7 +434,7 @@ public interface Sequencer extends MidiDevice {
      *
      * @return the current slave synchronization mode
      *
-     * @see #setSlaveSyncMode(Sequencer.SyncMode)
+     * @see #setSlaveSyncMode(SyncMode)
      * @see #getSlaveSyncModes
      */
     public SyncMode getSlaveSyncMode();
@@ -767,8 +767,8 @@ public interface Sequencer extends MidiDevice {
      * <code>NO_SYNC</code>, is used to indicate that the sequencer should
      * not control its receiver's timing.
      *
-     * @see Sequencer#setMasterSyncMode(Sequencer.SyncMode)
-     * @see Sequencer#setSlaveSyncMode(Sequencer.SyncMode)
+     * @see Sequencer#setMasterSyncMode(SyncMode)
+     * @see Sequencer#setSlaveSyncMode(SyncMode)
      */
     public static class SyncMode {
 

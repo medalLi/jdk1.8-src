@@ -39,7 +39,7 @@ package org.omg.CORBA;
  *                     CTX_RESTRICT_SCOPE.value, "id*");
  * </PRE>
  *
- * @see org.omg.CORBA.Context#get_values(String, int, String)
+ * @see Context#get_values(String, int, String)
  * @since   JDK1.2
  */
 public interface CTX_RESTRICT_SCOPE {

@@ -12,7 +12,7 @@ package com.sun.corba.se.PortableActivationIDL;
 /** Interface used to support binding references in the bootstrap name
     * service.
     */
-public class _InitialNameServiceStub extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.PortableActivationIDL.InitialNameService
+public class _InitialNameServiceStub extends org.omg.CORBA.portable.ObjectImpl implements InitialNameService
 {
 
 

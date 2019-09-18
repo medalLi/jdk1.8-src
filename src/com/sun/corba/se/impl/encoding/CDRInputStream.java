@@ -58,7 +58,7 @@ import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
  */
 public abstract class CDRInputStream
     extends org.omg.CORBA_2_3.portable.InputStream
-    implements com.sun.corba.se.impl.encoding.MarshalInputStream,
+    implements MarshalInputStream,
                org.omg.CORBA.DataInputStream, org.omg.CORBA.portable.ValueInputStream
 {
     protected CorbaMessageMediator messageMediator;
@@ -242,11 +242,11 @@ public abstract class CDRInputStream
         return impl.read_Principal();
     }
 
-    public final int read() throws java.io.IOException {
+    public final int read() throws IOException {
         return impl.read();
     }
 
-    public final java.math.BigDecimal read_fixed() {
+    public final BigDecimal read_fixed() {
         return impl.read_fixed();
     }
 
@@ -254,7 +254,7 @@ public abstract class CDRInputStream
         return impl.read_Context();
     }
 
-    public final org.omg.CORBA.Object read_Object(java.lang.Class clz) {
+    public final org.omg.CORBA.Object read_Object(Class clz) {
         return impl.read_Object(clz);
     }
 
@@ -263,31 +263,31 @@ public abstract class CDRInputStream
     }
 
     // org.omg.CORBA_2_3.portable.InputStream
-    public final java.io.Serializable read_value() {
+    public final Serializable read_value() {
         return impl.read_value();
     }
 
-    public final java.io.Serializable read_value(java.lang.Class clz) {
+    public final Serializable read_value(Class clz) {
         return impl.read_value(clz);
     }
 
-    public final java.io.Serializable read_value(org.omg.CORBA.portable.BoxedValueHelper factory) {
+    public final Serializable read_value(org.omg.CORBA.portable.BoxedValueHelper factory) {
         return impl.read_value(factory);
     }
 
-    public final java.io.Serializable read_value(java.lang.String rep_id) {
+    public final Serializable read_value(String rep_id) {
         return impl.read_value(rep_id);
     }
 
-    public final java.io.Serializable read_value(java.io.Serializable value) {
+    public final Serializable read_value(Serializable value) {
         return impl.read_value(value);
     }
 
-    public final java.lang.Object read_abstract_interface() {
+    public final Object read_abstract_interface() {
         return impl.read_abstract_interface();
     }
 
-    public final java.lang.Object read_abstract_interface(java.lang.Class clz) {
+    public final Object read_abstract_interface(Class clz) {
         return impl.read_abstract_interface(clz);
     }
     // com.sun.corba.se.impl.encoding.MarshalInputStream
@@ -302,11 +302,11 @@ public abstract class CDRInputStream
 
     // org.omg.CORBA.DataInputStream
 
-    public final java.lang.Object read_Abstract () {
+    public final Object read_Abstract () {
         return impl.read_Abstract();
     }
 
-    public final java.io.Serializable read_Value () {
+    public final Serializable read_Value () {
         return impl.read_Value();
     }
 
@@ -403,7 +403,7 @@ public abstract class CDRInputStream
     public abstract CDRInputStream dup();
 
     // Needed by TCUtility
-    public final java.math.BigDecimal read_fixed(short digits, short scale) {
+    public final BigDecimal read_fixed(short digits, short scale) {
         return impl.read_fixed(digits, scale);
     }
 

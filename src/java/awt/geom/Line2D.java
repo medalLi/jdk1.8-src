@@ -374,8 +374,8 @@ public abstract class Line2D implements Shape, Cloneable {
      * the information necessary to satisfy the various accessory
      * methods below.
      *
-     * @see java.awt.geom.Line2D.Float
-     * @see java.awt.geom.Line2D.Double
+     * @see Float
+     * @see Double
      * @since 1.2
      */
     protected Line2D() {
@@ -1114,7 +1114,7 @@ public abstract class Line2D implements Shape, Cloneable {
      *
      * @return     a clone of this instance.
      * @exception  OutOfMemoryError            if there is not enough memory.
-     * @see        java.lang.Cloneable
+     * @see        Cloneable
      * @since      1.2
      */
     public Object clone() {

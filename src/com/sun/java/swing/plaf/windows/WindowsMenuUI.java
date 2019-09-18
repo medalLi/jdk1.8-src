@@ -250,7 +250,7 @@ public class WindowsMenuUI extends BasicMenuUI {
      * true when the mouse enters the menu and false when it exits.
      * @since 1.4
      */
-    protected class WindowsMouseInputHandler extends BasicMenuUI.MouseInputHandler {
+    protected class WindowsMouseInputHandler extends MouseInputHandler {
         public void mouseEntered(MouseEvent evt) {
             super.mouseEntered(evt);
 

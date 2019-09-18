@@ -1173,7 +1173,7 @@ public class JList<E> extends JComponent implements Scrollable, Accessible
      *            <code>b</code> is <code>true</code> and
      *            <code>GraphicsEnvironment.isHeadless()</code>
      *            returns <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #getDragEnabled
      * @see #setTransferHandler
      * @see TransferHandler
@@ -1778,7 +1778,7 @@ public class JList<E> extends JComponent implements Scrollable, Accessible
      *
      * @see #addListSelectionListener
      * @see #removeListSelectionListener
-     * @see javax.swing.event.ListSelectionEvent
+     * @see ListSelectionEvent
      * @see EventListenerList
      */
     protected void fireSelectionValueChanged(int firstIndex, int lastIndex,
@@ -2128,12 +2128,12 @@ public class JList<E> extends JComponent implements Scrollable, Accessible
      * <p>
      * This is a cover method that delegates to the method of the same name on
      * the list's selection model. See the documentation for
-     * {@link javax.swing.ListSelectionModel#setValueIsAdjusting} for
+     * {@link ListSelectionModel#setValueIsAdjusting} for
      * more details.
      *
      * @param b the new value for the property
      * @see ListSelectionModel#setValueIsAdjusting
-     * @see javax.swing.event.ListSelectionEvent#getValueIsAdjusting
+     * @see ListSelectionEvent#getValueIsAdjusting
      * @see #getValueIsAdjusting
      */
     public void setValueIsAdjusting(boolean b) {

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil.fsm ;
+package com.sun.corba.se.impl.orbutil.fsm;
 
 import com.sun.corba.se.spi.orbutil.fsm.Guard ;
 import com.sun.corba.se.spi.orbutil.fsm.GuardBase ;
@@ -34,9 +34,9 @@ import com.sun.corba.se.spi.orbutil.fsm.FSM ;
 
 public class GuardedAction {
     private static Guard trueGuard = new GuardBase( "true" ) {
-        public Guard.Result evaluate( FSM fsm, Input in )
+        public Result evaluate( FSM fsm, Input in )
         {
-            return Guard.Result.ENABLED ;
+            return Result.ENABLED ;
         }
     } ;
 

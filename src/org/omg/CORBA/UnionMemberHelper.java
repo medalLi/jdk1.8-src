@@ -39,7 +39,7 @@ abstract public class UnionMemberHelper
 {
   private static String  _id = "IDL:omg.org/CORBA/UnionMember:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.CORBA.UnionMember that)
+  public static void insert (Any a, UnionMember that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -47,50 +47,50 @@ abstract public class UnionMemberHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.CORBA.UnionMember extract (org.omg.CORBA.Any a)
+  public static UnionMember extract (Any a)
   {
     return read (a.create_input_stream ());
   }
 
-  private static org.omg.CORBA.TypeCode __typeCode = null;
+  private static TypeCode __typeCode = null;
   private static boolean __active = false;
-  synchronized public static org.omg.CORBA.TypeCode type ()
+  synchronized public static TypeCode type ()
   {
     if (__typeCode == null)
     {
-      synchronized (org.omg.CORBA.TypeCode.class)
+      synchronized (TypeCode.class)
       {
         if (__typeCode == null)
         {
           if (__active)
           {
-            return org.omg.CORBA.ORB.init().create_recursive_tc ( _id );
+            return ORB.init().create_recursive_tc ( _id );
           }
           __active = true;
-          org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [4];
-          org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_string_tc (0);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.IdentifierHelper.id (), "Identifier", _tcOf_members0);
-          _members0[0] = new org.omg.CORBA.StructMember (
+          StructMember[] _members0 = new StructMember [4];
+          TypeCode _tcOf_members0 = null;
+          _tcOf_members0 = ORB.init ().create_string_tc (0);
+          _tcOf_members0 = ORB.init ().create_alias_tc (IdentifierHelper.id (), "Identifier", _tcOf_members0);
+          _members0[0] = new StructMember (
             "name",
             _tcOf_members0,
             null);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_any);
-          _members0[1] = new org.omg.CORBA.StructMember (
+          _tcOf_members0 = ORB.init ().get_primitive_tc (TCKind.tk_any);
+          _members0[1] = new StructMember (
             "label",
             _tcOf_members0,
             null);
-          _tcOf_members0 = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_TypeCode);
-          _members0[2] = new org.omg.CORBA.StructMember (
+          _tcOf_members0 = ORB.init ().get_primitive_tc (TCKind.tk_TypeCode);
+          _members0[2] = new StructMember (
             "type",
             _tcOf_members0,
             null);
-          _tcOf_members0 = org.omg.CORBA.IDLTypeHelper.type ();
-          _members0[3] = new org.omg.CORBA.StructMember (
+          _tcOf_members0 = IDLTypeHelper.type ();
+          _members0[3] = new StructMember (
             "type_def",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_struct_tc (org.omg.CORBA.UnionMemberHelper.id (), "UnionMember", _members0);
+          __typeCode = ORB.init ().create_struct_tc (UnionMemberHelper.id (), "UnionMember", _members0);
           __active = false;
         }
       }
@@ -103,22 +103,22 @@ abstract public class UnionMemberHelper
     return _id;
   }
 
-  public static org.omg.CORBA.UnionMember read (org.omg.CORBA.portable.InputStream istream)
+  public static UnionMember read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.CORBA.UnionMember value = new org.omg.CORBA.UnionMember ();
+    UnionMember value = new UnionMember ();
     value.name = istream.read_string ();
     value.label = istream.read_any ();
     value.type = istream.read_TypeCode ();
-    value.type_def = org.omg.CORBA.IDLTypeHelper.read (istream);
+    value.type_def = IDLTypeHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.CORBA.UnionMember value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, UnionMember value)
   {
     ostream.write_string (value.name);
     ostream.write_any (value.label);
     ostream.write_TypeCode (value.type);
-    org.omg.CORBA.IDLTypeHelper.write (ostream, value.type_def);
+    IDLTypeHelper.write (ostream, value.type_def);
   }
 
 }

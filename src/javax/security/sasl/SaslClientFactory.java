@@ -88,12 +88,12 @@ public abstract interface SaslClientFactory {
      * of an error.
      */
     public abstract SaslClient createSaslClient(
-        String[] mechanisms,
-        String authorizationId,
-        String protocol,
-        String serverName,
-        Map<String,?> props,
-        CallbackHandler cbh) throws SaslException;
+            String[] mechanisms,
+            String authorizationId,
+            String protocol,
+            String serverName,
+            Map<String, ?> props,
+            CallbackHandler cbh) throws SaslException;
 
     /**
      * Returns an array of names of mechanisms that match the specified
@@ -108,5 +108,5 @@ public abstract interface SaslClientFactory {
      * including any map entries with non-String keys.
      * @return A non-null array containing a IANA-registered SASL mechanism names.
      */
-    public abstract String[] getMechanismNames(Map<String,?> props);
+    public abstract String[] getMechanismNames(Map<String, ?> props);
 }

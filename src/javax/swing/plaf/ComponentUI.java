@@ -47,7 +47,7 @@ import java.awt.Insets;
  * look and feel installed.  <b>Client programs should not invoke methods
  * on this class directly.</b>
  *
- * @see javax.swing.JComponent
+ * @see JComponent
  * @see javax.swing.UIManager
  *
  */
@@ -81,8 +81,8 @@ public abstract class ComponentUI {
      * @param c the component where this UI delegate is being installed
      *
      * @see #uninstallUI
-     * @see javax.swing.JComponent#setUI
-     * @see javax.swing.JComponent#updateUI
+     * @see JComponent#setUI
+     * @see JComponent#updateUI
      */
     public void installUI(JComponent c) {
     }
@@ -110,7 +110,7 @@ public abstract class ComponentUI {
      *          and shared by multiple components
      *
      * @see #installUI
-     * @see javax.swing.JComponent#updateUI
+     * @see JComponent#updateUI
      */
     public void uninstallUI(JComponent c) {
     }
@@ -151,7 +151,7 @@ public abstract class ComponentUI {
      *          and shared by multiple components
      *
      * @see #paint
-     * @see javax.swing.JComponent#paintComponent
+     * @see JComponent#paintComponent
      */
     public void update(Graphics g, JComponent c) {
         if (c.isOpaque()) {
@@ -174,7 +174,7 @@ public abstract class ComponentUI {
      *          but might be used if the UI object is stateless
      *          and shared by multiple components
      *
-     * @see javax.swing.JComponent#getPreferredSize
+     * @see JComponent#getPreferredSize
      * @see java.awt.LayoutManager#preferredLayoutSize
      */
     public Dimension getPreferredSize(JComponent c) {
@@ -196,7 +196,7 @@ public abstract class ComponentUI {
      *
      * @return a <code>Dimension</code> object or <code>null</code>
      *
-     * @see javax.swing.JComponent#getMinimumSize
+     * @see JComponent#getMinimumSize
      * @see java.awt.LayoutManager#minimumLayoutSize
      * @see #getPreferredSize
      */
@@ -218,7 +218,7 @@ public abstract class ComponentUI {
      *          and shared by multiple components
      * @return a <code>Dimension</code> object or <code>null</code>
      *
-     * @see javax.swing.JComponent#getMaximumSize
+     * @see JComponent#getMaximumSize
      * @see java.awt.LayoutManager2#maximumLayoutSize
      */
     public Dimension getMaximumSize(JComponent c) {
@@ -241,8 +241,8 @@ public abstract class ComponentUI {
      * @param x the <i>x</i> coordinate of the point
      * @param y the <i>y</i> coordinate of the point
      *
-     * @see javax.swing.JComponent#contains
-     * @see java.awt.Component#contains
+     * @see JComponent#contains
+     * @see Component#contains
      */
     @SuppressWarnings("deprecation")
     public boolean contains(JComponent c, int x, int y) {
@@ -282,7 +282,7 @@ public abstract class ComponentUI {
      * @throws IllegalArgumentException if width or height is &lt; 0
      * @return baseline or a value &lt; 0 indicating there is no reasonable
      *                  baseline
-     * @see javax.swing.JComponent#getBaseline(int,int)
+     * @see JComponent#getBaseline(int,int)
      * @since 1.6
      */
     public int getBaseline(JComponent c, int width, int height) {
@@ -308,7 +308,7 @@ public abstract class ComponentUI {
      * @return an enum indicating how the baseline changes as the component
      *         size changes
      * @throws NullPointerException if <code>c</code> is <code>null</code>
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public Component.BaselineResizeBehavior getBaselineResizeBehavior(

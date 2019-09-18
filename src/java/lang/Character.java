@@ -580,7 +580,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
     /**
      * Instances of this class represent particular subsets of the Unicode
      * character set.  The only family of subsets defined in the
-     * {@code Character} class is {@link Character.UnicodeBlock}.
+     * {@code Character} class is {@link UnicodeBlock}.
      * Other portions of the Java API may define other subsets for their
      * own purposes.
      *
@@ -3185,11 +3185,11 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * defined in the <a href="http://www.unicode.org/reports/tr24/">
      * <i>Unicode Standard Annex #24: Script Names</i></a>. Every Unicode
      * character is assigned to a single Unicode script, either a specific
-     * script, such as {@link Character.UnicodeScript#LATIN Latin}, or
+     * script, such as {@link UnicodeScript#LATIN Latin}, or
      * one of the following three special values,
-     * {@link Character.UnicodeScript#INHERITED Inherited},
-     * {@link Character.UnicodeScript#COMMON Common} or
-     * {@link Character.UnicodeScript#UNKNOWN Unknown}.
+     * {@link UnicodeScript#INHERITED Inherited},
+     * {@link UnicodeScript#COMMON Common} or
+     * {@link UnicodeScript#UNKNOWN Unknown}.
      *
      * @since 1.7
      */
@@ -4350,7 +4350,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
             UNKNOWN
         };
 
-        private static HashMap<String, Character.UnicodeScript> aliases;
+        private static HashMap<String, UnicodeScript> aliases;
         static {
             aliases = new HashMap<>(128);
             aliases.put("ARAB", ARABIC);
@@ -4721,7 +4721,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      *         {@link #MAX_HIGH_SURROGATE} inclusive;
      *         {@code false} otherwise.
      * @see    Character#isLowSurrogate(char)
-     * @see    Character.UnicodeBlock#of(int)
+     * @see    UnicodeBlock#of(int)
      * @since  1.5
      */
     public static boolean isHighSurrogate(char ch) {

@@ -92,7 +92,7 @@ public interface Array {
    * Retrieves the JDBC type of the elements in the array designated
    * by this <code>Array</code> object.
    *
-   * @return a constant from the class {@link java.sql.Types} that is
+   * @return a constant from the class {@link Types} that is
    * the type code for the elements in the array designated by this
    * <code>Array</code> object
    * @exception SQLException if an error occurs while attempting
@@ -153,7 +153,7 @@ public interface Array {
    * this method
    * @since 1.2
    */
-  Object getArray(java.util.Map<String,Class<?>> map) throws SQLException;
+  Object getArray(java.util.Map<String, Class<?>> map) throws SQLException;
 
   /**
    * Retrieves a slice of the SQL <code>ARRAY</code>
@@ -216,7 +216,7 @@ public interface Array {
    * this method
    * @since 1.2
    */
-  Object getArray(long index, int count, java.util.Map<String,Class<?>> map)
+  Object getArray(long index, int count, java.util.Map<String, Class<?>> map)
     throws SQLException;
 
   /**
@@ -242,7 +242,7 @@ public interface Array {
    * this method
    * @since 1.2
    */
-  ResultSet getResultSet () throws SQLException;
+  ResultSet getResultSet() throws SQLException;
 
   /**
    * Retrieves a result set that contains the elements of the SQL
@@ -273,7 +273,7 @@ public interface Array {
    * this method
    * @since 1.2
    */
-  ResultSet getResultSet (java.util.Map<String,Class<?>> map) throws SQLException;
+  ResultSet getResultSet(java.util.Map<String, Class<?>> map) throws SQLException;
 
   /**
    * Retrieves a result set holding the elements of the subarray that
@@ -341,8 +341,8 @@ public interface Array {
    * this method
    * @since 1.2
    */
-  ResultSet getResultSet (long index, int count,
-                          java.util.Map<String,Class<?>> map)
+  ResultSet getResultSet(long index, int count,
+                         java.util.Map<String, Class<?>> map)
     throws SQLException;
     /**
      * This method frees the <code>Array</code> object and releases the resources that

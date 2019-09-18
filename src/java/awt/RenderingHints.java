@@ -39,7 +39,7 @@ import java.lang.ref.WeakReference;
  * keys and associated values which allow an application to provide input
  * into the choice of algorithms used by other classes which perform
  * rendering and image manipulation services.
- * The {@link java.awt.Graphics2D} class, and classes that implement
+ * The {@link Graphics2D} class, and classes that implement
  * {@link java.awt.image.BufferedImageOp} and
  * {@link java.awt.image.RasterOp} all provide methods to get and
  * possibly to set individual or groups of {@code RenderingHints}
@@ -73,7 +73,7 @@ import java.lang.ref.WeakReference;
  * value for that key is the exact value that specifies the algorithm.
  * <p>
  * The keys used to control the hints are all special values that
- * subclass the associated {@link RenderingHints.Key} class.
+ * subclass the associated {@link Key} class.
  * Many common hints are expressed below as static constants in this
  * class, but the list is not meant to be exhaustive.
  * Other hints may be created by other packages by defining new objects
@@ -1064,7 +1064,7 @@ public class RenderingHints
      * @exception ClassCastException if the key can not
      *            be cast to {@code RenderingHints.Key}
      * @exception IllegalArgumentException if the
-     *            {@link Key#isCompatibleValue(java.lang.Object)
+     *            {@link Key#isCompatibleValue(Object)
      *                   Key.isCompatibleValue()}
      *            method of the specified key returns false for the
      *            specified value
@@ -1134,11 +1134,11 @@ public class RenderingHints
         //if (m instanceof RenderingHints) {
         if (RenderingHints.class.isInstance(m)) {
             //hintmap.putAll(((RenderingHints) m).hintmap);
-            for (Map.Entry<?,?> entry : m.entrySet())
+            for (Entry<?,?> entry : m.entrySet())
                 hintmap.put(entry.getKey(), entry.getValue());
         } else {
             // Funnel each key/value pair through our protected put method
-            for (Map.Entry<?,?> entry : m.entrySet())
+            for (Entry<?,?> entry : m.entrySet())
                 put(entry.getKey(), entry.getValue());
         }
     }
@@ -1208,7 +1208,7 @@ public class RenderingHints
      * @return a <code>Set</code> view of the mappings contained in
      * this <code>RenderingHints</code>.
      */
-    public Set<Map.Entry<Object,Object>> entrySet() {
+    public Set<Entry<Object,Object>> entrySet() {
         return Collections.unmodifiableMap(hintmap).entrySet();
     }
 
@@ -1252,7 +1252,7 @@ public class RenderingHints
      * contract of <code>Object.hashCode</code>.
      *
      * @return the hash code value for this <code>RenderingHints</code>.
-     * @see java.util.Map.Entry#hashCode()
+     * @see Entry#hashCode()
      * @see Object#hashCode()
      * @see Object#equals(Object)
      * @see #equals(Object)

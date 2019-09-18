@@ -113,7 +113,7 @@ final class LongList {
             return;
         }
 
-        java.lang.System.arraycopy(list,index,list,index+1,size-index);
+        System.arraycopy(list,index,list,index+1,size-index);
         list[index]=o;
         size++;
     }
@@ -135,9 +135,9 @@ final class LongList {
         if (at > size) throw new IndexOutOfBoundsException();
         ensure(size+count);
         if (at < size) {
-            java.lang.System.arraycopy(list,at,list,at+count,size-at);
+            System.arraycopy(list,at,list,at+count,size-at);
         }
-        java.lang.System.arraycopy(src,from,list,at,count);
+        System.arraycopy(src,from,list,at,count);
         size+=count;
     }
 
@@ -155,7 +155,7 @@ final class LongList {
 
         if (from == size) return o;
 
-        java.lang.System.arraycopy(list,from+count,list,from,
+        System.arraycopy(list,from+count,list,from,
                                    size-from);
         return o;
     }
@@ -171,7 +171,7 @@ final class LongList {
         list[index]=0;
         if (index == --size) return o;
 
-        java.lang.System.arraycopy(list,index+1,list,index,
+        System.arraycopy(list,index+1,list,index,
                                    size-index);
         return o;
     }
@@ -183,7 +183,7 @@ final class LongList {
      * block on the LongList object.
      **/
     public final long[] toArray(long[] a) {
-        java.lang.System.arraycopy(list,0,a,0,size);
+        System.arraycopy(list,0,a,0,size);
         return a;
     }
 
@@ -204,7 +204,7 @@ final class LongList {
      **/
     private final void resize() {
         final long[] newlist = allocate(list.length + DELTA);
-        java.lang.System.arraycopy(list,0,newlist,0,size);
+        System.arraycopy(list,0,newlist,0,size);
         list = newlist;
     }
 
@@ -220,7 +220,7 @@ final class LongList {
             final int min = list.length+DELTA;
             length=(length<min)?min:length;
             final long[] newlist = allocate(length);
-            java.lang.System.arraycopy(list,0,newlist,0,size);
+            System.arraycopy(list,0,newlist,0,size);
             list = newlist;
         }
     }

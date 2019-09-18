@@ -23,7 +23,7 @@ package org.omg.CosNaming;
  * Naming Specification.</a>
  */
 public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
- implements org.omg.CosNaming.NamingContextExtOperations, org.omg.CORBA.portable.InvokeHandler
+ implements NamingContextExtOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors
@@ -31,20 +31,20 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
   private static java.util.Hashtable _methods = new java.util.Hashtable ();
   static
   {
-    _methods.put ("to_string", new java.lang.Integer (0));
-    _methods.put ("to_name", new java.lang.Integer (1));
-    _methods.put ("to_url", new java.lang.Integer (2));
-    _methods.put ("resolve_str", new java.lang.Integer (3));
-    _methods.put ("bind", new java.lang.Integer (4));
-    _methods.put ("bind_context", new java.lang.Integer (5));
-    _methods.put ("rebind", new java.lang.Integer (6));
-    _methods.put ("rebind_context", new java.lang.Integer (7));
-    _methods.put ("resolve", new java.lang.Integer (8));
-    _methods.put ("unbind", new java.lang.Integer (9));
-    _methods.put ("list", new java.lang.Integer (10));
-    _methods.put ("new_context", new java.lang.Integer (11));
-    _methods.put ("bind_new_context", new java.lang.Integer (12));
-    _methods.put ("destroy", new java.lang.Integer (13));
+    _methods.put ("to_string", new Integer (0));
+    _methods.put ("to_name", new Integer (1));
+    _methods.put ("to_url", new Integer (2));
+    _methods.put ("resolve_str", new Integer (3));
+    _methods.put ("bind", new Integer (4));
+    _methods.put ("bind_context", new Integer (5));
+    _methods.put ("rebind", new Integer (6));
+    _methods.put ("rebind_context", new Integer (7));
+    _methods.put ("resolve", new Integer (8));
+    _methods.put ("unbind", new Integer (9));
+    _methods.put ("list", new Integer (10));
+    _methods.put ("new_context", new Integer (11));
+    _methods.put ("bind_new_context", new Integer (12));
+    _methods.put ("destroy", new Integer (13));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -52,7 +52,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
                                 org.omg.CORBA.portable.ResponseHandler $rh)
   {
     org.omg.CORBA.portable.OutputStream out = null;
-    java.lang.Integer __method = (java.lang.Integer)_methods.get ($method);
+    Integer __method = (Integer)_methods.get ($method);
     if (__method == null)
       throw new org.omg.CORBA.BAD_OPERATION (0, org.omg.CORBA.CompletionStatus.COMPLETED_MAYBE);
 
@@ -72,7 +72,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 0:  // CosNaming/NamingContextExt/to_string
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
            String $result = null;
            $result = this.to_string (n);
            out = $rh.createReply();
@@ -99,10 +99,10 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        {
          try {
            String sn = org.omg.CosNaming.NamingContextExtPackage.StringNameHelper.read (in);
-           org.omg.CosNaming.NameComponent $result[] = null;
+           NameComponent $result[] = null;
            $result = this.to_name (sn);
            out = $rh.createReply();
-           org.omg.CosNaming.NameHelper.write (out, $result);
+           NameHelper.write (out, $result);
          } catch (org.omg.CosNaming.NamingContextPackage.InvalidName $ex) {
            out = $rh.createExceptionReply ();
            org.omg.CosNaming.NamingContextPackage.InvalidNameHelper.write (out, $ex);
@@ -207,7 +207,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 4:  // CosNaming/NamingContext/bind
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
            org.omg.CORBA.Object obj = org.omg.CORBA.ObjectHelper.read (in);
            this.bind (n, obj);
            out = $rh.createReply();
@@ -251,8 +251,8 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 5:  // CosNaming/NamingContext/bind_context
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
-           org.omg.CosNaming.NamingContext nc = org.omg.CosNaming.NamingContextHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
+           NamingContext nc = NamingContextHelper.read (in);
            this.bind_context (n, nc);
            out = $rh.createReply();
          } catch (org.omg.CosNaming.NamingContextPackage.NotFound $ex) {
@@ -293,7 +293,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 6:  // CosNaming/NamingContext/rebind
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
            org.omg.CORBA.Object obj = org.omg.CORBA.ObjectHelper.read (in);
            this.rebind (n, obj);
            out = $rh.createReply();
@@ -332,8 +332,8 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 7:  // CosNaming/NamingContext/rebind_context
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
-           org.omg.CosNaming.NamingContext nc = org.omg.CosNaming.NamingContextHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
+           NamingContext nc = NamingContextHelper.read (in);
            this.rebind_context (n, nc);
            out = $rh.createReply();
          } catch (org.omg.CosNaming.NamingContextPackage.NotFound $ex) {
@@ -371,7 +371,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 8:  // CosNaming/NamingContext/resolve
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
            org.omg.CORBA.Object $result = null;
            $result = this.resolve (n);
            out = $rh.createReply();
@@ -406,7 +406,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 9:  // CosNaming/NamingContext/unbind
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
+           NameComponent n[] = NameHelper.read (in);
            this.unbind (n);
            out = $rh.createReply();
          } catch (org.omg.CosNaming.NamingContextPackage.NotFound $ex) {
@@ -446,12 +446,12 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 10:  // CosNaming/NamingContext/list
        {
          int how_many = in.read_ulong ();
-         org.omg.CosNaming.BindingListHolder bl = new org.omg.CosNaming.BindingListHolder ();
-         org.omg.CosNaming.BindingIteratorHolder bi = new org.omg.CosNaming.BindingIteratorHolder ();
+         BindingListHolder bl = new BindingListHolder ();
+         BindingIteratorHolder bi = new BindingIteratorHolder ();
          this.list (how_many, bl, bi);
          out = $rh.createReply();
-         org.omg.CosNaming.BindingListHelper.write (out, bl.value);
-         org.omg.CosNaming.BindingIteratorHelper.write (out, bi.value);
+         BindingListHelper.write (out, bl.value);
+         BindingIteratorHelper.write (out, bi.value);
          break;
        }
 
@@ -463,10 +463,10 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
    */
        case 11:  // CosNaming/NamingContext/new_context
        {
-         org.omg.CosNaming.NamingContext $result = null;
+         NamingContext $result = null;
          $result = this.new_context ();
          out = $rh.createReply();
-         org.omg.CosNaming.NamingContextHelper.write (out, $result);
+         NamingContextHelper.write (out, $result);
          break;
        }
 
@@ -494,11 +494,11 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
        case 12:  // CosNaming/NamingContext/bind_new_context
        {
          try {
-           org.omg.CosNaming.NameComponent n[] = org.omg.CosNaming.NameHelper.read (in);
-           org.omg.CosNaming.NamingContext $result = null;
+           NameComponent n[] = NameHelper.read (in);
+           NamingContext $result = null;
            $result = this.bind_new_context (n);
            out = $rh.createReply();
-           org.omg.CosNaming.NamingContextHelper.write (out, $result);
+           NamingContextHelper.write (out, $result);
          } catch (org.omg.CosNaming.NamingContextPackage.NotFound $ex) {
            out = $rh.createExceptionReply ();
            org.omg.CosNaming.NamingContextPackage.NotFoundHelper.write (out, $ex);

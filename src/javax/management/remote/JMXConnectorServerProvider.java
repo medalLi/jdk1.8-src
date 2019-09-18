@@ -76,7 +76,7 @@ public interface JMXConnectorServerProvider {
      * connector server cannot be created.
      */
     public JMXConnectorServer newJMXConnectorServer(JMXServiceURL serviceURL,
-                                                    Map<String,?> environment,
+                                                    Map<String, ?> environment,
                                                     MBeanServer mbeanServer)
             throws IOException;
 }

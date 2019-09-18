@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.toa ;
+package com.sun.corba.se.impl.oa.toa;
 
 import java.util.Map ;
 import java.util.HashMap ;

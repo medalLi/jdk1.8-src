@@ -32,7 +32,7 @@ package org.omg.CORBA;
  * @deprecated Use the new <a href="../DynamicAny/DynFixed.html">DynFixed</a> instead
  */
 @Deprecated
-public interface DynFixed extends org.omg.CORBA.Object, org.omg.CORBA.DynAny
+public interface DynFixed extends Object, DynAny
 {
     /**
      * Returns the value of the fixed type represented in this

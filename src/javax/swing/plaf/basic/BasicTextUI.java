@@ -95,7 +95,7 @@ import javax.swing.plaf.basic.DragRecognitionSupport.BeforeDrag;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @author Timothy Prinzing
  * @author Shannon Hickey (drag and drop)
@@ -165,7 +165,7 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
      *
      * @return the keymap
      * @see #getKeymapName
-     * @see javax.swing.text.JTextComponent
+     * @see JTextComponent
      */
     protected Keymap createKeymap() {
         String nm = getKeymapName();
@@ -1220,8 +1220,8 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
      * Returns the string to be used as the tooltip at the passed in location.
      * This forwards the method onto the root View.
      *
-     * @see javax.swing.text.JTextComponent#getToolTipText
-     * @see javax.swing.text.View#getToolTipText
+     * @see JTextComponent#getToolTipText
+     * @see View#getToolTipText
      * @since 1.4
      */
     public String getToolTipText(JTextComponent t, Point pt) {
@@ -2021,8 +2021,8 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
 
         /**
          * Returns the maximum size of this component.
-         * @see java.awt.Component#getMinimumSize()
-         * @see java.awt.Component#getPreferredSize()
+         * @see Component#getMinimumSize()
+         * @see Component#getPreferredSize()
          * @see LayoutManager
          */
         public Dimension maximumLayoutSize(Container target) {
@@ -2245,7 +2245,7 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
                     } else if (plainFlavor == null && mime.startsWith("text/plain")) {
                         plainFlavor = flavors[i];
                     } else if (refFlavor == null && mime.startsWith("application/x-java-jvm-local-objectref")
-                                                 && flavors[i].getRepresentationClass() == java.lang.String.class) {
+                                                 && flavors[i].getRepresentationClass() == String.class) {
                         refFlavor = flavors[i];
                     } else if (stringFlavor == null && flavors[i].equals(DataFlavor.stringFlavor)) {
                         stringFlavor = flavors[i];
@@ -2267,7 +2267,7 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
                 if (mime.startsWith("text/plain")) {
                     return flavors[i];
                 } else if (refFlavor == null && mime.startsWith("application/x-java-jvm-local-objectref")
-                                             && flavors[i].getRepresentationClass() == java.lang.String.class) {
+                                             && flavors[i].getRepresentationClass() == String.class) {
                     refFlavor = flavors[i];
                 } else if (stringFlavor == null && flavors[i].equals(DataFlavor.stringFlavor)) {
                     stringFlavor = flavors[i];

@@ -45,7 +45,7 @@ import java.awt.AWTEvent;
  * dispatched anywhere in the AWT, that object's
  * <code>eventDispatched</code> method is invoked.
  *
- * @see java.awt.AWTEvent
+ * @see AWTEvent
  * @see java.awt.Toolkit#addAWTEventListener
  * @see java.awt.Toolkit#removeAWTEventListener
  *

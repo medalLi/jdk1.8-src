@@ -231,7 +231,7 @@ public interface RowSet extends ResultSet {
    * @exception SQLException if a database access error occurs
    * @see #setTypeMap
    */
-   java.util.Map<String,Class<?>> getTypeMap() throws SQLException;
+   Map<String,Class<?>> getTypeMap() throws SQLException;
 
   /**
    * Installs the given <code>java.util.Map</code> object as the default
@@ -244,7 +244,7 @@ public interface RowSet extends ResultSet {
    * @exception SQLException if a database access error occurs
    * @see #getTypeMap
    */
-   void setTypeMap(java.util.Map<String,Class<?>> map) throws SQLException;
+   void setTypeMap(Map<String, Class<?>> map) throws SQLException;
 
   //-----------------------------------------------------------------------
   // The following properties may be used to create a Statement.
@@ -416,7 +416,7 @@ public interface RowSet extends ResultSet {
    *        <code>ResultSet.TYPE_SCROLL_INSENSITIVE</code>, or
    *        <code>ResultSet.TYPE_SCROLL_SENSITIVE</code>
    * @exception SQLException if a database access error occurs
-   * @see java.sql.ResultSet#getType
+   * @see ResultSet#getType
    */
   void setType(int type) throws SQLException;
 
@@ -498,7 +498,7 @@ public interface RowSet extends ResultSet {
    *        type; ignored if the parameter is not a UDT or <code>REF</code> type
    * @exception SQLException if a database access error occurs
    */
-  void setNull (int paramIndex, int sqlType, String typeName)
+  void setNull(int paramIndex, int sqlType, String typeName)
     throws SQLException;
 
   /**
@@ -533,7 +533,7 @@ public interface RowSet extends ResultSet {
      * this method
      * @since 1.4
      */
-    void setNull (String parameterName, int sqlType, String typeName)
+    void setNull(String parameterName, int sqlType, String typeName)
         throws SQLException;
 
   /**
@@ -839,7 +839,7 @@ public interface RowSet extends ResultSet {
    * @param x the parameter value
    * @exception SQLException if a database access error occurs
    */
-  void setTime(int parameterIndex, java.sql.Time x) throws SQLException;
+  void setTime(int parameterIndex, Time x) throws SQLException;
 
   /**
    * Sets the designated parameter in this <code>RowSet</code> object's command
@@ -851,7 +851,7 @@ public interface RowSet extends ResultSet {
    * @param x the parameter value
    * @exception SQLException if a database access error occurs
    */
-  void setTimestamp(int parameterIndex, java.sql.Timestamp x)
+  void setTimestamp(int parameterIndex, Timestamp x)
     throws SQLException;
 
   /**
@@ -869,7 +869,7 @@ public interface RowSet extends ResultSet {
      * @see #getTimestamp
      * @since 1.4
      */
-    void setTimestamp(String parameterName, java.sql.Timestamp x)
+    void setTimestamp(String parameterName, Timestamp x)
         throws SQLException;
 
   /**
@@ -889,7 +889,7 @@ public interface RowSet extends ResultSet {
    * @param length the number of bytes in the stream
    * @exception SQLException if a database access error occurs
    */
-  void setAsciiStream(int parameterIndex, java.io.InputStream x, int length)
+  void setAsciiStream(int parameterIndex, InputStream x, int length)
     throws SQLException;
 
   /**
@@ -914,7 +914,7 @@ public interface RowSet extends ResultSet {
      * this method
      * @since 1.4
      */
-    void setAsciiStream(String parameterName, java.io.InputStream x, int length)
+    void setAsciiStream(String parameterName, InputStream x, int length)
         throws SQLException;
 
   /**
@@ -934,7 +934,7 @@ public interface RowSet extends ResultSet {
    * @param length the number of bytes in the stream
    * @exception SQLException if a database access error occurs
    */
-  void setBinaryStream(int parameterIndex, java.io.InputStream x,
+  void setBinaryStream(int parameterIndex, InputStream x,
                        int length) throws SQLException;
 
   /**
@@ -958,7 +958,7 @@ public interface RowSet extends ResultSet {
      * this method
      * @since 1.4
      */
-    void setBinaryStream(String parameterName, java.io.InputStream x,
+    void setBinaryStream(String parameterName, InputStream x,
                          int length) throws SQLException;
 
   /**
@@ -1007,7 +1007,7 @@ public interface RowSet extends ResultSet {
      * @since 1.4
      */
     void setCharacterStream(String parameterName,
-                            java.io.Reader reader,
+                            Reader reader,
                             int length) throws SQLException;
 
   /**
@@ -1033,7 +1033,7 @@ public interface RowSet extends ResultSet {
    * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
    * @since 1.6
    */
-  void setAsciiStream(int parameterIndex, java.io.InputStream x)
+  void setAsciiStream(int parameterIndex, InputStream x)
                       throws SQLException;
 
    /**
@@ -1058,7 +1058,7 @@ public interface RowSet extends ResultSet {
      * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
        * @since 1.6
     */
-    void setAsciiStream(String parameterName, java.io.InputStream x)
+    void setAsciiStream(String parameterName, InputStream x)
             throws SQLException;
 
   /**
@@ -1083,7 +1083,7 @@ public interface RowSet extends ResultSet {
    * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
    * @since 1.6
    */
-  void setBinaryStream(int parameterIndex, java.io.InputStream x)
+  void setBinaryStream(int parameterIndex, InputStream x)
                        throws SQLException;
 
   /**
@@ -1107,7 +1107,7 @@ public interface RowSet extends ResultSet {
      * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
      * @since 1.6
      */
-    void setBinaryStream(String parameterName, java.io.InputStream x)
+    void setBinaryStream(String parameterName, InputStream x)
     throws SQLException;
 
   /**
@@ -1136,7 +1136,7 @@ public interface RowSet extends ResultSet {
    * @since 1.6
    */
   void setCharacterStream(int parameterIndex,
-                          java.io.Reader reader) throws SQLException;
+                          Reader reader) throws SQLException;
 
   /**
      * Sets the designated parameter to the given <code>Reader</code>
@@ -1163,7 +1163,7 @@ public interface RowSet extends ResultSet {
      * @since 1.6
      */
     void setCharacterStream(String parameterName,
-                          java.io.Reader reader) throws SQLException;
+                            Reader reader) throws SQLException;
 
   /**
    * Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1232,7 +1232,7 @@ public interface RowSet extends ResultSet {
    *          of the data in the stream or reader.  For all other types,
    *          this value will be ignored.
    * @exception SQLException if a database access error occurs
-   * @see java.sql.Types
+   * @see Types
    */
   void setObject(int parameterIndex, Object x, int targetSqlType, int scaleOrLength)
             throws SQLException;
@@ -1405,7 +1405,7 @@ public interface RowSet extends ResultSet {
    * @param x an object representing data of an SQL <code>REF</code> type
    * @exception SQLException if a database access error occurs
    */
-  void setRef (int i, Ref x) throws SQLException;
+  void setRef(int i, Ref x) throws SQLException;
 
   /**
    * Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1417,7 +1417,7 @@ public interface RowSet extends ResultSet {
    * @param x an object representing a BLOB
    * @exception SQLException if a database access error occurs
    */
-  void setBlob (int i, Blob x) throws SQLException;
+  void setBlob(int i, Blob x) throws SQLException;
 
   /**
      * Sets the designated parameter to a <code>InputStream</code> object.  The inputstream must contain  the number
@@ -1515,7 +1515,7 @@ public interface RowSet extends ResultSet {
      * this method
      * @since 1.6
      */
-    void setBlob (String parameterName, Blob x) throws SQLException;
+    void setBlob(String parameterName, Blob x) throws SQLException;
 
   /**
      * Sets the designated parameter to a <code>InputStream</code> object.
@@ -1551,7 +1551,7 @@ public interface RowSet extends ResultSet {
    * @param x an object representing a CLOB
    * @exception SQLException if a database access error occurs
    */
-  void setClob (int i, Clob x) throws SQLException;
+  void setClob(int i, Clob x) throws SQLException;
 
   /**
      * Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
@@ -1636,7 +1636,7 @@ public interface RowSet extends ResultSet {
      * this method
      * @since 1.6
      */
-    void setClob (String parameterName, Clob x) throws SQLException;
+    void setClob(String parameterName, Clob x) throws SQLException;
 
   /**
      * Sets the designated parameter to a <code>Reader</code> object.
@@ -1671,7 +1671,7 @@ public interface RowSet extends ResultSet {
    * @param x an object representing an SQL array
    * @exception SQLException if a database access error occurs
    */
-  void setArray (int i, Array x) throws SQLException;
+  void setArray(int i, Array x) throws SQLException;
 
   /**
    * Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1741,7 +1741,7 @@ public interface RowSet extends ResultSet {
    * @param cal the <code>java.util.Calendar</code> object to use for calculating the time
    * @exception SQLException if a database access error occurs
    */
-  void setTime(int parameterIndex, java.sql.Time x, Calendar cal)
+  void setTime(int parameterIndex, Time x, Calendar cal)
     throws SQLException;
 
   /**
@@ -1758,7 +1758,7 @@ public interface RowSet extends ResultSet {
      * @see #getTime
      * @since 1.4
      */
-    void setTime(String parameterName, java.sql.Time x)
+    void setTime(String parameterName, Time x)
         throws SQLException;
 
   /**
@@ -1782,7 +1782,7 @@ public interface RowSet extends ResultSet {
      * @see #getTime
      * @since 1.4
      */
-    void setTime(String parameterName, java.sql.Time x, Calendar cal)
+    void setTime(String parameterName, Time x, Calendar cal)
         throws SQLException;
 
   /**
@@ -1798,7 +1798,7 @@ public interface RowSet extends ResultSet {
    *        timestamp
    * @exception SQLException if a database access error occurs
    */
-  void setTimestamp(int parameterIndex, java.sql.Timestamp x, Calendar cal)
+  void setTimestamp(int parameterIndex, Timestamp x, Calendar cal)
     throws SQLException;
 
   /**
@@ -1822,7 +1822,7 @@ public interface RowSet extends ResultSet {
      * @see #getTimestamp
      * @since 1.4
      */
-    void setTimestamp(String parameterName, java.sql.Timestamp x, Calendar cal)
+    void setTimestamp(String parameterName, Timestamp x, Calendar cal)
         throws SQLException;
 
   /**

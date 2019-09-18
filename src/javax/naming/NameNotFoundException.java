@@ -44,7 +44,7 @@ public class NameNotFoundException extends NamingException {
      *
      * @param   explanation     Possibly null additional detail about
      *                          this exception.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public NameNotFoundException(String explanation) {
         super(explanation);

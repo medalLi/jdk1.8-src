@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.extension ;
+package com.sun.corba.se.spi.extension;
 
 import org.omg.CORBA.Policy ;
 import org.omg.CORBA.LocalObject ;
@@ -50,7 +50,7 @@ public class CopyObjectPolicy extends LocalObject implements Policy
         return ORBConstants.COPY_OBJECT_POLICY ;
     }
 
-    public org.omg.CORBA.Policy copy ()
+    public Policy copy ()
     {
         return this ;
     }

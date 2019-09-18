@@ -82,7 +82,7 @@ import java.util.function.LongConsumer;
  * each stage must implement the correct {@code accept} method corresponding to
  * the data type it accepts.
  *
- * <p>The specialized subtypes such as {@link Sink.OfInt} override
+ * <p>The specialized subtypes such as {@link OfInt} override
  * {@code accept(Object)} to call the appropriate primitive specialization of
  * {@code accept}, implement the appropriate primitive specialization of
  * {@code Consumer}, and re-abstract the appropriate primitive specialization of
@@ -273,7 +273,7 @@ interface Sink<T> extends Consumer<T> {
      * The implementation of the {@code accept()} method must call the correct
      * {@code accept()} method on the downstream {@code Sink}.
      */
-    static abstract class ChainedInt<E_OUT> implements Sink.OfInt {
+    static abstract class ChainedInt<E_OUT> implements OfInt {
         protected final Sink<? super E_OUT> downstream;
 
         public ChainedInt(Sink<? super E_OUT> downstream) {
@@ -305,7 +305,7 @@ interface Sink<T> extends Consumer<T> {
      * The implementation of the {@code accept()} method must call the correct
      * {@code accept()} method on the downstream {@code Sink}.
      */
-    static abstract class ChainedLong<E_OUT> implements Sink.OfLong {
+    static abstract class ChainedLong<E_OUT> implements OfLong {
         protected final Sink<? super E_OUT> downstream;
 
         public ChainedLong(Sink<? super E_OUT> downstream) {
@@ -337,7 +337,7 @@ interface Sink<T> extends Consumer<T> {
      * The implementation of the {@code accept()} method must call the correct
      * {@code accept()} method on the downstream {@code Sink}.
      */
-    static abstract class ChainedDouble<E_OUT> implements Sink.OfDouble {
+    static abstract class ChainedDouble<E_OUT> implements OfDouble {
         protected final Sink<? super E_OUT> downstream;
 
         public ChainedDouble(Sink<? super E_OUT> downstream) {

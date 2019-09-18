@@ -36,7 +36,7 @@ abstract public class ServerIdsHelper
       __typeCode = org.omg.CORBA.ORB.init ().create_string_tc (0);
       __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.PortableInterceptor.ServerIdHelper.id (), "ServerId", __typeCode);
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.PortableActivationIDL.ServerIdsHelper.id (), "ServerIds", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (ServerIdsHelper.id (), "ServerIds", __typeCode);
     }
     return __typeCode;
   }

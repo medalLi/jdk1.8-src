@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.presentation.rmi ;
+package com.sun.corba.se.impl.presentation.rmi;
 
 import java.util.Map ;
 import java.util.HashMap ;
@@ -60,8 +60,8 @@ public final class PresentationManagerImpl implements PresentationManager
 {
     private Map classToClassData ;
     private Map methodToDMM ;
-    private PresentationManager.StubFactoryFactory staticStubFactoryFactory ;
-    private PresentationManager.StubFactoryFactory dynamicStubFactoryFactory ;
+    private StubFactoryFactory staticStubFactoryFactory ;
+    private StubFactoryFactory dynamicStubFactoryFactory ;
     private ORBUtilSystemException wrapper = null ;
     private boolean useDynamicStubs ;
 
@@ -107,12 +107,12 @@ public final class PresentationManagerImpl implements PresentationManager
         return result ;
     }
 
-    private class ClassDataImpl implements PresentationManager.ClassData
+    private class ClassDataImpl implements ClassData
     {
         private Class cls ;
         private IDLNameTranslator nameTranslator ;
         private String[] typeIds ;
-        private PresentationManager.StubFactory sfactory ;
+        private StubFactory sfactory ;
         private InvocationHandlerFactory ihfactory ;
         private Map dictionary ;
 
@@ -161,7 +161,7 @@ public final class PresentationManagerImpl implements PresentationManager
         }
     }
 
-    public PresentationManager.StubFactoryFactory getStubFactoryFactory(
+    public StubFactoryFactory getStubFactoryFactory(
         boolean isDynamic )
     {
         if (isDynamic)
@@ -171,7 +171,7 @@ public final class PresentationManagerImpl implements PresentationManager
     }
 
     public void setStubFactoryFactory( boolean isDynamic,
-        PresentationManager.StubFactoryFactory sff )
+        StubFactoryFactory sff )
     {
         if (isDynamic)
             dynamicStubFactoryFactory = sff ;

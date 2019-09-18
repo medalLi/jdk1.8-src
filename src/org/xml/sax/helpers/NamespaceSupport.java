@@ -358,7 +358,7 @@ public class NamespaceSupport
      *        local name, and the XML qualified name; or null if there
      *        is an undeclared prefix.
      * @see #declarePrefix
-     * @see java.lang.String#intern */
+     * @see String#intern */
     public String [] processName (String qName, String parts[],
                                   boolean isAttribute)
     {
@@ -428,7 +428,7 @@ public class NamespaceSupport
      * @return one of the prefixes currently mapped to the URI supplied,
      *         or null if none is mapped or if the URI is assigned to
      *         the default namespace
-     * @see #getPrefixes(java.lang.String)
+     * @see #getPrefixes(String)
      * @see #getURI
      */
     public String getPrefix (String uri)
@@ -606,7 +606,7 @@ public class NamespaceSupport
          *
          * @param prefix The prefix to declare.
          * @param uri The associated Namespace URI.
-         * @see org.xml.sax.helpers.NamespaceSupport#declarePrefix
+         * @see NamespaceSupport#declarePrefix
          */
         void declarePrefix (String prefix, String uri)
         {
@@ -646,7 +646,7 @@ public class NamespaceSupport
          *         URI part (or empty string), the local part,
          *         and the raw name, all internalized, or null
          *         if there is an undeclared prefix.
-         * @see org.xml.sax.helpers.NamespaceSupport#processName
+         * @see NamespaceSupport#processName
          */
         String [] processName (String qName, boolean isAttribute)
         {
@@ -723,7 +723,7 @@ public class NamespaceSupport
          * @param prefix The prefix to look up.
          * @return The associated Namespace URI, or null if none is
          *         declared.
-         * @see org.xml.sax.helpers.NamespaceSupport#getURI
+         * @see NamespaceSupport#getURI
          */
         String getURI (String prefix)
         {
@@ -745,7 +745,7 @@ public class NamespaceSupport
          *
          * @param uri The URI to look up.
          * @return The associated prefix, or null if none is declared.
-         * @see org.xml.sax.helpers.NamespaceSupport#getPrefix
+         * @see NamespaceSupport#getPrefix
          */
         String getPrefix (String uri)
         {
@@ -761,7 +761,7 @@ public class NamespaceSupport
          * Return an enumeration of prefixes declared in this context.
          *
          * @return An enumeration of prefixes (possibly empty).
-         * @see org.xml.sax.helpers.NamespaceSupport#getDeclaredPrefixes
+         * @see NamespaceSupport#getDeclaredPrefixes
          */
         Enumeration getDeclaredPrefixes ()
         {
@@ -780,7 +780,7 @@ public class NamespaceSupport
          * returned, and will have to be checked for separately.</p>
          *
          * @return An enumeration of prefixes (never empty).
-         * @see org.xml.sax.helpers.NamespaceSupport#getPrefixes
+         * @see NamespaceSupport#getPrefixes
          */
         Enumeration getPrefixes ()
         {

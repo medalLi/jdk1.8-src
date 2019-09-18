@@ -12,7 +12,7 @@ abstract public class ORBAlreadyRegisteredHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/ORBAlreadyRegistered:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered that)
+  public static void insert (org.omg.CORBA.Any a, ORBAlreadyRegistered that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class ORBAlreadyRegisteredHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered extract (org.omg.CORBA.Any a)
+  public static ORBAlreadyRegistered extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -48,7 +48,7 @@ abstract public class ORBAlreadyRegisteredHelper
             "orbId",
             _tcOf_members0,
             null);
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegisteredHelper.id (), "ORBAlreadyRegistered", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (ORBAlreadyRegisteredHelper.id (), "ORBAlreadyRegistered", _members0);
           __active = false;
         }
       }
@@ -61,16 +61,16 @@ abstract public class ORBAlreadyRegisteredHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered read (org.omg.CORBA.portable.InputStream istream)
+  public static ORBAlreadyRegistered read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered value = new com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered ();
+    ORBAlreadyRegistered value = new ORBAlreadyRegistered ();
     // read and discard the repository ID
     istream.read_string ();
     value.orbId = istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ORBAlreadyRegistered value)
   {
     // write the repository ID
     ostream.write_string (id ());

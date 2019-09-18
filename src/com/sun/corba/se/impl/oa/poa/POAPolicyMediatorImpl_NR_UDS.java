@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.oa.poa ;
+package com.sun.corba.se.impl.oa.poa;
 
 import java.util.Enumeration ;
 
@@ -61,7 +61,7 @@ public class POAPolicyMediatorImpl_NR_UDS extends POAPolicyMediatorBase {
         defaultServant = null ;
     }
 
-    protected java.lang.Object internalGetServant( byte[] id,
+    protected Object internalGetServant( byte[] id,
         String operation ) throws ForwardRequest
     {
         if (defaultServant == null)

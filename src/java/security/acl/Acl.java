@@ -81,9 +81,9 @@ import java.security.Principal;
  * call the ACL's {@code addEntry} method to add a new ACL entry
  * to the ACL.
  *
- * @see java.security.acl.AclEntry
- * @see java.security.acl.Owner
- * @see java.security.acl.Acl#getPermissions
+ * @see AclEntry
+ * @see Owner
+ * @see Acl#getPermissions
  *
  * @author Satish Dharmaraj
  */

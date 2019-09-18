@@ -149,7 +149,7 @@ public interface ExecutorService extends Executor {
      *         shutting down this ExecutorService may manipulate
      *         threads that the caller is not permitted to modify
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")},
+     *         RuntimePermission}{@code ("modifyThread")},
      *         or the security manager's {@code checkAccess} method
      *         denies access.
      */
@@ -174,7 +174,7 @@ public interface ExecutorService extends Executor {
      *         shutting down this ExecutorService may manipulate
      *         threads that the caller is not permitted to modify
      *         because it does not hold {@link
-     *         java.lang.RuntimePermission}{@code ("modifyThread")},
+     *         RuntimePermission}{@code ("modifyThread")},
      *         or the security manager's {@code checkAccess} method
      *         denies access.
      */

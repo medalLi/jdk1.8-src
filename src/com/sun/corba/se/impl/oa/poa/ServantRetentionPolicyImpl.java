@@ -29,7 +29,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 final class ServantRetentionPolicyImpl
-    extends org.omg.CORBA.LocalObject implements ServantRetentionPolicy {
+    extends LocalObject implements ServantRetentionPolicy {
 
     public ServantRetentionPolicyImpl(ServantRetentionPolicyValue value) {
         this.value = value;

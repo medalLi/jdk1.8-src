@@ -69,13 +69,13 @@ package java.awt.image;
  *  appropriate subclass and extract the information needed to directly
  *  manipulate pixels in the DataBuffer.
  *
- *  @see java.awt.image.DataBuffer
- *  @see java.awt.image.Raster
- *  @see java.awt.image.ComponentSampleModel
- *  @see java.awt.image.PixelInterleavedSampleModel
- *  @see java.awt.image.BandedSampleModel
- *  @see java.awt.image.MultiPixelPackedSampleModel
- *  @see java.awt.image.SinglePixelPackedSampleModel
+ *  @see DataBuffer
+ *  @see Raster
+ *  @see ComponentSampleModel
+ *  @see PixelInterleavedSampleModel
+ *  @see BandedSampleModel
+ *  @see MultiPixelPackedSampleModel
+ *  @see SinglePixelPackedSampleModel
  */
 
 public abstract class SampleModel
@@ -95,7 +95,7 @@ public abstract class SampleModel
     protected int numBands;
 
     /** Data type of the DataBuffer storing the pixel data.
-     *  @see java.awt.image.DataBuffer
+     *  @see DataBuffer
      */
     protected int dataType;
 
@@ -212,7 +212,7 @@ public abstract class SampleModel
      *  @see #setDataElements(int, int, Object, DataBuffer)
      *  @see #setDataElements(int, int, int, int, Object, DataBuffer)
      *  @see #getNumDataElements
-     *  @see java.awt.image.DataBuffer
+     *  @see DataBuffer
      */
     public int getTransferType() {
         return dataType;
@@ -289,7 +289,7 @@ public abstract class SampleModel
      * @return the data elements for the specified pixel.
      * @see #getNumDataElements
      * @see #getTransferType
-     * @see java.awt.image.DataBuffer
+     * @see DataBuffer
      * @see #setDataElements(int, int, Object, DataBuffer)
      *
      * @throws NullPointerException if data is null.
@@ -344,7 +344,7 @@ public abstract class SampleModel
      * @see #getNumDataElements
      * @see #getTransferType
      * @see #setDataElements(int, int, int, int, Object, DataBuffer)
-     * @see java.awt.image.DataBuffer
+     * @see DataBuffer
      *
      * @throws NullPointerException if data is null.
      * @throws ArrayIndexOutOfBoundsException if the coordinates are
@@ -525,7 +525,7 @@ public abstract class SampleModel
      * @see #getNumDataElements
      * @see #getTransferType
      * @see #getDataElements(int, int, Object, DataBuffer)
-     * @see java.awt.image.DataBuffer
+     * @see DataBuffer
      *
      * @throws NullPointerException if data is null.
      * @throws ArrayIndexOutOfBoundsException if the coordinates are
@@ -574,7 +574,7 @@ public abstract class SampleModel
      * @see #getNumDataElements
      * @see #getTransferType
      * @see #getDataElements(int, int, int, int, Object, DataBuffer)
-     * @see java.awt.image.DataBuffer
+     * @see DataBuffer
      *
      * @throws NullPointerException if data is null.
      * @throws ArrayIndexOutOfBoundsException if the coordinates are

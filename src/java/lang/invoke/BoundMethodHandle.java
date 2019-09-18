@@ -350,7 +350,7 @@ import jdk.internal.org.objectweb.asm.Type;
         }
 
         /**
-         * Return a {@link LambdaForm.Name} containing a {@link LambdaForm.NamedFunction} that
+         * Return a {@link Name} containing a {@link NamedFunction} that
          * represents a MH bound to a generic invoker, which in turn forwards to the corresponding
          * getter.
          */
@@ -823,7 +823,7 @@ import jdk.internal.org.objectweb.asm.Type;
          * {@code <init>}. To avoid this, we add an indirection by invoking {@code <init>} through
          * {@link MethodHandle#linkToSpecial}.
          *
-         * The last {@link LambdaForm.Name Name} in the argument's form is expected to be the {@code void}
+         * The last {@link Name Name} in the argument's form is expected to be the {@code void}
          * result of the {@code <init>} invocation. This entry is replaced.
          */
         private static MethodHandle linkConstructor(MethodHandle cmh) {

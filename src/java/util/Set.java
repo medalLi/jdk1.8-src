@@ -77,7 +77,7 @@ package java.util;
  * @see HashSet
  * @see TreeSet
  * @see AbstractSet
- * @see Collections#singleton(java.lang.Object)
+ * @see Collections#singleton(Object)
  * @see Collections#EMPTY_SET
  * @since 1.2
  */

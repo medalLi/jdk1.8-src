@@ -12,7 +12,7 @@ abstract public class WrongAdapterHelper
 {
   private static String  _id = "IDL:omg.org/PortableServer/POA/WrongAdapter:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableServer.POAPackage.WrongAdapter that)
+  public static void insert (org.omg.CORBA.Any a, WrongAdapter that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class WrongAdapterHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableServer.POAPackage.WrongAdapter extract (org.omg.CORBA.Any a)
+  public static WrongAdapter extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class WrongAdapterHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.PortableServer.POAPackage.WrongAdapterHelper.id (), "WrongAdapter", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (WrongAdapterHelper.id (), "WrongAdapter", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class WrongAdapterHelper
     return _id;
   }
 
-  public static org.omg.PortableServer.POAPackage.WrongAdapter read (org.omg.CORBA.portable.InputStream istream)
+  public static WrongAdapter read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.PortableServer.POAPackage.WrongAdapter value = new org.omg.PortableServer.POAPackage.WrongAdapter ();
+    WrongAdapter value = new WrongAdapter ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableServer.POAPackage.WrongAdapter value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, WrongAdapter value)
   {
     // write the repository ID
     ostream.write_string (id ());

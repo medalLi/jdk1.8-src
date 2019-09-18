@@ -36,7 +36,7 @@ import java.beans.PropertyChangeEvent;
 
 
 /**
- * Provides the Synth L&amp;F UI delegate for {@link javax.swing.JTextField}.
+ * Provides the Synth L&amp;F UI delegate for {@link JTextField}.
  * <p>
  * <strong>Warning:</strong>
  * Serialized objects of this class will not be compatible with

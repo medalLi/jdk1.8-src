@@ -611,8 +611,8 @@ static final class java_util_EnumSet_PersistenceDelegate extends PersistenceDele
 // Collection
 static class java_util_Collection_PersistenceDelegate extends DefaultPersistenceDelegate {
     protected void initialize(Class<?> type, Object oldInstance, Object newInstance, Encoder out) {
-        java.util.Collection<?> oldO = (java.util.Collection)oldInstance;
-        java.util.Collection<?> newO = (java.util.Collection)newInstance;
+        Collection<?> oldO = (Collection)oldInstance;
+        Collection<?> newO = (Collection)newInstance;
 
         if (newO.size() != 0) {
             invokeStatement(oldInstance, "clear", new Object[]{}, out);
@@ -626,8 +626,8 @@ static class java_util_Collection_PersistenceDelegate extends DefaultPersistence
 // List
 static class java_util_List_PersistenceDelegate extends DefaultPersistenceDelegate {
     protected void initialize(Class<?> type, Object oldInstance, Object newInstance, Encoder out) {
-        java.util.List<?> oldO = (java.util.List<?>)oldInstance;
-        java.util.List<?> newO = (java.util.List<?>)newInstance;
+        List<?> oldO = (List<?>)oldInstance;
+        List<?> newO = (List<?>)newInstance;
         int oldSize = oldO.size();
         int newSize = (newO == null) ? 0 : newO.size();
         if (oldSize < newSize) {
@@ -662,8 +662,8 @@ static class java_util_List_PersistenceDelegate extends DefaultPersistenceDelega
 static class java_util_Map_PersistenceDelegate extends DefaultPersistenceDelegate {
     protected void initialize(Class<?> type, Object oldInstance, Object newInstance, Encoder out) {
         // System.out.println("Initializing: " + newInstance);
-        java.util.Map<?,?> oldMap = (java.util.Map)oldInstance;
-        java.util.Map<?,?> newMap = (java.util.Map)newInstance;
+        Map<?,?> oldMap = (Map)oldInstance;
+        Map<?,?> newMap = (Map)newInstance;
         // Remove the new elements.
         // Do this first otherwise we undo the adding work.
         if (newMap != null) {

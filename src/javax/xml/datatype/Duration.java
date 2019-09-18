@@ -415,8 +415,8 @@ public abstract class Duration {
      *      a non-null non-negative {@link Number} object that
      *      represents its value. If it is not present, return null.
      *      For YEARS, MONTHS, DAYS, HOURS, and MINUTES, this method
-     *      returns a {@link java.math.BigInteger} object. For SECONDS, this
-     *      method returns a {@link java.math.BigDecimal}.
+     *      returns a {@link BigInteger} object. For SECONDS, this
+     *      method returns a {@link BigDecimal}.
      *
      * @throws NullPointerException If the <code>field</code> is <code>null</code>.
      */
@@ -495,7 +495,7 @@ public abstract class Duration {
      * Adds this duration to a {@link Calendar} object.
      *
      * <p>
-     * Calls {@link java.util.Calendar#add(int,int)} in the
+     * Calls {@link Calendar#add(int,int)} in the
      * order of YEARS, MONTHS, DAYS, HOURS, MINUTES, SECONDS, and MILLISECONDS
      * if those fields are present. Because the {@link Calendar} class
      * uses int to hold values, there are cases where this method
@@ -537,7 +537,7 @@ public abstract class Duration {
      *
      * <p>
      * The given date is first converted into
-     * a {@link java.util.GregorianCalendar}, then the duration
+     * a {@link GregorianCalendar}, then the duration
      * is added exactly like the {@link #addTo(Calendar)} method.
      *
      * <p>

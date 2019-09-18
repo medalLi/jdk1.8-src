@@ -59,7 +59,7 @@ public class SQLClientInfoException extends SQLException {
      * <code> null</code> and the vendor code is initialized to 0.
      * The <code>cause</code> is not initialized, and may subsequently be
      * initialized by a call to the
-     * {@link Throwable#initCause(java.lang.Throwable)} method.
+     * {@link Throwable#initCause(Throwable)} method.
      * <p>
      *
      * @since 1.6
@@ -77,7 +77,7 @@ public class SQLClientInfoException extends SQLException {
      *
      * The <code>cause</code> is not initialized, and may subsequently be
      * initialized by a call to the
-     * {@link Throwable#initCause(java.lang.Throwable)} method.
+     * {@link Throwable#initCause(Throwable)} method.
      * <p>
      *
      * @param failedProperties          A Map containing the property values that could not
@@ -131,7 +131,7 @@ public class SQLClientInfoException extends SQLException {
      *
      * The <code>cause</code> is not initialized, and may subsequently be
      * initialized by a call to the
-     * {@link Throwable#initCause(java.lang.Throwable)} method.
+     * {@link Throwable#initCause(Throwable)} method.
      * <p>
      *
      * @param reason                            a description of the exception
@@ -186,7 +186,7 @@ public class SQLClientInfoException extends SQLException {
      * <code>failedProperties</code>.
      * The <code>cause</code> is not initialized, and may subsequently be
      * initialized by a call to the
-     * {@link Throwable#initCause(java.lang.Throwable)} method. The vendor code
+     * {@link Throwable#initCause(Throwable)} method. The vendor code
      * is initialized to 0.
      * <p>
      *
@@ -244,7 +244,7 @@ public class SQLClientInfoException extends SQLException {
      * <code>vendorCode</code>  and <code>failedProperties</code>.
      * The <code>cause</code> is not initialized, and may subsequently be
      * initialized by a call to the
-     * {@link Throwable#initCause(java.lang.Throwable)} method.
+     * {@link Throwable#initCause(Throwable)} method.
      * <p>
      *
      * @param reason                            a description of the exception

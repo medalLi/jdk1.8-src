@@ -37,7 +37,7 @@ package java.io;
  * generating an <tt>IOException</tt>.
  *
  * @author  Arthur van Hoff
- * @see     java.io.StringBufferInputStream
+ * @see     StringBufferInputStream
  * @since   JDK1.0
  */
 public

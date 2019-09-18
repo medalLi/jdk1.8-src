@@ -33,7 +33,7 @@ import java.nio.channels.spi.*;
  * A pair of channels that implements a unidirectional pipe.
  *
  * <p> A pipe consists of a pair of channels: A writable {@link
- * Pipe.SinkChannel sink} channel and a readable {@link Pipe.SourceChannel source}
+ * SinkChannel sink} channel and a readable {@link SourceChannel source}
  * channel.  Once some bytes are written to the sink channel they can be read
  * from source channel in exactlyAthe order in which they were written.
  *
@@ -142,8 +142,8 @@ public abstract class Pipe {
      * Opens a pipe.
      *
      * <p> The new pipe is created by invoking the {@link
-     * java.nio.channels.spi.SelectorProvider#openPipe openPipe} method of the
-     * system-wide default {@link java.nio.channels.spi.SelectorProvider}
+     * SelectorProvider#openPipe openPipe} method of the
+     * system-wide default {@link SelectorProvider}
      * object.  </p>
      *
      * @return  A new pipe

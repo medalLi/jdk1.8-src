@@ -123,7 +123,7 @@ import java.util.Date;
  * @since 1.4
  * @see Certificate
  * @see java.security.cert.X509Extension
- * @see java.security.Security security properties
+ * @see Security security properties
  */
 public abstract class X509Certificate extends Certificate {
 

@@ -51,7 +51,7 @@ public abstract class FloatSeqHelper
 {
     private static String  _id = "IDL:omg.org/CORBA/FloatSeq:1.0";
 
-    public static void insert (org.omg.CORBA.Any a, float[] that)
+    public static void insert (Any a, float[] that)
     {
         org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
         a.type (type ());
@@ -59,19 +59,19 @@ public abstract class FloatSeqHelper
         a.read_value (out.create_input_stream (), type ());
     }
 
-    public static float[] extract (org.omg.CORBA.Any a)
+    public static float[] extract (Any a)
     {
         return read (a.create_input_stream ());
     }
 
-    private static org.omg.CORBA.TypeCode __typeCode = null;
-    synchronized public static org.omg.CORBA.TypeCode type ()
+    private static TypeCode __typeCode = null;
+    synchronized public static TypeCode type ()
     {
         if (__typeCode == null)
             {
-                __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_float);
-                __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-                __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (org.omg.CORBA.FloatSeqHelper.id (), "FloatSeq", __typeCode);
+                __typeCode = ORB.init ().get_primitive_tc (TCKind.tk_float);
+                __typeCode = ORB.init ().create_sequence_tc (0, __typeCode);
+                __typeCode = ORB.init ().create_alias_tc (FloatSeqHelper.id (), "FloatSeq", __typeCode);
             }
         return __typeCode;
     }

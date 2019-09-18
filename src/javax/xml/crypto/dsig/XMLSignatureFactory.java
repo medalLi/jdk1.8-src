@@ -74,7 +74,7 @@ import sun.security.jca.GetInstance.Instance;
  * mechanism types.
  *
  * <p><code>XMLSignatureFactory</code> implementations are registered and loaded
- * using the {@link java.security.Provider} mechanism.
+ * using the {@link Provider} mechanism.
  * For example, a service provider that supports the
  * DOM mechanism would be specified in the <code>Provider</code> subclass as:
  * <pre>

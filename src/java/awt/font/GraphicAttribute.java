@@ -151,7 +151,7 @@ public abstract class GraphicAttribute {
     }
 
     /**
-     * Return a {@link java.awt.Shape} that represents the region that
+     * Return a {@link Shape} that represents the region that
      * this <code>GraphicAttribute</code> renders.  This is used when a
      * {@link TextLayout} is requested to return the outline of the text.
      * The (untransformed) shape must not extend outside the rectangular

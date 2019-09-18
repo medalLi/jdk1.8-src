@@ -54,7 +54,7 @@ import org.omg.CORBA.portable.*;
      *      comments for unimplemented features</a>
  */
 
-public class LocalObject implements org.omg.CORBA.Object
+public class LocalObject implements Object
 {
     private static String reason = "This is a locally constrained object.";
 
@@ -80,7 +80,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *         object references are distinct, not necessarily that
      *         they reference distinct objects.
      */
-    public boolean _is_equivalent(org.omg.CORBA.Object that) {
+    public boolean _is_equivalent(Object that) {
         return equals(that) ;
     }
 
@@ -124,7 +124,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public boolean _is_a(String repository_id) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -137,8 +137,8 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.Object _duplicate() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+    public Object _duplicate() {
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -151,7 +151,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public void _release() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -168,7 +168,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public Request _request(String operation) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -195,7 +195,7 @@ public class LocalObject implements org.omg.CORBA.Object
                                    String operation,
                                    NVList arg_list,
                                    NamedValue result) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -229,7 +229,7 @@ public class LocalObject implements org.omg.CORBA.Object
                                    NamedValue result,
                                    ExceptionList exceptions,
                                    ContextList contexts) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -245,9 +245,9 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.Object _get_interface()
+    public Object _get_interface()
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -259,7 +259,7 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.Object _get_interface_def()
+    public Object _get_interface_def()
     {
         // First try to call the delegate implementation class's
         // "Object get_interface_def(..)" method (will work for JDK1.2
@@ -268,7 +268,7 @@ public class LocalObject implements org.omg.CORBA.Object
         // "InterfaceDef get_interface(..)" method using reflection
         // (will work for pre-JDK1.2 ORBs).
 
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -282,8 +282,8 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.ORB _orb() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+    public ORB _orb() {
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -300,8 +300,8 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.Policy _get_policy(int policy_type) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+    public Policy _get_policy(int policy_type) {
+        throw new NO_IMPLEMENT(reason);
     }
 
 
@@ -315,8 +315,8 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.DomainManager[] _get_domain_managers() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+    public DomainManager[] _get_domain_managers() {
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -335,10 +335,10 @@ public class LocalObject implements org.omg.CORBA.Object
      * @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
      *      comments for unimplemented features</a>
      */
-    public org.omg.CORBA.Object
-        _set_policy_override(org.omg.CORBA.Policy[] policies,
-                             org.omg.CORBA.SetOverrideType set_add) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+    public Object
+        _set_policy_override(Policy[] policies,
+                             SetOverrideType set_add) {
+        throw new NO_IMPLEMENT(reason);
     }
 
 
@@ -354,7 +354,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public boolean _is_local() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -374,7 +374,7 @@ public class LocalObject implements org.omg.CORBA.Object
      */
     public ServantObject _servant_preinvoke(String operation,
                                             Class expectedType) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -388,7 +388,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public void _servant_postinvoke(ServantObject servant) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /*
@@ -417,7 +417,7 @@ public class LocalObject implements org.omg.CORBA.Object
      */
     public OutputStream _request(String operation,
                                  boolean responseExpected) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -455,7 +455,7 @@ public class LocalObject implements org.omg.CORBA.Object
     public InputStream _invoke(OutputStream output)
         throws ApplicationException, RemarshalException
     {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -477,7 +477,7 @@ public class LocalObject implements org.omg.CORBA.Object
      *      comments for unimplemented features</a>
      */
     public void _releaseReply(InputStream input) {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 
     /**
@@ -495,6 +495,6 @@ public class LocalObject implements org.omg.CORBA.Object
      */
 
     public boolean validate_connection() {
-        throw new org.omg.CORBA.NO_IMPLEMENT(reason);
+        throw new NO_IMPLEMENT(reason);
     }
 }

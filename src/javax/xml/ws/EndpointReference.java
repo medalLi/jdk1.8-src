@@ -45,8 +45,8 @@ import java.io.StringWriter;
  * developer should use this class strictly as a mechanism to
  * reference a remote web service endpoint. See the {@link Service} APIs
  * that clients can use to that utilize an <code>EndpointReference</code>.
- * See the {@link javax.xml.ws.Endpoint}, and
- * {@link javax.xml.ws.BindingProvider} APIs on how
+ * See the {@link Endpoint}, and
+ * {@link BindingProvider} APIs on how
  * <code>EndpointReferences</code> can be created for published
  * endpoints.
  * <p>
@@ -93,7 +93,7 @@ public abstract class EndpointReference {
     /**
      * Factory method to read an EndpointReference from the infoset contained in
      * <code>eprInfoset</code>. This method delegates to the vendor specific
-     * implementation of the {@link javax.xml.ws.spi.Provider#readEndpointReference} method.
+     * implementation of the {@link Provider#readEndpointReference} method.
      *
      * @param eprInfoset The <code>EndpointReference</code> infoset to be unmarshalled
      *
@@ -102,7 +102,7 @@ public abstract class EndpointReference {
      * @throws WebServiceException
      *    if an error occurs while creating the
      *    <code>EndpointReference</code> from the <CODE>eprInfoset</CODE>
-     * @throws java.lang.IllegalArgumentException
+     * @throws IllegalArgumentException
      *     if the <code>null</code> <code>eprInfoset</code> value is given.
      */
     public static EndpointReference readFrom(Source eprInfoset) {
@@ -117,7 +117,7 @@ public abstract class EndpointReference {
      *   if there is an error writing the
      *   <code>EndpointReference</code> to the specified <code>result</code>.
      *
-     * @throws java.lang.IllegalArgumentException
+     * @throws IllegalArgumentException
      *      If the <code>null</code> <code>result</code> value is given.
      */
     public abstract void writeTo(Result result);

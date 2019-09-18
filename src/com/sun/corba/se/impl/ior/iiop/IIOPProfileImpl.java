@@ -307,7 +307,7 @@ public class IIOPProfileImpl extends IdentifiableBase implements IIOPProfile
      * XXX revisit: do we want this at all?  If we do, it might move to the
      * ObjectKeyTemplate instead.
      */
-    public java.lang.Object getServant()
+    public Object getServant()
     {
         if (!isLocal())
             return null ;
@@ -330,7 +330,7 @@ public class IIOPProfileImpl extends IdentifiableBase implements IIOPProfile
         }
 
         byte[] boid = oid.getId() ;
-        java.lang.Object servant = oa.getLocalServant( boid ) ;
+        Object servant = oa.getLocalServant( boid ) ;
         return servant ;
     }
 

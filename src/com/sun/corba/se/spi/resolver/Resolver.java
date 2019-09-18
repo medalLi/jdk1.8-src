@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.spi.resolver ;
+package com.sun.corba.se.spi.resolver;
 
 /** Resolver defines the operations needed to support ORB operations for
  * resolve_initial_references and list_initial_services.
@@ -33,7 +33,7 @@ public interface Resolver {
      * reference bound to this name, if any.  Returns null if no object
      * is bound to the name.
      */
-    org.omg.CORBA.Object resolve( String name ) ;
+    org.omg.CORBA.Object resolve(String name) ;
 
     /** Return the entire collection of names that are currently bound
      * by this resolver.  Resulting collection contains only strings for

@@ -270,7 +270,7 @@ public class RuleBasedCollator extends Collator{
      * RuleBasedCollator constructor.  This takes the table rules and builds
      * a collation table out of them.  Please see RuleBasedCollator class
      * description for more details on the collation rule syntax.
-     * @see java.util.Locale
+     * @see Locale
      * @param rules the collation rules to build the collation table from.
      * @exception ParseException A format exception
      * will be thrown if the build process of the rules fails. For
@@ -285,7 +285,7 @@ public class RuleBasedCollator extends Collator{
      * RuleBasedCollator constructor.  This takes the table rules and builds
      * a collation table out of them.  Please see RuleBasedCollator class
      * description for more details on the collation rule syntax.
-     * @see java.util.Locale
+     * @see Locale
      * @param rules the collation rules to build the collation table from.
      * @param decomp the decomposition strength used to build the
      * collation table and to perform comparisons.
@@ -324,7 +324,7 @@ public class RuleBasedCollator extends Collator{
      *
      * @param source the string to be collated
      * @return a {@code CollationElementIterator} object
-     * @see java.text.CollationElementIterator
+     * @see CollationElementIterator
      */
     public CollationElementIterator getCollationElementIterator(String source) {
         return new CollationElementIterator( source, this );
@@ -335,7 +335,7 @@ public class RuleBasedCollator extends Collator{
      *
      * @param source the character iterator to be collated
      * @return a {@code CollationElementIterator} object
-     * @see java.text.CollationElementIterator
+     * @see CollationElementIterator
      * @since 1.2
      */
     public CollationElementIterator getCollationElementIterator(

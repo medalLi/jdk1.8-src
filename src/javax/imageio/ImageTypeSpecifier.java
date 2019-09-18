@@ -228,7 +228,7 @@ public class ImageTypeSpecifier {
                      int alphaMask, // 0 if no alpha
                      int transferType,
                      boolean isAlphaPremultiplied) {
-        return new ImageTypeSpecifier.Packed(colorSpace,
+        return new Packed(colorSpace,
                                              redMask,
                                              greenMask,
                                              blueMask,
@@ -329,12 +329,12 @@ public class ImageTypeSpecifier {
 
         public boolean equals(Object o) {
             if ((o == null) ||
-                !(o instanceof ImageTypeSpecifier.Interleaved)) {
+                !(o instanceof Interleaved)) {
                 return false;
             }
 
-            ImageTypeSpecifier.Interleaved that =
-                (ImageTypeSpecifier.Interleaved)o;
+            Interleaved that =
+                (Interleaved)o;
 
             if ((!(this.colorSpace.equals(that.colorSpace))) ||
                 (this.dataType != that.dataType) ||
@@ -396,7 +396,7 @@ public class ImageTypeSpecifier {
                           int dataType,
                           boolean hasAlpha,
                           boolean isAlphaPremultiplied) {
-        return new ImageTypeSpecifier.Interleaved(colorSpace,
+        return new Interleaved(colorSpace,
                                                   bandOffsets,
                                                   dataType,
                                                   hasAlpha,
@@ -473,12 +473,12 @@ public class ImageTypeSpecifier {
 
         public boolean equals(Object o) {
             if ((o == null) ||
-                !(o instanceof ImageTypeSpecifier.Banded)) {
+                !(o instanceof Banded)) {
                 return false;
             }
 
-            ImageTypeSpecifier.Banded that =
-                (ImageTypeSpecifier.Banded)o;
+            Banded that =
+                (Banded)o;
 
             if ((!(this.colorSpace.equals(that.colorSpace))) ||
                 (this.dataType != that.dataType) ||
@@ -555,7 +555,7 @@ public class ImageTypeSpecifier {
                      int dataType,
                      boolean hasAlpha,
                      boolean isAlphaPremultiplied) {
-        return new ImageTypeSpecifier.Banded(colorSpace,
+        return new Banded(colorSpace,
                                              bankIndices,
                                              bandOffsets,
                                              dataType,
@@ -682,7 +682,7 @@ public class ImageTypeSpecifier {
         createGrayscale(int bits,
                         int dataType,
                         boolean isSigned) {
-        return new ImageTypeSpecifier.Grayscale(bits,
+        return new Grayscale(bits,
                                                 dataType,
                                                 isSigned,
                                                 false,
@@ -719,7 +719,7 @@ public class ImageTypeSpecifier {
                         int dataType,
                         boolean isSigned,
                         boolean isAlphaPremultiplied) {
-        return new ImageTypeSpecifier.Grayscale(bits,
+        return new Grayscale(bits,
                                                 dataType,
                                                 isSigned,
                                                 true,
@@ -856,7 +856,7 @@ public class ImageTypeSpecifier {
                       byte[] alphaLUT,
                       int bits,
                       int dataType) {
-        return new ImageTypeSpecifier.Indexed(redLUT,
+        return new Indexed(redLUT,
                                               greenLUT,
                                               blueLUT,
                                               alphaLUT,
@@ -879,20 +879,20 @@ public class ImageTypeSpecifier {
      * <code>bufferedImageType</code> is not one of the standard
      * types, or is equal to <code>TYPE_CUSTOM</code>.
      *
-     * @see java.awt.image.BufferedImage
-     * @see java.awt.image.BufferedImage#TYPE_INT_RGB
-     * @see java.awt.image.BufferedImage#TYPE_INT_ARGB
-     * @see java.awt.image.BufferedImage#TYPE_INT_ARGB_PRE
-     * @see java.awt.image.BufferedImage#TYPE_INT_BGR
-     * @see java.awt.image.BufferedImage#TYPE_3BYTE_BGR
-     * @see java.awt.image.BufferedImage#TYPE_4BYTE_ABGR
-     * @see java.awt.image.BufferedImage#TYPE_4BYTE_ABGR_PRE
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_565_RGB
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_555_RGB
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_GRAY
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_GRAY
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_BINARY
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
+     * @see BufferedImage
+     * @see BufferedImage#TYPE_INT_RGB
+     * @see BufferedImage#TYPE_INT_ARGB
+     * @see BufferedImage#TYPE_INT_ARGB_PRE
+     * @see BufferedImage#TYPE_INT_BGR
+     * @see BufferedImage#TYPE_3BYTE_BGR
+     * @see BufferedImage#TYPE_4BYTE_ABGR
+     * @see BufferedImage#TYPE_4BYTE_ABGR_PRE
+     * @see BufferedImage#TYPE_USHORT_565_RGB
+     * @see BufferedImage#TYPE_USHORT_555_RGB
+     * @see BufferedImage#TYPE_BYTE_GRAY
+     * @see BufferedImage#TYPE_USHORT_GRAY
+     * @see BufferedImage#TYPE_BYTE_BINARY
+     * @see BufferedImage#TYPE_BYTE_INDEXED
      */
     public static
         ImageTypeSpecifier createFromBufferedImageType(int bufferedImageType) {
@@ -942,21 +942,21 @@ public class ImageTypeSpecifier {
      * @return an <code>int</code> representing a
      * <code>BufferedImage</code> type.
      *
-     * @see java.awt.image.BufferedImage
-     * @see java.awt.image.BufferedImage#TYPE_CUSTOM
-     * @see java.awt.image.BufferedImage#TYPE_INT_RGB
-     * @see java.awt.image.BufferedImage#TYPE_INT_ARGB
-     * @see java.awt.image.BufferedImage#TYPE_INT_ARGB_PRE
-     * @see java.awt.image.BufferedImage#TYPE_INT_BGR
-     * @see java.awt.image.BufferedImage#TYPE_3BYTE_BGR
-     * @see java.awt.image.BufferedImage#TYPE_4BYTE_ABGR
-     * @see java.awt.image.BufferedImage#TYPE_4BYTE_ABGR_PRE
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_565_RGB
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_555_RGB
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_GRAY
-     * @see java.awt.image.BufferedImage#TYPE_USHORT_GRAY
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_BINARY
-     * @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
+     * @see BufferedImage
+     * @see BufferedImage#TYPE_CUSTOM
+     * @see BufferedImage#TYPE_INT_RGB
+     * @see BufferedImage#TYPE_INT_ARGB
+     * @see BufferedImage#TYPE_INT_ARGB_PRE
+     * @see BufferedImage#TYPE_INT_BGR
+     * @see BufferedImage#TYPE_3BYTE_BGR
+     * @see BufferedImage#TYPE_4BYTE_ABGR
+     * @see BufferedImage#TYPE_4BYTE_ABGR_PRE
+     * @see BufferedImage#TYPE_USHORT_565_RGB
+     * @see BufferedImage#TYPE_USHORT_555_RGB
+     * @see BufferedImage#TYPE_BYTE_GRAY
+     * @see BufferedImage#TYPE_USHORT_GRAY
+     * @see BufferedImage#TYPE_BYTE_BINARY
+     * @see BufferedImage#TYPE_BYTE_INDEXED
      */
     public int getBufferedImageType() {
         BufferedImage bi = createBufferedImage(1, 1);

@@ -30,8 +30,8 @@ package java.awt;
  * {@code GridBagLayout} layout manager.
  * It stores align, size and baseline parameters for every component within a container.
  * <p>
- * @see       java.awt.GridBagLayout
- * @see       java.awt.GridBagConstraints
+ * @see       GridBagLayout
+ * @see       GridBagConstraints
  * @since 1.6
  */
 public class GridBagLayoutInfo implements java.io.Serializable {

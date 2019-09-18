@@ -75,11 +75,11 @@ import sun.security.util.SecurityConstants;
  * malevolent code sensitive information about the user environment
  * (the user's account name and home directory).
  *
- * @see java.security.BasicPermission
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
- * @see java.lang.SecurityManager
+ * @see BasicPermission
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
+ * @see SecurityManager
  *
  *
  * @author Roland Schemers
@@ -386,7 +386,7 @@ public final class PropertyPermission extends BasicPermission {
      * to a stream. The actions are serialized, and the superclass
      * takes care of the name.
      */
-    private synchronized void writeObject(java.io.ObjectOutputStream s)
+    private synchronized void writeObject(ObjectOutputStream s)
         throws IOException
     {
         // Write out the actions. The superclass takes care of the name
@@ -400,7 +400,7 @@ public final class PropertyPermission extends BasicPermission {
      * readObject is called to restore the state of the PropertyPermission from
      * a stream.
      */
-    private synchronized void readObject(java.io.ObjectInputStream s)
+    private synchronized void readObject(ObjectInputStream s)
          throws IOException, ClassNotFoundException
     {
         // Read in the action, then initialize the rest
@@ -413,9 +413,9 @@ public final class PropertyPermission extends BasicPermission {
  * A PropertyPermissionCollection stores a set of PropertyPermission
  * permissions.
  *
- * @see java.security.Permission
- * @see java.security.Permissions
- * @see java.security.PermissionCollection
+ * @see Permission
+ * @see Permissions
+ * @see PermissionCollection
  *
  *
  * @author Roland Schemers

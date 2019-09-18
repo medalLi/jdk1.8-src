@@ -275,7 +275,7 @@ public class SQLOutputImpl implements SQLOutput {
      *        values of a UDT to the database.
      */
     @SuppressWarnings("unchecked")
-    public void writeDate(java.sql.Date x) throws SQLException {
+    public void writeDate(Date x) throws SQLException {
         attribs.add(x);
     }
 
@@ -290,7 +290,7 @@ public class SQLOutputImpl implements SQLOutput {
      *        values of a UDT to the database.
      */
     @SuppressWarnings("unchecked")
-    public void writeTime(java.sql.Time x) throws SQLException {
+    public void writeTime(Time x) throws SQLException {
         attribs.add(x);
     }
 
@@ -305,7 +305,7 @@ public class SQLOutputImpl implements SQLOutput {
      *        values of a UDT to the database.
      */
     @SuppressWarnings("unchecked")
-    public void writeTimestamp(java.sql.Timestamp x) throws SQLException {
+    public void writeTimestamp(Timestamp x) throws SQLException {
         attribs.add(x);
     }
 

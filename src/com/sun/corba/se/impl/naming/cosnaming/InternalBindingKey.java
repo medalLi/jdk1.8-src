@@ -71,7 +71,7 @@ public class InternalBindingKey
     }
 
     // Compare the keys by comparing name's id and kind
-    public boolean equals(java.lang.Object o) {
+    public boolean equals(Object o) {
         if (o == null)
             return false;
         if (o instanceof InternalBindingKey) {

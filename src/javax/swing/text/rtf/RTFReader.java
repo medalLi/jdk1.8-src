@@ -44,7 +44,7 @@ import javax.swing.text.*;
  * the text acceptor.
  *
  *   @see RTFParser
- *   @see java.io.OutputStream
+ *   @see OutputStream
  */
 class RTFReader extends RTFParser
 {

@@ -34,7 +34,7 @@ import java.rmi.*;
  *
  * @author  Ann Wollrath
  * @since   JDK1.1
- * @see     java.rmi.server.RemoteStub
+ * @see     RemoteStub
  */
 public interface RemoteRef extends java.io.Externalizable {
 

@@ -1099,7 +1099,7 @@ public class Arrays {
      * @throws ClassCastException if the array contains elements that are
      *         not <i>mutually comparable</i> using the specified comparator
      * @throws IllegalArgumentException (optional) if the comparator is
-     *         found to violate the {@link java.util.Comparator} contract
+     *         found to violate the {@link Comparator} contract
      *
      * @since 1.8
      */

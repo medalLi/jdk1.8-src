@@ -33,8 +33,8 @@ import java.awt.Shape;
  * (B&eacute;zier) curves.  It can contain multiple subpaths.
  * <p>
  * {@code GeneralPath} is a legacy final class which exactly
- * implements the behavior of its superclass {@link Path2D.Float}.
- * Together with {@link Path2D.Double}, the {@link Path2D} classes
+ * implements the behavior of its superclass {@link Float}.
+ * Together with {@link Double}, the {@link Path2D} classes
  * provide full implementations of a general geometric path that
  * support all of the functionality of the {@link Shape} and
  * {@link PathIterator} interfaces with the ability to explicitly

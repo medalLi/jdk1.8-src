@@ -45,7 +45,7 @@ import java.beans.*;
  * the same version of Swing.  As of 1.4, support for long term storage
  * of all JavaBeans&trade;
  * has been added to the <code>java.beans</code> package.
- * Please see {@link java.beans.XMLEncoder}.
+ * Please see {@link XMLEncoder}.
  *
  * @see MetalComboBoxEditor
  * @see MetalComboBoxButton
@@ -139,7 +139,7 @@ public class MetalComboBoxUI extends BasicComboBoxUI {
      *
      * @throws NullPointerException {@inheritDoc}
      * @throws IllegalArgumentException {@inheritDoc}
-     * @see javax.swing.JComponent#getBaseline(int, int)
+     * @see JComponent#getBaseline(int, int)
      * @since 1.6
      */
     public int getBaseline(JComponent c, int width, int height) {
@@ -202,7 +202,7 @@ public class MetalComboBoxUI extends BasicComboBoxUI {
      * This class should be treated as a &quot;protected&quot; inner class.
      * Instantiate it only within subclasses of {@code MetalComboBoxUI}.
      */
-    public class MetalPropertyChangeListener extends BasicComboBoxUI.PropertyChangeHandler {
+    public class MetalPropertyChangeListener extends PropertyChangeHandler {
         public void propertyChange(PropertyChangeEvent e) {
             super.propertyChange( e );
             String propertyName = e.getPropertyName();
@@ -246,7 +246,7 @@ public class MetalComboBoxUI extends BasicComboBoxUI {
      * This class should be treated as a &quot;protected&quot; inner class.
      * Instantiate it only within subclasses of {@code MetalComboBoxUI}.
      */
-    public class MetalComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager {
+    public class MetalComboBoxLayoutManager extends ComboBoxLayoutManager {
         public void layoutContainer( Container parent ) {
             layoutComboBox( parent, this );
         }

@@ -124,8 +124,8 @@ public class TextComponent extends Component implements Accessible {
      * @exception  HeadlessException if
      *             <code>GraphicsEnvironment.isHeadless</code>
      *             returns true
-     * @see        java.awt.GraphicsEnvironment#isHeadless
-     * @see        java.awt.Cursor
+     * @see        GraphicsEnvironment#isHeadless
+     * @see        Cursor
      */
     TextComponent(String text) throws HeadlessException {
         GraphicsEnvironment.checkHeadless();
@@ -192,7 +192,7 @@ public class TextComponent extends Component implements Accessible {
      * native screen resource.
      * This method is called internally by the toolkit and should
      * not be called directly by programs.
-     * @see       java.awt.TextComponent#removeNotify
+     * @see       TextComponent#removeNotify
      */
     public void addNotify() {
         super.addNotify();
@@ -223,7 +223,7 @@ public class TextComponent extends Component implements Accessible {
      * @param       t   the new text;
      *                  if this parameter is <code>null</code> then
      *                  the text is set to the empty string ""
-     * @see         java.awt.TextComponent#getText
+     * @see         TextComponent#getText
      */
     public synchronized void setText(String t) {
         boolean skipTextEvent = (text == null || text.isEmpty())
@@ -243,7 +243,7 @@ public class TextComponent extends Component implements Accessible {
      * By default, this is an empty string.
      *
      * @return the value of this <code>TextComponent</code>
-     * @see     java.awt.TextComponent#setText
+     * @see     TextComponent#setText
      */
     public synchronized String getText() {
         TextComponentPeer peer = (TextComponentPeer)this.peer;
@@ -257,7 +257,7 @@ public class TextComponent extends Component implements Accessible {
      * Returns the selected text from the text that is
      * presented by this text component.
      * @return      the selected text of this text component
-     * @see         java.awt.TextComponent#select
+     * @see         TextComponent#select
      */
     public synchronized String getSelectedText() {
         return getText().substring(getSelectionStart(), getSelectionEnd());
@@ -267,7 +267,7 @@ public class TextComponent extends Component implements Accessible {
      * Indicates whether or not this text component is editable.
      * @return     <code>true</code> if this text component is
      *                  editable; <code>false</code> otherwise.
-     * @see        java.awt.TextComponent#setEditable
+     * @see        TextComponent#setEditable
      * @since      JDK1.0
      */
     public boolean isEditable() {
@@ -287,7 +287,7 @@ public class TextComponent extends Component implements Accessible {
      *
      * @param     b   a flag indicating whether this text component
      *                      is user editable.
-     * @see       java.awt.TextComponent#isEditable
+     * @see       TextComponent#isEditable
      * @since     JDK1.0
      */
     public synchronized void setEditable(boolean b) {
@@ -341,8 +341,8 @@ public class TextComponent extends Component implements Accessible {
      * Gets the start position of the selected text in
      * this text component.
      * @return      the start position of the selected text
-     * @see         java.awt.TextComponent#setSelectionStart
-     * @see         java.awt.TextComponent#getSelectionEnd
+     * @see         TextComponent#setSelectionStart
+     * @see         TextComponent#getSelectionEnd
      */
     public synchronized int getSelectionStart() {
         TextComponentPeer peer = (TextComponentPeer)this.peer;
@@ -363,8 +363,8 @@ public class TextComponent extends Component implements Accessible {
      * silently, and without failure.
      * @param       selectionStart   the start position of the
      *                        selected text
-     * @see         java.awt.TextComponent#getSelectionStart
-     * @see         java.awt.TextComponent#setSelectionEnd
+     * @see         TextComponent#getSelectionStart
+     * @see         TextComponent#setSelectionEnd
      * @since       JDK1.1
      */
     public synchronized void setSelectionStart(int selectionStart) {
@@ -378,8 +378,8 @@ public class TextComponent extends Component implements Accessible {
      * Gets the end position of the selected text in
      * this text component.
      * @return      the end position of the selected text
-     * @see         java.awt.TextComponent#setSelectionEnd
-     * @see         java.awt.TextComponent#getSelectionStart
+     * @see         TextComponent#setSelectionEnd
+     * @see         TextComponent#getSelectionStart
      */
     public synchronized int getSelectionEnd() {
         TextComponentPeer peer = (TextComponentPeer)this.peer;
@@ -399,8 +399,8 @@ public class TextComponent extends Component implements Accessible {
      * silently, and without failure.
      * @param       selectionEnd   the end position of the
      *                        selected text
-     * @see         java.awt.TextComponent#getSelectionEnd
-     * @see         java.awt.TextComponent#setSelectionStart
+     * @see         TextComponent#getSelectionEnd
+     * @see         TextComponent#setSelectionStart
      * @since       JDK1.1
      */
     public synchronized void setSelectionEnd(int selectionEnd) {
@@ -438,9 +438,9 @@ public class TextComponent extends Component implements Accessible {
      * @param        selectionEnd the zero-based end position of the
                        text to be selected; the character (<code>char</code> value) at
                        <code>selectionEnd</code> is not selected
-     * @see          java.awt.TextComponent#setSelectionStart
-     * @see          java.awt.TextComponent#setSelectionEnd
-     * @see          java.awt.TextComponent#selectAll
+     * @see          TextComponent#setSelectionStart
+     * @see          TextComponent#setSelectionEnd
+     * @see          TextComponent#selectAll
      */
     public synchronized void select(int selectionStart, int selectionEnd) {
         String text = getText();
@@ -468,7 +468,7 @@ public class TextComponent extends Component implements Accessible {
 
     /**
      * Selects all the text in this text component.
-     * @see        java.awt.TextComponent#select
+     * @see        TextComponent#select
      */
     public synchronized void selectAll() {
         this.selectionStart = 0;
@@ -552,7 +552,7 @@ public class TextComponent extends Component implements Accessible {
      * @param l the text event listener
      * @see             #removeTextListener
      * @see             #getTextListeners
-     * @see             java.awt.event.TextListener
+     * @see             TextListener
      */
     public synchronized void addTextListener(TextListener l) {
         if (l == null) {
@@ -573,7 +573,7 @@ public class TextComponent extends Component implements Accessible {
      * @param           l     the text listener
      * @see             #addTextListener
      * @see             #getTextListeners
-     * @see             java.awt.event.TextListener
+     * @see             TextListener
      * @since           JDK1.1
      */
     public synchronized void removeTextListener(TextListener l) {
@@ -758,9 +758,9 @@ public class TextComponent extends Component implements Accessible {
      *             textListenerK indicating and TextListener object.
      *
      * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
-     * @see java.awt.Component#textListenerK
+     * @see Component#textListenerK
      */
-    private void writeObject(java.io.ObjectOutputStream s)
+    private void writeObject(ObjectOutputStream s)
       throws IOException
     {
         // Serialization support.  Since the value of the fields
@@ -790,7 +790,7 @@ public class TextComponent extends Component implements Accessible {
      * <code>true</code>
      * @see #removeTextListener
      * @see #addTextListener
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     private void readObject(ObjectInputStream s)
         throws ClassNotFoundException, IOException, HeadlessException

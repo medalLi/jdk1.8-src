@@ -41,18 +41,18 @@ public interface ClientRequestDispatcher
     /**
      * At the beginning of a request the presentation block uses this
      * to obtain an
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      * to set data to be sent on a message.
      *
      * @param self -
      * @param methodName - the remote method name
      * @param isOneWay - <code>true</code> if the message is asynchronous
      * @param contactInfo - the
-     * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
+     * {@link ContactInfo ContactInfo}
      * which which created/chose this <code>ClientRequestDispatcher</code>
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      */
     public OutputObject beginRequest(Object self,
                                      String methodName,
@@ -61,7 +61,7 @@ public interface ClientRequestDispatcher
 
     /**
      * After the presentation block has set data on the
-     * {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
+     * {@link OutputObject OutputObject}
      * it signals the PEPt runtime to send the encoded data by calling this
      * method.
      *
@@ -69,7 +69,7 @@ public interface ClientRequestDispatcher
      * @param outputObject
      *
      * @return
-     * {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
+     * {@link InputObject InputObject}
      * if the message is synchronous.
      *
      * @throws
@@ -80,7 +80,7 @@ public interface ClientRequestDispatcher
      * {@link org.omg.CORBA.portable.RemarshalException RemarshalException}
      * if the PEPt runtime would like the presentation block to start over.
      */
-    public InputObject marshalingComplete(java.lang.Object self,
+    public InputObject marshalingComplete(Object self,
                                           OutputObject outputObject)
     // REVISIT EXCEPTIONS
         throws
@@ -98,7 +98,7 @@ public interface ClientRequestDispatcher
      * @param inputObject -
      */
     public void endRequest(Broker broker,
-                           java.lang.Object self,
+                           Object self,
                            InputObject inputObject);
 }
 

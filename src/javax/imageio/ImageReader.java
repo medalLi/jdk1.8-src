@@ -67,7 +67,7 @@ import javax.imageio.stream.ImageInputStream;
  *
  * @see ImageWriter
  * @see javax.imageio.spi.IIORegistry
- * @see javax.imageio.spi.ImageReaderSpi
+ * @see ImageReaderSpi
  *
  */
 public abstract class ImageReader {
@@ -283,7 +283,7 @@ public abstract class ImageReader {
      *
      * @see ImageInputStream
      * @see #getInput
-     * @see javax.imageio.spi.ImageReaderSpi#getInputTypes
+     * @see ImageReaderSpi#getInputTypes
      */
     public void setInput(Object input,
                          boolean seekForwardOnly,
@@ -1211,7 +1211,7 @@ public abstract class ImageReader {
 
     /**
      * Returns <code>true</code> if this plug-in supports reading
-     * just a {@link java.awt.image.Raster Raster} of pixel data.
+     * just a {@link Raster Raster} of pixel data.
      * If this method returns <code>false</code>, calls to
      * {@link #readRaster readRaster} or {@link #readTileRaster readTileRaster}
      * will throw an <code>UnsupportedOperationException</code>.
@@ -1278,7 +1278,7 @@ public abstract class ImageReader {
      *
      * @see #canReadRaster
      * @see #read
-     * @see java.awt.image.Raster
+     * @see Raster
      */
     public Raster readRaster(int imageIndex, ImageReadParam param)
         throws IOException {
@@ -1508,7 +1508,7 @@ public abstract class ImageReader {
      *
      * @see #readTile
      * @see #readRaster
-     * @see java.awt.image.Raster
+     * @see Raster
      */
     public Raster readTileRaster(int imageIndex,
                                  int tileX, int tileY) throws IOException {

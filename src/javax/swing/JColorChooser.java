@@ -129,7 +129,7 @@ public class JColorChooser extends JComponent implements Accessible {
      * @return the selected color or <code>null</code> if the user opted out
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static Color showDialog(Component component,
         String title, Color initialColor) throws HeadlessException {
@@ -167,7 +167,7 @@ public class JColorChooser extends JComponent implements Accessible {
      * @return a new dialog containing the color-chooser pane
      * @exception HeadlessException if GraphicsEnvironment.isHeadless()
      * returns true.
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     public static JDialog createDialog(Component c, String title, boolean modal,
         JColorChooser chooserPane, ActionListener okListener,
@@ -297,7 +297,7 @@ public class JColorChooser extends JComponent implements Accessible {
      * @param g   an int specifying the amount of Green
      * @param b   an int specifying the amount of Blue
      * @exception IllegalArgumentException if r,g,b values are out of range
-     * @see java.awt.Color
+     * @see Color
      */
     public void setColor(int r, int g, int b) {
         setColor(new Color(r,g,b));
@@ -346,7 +346,7 @@ public class JColorChooser extends JComponent implements Accessible {
      *
      * @since 1.4
      *
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      * @see #getDragEnabled
      * @see #setTransferHandler
      * @see TransferHandler

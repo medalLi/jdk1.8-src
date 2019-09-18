@@ -12,7 +12,7 @@ abstract public class TypeMismatchHelper
 {
   private static String  _id = "IDL:omg.org/IOP/Codec/TypeMismatch:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.IOP.CodecPackage.TypeMismatch that)
+  public static void insert (org.omg.CORBA.Any a, TypeMismatch that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class TypeMismatchHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.IOP.CodecPackage.TypeMismatch extract (org.omg.CORBA.Any a)
+  public static TypeMismatch extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -42,7 +42,7 @@ abstract public class TypeMismatchHelper
           __active = true;
           org.omg.CORBA.StructMember[] _members0 = new org.omg.CORBA.StructMember [0];
           org.omg.CORBA.TypeCode _tcOf_members0 = null;
-          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (org.omg.IOP.CodecPackage.TypeMismatchHelper.id (), "TypeMismatch", _members0);
+          __typeCode = org.omg.CORBA.ORB.init ().create_exception_tc (TypeMismatchHelper.id (), "TypeMismatch", _members0);
           __active = false;
         }
       }
@@ -55,15 +55,15 @@ abstract public class TypeMismatchHelper
     return _id;
   }
 
-  public static org.omg.IOP.CodecPackage.TypeMismatch read (org.omg.CORBA.portable.InputStream istream)
+  public static TypeMismatch read (org.omg.CORBA.portable.InputStream istream)
   {
-    org.omg.IOP.CodecPackage.TypeMismatch value = new org.omg.IOP.CodecPackage.TypeMismatch ();
+    TypeMismatch value = new TypeMismatch ();
     // read and discard the repository ID
     istream.read_string ();
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.IOP.CodecPackage.TypeMismatch value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, TypeMismatch value)
   {
     // write the repository ID
     ostream.write_string (id ());

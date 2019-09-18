@@ -283,7 +283,7 @@ public interface MemoryMXBean extends PlatformManagedObject {
      * @param value <tt>true</tt> to enable verbose output;
      *              <tt>false</tt> to disable.
      *
-     * @exception  java.lang.SecurityException if a security manager
+     * @exception  SecurityException if a security manager
      *             exists and the caller does not have
      *             ManagementPermission("control").
      */
@@ -297,7 +297,7 @@ public interface MemoryMXBean extends PlatformManagedObject {
      * System.gc()
      * </pre></blockquote>
      *
-     * @see     java.lang.System#gc()
+     * @see     System#gc()
      */
     public void gc();
 

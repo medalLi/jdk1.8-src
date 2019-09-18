@@ -89,7 +89,7 @@ public final class QueuedJobCount extends IntegerSyntax
      * For class QueuedJobCount, the category is class QueuedJobCount itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return QueuedJobCount.class;

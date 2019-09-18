@@ -49,7 +49,7 @@ import javax.tools.Diagnostic;
  *
  * <p>Subclasses are free to override the implementation and
  * specification of any of the methods in this class as long as the
- * general {@link javax.annotation.processing.Processor Processor}
+ * general {@link Processor Processor}
  * contract for that method is obeyed.
  *
  * @author Joseph D. Darcy

@@ -27,6 +27,6 @@ package org.omg.PortableServer;
 	 * every request for objects associated with a POA to 
 	 * be mediated by the servant manager.
 	 */
-public interface ServantLocator extends ServantLocatorOperations, org.omg.PortableServer.ServantManager, org.omg.CORBA.portable.IDLEntity 
+public interface ServantLocator extends ServantLocatorOperations, ServantManager, org.omg.CORBA.portable.IDLEntity
 {
 } // interface ServantLocator

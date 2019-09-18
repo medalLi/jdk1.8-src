@@ -69,7 +69,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * network byte order or its reverse will be used for future
      * reads.
      *
-     * @see java.nio.ByteOrder
+     * @see ByteOrder
      * @see #getByteOrder
      * @see #readBits(int)
      */
@@ -84,7 +84,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>ByteOrder.LITTLE_ENDIAN</code>, indicating which byte
      * order is being used.
      *
-     * @see java.nio.ByteOrder
+     * @see ByteOrder
      * @see #setByteOrder
      */
     ByteOrder getByteOrder();

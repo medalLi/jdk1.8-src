@@ -422,10 +422,10 @@ public class JPasswordField extends JTextField {
          * <code>AccessibleExtendedText</code> interface.
          *
          * @return <code>AccessibleText</code> for the JPasswordField
-         * @see javax.accessibility.AccessibleContext
-         * @see javax.accessibility.AccessibleContext#getAccessibleText
-         * @see javax.accessibility.AccessibleText
-         * @see javax.accessibility.AccessibleExtendedText
+         * @see AccessibleContext
+         * @see AccessibleContext#getAccessibleText
+         * @see AccessibleText
+         * @see AccessibleExtendedText
          *
          * @since 1.6
          */
@@ -457,9 +457,9 @@ public class JPasswordField extends JTextField {
          * <code>index</code> are valid.
          * Otherwise, <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
          *
          * @since 1.6
          */
@@ -490,9 +490,9 @@ public class JPasswordField extends JTextField {
          * <code>index</code> are valid.
          * Otherwise, <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
          *
          * @since 1.6
          */
@@ -517,9 +517,9 @@ public class JPasswordField extends JTextField {
          * <code>index</code> are valid.
          * Otherwise, <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
          *
          * @since 1.6
          */
@@ -562,11 +562,11 @@ public class JPasswordField extends JTextField {
          * <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */
@@ -604,11 +604,11 @@ public class JPasswordField extends JTextField {
          * <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */
@@ -639,11 +639,11 @@ public class JPasswordField extends JTextField {
          * <code>part</code> and <code>index</code> are valid.  Otherwise,
          * <code>null</code> is returned
          *
-         * @see javax.accessibility.AccessibleText#CHARACTER
-         * @see javax.accessibility.AccessibleText#WORD
-         * @see javax.accessibility.AccessibleText#SENTENCE
-         * @see javax.accessibility.AccessibleExtendedText#LINE
-         * @see javax.accessibility.AccessibleExtendedText#ATTRIBUTE_RUN
+         * @see AccessibleText#CHARACTER
+         * @see AccessibleText#WORD
+         * @see AccessibleText#SENTENCE
+         * @see AccessibleExtendedText#LINE
+         * @see AccessibleExtendedText#ATTRIBUTE_RUN
          *
          * @since 1.6
          */

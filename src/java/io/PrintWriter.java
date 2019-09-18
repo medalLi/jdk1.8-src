@@ -125,7 +125,7 @@ public class PrintWriter extends Writer {
      *
      * @param  out        An output stream
      *
-     * @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
+     * @see OutputStreamWriter#OutputStreamWriter(OutputStream)
      */
     public PrintWriter(OutputStream out) {
         this(out, false);
@@ -142,13 +142,13 @@ public class PrintWriter extends Writer {
      *                    <tt>printf</tt>, or <tt>format</tt> methods will
      *                    flush the output buffer
      *
-     * @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
+     * @see OutputStreamWriter#OutputStreamWriter(OutputStream)
      */
     public PrintWriter(OutputStream out, boolean autoFlush) {
         this(new BufferedWriter(new OutputStreamWriter(out)), autoFlush);
 
         // save print stream for error propagation
-        if (out instanceof java.io.PrintStream) {
+        if (out instanceof PrintStream) {
             psOut = (PrintStream) out;
         }
     }
@@ -156,9 +156,9 @@ public class PrintWriter extends Writer {
     /**
      * Creates a new PrintWriter, without automatic line flushing, with the
      * specified file name.  This convenience constructor creates the necessary
-     * intermediate {@link java.io.OutputStreamWriter OutputStreamWriter},
+     * intermediate {@link OutputStreamWriter OutputStreamWriter},
      * which will encode characters using the {@linkplain
-     * java.nio.charset.Charset#defaultCharset() default charset} for this
+     * Charset#defaultCharset() default charset} for this
      * instance of the Java virtual machine.
      *
      * @param  fileName
@@ -196,7 +196,7 @@ public class PrintWriter extends Writer {
     /**
      * Creates a new PrintWriter, without automatic line flushing, with the
      * specified file name and charset.  This convenience constructor creates
-     * the necessary intermediate {@link java.io.OutputStreamWriter
+     * the necessary intermediate {@link OutputStreamWriter
      * OutputStreamWriter}, which will encode characters using the provided
      * charset.
      *
@@ -207,7 +207,7 @@ public class PrintWriter extends Writer {
      *         written to the file and is buffered.
      *
      * @param  csn
-     *         The name of a supported {@linkplain java.nio.charset.Charset
+     *         The name of a supported {@linkplain Charset
      *         charset}
      *
      * @throws  FileNotFoundException
@@ -235,9 +235,9 @@ public class PrintWriter extends Writer {
     /**
      * Creates a new PrintWriter, without automatic line flushing, with the
      * specified file.  This convenience constructor creates the necessary
-     * intermediate {@link java.io.OutputStreamWriter OutputStreamWriter},
+     * intermediate {@link OutputStreamWriter OutputStreamWriter},
      * which will encode characters using the {@linkplain
-     * java.nio.charset.Charset#defaultCharset() default charset} for this
+     * Charset#defaultCharset() default charset} for this
      * instance of the Java virtual machine.
      *
      * @param  file
@@ -267,7 +267,7 @@ public class PrintWriter extends Writer {
     /**
      * Creates a new PrintWriter, without automatic line flushing, with the
      * specified file and charset.  This convenience constructor creates the
-     * necessary intermediate {@link java.io.OutputStreamWriter
+     * necessary intermediate {@link OutputStreamWriter
      * OutputStreamWriter}, which will encode characters using the provided
      * charset.
      *
@@ -278,7 +278,7 @@ public class PrintWriter extends Writer {
      *         and is buffered.
      *
      * @param  csn
-     *         The name of a supported {@linkplain java.nio.charset.Charset
+     *         The name of a supported {@linkplain Charset
      *         charset}
      *
      * @throws  FileNotFoundException
@@ -356,7 +356,7 @@ public class PrintWriter extends Writer {
         if (out != null) {
             flush();
         }
-        if (out instanceof java.io.PrintWriter) {
+        if (out instanceof PrintWriter) {
             PrintWriter pw = (PrintWriter) out;
             return pw.checkError();
         } else if (psOut != null) {
@@ -494,7 +494,7 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints a boolean value.  The string produced by <code>{@link
-     * java.lang.String#valueOf(boolean)}</code> is translated into bytes
+     * String#valueOf(boolean)}</code> is translated into bytes
      * according to the platform's default character encoding, and these bytes
      * are written in exactly the manner of the <code>{@link
      * #write(int)}</code> method.
@@ -519,13 +519,13 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints an integer.  The string produced by <code>{@link
-     * java.lang.String#valueOf(int)}</code> is translated into bytes according
+     * String#valueOf(int)}</code> is translated into bytes according
      * to the platform's default character encoding, and these bytes are
      * written in exactly the manner of the <code>{@link #write(int)}</code>
      * method.
      *
      * @param      i   The <code>int</code> to be printed
-     * @see        java.lang.Integer#toString(int)
+     * @see        Integer#toString(int)
      */
     public void print(int i) {
         write(String.valueOf(i));
@@ -533,13 +533,13 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints a long integer.  The string produced by <code>{@link
-     * java.lang.String#valueOf(long)}</code> is translated into bytes
+     * String#valueOf(long)}</code> is translated into bytes
      * according to the platform's default character encoding, and these bytes
      * are written in exactly the manner of the <code>{@link #write(int)}</code>
      * method.
      *
      * @param      l   The <code>long</code> to be printed
-     * @see        java.lang.Long#toString(long)
+     * @see        Long#toString(long)
      */
     public void print(long l) {
         write(String.valueOf(l));
@@ -547,13 +547,13 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints a floating-point number.  The string produced by <code>{@link
-     * java.lang.String#valueOf(float)}</code> is translated into bytes
+     * String#valueOf(float)}</code> is translated into bytes
      * according to the platform's default character encoding, and these bytes
      * are written in exactly the manner of the <code>{@link #write(int)}</code>
      * method.
      *
      * @param      f   The <code>float</code> to be printed
-     * @see        java.lang.Float#toString(float)
+     * @see        Float#toString(float)
      */
     public void print(float f) {
         write(String.valueOf(f));
@@ -561,13 +561,13 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints a double-precision floating-point number.  The string produced by
-     * <code>{@link java.lang.String#valueOf(double)}</code> is translated into
+     * <code>{@link String#valueOf(double)}</code> is translated into
      * bytes according to the platform's default character encoding, and these
      * bytes are written in exactly the manner of the <code>{@link
      * #write(int)}</code> method.
      *
      * @param      d   The <code>double</code> to be printed
-     * @see        java.lang.Double#toString(double)
+     * @see        Double#toString(double)
      */
     public void print(double d) {
         write(String.valueOf(d));
@@ -605,13 +605,13 @@ public class PrintWriter extends Writer {
 
     /**
      * Prints an object.  The string produced by the <code>{@link
-     * java.lang.String#valueOf(Object)}</code> method is translated into bytes
+     * String#valueOf(Object)}</code> method is translated into bytes
      * according to the platform's default character encoding, and these bytes
      * are written in exactly the manner of the <code>{@link #write(int)}</code>
      * method.
      *
      * @param      obj   The <code>Object</code> to be printed
-     * @see        java.lang.Object#toString()
+     * @see        Object#toString()
      */
     public void print(Object obj) {
         write(String.valueOf(obj));
@@ -816,7 +816,7 @@ public class PrintWriter extends Writer {
      *     out.format(l, format, args) </pre>
      *
      * @param  l
-     *         The {@linkplain java.util.Locale locale} to apply during
+     *         The {@linkplain Locale locale} to apply during
      *         formatting.  If <tt>l</tt> is <tt>null</tt> then no localization
      *         is applied.
      *
@@ -861,7 +861,7 @@ public class PrintWriter extends Writer {
      * method will flush the output buffer.
      *
      * <p> The locale always used is the one returned by {@link
-     * java.util.Locale#getDefault() Locale.getDefault()}, regardless of any
+     * Locale#getDefault() Locale.getDefault()}, regardless of any
      * previous invocations of other formatting methods on this object.
      *
      * @param  format
@@ -920,7 +920,7 @@ public class PrintWriter extends Writer {
      * method will flush the output buffer.
      *
      * @param  l
-     *         The {@linkplain java.util.Locale locale} to apply during
+     *         The {@linkplain Locale locale} to apply during
      *         formatting.  If <tt>l</tt> is <tt>null</tt> then no localization
      *         is applied.
      *

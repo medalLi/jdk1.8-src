@@ -669,7 +669,7 @@ public class PropertyDescriptor extends FeatureDescriptor {
 
     /**
      * Returns a hash code value for the object.
-     * See {@link java.lang.Object#hashCode} for a complete description.
+     * See {@link Object#hashCode} for a complete description.
      *
      * @return a hash code value for this object.
      * @since 1.5

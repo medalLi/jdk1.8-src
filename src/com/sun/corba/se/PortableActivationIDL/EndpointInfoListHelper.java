@@ -15,7 +15,7 @@ abstract public class EndpointInfoListHelper
 {
   private static String  _id = "IDL:PortableActivationIDL/EndpointInfoList:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, com.sun.corba.se.PortableActivationIDL.EndPointInfo[] that)
+  public static void insert (org.omg.CORBA.Any a, EndPointInfo[] that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -23,7 +23,7 @@ abstract public class EndpointInfoListHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.EndPointInfo[] extract (org.omg.CORBA.Any a)
+  public static EndPointInfo[] extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -33,9 +33,9 @@ abstract public class EndpointInfoListHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = com.sun.corba.se.PortableActivationIDL.EndPointInfoHelper.type ();
+      __typeCode = EndPointInfoHelper.type ();
       __typeCode = org.omg.CORBA.ORB.init ().create_sequence_tc (0, __typeCode);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.PortableActivationIDL.EndpointInfoListHelper.id (), "EndpointInfoList", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (EndpointInfoListHelper.id (), "EndpointInfoList", __typeCode);
     }
     return __typeCode;
   }
@@ -45,21 +45,21 @@ abstract public class EndpointInfoListHelper
     return _id;
   }
 
-  public static com.sun.corba.se.PortableActivationIDL.EndPointInfo[] read (org.omg.CORBA.portable.InputStream istream)
+  public static EndPointInfo[] read (org.omg.CORBA.portable.InputStream istream)
   {
-    com.sun.corba.se.PortableActivationIDL.EndPointInfo value[] = null;
+    EndPointInfo value[] = null;
     int _len0 = istream.read_long ();
-    value = new com.sun.corba.se.PortableActivationIDL.EndPointInfo[_len0];
+    value = new EndPointInfo[_len0];
     for (int _o1 = 0;_o1 < value.length; ++_o1)
-      value[_o1] = com.sun.corba.se.PortableActivationIDL.EndPointInfoHelper.read (istream);
+      value[_o1] = EndPointInfoHelper.read (istream);
     return value;
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, com.sun.corba.se.PortableActivationIDL.EndPointInfo[] value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, EndPointInfo[] value)
   {
     ostream.write_long (value.length);
     for (int _i0 = 0;_i0 < value.length; ++_i0)
-      com.sun.corba.se.PortableActivationIDL.EndPointInfoHelper.write (ostream, value[_i0]);
+      EndPointInfoHelper.write (ostream, value[_i0]);
   }
 
 }

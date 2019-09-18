@@ -41,7 +41,7 @@ public class RuntimeOperationsException extends JMRuntimeException   {
     /**
      * @serial The encapsulated {@link RuntimeException}
      */
-    private java.lang.RuntimeException runtimeException ;
+    private RuntimeException runtimeException ;
 
 
     /**
@@ -49,7 +49,7 @@ public class RuntimeOperationsException extends JMRuntimeException   {
      *
      * @param e the wrapped exception.
      */
-    public RuntimeOperationsException(java.lang.RuntimeException e) {
+    public RuntimeOperationsException(RuntimeException e) {
         super() ;
         runtimeException = e ;
     }
@@ -61,7 +61,7 @@ public class RuntimeOperationsException extends JMRuntimeException   {
      * @param e the wrapped exception.
      * @param message the detail message.
      */
-    public RuntimeOperationsException(java.lang.RuntimeException e, String message) {
+    public RuntimeOperationsException(RuntimeException e, String message) {
         super(message);
         runtimeException = e ;
     }
@@ -71,7 +71,7 @@ public class RuntimeOperationsException extends JMRuntimeException   {
      *
      * @return the wrapped {@link RuntimeException}.
      */
-    public java.lang.RuntimeException getTargetException()  {
+    public RuntimeException getTargetException()  {
         return runtimeException ;
     }
 

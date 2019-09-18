@@ -221,7 +221,7 @@ package org.omg.PortableInterceptor;
    *
    * @see ServerRequestInterceptor
    */
-public interface ServerRequestInfoOperations  extends org.omg.PortableInterceptor.RequestInfoOperations
+public interface ServerRequestInfoOperations  extends RequestInfoOperations
 {
 
   /**
@@ -238,41 +238,41 @@ public interface ServerRequestInfoOperations  extends org.omg.PortableIntercepto
        *     <code>PortableInterceptor</code> package comments for 
        *     limitations / unimplemented features</a>
        */
-  org.omg.CORBA.Any sending_exception ();
+  org.omg.CORBA.Any sending_exception();
 
   /**
        * Returns the opaque <code>object_id</code> describing the target of 
        * the operation invocation.
        */
-  byte[] object_id ();
+  byte[] object_id();
 
   /** 
        * Returns the opaque identifier for the object adapter.
        */
-  byte[] adapter_id ();
+  byte[] adapter_id();
 
   /**
        * Returns the server ID that was specified on ORB::init using the -ORBServerId
        * argument.
        */
-  String server_id ();
+  String server_id();
 
   /** 
        * Returns the ID that was used to create the ORB.
        */
-  String orb_id ();
+  String orb_id();
 
   /** 
        * Returns the sequence of strings that identifies the object
        * adapter instance that is handling this request.
        */
-  String[] adapter_name ();
+  String[] adapter_name();
 
   /**
        * Returns the repository id for the most derived interface of the 
        * servant.
        */
-  String target_most_derived_interface ();
+  String target_most_derived_interface();
 
   /**
        * Returns the policy in effect for this operation for the given 
@@ -289,7 +289,7 @@ public interface ServerRequestInfoOperations  extends org.omg.PortableIntercepto
        *     <code>register_policy_factory</code>.
        * @see ORBInitInfo#register_policy_factory
        */
-  org.omg.CORBA.Policy get_server_policy (int type);
+  org.omg.CORBA.Policy get_server_policy(int type);
 
   /**
        * Allows an Interceptor to set a slot in the 
@@ -303,7 +303,7 @@ public interface ServerRequestInfoOperations  extends org.omg.PortableIntercepto
        *     slot. 
        * @see Current
        */
-  void set_slot (int id, org.omg.CORBA.Any data) throws org.omg.PortableInterceptor.InvalidSlot;
+  void set_slot(int id, org.omg.CORBA.Any data) throws InvalidSlot;
 
   /**
        * Returns true if the servant is the given repository id, 
@@ -313,7 +313,7 @@ public interface ServerRequestInfoOperations  extends org.omg.PortableIntercepto
        *     repository id. 
        * @return Is the servant the given RepositoryId?
        */
-  boolean target_is_a (String id);
+  boolean target_is_a(String id);
 
   /**
        * Allows Interceptors to add service contexts to the request. 
@@ -332,5 +332,5 @@ public interface ServerRequestInfoOperations  extends org.omg.PortableIntercepto
        *     replace is false and a service context already exists with the
        *     given ID.
        */
-  void add_reply_service_context (org.omg.IOP.ServiceContext service_context, boolean replace);
+  void add_reply_service_context(org.omg.IOP.ServiceContext service_context, boolean replace);
 } // interface ServerRequestInfoOperations

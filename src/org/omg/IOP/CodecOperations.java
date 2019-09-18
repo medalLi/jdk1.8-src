@@ -34,7 +34,7 @@ public interface CodecOperations
        * @exception InvalidTypeForEncoding thrown if the type is not valid for 
        *     the encoding format effective for this <code>Codec</code>.
        */
-  byte[] encode (org.omg.CORBA.Any data) throws org.omg.IOP.CodecPackage.InvalidTypeForEncoding;
+  byte[] encode(org.omg.CORBA.Any data) throws org.omg.IOP.CodecPackage.InvalidTypeForEncoding;
 
   /**
        * Decodes the given byte array into an Any based on the encoding 
@@ -46,7 +46,7 @@ public interface CodecOperations
        * @exception FormatMismatch is thrown if the byte array cannot be 
        *     decoded into an Any. 
        */
-  org.omg.CORBA.Any decode (byte[] data) throws org.omg.IOP.CodecPackage.FormatMismatch;
+  org.omg.CORBA.Any decode(byte[] data) throws org.omg.IOP.CodecPackage.FormatMismatch;
 
   /**
        * Converts the given any into a byte array based on the encoding 
@@ -59,7 +59,7 @@ public interface CodecOperations
        * @exception InvalidTypeForEncoding thrown if the type is not valid for 
        *     the encoding format effective for this <code>Codec</code>.
        */
-  byte[] encode_value (org.omg.CORBA.Any data) throws org.omg.IOP.CodecPackage.InvalidTypeForEncoding;
+  byte[] encode_value(org.omg.CORBA.Any data) throws org.omg.IOP.CodecPackage.InvalidTypeForEncoding;
 
   /**
        * Decodes the given byte array into an Any based on the given 
@@ -73,5 +73,5 @@ public interface CodecOperations
        * @exception FormatMismatch thrown if the byte array cannot be 
        *     decoded into an Any. 
        */
-  org.omg.CORBA.Any decode_value (byte[] data, org.omg.CORBA.TypeCode tc) throws org.omg.IOP.CodecPackage.FormatMismatch, org.omg.IOP.CodecPackage.TypeMismatch;
+  org.omg.CORBA.Any decode_value(byte[] data, org.omg.CORBA.TypeCode tc) throws org.omg.IOP.CodecPackage.FormatMismatch, org.omg.IOP.CodecPackage.TypeMismatch;
 } // interface CodecOperations

@@ -17,7 +17,7 @@ abstract public class ServantActivatorHelper
 {
   private static String  _id = "IDL:omg.org/PortableServer/ServantActivator:2.3";
 
-  public static void insert (org.omg.CORBA.Any a, org.omg.PortableServer.ServantActivator that)
+  public static void insert (org.omg.CORBA.Any a, ServantActivator that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -25,7 +25,7 @@ abstract public class ServantActivatorHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static org.omg.PortableServer.ServantActivator extract (org.omg.CORBA.Any a)
+  public static ServantActivator extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -35,7 +35,7 @@ abstract public class ServantActivatorHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (org.omg.PortableServer.ServantActivatorHelper.id (), "ServantActivator");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (ServantActivatorHelper.id (), "ServantActivator");
     }
     return __typeCode;
   }
@@ -45,43 +45,43 @@ abstract public class ServantActivatorHelper
     return _id;
   }
 
-  public static org.omg.PortableServer.ServantActivator read (org.omg.CORBA.portable.InputStream istream)
+  public static ServantActivator read (org.omg.CORBA.portable.InputStream istream)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, org.omg.PortableServer.ServantActivator value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, ServantActivator value)
   {
       throw new org.omg.CORBA.MARSHAL ();
   }
 
-  public static org.omg.PortableServer.ServantActivator narrow (org.omg.CORBA.Object obj)
+  public static ServantActivator narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.PortableServer.ServantActivator)
-      return (org.omg.PortableServer.ServantActivator)obj;
+    else if (obj instanceof ServantActivator)
+      return (ServantActivator)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.PortableServer._ServantActivatorStub stub = new org.omg.PortableServer._ServantActivatorStub ();
+      _ServantActivatorStub stub = new _ServantActivatorStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static org.omg.PortableServer.ServantActivator unchecked_narrow (org.omg.CORBA.Object obj)
+  public static ServantActivator unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof org.omg.PortableServer.ServantActivator)
-      return (org.omg.PortableServer.ServantActivator)obj;
+    else if (obj instanceof ServantActivator)
+      return (ServantActivator)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      org.omg.PortableServer._ServantActivatorStub stub = new org.omg.PortableServer._ServantActivatorStub ();
+      _ServantActivatorStub stub = new _ServantActivatorStub ();
       stub._set_delegate(delegate);
       return stub;
     }

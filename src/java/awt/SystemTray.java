@@ -70,7 +70,7 @@ import sun.awt.AWTAccessor;
  *         // get the SystemTray instance
  *         SystemTray tray = SystemTray.{@link #getSystemTray};
  *         // load an image
- *         {@link java.awt.Image} image = {@link java.awt.Toolkit#getImage(String) Toolkit.getDefaultToolkit().getImage}(...);
+ *         {@link Image} image = {@link Toolkit#getImage(String) Toolkit.getDefaultToolkit().getImage}(...);
  *         // create a action listener to listen for default action executed on the tray icon
  *         {@link java.awt.event.ActionListener} listener = new {@link java.awt.event.ActionListener ActionListener}() {
  *             public void {@link java.awt.event.ActionListener#actionPerformed actionPerformed}({@link java.awt.event.ActionEvent} e) {
@@ -79,14 +79,14 @@ import sun.awt.AWTAccessor;
  *             }
  *         };
  *         // create a popup menu
- *         {@link java.awt.PopupMenu} popup = new {@link java.awt.PopupMenu#PopupMenu PopupMenu}();
+ *         {@link PopupMenu} popup = new {@link PopupMenu#PopupMenu PopupMenu}();
  *         // create menu item for the default action
  *         MenuItem defaultItem = new MenuItem(...);
  *         defaultItem.addActionListener(listener);
  *         popup.add(defaultItem);
  *         /// ... add other items
  *         // construct a TrayIcon
- *         trayIcon = new {@link TrayIcon#TrayIcon(java.awt.Image, String, java.awt.PopupMenu) TrayIcon}(image, "Tray Demo", popup);
+ *         trayIcon = new {@link TrayIcon#TrayIcon(Image, String, PopupMenu) TrayIcon}(image, "Tray Demo", popup);
  *         // set the TrayIcon properties
  *         trayIcon.{@link TrayIcon#addActionListener(java.awt.event.ActionListener) addActionListener}(listener);
  *         // ...
@@ -106,7 +106,7 @@ import sun.awt.AWTAccessor;
  *     // some time later
  *     // the application state has changed - update the image
  *     if (trayIcon != null) {
- *         trayIcon.{@link TrayIcon#setImage(java.awt.Image) setImage}(updatedImage);
+ *         trayIcon.{@link TrayIcon#setImage(Image) setImage}(updatedImage);
  *     }
  *     // ...
  * </code>
@@ -249,7 +249,7 @@ public class SystemTray {
      * @see #remove(TrayIcon)
      * @see #getSystemTray
      * @see TrayIcon
-     * @see java.awt.Image
+     * @see Image
      */
     public void add(TrayIcon trayIcon) throws AWTException {
         if (trayIcon == null) {
@@ -351,7 +351,7 @@ public class SystemTray {
      *
      * @return the default size of a tray icon, in pixels
      * @see TrayIcon#setImageAutoSize(boolean)
-     * @see java.awt.Image
+     * @see Image
      * @see TrayIcon#getSize()
      */
     public Dimension getTrayIconSize() {

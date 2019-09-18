@@ -100,7 +100,7 @@ public interface NamingEnumeration<T> extends Enumeration<T> {
       *                 to retrieve the next element. See NamingException
       *                 and its subclasses for the possible naming exceptions.
       * @exception java.util.NoSuchElementException If attempting to get the next element when none is available.
-      * @see java.util.Enumeration#nextElement
+      * @see Enumeration#nextElement
       */
     public T next() throws NamingException;
 
@@ -116,7 +116,7 @@ public interface NamingEnumeration<T> extends Enumeration<T> {
       *                 to determine whether there is another element
       *                 in the enumeration. See NamingException
       *                 and its subclasses for the possible naming exceptions.
-      * @see java.util.Enumeration#hasMoreElements
+      * @see Enumeration#hasMoreElements
       */
     public boolean hasMore() throws NamingException;
 

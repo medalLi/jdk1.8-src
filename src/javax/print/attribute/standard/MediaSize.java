@@ -200,7 +200,7 @@ public class MediaSize extends Size2DSyntax implements Attribute {
      */
     public static MediaSizeName findMedia(float x, float y, int units) {
 
-        MediaSize match = MediaSize.ISO.A4;
+        MediaSize match = ISO.A4;
 
         if (x <= 0.0f || y <= 0.0f || units < 1) {
             throw new IllegalArgumentException("args must be +ve values");
@@ -266,7 +266,7 @@ public class MediaSize extends Size2DSyntax implements Attribute {
      * class MediaSize itself.
      *
      * @return  Printing attribute class (category), an instance of class
-     *          {@link java.lang.Class java.lang.Class}.
+     *          {@link Class java.lang.Class}.
      */
     public final Class<? extends Attribute> getCategory() {
         return MediaSize.class;

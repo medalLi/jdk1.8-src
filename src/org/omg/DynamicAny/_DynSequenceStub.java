@@ -12,9 +12,9 @@ package org.omg.DynamicAny;
 /**
     * DynSequence objects support the manipulation of IDL sequences.
     */
-public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implements org.omg.DynamicAny.DynSequence
+public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implements DynSequence
 {
-  final public static java.lang.Class _opsClass = DynSequenceOperations.class;
+  final public static Class _opsClass = DynSequenceOperations.class;
 
 
 
@@ -109,7 +109,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
   /**
           * Returns the DynAnys representing the elements of the sequence.
           */
-  public org.omg.DynamicAny.DynAny[] get_elements_as_dyn_any ()
+  public DynAny[] get_elements_as_dyn_any ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_elements_as_dyn_any", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -131,7 +131,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           *            to the element TypeCode of the DynSequence
           * @exception InvalidValue if the length of value exceeds the bound of a bounded sequence
           */
-  public void set_elements_as_dyn_any (org.omg.DynamicAny.DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void set_elements_as_dyn_any (DynAny[] value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("set_elements_as_dyn_any", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -175,7 +175,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           * @param dyn_any
           * @exception TypeMismatch if the type of the passed DynAny is not equivalent to the type of target DynAny
           */
-  public void assign (org.omg.DynamicAny.DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public void assign (DynAny dyn_any) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("assign", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -237,7 +237,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           *
           * @return true of the DynAnys are equal, false otherwise
           */
-  public boolean equal (org.omg.DynamicAny.DynAny dyn_any)
+  public boolean equal (DynAny dyn_any)
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("equal", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -284,7 +284,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           *
           * @return a deep copy of the DynAny object
           */
-  public org.omg.DynamicAny.DynAny copy ()
+  public DynAny copy ()
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("copy", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -630,7 +630,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           */
-  public void insert_dyn_any (org.omg.DynamicAny.DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public void insert_dyn_any (DynAny value) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("insert_dyn_any", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -1031,7 +1031,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           * @exception TypeMismatch if called on a DynAny whose current component itself has components
           * @exception InvalidValue if this DynAny has components but has a current position of -1
           */
-  public org.omg.DynamicAny.DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
+  public DynAny get_dyn_any () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("get_dyn_any", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;
@@ -1169,7 +1169,7 @@ public class _DynSequenceStub extends org.omg.CORBA.portable.ObjectImpl implemen
           * @exception TypeMismatch If called on a DynAny that cannot have components,
           * such as a DynEnum or an empty exception
           */
-  public org.omg.DynamicAny.DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
+  public DynAny current_component () throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch
   {
       org.omg.CORBA.portable.ServantObject $so = _servant_preinvoke ("current_component", _opsClass);
       DynSequenceOperations  $self = (DynSequenceOperations) $so.servant;

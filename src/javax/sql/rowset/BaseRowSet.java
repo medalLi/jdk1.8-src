@@ -329,7 +329,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * specified in the <code>ResultSet</code> interface.
      * @serial
      */
-    protected java.io.InputStream binaryStream;
+    protected InputStream binaryStream;
 
     /**
      * The <code>InputStream</code> object that will be
@@ -337,7 +337,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * which is specified in the <code>ResultSet</code> interface.
      * @serial
      */
-    protected java.io.InputStream unicodeStream;
+    protected InputStream unicodeStream;
 
     /**
      * The <code>InputStream</code> object that will be
@@ -345,7 +345,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * which is specified in the <code>ResultSet</code> interface.
      * @serial
      */
-    protected java.io.InputStream asciiStream;
+    protected InputStream asciiStream;
 
     /**
      * The <code>Reader</code> object that will be
@@ -353,7 +353,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * which is specified in the <code>ResultSet</code> interface.
      * @serial
      */
-    protected java.io.Reader charStream;
+    protected Reader charStream;
 
     /**
      * The query that will be sent to the DBMS for execution when the
@@ -596,7 +596,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * Determine if instance of this class extends the RowSet interface.
      */
     private void checkforRowSetInterface() throws SQLException {
-        if ((this instanceof javax.sql.RowSet) == false) {
+        if ((this instanceof RowSet) == false) {
             throw new SQLException("The class extending abstract class BaseRowSet " +
                 "must implement javax.sql.RowSet or one of it's sub-interfaces.");
         }
@@ -1116,7 +1116,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * @return the <code>java.util.Map</code> object that is the type map
      *         for this <code>RowSet</code> object's connection
      */
-    public java.util.Map<String,Class<?>> getTypeMap() {
+    public Map<String,Class<?>> getTypeMap() {
         return map;
     }
 
@@ -1134,7 +1134,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *     <code>Class</code> object for the <code>SQLData</code> implementation
      *     of that UDT. May be <code>null</code>.
      */
-    public void setTypeMap(java.util.Map<String,Class<?>> map) {
+    public void setTypeMap(Map<String,Class<?>> map) {
         this.map = map;
     }
 
@@ -1549,7 +1549,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *        The first parameter is 1, the second is 2, and so on; must be
      *        <code>1</code> or greater
      * @param sqlType an <code>int</code> that is one of the SQL type codes
-     *        defined in the class {@link java.sql.Types}. If a non-standard
+     *        defined in the class {@link Types}. If a non-standard
      *        <i>sqlType</i> is supplied, this method will not throw a
      *        <code>SQLException</code>. This allows implicit support for
      *        non-standard SQL types.
@@ -1909,7 +1909,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *                         parameter index is out of bounds
      * @see #getParams
      */
-    public void setBigDecimal(int parameterIndex, java.math.BigDecimal x) throws SQLException {
+    public void setBigDecimal(int parameterIndex, BigDecimal x) throws SQLException {
         checkParamIndex(parameterIndex);
         if(params == null){
              throw new SQLException("Set initParams() before setBigDecimal");
@@ -2063,7 +2063,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *                         parameter index is out of bounds
      * @see #getParams
      */
-    public void setTime(int parameterIndex, java.sql.Time x) throws SQLException {
+    public void setTime(int parameterIndex, Time x) throws SQLException {
         checkParamIndex(parameterIndex);
         if(params == null){
              throw new SQLException("Set initParams() before setTime");
@@ -2106,7 +2106,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *                         parameter index is out of bounds
      * @see #getParams
      */
-    public void setTimestamp(int parameterIndex, java.sql.Timestamp x) throws SQLException {
+    public void setTimestamp(int parameterIndex, Timestamp x) throws SQLException {
         checkParamIndex(parameterIndex);
         if(params == null){
              throw new SQLException("Set initParams() before setTimestamp");
@@ -2179,7 +2179,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *       in <i>length</i>
      * @see #getParams
      */
-    public void setAsciiStream(int parameterIndex, java.io.InputStream x, int length) throws SQLException {
+    public void setAsciiStream(int parameterIndex, InputStream x, int length) throws SQLException {
         Object asciiStream[];
         checkParamIndex(parameterIndex);
 
@@ -2218,7 +2218,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
    * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
    * @since 1.6
    */
-  public void setAsciiStream(int parameterIndex, java.io.InputStream x)
+  public void setAsciiStream(int parameterIndex, InputStream x)
                       throws SQLException {
       throw new SQLFeatureNotSupportedException("Feature not supported");
   }
@@ -2284,7 +2284,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *         specified in <i>length</i>
      * @see #getParams
      */
-    public void setBinaryStream(int parameterIndex, java.io.InputStream x, int length) throws SQLException {
+    public void setBinaryStream(int parameterIndex, InputStream x, int length) throws SQLException {
         Object binaryStream[];
         checkParamIndex(parameterIndex);
 
@@ -2322,7 +2322,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
    * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
    * @since 1.6
    */
-  public void setBinaryStream(int parameterIndex, java.io.InputStream x)
+  public void setBinaryStream(int parameterIndex, InputStream x)
                               throws SQLException {
       throw new SQLFeatureNotSupportedException("Feature not supported");
   }
@@ -2390,7 +2390,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * @see #getParams
      */
     @Deprecated
-    public void setUnicodeStream(int parameterIndex, java.io.InputStream x, int length) throws SQLException {
+    public void setUnicodeStream(int parameterIndex, InputStream x, int length) throws SQLException {
         Object unicodeStream[];
         checkParamIndex(parameterIndex);
 
@@ -2508,7 +2508,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
    * @since 1.6
    */
   public void setCharacterStream(int parameterIndex,
-                          java.io.Reader reader) throws SQLException {
+                          Reader reader) throws SQLException {
       throw new SQLFeatureNotSupportedException("Feature not supported");
   }
 
@@ -2766,7 +2766,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *         the <code>Ref</code> object returns a <code>null</code> base type
      *         name.
      * @see #getParams
-     * @see javax.sql.rowset.serial.SerialRef
+     * @see SerialRef
      */
     public void setRef (int parameterIndex, Ref ref) throws SQLException {
         checkParamIndex(parameterIndex);
@@ -2810,7 +2810,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * @throws SQLException if an error occurs or the
      *                         parameter index is out of bounds
      * @see #getParams
-     * @see javax.sql.rowset.serial.SerialBlob
+     * @see SerialBlob
      */
     public void setBlob (int parameterIndex, Blob x) throws SQLException {
         checkParamIndex(parameterIndex);
@@ -2855,7 +2855,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * @throws SQLException if an error occurs; the parameter index is out of
      *     bounds or the <code>Clob</code> is null
      * @see #getParams
-     * @see javax.sql.rowset.serial.SerialBlob
+     * @see SerialBlob
      */
     public void setClob (int parameterIndex, Clob x) throws SQLException {
         checkParamIndex(parameterIndex);
@@ -2903,7 +2903,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      * @throws SQLException if an error occurs; the parameter index is out of
      *        bounds or the <code>ARRAY</code> is null
      * @see #getParams
-     * @see javax.sql.rowset.serial.SerialArray
+     * @see SerialArray
      */
     public void setArray (int parameterIndex, Array array) throws SQLException {
         checkParamIndex(parameterIndex);
@@ -3031,7 +3031,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *                         parameter index is out of bounds
      * @see #getParams
      */
-    public void setTime(int parameterIndex, java.sql.Time x, Calendar cal) throws SQLException {
+    public void setTime(int parameterIndex, Time x, Calendar cal) throws SQLException {
         Object time[];
         checkParamIndex(parameterIndex);
 
@@ -3097,7 +3097,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
      *                         parameter index is out of bounds
      * @see #getParams
      */
-    public void setTimestamp(int parameterIndex, java.sql.Timestamp x, Calendar cal) throws SQLException {
+    public void setTimestamp(int parameterIndex, Timestamp x, Calendar cal) throws SQLException {
         Object timestamp[];
         checkParamIndex(parameterIndex);
 
@@ -3467,7 +3467,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @see #getParams
     * @since 1.4
     */
-   public void setTimestamp(String parameterName, java.sql.Timestamp x)
+   public void setTimestamp(String parameterName, Timestamp x)
        throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3496,7 +3496,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * this method
     * @since 1.4
     */
-   public void setAsciiStream(String parameterName, java.io.InputStream x, int length)
+   public void setAsciiStream(String parameterName, InputStream x, int length)
        throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3523,7 +3523,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * this method
     * @since 1.4
     */
-   public void setBinaryStream(String parameterName, java.io.InputStream x,
+   public void setBinaryStream(String parameterName, InputStream x,
                         int length) throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3553,7 +3553,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @since 1.4
     */
    public void setCharacterStream(String parameterName,
-                           java.io.Reader reader,
+                           Reader reader,
                            int length) throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3581,7 +3581,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
    * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
      * @since 1.6
   */
-  public void setAsciiStream(String parameterName, java.io.InputStream x)
+  public void setAsciiStream(String parameterName, InputStream x)
           throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3608,7 +3608,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
     * @since 1.6
     */
-   public void setBinaryStream(String parameterName, java.io.InputStream x)
+   public void setBinaryStream(String parameterName, InputStream x)
    throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -3640,7 +3640,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @since 1.6
     */
    public void setCharacterStream(String parameterName,
-                         java.io.Reader reader) throws SQLException{
+                         Reader reader) throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
 
@@ -4114,7 +4114,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @see #getParams
     * @since 1.4
     */
-   public void setTime(String parameterName, java.sql.Time x)
+   public void setTime(String parameterName, Time x)
        throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -4141,7 +4141,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @see #getParams
     * @since 1.4
     */
-   public void setTime(String parameterName, java.sql.Time x, Calendar cal)
+   public void setTime(String parameterName, Time x, Calendar cal)
        throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }
@@ -4168,7 +4168,7 @@ public abstract class BaseRowSet implements Serializable, Cloneable {
     * @see #getParams
     * @since 1.4
     */
-   public void setTimestamp(String parameterName, java.sql.Timestamp x, Calendar cal)
+   public void setTimestamp(String parameterName, Timestamp x, Calendar cal)
        throws SQLException{
         throw new SQLFeatureNotSupportedException("Feature not supported");
    }

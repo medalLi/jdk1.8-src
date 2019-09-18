@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.protocol ;
+package com.sun.corba.se.impl.protocol;
 
 import java.util.Iterator ;
 
@@ -112,16 +112,16 @@ public class BootstrapServerRequestDispatcher
                 throw wrapper.illegalBootstrapOperation( method ) ;
             }
 
-        } catch (org.omg.CORBA.SystemException ex) {
+        } catch (SystemException ex) {
             // Marshal the exception thrown
             response = request.getProtocolHandler().createSystemExceptionResponse(
                 request, ex, null);
-        } catch (java.lang.RuntimeException ex) {
+        } catch (RuntimeException ex) {
             // Unknown exception
             SystemException sysex = wrapper.bootstrapRuntimeException( ex ) ;
             response = request.getProtocolHandler().createSystemExceptionResponse(
                  request, sysex, null ) ;
-        } catch (java.lang.Exception ex) {
+        } catch (Exception ex) {
             // Unknown exception
             SystemException sysex = wrapper.bootstrapException( ex ) ;
             response = request.getProtocolHandler().createSystemExceptionResponse(

@@ -8,7 +8,7 @@ package org.omg.PortableInterceptor;
 * Wednesday, July 30, 2014 1:14:28 PM PDT
 */
 
-public interface IORInterceptor_3_0Operations  extends org.omg.PortableInterceptor.IORInterceptorOperations
+public interface IORInterceptor_3_0Operations  extends IORInterceptorOperations
 {
 
   /** The components_established method is invoked on all registered 
@@ -23,7 +23,7 @@ public interface IORInterceptor_3_0Operations  extends org.omg.PortableIntercept
        * standard minor code of 6.
        * @param info The IORInfo for the object adapter being created.
        */
-  void components_established (org.omg.PortableInterceptor.IORInfo info);
+  void components_established(IORInfo info);
 
   /** Called whenever the state of an adapter manager changes.
        * For the POA, that is the POAManager.  If the state change
@@ -33,7 +33,7 @@ public interface IORInterceptor_3_0Operations  extends org.omg.PortableIntercept
        * changed state
        * @param state the new state of the adapter manager
        */
-  void adapter_manager_state_changed (int id, short state);
+  void adapter_manager_state_changed(int id, short state);
 
   /** Called whenever the state of an object adapter changes, and
        * the state change is not caused by an adapter manager.  Such
@@ -43,5 +43,5 @@ public interface IORInterceptor_3_0Operations  extends org.omg.PortableIntercept
        *     on which this state change occurred.
        * @param state the new <code>AdapterState</code> shared by all of the templates.
        */
-  void adapter_state_changed (org.omg.PortableInterceptor.ObjectReferenceTemplate[] templates, short state);
+  void adapter_state_changed(ObjectReferenceTemplate[] templates, short state);
 } // interface IORInterceptor_3_0Operations

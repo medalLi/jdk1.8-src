@@ -517,7 +517,7 @@ public interface Statement extends Wrapper, AutoCloseable {
      * @see DatabaseMetaData#supportsBatchUpdates
      * @since 1.2
      */
-    void addBatch( String sql ) throws SQLException;
+    void addBatch(String sql) throws SQLException;
 
     /**
      * Empties this <code>Statement</code> object's current list of
@@ -1033,7 +1033,7 @@ public interface Statement extends Wrapper, AutoCloseable {
          * <p>
          * @since 1.6
          * <p>
-         * @see java.sql.Statement#setPoolable(boolean) setPoolable(boolean)
+         * @see Statement#setPoolable(boolean) setPoolable(boolean)
          */
         boolean isPoolable()
                 throws SQLException;

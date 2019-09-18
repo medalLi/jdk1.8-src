@@ -14,13 +14,13 @@ package org.omg.DynamicAny;
     * Because IDL does not have a generic type that can represent fixed types with arbitrary
     * number of digits and arbitrary scale, the operations use the IDL string type.
     */
-public interface DynFixedOperations  extends org.omg.DynamicAny.DynAnyOperations
+public interface DynFixedOperations  extends DynAnyOperations
 {
 
   /**
           * Returns the value of a DynFixed.
           */
-  String get_value ();
+  String get_value();
 
   /**
           * Sets the value of the DynFixed.
@@ -34,5 +34,5 @@ public interface DynFixedOperations  extends org.omg.DynamicAny.DynAnyOperations
           * @exception InvalidValue If val contains a value whose scale exceeds that of the DynFixed
           *            or is not initialized
           */
-  boolean set_value (String val) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
+  boolean set_value(String val) throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch, org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 } // interface DynFixedOperations

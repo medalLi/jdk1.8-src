@@ -156,7 +156,7 @@ public class TextArea extends TextComponent {
      * scrollbars will be visible for this text area.
      * @exception HeadlessException if
      *    <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless()
+     * @see GraphicsEnvironment#isHeadless()
      */
     public TextArea() throws HeadlessException {
         this("", 0, 0, SCROLLBARS_BOTH);
@@ -172,7 +172,7 @@ public class TextArea extends TextComponent {
      *             string <code>""</code> will be displayed
      * @exception HeadlessException if
      *        <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless()
+     * @see GraphicsEnvironment#isHeadless()
      */
     public TextArea(String text) throws HeadlessException {
         this(text, 0, 0, SCROLLBARS_BOTH);
@@ -190,7 +190,7 @@ public class TextArea extends TextComponent {
      * @param columns the number of columns
      * @exception HeadlessException if
      *     <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless()
+     * @see GraphicsEnvironment#isHeadless()
      */
     public TextArea(int rows, int columns) throws HeadlessException {
         this("", rows, columns, SCROLLBARS_BOTH);
@@ -211,7 +211,7 @@ public class TextArea extends TextComponent {
      * @param     columns   the number of columns
      * @exception HeadlessException if
      *   <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless()
+     * @see GraphicsEnvironment#isHeadless()
      */
     public TextArea(String text, int rows, int columns)
         throws HeadlessException {
@@ -251,7 +251,7 @@ public class TextArea extends TextComponent {
      * @since      JDK1.1
      * @exception HeadlessException if
      *    <code>GraphicsEnvironment.isHeadless</code> returns true
-     * @see java.awt.GraphicsEnvironment#isHeadless()
+     * @see GraphicsEnvironment#isHeadless()
      */
     public TextArea(String text, int rows, int columns, int scrollbars)
         throws HeadlessException {
@@ -304,9 +304,9 @@ public class TextArea extends TextComponent {
      *
      * @param      str the non-<code>null</code> text to insert
      * @param      pos the position at which to insert
-     * @see        java.awt.TextComponent#setText
-     * @see        java.awt.TextArea#replaceRange
-     * @see        java.awt.TextArea#append
+     * @see        TextComponent#setText
+     * @see        TextArea#replaceRange
+     * @see        TextArea#append
      * @since      JDK1.1
      */
     public void insert(String str, int pos) {
@@ -334,7 +334,7 @@ public class TextArea extends TextComponent {
      * behavior.
      *
      * @param     str the non-<code>null</code> text to append
-     * @see       java.awt.TextArea#insert
+     * @see       TextArea#insert
      * @since     JDK1.1
      */
     public void append(String str) {
@@ -370,7 +370,7 @@ public class TextArea extends TextComponent {
      *                     the replacement
      * @param     start    the start position
      * @param     end      the end position
-     * @see       java.awt.TextArea#insert
+     * @see       TextArea#insert
      * @since     JDK1.1
      */
     public void replaceRange(String str, int start, int end) {
@@ -464,11 +464,11 @@ public class TextArea extends TextComponent {
      * application discretion over scroll bars.
      *
      * @return     an integer that indicates which scroll bars are used
-     * @see        java.awt.TextArea#SCROLLBARS_BOTH
-     * @see        java.awt.TextArea#SCROLLBARS_VERTICAL_ONLY
-     * @see        java.awt.TextArea#SCROLLBARS_HORIZONTAL_ONLY
-     * @see        java.awt.TextArea#SCROLLBARS_NONE
-     * @see        java.awt.TextArea#TextArea(java.lang.String, int, int, int)
+     * @see        TextArea#SCROLLBARS_BOTH
+     * @see        TextArea#SCROLLBARS_VERTICAL_ONLY
+     * @see        TextArea#SCROLLBARS_HORIZONTAL_ONLY
+     * @see        TextArea#SCROLLBARS_NONE
+     * @see        TextArea#TextArea(String, int, int, int)
      * @since      JDK1.1
      */
     public int getScrollbarVisibility() {
@@ -484,7 +484,7 @@ public class TextArea extends TextComponent {
      * @return    the preferred dimensions required to display
      *                       the text area with the specified
      *                       number of rows and columns
-     * @see       java.awt.Component#getPreferredSize
+     * @see       Component#getPreferredSize
      * @since     JDK1.1
      */
     public Dimension getPreferredSize(int rows, int columns) {
@@ -508,7 +508,7 @@ public class TextArea extends TextComponent {
     /**
      * Determines the preferred size of this text area.
      * @return    the preferred dimensions needed for this text area
-     * @see       java.awt.Component#getPreferredSize
+     * @see       Component#getPreferredSize
      * @since     JDK1.1
      */
     public Dimension getPreferredSize() {
@@ -536,7 +536,7 @@ public class TextArea extends TextComponent {
      * @return    the minimum dimensions required to display
      *                       the text area with the specified
      *                       number of rows and columns
-     * @see       java.awt.Component#getMinimumSize
+     * @see       Component#getMinimumSize
      * @since     JDK1.1
      */
     public Dimension getMinimumSize(int rows, int columns) {
@@ -560,7 +560,7 @@ public class TextArea extends TextComponent {
     /**
      * Determines the minimum size of this text area.
      * @return    the preferred dimensions needed for this text area
-     * @see       java.awt.Component#getPreferredSize
+     * @see       Component#getPreferredSize
      * @since     JDK1.1
      */
     public Dimension getMinimumSize() {
@@ -629,7 +629,7 @@ public class TextArea extends TextComponent {
      * @exception HeadlessException if
      * <code>GraphicsEnvironment.isHeadless()</code> returns
      * <code>true</code>
-     * @see java.awt.GraphicsEnvironment#isHeadless
+     * @see GraphicsEnvironment#isHeadless
      */
     private void readObject(ObjectInputStream s)
       throws ClassNotFoundException, IOException, HeadlessException

@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.orbutil.fsm ;
+package com.sun.corba.se.impl.orbutil.fsm;
 
 import com.sun.corba.se.spi.orbutil.fsm.Action ;
 import com.sun.corba.se.spi.orbutil.fsm.State ;

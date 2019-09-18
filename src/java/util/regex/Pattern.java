@@ -46,7 +46,7 @@ import java.util.stream.StreamSupport;
  * <p> A regular expression, specified as a string, must first be compiled into
  * an instance of this class.  The resulting pattern can then be used to create
  * a {@link Matcher} object that can match arbitrary {@linkplain
- * java.lang.CharSequence character sequences} against the regular
+ * CharSequence character sequences} against the regular
  * expression.  All of the state involved in performing a match resides in the
  * matcher, so many matchers can share the same pattern.
  *
@@ -106,9 +106,9 @@ import java.util.stream.StreamSupport;
  *     <td headers="matches">The character with hexadecimal&nbsp;value&nbsp;<tt>0x</tt><i>hhhh</i></td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>&#92;x</tt><i>{h...h}</i></td>
  *     <td headers="matches">The character with hexadecimal&nbsp;value&nbsp;<tt>0x</tt><i>h...h</i>
- *         ({@link java.lang.Character#MIN_CODE_POINT Character.MIN_CODE_POINT}
+ *         ({@link Character#MIN_CODE_POINT Character.MIN_CODE_POINT}
  *         &nbsp;&lt;=&nbsp;<tt>0x</tt><i>h...h</i>&nbsp;&lt;=&nbsp;
- *          {@link java.lang.Character#MAX_CODE_POINT Character.MAX_CODE_POINT})</td></tr>
+ *          {@link Character#MAX_CODE_POINT Character.MAX_CODE_POINT})</td></tr>
  * <tr><td valign="top" headers="matches"><tt>\t</tt></td>
  *     <td headers="matches">The tab character (<tt>'&#92;u0009'</tt>)</td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>\n</tt></td>
@@ -569,7 +569,7 @@ import java.util.stream.StreamSupport;
  * <p>
  * The script names supported by <code>Pattern</code> are the valid script names
  * accepted and defined by
- * {@link java.lang.Character.UnicodeScript#forName(String) UnicodeScript.forName}.
+ * {@link Character.UnicodeScript#forName(String) UnicodeScript.forName}.
  *
  * <p>
  * <b><a name="ubc">Blocks</a></b> are specified with the prefix {@code In}, as in
@@ -578,7 +578,7 @@ import java.util.stream.StreamSupport;
  * <p>
  * The block names supported by <code>Pattern</code> are the valid block names
  * accepted and defined by
- * {@link java.lang.Character.UnicodeBlock#forName(String) UnicodeBlock.forName}.
+ * {@link Character.UnicodeBlock#forName(String) UnicodeBlock.forName}.
  * <p>
  *
  * <b><a name="ucc">Categories</a></b> may be specified with the optional prefix {@code Is}:
@@ -590,7 +590,7 @@ import java.util.stream.StreamSupport;
  * The supported categories are those of
  * <a href="http://www.unicode.org/unicode/standard/standard.html">
  * <i>The Unicode Standard</i></a> in the version specified by the
- * {@link java.lang.Character Character} class. The category names are those
+ * {@link Character Character} class. The category names are those
  * defined in the Standard, both normative and informative.
  * <p>
  *
@@ -756,8 +756,8 @@ import java.util.stream.StreamSupport;
  * O'Reilly and Associates, 2006.</a>
  * </p>
  *
- * @see java.lang.String#split(String, int)
- * @see java.lang.String#split(String)
+ * @see String#split(String, int)
+ * @see String#split(String)
  *
  * @author      Mike McCloskey
  * @author      Mark Reinhold
@@ -1245,7 +1245,7 @@ public final class Pattern
      * Splits the given input sequence around matches of this pattern.
      *
      * <p> This method works as if by invoking the two-argument {@link
-     * #split(java.lang.CharSequence, int) split} method with the given input
+     * #split(CharSequence, int) split} method with the given input
      * sequence and a limit argument of zero.  Trailing empty strings are
      * therefore not included in the resulting array. </p>
      *

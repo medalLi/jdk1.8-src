@@ -8,6 +8,6 @@ package com.sun.corba.se.spi.activation;
 * Wednesday, July 30, 2014 1:14:27 PM PDT
 */
 
-public interface ServerManager extends ServerManagerOperations, com.sun.corba.se.spi.activation.Activator, com.sun.corba.se.spi.activation.Locator
+public interface ServerManager extends ServerManagerOperations, Activator, Locator
 {
 } // interface ServerManager

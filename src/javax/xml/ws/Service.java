@@ -37,7 +37,7 @@ import javax.xml.ws.spi.Provider;
  * <p><code>Service</code> acts as a factory of the following:
  * <ul>
  * <li>Proxies for a target service endpoint.</li>
- * <li>Instances of {@link javax.xml.ws.Dispatch} for
+ * <li>Instances of {@link Dispatch} for
  *     dynamic message-oriented invocation of a remote
  *     operation.
  * </li>
@@ -59,8 +59,8 @@ import javax.xml.ws.spi.Provider;
  *
  * @since JAX-WS 2.0
  *
- * @see javax.xml.ws.spi.Provider
- * @see javax.xml.ws.handler.HandlerResolver
+ * @see Provider
+ * @see HandlerResolver
  * @see java.util.concurrent.Executor
  **/
 public class Service {
@@ -384,7 +384,7 @@ public class Service {
      * @since JAX-WS 2.1
      **/
     public <T> Dispatch<T> createDispatch(QName portName, Class<T> type,
-            Service.Mode mode, WebServiceFeature... features) {
+            Mode mode, WebServiceFeature... features) {
         return delegate.createDispatch(portName, type, mode, features);
     }
 
@@ -459,7 +459,7 @@ public class Service {
      * @since JAX-WS 2.1
      **/
     public <T> Dispatch<T> createDispatch(EndpointReference endpointReference,
-            Class<T> type, Service.Mode mode,
+            Class<T> type, Mode mode,
             WebServiceFeature... features) {
         return delegate.createDispatch(endpointReference, type, mode, features);
     }
@@ -481,7 +481,7 @@ public class Service {
      * @throws WebServiceException If any error in the creation of
      *                  the <code>Dispatch</code> object.
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      **/
     public Dispatch<Object> createDispatch(QName portName, JAXBContext context,
             Mode mode) {
@@ -511,13 +511,13 @@ public class Service {
      *                  feature is enabled that is not compatible with
      *                  this port or is unsupported.
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      * @see WebServiceFeature
      *
      * @since JAX-WS 2.1
      **/
     public Dispatch<Object> createDispatch(QName portName,
-            JAXBContext context, Service.Mode mode, WebServiceFeature... features) {
+            JAXBContext context, Mode mode, WebServiceFeature... features) {
         return delegate.createDispatch(portName, context, mode, features);
     }
 
@@ -584,13 +584,13 @@ public class Service {
      *                    compatible with this port or is unsupported.
      *                  </UL>
      *
-     * @see javax.xml.bind.JAXBContext
+     * @see JAXBContext
      * @see WebServiceFeature
      *
      * @since JAX-WS 2.1
     **/
     public Dispatch<Object> createDispatch(EndpointReference endpointReference,
-            JAXBContext context, Service.Mode mode,
+            JAXBContext context, Mode mode,
             WebServiceFeature... features) {
         return delegate.createDispatch(endpointReference, context, mode, features);
     }
@@ -613,7 +613,7 @@ public class Service {
      * @throws WebServiceException If this Service class does not
      *         have access to the required WSDL metadata.
      **/
-    public Iterator<javax.xml.namespace.QName> getPorts() {
+    public Iterator<QName> getPorts() {
         return delegate.getPorts();
     }
 
@@ -649,7 +649,7 @@ public class Service {
      * @param handlerResolver The <code>HandlerResolver</code> to use
      *        for all subsequently created proxy/dispatch objects.
      *
-     * @see javax.xml.ws.handler.HandlerResolver
+     * @see HandlerResolver
      **/
     public void setHandlerResolver(HandlerResolver handlerResolver) {
         delegate.setHandlerResolver(handlerResolver);

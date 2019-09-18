@@ -65,8 +65,8 @@ import java.awt.RenderingHints;
  * color conversion.
  * <p>
  * Note that Source and Destination may be the same object.
- * @see java.awt.RenderingHints#KEY_COLOR_RENDERING
- * @see java.awt.RenderingHints#KEY_DITHERING
+ * @see RenderingHints#KEY_COLOR_RENDERING
+ * @see RenderingHints#KEY_DITHERING
  */
 public class ColorConvertOp implements BufferedImageOp, RasterOp {
     ICC_Profile[]    profileList;

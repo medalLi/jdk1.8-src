@@ -23,7 +23,7 @@
  *
  */
 
-package com.sun.corba.se.impl.resolver ;
+package com.sun.corba.se.impl.resolver;
 
 import org.omg.CORBA.portable.InputStream ;
 import org.omg.CORBA.portable.OutputStream ;
@@ -65,7 +65,7 @@ public class BootstrapResolverImpl implements Resolver {
         IORTemplate iortemp = IORFactories.makeIORTemplate( okey.getTemplate() ) ;
         iortemp.add( ptemp ) ;
 
-        IOR initialIOR = iortemp.makeIOR( (com.sun.corba.se.spi.orb.ORB)orb,
+        IOR initialIOR = iortemp.makeIOR( (ORB)orb,
             "", okey.getId() ) ;
 
         bootstrapDelegate = ORBUtility.makeClientDelegate( initialIOR ) ;

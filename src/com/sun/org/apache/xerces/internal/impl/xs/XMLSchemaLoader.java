@@ -836,7 +836,7 @@ XSLoader, DOMConfiguration {
                 targetNamespace = grammar.getTargetNamespace() ;
                 if(jaxpSchemaSourceNamespaces.contains(targetNamespace)){
                     //when an array of objects is passed it is illegal to have two schemas that share same namespace.
-                    throw new java.lang.IllegalArgumentException(
+                    throw new IllegalArgumentException(
                             " When using array of Objects as the value of SCHEMA_SOURCE property , " +
                     "no two Schemas should share the same targetNamespace. " );
                 }

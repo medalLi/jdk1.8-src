@@ -31,7 +31,7 @@ package javax.xml.ws;
  *  @since JAX-WS 2.0
 **/
 
-public class WebServiceException extends java.lang.RuntimeException {
+public class WebServiceException extends RuntimeException {
 
   /** Constructs a new exception with <code>null</code> as its
    *  detail message. The cause is not initialized.

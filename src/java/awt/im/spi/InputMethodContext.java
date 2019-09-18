@@ -38,7 +38,7 @@ import javax.swing.JFrame;
  * other services.  This interface is implemented by the input method
  * framework, and input methods call its methods on the instance they
  * receive through
- * {@link java.awt.im.spi.InputMethod#setInputMethodContext}.
+ * {@link InputMethod#setInputMethodContext}.
  * There should be no other implementors or callers.
  *
  * @since 1.3
@@ -54,8 +54,8 @@ public interface InputMethodContext extends InputMethodRequests {
      * see {@link java.awt.event.InputMethodEvent#InputMethodEvent}.
      */
     public void dispatchInputMethodEvent(int id,
-                AttributedCharacterIterator text, int committedCharacterCount,
-                TextHitInfo caret, TextHitInfo visiblePosition);
+                                         AttributedCharacterIterator text, int committedCharacterCount,
+                                         TextHitInfo caret, TextHitInfo visiblePosition);
 
     /**
      * Creates a top-level window for use by the input method.
@@ -75,7 +75,7 @@ public interface InputMethodContext extends InputMethodRequests {
      * Also, when the window is opened using setVisible(true), the input context will prevent
      * deactivate and activate calls to the input method that might otherwise be caused.
      * <p>
-     * Input methods must call {@link java.awt.Window#dispose() Window.dispose} on the
+     * Input methods must call {@link Window#dispose() Window.dispose} on the
      * returned input method window when it is no longer needed.
      * <p>
      * @param title the title to be displayed in the window's title bar,
@@ -107,7 +107,7 @@ public interface InputMethodContext extends InputMethodRequests {
      * Also, when the window is opened using setVisible(true), the input context will prevent
      * deactivate and activate calls to the input method that might otherwise be caused.
      * <p>
-     * Input methods must call {@link java.awt.Window#dispose() Window.dispose} on the
+     * Input methods must call {@link Window#dispose() Window.dispose} on the
      * returned input method window when it is no longer needed.
      * <p>
      * @param title the title to be displayed in the window's title bar,
@@ -127,7 +127,7 @@ public interface InputMethodContext extends InputMethodRequests {
      * Enables or disables notification of the current client window's
      * location and state for the specified input method. When
      * notification is enabled, the input method's {@link
-     * java.awt.im.spi.InputMethod#notifyClientWindowChange
+     * InputMethod#notifyClientWindowChange
      * notifyClientWindowChange} method is called as described in that
      * method's specification. Notification is automatically disabled
      * when the input method is disposed.

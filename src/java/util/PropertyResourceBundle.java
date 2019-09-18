@@ -57,7 +57,7 @@ import sun.util.ResourceBundleEnumeration;
  * files containing the resource data.  <code>ResourceBundle.getBundle</code>
  * will automatically look for the appropriate properties file and create a
  * <code>PropertyResourceBundle</code> that refers to it. See
- * {@link ResourceBundle#getBundle(java.lang.String, java.util.Locale, java.lang.ClassLoader) ResourceBundle.getBundle}
+ * {@link ResourceBundle#getBundle(String, Locale, ClassLoader) ResourceBundle.getBundle}
  * for a complete description of the search and instantiation strategy.
  *
  * <p>
@@ -121,7 +121,7 @@ import sun.util.ResourceBundleEnumeration;
  */
 public class PropertyResourceBundle extends ResourceBundle {
     /**
-     * Creates a property resource bundle from an {@link java.io.InputStream
+     * Creates a property resource bundle from an {@link InputStream
      * InputStream}.  The property file read with this constructor
      * must be encoded in ISO-8859-1.
      *
@@ -140,9 +140,9 @@ public class PropertyResourceBundle extends ResourceBundle {
     }
 
     /**
-     * Creates a property resource bundle from a {@link java.io.Reader
+     * Creates a property resource bundle from a {@link Reader
      * Reader}.  Unlike the constructor
-     * {@link #PropertyResourceBundle(java.io.InputStream) PropertyResourceBundle(InputStream)},
+     * {@link #PropertyResourceBundle(InputStream) PropertyResourceBundle(InputStream)},
      * there is no limitation as to the encoding of the input property file.
      *
      * @param reader a Reader that represents a property file to

@@ -203,7 +203,7 @@ import static sun.font.EAttribute.*;
  * <code>deriveFont</code> APIs ignore the FONT attribute, and it is
  * not retained by the Font; the static {@link #getFont} method should
  * be used if the FONT attribute might be present.  See {@link
- * java.awt.font.TextAttribute#FONT} for more information.</p>
+ * TextAttribute#FONT} for more information.</p>
  *
  * <p>Several attributes will cause additional rendering overhead
  * and potentially invoke layout.  If a <code>Font</code> has such
@@ -221,7 +221,7 @@ import static sun.font.EAttribute.*;
  * especially important are called out as having 'baseline-relative
  * coordinates.'
  */
-public class Font implements java.io.Serializable
+public class Font implements Serializable
 {
     private static class FontAccessImpl extends FontAccess {
         public Font2D getFont2D(Font font) {
@@ -679,7 +679,7 @@ public class Font implements java.io.Serializable
 
     /**
      * Creates a new <code>Font</code> with the specified attributes.
-     * Only keys defined in {@link java.awt.font.TextAttribute TextAttribute}
+     * Only keys defined in {@link TextAttribute TextAttribute}
      * are recognized.  In addition the FONT attribute is
      *  not recognized by this constructor
      * (see {@link #getAvailableAttributes}). Only attributes that have
@@ -687,7 +687,7 @@ public class Font implements java.io.Serializable
      * <p>
      * If <code>attributes</code> is <code>null</code>, a new
      * <code>Font</code> is initialized with default values.
-     * @see java.awt.font.TextAttribute
+     * @see TextAttribute
      * @param attributes the attributes to assign to the new
      *          <code>Font</code>, or <code>null</code>
      */
@@ -770,7 +770,7 @@ public class Font implements java.io.Serializable
      * If <code>attributes</code>contains a <code>FONT</code> attribute
      * with a valid <code>Font</code> as its value, it will be
      * merged with any remaining attributes.  See
-     * {@link java.awt.font.TextAttribute#FONT} for more
+     * {@link TextAttribute#FONT} for more
      * information.
      *
      * @param attributes the attributes to assign to the new
@@ -779,7 +779,7 @@ public class Font implements java.io.Serializable
      *          attributes
      * @throws NullPointerException if <code>attributes</code> is null.
      * @since 1.2
-     * @see java.awt.font.TextAttribute
+     * @see TextAttribute
      */
     public static Font getFont(Map<? extends Attribute, ?> attributes) {
         // optimize for two cases:
@@ -871,7 +871,7 @@ public class Font implements java.io.Serializable
      * @since 1.3
      */
     public static Font createFont(int fontFormat, InputStream fontStream)
-        throws java.awt.FontFormatException, java.io.IOException {
+        throws FontFormatException, IOException {
 
         if (hasTempPermission()) {
             return createFont0(fontFormat, fontStream, null);
@@ -898,7 +898,7 @@ public class Font implements java.io.Serializable
 
     private static Font createFont0(int fontFormat, InputStream fontStream,
                                     CreatedFontTracker tracker)
-        throws java.awt.FontFormatException, java.io.IOException {
+        throws FontFormatException, IOException {
 
         if (fontFormat != Font.TRUETYPE_FONT &&
             fontFormat != Font.TYPE1_FONT) {
@@ -1036,7 +1036,7 @@ public class Font implements java.io.Serializable
      * @since 1.5
      */
     public static Font createFont(int fontFormat, File fontFile)
-        throws java.awt.FontFormatException, java.io.IOException {
+        throws FontFormatException, IOException {
 
         fontFile = new File(fontFile.getPath());
 
@@ -1210,7 +1210,7 @@ public class Font implements java.io.Serializable
      * @return a <code>String</code> representing the family name of the
      *          font, localized for the specified locale.
      * @see #getFontName
-     * @see java.util.Locale
+     * @see Locale
      * @since 1.2
      */
     public String getFamily(Locale l) {
@@ -1270,7 +1270,7 @@ public class Font implements java.io.Serializable
      * @return a <code>String</code> representing the font face name,
      *          localized for the specified locale.
      * @see #getFamily
-     * @see java.util.Locale
+     * @see Locale
      */
     public String getFontName(Locale l) {
         if (l == null) {
@@ -1336,7 +1336,7 @@ public class Font implements java.io.Serializable
      * @return    <code>true</code> if this <code>Font</code> has a
      *            PLAIN style;
      *            <code>false</code> otherwise.
-     * @see       java.awt.Font#getStyle
+     * @see       Font#getStyle
      * @since     JDK1.0
      */
     public boolean isPlain() {
@@ -1349,7 +1349,7 @@ public class Font implements java.io.Serializable
      * @return    <code>true</code> if this <code>Font</code> object's
      *            style is BOLD;
      *            <code>false</code> otherwise.
-     * @see       java.awt.Font#getStyle
+     * @see       Font#getStyle
      * @since     JDK1.0
      */
     public boolean isBold() {
@@ -1362,7 +1362,7 @@ public class Font implements java.io.Serializable
      * @return    <code>true</code> if this <code>Font</code> object's
      *            style is ITALIC;
      *            <code>false</code> otherwise.
-     * @see       java.awt.Font#getStyle
+     * @see       Font#getStyle
      * @since     JDK1.0
      */
     public boolean isItalic() {
@@ -1376,7 +1376,7 @@ public class Font implements java.io.Serializable
      * @return  <code>true</code> if this <code>Font</code> object
      *          has a non-identity AffineTransform attribute.
      *          <code>false</code> otherwise.
-     * @see     java.awt.Font#getTransform
+     * @see     Font#getTransform
      * @since   1.4
      */
     public boolean isTransformed() {
@@ -1706,11 +1706,11 @@ public class Font implements java.io.Serializable
      *
      * @param s the <code>ObjectOutputStream</code> to write
      * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
-     * @see #readObject(java.io.ObjectInputStream)
+     * @see #readObject(ObjectInputStream)
      */
-    private void writeObject(java.io.ObjectOutputStream s)
-      throws java.lang.ClassNotFoundException,
-             java.io.IOException
+    private void writeObject(ObjectOutputStream s)
+      throws ClassNotFoundException,
+             IOException
     {
         if (values != null) {
           synchronized(values) {
@@ -1730,11 +1730,11 @@ public class Font implements java.io.Serializable
      *
      * @param s the <code>ObjectInputStream</code> to read
      * @serial
-     * @see #writeObject(java.io.ObjectOutputStream)
+     * @see #writeObject(ObjectOutputStream)
      */
-    private void readObject(java.io.ObjectInputStream s)
-      throws java.lang.ClassNotFoundException,
-             java.io.IOException
+    private void readObject(ObjectInputStream s)
+      throws ClassNotFoundException,
+             IOException
     {
         s.defaultReadObject();
         if (pointSize == 0) {
@@ -2316,7 +2316,7 @@ public class Font implements java.io.Serializable
      * use the {@link TextLayout#getBounds() getBounds} method of
      * <code>TextLayout</code>.
      * <p>Note: The returned bounds is in baseline-relative coordinates
-     * (see {@link java.awt.Font class notes}).
+     * (see {@link Font class notes}).
      * @param str the specified <code>String</code>
      * @param frc the specified <code>FontRenderContext</code>
      * @return a {@link Rectangle2D} that is the bounding box of the
@@ -2342,7 +2342,7 @@ public class Font implements java.io.Serializable
      * use the {@link TextLayout#getBounds() getBounds} method of
      * <code>TextLayout</code>.
      * <p>Note: The returned bounds is in baseline-relative coordinates
-     * (see {@link java.awt.Font class notes}).
+     * (see {@link Font class notes}).
      * @param str the specified <code>String</code>
      * @param beginIndex the initial offset of <code>str</code>
      * @param limit the end offset of <code>str</code>
@@ -2376,7 +2376,7 @@ public class Font implements java.io.Serializable
      * text, use the {@link TextLayout#getBounds() getBounds} method of
      * <code>TextLayout</code>.
      * <p>Note: The returned bounds is in baseline-relative coordinates
-     * (see {@link java.awt.Font class notes}).
+     * (see {@link Font class notes}).
      * @param chars an array of characters
      * @param beginIndex the initial offset in the array of
      * characters
@@ -2443,7 +2443,7 @@ public class Font implements java.io.Serializable
      * use the {@link TextLayout#getBounds() getBounds} method of
      * <code>TextLayout</code>.
      * <p>Note: The returned bounds is in baseline-relative coordinates
-     * (see {@link java.awt.Font class notes}).
+     * (see {@link Font class notes}).
      * @param ci the specified <code>CharacterIterator</code>
      * @param beginIndex the initial offset in <code>ci</code>
      * @param limit the end offset in <code>ci</code>
@@ -2492,7 +2492,7 @@ public class Font implements java.io.Serializable
      * Returns the bounds for the character with the maximum
      * bounds as defined in the specified <code>FontRenderContext</code>.
      * <p>Note: The returned bounds is in baseline-relative coordinates
-     * (see {@link java.awt.Font class notes}).
+     * (see {@link Font class notes}).
      * @param frc the specified <code>FontRenderContext</code>
      * @return a <code>Rectangle2D</code> that is the bounding box
      * for the character with the maximum bounds.
@@ -2508,7 +2508,7 @@ public class Font implements java.io.Serializable
     }
 
     /**
-     * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
+     * Creates a {@link GlyphVector GlyphVector} by
      * mapping characters to glyphs one-to-one based on the
      * Unicode cmap in this <code>Font</code>.  This method does no other
      * processing besides the mapping of glyphs to characters.  This
@@ -2527,7 +2527,7 @@ public class Font implements java.io.Serializable
     }
 
     /**
-     * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
+     * Creates a {@link GlyphVector GlyphVector} by
      * mapping characters to glyphs one-to-one based on the
      * Unicode cmap in this <code>Font</code>.  This method does no other
      * processing besides the mapping of glyphs to characters.  This
@@ -2546,7 +2546,7 @@ public class Font implements java.io.Serializable
     }
 
     /**
-     * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
+     * Creates a {@link GlyphVector GlyphVector} by
      * mapping the specified characters to glyphs one-to-one based on the
      * Unicode cmap in this <code>Font</code>.  This method does no other
      * processing besides the mapping of glyphs to characters.  This
@@ -2566,7 +2566,7 @@ public class Font implements java.io.Serializable
     }
 
     /**
-     * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
+     * Creates a {@link GlyphVector GlyphVector} by
      * mapping characters to glyphs one-to-one based on the
      * Unicode cmap in this <code>Font</code>.  This method does no other
      * processing besides the mapping of glyphs to characters.  This

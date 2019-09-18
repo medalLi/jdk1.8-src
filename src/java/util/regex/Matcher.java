@@ -28,7 +28,7 @@ package java.util.regex;
 import java.util.Objects;
 
 /**
- * An engine that performs match operations on a {@linkplain java.lang.CharSequence
+ * An engine that performs match operations on a {@linkplain CharSequence
  * character sequence} by interpreting a {@link Pattern}.
  *
  * <p> A matcher is created from a pattern by invoking the pattern's {@link
@@ -87,7 +87,7 @@ import java.util.Objects;
  *
  * <p> A matcher may be reset explicitly by invoking its {@link #reset()}
  * method or, if a new input sequence is desired, its {@link
- * #reset(java.lang.CharSequence) reset(CharSequence)} method.  Resetting a
+ * #reset(CharSequence) reset(CharSequence)} method.  Resetting a
  * matcher discards its explicit state information and sets the append position
  * to zero.
  *
@@ -1084,7 +1084,7 @@ public final class Matcher implements MatchResult {
      *
      * @return <tt>true</tt> iff this matcher is using transparent bounds,
      *         <tt>false</tt> otherwise.
-     * @see java.util.regex.Matcher#useTransparentBounds(boolean)
+     * @see Matcher#useTransparentBounds(boolean)
      * @since 1.5
      */
     public boolean hasTransparentBounds() {
@@ -1114,7 +1114,7 @@ public final class Matcher implements MatchResult {
      * @param  b a boolean indicating whether to use opaque or transparent
      *         regions
      * @return this matcher
-     * @see java.util.regex.Matcher#hasTransparentBounds
+     * @see Matcher#hasTransparentBounds
      * @since 1.5
      */
     public Matcher useTransparentBounds(boolean b) {
@@ -1135,7 +1135,7 @@ public final class Matcher implements MatchResult {
      *
      * @return <tt>true</tt> iff this matcher is using anchoring bounds,
      *         <tt>false</tt> otherwise.
-     * @see java.util.regex.Matcher#useAnchoringBounds(boolean)
+     * @see Matcher#useAnchoringBounds(boolean)
      * @since 1.5
      */
     public boolean hasAnchoringBounds() {
@@ -1160,7 +1160,7 @@ public final class Matcher implements MatchResult {
      *
      * @param  b a boolean indicating whether or not to use anchoring bounds.
      * @return this matcher
-     * @see java.util.regex.Matcher#hasAnchoringBounds
+     * @see Matcher#hasAnchoringBounds
      * @since 1.5
      */
     public Matcher useAnchoringBounds(boolean b) {

@@ -41,9 +41,9 @@ package java.text;
 /**
  * Signals that an error has been reached unexpectedly
  * while parsing.
- * @see java.lang.Exception
- * @see java.text.Format
- * @see java.text.FieldPosition
+ * @see Exception
+ * @see Format
+ * @see FieldPosition
  * @author      Mark Davis
  */
 public

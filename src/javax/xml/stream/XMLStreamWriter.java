@@ -523,6 +523,6 @@ public interface XMLStreamWriter {
    * @throws IllegalArgumentException if the property is not supported
    * @throws NullPointerException if the name is null
    */
-  public Object getProperty(java.lang.String name) throws IllegalArgumentException;
+  public Object getProperty(String name) throws IllegalArgumentException;
 
 }

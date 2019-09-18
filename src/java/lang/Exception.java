@@ -38,7 +38,7 @@ package java.lang;
  * the method or constructor boundary.
  *
  * @author  Frank Yellin
- * @see     java.lang.Error
+ * @see     Error
  * @jls 11.2 Compile-Time Checking of Exceptions
  * @since   JDK1.0
  */

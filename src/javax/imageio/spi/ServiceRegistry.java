@@ -466,7 +466,7 @@ public class ServiceRegistry {
      * of the <code>getServiceProviders</code> method of
      * <code>ServiceRegistry</code> that takes a <code>Filter</code>.
      *
-     * @see ServiceRegistry#getServiceProviders(Class, ServiceRegistry.Filter, boolean)
+     * @see ServiceRegistry#getServiceProviders(Class, Filter, boolean)
      */
     public interface Filter {
 

@@ -391,14 +391,14 @@ public class LockSupport {
     }
 
     // Hotspot implementation via intrinsics API
-    private static final sun.misc.Unsafe UNSAFE;
+    private static final Unsafe UNSAFE;
     private static final long parkBlockerOffset;
     private static final long SEED;
     private static final long PROBE;
     private static final long SECONDARY;
     static {
         try {
-            UNSAFE = sun.misc.Unsafe.getUnsafe();
+            UNSAFE = Unsafe.getUnsafe();
             Class<?> tk = Thread.class;
             parkBlockerOffset = UNSAFE.objectFieldOffset
                 (tk.getDeclaredField("parkBlocker"));

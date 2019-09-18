@@ -56,7 +56,7 @@ abstract public class AddressingDispositionHelper
     if (__typeCode == null)
     {
       __typeCode = org.omg.CORBA.ORB.init ().get_primitive_tc (org.omg.CORBA.TCKind.tk_short);
-      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (com.sun.corba.se.impl.protocol.giopmsgheaders.AddressingDispositionHelper.id (), "AddressingDisposition", __typeCode);
+      __typeCode = org.omg.CORBA.ORB.init ().create_alias_tc (AddressingDispositionHelper.id (), "AddressingDisposition", __typeCode);
     }
     return __typeCode;
   }

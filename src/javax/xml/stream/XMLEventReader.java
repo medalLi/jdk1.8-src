@@ -95,7 +95,7 @@ public interface XMLEventReader extends Iterator {
    * @return The value of the property
    * @throws IllegalArgumentException if the property is not supported
    */
-  public Object getProperty(java.lang.String name) throws java.lang.IllegalArgumentException;
+  public Object getProperty(String name) throws IllegalArgumentException;
 
   /**
    * Frees any resources associated with this Reader.  This method does not close the

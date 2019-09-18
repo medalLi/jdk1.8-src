@@ -82,15 +82,15 @@ public class AnyImpl extends Any
             super((ORB)orb);
         }
 
-        public org.omg.CORBA.portable.InputStream create_input_stream() {
-            final org.omg.CORBA.portable.InputStream is = super
+        public InputStream create_input_stream() {
+            final InputStream is = super
                     .create_input_stream();
             AnyInputStream aIS = AccessController
                     .doPrivileged(new PrivilegedAction<AnyInputStream>() {
                         @Override
                         public AnyInputStream run() {
                             return new AnyInputStream(
-                                    (com.sun.corba.se.impl.encoding.EncapsInputStream) is);
+                                    (EncapsInputStream) is);
                         }
                     });
             return aIS;
@@ -114,7 +114,7 @@ public class AnyImpl extends Any
     //
     private CDRInputStream stream;
     private long value;
-    private java.lang.Object object;
+    private Object object;
 
     // Setting the typecode via the type() accessor wipes out the value.
     // An attempt to extract before the value is set will result
@@ -184,7 +184,7 @@ public class AnyImpl extends Any
     public AnyImpl(ORB orb)
     {
         this.orb = orb;
-        wrapper = ORBUtilSystemException.get( (com.sun.corba.se.spi.orb.ORB)orb,
+        wrapper = ORBUtilSystemException.get( (ORB)orb,
             CORBALogDomains.RPC_PRESENTATION ) ;
 
         typeCode = orb.get_primitive_tc(TCKind._tk_null);
@@ -510,7 +510,7 @@ public class AnyImpl extends Any
      *
      * @result          the OutputStream to marshal value of Any into
      */
-    public org.omg.CORBA.portable.OutputStream create_output_stream()
+    public OutputStream create_output_stream()
     {
         //debug.log ("create_output_stream");
         final ORB finalorb = this.orb;
@@ -527,7 +527,7 @@ public class AnyImpl extends Any
      *
      * @result          the InputStream to marshal value of Any out of.
      */
-    public org.omg.CORBA.portable.InputStream create_input_stream()
+    public InputStream create_input_stream()
     {
         //
         // We create a new InputStream so that multiple threads can call here
@@ -551,7 +551,7 @@ public class AnyImpl extends Any
     // If the InputStream is a CDRInputStream then we can copy the bytes
     // since it is in our format and does not have alignment issues.
     //
-    public void read_value(org.omg.CORBA.portable.InputStream in, TypeCode tc)
+    public void read_value(InputStream in, TypeCode tc)
     {
         //debug.log ("read_value");
         //
@@ -584,7 +584,7 @@ public class AnyImpl extends Any
                 stream = (CDRInputStream)out.create_input_stream();
             }
         } else {
-            java.lang.Object[] objholder = new java.lang.Object[1];
+            Object[] objholder = new Object[1];
             objholder[0] = object;
             long[] longholder = new long[1];
             TCUtility.unmarshalIn(in, realType(), longholder, objholder);
@@ -1178,7 +1178,7 @@ public class AnyImpl extends Any
         isInitialized = true;
     }
 
-    public void insert_Value(Serializable v, org.omg.CORBA.TypeCode t)
+    public void insert_Value(Serializable v, TypeCode t)
     {
         //debug.log ("insert_Value2");
         object = v;
@@ -1186,14 +1186,14 @@ public class AnyImpl extends Any
         isInitialized = true;
     }
 
-    public void insert_fixed(java.math.BigDecimal value) {
+    public void insert_fixed(BigDecimal value) {
         typeCode = TypeCodeImpl.convertToNative(orb,
             orb.create_fixed_tc(TypeCodeImpl.digits(value), TypeCodeImpl.scale(value)));
         object = value;
         isInitialized = true;
     }
 
-    public void insert_fixed(java.math.BigDecimal value, org.omg.CORBA.TypeCode type)
+    public void insert_fixed(BigDecimal value, TypeCode type)
     {
         try {
             if (TypeCodeImpl.digits(value) > type.fixed_digits() ||
@@ -1201,7 +1201,7 @@ public class AnyImpl extends Any
             {
                 throw wrapper.fixedNotMatch() ;
             }
-        } catch (org.omg.CORBA.TypeCodePackage.BadKind bk) {
+        } catch (BadKind bk) {
             // type isn't even of kind fixed
             throw wrapper.fixedBadTypecode( bk ) ;
         }
@@ -1210,7 +1210,7 @@ public class AnyImpl extends Any
         isInitialized = true;
     }
 
-    public java.math.BigDecimal extract_fixed() {
+    public BigDecimal extract_fixed() {
         checkExtractBadOperation( TCKind._tk_fixed ) ;
         return (BigDecimal)object;
     }
@@ -1221,7 +1221,7 @@ public class AnyImpl extends Any
      * The ORB passed in should have the desired ORBVersion.  It
      * is used to generate the type codes.
      */
-    public TypeCode createTypeCodeForClass (java.lang.Class c, ORB tcORB)
+    public TypeCode createTypeCodeForClass (Class c, ORB tcORB)
     {
         // Look in the cache first
         TypeCodeImpl classTC = tcORB.getTypeCodeForClass(c);
@@ -1254,7 +1254,7 @@ public class AnyImpl extends Any
             String id = repStrs.createForJavaType(c);
 
             return tcORB.create_value_box_tc (id, "Sequence", t);
-        } else if ( c == java.lang.String.class ) {
+        } else if ( c == String.class ) {
             // Strings
             TypeCode t = tcORB.create_string_tc (0);
 

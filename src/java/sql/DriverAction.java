@@ -35,7 +35,7 @@ package java.sql;
  * to avoid it being called directly.
  * <p>
  * The JDBC driver's static initialization block must call
- * {@linkplain DriverManager#registerDriver(java.sql.Driver, java.sql.DriverAction) } in order
+ * {@linkplain DriverManager#registerDriver(Driver, DriverAction) } in order
  * to inform {@code DriverManager} which {@code DriverAction} implementation to
  * call when the JDBC driver is de-registered.
  * @since 1.8
@@ -57,7 +57,7 @@ public interface DriverAction {
      * other {@code Driver} methods or throw a {@code SQLException}.
      * Consult your JDBC driver's documentation for additional information
      * on its behavior.
-     * @see DriverManager#registerDriver(java.sql.Driver, java.sql.DriverAction)
+     * @see DriverManager#registerDriver(Driver, DriverAction)
      * @see DriverManager#deregisterDriver(Driver)
      * @since 1.8
      */

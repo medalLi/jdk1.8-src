@@ -121,11 +121,11 @@ public class CDRInputStream_1_1 extends CDRInputStream_1_0
         }
     }
 
-    public java.lang.Object createStreamMemento() {
+    public Object createStreamMemento() {
         return new FragmentableStreamMemento();
     }
 
-    public void restoreInternalState(java.lang.Object streamMemento)
+    public void restoreInternalState(Object streamMemento)
     {
         super.restoreInternalState(streamMemento);
 

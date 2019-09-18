@@ -82,7 +82,7 @@ import sun.security.action.GetBooleanAction;
  *
  * @author      Arthur van Hoff
  * @author      Sami Shaio
- * @see       #add(java.awt.Component, int)
+ * @see       #add(Component, int)
  * @see       #getComponent(int)
  * @see       LayoutManager
  * @since     JDK1.0
@@ -748,7 +748,7 @@ public class Container extends Component {
      * @exception IllegalArgumentException if adding a container to itself
      * @exception IllegalArgumentException if adding a <code>Window</code>
      *            to a container
-     * @see #getComponentZOrder(java.awt.Component)
+     * @see #getComponentZOrder(Component)
      * @see #invalidate
      * @since 1.5
      */
@@ -928,7 +928,7 @@ public class Container extends Component {
      * @return  the z-order index of the component; otherwise
      *          returns -1 if the component is <code>null</code>
      *          or doesn't belong to the container
-     * @see #setComponentZOrder(java.awt.Component, int)
+     * @see #setComponentZOrder(Component, int)
      * @since 1.5
      */
     public int getComponentZOrder(Component comp) {
@@ -1064,7 +1064,7 @@ public class Container extends Component {
      * @exception NullPointerException if {@code comp} is {@code null}
      * @see       #add(Component)
      * @see       #add(Component, int)
-     * @see       #add(Component, java.lang.Object)
+     * @see       #add(Component, Object)
      * @see #invalidate
      * @see       LayoutManager
      * @see       LayoutManager2
@@ -1533,7 +1533,7 @@ public class Container extends Component {
      *
      * @return whether this container is a validate root
      * @see #invalidate
-     * @see java.awt.Component#invalidate
+     * @see Component#invalidate
      * @see javax.swing.JComponent#isValidateRoot
      * @see javax.swing.JComponent#revalidate
      * @since 1.7
@@ -1606,7 +1606,7 @@ public class Container extends Component {
      * the {@code validateTree} method and marks this {@code Container}
      * as valid. Otherwise, no action is performed.
      *
-     * @see #add(java.awt.Component)
+     * @see #add(Component)
      * @see #invalidate
      * @see Container#isValidateRoot
      * @see javax.swing.JComponent#revalidate()
@@ -2604,7 +2604,7 @@ public class Container extends Component {
         if (GraphicsEnvironment.isHeadless()) {
             throw new HeadlessException();
         }
-        PointerInfo pi = java.security.AccessController.doPrivileged(
+        PointerInfo pi = AccessController.doPrivileged(
             new java.security.PrivilegedAction<PointerInfo>() {
                 public PointerInfo run() {
                     return MouseInfo.getPointerInfo();
@@ -3001,7 +3001,7 @@ public class Container extends Component {
      * @param    out      a print stream
      * @param    indent   the number of spaces to indent
      * @throws   NullPointerException if {@code out} is {@code null}
-     * @see      Component#list(java.io.PrintStream, int)
+     * @see      Component#list(PrintStream, int)
      * @since    JDK1.0
      */
     public void list(PrintStream out, int indent) {
@@ -3028,7 +3028,7 @@ public class Container extends Component {
      * @param    out      a print writer
      * @param    indent   the number of spaces to indent
      * @throws   NullPointerException if {@code out} is {@code null}
-     * @see      Component#list(java.io.PrintWriter, int)
+     * @see      Component#list(PrintWriter, int)
      * @since    JDK1.1
      */
     public void list(PrintWriter out, int indent) {
@@ -3603,7 +3603,7 @@ public class Container extends Component {
      * @param    listener  the PropertyChangeListener to be added
      *
      * @see Component#removePropertyChangeListener
-     * @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+     * @see #addPropertyChangeListener(String, PropertyChangeListener)
      */
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         super.addPropertyChangeListener(listener);
@@ -3642,7 +3642,7 @@ public class Container extends Component {
      * @param propertyName one of the property names listed above
      * @param listener the PropertyChangeListener to be added
      *
-     * @see #addPropertyChangeListener(java.beans.PropertyChangeListener)
+     * @see #addPropertyChangeListener(PropertyChangeListener)
      * @see Component#removePropertyChangeListener
      */
     public void addPropertyChangeListener(String propertyName,
@@ -3680,7 +3680,7 @@ public class Container extends Component {
      *   the <code>Container</code>'s <code>FocusTraversalPolicy</code>,
      *     or <code>null</code>
      *
-     * @see AWTEventMulticaster#save(java.io.ObjectOutputStream, java.lang.String, java.util.EventListener)
+     * @see AWTEventMulticaster#save(ObjectOutputStream, String, EventListener)
      * @see Container#containerListenerK
      * @see #readObject(ObjectInputStream)
      */
@@ -4700,7 +4700,7 @@ class LightweightDispatcher implements java.io.Serializable, AWTEventListener {
      */
     private void startListeningForOtherDrags() {
         //System.out.println("Adding AWTEventListener");
-        java.security.AccessController.doPrivileged(
+        AccessController.doPrivileged(
             new java.security.PrivilegedAction<Object>() {
                 public Object run() {
                     nativeContainer.getToolkit().addAWTEventListener(
@@ -4715,7 +4715,7 @@ class LightweightDispatcher implements java.io.Serializable, AWTEventListener {
 
     private void stopListeningForOtherDrags() {
         //System.out.println("Removing AWTEventListener");
-        java.security.AccessController.doPrivileged(
+        AccessController.doPrivileged(
             new java.security.PrivilegedAction<Object>() {
                 public Object run() {
                     nativeContainer.getToolkit().removeAWTEventListener(LightweightDispatcher.this);

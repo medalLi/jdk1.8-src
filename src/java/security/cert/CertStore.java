@@ -219,7 +219,7 @@ public class CertStore {
      *          initialization parameters are inappropriate for this
      *          {@code CertStore}.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertStore getInstance(String type, CertStoreParameters params)
             throws InvalidAlgorithmParameterException,
@@ -288,7 +288,7 @@ public class CertStore {
      * @exception IllegalArgumentException if the {@code provider} is
      *          null or empty.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertStore getInstance(String type,
             CertStoreParameters params, String provider)
@@ -343,7 +343,7 @@ public class CertStore {
      * @exception IllegalArgumentException if the {@code provider} is
      *          null.
      *
-     * @see java.security.Provider
+     * @see Provider
      */
     public static CertStore getInstance(String type, CertStoreParameters params,
             Provider provider) throws NoSuchAlgorithmException,
@@ -402,7 +402,7 @@ public class CertStore {
      * the value of the {@code certstore.type} security property to the
      * desired type.
      *
-     * @see java.security.Security security properties
+     * @see Security security properties
      * @return the default {@code CertStore} type as specified by the
      * {@code certstore.type} security property, or the string
      * {@literal "LDAP"} if no such property exists.

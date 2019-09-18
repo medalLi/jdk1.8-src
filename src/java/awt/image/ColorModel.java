@@ -148,7 +148,7 @@ import java.util.WeakHashMap;
  * @see java.awt.Image
  * @see BufferedImage
  * @see RenderedImage
- * @see java.awt.color.ColorSpace
+ * @see ColorSpace
  * @see SampleModel
  * @see Raster
  * @see DataBuffer
@@ -325,7 +325,7 @@ public abstract class ColorModel implements Transparency{
      * @throws IllegalArgumentException if the sum of the number
      *          of bits in <code>bits</code> is less than 1 or if
      *          any of the elements in <code>bits</code> is less than 0.
-     * @see java.awt.Transparency
+     * @see Transparency
      */
     protected ColorModel(int pixel_bits, int[] bits, ColorSpace cspace,
                          boolean hasAlpha,

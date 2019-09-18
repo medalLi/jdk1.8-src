@@ -102,7 +102,7 @@ import java.util.Comparators;
  * @author  Josh Bloch
  * @author  Neal Gafter
  * @see Comparable
- * @see java.io.Serializable
+ * @see Serializable
  * @since 1.2
  */
 @FunctionalInterface
@@ -438,7 +438,7 @@ public interface Comparator<T> {
     }
 
     /**
-     * Accepts a function that extracts a {@link java.lang.Comparable
+     * Accepts a function that extracts a {@link Comparable
      * Comparable} sort key from a type {@code T}, and returns a {@code
      * Comparator<T>} that compares by that sort key.
      *

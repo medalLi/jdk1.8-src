@@ -48,7 +48,7 @@ public class BasicBorders {
     public static Border getButtonBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
         Border buttonBorder = new BorderUIResource.CompoundBorderUIResource(
-                           new BasicBorders.ButtonBorder(
+                           new ButtonBorder(
                                            table.getColor("Button.shadow"),
                                            table.getColor("Button.darkShadow"),
                                            table.getColor("Button.light"),
@@ -60,7 +60,7 @@ public class BasicBorders {
     public static Border getRadioButtonBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
         Border radioButtonBorder = new BorderUIResource.CompoundBorderUIResource(
-                           new BasicBorders.RadioButtonBorder(
+                           new RadioButtonBorder(
                                            table.getColor("RadioButton.shadow"),
                                            table.getColor("RadioButton.darkShadow"),
                                            table.getColor("RadioButton.light"),
@@ -72,7 +72,7 @@ public class BasicBorders {
     public static Border getToggleButtonBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
         Border toggleButtonBorder = new BorderUIResource.CompoundBorderUIResource(
-                                     new BasicBorders.ToggleButtonBorder(
+                                     new ToggleButtonBorder(
                                            table.getColor("ToggleButton.shadow"),
                                            table.getColor("ToggleButton.darkShadow"),
                                            table.getColor("ToggleButton.light"),
@@ -83,7 +83,7 @@ public class BasicBorders {
 
     public static Border getMenuBarBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
-        Border menuBarBorder = new BasicBorders.MenuBarBorder(
+        Border menuBarBorder = new MenuBarBorder(
                                         table.getColor("MenuBar.shadow"),
                                         table.getColor("MenuBar.highlight")
                                    );
@@ -92,7 +92,7 @@ public class BasicBorders {
 
     public static Border getSplitPaneBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
-        Border splitPaneBorder = new BasicBorders.SplitPaneBorder(
+        Border splitPaneBorder = new SplitPaneBorder(
                                      table.getColor("SplitPane.highlight"),
                                      table.getColor("SplitPane.darkShadow"));
         return splitPaneBorder;
@@ -104,7 +104,7 @@ public class BasicBorders {
      */
     public static Border getSplitPaneDividerBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
-        Border splitPaneBorder = new BasicBorders.SplitPaneDividerBorder(
+        Border splitPaneBorder = new SplitPaneDividerBorder(
                                      table.getColor("SplitPane.highlight"),
                                      table.getColor("SplitPane.darkShadow"));
         return splitPaneBorder;
@@ -112,7 +112,7 @@ public class BasicBorders {
 
     public static Border getTextFieldBorder() {
         UIDefaults table = UIManager.getLookAndFeelDefaults();
-        Border textFieldBorder = new BasicBorders.FieldBorder(
+        Border textFieldBorder = new FieldBorder(
                                            table.getColor("TextField.shadow"),
                                            table.getColor("TextField.darkShadow"),
                                            table.getColor("TextField.light"),

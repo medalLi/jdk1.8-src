@@ -54,7 +54,7 @@ public class InvalidSearchControlsException extends NamingException {
      * Constructs a new instance of InvalidSearchControlsException
      * with an explanation. All other fields set to null.
      * @param msg Detail about this exception. Can be null.
-     * @see java.lang.Throwable#getMessage
+     * @see Throwable#getMessage
      */
     public InvalidSearchControlsException(String msg) {
         super(msg);

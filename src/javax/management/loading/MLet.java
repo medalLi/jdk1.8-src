@@ -129,7 +129,7 @@ import javax.management.ServiceNotFoundException;
  * MBean instance when the m-let service registers it. If
  * <VAR>mbeanname</VAR> starts with the colon character (:), the domain
  * part of the object name is the default domain of the MBean server,
- * as returned by {@link javax.management.MBeanServer#getDefaultDomain()}.
+ * as returned by {@link MBeanServer#getDefaultDomain()}.
  * </DD>
  * <DT><CODE>VERSION = </CODE><VAR>version</VAR></DT>
  * <DD>
@@ -163,7 +163,7 @@ import javax.management.ServiceNotFoundException;
  * <P>
  * The m-let service extends the <CODE>java.net.URLClassLoader</CODE> and can be used to load remote classes
  * and jar files in the VM of the agent.
- * <p><STRONG>Note - </STRONG> The <CODE>MLet</CODE> class loader uses the {@link javax.management.MBeanServerFactory#getClassLoaderRepository(javax.management.MBeanServer)}
+ * <p><STRONG>Note - </STRONG> The <CODE>MLet</CODE> class loader uses the {@link javax.management.MBeanServerFactory#getClassLoaderRepository(MBeanServer)}
  * to load classes that could not be found in the loaded jar files.
  *
  * @since 1.5
@@ -764,7 +764,7 @@ public class MLet extends java.net.URLClassLoader
       *
       * @return  The name of the m-let registered.
       *
-      * @exception java.lang.Exception This exception should be caught by the MBean server and re-thrown
+      * @exception Exception This exception should be caught by the MBean server and re-thrown
       *as an MBeanRegistrationException.
       */
      public ObjectName preRegister(MBeanServer server, ObjectName name)
@@ -798,11 +798,11 @@ public class MLet extends java.net.URLClassLoader
       * Allows the m-let to perform any operations it needs before being unregistered
       * by the MBean server.
       *
-      * @exception java.lang.Exception This exception should be caught
+      * @exception Exception This exception should be caught
       * by the MBean server and re-thrown as an
       * MBeanRegistrationException.
       */
-     public void preDeregister() throws java.lang.Exception {
+     public void preDeregister() throws Exception {
      }
 
 
@@ -923,13 +923,13 @@ public class MLet extends java.net.URLClassLoader
      }
 
      /**
-      * Called by {@link MLet#findClass(java.lang.String)}.
+      * Called by {@link MLet#findClass(String)}.
       *
       * @param name The name of the class that we want to load/find.
       * @param clr The ClassLoaderRepository that can be used to search
       *            for the given class. This parameter is
       *            <code>null</code> when called from within the
-      *            {@link javax.management.MBeanServerFactory#getClassLoaderRepository(javax.management.MBeanServer) Class Loader Repository}.
+      *            {@link javax.management.MBeanServerFactory#getClassLoaderRepository(MBeanServer) Class Loader Repository}.
       * @exception ClassNotFoundException The specified class could not be
       *            found.
       *
@@ -1011,7 +1011,7 @@ public class MLet extends java.net.URLClassLoader
       * </OL>
       *
       * <p>More specifically, let <em>{@code nativelibname}</em> be the result of
-      * {@link System#mapLibraryName(java.lang.String)
+      * {@link System#mapLibraryName(String)
       * System.mapLibraryName}{@code (libname)}.  Then the following names are
       * searched in the JAR files, in order:<br>
       * <em>{@code nativelibname}</em><br>

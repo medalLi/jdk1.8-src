@@ -34,7 +34,7 @@ import java.security.spec.AlgorithmParameterSpec;
  *
  * @author Jan Luehe
  *
- * @see java.security.KeyPairGenerator#initialize(java.security.spec.AlgorithmParameterSpec)
+ * @see java.security.KeyPairGenerator#initialize(AlgorithmParameterSpec)
  *
  * @since 1.3
  */

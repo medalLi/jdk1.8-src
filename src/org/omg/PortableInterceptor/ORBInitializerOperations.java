@@ -132,7 +132,7 @@ public interface ORBInitializerOperations
        * @param info provides initialization attributes and operations by 
        *     which Interceptors can be registered.
        */
-  void pre_init (org.omg.PortableInterceptor.ORBInitInfo info);
+  void pre_init(ORBInitInfo info);
 
   /**
        * Called during ORB initialization. If a service must resolve initial 
@@ -152,5 +152,5 @@ public interface ORBInitializerOperations
        * @param info provides initialization attributes and 
        *     operations by which Interceptors can be registered.
        */
-  void post_init (org.omg.PortableInterceptor.ORBInitInfo info);
+  void post_init(ORBInitInfo info);
 } // interface ORBInitializerOperations

@@ -132,11 +132,11 @@ public class SharedCDRClientRequestDispatcherImpl
     // Benefit: then in ContactInfo no need to do a direct new
     // of subcontract - does not complicate subcontract registry.
 
-    public InputObject marshalingComplete(java.lang.Object self,
+    public InputObject marshalingComplete(Object self,
                                           OutputObject outputObject)
         throws
             ApplicationException,
-            org.omg.CORBA.portable.RemarshalException
+            RemarshalException
     {
       ORB orb = null;
       CorbaMessageMediator messageMediator = null;

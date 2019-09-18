@@ -198,7 +198,7 @@ public abstract class PKIXRevocationChecker extends PKIXCertPathChecker {
             this.ocspResponses = Collections.<X509Certificate, byte[]>emptyMap();
         } else {
             Map<X509Certificate, byte[]> copy = new HashMap<>(responses.size());
-            for (Map.Entry<X509Certificate, byte[]> e : responses.entrySet()) {
+            for (Entry<X509Certificate, byte[]> e : responses.entrySet()) {
                 copy.put(e.getKey(), e.getValue().clone());
             }
             this.ocspResponses = copy;
@@ -217,7 +217,7 @@ public abstract class PKIXRevocationChecker extends PKIXCertPathChecker {
      */
     public Map<X509Certificate, byte[]> getOcspResponses() {
         Map<X509Certificate, byte[]> copy = new HashMap<>(ocspResponses.size());
-        for (Map.Entry<X509Certificate, byte[]> e : ocspResponses.entrySet()) {
+        for (Entry<X509Certificate, byte[]> e : ocspResponses.entrySet()) {
             copy.put(e.getKey(), e.getValue().clone());
         }
         return copy;
@@ -267,7 +267,7 @@ public abstract class PKIXRevocationChecker extends PKIXCertPathChecker {
         copy.ocspExtensions = new ArrayList<>(ocspExtensions);
         copy.ocspResponses = new HashMap<>(ocspResponses);
         // deep-copy the encoded responses, since they are mutable
-        for (Map.Entry<X509Certificate, byte[]> entry :
+        for (Entry<X509Certificate, byte[]> entry :
                  copy.ocspResponses.entrySet())
         {
             byte[] encoded = entry.getValue();

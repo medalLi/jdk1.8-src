@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * {@link javax.xml.bind.ValidationEventHandler ValidationEventHandler}
+ * {@link ValidationEventHandler ValidationEventHandler}
  * implementation that collects all events.
  *
  * <p>
@@ -42,8 +42,8 @@ import java.util.List;
  *
  * @author <ul><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li><li>Ryan Shoemaker, Sun Microsystems, Inc.</li><li>Joe Fialli, Sun Microsystems, Inc.</li></ul>
  * @see javax.xml.bind.Validator
- * @see javax.xml.bind.ValidationEventHandler
- * @see javax.xml.bind.ValidationEvent
+ * @see ValidationEventHandler
+ * @see ValidationEvent
  * @see javax.xml.bind.ValidationEventLocator
  * @since JAXB1.0
  */
